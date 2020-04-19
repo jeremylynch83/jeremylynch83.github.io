@@ -1,92 +1,74 @@
-![logo](https://snipcart.com/media/204485/logo.svg)
+# Massively
+> This is Massively, a text-heavy, article-oriented design built around a huge background
+image.
 
-# Planty Stackbit theme
+See a preview of the Massively Jekyll Theme here: [https://iwiedenm.github.io/jekyll-theme-massively/](https://iwiedenm.github.io/jekyll-theme-massively/). <br>
+Massively was originally designed by HTML5UP and Jekyll was integrated by [JekyllUp: Jekyll Themes](https://jekyllup.com)
 
-[![Create with Stackbit](https://assets.stackbit.com/badge/create-with-stackbit.svg)](https://app.stackbit.com/create?theme=https://github.com/snipcart/stackbit-theme-planty&ssg=jekyll)
+## How to Use This Theme
+Jekyll consumes themes in two flavors; gem-based or spread across multiple folders
+in the site source. This port is of the second type. Concretely, it means that you
+can simply grab the [zip][zip] or clone this repository, run `bundle install`
+in the new directory and finally `bundle exec jekyll serve`.
+You can now access your brand-new Jekyll site on [http://127.0.0.1:4000/][local].
+Enjoy!
 
-Planty is an e-commerce ready custom theme for Stackbit created by [Snipcart](http://bit.ly/2YB7AUL).
+If you're completely new to Jekyll, check out it's [documentation][jekyll] first.
+It's not too hard, we promise!
 
-This theme can be used to create an e-commerce ready website through Stackbit's platform. You'll get
-everything you need from products listing, categorization, FAQ, etc.
+[zip]: https://github.com/iwiedenm/jekyll-theme-massively-src/archive/master.zip
+[local]: http://127.0.0.1:4000/
+[jekyll]: https://jekyllrb.com/
 
-You can see it in action right [here](https://stackbit-theme-planty.netlify.com).
+## Features
 
-> To learn more about Stackbit and its custom themes feature, [read this post](http://bit.ly/2YAvGix).
+### Slapform.com Integration
+[Slapform](https://slapform.com) is supported out of the box! Just add your email to ```_config.yml``` and test the form.
+Every time one of your visitors submits the form, you'll get an email straight to your inbox containing the submission so you can get back to them right away. Slapform is very extendable, including AJAX submissions, webhooks, and more.
 
-## How to get started
+### Auto-Generating Sitemap
+The sitemap is auto generated! Just simply change the sitemap variable in front matter of each page. It looks like so...
+```
+sitemap:
+  priority: 0.7
+  lastmod: 2017-11-02
+  changefreq: weekly
+```
 
-In Stackbit's custom themes importer, just use this repository URL. For the moment, this theme works only with Jekyll but will soon work with other static site generators supported by Stackbit.
+## Credits
+### Original README from HTML5 UP
+```
+Massively by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 
-## Theme configuration
 
-> Please note that the screenshots below have been taken in Forestry, you can use Forestry as headless CMS for your project if you want, but this also work with other CMSs.
+This is Massively, a text-heavy, article-oriented design built around a huge background
+image (with a new parallax implementation I'm testing) and scroll effects (powered by
+Scrollex). A *slight* departure from all the one-pagers I've been doing lately, but one
+that fulfills a few user requests and makes use of some new techniques I've been wanting
+to try out. Enjoy it :)
 
-### Configuring Snipcart
+Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
+you can use for pretty much whatever.
 
-First thing is to enter your Snipcart API key. Open your CMS and go to `Global site config`.
+(* = not included)
 
-![api-key](https://snipcart.com/media/204516/config_api_key.png)
+AJ
+aj@lkn.io | @ajlkn
 
-Use your **public** API key in there.
 
-### Logos
+Credits:
 
-Logos can be updated via the CMS as well. You'll be asked to provide a dark and a light logo.
+	Demo Images:
+		Unsplash (unsplash.com)
 
-![logo](https://snipcart.com/media/204518/config_logos.png)
+	Icons:
+		Font Awesome (fortawesome.github.com/Font-Awesome)
 
-### Styles configuration
-
-Colors can be managed via the CMS as well. Under `Global site config` section, open `Styles config`. You'll see all colors used throughout the theme listed here. Adjust them for your own branding.
-
-![styles-config](https://snipcart.com/media/204508/config_styles.png)
-
-You can also configure background images in there.
-
-![background-images](https://snipcart.com/media/204517/config_backgroundimages.png)
-
-### Categories
-
-Each product can be associated to a category. Open the Categories section and manage them there.
-
-![categories](https://snipcart.com/media/204510/list_categories.png)
-
-### Products
-
-Products can be managed directly through the CMS via the Products section.
-
-![products](https://snipcart.com/media/204511/list_products.png)
-
-Products have several properties available, both for Snipcart and for the theme. You can define its price, description, name, ID, etc.
-
-You can also define if this is a **featured** product, meaning that it will show in the Best sellers section on the site. A feature product will use the Feature images set.
-
-![product-details](https://snipcart.com/media/204514/product_details.png)
-
-### Promotion
-
-The promotion is a component displayed just above the footer on some pages. You can configure what to show in that box via the CMS.
-
-![promotion](https://snipcart.com/media/204504/components_promotion.png)
-
-You can define a Call to action for the promotion, it's usually a link to a section of your site.
-
-![promotion-cta](https://snipcart.com/media/204505/components_promotion_cta.png)
-
-### Testimonials
-
-You can manage testimonials to show on the site via this section.
-
-![testimonials](https://snipcart.com/media/204506/components_testimonials.png)
-
-### About
-
-Manage the content of the About section here.
-
-![about](https://snipcart.com/media/204512/pages_about.png)
-
-### FAQ
-
-Manage your FAQ entries in this section.
-
-![faq](https://snipcart.com/media/204513/pages_faq.png)
+	Other:
+		jQuery (jquery.com)
+		Misc. Sass functions (@HugoGiraudel)
+		Skel (skel.io)
+		Scrollex (github.com/ajlkn/jquery.scrollex)
+```
