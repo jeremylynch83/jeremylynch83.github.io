@@ -1,55 +1,30 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-  Jekyll integration by somiibo.com
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-    {% include head.html %}
-	</head>
-	<body class="is-loading">
+---
+layout: base
+---
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+<!-- Header -->
+<header class="masthead pagehead" {% if page.background_image %} style="background-image: {{ page.background_image }}"{% endif %} >
+  <div class="container h-100">
+    <div class="row h-100 align-items-center justify-content-center text-center">
+      <div class="col-lg-10 ">
+        <h1 class="text-uppercase text-white font-weight-bold">{{ page.title }}</h1>
+        <hr class="divider my-4">
+      </div>
+    </div>
+  </div>
+</header>
 
-				<!-- Header -->
-				<header id="header">
-					<a href="{{ "/" | absolute_url }}" class="logo">{{site.title}}</a>
-				</header>
+<!-- Any Ready-to-Use sections -->
+{% for section in page.sections %}
+    {% include {{ section.type }} section=section site=site page=page %}
+{% endfor %}
 
-				<!-- Nav -->
-					<nav id="nav">
-
-            {% include nav.html %}
-
-					</nav>
-
-				<!-- Main -->
-				<div id="main">
-
-					<!-- Post -->
-					<section class="post">
-						<p>{{content}}</p>
-					</section>
-
-					<!-- Footer -->
-						<footer>
-              <ul class="actions">
-								<li><a href="{{ "/blog/" | absolute_url }}" class="button">Our Blog</a></li>
-              </ul>
-						</footer>
-					</div>
-
-				<!-- Footer -->
-        {% include foot.html %}
-
-			</div>
-
-			<!-- Scripts -->
-			{% include scripts-main.html %}
-			{% include tracking.html %}
-
-	</body>
-</html>
+<!-- include content as section -->
+{% assign content = content | strip_newlines %}
+{% if content != "" %}
+<section class="page-section {{ page.background_style }}">
+  <div class="container">
+    {{ content }}
+  </div>
+</section>
+{% endif %}
