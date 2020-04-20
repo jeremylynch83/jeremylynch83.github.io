@@ -3,7 +3,7 @@ layout: home
 header:
   title: Brain and spine neurointervention
   text: >
-    Clear, accurate, and up-to-date information on endovascular treatment of brain and spine conditions. 
+    Clear, accurate, and up-to-date information on endovascular treatment of brain and spine diseases. 
   action: # action button is optional
     label: Find Out More
     url: '#about'
@@ -27,15 +27,6 @@ sections:
       - title: Up to Date
         text: We update dependencies to keep things fresh.
         icon: fa-laptop-code
-      - title: Made with Love
-        text: You have to make your websites with love these days!
-        icon: fa-heart
-      - title: Other 1
-        text: Some not-so long text here.
-        icon: fa-heart
-      - title: Other 2
-        text: Some not-so long text here.
-        icon: fa-heart
 
   - type: portfolio.html
     # this section has always ID 'portfolio'
