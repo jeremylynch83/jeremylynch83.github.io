@@ -6,7 +6,7 @@ header:
     Clear, accurate, and up-to-date information on endovascular treatment of brain and spine diseases. 
   action: # action button is optional
     label: Find Out More
-    url: '#about'
+    url: '#intro'
 
 
 sections:
@@ -50,24 +50,24 @@ sections:
         icon: 6.jpg
         url: '#'
 
-  - type: services.html
-    section_id: services
-    #background_style: bg-info
-    title: Services
-    text: >-
-      Ready to start your next project with us? Give us a call or send us an email
-      and we will get back to you as soon as possible!
-    services:
-      - title: Sturdy Templates
-        text: Our templates are updated regularly so they don't break.
-        icon: fa-gem text-info
-        url: https://startbootstrap.com/
-      - title: Ready to Ship
-        text: You can use this theme as is, or you can make changes!
-        icon: fa-paper-plane
-      - title: Up to Date
-        text: We update dependencies to keep things fresh.
-        icon: fa-laptop-code
+#  - type: services.html
+#    section_id: services
+#    #background_style: bg-info
+#    title: Services
+#    text: >-
+#      Ready to start your next project with us? Give us a call or send us an email
+#      and we will get back to you as soon as possible!
+#    services:
+#      - title: Sturdy Templates
+#        text: Our templates are updated regularly so they don't break.
+#        icon: fa-gem text-info
+#        url: https://startbootstrap.com/
+#      - title: Ready to Ship
+#        text: You can use this theme as is, or you can make changes!
+#        icon: fa-paper-plane
+#      - title: Up to Date
+#        text: We update dependencies to keep things fresh.
+#        icon: fa-laptop-code
 
 
 
