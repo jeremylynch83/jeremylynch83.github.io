@@ -12,7 +12,7 @@ header:
 sections:
   - type: contact.html
     section_id: intro
-    title: Neurointervention!
+    title: About
     text: >-
       Interventional Neuroradiology (also known as neurointervention, or endovascular surgery) is a medical subspecialty of medicine specialising in minimally invasive image-based technologies and procedures used in diagnosis and treatment of diseases of the head, neck, and spine.
 
@@ -36,6 +36,18 @@ sections:
       - title: Project 3
         text: This is a very short project description.
         icon: 3.jpg
+        url: '#'
+      - title: Project 4
+        text: This is a very short project description.
+        icon: 4.jpg
+        url: '#'
+      - title: Project 5
+        text: This is a very short project description.
+        icon: 5.jpg
+        url: '#'
+      - title: Project 6
+        text: This is a very short project description.
+        icon: 6.jpg
         url: '#'
       - title: Project 4
         text: This is a very short project description.
