@@ -14,28 +14,8 @@ sections:
     section_id: intro
     title: Neurointervention!
     text: >-
-      Ready to start your next project with us? Give us a call or send us an email
-      and we will get back to you as soon as possible! Yes. 
+      Interventional Neuroradiology (also known as neurointervention, or endovascular surgery) is a medical subspecialty of medicine specialising in minimally invasive image-based technologies and procedures used in diagnosis and treatment of diseases of the head, neck, and spine.
 
-
-  - type: services.html
-    section_id: services
-    #background_style: bg-info
-    title: Services
-    text: >-
-      Ready to start your next project with us? Give us a call or send us an email
-      and we will get back to you as soon as possible!
-    services:
-      - title: Sturdy Templates
-        text: Our templates are updated regularly so they don't break.
-        icon: fa-gem text-info
-        url: https://startbootstrap.com/
-      - title: Ready to Ship
-        text: You can use this theme as is, or you can make changes!
-        icon: fa-paper-plane
-      - title: Up to Date
-        text: We update dependencies to keep things fresh.
-        icon: fa-laptop-code
 
   - type: portfolio.html
     # this section has always ID 'portfolio'
@@ -69,6 +49,28 @@ sections:
         text: This is a very short project description.
         icon: 6.jpg
         url: '#'
+
+
+  - type: services.html
+    section_id: services
+    #background_style: bg-info
+    title: Services
+    text: >-
+      Ready to start your next project with us? Give us a call or send us an email
+      and we will get back to you as soon as possible!
+    services:
+      - title: Sturdy Templates
+        text: Our templates are updated regularly so they don't break.
+        icon: fa-gem text-info
+        url: https://startbootstrap.com/
+      - title: Ready to Ship
+        text: You can use this theme as is, or you can make changes!
+        icon: fa-paper-plane
+      - title: Up to Date
+        text: We update dependencies to keep things fresh.
+        icon: fa-laptop-code
+
+
 
   - type: call-to-action.html
     section_id: about
