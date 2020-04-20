@@ -8,6 +8,13 @@ header:
     label: Find Out More
     url: '#about'
 
+  - type: intro.html
+    section_id: intro
+    title: Neurointervention!
+    text: >-
+      Ready to start your next project with us? Give us a call or send us an email
+      and we will get back to you as soon as possible!
+
 
 sections:
   - type: services.html
