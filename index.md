@@ -22,8 +22,8 @@ sections:
     #section_id: portfolio
     #background_style: bg-dark
     projects:
-      - title: Project 1
-        text: This is a very short project description.
+      - title: Aneurysms
+        text: An aneurysm is a bulge in a blood vessel caused by a weakness in the blood vessel wall, usually where it branches.
         # the images are located in:
         # img/portfolio/fullsize
         # img/portfolio/thumbnails
@@ -49,19 +49,6 @@ sections:
         text: This is a very short project description.
         icon: 6.jpg
         url: '#'
-      - title: Project 4
-        text: This is a very short project description.
-        icon: 4.jpg
-        url: '#'
-      - title: Project 5
-        text: This is a very short project description.
-        icon: 5.jpg
-        url: '#'
-      - title: Project 6
-        text: This is a very short project description.
-        icon: 6.jpg
-        url: '#'
-
 
   - type: services.html
     section_id: services
