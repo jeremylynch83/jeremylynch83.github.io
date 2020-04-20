@@ -22,31 +22,31 @@ sections:
     #section_id: portfolio
     #background_style: bg-dark
     projects:
-      - title: Aneurysms
+      - title: Aneurysm
         text: An aneurysm is a bulge in a blood vessel caused by a weakness in the blood vessel wall, usually where it branches.
         # the images are located in:
         # img/portfolio/fullsize
         # img/portfolio/thumbnails
         icon: 1.jpg
         url: '#'
-      - title: Project 2
-        text: This is a very short project description.
+      - title: Stroke
+        text: A stroke is a serious life-threatening medical condition that happens when the blood supply to part of the brain is cut off.
         icon: 2.jpg
         url: '#'
-      - title: Project 3
-        text: This is a very short project description.
+      - title: Arteriovenous fistula
+        text: An arteriovenous fistula is an abnormal connection or passageway between an artery and a vein.
         icon: 3.jpg
         url: '#'
-      - title: Project 4
-        text: This is a very short project description.
+      - title: Carotid-cavernous fistula
+        text: A carotid-cavernous fistula results from an abnormal communication between the arterial and venous systems within the cavernous sinus in the skull.
         icon: 4.jpg
         url: '#'
-      - title: Project 5
-        text: This is a very short project description.
+      - title: Tumour embolisation
+        text: Arterial embolisation is when a substance is injected into a blood vessel supplying a tumour, usually to reduce blood flow before surgery. 
         icon: 5.jpg
         url: '#'
-      - title: Project 6
-        text: This is a very short project description.
+      - title: Spinal vascular disease
+        text: Diseases of the blood vessels of the spine. 
         icon: 6.jpg
         url: '#'
 
