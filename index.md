@@ -14,8 +14,9 @@ sections:
     section_id: services
     #background_style: bg-info
     title: Services
-    text: >
-      The neurointervention (also: interventional neuroradiology, neurosurgical angiography, surgical neurology) is a specialist field of the medicine which is specialised in endovascular treatment of vascular disorders of the brain, spinal cord, head and neck as well as other peripheral vascular malformations.
+    text: >-
+      Ready to start your next project with us? Give us a call or send us an email
+      and we will get back to you as soon as possible!
     services:
       - title: Sturdy Templates
         text: Our templates are updated regularly so they don't break.
