@@ -13,10 +13,10 @@ sections:
 
 - type: paragraph.html
   section_id: help
-  title: Get some help!
+  title: Support organisations
   text: >+
-    There is a quick reference and showscase of Markdown Syntax Here:
+    [www.brainandspine.org.uk/](https://www.brainandspine.org.uk/)
+    [www.stroke.org.uk/](https://www.stroke.org.uk/)
 
 
 ---
-Here goes some raw markdown content.
