@@ -13,16 +13,13 @@ sections:
   - type: contact.html
     section_id: intro
     title: About
-    text: >-
+    text: >+
       [[Interventional Neuroradiology]](inr.html) 
       [Some Link]({% post_url 2010-07-21-name-of-post %})
       [Link to a document]({{ site.baseurl }}{% link _collection/name-of-document.md %})
       [My page](/path/to/page.html)
       [Link](./path/to/file.md)
       [Link](inr.md)
-
-
-
 
 
       (also known as neurointervention, or endovascular surgery) is a *medical* subspecialty of medicine specialising in minimally invasive image-based technologies and procedures used in diagnosis and treatment of diseases of the head, neck, and spine.
