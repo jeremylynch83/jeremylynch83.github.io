@@ -16,20 +16,6 @@ sections:
     text: >-
       Ready to start your next project with us? Give us a call or send us an email
       and we will get back to you as soon as possible! Yes. 
-    actions:
-    - title: +1 (202) 555-014
-      icon: fa-phone
-    - title: E-Mail
-      icon: fa-envelope
-      url: mailto:contact@yourwebsite.com
-    - title: Twitter
-      icon: fa-twitter
-      icon_type: fab
-      url: '#'
-    - title: Facebook
-      icon: fa-facebook
-      icon_type: fab
-      url: '#'
 
 
   - type: services.html
