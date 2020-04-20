@@ -1,7 +1,7 @@
 ---
 layout: home
 header:
-  title: Your Favorite Source of Free Bootstrap Themes
+  title: Brain and spine neurointervention
   text: >
     Start Bootstrap can help you build better websites using the Bootstrap
     framework! Just download a theme and start customizing, no strings attached!
@@ -11,7 +11,7 @@ header:
 
 
 sections:
-  - type: call-to-action.html
+<!--   - type: call-to-action.html
     section_id: about
     background_style: bg-primary
     title: We've got what you need!
@@ -19,7 +19,7 @@ sections:
     actions:
       - title: Get Started!
         url: '#'
-        class: btn-light
+        class: btn-light -->
 
   - type: services.html
     section_id: services
