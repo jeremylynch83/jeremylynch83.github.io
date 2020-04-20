@@ -3,7 +3,7 @@ layout: home
 header:
   title: Brain and spine neurointervention
   text: >
-    Clear, accurate, and up-to-date information on endovascular treatment of brain and spine diseases. 
+    Clear, accurate, and up-to-date information on endovascular treatment of brain and spine disease. 
   action: # action button is optional
     label: Find Out More
     url: '#intro'
@@ -12,9 +12,11 @@ header:
 sections:
   - type: paragraph.html
     section_id: intro
-    title: No HTML!
+    title: Neurointerventional radiology
     text: >+
-        **This is bold text**  [Interventional Neuroradiology](inr.html) 
+        [Interventional Neuroradiology](inr.html) (also known as neurointervention, neurointerventional surgery, and endovascular neurosurgery) is a medical specialty employing minimally invasive image guided technologies and procedures used in diagnosis and treatment of diseases of the head, neck, and spine.
+
+        This website
 
 
   - type: portfolio.html
