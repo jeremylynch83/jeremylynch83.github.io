@@ -16,8 +16,8 @@ sass:
 
 relative_links:
   enabled:     true
-  collections: false
-  
+  collections: true
+
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
