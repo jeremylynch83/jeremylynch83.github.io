@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Links
+title: Interventional neuroradiology
 #background_style: bg-info
 background_image: url('assets/img/backgrounds/image-from-rawpixel-id-1199650-jpeg.jpg')
 # Add a link to the the top menu
@@ -13,11 +13,11 @@ sections:
 
 - type: paragraph.html
   section_id: help
-  title: Get some help!
+  title: What is interventional neuroradiology?
   text: >+
     There is a quick reference and showscase of Markdown Syntax Here:
 
 
 ---
-Here goes some raw markdown content.
+
 
