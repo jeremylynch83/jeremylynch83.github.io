@@ -14,7 +14,7 @@ sections:
     section_id: intro
     title: No HTML!
     text: >+
-        **This is bold text**  [Interventional Neuroradiology](inr.md) 
+        **This is bold text**  [Interventional Neuroradiology](inr.html) 
 
 
   - type: portfolio.html
