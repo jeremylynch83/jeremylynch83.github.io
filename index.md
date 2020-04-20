@@ -3,20 +3,19 @@ layout: home
 header:
   title: Brain and spine neurointervention
   text: >
-    Start Bootstrap can help you build better websites using the Bootstrap
-    framework! Just download a theme and start customizing, no strings attached!
+    Clear, accurate, and up-to-date information on endovascular treatment of brain and spine conditions. 
   action: # action button is optional
     label: Find Out More
     url: '#about'
 
 
 sections:
-
-
   - type: services.html
     section_id: services
     #background_style: bg-info
-    title: At Your Service
+    title: Services
+    text: >
+      The neurointervention (also: interventional neuroradiology, neurosurgical angiography, surgical neurology) is a specialist field of the medicine which is specialised in endovascular treatment of vascular disorders of the brain, spinal cord, head and neck as well as other peripheral vascular malformations.
     services:
       - title: Sturdy Templates
         text: Our templates are updated regularly so they don't break.
@@ -71,7 +70,15 @@ sections:
         icon: 6.jpg
         url: '#'
 
-
+  - type: call-to-action.html
+    section_id: about
+    background_style: bg-primary
+    title: We've got what you need!
+    text: Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!
+    actions:
+      - title: Get Started!
+        url: '#'
+        class: btn-light
 
   - type: timeline.html
     section_id: timeline
