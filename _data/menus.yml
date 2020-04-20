@@ -5,12 +5,12 @@
 header:
 - title: About
   url: /#about
+- title: Diseases
+  url: /#services
 - title: Services
   url: /#services
-- title: Members
-  url: /#members
-- title: History
-  url: /#timeline
+- title: For Clinicians
+  url: /clinicians
 - title: Contacts
   url: /#contacts
 - title: Links
