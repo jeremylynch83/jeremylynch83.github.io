@@ -13,6 +13,11 @@ sass:
   indentWidth: 4
   style: compact
   precision: 10
+
+relative_links:
+  enabled:     true
+  collections: false
+  
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
