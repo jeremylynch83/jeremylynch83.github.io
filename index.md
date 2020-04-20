@@ -19,7 +19,7 @@ sections:
 
   - type: portfolio.html
     # this section has always ID 'portfolio'
-    #section_id: portfolio
+    #section_id: diseases
     #background_style: bg-dark
     projects:
       - title: Aneurysm
@@ -71,15 +71,15 @@ sections:
 
 
 
-  - type: call-to-action.html
-    section_id: about
-    background_style: bg-primary
-    title: We've got what you need!
-    text: Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!
-    actions:
-      - title: Get Started!
-        url: '#'
-        class: btn-light
+#  - type: call-to-action.html
+#    section_id: about
+#    background_style: bg-primary
+#    title: We've got what you need!
+#    text: Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!
+#    actions:
+#      - title: Get Started!
+#        url: '#'
+#        class: btn-light
 
 #  - type: timeline.html
 #    section_id: timeline
@@ -102,23 +102,12 @@ sections:
 
   - type: contact.html
     section_id: contacts
-    title: Let's Get In Touch!
+    title: Contact information
     text: >-
-      Ready to start your next project with us? Give us a call or send us an email
-      and we will get back to you as soon as possible!
     actions:
-    - title: +1 (202) 555-014
-      icon: fa-phone
     - title: E-Mail
       icon: fa-envelope
       url: mailto:contact@yourwebsite.com
-    - title: Twitter
-      icon: fa-twitter
-      icon_type: fab
-      url: '#'
-    - title: Facebook
-      icon: fa-facebook
-      icon_type: fab
-      url: '#'
+
 
 ---
