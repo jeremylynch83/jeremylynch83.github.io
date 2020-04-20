@@ -4,9 +4,9 @@
 # run. So please, fill in any custom menu entry here.
 header:
 - title: About
-  url: /#about
+  url: /#intro
 - title: Diseases
-  url: /#diseases
+  url: /#portfolio
 - title: Services
   url: /#services
 - title: For Clinicians
