@@ -25,7 +25,7 @@ sections:
 
 
 
-      (also known as neurointervention, or endovascular surgery) is a medical subspecialty of medicine specialising in minimally invasive image-based technologies and procedures used in diagnosis and treatment of diseases of the head, neck, and spine.
+      (also known as neurointervention, or endovascular surgery) is a *medical* subspecialty of medicine specialising in minimally invasive image-based technologies and procedures used in diagnosis and treatment of diseases of the head, neck, and spine.
 
 
   - type: portfolio.html
