@@ -16,29 +16,29 @@ sections:
     title: Authors
     background_style: bg-info text-white
     members:
-      - title: Christina M. Aponte
+      - title: Sara Sciacca
         text: Singer and Songwriter
-        image: assets/img/members/person1.jpg
+        image: assets/img/members/sara.jpg
         url: '#'
-      - title: Gary D. Stevens
+      - title: Juveria Siddiqui
         text: Bass guitar.
-        image: assets/img/members/person2.jpg
+        image: assets/img/members/juveria.jpg
         url: '#'
-      - title: Devon J. Fletcher
+      - title: Thomas Booth
         text: Lead guitar.
-        image: assets/img/members/person3.jpg
+        image: assets/img/members/tom.jpg
         url: '#'
-      - title: Todd E. Anderson
+      - title: Jon Hart
         text: Drums, percussion.
-        image: assets/img/members/person5.jpg
+        image: assets/img/members/jon.jpg
         url: '#'
-      - title: Daniel T. Riley
+      - title: Jeremy Lynch
         text: Musician, songwriter, producer.
-        image: assets/img/members/person6.jpg
+        image: assets/img/members/jeremy.jpg
         url: '#'
-      - title: Ella P. Walter
+      - title: Naga Kandasamy
         text: PR.
-        image: assets/img/members/person7.jpg
+        image: assets/img/members/naga.jpg
         url: '#'
 
 
