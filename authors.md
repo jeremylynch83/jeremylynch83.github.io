@@ -13,7 +13,7 @@ sections:
 
   - type: members.html
     section_id: members
-    title: Our Crew!
+    title: Authors
     background_style: bg-info text-white
     members:
       - title: Christina M. Aponte
