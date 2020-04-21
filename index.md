@@ -10,10 +10,7 @@ header:
 
 
 sections:
-  - type: paragraph.html
-    section_id: intro
-    title: Interventional Neuroradiology
-    text: >+
+
 
   - type: services.html
     section_id: services
