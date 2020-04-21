@@ -25,7 +25,6 @@ sections:
       - title: Expert
         text: Articles are written by practising neurointerventional doctors.
         icon: fa-gem text-info
-        url: https://startbootstrap.com/
       - title: Evidence based
         text: Based on an extensive research base. 
         icon: fa-paper-plane
