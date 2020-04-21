@@ -14,7 +14,6 @@ sections:
     section_id: intro
     title: Interventional Neuroradiology
     text: >+
-<<<<<<< HEAD
         [Interventional Neuroradiology](inr.html) (also known as neurointervention, neurointerventional surgery, and endovascular neurosurgery) is a medical specialty employing image guided technologies (such as X-rays) in the diagnosis and treatment of diseases of the brain, head, neck, and spine. It is a relatively new discipline that is rapidly growing in popularity partly due to its capability to treat serious diseases in a less invasive manner than previously possible. 
 
 
@@ -35,12 +34,6 @@ sections:
       - title: Up to Date
         text: We update dependencies to keep things fresh.
         icon: fa-laptop-code
-=======
-        [Interventional Neuroradiology](inr.html) (also known as neurointervention, neurointerventional surgery, and endovascular neurosurgery) is a medical specialty employing image guided technologies (such as X-rays) in the diagnosis and treatment of diseases of the brain, head, neck, and spine. 
-        
-        It is a relatively new discipline that is rapidly growing in popularity partly due to its capability to treat serious diseases in a less invasive manner than previously possible. Because of the rapidity of development there is a need for a website to provide accurate, evidence-based information about the specialty and the diseases which it is able to treat 
- 
->>>>>>> 5f4882191fb39a7f7d09464445e21d3d92572d3d
 
   - type: portfolio.html
     # this section has always ID 'portfolio'
