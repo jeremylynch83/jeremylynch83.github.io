@@ -9,8 +9,14 @@ header:
     url: '#intro'
 
 
-  - type: services.html
+sections:
+  - type: paragraph.html
     section_id: intro
+    title: Interventional Neuroradiology
+    text: >+
+
+  - type: services.html
+    section_id: services
     #background_style: bg-info
     title: Interventional Neuroradiology
     text: >+
@@ -27,8 +33,9 @@ header:
         text: Based on an extensive research base. 
         icon: fa-paper-plane
       - title: Up-to-Date
-        text: The latest research is presented. 
+        text: The latest research is presented.
         icon: fa-laptop-code
+
 
   - type: portfolio.html
     # this section has always ID 'portfolio'
