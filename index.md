@@ -9,31 +9,25 @@ header:
     url: '#intro'
 
 
-sections:
-  - type: paragraph.html
-    section_id: intro
-    title: Interventional Neuroradiology
-
-
   - type: services.html
-    section_id: services
+    section_id: intro
     #background_style: bg-info
-    title: At Your Service
+    title: Interventional Neuroradiology
     text: >+
         [Interventional Neuroradiology](inr.html) (also known as neurointervention, neurointerventional surgery, and endovascular neurosurgery) is a medical specialty employing image guided technologies (such as X-rays) in the diagnosis and treatment of diseases of the brain, head, neck, and spine. It is a relatively new discipline that is rapidly growing in popularity partly due to its capability to treat serious diseases in a less invasive manner than previously possible. 
 
 
         This website, [written by](authors.html) practicing neurointerventional doctors, provides evidence-based and comprehensive information about the specialty and the diseases which it is able to treat.
     services:
-      - title: Sturdy Templates
-        text: Our templates are updated regularly so they don't break.
+      - title: Expert
+        text: Articles are written by practising neurointerventional doctors.
         icon: fa-gem text-info
         url: https://startbootstrap.com/
-      - title: Ready to Ship
-        text: You can use this theme as is, or you can make changes!
+      - title: Evidence based
+        text: Based on an extensive research base. 
         icon: fa-paper-plane
-      - title: Up to Date
-        text: We update dependencies to keep things fresh.
+      - title: Up-to-Date
+        text: The latest research is presented. 
         icon: fa-laptop-code
 
   - type: portfolio.html
