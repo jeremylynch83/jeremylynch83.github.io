@@ -19,6 +19,21 @@ sections:
 
         This website, [written by](authors.html) practicing neurointerventional doctors, provides evidence-based and comprehensive information about the specialty and the diseases which it is able to treat.
 
+  - type: services.html
+    section_id: services
+    #background_style: bg-info
+    title: At Your Service
+    services:
+      - title: Sturdy Templates
+        text: Our templates are updated regularly so they don't break.
+        icon: fa-gem text-info
+        url: https://startbootstrap.com/
+      - title: Ready to Ship
+        text: You can use this theme as is, or you can make changes!
+        icon: fa-paper-plane
+      - title: Up to Date
+        text: We update dependencies to keep things fresh.
+        icon: fa-laptop-code
 
   - type: portfolio.html
     # this section has always ID 'portfolio'
