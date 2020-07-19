@@ -35,7 +35,7 @@
 		</p>
 	</div>
 
-	<div class ="box_border">
+	<div id="results_box" class="box_border" style="display:none" >
 
 
 		<h2><p id="decision_text1"></p></h2>
@@ -73,7 +73,7 @@
 	var sls_rect = {x:0, y:0, width:0, height:0};
 	var sl_rect = {x:0, y:0, width:0, height:0};
 
-	button_calculate();
+	//button_calculate();
 
 
 	function web_device(type) {
@@ -85,6 +85,8 @@
 		update_average_width();
 		update_height();
 		calculate_web_size();	
+
+		document.getElementById('results_box').style.display = "block";
 
 	}
 

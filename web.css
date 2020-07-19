@@ -24,6 +24,7 @@ p {
 }
 
 .box_border{
+  
   position: relative;
   width: 600px;
   border: 4px solid lightgray;
