@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+<head>
+	<meta charset="utf-8"/>
+	<title>WEB Device Selector</title>
+    <link rel="stylesheet" type="text/css" href="web.css">
+</head>
+
+
+<body>
+        
+<h1>WEB Device Selector</h1>
+		
+	<div class ="box_border">
+		<p>
+		<label for="width1")>Enter width 1: </label>
+		<input id="width1" value ="2" type="number"  
+		max="10" min="2" step=0.1 
+		/></p>
+		<p><label for="width2")>Enter width 2: </label>
+		<input id="width2" value="2" type="number" 
+		max="10" min="2" step=0.1 
+		 /></p>
+
+		<p><label for="height")>Enter height: </label>
+		<input id="height" value="3" type="number"  
+		max="10.6" min="2.5" step=0.1		
+		 /></p>
+
+		<p>
+		<button id="calc_button"  onclick="button_calculate()">Calculate WEB size</button>
+
+		</p>
+	</div>
+
+	<div class ="box_border">
+		<b><p id="average_width"></p></b>
+
+		<h2><p id="decision_text1"></p></h2>
+		<h2><p id="decision_text2"></p></h2>
+
+		<canvas id="sl_canvas"  width="500" height="300"></canvas>
+		<canvas id="sls_canvas" width="500" height="300" ></canvas>
+	</div>
+
+	<div id="footer">
+		<p>For educational purposes only. (C) 2020.  </p>
+	</div>
+
+
+
+
+<script>
+
+	// Global Variables
+
+	var aneurysm_width =0;
+	var aneurysm_height=0;
+	var device_type;
+
+	var sls_name;
+	var sl_name;
+
+	var sls_item;
+	var sl_item;
+
+	var sls_rect = {x:0, y:0, width:0, height:0};
+	var sl_rect = {x:0, y:0, width:0, height:0};
+
+	function drawbackground(canvas, context, src){
+		var img = new Image();
+
+		img.onload = function(){
+				context.drawImage(img, 0, 0, 
+				img.width,    
+				img.height,     // source rect
+                   0, 0, 
+				   canvas.width, 
+				   canvas.height); // destination rect
+
+		// Draw shaded rectangle
+
+		};
+		img.src = src;
+	}
+
+
+
+
+	drawbackground(
+		document.getElementById("sl_canvas"), 
+		document.getElementById("sl_canvas").getContext('2d'), 
+		"img/sl_table.png" );
+
+	drawbackground(
+		document.getElementById("sls_canvas"), 
+		document.getElementById("sls_canvas").getContext('2d'), 
+		"img/sls_table.png" );
+
+
+	function web_device(type) {
+		device_type = type;
+		calculate_web_size(); 
+	}
+
+	function button_calculate() {
+		update_average_width();
+		update_height();
+		calculate_web_size();	
+
+	}
+
+	function update_average_width() {
+		width1 = parseFloat(document.getElementById('width1').value);
+		width2 = parseFloat(document.getElementById('width2').value);
+
+		aneurysm_width =  (width1 + width2)/2;
+		aneurysm_width = aneurysm_width.toFixed(2); 
+
+		document.getElementById('average_width').textContent = "(Average width: " + aneurysm_width + " mm)";
+
+		calculate_web_size();
+	}
+
+	function update_height() {
+		aneurysm_height = parseFloat(document.getElementById('height').value);
+		
+		calculate_web_size(); 
+	}
+
+	function calculate_web_size() {
+		
+		let sl_elements = [
+			{	
+				lower_width: 	2, 
+				upper_width: 	2.6, 
+				lower_height:	2.5, 
+				upper_height:	3.4,
+				row: 9, 
+				column: 1,
+				name: 			"SL 3x2", 
+				catheter: 		"Via 17"
+						},
+						{	
+                            lower_width: 	2.7, 
+                            upper_width: 	3.1, 
+                            lower_height:	2.5, 
+                            upper_height:	3.4,
+							row: 9, 
+							column: 2,
+                            name: 			"SL 3.5x2", 
+                            catheter: 		"Via 17"
+                                    },
+            
+                                    {	
+                            lower_width: 	3.2, 
+                            upper_width: 	3.6, 
+                            lower_height:	2.5, 
+                            upper_height:	3.4,
+							row: 9, 
+							column: 3,
+                            name: 			"SL 4x2", 
+                            catheter: 		"Via 17"
+                                    },
+            
+
+                                    {	
+                            lower_width: 	3.2, 
+                            upper_width: 	3.6, 
+                            lower_height:	3.5, 
+                            upper_height:	4.4,
+							row: 8, 
+							column: 3,
+                            name: 			"SL 4x3", 
+                            catheter: 		"Via 17"
+                                    },
+            
+                                    {	
+                            lower_width: 	3.7, 
+                            upper_width: 	4.1, 
+                            lower_height:	2.5, 
+                            upper_height:	3.4,
+							row: 9, 
+							column: 4,
+                            name: 			"SL 4.5x2", 
+                            catheter: 		"Via 17"
+                                    },
+            
+                                    {	
+                            lower_width: 	3.7, 
+                            upper_width: 	4.1, 
+                            lower_height:	3.5, 
+                            upper_height:	4.4,
+							row: 8, 
+							column: 4,
+                            name: 			"SL 4.5x3", 
+                            catheter: 		"Via 17"
+                                    },
+            
+                                    {	
+                            lower_width: 	4.2, 
+                            upper_width: 	4.6, 
+                            lower_height:	2.5, 
+                            upper_height:	3.4,
+							row: 9, 
+							column: 5,
+                            name: 			"SL 5x2", 
+                            catheter: 		"Via 17"
+                                    },
+                                    {	
+                            lower_width: 	4.2, 
+                            upper_width: 	4.6, 
+                            lower_height:	3.5, 
+                            upper_height:	4.4,
+							row: 8, 
+							column: 5,
+                            name: 			"SL 5x3", 
+                            catheter: 		"Via 17"
+                                    },
+                                    {
+                            lower_width: 	4.7, 
+                            upper_width: 	5.5, 
+                            lower_height:	3.5, 
+                            upper_height:	4.4,
+							row: 8, 
+							column: 6,
+                            name: 			"SL 6x3", 
+                            catheter: 		"Via 17 & 21"
+                                    },
+            
+                            {	
+                            lower_width: 	4.7, 
+                            upper_width: 	5.5, 
+                            lower_height:	4.5, 
+                            upper_height:	5.4,
+							row: 7, 
+							column: 6,
+                            name: 			"SL 6x4", 
+                            catheter: 		"Via 17 & 21"
+                                    },
+            
+                            {
+                            lower_width: 	5.6, 
+                            upper_width: 	6.5, 
+                            lower_height:	3.5, 
+                            upper_height:	4.4,
+							row: 8, 
+							column: 7,
+                            name: 			"SL 7x3", 
+                            catheter: 		"Via 17 & 21"
+                                    },
+                                    {
+                            lower_width: 	5.6, 
+                            upper_width: 	6.5, 
+                            lower_height:	4.5, 
+                            upper_height:	5.4,
+							row: 7, 
+							column: 7,
+                            name: 			"SL 7x4", 
+                            catheter: 		"Via 17 & 21"
+                                    },
+                                    {
+                            lower_width: 	5.6, 
+                            upper_width: 	6.5, 
+                            lower_height:	5.5, 
+                            upper_height:	6.4,
+							row: 6, 
+							column: 7,
+                            name: 			"SL 7x5", 
+                            catheter: 		"Via 17 & 21"
+                                    },
+                                    {
+                            lower_width: 	6.6, 
+                            upper_width: 	7.4, 
+                            lower_height:	3.5, 
+                            upper_height:	4.4,
+							row: 8, 
+							column: 8,
+                            name: 			"SL 8x3", 
+                            catheter: 		"Via 27"
+                                    },
+                                    {
+                            lower_width: 	6.6, 
+                            upper_width: 	7.4, 
+                            lower_height:	4.5, 
+                            upper_height:	5.4,
+							row: 7, 
+							column: 8,
+                            name: 			"SL 8x4", 
+                            catheter: 		"Via 27"
+                                    },						
+                                    {
+                            lower_width: 	6.6, 
+                            upper_width: 	7.4, 
+                            lower_height:	5.5, 
+                            upper_height:	6.4,
+							row: 6, 
+							column: 8,
+                            name: 			"SL 8x5", 
+                            catheter: 		"Via 27"
+                                    },
+                                    {
+                            lower_width: 	6.6, 
+                            upper_width: 	7.4, 
+                            lower_height:	6.5, 
+                            upper_height:	7.4,
+							row: 5, 
+							column: 8,
+                            name: 			"SL 8x6", 
+                            catheter: 		"Via 27"
+                                    },															
+                                    {
+                            lower_width: 	7.5, 
+                            upper_width: 	8.3, 
+                            lower_height:	4.5, 
+                            upper_height:	5.4,
+							row: 7, 
+							column: 9,
+                            name: 			"SL 9x4", 
+                            catheter: 		"Via 27"
+                                    },
+            
+                                    {
+                            lower_width: 	7.5, 
+                            upper_width: 	8.3, 
+                            lower_height:	5.5, 
+                            upper_height:	6.4,
+							row: 6, 
+							column: 9,
+                            name: 			"SL 9x5", 
+                            catheter: 		"Via 27"
+                                    },
+                                    {
+                            lower_width: 	7.5, 
+                            upper_width: 	8.3, 
+                            lower_height:	6.5, 
+                            upper_height:	7.4,
+							row: 5, 
+							column: 9,
+                            name: 			"SL 9x6", 
+                            catheter: 		"Via 27"
+                                    },
+                                    {
+                            lower_width: 	7.5, 
+                            upper_width: 	8.3, 
+                            lower_height:	7.5, 
+                            upper_height:	8.4,
+							row: 4, 
+							column: 9,
+                            name: 			"SL 9x7", 
+                            catheter: 		"Via 27"
+                                    },
+            
+                                    {
+                            lower_width: 	8.4, 
+                            upper_width: 	9.2, 
+                            lower_height:	5.5, 
+                            upper_height:	6.4,
+							row: 6, 
+							column: 10,
+                            name: 			"SL 10x5", 
+                            catheter: 		"Via 33"
+                                    },
+                                    {
+                            lower_width: 	8.4, 
+                            upper_width: 	9.2, 
+                            lower_height:	6.5, 
+                            upper_height:	7.4,
+							row: 5, 
+							column: 10,
+                            name: 			"SL 10x6", 
+                            catheter: 		"Via 33"
+                                    },
+                                    {
+                            lower_width: 	8.4, 
+                            upper_width: 	9.2, 
+                            lower_height:	7.5, 
+                            upper_height:	8.4,
+							row: 4, 
+							column: 10,
+                            name: 			"SL 10x7", 
+                            catheter: 		"Via 33"
+                                    },
+                                    {
+                            lower_width: 	8.4, 
+                            upper_width: 	9.2, 
+                            lower_height:	8.5, 
+                            upper_height:	9.4,
+							row: 3, 
+							column: 10,
+                            name: 			"SL 10x8", 
+                            catheter: 		"Via 33"
+                                    },
+            
+            
+                                    {
+                            lower_width: 	9.3, 
+                            upper_width: 	10, 
+                            lower_height:	6.5, 
+                            upper_height:	7.4,
+							row: 5, 
+							column: 11,
+                            name: 			"SL 11x6", 
+                            catheter: 		"Via 33"
+                                    },
+            
+                                    {
+                                    lower_width: 	9.3, 
+                            upper_width: 	10, 
+                            lower_height:	7.5, 
+                            upper_height:	8.4,
+							row: 4, 
+							column: 11,
+                            name: 			"SL 11x7", 
+                            catheter: 		"Via 33"
+                                    },						
+                                    {
+                            lower_width: 	9.3, 
+                            upper_width: 	10, 
+                            lower_height:	8.5, 
+                            upper_height:	9.4,
+							row: 3, 
+							column: 11,
+                            name: 			"SL 11x8", 
+                            catheter: 		"Via 33"
+                                    },
+                                    {
+                            lower_width: 	9.3, 
+                            upper_width: 	10, 
+                            lower_height:	9.5, 
+                            upper_height:	10.4,
+							row: 2, 
+							column: 11,
+                            name: 			"SL 11x9", 
+                            catheter: 		"Via 33"
+                                    }
+						
+						]
+
+		let sls_elements = [
+			{	
+				lower_width: 	3.6, 
+				upper_width: 	3.7, 
+				upper_height:	3.6,
+				row: 8, 
+				column: 1, 
+				name: 			"SLS 4", 
+				catheter: 		"Via 17"
+						},
+						{	
+				lower_width: 	3.8, 
+				upper_width: 	4.6, 
+				upper_height:	4.6,
+				row: 7, 
+				column: 2, 
+				name: 			"SLS 5", 
+				catheter: 		"Via 17"
+						},			{	
+				lower_width: 	4.7, 
+				upper_width: 	5.5, 
+				upper_height:	5.6,
+				row: 6, 
+				column: 3, 
+				name: 			"SLS 6", 
+				catheter: 		"Via 17 & 21"
+						},			{	
+				lower_width: 	5.6, 
+				upper_width: 	6.5, 
+				upper_height:	6.6,
+				row: 5, 
+				column: 4, 
+				name: 			"SLS 7", 
+				catheter: 		"Via 17 & 21"
+						},			{	
+				lower_width: 	6.6, 
+				upper_width: 	7.4, 
+				upper_height:	7.6,
+				row: 4, 
+				column: 5, 
+				name: 			"SLS 8", 
+				catheter: 		"Via 27"
+						},			{	
+				lower_width: 	7.5, 
+				upper_width: 	8.3, 
+				upper_height:	8.6,
+				row: 3, 
+				column: 6, 
+				name: 			"SLS 9", 
+				catheter: 		"Via 27"
+						},			{	
+				lower_width: 	8.4, 
+				upper_width: 	9.2, 
+				upper_height:	9.6,
+				row: 2, 
+				column: 7, 
+				name: 			"SLS 10", 
+				catheter: 		"Via 33"
+						},			{	
+				lower_width: 	9.3, 
+				upper_width: 	10, 
+				upper_height:	10.6,
+				row: 1, 
+				column: 8, 
+				name: 			"SLS 11", 
+				catheter: 		"Via 33"
+						}
+			]
+
+
+		sl_name = "No SL device recommended.";
+		sls_name = "No SLS device recommended.";
+
+		sl_item = null;
+		sls_item = null;
+
+
+		sl_elements.forEach(function(item, index) {
+			if (aneurysm_width >= item.lower_width && aneurysm_width <= item.upper_width && aneurysm_height >= item.lower_height && aneurysm_height <= item.upper_height) {
+				sl_item = item;
+				sl_name = item.name + " (" + item.catheter + ")";
+			}
+		});
+
+
+		sls_elements.forEach(function(item, index) {
+			if (aneurysm_width >= item.lower_width && aneurysm_width <= item.upper_width) {
+				sls_item = item;
+				sls_name = item.name + " (" + item.catheter + ")";
+			}
+		});
+
+		document.getElementById('decision_text1').textContent = sl_name;
+		document.getElementById('decision_text2').textContent = sls_name;
+
+		drawlines(sl_item, sls_item);
+
+	}
+
+	function drawlines(sl_item, sls_item){
+
+	if (sl_item != null) {
+
+		sl_row = sl_item.row;
+		sl_column = sl_item.column;
+
+		sl_canvas =  document.getElementById('sl_canvas');
+		sl_context = document.getElementById('sl_canvas').getContext("2d");
+		
+		const sl_c_width = sl_canvas.getBoundingClientRect().width;
+		const sl_c_height = sl_canvas.getBoundingClientRect().height;
+		var sl_x_offset;
+		var sl_cell_width;
+		var sl_cell_height;
+		var sl_table_box_h;
+
+		//calc
+		sl_x_offset = (sl_c_width*.12);
+		sl_cell_width = (sl_c_width- sl_x_offset)/11;
+		sl_table_box_h = sl_c_height*.73;
+		sl_cell_height = sl_table_box_h/9;
+
+		sl_rect.x = sl_x_offset + sl_cell_width*(sl_column-1);
+		sl_rect.y = sl_cell_height*(sl_row-1);	
+		sl_rect.width = sl_cell_width;
+		sl_rect.height = sl_cell_height;
+
+		//console.log('x: ' + x + ', y: ' + y + ', width: ' + cell_width + ', height: ' + cell_height);
+		//refresh bg
+
+		var sl_img = new Image();
+		sl_img.onload = function(){
+				sl_context.drawImage(sl_img, 0, 0, 
+				sl_img.width,    
+				sl_img.height,     // source rect
+				0, 0, 
+				sl_canvas.width, 
+				sl_canvas.height); // destination rect
+				sl_context.beginPath();
+
+				// Draw shaded rectangle
+				sl_context.globalAlpha = 0.2;
+				sl_context.fillRect(sl_rect.x, sl_rect.y, sl_rect.width, sl_rect.height); 
+				sl_context.globalAlpha = 1;
+		};
+		sl_img.src = 'img/sl_table.png'; 
+	}
+
+	// SLS
+	if (sls_item != null)
+	{
+
+
+		console.log ("sls");
+
+		sls_canvas =  document.getElementById('sls_canvas');
+			sls_context = document.getElementById('sls_canvas').getContext("2d");
+
+			sls_row = sls_item.row;
+		sls_column = sls_item.column;
+
+	const sls_c_width = sls_canvas.getBoundingClientRect().width;
+	const sls_c_height = sls_canvas.getBoundingClientRect().height;
+	var sls_x_offset;
+	var sls_cell_width;
+	var sls_cell_height;
+	var sls_table_box_h;
+
+	//calc
+
+		sls_x_offset = (sls_c_width*.15);
+		sls_cell_width = (sls_c_width- sls_x_offset)/8;
+		sls_table_box_h = sls_c_height*.71;
+		sls_cell_height = sls_table_box_h/8;		
+
+	sls_rect.x = sls_x_offset + sls_cell_width*(sls_column-1);
+	sls_rect.y = sls_cell_height*(sls_row-1);	
+	sls_rect.width = sls_cell_width;
+	sls_rect.height = sls_cell_height;
+
+	//refresh bg
+
+	var sls_img = new Image();
+	sls_img.onload = function(){
+			sls_context.drawImage(sls_img, 0, 0, 
+			sls_img.width,    
+			sls_img.height,     // source rect
+			0, 0, 
+			sls_canvas.width, 
+			sls_canvas.height); // destination rect
+			sls_context.beginPath();
+
+			// Draw shaded rectangle
+			sls_context.globalAlpha = 0.2;
+			sls_context.fillRect(sls_rect.x, sls_rect.y, sls_rect.width, sls_rect.height); 
+			sls_context.globalAlpha = 1;
+	};
+	sls_img.src = 'img/sls_table.png'; 
+	}
+}
+
+
+
+
+
+</script>
+
+    
+</body>
+</html>
+
+
+
