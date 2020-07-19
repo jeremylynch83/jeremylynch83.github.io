@@ -4,14 +4,14 @@
     
 <head>
 	<meta charset="utf-8"/>
-	<title>WEB Device Selector (BETA)</title>
+	<title>WEB Device Selector (BETA) </title>
     <link rel="stylesheet" type="text/css" href="web.css">
 </head>
 
 
 <body>
         
-<h1>WEB Device Selector</h1>
+<h1>WEB Device Selector (BETA)</h1>
 		
 	<div class ="box_border">
 		<p>
@@ -582,9 +582,14 @@
 				sl_context.beginPath();
 
 				// Draw shaded rectangle
-				sl_context.globalAlpha = 0.2;
-			sl_context.fillStyle = "#FF0000";
-				sl_context.fillRect(sl_rect.x, sl_rect.y, sl_rect.width, sl_rect.height); 
+				//sl_context.globalAlpha = 0.2;
+			//sl_context.fillStyle = "#FF0000";
+			// Red rectangle
+			sl_context.beginPath();
+			sl_context.lineWidth = "6";
+			sl_context.strokeStyle = "red";
+				sl_context.rect(sl_rect.x, sl_rect.y, sl_rect.width, sl_rect.height); 
+				sl_context.stroke();
 				sl_context.globalAlpha = 1;
 		};
 		sl_img.src = 'img/sl_table.png'; 
@@ -635,10 +640,16 @@
 			sls_context.beginPath();
 
 			// Draw shaded rectangle
-			sls_context.globalAlpha = 0.2;
-			sls_context.fillStyle = "#FF0000";
-			sls_context.fillRect(sls_rect.x, sls_rect.y, sls_rect.width, sls_rect.height); 
-			sls_context.globalAlpha = 1;
+			//sls_context.globalAlpha = 0.2;
+
+
+			sls_context.beginPath();
+			sls_context.lineWidth = "6";
+			sls_context.strokeStyle = "red";
+			//sls_context.fillStyle = "#FF0000";
+			sls_context.rect(sls_rect.x, sls_rect.y, sls_rect.width, sls_rect.height);
+			sls_context.stroke(); 
+			//sls_context.globalAlpha = 1;
 	};
 	sls_img.src = 'img/sls_table.png'; 
 	}
