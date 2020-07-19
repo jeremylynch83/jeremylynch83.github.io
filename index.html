@@ -41,7 +41,7 @@
 		<h2><p id="decision_text1"></p></h2>
 		<h2><p id="decision_text2"></p></h2>
 
-		<p style="color: red; text-align: center; font-weight: bold">(Selected device in highlighted in red) </p>
+		<p style="color: red; text-align: center; font-weight: bold">(Selected device highlighted in red) </p>
 		<h3>SL table</h3>
 
 		<canvas id="sl_canvas"  width="600" height="350"></canvas>
@@ -72,36 +72,6 @@
 
 	var sls_rect = {x:0, y:0, width:0, height:0};
 	var sl_rect = {x:0, y:0, width:0, height:0};
-
-	function drawbackground(canvas, context, src){
-		var img = new Image();
-
-		img.onload = function(){
-				context.drawImage(img, 0, 0, 
-				img.width,    
-				img.height,     // source rect
-                   0, 0, 
-				   canvas.width, 
-				   canvas.height); // destination rect
-
-		// Draw shaded rectangle
-
-		};
-		img.src = src;
-	}
-
-
-
-
-	/*drawbackground(
-		document.getElementById("sl_canvas"), 
-		document.getElementById("sl_canvas").getContext('2d'), 
-		"img/sl_table.png" );
-
-	drawbackground(
-		document.getElementById("sls_canvas"), 
-		document.getElementById("sls_canvas").getContext('2d'), 
-		"img/sls_table.png" );*/
 
 		button_calculate();
 
