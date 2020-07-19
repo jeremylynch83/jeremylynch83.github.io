@@ -16,11 +16,11 @@
 	<div class ="box_border">
 		<p>
 		<label for="width1")>Enter aneurysm width 1: </label>
-		<input id="width1" value ="2.5" type="number"  
+		<input id="width1" value ="4" type="number"  
 		max="10" min="2" step=0.1 
 		/></p>
 		<p><label for="width2")>Enter aneurysm width 2: </label>
-		<input id="width2" value="2.5" type="number" 
+		<input id="width2" value="4" type="number" 
 		max="10" min="2" step=0.1 
 		 /></p>
 
@@ -41,7 +41,9 @@
 		<h2><p id="decision_text1"></p></h2>
 		<h2><p id="decision_text2"></p></h2>
 
+		<p style="color: red; text-align: center; font-weight: bold">(Selected device in highlighted in red) </p>
 		<h3>SL table</h3>
+
 		<canvas id="sl_canvas"  width="600" height="350"></canvas>
 		<h3>SLS table</h3>
 		<canvas id="sls_canvas" width="600" height="350" ></canvas>
@@ -91,7 +93,7 @@
 
 
 
-	drawbackground(
+	/*drawbackground(
 		document.getElementById("sl_canvas"), 
 		document.getElementById("sl_canvas").getContext('2d'), 
 		"img/sl_table.png" );
@@ -99,7 +101,9 @@
 	drawbackground(
 		document.getElementById("sls_canvas"), 
 		document.getElementById("sls_canvas").getContext('2d'), 
-		"img/sls_table.png" );
+		"img/sls_table.png" );*/
+
+		button_calculate();
 
 
 	function web_device(type) {
