@@ -4,7 +4,7 @@
     
 <head>
 	<meta charset="utf-8"/>
-	<title>WEB Device Selector</title>
+	<title>WEB Device Selector (BETA)</title>
     <link rel="stylesheet" type="text/css" href="web.css">
 </head>
 
@@ -15,20 +15,20 @@
 		
 	<div class ="box_border">
 		<p>
-		<label for="width1")>Enter width 1: </label>
-		<input id="width1" value ="2" type="number"  
+		<label for="width1")>Enter aneurysm width 1: </label>
+		<input id="width1" value ="2.5" type="number"  
 		max="10" min="2" step=0.1 
 		/></p>
-		<p><label for="width2")>Enter width 2: </label>
-		<input id="width2" value="2" type="number" 
+		<p><label for="width2")>Enter aneurysm width 2: </label>
+		<input id="width2" value="2.5" type="number" 
 		max="10" min="2" step=0.1 
 		 /></p>
 
-		<p><label for="height")>Enter height: </label>
+		<p><label for="height")>Enter aneurysm height: </label>
 		<input id="height" value="3" type="number"  
 		max="10.6" min="2.5" step=0.1		
 		 /></p>
-
+		 <b><p id="average_width"></p></b>
 		<p>
 		<button id="calc_button"  onclick="button_calculate()">Calculate WEB size</button>
 
@@ -36,13 +36,15 @@
 	</div>
 
 	<div class ="box_border">
-		<b><p id="average_width"></p></b>
+
 
 		<h2><p id="decision_text1"></p></h2>
 		<h2><p id="decision_text2"></p></h2>
 
-		<canvas id="sl_canvas"  width="500" height="300"></canvas>
-		<canvas id="sls_canvas" width="500" height="300" ></canvas>
+		<h3>SL table</h3>
+		<canvas id="sl_canvas"  width="600" height="350"></canvas>
+		<h3>SLS table</h3>
+		<canvas id="sls_canvas" width="600" height="350" ></canvas>
 	</div>
 
 	<div id="footer">
@@ -509,8 +511,8 @@
 			]
 
 
-		sl_name = "No SL device recommended.";
-		sls_name = "No SLS device recommended.";
+		sl_name = "No SL device recommended for this size.";
+		sls_name = "No SLS device recommended for this size.";
 
 		sl_item = null;
 		sls_item = null;
@@ -581,6 +583,7 @@
 
 				// Draw shaded rectangle
 				sl_context.globalAlpha = 0.2;
+			sl_context.fillStyle = "#FF0000";
 				sl_context.fillRect(sl_rect.x, sl_rect.y, sl_rect.width, sl_rect.height); 
 				sl_context.globalAlpha = 1;
 		};
@@ -633,6 +636,7 @@
 
 			// Draw shaded rectangle
 			sls_context.globalAlpha = 0.2;
+			sls_context.fillStyle = "#FF0000";
 			sls_context.fillRect(sls_rect.x, sls_rect.y, sls_rect.width, sls_rect.height); 
 			sls_context.globalAlpha = 1;
 	};

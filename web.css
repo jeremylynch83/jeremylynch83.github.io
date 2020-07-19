@@ -4,13 +4,28 @@ h1 {
   text-align: center
 }
 
+
+h2 {
+  display: block;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+
+h3 {
+  display: block;
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #f3f3f3;
+}
+
 p {
   font-family: sans-serif;
 }
 
 .box_border{
   position: relative;
-  width: 500px;
+  width: 600px;
   border: 4px solid lightgray;
   border-radius: 12px;
   margin: 10px auto;
