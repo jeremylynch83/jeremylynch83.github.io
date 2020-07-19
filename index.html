@@ -419,7 +419,8 @@
 			{	
 				lower_width: 	3.6, 
 				upper_width: 	3.7, 
-				upper_height:	3.6,
+				lower_height: 3.5, 
+				upper_height:	4,
 				row: 8, 
 				column: 1, 
 				name: 			"SLS 4", 
@@ -428,6 +429,7 @@
 						{	
 				lower_width: 	3.8, 
 				upper_width: 	4.6, 
+				lower_height: 4, 
 				upper_height:	4.6,
 				row: 7, 
 				column: 2, 
@@ -436,6 +438,7 @@
 						},			{	
 				lower_width: 	4.7, 
 				upper_width: 	5.5, 
+				lower_height: 4.6, 
 				upper_height:	5.6,
 				row: 6, 
 				column: 3, 
@@ -444,6 +447,7 @@
 						},			{	
 				lower_width: 	5.6, 
 				upper_width: 	6.5, 
+				lower_height: 5.6, 
 				upper_height:	6.6,
 				row: 5, 
 				column: 4, 
@@ -452,6 +456,7 @@
 						},			{	
 				lower_width: 	6.6, 
 				upper_width: 	7.4, 
+				lower_height: 6.7, 
 				upper_height:	7.6,
 				row: 4, 
 				column: 5, 
@@ -460,6 +465,7 @@
 						},			{	
 				lower_width: 	7.5, 
 				upper_width: 	8.3, 
+				lower_height: 7.6, 
 				upper_height:	8.6,
 				row: 3, 
 				column: 6, 
@@ -468,6 +474,7 @@
 						},			{	
 				lower_width: 	8.4, 
 				upper_width: 	9.2, 
+				lower_height: 8.6, 
 				upper_height:	9.6,
 				row: 2, 
 				column: 7, 
@@ -476,6 +483,7 @@
 						},			{	
 				lower_width: 	9.3, 
 				upper_width: 	10, 
+				lower_height: 9.6, 
 				upper_height:	10.6,
 				row: 1, 
 				column: 8, 
@@ -501,7 +509,7 @@
 
 
 		sls_elements.forEach(function(item, index) {
-			if (aneurysm_width >= item.lower_width && aneurysm_width <= item.upper_width) {
+			if (aneurysm_width >= item.lower_width && aneurysm_width <= item.upper_width && aneurysm_height >= item.lower_height && aneurysm_height <= item.upper_height) {
 				sls_item = item;
 				sls_name = item.name + " (" + item.catheter + ")";
 			}
