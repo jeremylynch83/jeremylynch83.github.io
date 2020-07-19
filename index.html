@@ -546,14 +546,15 @@
 
 	function drawlines(sl_item, sls_item){
 
+		sl_canvas =  document.getElementById('sl_canvas');
+		sl_context = document.getElementById('sl_canvas').getContext("2d");
+		sls_canvas =  document.getElementById('sls_canvas');
+		sls_context = document.getElementById('sls_canvas').getContext("2d");
+
 	if (sl_item != null) {
 
 		sl_row = sl_item.row;
 		sl_column = sl_item.column;
-
-		sl_canvas =  document.getElementById('sl_canvas');
-		sl_context = document.getElementById('sl_canvas').getContext("2d");
-		
 		const sl_c_width = sl_canvas.getBoundingClientRect().width;
 		const sl_c_height = sl_canvas.getBoundingClientRect().height;
 		var sl_x_offset;
@@ -572,9 +573,7 @@
 		sl_rect.width = sl_cell_width;
 		sl_rect.height = sl_cell_height;
 
-		//console.log('x: ' + x + ', y: ' + y + ', width: ' + cell_width + ', height: ' + cell_height);
 		//refresh bg
-
 		var sl_img = new Image();
 		sl_img.onload = function(){
 				sl_context.drawImage(sl_img, 0, 0, 
@@ -586,8 +585,6 @@
 				sl_context.beginPath();
 
 				// Draw shaded rectangle
-				//sl_context.globalAlpha = 0.2;
-			//sl_context.fillStyle = "#FF0000";
 			// Red rectangle
 			sl_context.beginPath();
 			sl_context.lineWidth = "6";
@@ -598,20 +595,25 @@
 		};
 		sl_img.src = 'img/sl_table.png'; 
 	}
+	else {
+		var sl_img = new Image();
+		sl_img.onload = function(){
+				sl_context.drawImage(sl_img, 0, 0, 
+				sl_img.width,    
+				sl_img.height,     // source rect
+				0, 0, 
+				sl_canvas.width, 
+				sl_canvas.height); // destination rect
+				sl_context.beginPath();
+		};
+		sl_img.src = 'img/sl_table.png'; 
+	}
 
 	// SLS
 	if (sls_item != null)
 	{
-
-
-		console.log ("sls");
-
-		sls_canvas =  document.getElementById('sls_canvas');
-			sls_context = document.getElementById('sls_canvas').getContext("2d");
-
-			sls_row = sls_item.row;
+		sls_row = sls_item.row;
 		sls_column = sls_item.column;
-
 	const sls_c_width = sls_canvas.getBoundingClientRect().width;
 	const sls_c_height = sls_canvas.getBoundingClientRect().height;
 	var sls_x_offset;
@@ -644,18 +646,27 @@
 			sls_context.beginPath();
 
 			// Draw shaded rectangle
-			//sls_context.globalAlpha = 0.2;
-
-
 			sls_context.beginPath();
 			sls_context.lineWidth = "6";
 			sls_context.strokeStyle = "red";
-			//sls_context.fillStyle = "#FF0000";
 			sls_context.rect(sls_rect.x, sls_rect.y, sls_rect.width, sls_rect.height);
 			sls_context.stroke(); 
-			//sls_context.globalAlpha = 1;
 	};
 	sls_img.src = 'img/sls_table.png'; 
+	}
+
+	else {
+		var sls_img = new Image();
+		sls_img.onload = function(){
+				sls_context.drawImage(sls_img, 0, 0, 
+				sls_img.width,    
+				sls_img.height,     // source rect
+				0, 0, 
+				sls_canvas.width, 
+				sls_canvas.height); // destination rect
+				sls_context.beginPath();
+		};
+		sls_img.src = 'img/sls_table.png';	
 	}
 }
 
