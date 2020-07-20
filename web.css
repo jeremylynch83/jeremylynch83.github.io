@@ -1,7 +1,10 @@
+
 h1 {
   display: block;
   font-family: sans-serif;
-  text-align: center
+  text-align: center;
+
+  font-size: 4vw;
 }
 
 
@@ -62,23 +65,4 @@ p {
 }
 
 
-input[type=button]:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
 
-input[type=button]:hover {
-  background-color: #003300;
-  color: white;
-}
-
-input[type = text] {
-  position: relative;
-  display: block;
-  width: 90%;
-  margin: 5px auto;
-  font-size: 20px;
-  padding: 10px;
-  box-shadow: 4px 0px 12px black inset;
-}
