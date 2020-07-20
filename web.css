@@ -16,10 +16,11 @@
 }
 
 
-@media (min-width:10px)  { 
+@media (max-width:800px)  { 
 
   .box_border{
-  
+    width: 85%;
+
     position: relative;
     border: 4px solid lightgray;
     border-radius: 12px;

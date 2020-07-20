@@ -46,9 +46,9 @@
 		<p style="color: red; text-align: center; font-weight: bold">(Selected device highlighted in red) </p>
 		<h3>SL table</h3>
 
-		<canvas id="sl_canvas"  width="600" height="350"></canvas>
+		<canvas id="sl_canvas" ></canvas>
 		<h3>SLS table</h3>
-		<canvas id="sls_canvas" width="600" height="350" ></canvas>
+		<canvas id="sls_canvas"  ></canvas>
 	</div>
 
 	<div id="footer">
@@ -527,10 +527,21 @@
 
 		sl_canvas =  document.getElementById('sl_canvas');
 		sl_context = document.getElementById('sl_canvas').getContext("2d");
+
+
 		sls_canvas =  document.getElementById('sls_canvas');
 		sls_context = document.getElementById('sls_canvas').getContext("2d");
 
 	if (sl_item != null) {
+
+
+
+		//refresh bg
+		var sl_img = new Image();
+		sl_img.onload = function(){
+
+			sl_canvas.width =  sl_canvas.parentNode.getBoundingClientRect().width *0.9; 
+			sl_canvas.height = sl_canvas.width * .6;
 
 		sl_row = sl_item.row;
 		sl_column = sl_item.column;
@@ -552,9 +563,6 @@
 		sl_rect.width = sl_cell_width;
 		sl_rect.height = sl_cell_height;
 
-		//refresh bg
-		var sl_img = new Image();
-		sl_img.onload = function(){
 				sl_context.drawImage(sl_img, 0, 0, 
 				sl_img.width,    
 				sl_img.height,     // source rect
@@ -577,6 +585,8 @@
 	else {
 		var sl_img = new Image();
 		sl_img.onload = function(){
+	
+
 				sl_context.drawImage(sl_img, 0, 0, 
 				sl_img.width,    
 				sl_img.height,     // source rect
@@ -591,7 +601,17 @@
 	// SLS
 	if (sls_item != null)
 	{
-		sls_row = sls_item.row;
+
+
+	//refresh bg
+
+	var sls_img = new Image();
+	sls_img.onload = function(){
+
+		sls_canvas.width =  sl_canvas.parentNode.getBoundingClientRect().width *0.9; 
+			sls_canvas.height = sl_canvas.width * .6;
+
+			sls_row = sls_item.row;
 		sls_column = sls_item.column;
 	const sls_c_width = sls_canvas.getBoundingClientRect().width;
 	const sls_c_height = sls_canvas.getBoundingClientRect().height;
@@ -612,10 +632,6 @@
 	sls_rect.width = sls_cell_width;
 	sls_rect.height = sls_cell_height;
 
-	//refresh bg
-
-	var sls_img = new Image();
-	sls_img.onload = function(){
 			sls_context.drawImage(sls_img, 0, 0, 
 			sls_img.width,    
 			sls_img.height,     // source rect
@@ -637,6 +653,8 @@
 	else {
 		var sls_img = new Image();
 		sls_img.onload = function(){
+
+
 				sls_context.drawImage(sls_img, 0, 0, 
 				sls_img.width,    
 				sls_img.height,     // source rect
