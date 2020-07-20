@@ -35,7 +35,7 @@
 		</p>
 	</div>
 
-	<div id="results_box" class="box_border" style="display:none" >
+	<div id="results_box" class="box_border" style="display:none">
 
 
 		<h2><p id="decision_text1"></p></h2>
@@ -73,20 +73,19 @@
 	var sls_rect = {x:0, y:0, width:0, height:0};
 	var sl_rect = {x:0, y:0, width:0, height:0};
 
-	//button_calculate();
 
+	update_average_width();
+	update_height();
+	calculate_web_size();
 
-	function web_device(type) {
-		device_type = type;
-		calculate_web_size(); 
-	}
 
 	function button_calculate() {
+		document.getElementById('results_box').style.display = "block";
 		update_average_width();
 		update_height();
 		calculate_web_size();	
 
-		document.getElementById('results_box').style.display = "block";
+
 
 	}
 
@@ -99,13 +98,11 @@
 
 		document.getElementById('average_width').textContent = "(Average width: " + aneurysm_width + " mm)";
 
-		calculate_web_size();
 	}
 
 	function update_height() {
 		aneurysm_height = parseFloat(document.getElementById('height').value);
 		
-		calculate_web_size(); 
 	}
 
 	function calculate_web_size() {
