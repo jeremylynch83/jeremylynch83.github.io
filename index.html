@@ -38,7 +38,7 @@
 		</p>
 	</div>
 
-	<div id="results_box" class="box_border" style="display:none">
+	<div id="results_box" class="box_border" style="visibility:hidden">
 
 
 		<h2><p id="decision_text1"></p></h2>
@@ -47,9 +47,9 @@
 		<p style="color: red; text-align: center; font-weight: bold">(Selected device highlighted in red) </p>
 		<h3>SL table</h3>
 
-		<canvas id="sl_canvas" width="600" height="300"></canvas>
+		<canvas id="sl_canvas" ></canvas>
 		<h3>SLS table</h3>
-		<canvas id="sls_canvas" width="600" height="300" ></canvas>
+		<canvas id="sls_canvas"  ></canvas>
 	</div>
 
 	<div id="footer">
@@ -83,7 +83,7 @@
 
 
 	function button_calculate() {
-		document.getElementById('results_box').style.display = "block";
+		document.getElementById('results_box').style.visibility = "visible";
 		update_average_width();
 		update_height();
 		calculate_web_size();	
