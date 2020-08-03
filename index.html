@@ -6,6 +6,9 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>WEB Device Selector (BETA) </title>
+	<link rel="preload" href="sl_table.png" as="image">
+	<link rel="preload" href="sls_table.png" as="image">
+
     <link rel="stylesheet" type="text/css" href="web.css">
 </head>
 
@@ -14,9 +17,7 @@
         
 <h1>WEB Device Selecta (BETA)</h1>
 
-<div id="footer">
-	<p>For educational purposes only. Jeremy Lynch. 2020.  </p>
-</div>
+
 		
 	<div class ="box_border">
 		<p>
@@ -42,7 +43,7 @@
 		</p>
 	</div>
 
-	<div id="results_box" class="box_border" style="visibility:hidden">
+	<div id="results_box" class="box_border" style="display:none">
 
 
 		<h2><p id="decision_text1"></p></h2>
@@ -56,7 +57,9 @@
 		<canvas id="sls_canvas"  ></canvas>
 	</div>
 
-
+	<div id="footer">
+		<p>For educational purposes only. Jeremy Lynch. 2020.  </p>
+	</div>
 
 
 
@@ -85,7 +88,7 @@
 
 
 	function button_calculate() {
-		document.getElementById('results_box').style.visibility = "visible";
+		document.getElementById('results_box').style.display = "block";
 		update_average_width();
 		update_height();
 		calculate_web_size();	
@@ -528,6 +531,8 @@
 
 	function drawlines(sl_item, sls_item){
 
+		var dpr = window.devicePixelRatio || 1;
+
 		sl_canvas =  document.getElementById('sl_canvas');
 		sl_context = document.getElementById('sl_canvas').getContext("2d");
 
@@ -544,7 +549,9 @@
 		sl_img.onload = function(){
 
 			sl_canvas.width =  sl_canvas.parentNode.getBoundingClientRect().width *0.9; 
-			sl_canvas.height = sl_canvas.width * .6;
+			sl_canvas.height = sl_canvas.parentNode.getBoundingClientRect().width *0.9 * .6;
+
+			//sl_canvas.scale(1.5, 1.5);
 
 		sl_row = sl_item.row;
 		sl_column = sl_item.column;
@@ -612,7 +619,7 @@
 	sls_img.onload = function(){
 
 		sls_canvas.width =  sl_canvas.parentNode.getBoundingClientRect().width *0.9; 
-			sls_canvas.height = sl_canvas.width * .6;
+			sls_canvas.height = sl_canvas.parentNode.getBoundingClientRect().width *.9 * .6;
 
 			sls_row = sls_item.row;
 		sls_column = sls_item.column;
