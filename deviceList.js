@@ -533,7 +533,7 @@ deviceList =
   },
   {
     "id": 60,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Courier, 170 Codman",
     "model": "Courier 170",
     "min_id": 0.017,
@@ -542,7 +542,7 @@ deviceList =
   },
   {
     "id": 61,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Courier, 190 Codman",
     "model": "Courier 190",
     "min_id": 0.019,
@@ -551,7 +551,7 @@ deviceList =
   },
   {
     "id": 62,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Prowler, 10 Codman",
     "model": "Prowler 10",
     "min_id": 0.015,
@@ -560,7 +560,7 @@ deviceList =
   },
   {
     "id": 63,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Prowler, 14 Codman",
     "model": "Prowler 14",
     "min_id": 0.0165,
@@ -569,7 +569,7 @@ deviceList =
   },
   {
     "id": 64,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Prowler, LP Select Codman",
     "model": "Prowler LP Select",
     "min_id": 0.0165,
@@ -578,7 +578,7 @@ deviceList =
   },
   {
     "id": 65,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Prowler, Plus Codman",
     "model": "Prowler Plus",
     "min_id": 0.021,
@@ -587,7 +587,7 @@ deviceList =
   },
   {
     "id": 66,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Prowler, Select Plus Codman",
     "model": "Prowler Select Plus",
     "min_id": 0.021,
@@ -596,7 +596,7 @@ deviceList =
   },
   {
     "id": 67,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "RapidTransit, Codman/Micrus",
     "model": "RapidTransit",
     "min_id": 0.021,
@@ -605,7 +605,7 @@ deviceList =
   },
   {
     "id": 68,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Transit, Codman/Micrus",
     "model": "Transit",
     "min_id": 0.021,
@@ -614,7 +614,7 @@ deviceList =
   },
   {
     "id": 69,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Micro Ferret, Cook",
     "model": "Micro Ferret",
     "min_id": 0.018,
@@ -623,7 +623,7 @@ deviceList =
   },
   {
     "id": 70,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Phenom,  017 Cathera",
     "model": "Phenom 017",
     "min_id": 0.017,
@@ -632,7 +632,7 @@ deviceList =
   },
   {
     "id": 71,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Phenom,  021 Cathera",
     "model": "Phenom 021",
     "min_id": 0.021,
@@ -641,7 +641,7 @@ deviceList =
   },
   {
     "id": 72,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Phenom,  027 Cathera",
     "model": "Phenom 027",
     "min_id": 0.027,
@@ -650,7 +650,7 @@ deviceList =
   },
   {
     "id": 73,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Apollo, 1.5 CM Medtronic",
     "model": "Apollo 1.5",
     "min_id": 0.013,
@@ -659,7 +659,7 @@ deviceList =
   },
   {
     "id": 74,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Apollo, 3.0 CM Medtronic",
     "model": "Apollo 3.0",
     "min_id": 0.013,
@@ -668,7 +668,7 @@ deviceList =
   },
   {
     "id": 75,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Echelon, 10 Medtronic",
     "model": "Echelon 10",
     "min_id": 0.017,
@@ -677,7 +677,7 @@ deviceList =
   },
   {
     "id": 76,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Echelon, 14 Medtronic",
     "model": "Echelon 14",
     "min_id": 0.017,
@@ -686,7 +686,7 @@ deviceList =
   },
   {
     "id": 77,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Marathon, Medtronic",
     "model": "Marathon",
     "min_id": 0.013,
@@ -695,7 +695,7 @@ deviceList =
   },
   {
     "id": 78,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Marksman, Medtronic",
     "model": "Marksman",
     "min_id": 0.027,
@@ -704,7 +704,7 @@ deviceList =
   },
   {
     "id": 79,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Nautica, Medtronic",
     "model": "Nautica",
     "min_id": 0.018,
@@ -713,7 +713,7 @@ deviceList =
   },
   {
     "id": 80,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Orion,-21 Medtronic",
     "model": "Orion-21",
     "min_id": 0.021,
@@ -722,7 +722,7 @@ deviceList =
   },
   {
     "id": 81,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Rebar,-027 Medtronic",
     "model": "Rebar-027",
     "min_id": 0.027,
@@ -731,7 +731,7 @@ deviceList =
   },
   {
     "id": 82,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Rebar,-10 Medtronic",
     "model": "Rebar-10",
     "min_id": 0.015,
@@ -740,7 +740,7 @@ deviceList =
   },
   {
     "id": 83,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Rebar,-14 Medtronic",
     "model": "Rebar-14",
     "min_id": 0.017,
@@ -749,8 +749,8 @@ deviceList =
   },
   {
     "id": 84,
-    "type": "microcathethers",
-    "name": "Rebar,-18 Medtronic",
+    "type": "microcatheters",
+    "name": "Rebar-18 Medtronic",
     "model": "Rebar-18",
     "min_id": 0.021,
     "max_od": 0.036,
@@ -758,7 +758,7 @@ deviceList =
   },
   {
     "id": 85,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Ultra Flow, Medtronic",
     "model": "Ultra Flow",
     "min_id": 0.013,
@@ -767,16 +767,16 @@ deviceList =
   },
   {
     "id": 86,
-    "type": "microcathethers",
-    "name": "Headway, Duo MicroVention",
+    "type": "microcatheters",
+    "name": "Headway Duo 167 MicroVention",
     "model": "Duo",
-    "min_id": 0.0165,
-    "max_od": 0.028,
-    "plength": "156 / 167"
+    "min_id": 0.013,
+    "max_od": 0.027559,
+    "plength": "167"
   },
   {
     "id": 87,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Headway, 17 MicroVention",
     "model": "Headway 17",
     "min_id": 0.017,
@@ -785,7 +785,7 @@ deviceList =
   },
   {
     "id": 88,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Headway, 21 MicroVention",
     "model": "Headway 21",
     "min_id": 0.021,
@@ -794,7 +794,7 @@ deviceList =
   },
   {
     "id": 89,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Headway, 27 MicroVention",
     "model": "Headway 27",
     "min_id": 0.027,
@@ -803,7 +803,7 @@ deviceList =
   },
   {
     "id": 90,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "PX Slim, Penumbra",
     "model": "PX Slim",
     "min_id": 0.025,
@@ -812,7 +812,7 @@ deviceList =
   },
   {
     "id": 91,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Velocity, Penumbra",
     "model": "Velocity",
     "min_id": 0.025,
@@ -821,7 +821,7 @@ deviceList =
   },
   {
     "id": 92,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Excelsior, 1018 Stryker",
     "model": "Excelsior 1018",
     "min_id": 0.019,
@@ -830,7 +830,7 @@ deviceList =
   },
   {
     "id": 93,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Excelsior, SL10 Stryker",
     "model": "Excelsior SL10",
     "min_id": 0.0165,
@@ -839,7 +839,7 @@ deviceList =
   },
   {
     "id": 94,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "FasTracker,-18 Stryker",
     "model": "FasTracker-18",
     "min_id": 0.022,
@@ -848,7 +848,7 @@ deviceList =
   },
   {
     "id": 95,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Renegade, 18 Stryker",
     "model": "Renegade 18",
     "min_id": 0.021,
@@ -857,7 +857,7 @@ deviceList =
   },
   {
     "id": 96,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Renegade, Hi Flo Stryker",
     "model": "Renegade Hi Flo",
     "min_id": 0.027,
@@ -866,7 +866,7 @@ deviceList =
   },
   {
     "id": 97,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Spinnaker Elite, 1.5F Stryker",
     "model": "Spinnaker Elite 1.5F",
     "min_id": 0.011,
@@ -875,7 +875,7 @@ deviceList =
   },
   {
     "id": 98,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Spinnaker Elite, 1.8F Stryker",
     "model": "Spinnaker Elite 1.8F",
     "min_id": 0.013,
@@ -884,7 +884,7 @@ deviceList =
   },
   {
     "id": 99,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Tracker Excel,-14 Stryker",
     "model": "Tracker Excel-14",
     "min_id": 0.017,
@@ -893,7 +893,7 @@ deviceList =
   },
   {
     "id": 100,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "Tracker, 17 Stryker",
     "model": "Tracker 17",
     "min_id": 0.017,
@@ -902,7 +902,7 @@ deviceList =
   },
   {
     "id": 101,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "TurboTracker,-18 Stryker",
     "model": "TurboTracker-18",
     "min_id": 0.022,
@@ -911,7 +911,7 @@ deviceList =
   },
   {
     "id": 102,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "XT-27, Stryker",
     "model": "XT-27",
     "min_id": 0.027,
@@ -920,7 +920,7 @@ deviceList =
   },
   {
     "id": 103,
-    "type": "microcathethers",
+    "type": "microcatheters",
     "name": "XT-17, Stryker",
     "model": "XT-17",
     "min_id": 0.017,
@@ -1070,5 +1070,207 @@ deviceList =
     "min_id": 0,
     "max_od": 0.037,
     "plength": 150
+  },
+
+
+	  {
+    "id": 1,
+    "type": "guide catheters",
+    "name": "6F Catalyst",
+    "model": "Stryker",
+    "min_id": 0.06,
+    "max_od": 0.079,
+    "plength": 132,
+    "comments": ""
+  },
+  {
+    "id": 1,
+    "type": "guide catheters",
+    "name": "5F Catalyst",
+    "model": "Stryker",
+    "min_id": 0.058,
+    "max_od": 0.073,
+    "plength": "120 / 137",
+    "comments": ""
+  },
+  {
+    "id": 1,
+    "type": "guide catheters",
+    "name": "REACT 68",
+    "model": "Medtronic",
+    "min_id": 0.068,
+    "max_od": 0.083,
+    "plength": 132,
+    "comments": ""
+  },
+  {
+    "id": 1,
+    "type": "guide catheters",
+    "name": "REACT 71",
+    "model": "Medtronic",
+    "min_id": 0.071,
+    "max_od": 0.0855,
+    "plength": 132,
+    "comments": ""
+  },
+  {
+    "id": 1,
+    "type": "guide catheters",
+    "name": "Cerebrase DA",
+    "model": "Cerenovus",
+    "min_id": 0.09,
+    "max_od": 0.105,
+    "plength": "80 / 90 / 95",
+    "comments": ""
+  },
+  {
+    "id": 1,
+    "type": "guide catheters",
+    "name": "Infinity",
+    "model": "Stryker",
+    "min_id": 0.088,
+    "max_od": 0.105,
+    "plength": "70 / 80 / 90",
+    "comments": ""
+  },
+  {
+    "id": 1,
+    "type": "guide catheters",
+    "name": "Jet 7 Reperfusion Catheter",
+    "model": "Penumbra",
+    "min_id": 0.072,
+    "max_od": 0.085,
+    "plength": 132,
+    "comments": ""
+  },
+  {
+    "id": 1,
+    "type": "guide catheters",
+    "name": "Jet D Reperfusion Catheter",
+    "model": "Penumbra",
+    "min_id": 0.054,
+    "max_od": 0.08,
+    "plength": 138,
+    "comments": ""
+  },
+  {
+    "id": 1,
+    "type": "guide catheters",
+    "name": "ACE 68",
+    "model": "Penumbra",
+    "min_id": 0.068,
+    "max_od": 0.08,
+    "plength": 132,
+    "comments": ""
+  },
+  {
+    "id": 1,
+    "type": "guide catheters",
+    "name": "ACE 60",
+    "model": "Penumbra",
+    "min_id": 0.06,
+    "max_od": 0.08,
+    "plength": 132,
+    "comments": ""
+  },
+  {
+    "id": 1,
+    "type": "Microcatheters",
+    "name": "3MAX",
+    "model": "Penumbra",
+    "min_id": 0.035,
+    "max_od": 0.062,
+    "plength": 160,
+    "comments": ""
+  },
+  {
+    "id": 1,
+    "type": "guide catheters",
+    "name": "Fargo Max",
+    "model": "Balt",
+    "min_id": 0.07,
+    "max_od": 0.07874,
+    "plength": "95 / 105 / 115 / 125",
+    "comments": ""
+  },
+  {
+    "id": 1,
+    "type": "guide catheters",
+    "name": "Fargo",
+    "model": "Balt",
+    "min_id": 0.058,
+    "max_od": 0.07874,
+    "plength": "105 / 115 / 125 / 135",
+    "comments": ""
+  },
+  {
+    "id": 1,
+    "type": "guide catheters",
+    "name": "Fargo Mini",
+    "model": "Balt",
+    "min_id": 0.04,
+    "max_od": 0.05512,
+    "plength": "120 / 135",
+    "comments": ""
+  },
+  {
+    "id": 1,
+    "type": "guide catheters",
+    "name": "Ballast",
+    "model": "Balt",
+    "min_id": 0.088,
+    "max_od": 0.106,
+    "plength": "80 / 90 / 100",
+    "comments": ""
+  },
+  {
+    "id": 1,
+    "type": "Microcatheters",
+    "name": "Magic 1.2",
+    "model": "Balt",
+    "min_id": 0.008,
+    "max_od": 0.03543,
+    "plength": "165 / 180",
+    "comments": ""
+  },
+  {
+    "id": 1,
+    "type": "Microcatheters",
+    "name": "Headway Duo 156",
+    "model": "Microvention",
+    "min_id": 0.0165,
+    "max_od": 0.02756,
+    "plength": 156,
+    "comments": ""
+  },
+  {
+    "id": 1,
+    "type": "Balloons",
+    "name": "Copernic 8 RC Venous",
+    "model": "Balt",
+    "min_id": 0.014,
+    "max_od": 0.05709,
+    "plength": "?",
+    "comments": ""
+  },
+  {
+    "id": 1,
+    "type": "Balloons",
+    "name": "Copernic 10 RC Venous",
+    "model": "Balt",
+    "min_id": 0.014,
+    "max_od": 0.06562,
+    "plength": "?",
+    "comments": ""
+  },
+  {
+    "id": 1,
+    "type": "Balloons",
+    "name": "Eclipse 6",
+    "model": "Balt",
+    "min_id": 0.017,
+    "max_od": 0.02625,
+    "plength": "?",
+    "comments": ""
   }
 ]
