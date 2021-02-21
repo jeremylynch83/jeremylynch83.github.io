@@ -1,4 +1,4 @@
-
+/*
   .box_border{
     width: 85%;
 
@@ -12,7 +12,7 @@
 
 
 body{
-  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(14px + (26 - 14) * ((150vw - 300px) / (1600 - 300)));
 
 }
 
@@ -45,7 +45,7 @@ p {
   font-family: sans-serif;
 
 }
-
+*/
 
 
 
