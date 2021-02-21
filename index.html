@@ -26,6 +26,15 @@
       rel="stylesheet"
       />
 
+		<!-- Personal CSS -->
+
+		<link
+      type="text/css"
+      rel="stylesheet"
+      href="my.css"
+      />
+
+
 		<!-- Load polyfills to support older browsers -->
 		<script src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver"></script>
 
@@ -129,10 +138,33 @@
 
 				<h3>Results</h3>
 				<strong><p id = "result" style = ""></p></strong>
-					<p id = "details" style = "color:rgb(179, 179, 179)"></p>
+				<p id = "details" style = "color:rgb(179, 179, 179)"></p>
 
 			</b-container>
+
+
 		</div>
+
+		<!-- Footer -->
+
+		<div class="footer">
+			<div class="contain">
+				<div class="col">
+					<h1>Company</h1>
+					<ul>
+						<li>About</li>
+					</ul>
+				</div>
+				<div class="col">
+					<h1>Support</h1>
+					<ul>
+						<li>Contact us</li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
 
 		<script>
 
@@ -172,10 +204,10 @@ window.app = new Vue({
 
 
 		updateSizer: function(){
-			
+
 			document.getElementById("result").style.color = "rgb(0, 153, 51)";
 			var text = "Everything is fine.";
-      			var additional = "";			
+			var additional = "";			
 
 			// Calculate guide/intermediate catheters
 
@@ -189,7 +221,7 @@ window.app = new Vue({
 				return;
 			}
 
-			additional =  "Smallest outer: " + smallestOuter.min_id + ". " ;
+			additional =  "Smallest outer: " + smallestOuter.min_id + "inches. " ;
 
 
 			if (intermediate != null && guide != null) {
@@ -214,7 +246,7 @@ window.app = new Vue({
 				totalMicro = totalMicro + micro2.max_od;
 			}
 
-			additional = additional + "Micro devices total size: " + totalMicro + ". " ;
+			additional = additional + "Micro devices total size: " + totalMicro + " inches. " ;
 
 
 			if (totalMicro > smallestOuter.min_id)
