@@ -116,7 +116,7 @@
 				<b-form-group
    horizontal
    :label-cols="3"
-   label="Smaller/inner device 1"
+   label="Microcatheter/balloon 1"
    >    
    <vue-bootstrap-typeahead
    :data="devices"
@@ -128,7 +128,7 @@
 				<b-form-group
    horizontal
    :label-cols="3"
-   label="Smaller/inner device 2"
+   label="Microcatheter/balloon 2"
    >    
    <vue-bootstrap-typeahead
    :data="devices"
@@ -138,7 +138,7 @@
 				</b-form-group>
 
 				<h3>Results</h3>
-				<strong><p id = "result" style = ""></p></strong>
+				<strong><p id = "result" style = "color:rgb(179, 179, 179)">You need to enter some devices ;)</p></strong>
 				<p id = "details" style = "color:rgb(179, 179, 179)"></p>
 
 			</b-container>
@@ -207,7 +207,7 @@ window.app = new Vue({
 		updateSizer: function(){
 
 			document.getElementById("result").style.color = "rgb(0, 153, 51)";
-			var text = "Everything is fine.";
+			var text = "Everything fits ok.";
 			var additional = "";			
 
 			// Calculate guide/intermediate catheters
@@ -219,10 +219,12 @@ window.app = new Vue({
 			}
 
 			if (smallestOuter == null) {
+				//document.getElementById("result").style.color = "color:rgb(179, 179, 179)";
+				//document.getElementById("result").innerHTML = "You need to enter some devices ;)";
 				return;
 			}
 
-			additional =  "Smallest outer: " + smallestOuter.min_id + " inches. " ;
+			additional =  "Smallest of guide/intermediate catheter inner diameter: " + smallestOuter.min_id + "\". " ;
 
 
 			if (intermediate != null && guide != null) {
@@ -247,12 +249,12 @@ window.app = new Vue({
 				totalMicro = totalMicro + micro2.max_od;
 			}
 
-			additional = additional + "Micro devices total size: " + totalMicro + " inches. " ;
+			additional = additional + "Micro devices total diameter: " + totalMicro + "\". " ;
 
 
 			if (totalMicro > smallestOuter.min_id)
 			{
-				if (text == "Everything is fine.") {
+				if (text == "Everything fits ok.") {
 					text = "";
 				}
 				text = text + "The micro devices do not fit.";
