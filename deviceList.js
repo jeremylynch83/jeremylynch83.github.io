@@ -3,7 +3,7 @@ deviceList =
   {
     "id": 1,
     "type": "sheath",
-    "name": "Fubuki, 7Fr Asahi",
+    "name": "Fubuki 7Fr Asahi",
     "model": "Asahi",
     "min_id": 0.081,
     "max_od": 0,
@@ -12,7 +12,7 @@ deviceList =
   {
     "id": 2,
     "type": "sheath",
-    "name": "Fubuki, 8Fr Asahi",
+    "name": "Fubuki 8Fr Asahi",
     "model": "Asahi",
     "min_id": 0.09,
     "max_od": 0,
@@ -75,7 +75,7 @@ deviceList =
   {
     "id": 9,
     "type": "sheath",
-    "name": "6F Neuron Max, 088 Penumbra",
+    "name": "6F Neuron Max 088 (Penumbra)",
     "model": "Penumbra",
     "min_id": 0.088,
     "max_od": 0,
@@ -210,8 +210,8 @@ deviceList =
   {
     "id": 24,
     "type": "guide catheters",
-    "name": "5F Envoy, Codman",
-    "model": "Codman",
+    "name": "5F Envoy, Codman neuro (J&J)",
+    "model": "Codman neuro (J&J)",
     "min_id": 0.056,
     "max_od": 0.065,
     "plength": "90 / 100"
@@ -219,8 +219,8 @@ deviceList =
   {
     "id": 25,
     "type": "guide catheters",
-    "name": "5F Neuropath, Codman",
-    "model": "Codman",
+    "name": "5F Neuropath, Codman neuro (J&J)",
+    "model": "Codman neuro (J&J)",
     "min_id": 0.057,
     "max_od": 0.07,
     "plength": "90 / 100"
@@ -228,8 +228,8 @@ deviceList =
   {
     "id": 26,
     "type": "guide catheters",
-    "name": "6F Envoy, Codman",
-    "model": "Codman",
+    "name": "6F Envoy, Codman neuro (J&J)",
+    "model": "Codman neuro (J&J)",
     "min_id": 0.07,
     "max_od": 0.079,
     "plength": "90 / 100"
@@ -237,8 +237,8 @@ deviceList =
   {
     "id": 27,
     "type": "guide catheters",
-    "name": "6F Envoy, DA Codman",
-    "model": "Codman",
+    "name": "6F Envoy, DA Codman neuro (J&J)",
+    "model": "Codman neuro (J&J)",
     "min_id": 0.071,
     "max_od": 0.079,
     "plength": "95 / 105"
@@ -246,8 +246,8 @@ deviceList =
   {
     "id": 28,
     "type": "guide catheters",
-    "name": "6F Envoy, DA XB Codman",
-    "model": "Codman",
+    "name": "6F Envoy, DA XB Codman neuro (J&J)",
+    "model": "Codman neuro (J&J)",
     "min_id": 0.071,
     "max_od": 0.079,
     "plength": "95 / 105"
@@ -255,8 +255,8 @@ deviceList =
   {
     "id": 29,
     "type": "guide catheters",
-    "name": "6F Neuropath, Codman",
-    "model": "Codman",
+    "name": "6F Neuropath, Codman neuro (J&J)",
+    "model": "Codman neuro (J&J)",
     "min_id": 0.07,
     "max_od": 0.082,
     "plength": "90 / 100"
@@ -534,7 +534,7 @@ deviceList =
   {
     "id": 60,
     "type": "microcatheters",
-    "name": "Courier, 170 Codman",
+    "name": "Courier, 170 Codman neuro (J&J)",
     "model": "Courier 170",
     "min_id": 0.017,
     "max_od": 0.03,
@@ -543,7 +543,7 @@ deviceList =
   {
     "id": 61,
     "type": "microcatheters",
-    "name": "Courier, 190 Codman",
+    "name": "Courier, 190 Codman neuro (J&J)",
     "model": "Courier 190",
     "min_id": 0.019,
     "max_od": 0.032,
@@ -552,7 +552,7 @@ deviceList =
   {
     "id": 62,
     "type": "microcatheters",
-    "name": "Prowler, 10 Codman",
+    "name": "Prowler, 10 Codman neuro (J&J)",
     "model": "Prowler 10",
     "min_id": 0.015,
     "max_od": 0.03,
@@ -561,7 +561,7 @@ deviceList =
   {
     "id": 63,
     "type": "microcatheters",
-    "name": "Prowler, 14 Codman",
+    "name": "Prowler, 14 Codman neuro (J&J)",
     "model": "Prowler 14",
     "min_id": 0.0165,
     "max_od": 0.03,
@@ -570,7 +570,7 @@ deviceList =
   {
     "id": 64,
     "type": "microcatheters",
-    "name": "Prowler, LP Select Codman",
+    "name": "Prowler, LP Select Codman neuro (J&J)",
     "model": "Prowler LP Select",
     "min_id": 0.0165,
     "max_od": 0.03,
@@ -579,7 +579,7 @@ deviceList =
   {
     "id": 65,
     "type": "microcatheters",
-    "name": "Prowler, Plus Codman",
+    "name": "Prowler, Plus Codman neuro (J&J)",
     "model": "Prowler Plus",
     "min_id": 0.021,
     "max_od": 0.037,
@@ -588,7 +588,7 @@ deviceList =
   {
     "id": 66,
     "type": "microcatheters",
-    "name": "Prowler, Select Plus Codman",
+    "name": "Prowler, Select Plus Codman neuro (J&J)",
     "model": "Prowler Select Plus",
     "min_id": 0.021,
     "max_od": 0.037,
@@ -597,7 +597,7 @@ deviceList =
   {
     "id": 67,
     "type": "microcatheters",
-    "name": "RapidTransit, Codman/Micrus",
+    "name": "RapidTransit, Codman neuro (J&J)/Micrus",
     "model": "RapidTransit",
     "min_id": 0.021,
     "max_od": 0.037,
@@ -606,7 +606,7 @@ deviceList =
   {
     "id": 68,
     "type": "microcatheters",
-    "name": "Transit, Codman/Micrus",
+    "name": "Transit, Codman neuro (J&J)/Micrus",
     "model": "Transit",
     "min_id": 0.021,
     "max_od": 0.037,
@@ -940,8 +940,8 @@ deviceList =
   {
     "id": 104,
     "type": "balloons",
-    "name": "4mm Ascent, Codman/Micrus",
-    "model": "Codman/Micrus",
+    "name": "4mm Ascent, Codman neuro (J&J)/Micrus",
+    "model": "Codman neuro (J&J)/Micrus",
     "min_id": 0,
     "max_od": 0.038,
     "plength": 150
@@ -949,8 +949,8 @@ deviceList =
   {
     "id": 105,
     "type": "balloons",
-    "name": "6mm Ascent, Codman/Micrus",
-    "model": "Codman/Micrus",
+    "name": "6mm Ascent, Codman neuro (J&J)/Micrus",
+    "model": "Codman neuro (J&J)/Micrus",
     "min_id": 0,
     "max_od": 0.038,
     "plength": 150
