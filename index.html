@@ -128,7 +128,8 @@
 				</b-form-group>
 
 				<h3>Results</h3>
-				<div id = "result"></div>
+				<strong><p id = "result" style = ""></p></strong>
+					<p id = "details" style = "color:rgb(179, 179, 179)"></p>
 
 			</b-container>
 		</div>
@@ -171,7 +172,8 @@ window.app = new Vue({
 
 
 		updateSizer: function(){
-
+			
+			document.getElementById("result").style.color = "rgb(0, 153, 51)";
 			var text = "Everything is fine.";
       			var additional = "";			
 
@@ -195,6 +197,8 @@ window.app = new Vue({
 				if (intermediate.max_od > guide.min_id) {
 
 					text = "The intermediate does not fit in the guide. ";
+					document.getElementById("result").style.color = "rgb(204, 51, 0)";
+
 				}
 			}
 
@@ -210,7 +214,7 @@ window.app = new Vue({
 				totalMicro = totalMicro + micro2.max_od;
 			}
 
-			additional = additional + "Micro devices total size " + totalMicro + ". " ;
+			additional = additional + "Micro devices total size: " + totalMicro + ". " ;
 
 
 			if (totalMicro > smallestOuter.min_id)
@@ -219,11 +223,15 @@ window.app = new Vue({
 					text = "";
 				}
 				text = text + "The micro devices do not fit.";
+				document.getElementById("result").style.color = "rgb(204, 51, 0)";
+
 
 			}
 
 
-			document.getElementById("result").innerHTML = text + "\n" + additional;
+			document.getElementById("result").innerHTML = text;
+			document.getElementById("details").innerHTML = additional;
+
 
 		}
 
