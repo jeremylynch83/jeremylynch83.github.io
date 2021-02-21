@@ -226,7 +226,7 @@ window.app = new Vue({
 				return;
 			}
 
-			additional =  "Smallest of guide/intermediate catheter inner diameter: " + smallestOuter.min_id + "\". " ;
+			additional =  "Smallest of guide/intermediate catheter inner diameter: " + smallestOuter.min_id.toFixed(3)  + "\". " ;
 
 
 			if (intermediate != null && guide != null) {
@@ -251,7 +251,7 @@ window.app = new Vue({
 				totalMicro = totalMicro + micro2.max_od;
 			}
 
-			additional = additional + "Micro devices total diameter: " + totalMicro + "\". " ;
+			additional = additional + "Micro devices total diameter: " + totalMicro.toFixed(3) + "\". " ;
 
 
 			if (totalMicro > smallestOuter.min_id)

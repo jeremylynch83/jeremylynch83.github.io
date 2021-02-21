@@ -669,7 +669,7 @@ deviceList =
   {
     "id": 75,
     "type": "microcatheters",
-    "name": "Echelon, 10 Medtronic",
+    "name": "Echelon 10 (Medtronic)",
     "model": "Echelon 10",
     "min_id": 0.017,
     "max_od": 0.028,
@@ -678,7 +678,7 @@ deviceList =
   {
     "id": 76,
     "type": "microcatheters",
-    "name": "Echelon, 14 Medtronic",
+    "name": "Echelon 14 (Medtronic)",
     "model": "Echelon 14",
     "min_id": 0.017,
     "max_od": 0.032,
@@ -828,10 +828,20 @@ deviceList =
     "max_od": 0.035,
     "plength": 150
   },
+	  {
+    "id": 92,
+    "type": "microcatheters",
+    "name": "Trak 21 (Stryker)",
+    "model": "Stryker",
+    "min_id": 0.021,
+    "max_od": 0.035433,
+    "plength": 150
+  },
+
   {
     "id": 93,
     "type": "microcatheters",
-    "name": "Excelsior, SL10 Stryker",
+    "name": "Excelsior SL10 (Stryker)",
     "model": "Excelsior SL10",
     "min_id": 0.0165,
     "max_od": 0.032,
@@ -840,7 +850,7 @@ deviceList =
   {
     "id": 94,
     "type": "microcatheters",
-    "name": "FasTracker,-18 Stryker",
+    "name": "FasTracker-18 Stryker",
     "model": "FasTracker-18",
     "min_id": 0.022,
     "max_od": 0.039,
@@ -1047,7 +1057,7 @@ deviceList =
   {
     "id": 117,
     "type": "balloons",
-    "name": "4mm Transform, SC Stryker",
+    "name": "4mm Transform SC Stryker",
     "model": "Stryker",
     "min_id": 0,
     "max_od": 0.037,
@@ -1056,7 +1066,7 @@ deviceList =
   {
     "id": 118,
     "type": "balloons",
-    "name": "5mm Transform, C Stryker",
+    "name": "5mm Transform C Stryker",
     "model": "Stryker",
     "min_id": 0,
     "max_od": 0.037,
@@ -1065,7 +1075,7 @@ deviceList =
   {
     "id": 119,
     "type": "balloons",
-    "name": "7mm Transform, SC Stryker",
+    "name": "7mm Transform SC Stryker",
     "model": "Stryker",
     "min_id": 0,
     "max_od": 0.037,
@@ -1096,7 +1106,7 @@ deviceList =
   {
     "id": 1,
     "type": "guide catheters",
-    "name": "REACT 68",
+    "name": "REACT 68 (Medtronic)",
     "model": "Medtronic",
     "min_id": 0.068,
     "max_od": 0.083,
@@ -1106,13 +1116,24 @@ deviceList =
   {
     "id": 1,
     "type": "guide catheters",
-    "name": "REACT 71",
+    "name": "REACT 71 (Medtronic)",
     "model": "Medtronic",
     "min_id": 0.071,
     "max_od": 0.0855,
     "plength": 132,
     "comments": ""
   },
+	  {
+    "id": 1,
+    "type": "guide catheters",
+    "name": "Flowgate 2 (Stryker)",
+    "model": "Stryker",
+    "min_id": 0.084,
+    "max_od": 0.10499,
+    "plength": "85 / 95",
+    "comments": ""
+  },
+
   {
     "id": 1,
     "type": "guide catheters",
