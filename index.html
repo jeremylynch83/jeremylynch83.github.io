@@ -89,11 +89,10 @@
 
 				<b-form-group
 			horizontal
-			:label-cols="3"
-			label="Larger/outer device name"
-   >    
+		   >    
    <vue-bootstrap-typeahead
    :data="devices"
+   prepend="Larger/outer device"
    :serializer="item => item.name"
    @hit= "updateGuide($event); updateSizer()"
    />
@@ -102,11 +101,10 @@
 
 				<b-form-group
    horizontal
-   :label-cols="3"
-   label="Intermediate device name"
-   >    
+    >    
    <vue-bootstrap-typeahead
    :data="devices"
+   prepend="Intermediate device"
    :serializer="item => item.name"
    @hit="updateIntermediate($event); updateSizer()"
    />
@@ -115,11 +113,10 @@
 
 				<b-form-group
    horizontal
-   :label-cols="3"
-   label="Microcatheter/balloon 1"
    >    
    <vue-bootstrap-typeahead
    :data="devices"
+   prepend="Microcatheter/balloon 1"
    :serializer="item => item.name"
    @hit="updateMicro1($event); updateSizer()"
    />
@@ -127,11 +124,13 @@
 
 				<b-form-group
    horizontal
-   :label-cols="3"
-   label="Microcatheter/balloon 2"
+
    >    
    <vue-bootstrap-typeahead
    :data="devices"
+   :data="devices"
+   prepend="Microcatheter/balloon 2"
+
    :serializer="item => item.name"
    @hit="updateMicro2($event); updateSizer()"
    />
