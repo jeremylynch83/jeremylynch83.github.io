@@ -73,12 +73,15 @@
 							<template #button-content>
 								Help
 							</template>
-							<b-dropdown-item href="#">About</b-dropdown-item>
+							<b-dropdown-item v-b-modal.about_modal>About</b-dropdown-item>
 						</b-nav-item-dropdown>
 					</b-navbar-nav>
 				</b-collapse>
 			</b-navbar>
 
+  <b-modal id="about_modal" title="DeviceSizer">
+    <p>Written by Dr Jeremy Lynch 2021. With thanks to: Dr Patrick Nicholson. </p>
+  </b-modal>
 			
 
 
@@ -138,7 +141,9 @@
 
 				<h3>Results</h3>
 				<strong><p id = "result" style = "color:rgb(179, 179, 179)">You need to enter some devices ;)</p></strong>
-				<p id = "details" style = "color:rgb(179, 179, 179)"></p>
+				<div id = "details" style = "color:rgb(179, 179, 179)"></div>
+				<div id = "more"></div>
+				<p></p>
 
 				  <b-link href="mailto: jeremy.lynch@gmail.com">Devices missing or incorrect? Contact me.</b-link>
 
@@ -148,36 +153,77 @@
 
 		</div>
 
-		<!-- Footer 
-
-		<div class="footer">
-			<div class="contain">
-				<div class="col">
-					<h1>Company</h1>
-					<ul>
-						<li>About</li>
-					</ul>
-				</div>
-				<div class="col">
-					<h1>Support</h1>
-					<ul>
-						<li>Contact us</li>
-					</ul>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-		</div>-->
-
 
 		<script>
 
 var guide = null;
 var intermediate = null;
 var micro1 = null;
-//micro1.max_od = 0;
 var micro2 = null;
 
 var address = "https://evtoday.com/device-guide/us";
+
+function generateDeviceTable (tguide, tintermediate, tmicro1, tmicro2) {
+
+	var table = "<p></p><table id= \"detailsTable\">"
+
+				table = table + "<tr><th>Name</th>";
+				if (tguide != null) table = table + "<td>" + tguide.name + "</td>";
+				if (tintermediate != null) table = table + "<td>" + tintermediate.name + "</td>";
+				if (micro1 != null) table = table + "<td>" + micro1.name + "</td>";
+				if (micro2 != null) table = table + "<td>" + micro2.name + "</td>";
+				table = table + "</tr>";
+
+				table = table + "<tr><th>Max outer diameter</th>";
+				if (tguide != null) table = table + "<td>" + tguide.max_od.toFixed(3) + "</td>";
+				if (tintermediate != null) table = table + "<td>" + tintermediate.max_od.toFixed(3) + "</td>";
+				if (micro1 != null) table = table + "<td>" + micro1.max_od.toFixed(3) + "</td>";
+				if (micro2 != null) table = table + "<td>" + micro2.max_od.toFixed(3) + "</td>";
+				table = table + "</tr>";
+
+				table = table + "<tr><th>Min inner diameter</th>";
+				if (tguide != null) table = table + "<td>" + tguide.min_id.toFixed(3) + "</td>";
+				if (tintermediate != null) table = table + "<td>" + tintermediate.min_id.toFixed(3) + "</td>";
+				if (micro1 != null) table = table + "<td>" + micro1.min_id.toFixed(3) + "</td>";
+				if (micro2 != null) table = table + "<td>" + micro2.min_id.toFixed(3) + "</td>";
+				table = table + "</tr>";
+
+				table = table + "<tr><th>Lengths</th>";
+				if (tguide != null) table = table + "<td>" + tguide.length + "</td>";
+				if (tintermediate != null) table = table + "<td>" + tintermediate.length + "</td>";
+				if (micro1 != null) table = table + "<td>" + micro1.length + "</td>";
+				if (micro2 != null) table = table + "<td>" + micro2.length + "</td>";
+				table = table + "</tr>";
+
+				/*table = table + "<tr><th>Max outer diameter</th><td>" + tguide.max_od.toFixed(3) + "</td></tr>"
+				table = table + "<tr><th>Min inner diameter</th><td>" + tguide.min_id.toFixed(3) + "</td></tr>"
+				table = table + "<tr><th>Lengths</th><td>" + tguide.length + "</td></tr>"
+				if (tguide.comments != "") 
+				{
+					table = table + "<tr><th>Comments</th><td>" + tguide.comments + "</td></tr>"
+				}*/
+
+			
+
+			/*if (intermediate != null) {
+				catheterDetails = catheterDetails + generateDeviceTable(intermediate);
+			}
+			if (micro1 != null) {
+				catheterDetails = catheterDetails + generateDeviceTable(micro1);
+			}
+			if (micro2 != null) {
+				catheterDetails = catheterDetails + generateDeviceTable(micro2);
+			}*/
+
+
+
+
+	table = table + "</tr></tbody></table>"
+
+	return table;
+	
+}
+
 
 
 window.app = new Vue({
@@ -212,7 +258,7 @@ window.app = new Vue({
 
 			document.getElementById("result").style.color = "rgb(0, 153, 51)";
 			var text = "Everything fits ok.";
-			var additional = "";			
+			var additional = "";		
 
 			// Calculate guide/intermediate catheters
 
@@ -270,6 +316,8 @@ window.app = new Vue({
 
 			document.getElementById("result").innerHTML = text;
 			document.getElementById("details").innerHTML = additional;
+			document.getElementById("more").innerHTML = generateDeviceTable(guide, intermediate, micro1, micro2);
+;
 
 
 		}
