@@ -309,7 +309,7 @@
 
 						}
 						else {						// Add beside target device
-							//if (parent != "device0") {
+							if (parent != "device0") {
 								n.hierarchy = els.length - 3;
 								n.parent = tree.getElementById(parent).parentNode.id;
 
@@ -321,7 +321,7 @@
 								deviceInputs.splice(index, 0, n);
 
 								tree.getElementById(parent).parentNode.appendChild(struct);
-							//}
+							}
 							
 						}
 					}
