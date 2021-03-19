@@ -89,7 +89,7 @@
 							<b-button-group  >
 								<b-button variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.8em;" @click="addInput('inside', 'Enter device', 'guide catheters', n.id)">Add inside</b-button>
 								<b-button  variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.8em;" @click="addInput('beside', 'Enter device', 'guide catheters', n.id)">Add beside</b-button>
-								<b-button  variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.8em;" @click="addInput('beside', 'Add device', 'guide catheters', n.id)">Remove</b-button>
+								<b-button  variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.8em;" @click="removeInput(n.id)">Remove</b-button>
 
 							</b-button-group>
 						</div>
@@ -125,6 +125,12 @@
 
 		var tXML = "<root id=\"root\"></root>";
 		var tree = (new DOMParser).parseFromString(tXML, "text/xml"); // Stores temporary device info
+
+		/*var firstElement = tree.createElement("device");
+		firstElement.setAttribute("id", "first");
+		firstElement.setAttribute("type", "");
+		firstElement.setAttribute("data", "");
+		tree.getElementById("root").appendChild(firstElement);*/
 
 		var deviceInputs = [];
 
@@ -274,10 +280,12 @@
 					var a = tree.getElementById(parent);
 					var els = [];
 					while (a) { 	
-
 						els.unshift(a);
 						a = a.parentNode;
 					}
+
+					console.log(parent);
+
 					
 					// First element
 					if (parent == null) {
@@ -301,26 +309,41 @@
 
 						}
 						else {						// Add beside target device
-							n.hierarchy = els.length - 3;
-							n.parent = tree.getElementById(parent).parentNode.id;
+							//if (parent != "device0") {
+								n.hierarchy = els.length - 3;
+								n.parent = tree.getElementById(parent).parentNode.id;
 
-							var index = deviceInputs.findIndex(
-								function (i) {
-									return i.id == parent;
-								}
-							);
-							deviceInputs.splice(index, 0, n);
+								var index = deviceInputs.findIndex(
+									function (i) {
+										return i.id == parent;
+									}
+								);
+								deviceInputs.splice(index, 0, n);
 
-							tree.getElementById(parent).parentNode.appendChild(struct);
+								tree.getElementById(parent).parentNode.appendChild(struct);
+							//}
+							
 						}
 					}
 
 					return id;
-				}
+				},
+				removeInput: function (id) {
+				
+				if (id != "device0") {
+					tree.getElementById(id).remove(); 
+					var index = deviceInputs.findIndex(
+									function (i) {
+										return i.id == id;
+									}
+								);
+					deviceInputs.splice(index, 1);
+					this.updateSizer();
+								}
+
+			}
 			},
-			removeInput: function (parent) {
-				//deviceInputs.
-			},
+
 			created: function () {
 				var newInput1 = this.addInput("inside", "Enter outer device e.g. guide sheath ", "guide catheters", null);
 				//var newInput2 = this.addInput("inside", "Enter intermediate device ", "intermediate catheters", newInput1);
