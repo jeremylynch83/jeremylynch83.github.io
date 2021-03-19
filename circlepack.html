@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title>Neurosizer: Neurointervention Device Sizer</title>
+	<link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+	<link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css" />
+	<link href="https://unpkg.com/vue-bootstrap-typeahead/dist/VueBootstrapTypeahead.css" rel="stylesheet" />
+	<link type="text/css" rel="stylesheet" href="my.css" />
+	<!-- Load polyfills to support older browsers -->
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver"></script>
+	<!-- Required scripts -->
+	<script src="https://unpkg.com/vue@latest/dist/vue.js"></script>
+	<script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
+	<!-- Type Ahead Library -->
+	<script src="https://unpkg.com/vue-bootstrap-typeahead"></script>
+	<!-- Device Library -->
+	<script src="deviceList.js"></script>
+	<script src="raphael.js"></script>
+
+
+</head>
+
+<body>
+	<div id="app">
+	    <div id="notepad"></div>
+	</div>
+
+	<script>
+
+ var height = 250;
+ var width = 250;
+
+function inCircle(point, c) { // Returns true if point is in a circle
+    if ((point.x - c.center_x)* (point.x - c.center_x) + (point.y - c.center_y)*(point.y - c.center_y) < c.radius*c.radius) return true;
+    else return false;
+}
+
+function distCircle(point, c) { // Returns distance from point to circle edge
+
+}
+ 
+function createGrid(columns, rows, size) {
+
+  var grid = [];
+  var y = size / 2.0;
+
+  for (row = 0; row < rows; row++) {
+    var distanceFromTop = y;
+    var distanceFromBottom = height - y;
+    for (col = 0; col < columns; col++) {
+      var i = row * columns + col;
+      grid[i] = (distanceFromTop <  distanceFromBottom) ? 
+                 distanceFromTop : distanceFromBottom;
+    }
+    y += size;
+  }
+
+  var x = size / 2.0;
+
+  for (col = 0; col < columns; col++) {
+    var distanceFromLeft = x;
+    var distanceFromRight = width - x;
+    for (row = 0; row < rows; row++) {
+      var i = row * columns + col;
+      if (grid[i] > distanceFromLeft) {
+        grid[i] = distanceFromLeft;
+      }
+      if (grid[i] > distanceFromRight) { 
+        grid[i] = distanceFromRight;
+      }
+    }
+    x += size;
+  }
+
+  console.log(grid[300])
+  return grid;
+
+}
+
+function drawCircles(paper, circles, colors) {
+   
+  var size = Math.sqrt(paper.width * paper.height / 1000);
+  var columns = Math.ceil(paper.width / size);
+  var rows = Math.ceil(paper.height / size);
+  var grid = createGrid(columns, rows, size);
+  var json = [];
+  circles = circles.sort().reverse();
+  for (circle = 0; circle < circles.length; circle++) {
+
+    // We assume circles are sorted large to small!
+    var radius = circles[circle];
+
+    // Find gridpoint with largest distance from anything
+    var i = 0;
+    var maxR = 0;
+    var maxC = 0;
+    var maxDist = grid[0];
+
+    for (row = 0; row < rows; row++) {
+      for (col = 0; col < columns; col++) {
+        if (maxDist < grid[i]) {
+          maxR = row;
+          maxC = col;
+          maxDist = grid[i];
+        }
+        i++;
+      }
+    }
+
+    var k = Math.random() * colors.length;
+    var c = colors[Math.floor(k)];
+    var x = size / 2.0 + maxC * size;
+    var y = size / 2.0 + maxR * size;
+
+    var offset = (maxDist - radius) / 2.0;
+    x += Math.random() * offset;
+    y += Math.random() * offset;
+
+    json.push({
+      type: "circle",
+      cx: x,
+      cy: y,
+      r: radius,
+      stroke: Raphael.rgb2hsb(c),
+      fill: '#ffffff'
+    });
+
+    // Update Distance array with new circle;
+    i = 0;
+    var yy = size / 2.0;
+
+    for (r = 0; r < rows; r++) {
+
+      var xx = size / 2.0;
+
+      for (c = 0; c < columns; c++) {
+        var d2 = (xx - x) * (xx - x) + (yy - y) * (yy - y);
+        var prev2 = grid[i] + radius;
+        prev2 *= prev2;
+
+        if (prev2 > d2) {
+          var d = Math.sqrt(d2) - radius;
+          if (grid[i] > d) {
+            grid[i] = d;
+          }
+        }
+        xx += size;
+        i++;
+      }
+
+      yy += size;
+    }
+  }
+
+  paper.add(json);
+
+}	
+
+
+var paper = Raphael(document.getElementById("notepad"), width, height);
+var r = paper.rect(0,0, width, height);
+var c = paper.circle(width/2, width/2, width/2)
+var colors = ['#99cccc', '#99ccff', '#ff6633', '#cccc66'];
+var radii = [70, 60, 30, 10];
+ 
+drawCircles(paper, radii, colors);
+
+
+	</script>
+
+
+</body>
+
+</html>
