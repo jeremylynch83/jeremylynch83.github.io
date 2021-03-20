@@ -123,22 +123,28 @@
 
 	<script>
 
-		var tXML = "<root id=\"root\"></root>";
-		var tree = (new DOMParser).parseFromString(tXML, "text/xml"); // Stores temporary device info
-
-		/*var firstElement = tree.createElement("device");
-		firstElement.setAttribute("id", "first");
-		firstElement.setAttribute("type", "");
-		firstElement.setAttribute("data", "");
-		tree.getElementById("root").appendChild(firstElement);*/
-
-		var deviceInputs = [];
-
+		/* GENERIC FUNCTIONS */
 
 		function strip_manufacturer(text) {
 			const reg = /\s\(([^)]+)\)/;
 			return (text.replace(reg, ""));
 		}
+
+		function in_to_mm(inches) {
+			var mm = inches * 25.4;
+			return mm;
+		}
+
+		function in_to_fr(inches) {
+			var fr = inches * 76.2;
+			return fr;
+		}
+
+		/* GLOBAL VARIABLES */
+
+		var tXML = "<root id=\"root\"></root>";
+		var tree = (new DOMParser).parseFromString(tXML, "text/xml"); // Stores device info
+		var deviceInputs = []; // Stores info about input boxes
 
 
 		function checkSizes() {
@@ -195,14 +201,23 @@
 			var x = tree.querySelectorAll("device");
 
 			x.forEach(y => {
-				console.log(y.id);
 				var y_data = y.getAttribute("data");
 				if (y_data != "") {
 					var y_data_parsed = JSON.parse(y.getAttribute("data"));
+					var maxod = y_data_parsed.maxod;
+					var maxod_in = maxod.toFixed(3) + "\"";
+					var maxod_mm = in_to_mm(maxod).toFixed(2) + " mm";
+					var maxod_fr = in_to_fr(maxod).toFixed(1) + " fr";
+					var minid = y_data_parsed.minid;
+					var minid_in = minid.toFixed(3) + "\"";
+					var minid_mm = in_to_mm(minid).toFixed(2) + " mm";
+					var minid_fr = in_to_fr(minid).toFixed(1) + " fr";
+
+
 					if (y_data_parsed.name != null) table = table + "<td>" + y_data_parsed.name + "</td>";
-					if (y_data_parsed.maxod != null) table = table + "<td>" + y_data_parsed.maxod.toFixed(3) + "</td>";
-					if (y_data_parsed.minid != null) table = table + "<td>" + y_data_parsed.minid.toFixed(3) + "</td>";
-					if (y_data_parsed.length != null) table = table + "<td>" + y_data_parsed.length + "</td>";
+					if (y_data_parsed.maxod != null) table = table + "<td>" + maxod_in + " (" + maxod_mm + ", " + maxod_fr + ")" + "</td>";
+					if (y_data_parsed.minid != null) table = table + "<td>" + minid_in + " (" + minid_mm + ", " + minid_fr + ")" + "</td>";
+					if (y_data_parsed.length != null) table = table + "<td>" + y_data_parsed.length + " cm" + "</td>";
 					table = table + "</tr>";
 				}
 			}
