@@ -664,7 +664,7 @@ deviceList =
     },
     {
         "type": "balloons",
-        "name": "4mm Scepter C (MicroVention)",
+        "name": "Scepter C 4 mm (MicroVention)",
         "manufacturer": "MicroVention",
         "minid": 0,
         "maxod": 0.037,
@@ -672,7 +672,7 @@ deviceList =
     },
     {
         "type": "balloons",
-        "name": "4mm Scepter XC (MicroVention)",
+        "name": "Scepter XC 4 mm (MicroVention)",
         "manufacturer": "MicroVention",
         "minid": 0,
         "maxod": 0.037,
