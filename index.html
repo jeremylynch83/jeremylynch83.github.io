@@ -77,13 +77,12 @@
 
 		<b-container>
 
-			<h3>Under maintenance. Not for use currently. </h3>
-			<!--
+<h3></h3>			
 			<h3>Select devices</h3>
 			<template v-for="n in deviceInputs"  >
-				<b-form-group  :label-cols="n.hierarchy"  :v-bind:key="n.id">
+				<b-form-group  :label-cols="n.hierarchy"  :key="n.id">
 	
-							<vue-bootstrap-typeahead  :data="devices" :placeholder="n.text" :serializer="item => item.name"
+							<vue-bootstrap-typeahead  :key="n.id" :data="devices" :placeholder="n.id" :serializer="item => item.name"
 							@hit="updateDevice(n.id, $event); updateSizer()">
 							</vue-bootstrap-typeahead>
 
@@ -119,7 +118,7 @@
 
 		</b-container>
 
-		-->
+	
 
 
 	</div>
@@ -197,7 +196,9 @@
 			table = table + "<tr><th>Name</th><th>Max outer</th><th>Min inner</th><th>Lengths</th></tr>";
 
 			var x = tree.querySelectorAll("device");
+
 			x.forEach(y => {
+				console.log(y.id);
 				var y_data = y.getAttribute("data");
 				if (y_data != "") {
 					var y_data_parsed = JSON.parse(y.getAttribute("data"));
@@ -271,7 +272,6 @@
 					var node = {};
 					node.child_id = id;
 
-					// New way
 					var n = { 'id': id, 'text': text, 'type': type, 'parent': parent, 'hierarchy': 0 };
 
 					// Set up data structure
@@ -287,8 +287,6 @@
 						els.unshift(a);
 						a = a.parentNode;
 					}
-
-					console.log(parent);
 
 					
 					// First element
@@ -308,7 +306,6 @@
 							);
 							deviceInputs.splice(index + 1, 0, n);
 
-
 							tree.getElementById(parent).appendChild(struct);
 
 						}
@@ -316,6 +313,7 @@
 							if (parent != "device0") {
 								n.hierarchy = els.length - 3;
 								n.parent = tree.getElementById(parent).parentNode.id;
+								console.log(n.parent);
 
 								var index = deviceInputs.findIndex(
 									function (i) {
@@ -325,6 +323,7 @@
 								deviceInputs.splice(index, 0, n);
 
 								tree.getElementById(parent).parentNode.appendChild(struct);
+								
 							}
 							
 						}
