@@ -98,12 +98,84 @@ deviceList =
         "length": "?"
     },
     {
+        "type": "Microcatheters",
+        "name": "Vasco+ 10 / 10MH  (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0.017,
+        "maxod": 0.028871,
+        "length": 155,
+        "comments": "Recommended max guidewire: 0.014\""
+    },
+    {
+        "type": "Microcatheters",
+        "name": "Vasco+ 18  (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0.021,
+        "maxod": 0.035433,
+        "length": 155,
+        "comments": "Recommended max guidewire:  0.018\""
+    },
+    {
+        "type": "Microcatheters",
+        "name": "Vasco+ 21  (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0.024,
+        "maxod": 0.035433,
+        "length": 155,
+        "comments": "Recommended max guidewire:  0.021\""
+    },
+    {
+        "type": "Microcatheters",
+        "name": "Vasco+ 25  (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0.029,
+        "maxod": 0.043307,
+        "length": 155,
+        "comments": "Recommended max guidewire:  0.025\""
+    },
+    {
+        "type": "Microcatheters",
+        "name": "Vasco+ 28  (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0.032,
+        "maxod": 0.044619,
+        "length": 155,
+        "comments": "Recommended max guidewire:  0.028\""
+    },
+    {
+        "type": "Microcatheters",
+        "name": "Vasco+ 35  (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0.04,
+        "maxod": 0.052493,
+        "length": 135,
+        "comments": "Recommended max guidewire:  0.035\""
+    },
+    {
+        "type": "Microcatheters",
+        "name": "Vasco+ 35ASPI  (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0.04,
+        "maxod": 0.066929,
+        "length": 140,
+        "comments": "Recommended max guidewire:  0.035\""
+    },
+    {
+        "type": "Microcatheters",
+        "name": "Gama 17  (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0.017,
+        "maxod": 0.032808,
+        "length": 160,
+        "comments": "Recommended max guidewire:  0.014\""
+    },
+    {
         "type": "guide catheters",
         "name": "Cerebrase DA (Cerenovus)",
         "manufacturer": "Cerenovus",
         "minid": 0.09,
         "maxod": 0.105,
-        "length": "80 / 90 / 95"
+        "length": "70 / 80 / 90 / 95"
     },
     {
         "type": "guide catheters",
@@ -272,6 +344,21 @@ deviceList =
         "minid": 0.019,
         "maxod": 0.032,
         "length": "150"
+    },
+    {
+        "type": "intermediate catheters",
+        "name": "Large Bore Catheter (Cerenovus)",
+        "manufacturer": "Cerenovus",
+        "minid": 0.071,
+        "maxod": 0.0825,
+        "length": "125 / 132"
+    },
+    {
+        "type": "stentrievers",
+        "name": "Embotrap III (Cerenovus)",
+        "manufacturer": "Cerenovus",
+        "minid": 0,
+        "maxod": 0.02
     },
     {
         "type": "guide catheters",
@@ -1121,14 +1208,14 @@ deviceList =
     },
     {
         "type": "balloons",
-        "name": "Scepter Mini",
+        "name": "Scepter Mini (Microvention)",
         "manufacturer": "Microvention",
         "minid": 0.009,
         "maxod": 0.03675
     },
     {
         "type": "wire",
-        "name": "Terumo Glidewire",
+        "name": "Terumo Glidewire (Terumo)",
         "manufacturer": "Terumo",
         "minid": 0,
         "maxod": 0.035,
@@ -1136,7 +1223,7 @@ deviceList =
     },
     {
         "type": "wire",
-        "name": "Transend 010",
+        "name": "Transend 010 (Boston Scientific)",
         "manufacturer": "Boston Scientific",
         "minid": 0,
         "maxod": 0.01,
@@ -1144,7 +1231,7 @@ deviceList =
     },
     {
         "type": "wire",
-        "name": "Traxcess 014",
+        "name": "Traxcess 014 (Terumo)",
         "manufacturer": "Terumo",
         "minid": 0,
         "maxod": 0.014,
@@ -1152,10 +1239,72 @@ deviceList =
     },
     {
         "type": "wire",
-        "name": "Synchro 14",
+        "name": "Synchro 14 (Stryker)",
         "manufacturer": "Stryker",
         "minid": 0,
         "maxod": 0.014,
         "length": 200
+    },
+    {
+        "type": "wire",
+        "name": "Hybrid 007 (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0,
+        "maxod": 0.007,
+        "length": "120 / 220",
+        "comments": "Available in straight D, double angle J"
+    },
+    {
+        "type": "wire",
+        "name": "Hybrid 008  (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0,
+        "maxod": 0.008,
+        "length": 220,
+        "comments": "Available in straight D, double angle J"
+    },
+    {
+        "type": "wire",
+        "name": "Hybrid 012  (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0,
+        "maxod": 0.012,
+        "length": "200 / 310",
+        "comments": "Available in straight D, double angle J"
+    },
+    {
+        "type": "wire",
+        "name": "Hybrid 014  (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0,
+        "maxod": 0.014,
+        "length": 200,
+        "comments": "Available in straight D "
+    },
+    {
+        "type": "wire",
+        "name": "Hybrid 010  (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0,
+        "maxod": 0.01,
+        "length": 310,
+        "comments": "Available in straight D "
+    },
+    {
+        "type": "microcatheters",
+        "name": "Sonic 1.2 (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0.009055118,
+        "maxod": 0.015748,
+        "length": "167 / 190",
+        "comments": "Includes a 0.007\" guidewire"
+    },
+    {
+        "type": "microcatheters",
+        "name": "Sonic 1.5 (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0.01181102,
+        "maxod": 0.019685,
+        "length": 167
     }
 ]
