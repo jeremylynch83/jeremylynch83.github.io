@@ -82,7 +82,7 @@
 			<template v-for="n in deviceInputs"  >
 				<b-form-group  :label-cols="n.hierarchy"  :key="n.id">
 	
-							<vue-bootstrap-typeahead  :key="n.id" :data="devices" :placeholder="n.id" :serializer="item => item.name"
+							<vue-bootstrap-typeahead  :key="n.id" :data="devices" :placeholder="n.text" :serializer="item => item.name"
 							@hit="updateDevice(n.id, $event); updateSizer()">
 							</vue-bootstrap-typeahead>
 
@@ -313,7 +313,6 @@
 							if (parent != "device0") {
 								n.hierarchy = els.length - 3;
 								n.parent = tree.getElementById(parent).parentNode.id;
-								console.log(n.parent);
 
 								var index = deviceInputs.findIndex(
 									function (i) {
