@@ -102,7 +102,7 @@
 			<div id="inputs"></div>
 		</b-container>
 
-		<b-container>
+		<b-container style="display: none" id="result_container">
 
 			<h3>Results</h3>
 			<strong>
@@ -274,6 +274,8 @@
 
 					this.drawDiagram();
 
+					document.getElementById("result_container").style = "display:block";
+
 				},
 				addInput: function (where, text, type, parent) {
 
@@ -360,9 +362,6 @@
 
 			created: function () {
 				var newInput1 = this.addInput("inside", "Enter outer device e.g. guide sheath ", "guide catheters", null);
-				//var newInput2 = this.addInput("inside", "Enter intermediate device ", "intermediate catheters", newInput1);
-				//var newInput3 = this.addInput("inside", "Enter micro device ", "microcatheters", newInput2);
-				//var newInput4 = this.addInput("inside", "Enter micro device ", "microcatheters", newInput2);
 			}
 		})
 
