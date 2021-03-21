@@ -1,5 +1,6 @@
 deviceList = 
 
+
 [
     {
         "type": "guide catheters",
@@ -315,17 +316,17 @@ deviceList =
     },
     {
         "type": "balloons",
-        "name": "4mm Ascent (Cerenovus)",
+        "name": "Ascent 4 mm (Cerenovus)",
         "manufacturer": "Cerenovus",
-        "minid": 0,
+        "minid": 0.017,
         "maxod": 0.038,
         "length": "150"
     },
     {
         "type": "balloons",
-        "name": "6mm Ascent (Cerenovus)",
+        "name": "Ascent 6 mm (Cerenovus)",
         "manufacturer": "Cerenovus",
-        "minid": 0,
+        "minid": 0.017,
         "maxod": 0.038,
         "length": "150"
     },
@@ -519,49 +520,49 @@ deviceList =
     },
     {
         "type": "balloons",
-        "name": "3mm HyperForm (Medtronic)",
+        "name": "HyperForm 3mm (Medtronic)",
         "manufacturer": "Medtronic",
-        "minid": 0,
+        "minid": 0.011,
         "maxod": 0.036,
         "length": "150"
     },
     {
         "type": "balloons",
-        "name": "4mm HyperForm (Medtronic)",
+        "name": "HyperForm 4mm (Medtronic)",
         "manufacturer": "Medtronic",
-        "minid": 0,
+        "minid": 0.011,
         "maxod": 0.036,
         "length": "150"
     },
     {
         "type": "balloons",
-        "name": "7mm HyperForm (Medtronic)",
+        "name": "HyperForm 7mm (Medtronic)",
         "manufacturer": "Medtronic",
-        "minid": 0,
+        "minid": 0.011,
         "maxod": 0.0394,
         "length": "150"
     },
     {
         "type": "balloons",
-        "name": "3mm HyperGlide (Medtronic)",
+        "name": "HyperGlide 3mm (Medtronic)",
         "manufacturer": "Medtronic",
-        "minid": 0,
+        "minid": 0.011,
         "maxod": 0.0367,
         "length": "150"
     },
     {
         "type": "balloons",
-        "name": "4mm HyperGlide (Medtronic)",
+        "name": "HyperGlide 4mm (Medtronic)",
         "manufacturer": "Medtronic",
-        "minid": 0,
+        "minid": 0.011,
         "maxod": 0.0367,
         "length": "150"
     },
     {
         "type": "balloons",
-        "name": "5mm HyperGlide (Medtronic)",
+        "name": "HyperGlide 5mm (Medtronic)",
         "manufacturer": "Medtronic",
-        "minid": 0,
+        "minid": 0.011,
         "maxod": 0.0367,
         "length": "150"
     },
@@ -666,7 +667,7 @@ deviceList =
         "type": "balloons",
         "name": "Scepter C 4 mm (MicroVention)",
         "manufacturer": "MicroVention",
-        "minid": 0,
+        "minid": 0.015,
         "maxod": 0.037,
         "length": "150"
     },
@@ -674,7 +675,7 @@ deviceList =
         "type": "balloons",
         "name": "Scepter XC 4 mm (MicroVention)",
         "manufacturer": "MicroVention",
-        "minid": 0,
+        "minid": 0.015,
         "maxod": 0.037,
         "length": "150"
     },
@@ -968,49 +969,9 @@ deviceList =
     },
     {
         "type": "balloons",
-        "name": "3mm Transform C (Stryker)",
+        "name": "Transform C & SC: 3, 4, 5, 6 mm (Stryker)",
         "manufacturer": "Stryker",
-        "minid": 0,
-        "maxod": 0.037,
-        "length": "150"
-    },
-    {
-        "type": "balloons",
-        "name": "3mm Transform SC (Stryker)",
-        "manufacturer": "Stryker",
-        "minid": 0,
-        "maxod": 0.037,
-        "length": "150"
-    },
-    {
-        "type": "balloons",
-        "name": "4mm Transform C (Stryker)",
-        "manufacturer": "Stryker",
-        "minid": 0,
-        "maxod": 0.037,
-        "length": "150"
-    },
-    {
-        "type": "balloons",
-        "name": "4mm Transform SC (Stryker)",
-        "manufacturer": "Stryker",
-        "minid": 0,
-        "maxod": 0.037,
-        "length": "150"
-    },
-    {
-        "type": "balloons",
-        "name": "5mm Transform C (Stryker)",
-        "manufacturer": "Stryker",
-        "minid": 0,
-        "maxod": 0.037,
-        "length": "150"
-    },
-    {
-        "type": "balloons",
-        "name": "7mm Transform SC (Stryker)",
-        "manufacturer": "Stryker",
-        "minid": 0,
+        "minid": 0.015,
         "maxod": 0.037,
         "length": "150"
     },
@@ -1291,6 +1252,22 @@ deviceList =
         "comments": "Available in straight D "
     },
     {
+        "type": "wire",
+        "name": "Transend 014 (Stryker)",
+        "manufacturer": "Stryker",
+        "minid": 0,
+        "maxod": 0.014,
+        "length": "182 / 205 / 300"
+    },
+    {
+        "type": "wire",
+        "name": "Transend 010 (Stryker)",
+        "manufacturer": "Stryker",
+        "minid": 0,
+        "maxod": 0.01,
+        "length": 200
+    },
+    {
         "type": "microcatheters",
         "name": "Sonic 1.2 (Balt)",
         "manufacturer": "Balt",
@@ -1306,5 +1283,45 @@ deviceList =
         "minid": 0.01181102,
         "maxod": 0.019685,
         "length": 167
+    },
+    {
+        "type": "stentrievers",
+        "name": "Solitaire X 4 - 6 mm (Medtronic)",
+        "manufacturer": "Medtronic",
+        "minid": 0,
+        "maxod": 0.02,
+        "length": 200
+    },
+    {
+        "type": "stentrievers",
+        "name": "Solitaire Platinum 4 mm (Medtronic)",
+        "manufacturer": "Medtronic",
+        "minid": 0,
+        "maxod": 0.02,
+        "length": 180
+    },
+    {
+        "type": "stentrievers",
+        "name": "Solitaire Platinum 6 mm (Medtronic)",
+        "manufacturer": "Medtronic",
+        "minid": 0,
+        "maxod": 0.026,
+        "length": 180
+    },
+    {
+        "type": "stent",
+        "name": "Solitaire AB 4 mm (Medtronic)",
+        "manufacturer": "Medtronic",
+        "minid": 0,
+        "maxod": 0.02,
+        "length": 153
+    },
+    {
+        "type": "stent",
+        "name": "Solitaire AB 6 mm (Medtronic)",
+        "manufacturer": "Medtronic",
+        "minid": 0,
+        "maxod": 0.026,
+        "length": 153
     }
 ]

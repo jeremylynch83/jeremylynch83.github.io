@@ -108,8 +108,8 @@
 			<strong>
 				<p id="result" style="color:rgb(179, 179, 179)">You need to enter some devices ;)</p>
 			</strong>
-			<div id="details" style="color:rgb(179, 179, 179)"></div>
-			<div id="more"></div>
+			<div id="details" style="color:rgb(179, 179, 179)" ></div>
+			<div id="more" ></div>
 			<div id="paper"></div>
 
 			<p></p>
@@ -140,6 +140,32 @@
 			return fr;
 		}
 
+		function parse_lengths(str) {
+			var list = str.split(/\//);
+			for (n = 0; n < list.length; n++) {
+				list[n] = parseInt(list[n]);
+			}
+			list = list.sort();
+			return list;
+		}
+
+		function compare_list_lengths(parent_str, child_str) { 
+			parent_list = parse_lengths(parent_str);
+			child_list = parse_lengths(child_str); 
+			var discrep_list = null;
+
+			for (var x = 0; x < parent_list.length; x++) {
+				for (var y = 0; y < child_list.length; y++) {
+					if (parent_list[y] <= child_list[x]) {
+						discrep_list.push(
+							parent_list[y] + ": " + child_list[x]
+						);
+					}
+				}
+			}
+			return discrep_list;
+		}
+
 		/* GLOBAL VARIABLES */
 
 		var tXML = "<root id=\"root\"></root>";
@@ -154,7 +180,6 @@
 				var y_data = y.getAttribute("data");
 				if (y_data != "") {
 					var parent = y.parentNode;
-					//console.log(JSON.parse(y.getAttribute("data")))
 
 					var y_data_parsed = JSON.parse(y.getAttribute("data"));
 					var total_od = y_data_parsed.maxod;
@@ -178,7 +203,7 @@
 						}
 
 						if (parent.getAttribute("data") != null && parent.getAttribute("data") != "") {
-							//console.log(parent.getAttribute("data"));
+
 							parent_data_parsed = JSON.parse(parent.getAttribute("data"));
 							if (total_od > parent_data_parsed.minid) {
 								summary = summary + strip_manufacturer(y_data_parsed.name) + " does not fit in to " + strip_manufacturer(parent_data_parsed.name) + ". ";
@@ -212,7 +237,6 @@
 					var minid_in = minid.toFixed(3) + "\"";
 					var minid_mm = in_to_mm(minid).toFixed(2) + " mm";
 					var minid_fr = in_to_fr(minid).toFixed(1) + " fr";
-
 
 					if (y_data_parsed.name != null) table = table + "<td>" + y_data_parsed.name + "</td>";
 					if (y_data_parsed.maxod != null) table = table + "<td>" + maxod_in + " (" + maxod_mm + ", " + maxod_fr + ")" + "</td>";
@@ -366,6 +390,9 @@
 		})
 
 
+		var parent = "70 / 80 / 90";
+		var child = "60 / 65 / 67"; 
+		console.log(compare_list_lengths(parent, child)); 
 
 
 
