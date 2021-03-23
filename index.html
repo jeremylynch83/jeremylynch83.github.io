@@ -88,10 +88,9 @@
 
 							<div class="text-right">
 							<b-button-group  >
-								<b-button variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.7em;" @click="addInput('inside', 'Enter device ...', 'guide catheters', n.id)">Add another inside</b-button>
-								<b-button  variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.7em;" @click="addInput('beside', 'Enter device ...', 'guide catheters', n.id)">Add another beside</b-button>
+								<b-button variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.7em;" @click="addInput('inside', 'Enter device e.g. catheter, balloon, stent, wire ...', 'guide catheters', n.id)">Add another inside</b-button>
+								<b-button  variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.7em;" @click="addInput('beside', 'Enter device e.g. catheter, balloon, stent, wire ...', 'guide catheters', n.id)">Add another beside</b-button>
 								<b-button  variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.7em;" @click="removeInput(n.id)">Remove</b-button>
-
 							</b-button-group>
 						</div>
 
@@ -113,9 +112,10 @@
 			<div id="paper"></div>
 
 			<p></p>
+			<p>Note: This tool is in development and there may occasionally be inaccuracies in results. <b-link href="mailto: jeremy.lynch@gmail.com">Devices missing or incorrect? Contact me.</b-link>
+			</p>
 
-			<b-link href="mailto: jeremy.lynch@gmail.com">Devices missing or incorrect? Contact me.</b-link>
-
+			
 		</b-container>
 
 	</div>
@@ -125,7 +125,7 @@
 
 		/* GENERIC FUNCTIONS */
 
-		function strip_manufacturer(text) {
+		function strip_man(text) {
 			const reg = /\s\(([^)]+)\)/;
 			return (text.replace(reg, ""));
 		}
@@ -141,29 +141,83 @@
 		}
 
 		function parse_lengths(str) {
-			var list = str.split(/\//);
-			for (n = 0; n < list.length; n++) {
-				list[n] = parseInt(list[n]);
+			var list = str;
+			if (typeof str === 'string' || str instanceof String) {
+				list = str.split(/\//);
+				for (n = 0; n < list.length; n++) {
+					list[n] = parseInt(list[n]);
+				}
+				list = list.sort();
 			}
-			list = list.sort();
+			else list = null; 
+
+			if (Array.isArray(list)) {
+				if (isNaN(list[0])) list[0] = null;  
+			}
+
 			return list;
+		
 		}
 
-		function compare_list_lengths(parent_str, child_str) { 
+		function compare_list_lengths(parent_str, child_str, parent_name, child_name) { 
+
 			parent_list = parse_lengths(parent_str);
 			child_list = parse_lengths(child_str); 
-			var discrep_list = null;
+			var solution_list = [];
+			var solution_text = "";
+			var problem_list = [];
 
-			for (var x = 0; x < parent_list.length; x++) {
-				for (var y = 0; y < child_list.length; y++) {
-					if (parent_list[y] <= child_list[x]) {
-						discrep_list.push(
-							parent_list[y] + ": " + child_list[x]
-						);
+			/* No lengths for 1 catheter or if catheters are the same type */
+			if (parent_list != null && parent_list[0] != null && child_list != null && child_list[0] != null && parent_name != child_name)
+			{
+				/* Only one length for each catheter and they both fit */ 
+				if (parent_list.length == 1 && child_list.length == 1 && parent_list[0] < child_list[0]) solution_text = ""; 
+				else {
+
+					for (var x = 0; x < child_list.length; x++) {
+						for (var y = 0; y < parent_list.length; y++) {
+							if (child_list[x] > parent_list[y]) {	/* Obtain all combinations that will fit */					
+								solution_list.push(
+									" " + strip_man(parent_name) + " " + parent_list[y] + " cm and " + strip_man(child_name) + " " + child_list[x] + " cm"
+								);
+							}
+							if (child_list[x] <= parent_list[y]) {	/* Obtain all combinations that will NOT fit */				
+								problem_list.push(
+									" " + strip_man(parent_name) + " " + parent_list[y] + " cm and " + strip_man(child_name) + " " + child_list[x] + " cm"
+								);
+							}
+
+
+						}
+					}
+					solution_list = solution_list.sort();
+					problem_list = problem_list.sort(); 
+
+					/* Write the text */
+
+					switch (solution_list.length) {
+						case 1: /* Just 1 solution */
+							solution_text = "Note, the following combinations of lengths is necessary" + solution_list[0] + ". ";
+							break;
+						case (child_list.length * parent_list.length): /* All combinations are fine */
+							solution_text = "";
+							break;
+						case 0: /* There are no solutions */ 
+							solution_text = strip_man(child_name) + " is too short for the " + strip_man(parent_name) + ". "; 
+							break
+						default: /* There are a few solutions */
+							if (solution_list.length < problem_list.length) {
+								solution_text = "Note, the following combinations of lengths will not fit: " + solution_list.toString() + ". ";
+							}
+							else {
+								solution_text = "Note, the following combinations of lengths will NOT fit: " + problem_list.toString() + ". ";
+							}
+							break
 					}
 				}
 			}
-			return discrep_list;
+
+			return solution_text;
 		}
 
 		/* GLOBAL VARIABLES */
@@ -172,44 +226,58 @@
 		var tree = (new DOMParser).parseFromString(tXML, "text/xml"); // Stores device info
 		var deviceInputs = []; // Stores info about input boxes
 
+		/* Specific functions */
 
 		function checkSizes() {
 			var summary = "";
 			var x = tree.querySelectorAll("device");
-			x.forEach(y => {
-				var y_data = y.getAttribute("data");
-				if (y_data != "") {
-					var parent = y.parentNode;
+			x.forEach(parent => {
+				if (parent.hasChildNodes() && (parent.getAttribute("data") != "")) {
+					
+					var parent_data = JSON.parse(parent.getAttribute("data"));
+					//summary = summary + "Parent: " + parent_data.name + ". ";
 
-					var y_data_parsed = JSON.parse(y.getAttribute("data"));
-					var total_od = y_data_parsed.maxod;
+					children = parent.childNodes;
+					var child_total_od = 0;
+					var child_list = [];
+					var length_txt = "";
+					var child_str = "";
 
-					var sibling = y.nextSibling;
+					children.forEach(child => { /* Add up all devices inside parent catheter */
+							if (child.getAttribute("data") != "") {
+							child_data = JSON.parse(child.getAttribute("data"));
 
-					if (sibling != null) {
-						var sibling_data = sibling.getAttribute("data");
-						do {
-							if (sibling_data != "") {
-								total_od = total_od + JSON.parse(sibling_data).maxod;
+							child_total_od = child_total_od + child_data.maxod;
+							child_list.push(strip_man(child_data.name));
+
+							// Compare lengths
+							length_txt = length_txt + compare_list_lengths(parent_data.length, child_data.length, parent_data.name, child_data.name);
+
+						}
+						}
+					)
+					
+					if (child_total_od > parent_data.minid) {
+						switch (child_list.length) {
+						case 1: 
+							child_str = child_list[0];
+							break;
+						case 2:
+							child_str = "The combination of " + child_str + child_list[0] + " and " + child_list[1]; 
+							break;
+						default:
+						child_str = child_str + "The combination of ";
+							for (var n=0; n < child_list.length; n++) {	
+								if (n < (child_list.length-1)) child_str = child_str + child_list[n] + ", "; 
+								if (n == (child_list.length-1)) child_str = child_str + " and " + child_list[n] + ",";
 							}
-							sibling = sibling.nextSibling;
+							break;
 						}
-						while (sibling != null);
+						summary = summary + child_str + " does not fit in to " + strip_man(parent_data.name) + ". ";
 					}
+					else summary = summary + length_txt;
 
-					if (parent.getAttribute("id") != "root") {
-						if (parent.getAttribute("data") == "") {
-							parent = parent.parentNode;
-						}
-
-						if (parent.getAttribute("data") != null && parent.getAttribute("data") != "") {
-
-							parent_data_parsed = JSON.parse(parent.getAttribute("data"));
-							if (total_od > parent_data_parsed.minid) {
-								summary = summary + strip_manufacturer(y_data_parsed.name) + " does not fit in to " + strip_manufacturer(parent_data_parsed.name) + ". ";
-							}
-						}
-					}
+					
 				}
 			}
 			)
@@ -390,9 +458,9 @@
 		})
 
 
-		var parent = "70 / 80 / 90";
-		var child = "60 / 65 / 67"; 
-		console.log(compare_list_lengths(parent, child)); 
+		var parent = "100 ";
+		var child = "115 "; 
+		//console.log(compare_list_lengths(parent, child, "neuron max", "sl-10")); 
 
 
 

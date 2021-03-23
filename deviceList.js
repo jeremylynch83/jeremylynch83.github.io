@@ -78,17 +78,17 @@ deviceList =
         "type": "Balloons",
         "name": "Copernic 8 RC Venous (Balt)",
         "manufacturer": "Balt",
-        "minid": 0.014,
+        "minid": 0.015,
         "maxod": 0.05709,
-        "length": "?"
+        "length": 160
     },
     {
         "type": "Balloons",
         "name": "Copernic 10 RC Venous (Balt)",
         "manufacturer": "Balt",
-        "minid": 0.014,
+        "minid": 0.015,
         "maxod": 0.06562,
-        "length": "?"
+        "length": 160
     },
     {
         "type": "Balloons",
@@ -292,15 +292,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "6F Envoy DA (Cerenovus)",
-        "manufacturer": "Cerenovus",
-        "minid": 0.071,
-        "maxod": 0.079,
-        "length": "95 / 105"
-    },
-    {
-        "type": "guide catheters",
-        "name": "6F Envoy DA XB (Cerenovus)",
+        "name": "6F Envoy DA / XB (Cerenovus)",
         "manufacturer": "Cerenovus",
         "minid": 0.071,
         "maxod": 0.079,
@@ -667,7 +659,7 @@ deviceList =
         "type": "balloons",
         "name": "Scepter C 4 mm (MicroVention)",
         "manufacturer": "MicroVention",
-        "minid": 0.015,
+        "minid": 0.0165,
         "maxod": 0.037,
         "length": "150"
     },
@@ -675,7 +667,7 @@ deviceList =
         "type": "balloons",
         "name": "Scepter XC 4 mm (MicroVention)",
         "manufacturer": "MicroVention",
-        "minid": 0.015,
+        "minid": 0.0165,
         "maxod": 0.037,
         "length": "150"
     },
@@ -1172,7 +1164,8 @@ deviceList =
         "name": "Scepter Mini (Microvention)",
         "manufacturer": "Microvention",
         "minid": 0.009,
-        "maxod": 0.03675
+        "maxod": 0.03675,
+        "length": "?"
     },
     {
         "type": "wire",
@@ -1323,5 +1316,116 @@ deviceList =
         "minid": 0,
         "maxod": 0.026,
         "length": 153
+    },
+    {
+        "type": "stent",
+        "name": "Carotid Wallstent 9x40 (Boston Scientific)",
+        "manufacturer": "Boston Scientific",
+        "minid": 0.015,
+        "maxod": 0.086,
+        "length": 135
+    },
+    {
+        "type": "stent",
+        "name": "Carotid Wallstent 7x40 (Boston Scientific)",
+        "manufacturer": "Boston Scientific",
+        "minid": 0.015,
+        "maxod": 0.071,
+        "length": 135
+    },
+    {
+        "type": "stent",
+        "name": "Carotid Wallstent 5x30 (Boston Scientific)",
+        "minid": 0.016,
+        "maxod": 0.071,
+        "length": 135
+    },
+    {
+        "type": "stent",
+        "name": "Wingspan 3.5x20 / 4x20 (Stryker)",
+        "manufacturer": "Stryker",
+        "minid": 0.016,
+        "maxod": 0.063,
+        "length": 135,
+        "comments": "Recommended 300cm guidewire"
+    },
+    {
+        "type": "stent",
+        "name": "LVIS Jr (Microvention)",
+        "manufacturer": "Microvention",
+        "minid": 0.015,
+        "maxod": 0.0155,
+        "length": "?",
+        "comments": "Recommended catheters Headway-17, Headway-21, Scepter C, Scepter XC"
+    },
+    {
+        "type": "balloons",
+        "name": "Trek Coronary Dilatation Balloon (Abbott)",
+        "manufacturer": "Abbott",
+        "minid": 0.015,
+        "maxod": 0.03189,
+        "length": 145
+    },
+    {
+        "type": "stent",
+        "name": "Leo+ baby (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0.015,
+        "maxod": 0.0155,
+        "length": "?"
+    },
+    {
+        "type": "stent",
+        "name": "Leo+ 3,5 (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0.015,
+        "maxod": 0.021,
+        "length": "?"
+    },
+    {
+        "type": "stent",
+        "name": "Leo+ 4,5 (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0.015,
+        "maxod": 0.025,
+        "length": "?"
+    },
+    {
+        "type": "stent",
+        "name": "Leo+ 5,5 (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0.015,
+        "maxod": 0.028,
+        "length": "?"
+    },
+    {
+        "type": "stent",
+        "name": "Silk Vista (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0.015,
+        "maxod": 0.2,
+        "length": "?"
+    },
+    {
+        "type": "stent",
+        "name": "Silk Vista Baby (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0.015,
+        "maxod": 0.0165,
+        "length": "?"
+    },
+    {
+        "type": "stent",
+        "name": "Silk+ 2,0 to 4,5 (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0.015,
+        "maxod": 21
+    },
+    {
+        "type": "stent",
+        "name": "Silk+ 5,0 to 5,5 (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0.015,
+        "maxod": 25
     }
 ]
