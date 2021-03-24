@@ -1,6 +1,5 @@
 deviceList = 
 
-
 [
     {
         "type": "guide catheters",
@@ -1411,7 +1410,7 @@ deviceList =
         "name": "Silk Vista Baby (Balt)",
         "manufacturer": "Balt",
         "minid": 0.015,
-        "maxod": 0.0165,
+        "maxod": 0.0166,
         "length": "?"
     },
     {

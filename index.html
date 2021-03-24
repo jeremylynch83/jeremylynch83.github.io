@@ -298,11 +298,11 @@
 				if (y_data != "") {
 					var y_data_parsed = JSON.parse(y.getAttribute("data"));
 					var maxod = y_data_parsed.maxod;
-					var maxod_in = maxod.toFixed(3) + "\"";
+					var maxod_in = maxod.toFixed(4) + "\"";
 					var maxod_mm = in_to_mm(maxod).toFixed(2) + " mm";
 					var maxod_fr = in_to_fr(maxod).toFixed(1) + " fr";
 					var minid = y_data_parsed.minid;
-					var minid_in = minid.toFixed(3) + "\"";
+					var minid_in = minid.toFixed(4) + "\"";
 					var minid_mm = in_to_mm(minid).toFixed(2) + " mm";
 					var minid_fr = in_to_fr(minid).toFixed(1) + " fr";
 
