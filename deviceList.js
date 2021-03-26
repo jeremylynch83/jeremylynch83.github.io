@@ -1402,7 +1402,7 @@ deviceList =
         "name": "Silk Vista (Balt)",
         "manufacturer": "Balt",
         "minid": 0.015,
-        "maxod": 0.2,
+        "maxod": 0.02,
         "length": "?"
     },
     {
@@ -1418,13 +1418,13 @@ deviceList =
         "name": "Silk+ 2,0 to 4,5 (Balt)",
         "manufacturer": "Balt",
         "minid": 0.015,
-        "maxod": 21
+        "maxod": 0.02
     },
     {
         "type": "stent",
         "name": "Silk+ 5,0 to 5,5 (Balt)",
         "manufacturer": "Balt",
         "minid": 0.015,
-        "maxod": 25
+        "maxod": 0.024
     }
 ]
