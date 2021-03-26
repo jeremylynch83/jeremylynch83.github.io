@@ -74,6 +74,22 @@ deviceList =
         "length": "165 / 180"
     },
     {
+        "type": "Microcatheters",
+        "name": "Magic 1.5 (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0.009,
+        "maxod": 0.03543,
+        "length": "160 / 165"
+    },
+    {
+        "type": "Microcatheters",
+        "name": "Baltacci 1.2 (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0.007,
+        "maxod": 0.03543,
+        "length": "165 / 100"
+    },
+    {
         "type": "Balloons",
         "name": "Copernic 8 RC Venous (Balt)",
         "manufacturer": "Balt",
@@ -1426,5 +1442,43 @@ deviceList =
         "manufacturer": "Balt",
         "minid": 0.015,
         "maxod": 0.024
+    },
+    {
+        "type": "Select catheter",
+        "name": "Select 5 F (Penumbra)",
+        "manufacturer": "Penumbra",
+        "minid": 0.04,
+        "maxod": 0.0656168
+    },
+    {
+        "type": "Select catheter",
+        "name": "Select 6 F (Penumbra)",
+        "manufacturer": "Penumbra",
+        "minid": 0.04,
+        "maxod": 0.07992126
+    },
+    {
+        "type": "sheath",
+        "name": "Glidesheath 4F (Terumo)",
+        "manufacturer": "Terumo",
+        "minid": 0.061,
+        "maxod": 0.0656168,
+        "length": "45 / 80"
+    },
+    {
+        "type": "sheath",
+        "name": "Glidesheath 5F (Terumo)",
+        "manufacturer": "Terumo",
+        "minid": 0.074,
+        "maxod": 0.07874016,
+        "length": "45 / 80"
+    },
+    {
+        "type": "sheath",
+        "name": "Glidesheath 6F (Terumo)",
+        "manufacturer": "Terumo",
+        "minid": 0.087,
+        "maxod": 0.09186352,
+        "length": "45 / 80"
     }
 ]
