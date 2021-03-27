@@ -105,7 +105,7 @@
 
 			<h3>Results</h3>
 			<strong>
-				<p id="result">You need to enter some devices ;)</p>
+				<p id="result" style="color:rgb(179, 179, 179)">You need to enter some devices ;)</p>
 			</strong>
 			<div id="details" style="color:rgb(179, 179, 179)" ></div>
 			<div id="more" ></div>
@@ -207,10 +207,10 @@
 							break
 						default: /* There are a few solutions */
 							if (solution_list.length < problem_list.length) {
-								solution_text = "Note, avoid the following combinations of lengths: " + solution_list.toString() + ". ";
+								solution_text = "Note, the following combinations of lengths will not fit: " + solution_list.toString() + ". ";
 							}
 							else {
-								solution_text = "Note, avoid the following combinations of lengths: " + problem_list.toString() + ". ";
+								solution_text = "Note, the following combinations of lengths will NOT fit: " + problem_list.toString() + ". ";
 							}
 							break
 					}
@@ -229,7 +229,7 @@
 		/* Specific functions */
 
 		function checkSizes() {
-			var summary = "";
+			var summary = "<p>";
 			var x = tree.querySelectorAll("device");
 			x.forEach(parent => {
 				if (parent.hasChildNodes() && (parent.getAttribute("data") != "")) {
@@ -273,9 +273,9 @@
 							}
 							break;
 						}
-						summary = "<p style=\"color:red\">" + summary + child_str + " does not fit in to " + strip_man(parent_data.name) + ". " +  "</p>";
+						summary = summary + child_str + " does not fit in to " + strip_man(parent_data.name) + ". ";
 					}
-					else summary = summary + length_txt;
+					else summary = summary + length_txt ;
 
 					
 				}
@@ -355,11 +355,11 @@
 				updateSizer: function () {
 					var result = checkSizes();
 					if (result == "") {
-						//document.getElementById("result").style.color = "rgb(0, 153, 51)";
-						var result = "<p style=\"color:green\">Everything fits ok.</p>";
+						document.getElementById("result").style.color = "rgb(0, 153, 51)";
+						var result = "Everything fits ok.";
 					}
 					else {
-						//document.getElementById("result").style.color = "rgb(175,0,42)"
+						document.getElementById("result").style.color = "rgb(175,0,42)"
 					}
 					document.getElementById("result").innerHTML = result;
 					document.getElementById("more").innerHTML = generateDeviceTable();

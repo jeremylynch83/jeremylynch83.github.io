@@ -1048,7 +1048,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Trevo Pro 14 (Stryker)",
+        "name": "Trevo Pro 14 microcatheter (Stryker)",
         "manufacturer": "Stryker",
         "minid": 0.017,
         "maxod": 0.032,
@@ -1056,7 +1056,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Trevo Pro 18 (Stryker)",
+        "name": "Trevo Pro 18 microcatheter (Stryker)",
         "manufacturer": "Stryker",
         "minid": 0.021,
         "maxod": 0.035,
@@ -1064,7 +1064,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "5F Arrow-Flex (Teleflex Medical)",
+        "name": "trevo",
         "manufacturer": "Teleflex Medical",
         "minid": 0.074,
         "maxod": 0,
@@ -1362,7 +1362,7 @@ deviceList =
         "minid": 0.016,
         "maxod": 0.063,
         "length": 135,
-        "comments": "Recommended 300cm guidewire"
+        "compatibility": "Recommended 300cm guidewire"
     },
     {
         "type": "stent",
@@ -1371,7 +1371,7 @@ deviceList =
         "minid": 0.015,
         "maxod": 0.0155,
         "length": "?",
-        "comments": "Recommended catheters Headway-17, Headway-21, Scepter C, Scepter XC"
+        "compatibility": "Recommended catheters Headway-17, Headway-21, Scepter C, Scepter XC"
     },
     {
         "type": "balloons",
@@ -1480,5 +1480,22 @@ deviceList =
         "minid": 0.087,
         "maxod": 0.09186352,
         "length": "45 / 80"
+    },
+    {
+        "type": "stentrievers",
+        "name": "Trevo NXT ProVue Retriever 3x32 (Stryker)",
+        "manufacturer": "Stryker",
+        "minid": 0,
+        "maxod": 0.016,
+        "length": 200,
+        "compatibility": "Recommended to use the Trak21 microcatheter"
+    },
+    {
+        "type": "stentrievers",
+        "name": "Trevo NXT ProVue Retriever 4 to 6 mm (Stryker)",
+        "minid": 0,
+        "maxod": 0.02,
+        "length": 200,
+        "compatibility": "Recommended to use the Trak21 microcatheter"
     }
 ]
