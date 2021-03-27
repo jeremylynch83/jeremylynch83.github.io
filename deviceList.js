@@ -63,13 +63,14 @@ deviceList =
         "manufacturer": "Balt",
         "minid": 0.088,
         "maxod": 0.106,
-        "length": "80 / 90 / 100"
+        "length": "80 / 90 / 100 / 105",
+        "url": "https://web.archive.org/web/20210209224054/https://balt-usa.com/products/ballast-088-long-sheath/"
     },
     {
         "type": "Microcatheters",
         "name": "Magic 1.2 (Balt)",
         "manufacturer": "Balt",
-        "minid": 0.008,
+        "minid": 0.009,
         "maxod": 0.03543,
         "length": "165 / 180"
     },
@@ -77,7 +78,7 @@ deviceList =
         "type": "Microcatheters",
         "name": "Magic 1.5 (Balt)",
         "manufacturer": "Balt",
-        "minid": 0.009,
+        "minid": 0.01,
         "maxod": 0.03543,
         "length": "160 / 165"
     },
@@ -85,9 +86,25 @@ deviceList =
         "type": "Microcatheters",
         "name": "Baltacci 1.2 (Balt)",
         "manufacturer": "Balt",
-        "minid": 0.007,
+        "minid": 0.008,
         "maxod": 0.03543,
-        "length": "165 / 100"
+        "length": "100 / 165"
+    },
+    {
+        "type": "Microcatheters",
+        "name": "Baltacci 1.5 (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0.01,
+        "maxod": 0.03543,
+        "length": 165
+    },
+    {
+        "type": "Microcatheters",
+        "name": "Baltacci 1.8 (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0.01,
+        "maxod": 0.03543,
+        "length": "100 / 165"
     },
     {
         "type": "Balloons",
@@ -1497,5 +1514,146 @@ deviceList =
         "maxod": 0.02,
         "length": 200,
         "compatibility": "Recommended to use the Trak21 microcatheter"
+    },
+    {
+        "type": "stentrievers",
+        "name": "Catch+ catchmini 3x15 (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0,
+        "maxod": 0.016,
+        "length": 200,
+        "tipLengths": 15,
+        "materials": "Nitinol",
+        "stentDesign": "laser cut"
+    },
+    {
+        "type": "stentrievers",
+        "name": "Catch+ catch 4x20 (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0,
+        "maxod": 0.02,
+        "length": 200,
+        "tipLengths": 20,
+        "materials": "Nitinol",
+        "stentDesign": "laser cut"
+    },
+    {
+        "type": "stentrievers",
+        "name": "Catch+ catchmaxi 6x30 (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0,
+        "maxod": 0.023,
+        "length": 200,
+        "tipLengths": 30,
+        "materials": "Nitinol",
+        "stentDesign": "laser cut"
+    },
+    {
+        "type": "stentrievers",
+        "name": "Tigertriever (Rapid)",
+        "manufacturer": "Rapid Medical",
+        "minid": 0,
+        "maxod": 0.02,
+        "length": "?",
+        "url": "https://web.archive.org/web/20201203224140/https://www.rapid-medical.com/tigertriever",
+        "stentDesign": "braided",
+        "stentLengthMm": 32
+    },
+    {
+        "type": "stentrievers",
+        "name": "Tigertriever 17 (Rapid)",
+        "manufacturer": "Rapid Medical",
+        "minid": 0,
+        "maxod": 0.016,
+        "length": "?",
+        "url": "https://web.archive.org/web/20201203224140/https://www.rapid-medical.com/tigertriever",
+        "stentDesign": "braided",
+        "stentLengthMm": 23
+    },
+    {
+        "type": "stentrievers",
+        "name": "Tigertriever 13 (Rapid)",
+        "manufacturer": "Rapid Medical",
+        "minid": 0,
+        "maxod": 0.012,
+        "length": "?",
+        "url": "https://web.archive.org/web/20201203224140/https://www.rapid-medical.com/tigertriever",
+        "stentDesign": "braided",
+        "stentLengthMm": 20.5
+    },
+    {
+        "type": "stentrievers",
+        "name": "Tigertriever XL (Rapid)",
+        "manufacturer": "Rapid Medical",
+        "minid": 0,
+        "maxod": 0.02,
+        "length": "?",
+        "url": "https://web.archive.org/web/20201203224140/https://www.rapid-medical.com/tigertriever",
+        "stentDesign": "braided",
+        "stentLengthMm": 53
+    },
+    {
+        "type": "intermediate catheters",
+        "name": "Titan 036 (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0.036,
+        "maxod": 0.056,
+        "length": 160
+    },
+    {
+        "type": "intermediate catheters",
+        "name": "Titan 070 (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0.07,
+        "maxod": 0.083,
+        "length": 128
+    },
+    {
+        "type": "liquid embolic",
+        "name": "Squid",
+        "manufacturer": "Balt",
+        "minid": 0,
+        "maxod": 0.009055118,
+        "length": "?"
+    },
+    {
+        "type": "Coil",
+        "name": "Micrusframe S 18 (Cerenovus)",
+        "manufacturer": "Cerenovus",
+        "minid": 0,
+        "maxod": 0.015,
+        "length": "?"
+    },
+    {
+        "type": "Coil",
+        "name": "Micrusframe S 10 (Cerenovus)",
+        "manufacturer": "Cerenovus",
+        "minid": 0,
+        "maxod": 0.0105,
+        "length": "?"
+    },
+    {
+        "type": "Coil",
+        "name": "Galaxy G3 Complex (Cerenovus)",
+        "manufacturer": "Cerenovus",
+        "minid": 0,
+        "maxod": 0.012,
+        "length": "?"
+    },
+    {
+        "type": "Coil",
+        "name": "Galaxy G3 XSFT Complex (Cerenovus)",
+        "manufacturer": "Cerenovus",
+        "minid": 0,
+        "maxod": 0.012,
+        "length": "?"
+    },
+    {
+        "type": "Coil",
+        "name": "Galaxy G3 Mini Complex",
+        "manufacturer": "Cerenovus",
+        "minid": 0,
+        "maxod": 0.009,
+        "length": "?"
     }
 ]
