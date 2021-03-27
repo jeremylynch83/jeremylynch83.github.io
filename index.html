@@ -9,6 +9,9 @@
 		* Cross/delete on iphone
 		* Unit convertor
 		* Device info on click
+		* MOMA device
+		* Potential incompatibilities: e.g. Flowgate and ACE/Sofia
+		* Frictionless submission of incompatibility
 
 	-->
 
@@ -97,8 +100,8 @@
 
 							<div class="text-right">
 							<b-button-group  >
-								<b-button variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.8em;" @click="addInput('inside', 'Enter device e.g. catheter, balloon, stent, wire ...', 'guide catheters', n.id)">Add a device inside</b-button>
-								<b-button  variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.8em;" @click="addInput('beside', 'Enter device e.g. catheter, balloon, stent, wire ...', 'guide catheters', n.id)">Add a device beside</b-button>
+								<b-button variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.8em;" @click="addInput('inside', 'Enter device e.g. catheter, balloon, stent, wire ...', 'guide catheters', n.id)">New device inside</b-button>
+								<b-button  variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.8em;" @click="addInput('beside', 'Enter device e.g. catheter, balloon, stent, wire ...', 'guide catheters', n.id)">New device beside</b-button>
 								<b-button  variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.8em;" @click="removeInput(n.id)">Remove</b-button>
 							</b-button-group>
 						</div>
@@ -121,7 +124,7 @@
 			<div id="paper"></div>
 
 			<p></p>
-			<p style="font-size: 0.8em;">Note: This tool is in development and there may occasionally be inaccuracies in results. Some of the dimensions given may be estimated in cases where manufacturers do not provide exact sizes. <b-link href="mailto: jeremy.lynch@gmail.com">Devices missing or incorrect? Contact me.</b-link>
+			<p style="font-size: 0.8em;">Note: This tool is in development and there may occasionally be inaccuracies in results. Some of the dimensions given may be estimated in cases where manufacturers do not provide exact measurements. <b-link href="mailto: jeremy.lynch@gmail.com">Devices missing or incorrect? Contact me.</b-link>
 			</p>
 
 			

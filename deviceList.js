@@ -3,7 +3,7 @@ deviceList =
 [
     {
         "type": "guide catheters",
-        "name": "Fubuki 7 Fr Asahi",
+        "name": "Fubuki 7 Fr (Asahi)",
         "manufacturer": "Asahi",
         "minid": 0.081,
         "maxod": 0,
@@ -11,7 +11,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "Fubuki 8 Fr Asahi",
+        "name": "Fubuki 8 Fr (Asahi)",
         "manufacturer": "Asahi",
         "minid": 0.09,
         "maxod": 0,
@@ -19,7 +19,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "Fubuki, 4.2Fr Asahi",
+        "name": "Fubuki, 4.2Fr (Asahi)",
         "manufacturer": "Asahi",
         "minid": 0.043,
         "maxod": 0.06,
@@ -27,7 +27,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "Fubuki, 6Fr Asahi",
+        "name": "Fubuki, 6 Fr (Asahi)",
         "manufacturer": "Asahi",
         "minid": 0.071,
         "maxod": 0.079,
@@ -403,7 +403,23 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "8F Cello (Medtronic)",
+        "name": "Cello 6F+ (Medtronic)",
+        "manufacturer": "Medtronic",
+        "minid": 0.051,
+        "maxod": 0.075,
+        "length": 95
+    },
+    {
+        "type": "guide catheters",
+        "name": "Cello 7F+ (Medtronic)",
+        "manufacturer": "Medtronic",
+        "minid": 0.067,
+        "maxod": 0.095,
+        "length": 95
+    },
+    {
+        "type": "guide catheters",
+        "name": "Cello 8F (Medtronic)",
         "manufacturer": "Medtronic",
         "minid": 0.075,
         "maxod": 0.102,
@@ -411,7 +427,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "9F Cello (Medtronic)",
+        "name": "Cello 9F (Medtronic)",
         "manufacturer": "Medtronic",
         "minid": 0.085,
         "maxod": 0.118,
@@ -473,7 +489,7 @@ deviceList =
         "name": "Echelon 14 (Medtronic)",
         "manufacturer": "Medtronic",
         "minid": 0.017,
-        "maxod": 0.032,
+        "maxod": 0.031496,
         "length": "150",
         "comments": "Onyx compatible"
     },
@@ -544,7 +560,7 @@ deviceList =
     },
     {
         "type": "balloons",
-        "name": "HyperForm 3mm (Medtronic)",
+        "name": "HyperForm 3 mm (Medtronic)",
         "manufacturer": "Medtronic",
         "minid": 0.011,
         "maxod": 0.036,
@@ -552,7 +568,7 @@ deviceList =
     },
     {
         "type": "balloons",
-        "name": "HyperForm 4mm (Medtronic)",
+        "name": "HyperForm 4 mm (Medtronic)",
         "manufacturer": "Medtronic",
         "minid": 0.011,
         "maxod": 0.036,
@@ -560,7 +576,7 @@ deviceList =
     },
     {
         "type": "balloons",
-        "name": "HyperForm 7mm (Medtronic)",
+        "name": "HyperForm 7 mm (Medtronic)",
         "manufacturer": "Medtronic",
         "minid": 0.011,
         "maxod": 0.0394,
@@ -616,7 +632,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "5F Chaperon (Microvention)",
+        "name": "Chaperon 5F (Microvention)",
         "manufacturer": "MicroVention",
         "minid": 0.059,
         "maxod": 0.066,
@@ -624,7 +640,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "6F Chaperon (Microvention)",
+        "name": "Chaperon 6F (Microvention)",
         "manufacturer": "MicroVention",
         "minid": 0.071,
         "maxod": 0.079,
@@ -657,7 +673,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Headway Duo 167 (MicroVention)",
+        "name": "Headway Duo 167 cm (MicroVention)",
         "manufacturer": "Microvention",
         "minid": 0.013,
         "maxod": 0.027559,
@@ -705,7 +721,7 @@ deviceList =
     },
     {
         "type": "Microcatheters",
-        "name": "Headway Duo 156",
+        "name": "Headway Duo 156 cm (Microvention)",
         "manufacturer": "Microvention",
         "minid": 0.0165,
         "maxod": 0.02756,
@@ -1209,11 +1225,28 @@ deviceList =
     },
     {
         "type": "wire",
-        "name": "Transend 010 (Boston Scientific)",
-        "manufacturer": "Boston Scientific",
+        "name": "Transend 010 (Stryker)",
+        "manufacturer": "Stryker",
         "minid": 0,
         "maxod": 0.01,
+        "length": 205,
+        "url": "https://web.archive.org/web/20170124143744/http://www.strykerneurovascular.com/products/access/transend-guidewires"
+    },
+    {
+        "type": "wire",
+        "name": "Transend Ex Platinum (Stryker)",
+        "manufacturer": "Stryker",
+        "minid": 0,
+        "maxod": 0.0155,
         "length": 205
+    },
+    {
+        "type": "wire",
+        "name": "Transend Ex Standard (Stryker)",
+        "manufacturer": "Stryker",
+        "minid": 0,
+        "maxod": 0.0155,
+        "length": 182
     },
     {
         "type": "wire",
@@ -1229,7 +1262,23 @@ deviceList =
         "manufacturer": "Stryker",
         "minid": 0,
         "maxod": 0.014,
-        "length": 200
+        "length": "200 / 300"
+    },
+    {
+        "type": "wire",
+        "name": "Synchro2 (Stryker)",
+        "manufacturer": "Stryker",
+        "minid": 0,
+        "maxod": 0.014,
+        "length": "200 / 300"
+    },
+    {
+        "type": "wire",
+        "name": "Synchro 010 (Stryker)",
+        "manufacturer": "Stryker",
+        "minid": 0,
+        "maxod": 0.01,
+        "length": 205
     },
     {
         "type": "wire",
@@ -1290,6 +1339,30 @@ deviceList =
         "manufacturer": "Stryker",
         "minid": 0,
         "maxod": 0.01,
+        "length": 200
+    },
+    {
+        "type": "wire",
+        "name": "Asahi Chikai 10 (Asahi)",
+        "manufacturer": "Asahi",
+        "minid": 0,
+        "maxod": 0.01,
+        "length": "200 / 300"
+    },
+    {
+        "type": "wire",
+        "name": "Asahi Chikai 14 (Asahi)",
+        "manufacturer": "Asahi",
+        "minid": 0,
+        "maxod": 0.014,
+        "length": "200 / 300"
+    },
+    {
+        "type": "wire",
+        "name": "Asahi Chikai 008 (Asahi)",
+        "manufacturer": "Asahi",
+        "minid": 0,
+        "maxod": 0.008,
         "length": 200
     },
     {
@@ -1368,7 +1441,8 @@ deviceList =
     {
         "type": "stent",
         "name": "Carotid Wallstent 5x30 (Boston Scientific)",
-        "minid": 0.016,
+        "manufacturer": "Boston Scientific",
+        "minid": 0.015,
         "maxod": 0.071,
         "length": 135
     },
@@ -1383,9 +1457,16 @@ deviceList =
     },
     {
         "type": "stent",
+        "name": "LVIS (Microvention)",
+        "manufacturer": "Microvention",
+        "minid": 0,
+        "maxod": 0.02
+    },
+    {
+        "type": "stent",
         "name": "LVIS Jr (Microvention)",
         "manufacturer": "Microvention",
-        "minid": 0.015,
+        "minid": 0,
         "maxod": 0.0155,
         "length": "?",
         "compatibility": "Recommended catheters Headway-17, Headway-21, Scepter C, Scepter XC"
@@ -1610,8 +1691,24 @@ deviceList =
     },
     {
         "type": "liquid embolic",
-        "name": "Squid",
+        "name": "Onyx 18 / 34 (Medtronic)",
         "manufacturer": "Balt",
+        "minid": 0,
+        "maxod": 0.009055118,
+        "length": "?"
+    },
+    {
+        "type": "liquid embolic",
+        "name": "Squid (Balt)",
+        "manufacturer": "Balt",
+        "minid": 0,
+        "maxod": 0.009055118,
+        "length": "?"
+    },
+    {
+        "type": "liquid embolic",
+        "name": "Phil (Microvention)",
+        "manufacturer": "Microvention",
         "minid": 0,
         "maxod": 0.009055118,
         "length": "?"
@@ -1655,5 +1752,96 @@ deviceList =
         "minid": 0,
         "maxod": 0.009,
         "length": "?"
+    },
+    {
+        "type": "Wire",
+        "name": "Avigo 014 microwire",
+        "manufacturer": "Medtronic",
+        "minid": 0,
+        "maxod": 0.014,
+        "length": 205
+    },
+    {
+        "type": "Wire",
+        "name": "Mirage 008 microwire",
+        "manufacturer": "Medtronic",
+        "minid": 0,
+        "maxod": 0.012,
+        "length": 200
+    },
+    {
+        "type": "Wire",
+        "name": "X-pedion microwire",
+        "manufacturer": "Medtronic",
+        "minid": 0,
+        "maxod": 0.012,
+        "length": 200
+    },
+    {
+        "type": "Coil",
+        "name": "Axium Prime/3D/Helical/MicroFx",
+        "manufacturer": "Medtronic",
+        "minid": 0,
+        "maxod": 0.0155,
+        "length": "?"
+    },
+    {
+        "type": "Stent",
+        "name": "Pipeline (Medtronic)",
+        "manufacturer": "Medtronic",
+        "minid": 0,
+        "maxod": 0.026,
+        "length": "?",
+        "url": "https://web.archive.org/web/20201028182152/https://www.accessdata.fda.gov/cdrh_docs/pdf10/P100018C.pdf",
+        "compatibility": "Recommended to use the Phenom 27 microcatheter"
+    },
+    {
+        "type": "Wire",
+        "name": "Silverspeed 010 (Medtronic)",
+        "manufacturer": "Medtronic",
+        "minid": 0,
+        "maxod": 0.01,
+        "length": 200
+    },
+    {
+        "type": "Wire",
+        "name": "Silverspeed 014 (Medtronic)",
+        "manufacturer": "Medtronic",
+        "minid": 0,
+        "maxod": 0.014,
+        "length": "175 / 200"
+    },
+    {
+        "type": "Coil",
+        "name": "Cosmos/MicroPlex/VFC/Hypersoft/MicroPlex/HydroFrame/Hydrofill/Hydrosoft (Microvention)",
+        "manufacturer": "Microvention",
+        "minid": 0,
+        "maxod": 0.0155,
+        "length": "?"
+    },
+    {
+        "type": "Stent",
+        "name": "FRED (Microvention)",
+        "manufacturer": "Microvention",
+        "minid": 0,
+        "maxod": 0.026,
+        "length": "?"
+    },
+    {
+        "type": "Stent",
+        "name": "CASPER RX Carotid Stent (Microvention)",
+        "minid": 0.015,
+        "maxod": 0.0656168,
+        "length": "?",
+        "comments": "?Discontinued"
+    },
+    {
+        "type": "Protection device",
+        "name": "Mo.Ma (Medtronic)",
+        "manufacturer": "Medtronic",
+        "minid": 0.083,
+        "maxod": 0.111549,
+        "length": 95,
+        "url": "https://web.archive.org/web/20210116144904/https://www.medtronic.com/us-en/healthcare-professionals/products/cardiovascular/embolic-protection-devices/mo-ma.html"
     }
 ]
