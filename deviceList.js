@@ -1453,7 +1453,7 @@ deviceList =
         "minid": 0.016,
         "maxod": 0.063,
         "length": 135,
-        "compatibility": "Recommended 300cm guidewire"
+        "incompatibility": "Recommended 300cm guidewire"
     },
     {
         "type": "stent",
@@ -1469,14 +1469,22 @@ deviceList =
         "minid": 0,
         "maxod": 0.0155,
         "length": "?",
-        "compatibility": "Recommended catheters Headway-17, Headway-21, Scepter C, Scepter XC"
+        "incompatibility": "Recommended catheters Headway-17, Headway-21, Scepter C, Scepter XC"
     },
     {
         "type": "balloons",
         "name": "Trek Coronary Dilatation Balloon (Abbott)",
         "manufacturer": "Abbott",
         "minid": 0.015,
-        "maxod": 0.03189,
+        "maxod": 0.031496,
+        "length": 145
+    },
+    {
+        "type": "balloons",
+        "name": "Mini Trek Coronary Dilatation Catheter (Abbott)",
+        "manufacturer": "Abbott",
+        "minid": 0.015,
+        "maxod": 0.030184,
         "length": 145
     },
     {
@@ -1586,7 +1594,7 @@ deviceList =
         "minid": 0,
         "maxod": 0.016,
         "length": 200,
-        "compatibility": "Recommended to use the Trak21 microcatheter"
+        "incompatibility": "Recommended to use the Trak21 microcatheter"
     },
     {
         "type": "stentrievers",
@@ -1594,7 +1602,7 @@ deviceList =
         "minid": 0,
         "maxod": 0.02,
         "length": 200,
-        "compatibility": "Recommended to use the Trak21 microcatheter"
+        "incompatibility": "Recommended to use the Trak21 microcatheter"
     },
     {
         "type": "stentrievers",
@@ -1793,7 +1801,7 @@ deviceList =
         "maxod": 0.026,
         "length": "?",
         "url": "https://web.archive.org/web/20201028182152/https://www.accessdata.fda.gov/cdrh_docs/pdf10/P100018C.pdf",
-        "compatibility": "Recommended to use the Phenom 27 microcatheter"
+        "recommended": "Phenom 27"
     },
     {
         "type": "Wire",
@@ -1840,8 +1848,66 @@ deviceList =
         "name": "Mo.Ma (Medtronic)",
         "manufacturer": "Medtronic",
         "minid": 0.083,
-        "maxod": 0.111549,
+        "maxod": 0.1181102,
         "length": 95,
         "url": "https://web.archive.org/web/20210116144904/https://www.medtronic.com/us-en/healthcare-professionals/products/cardiovascular/embolic-protection-devices/mo-ma.html"
+    },
+    {
+        "type": "Stent",
+        "name": "Atlas (Stryker)",
+        "manufacturer": "Stryker",
+        "minid": 0,
+        "maxod": 0.016,
+        "url": "https://www.strykerneurovascular.com/products/hemorrhagic/neuroform-atlas-stent-system"
+    },
+    {
+        "type": "Wire",
+        "name": "V-18 Control Wire (Boston Scientific)",
+        "manufacturer": "Boston Scientific",
+        "minid": 0,
+        "maxod": 0.018,
+        "length": 300
+    },
+    {
+        "type": "microcatheters",
+        "name": "Amplatz Microsnare microcatheter (Medtronic)",
+        "manufacturer": "Medtronic",
+        "minid": 0.021,
+        "maxod": 0.03937,
+        "length": 150
+    },
+    {
+        "type": "Protection device",
+        "name": "SpiderFx (Medtronic)",
+        "manufacturer": "Medtronic",
+        "minid": 0.015,
+        "maxod": 0.054,
+        "length": 190
+    },
+    {
+        "type": "Stent",
+        "name": "PK Papyrus Covered Coronary Stent (Biotronik)",
+        "manufacturer": "Biotronik",
+        "minid": 0.015,
+        "maxod": 0.055,
+        "length": 140
+    },
+    {
+        "type": "Balloons",
+        "name": "Pantera Lux PTCA Balloon Catheter (Biotronik)",
+        "manufacturer": "Biotronik",
+        "minid": 0.015,
+        "maxod": 0.055,
+        "length": 140
+    },
+    {
+        "type": "stent",
+        "name": "Surpass Evolve (Stryker)",
+        "manufacturer": "Stryker",
+        "minid": 0,
+        "maxod": 0.0265,
+        "length": "?",
+        "url": "https://www.strykerneurovascular.com/uk/products/hemorrhagic/surpass-evolve-flow-diverter",
+        "recommended": "XT-27"
     }
 ]
