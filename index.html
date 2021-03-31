@@ -9,7 +9,6 @@
 		* Cross/delete on iphone
 		* Unit convertor
 		* Device info on click
-		* MOMA device
 		* Potential incompatibilities: e.g. Flowgate and ACE/Sofia
 		* Frictionless submission of incompatibility
 		* Download Vue
@@ -81,6 +80,10 @@
 				</div>
 			</b-modal>
 
+			<b-modal :id="infoModal.id" :title="infoModal.title" ok-only @hide="resetInfoModal">
+				<pre>{{ infoModal.content }}</pre>
+			  </b-modal>
+
 
 		<b-modal id="new_input" title="NeuroTool: Neurointervention Device Sizer" ok-only>
 			<p>Test. </p>
@@ -107,7 +110,7 @@
 			<template v-for="n in deviceInputs"  >
 				<b-form-group  :label-cols="n.hierarchy"  :key="n.id">
 	
-							<vue-bootstrap-typeahead  :key="n.id" :data="devices" :placeholder="n.text" :serializer="item => item.name"
+							<vue-bootstrap-typeahead  :key="n.id" :data="devices" :placeholder="n.text" :serializer="item => item.name_man"
 							@hit="updateDevice(n.id, $event); updateSizer()">
 							</vue-bootstrap-typeahead>
 
@@ -136,6 +139,21 @@
 			<b-button size="sm" variant="danger" @click="" v-b-modal.feedback_modal>
 				Disagree with this?
 			</b-button>
+			<p></p>
+
+			<b-table  hover :items="device_items">	
+			
+				  <template #cell(name)="row">
+					<b-button size="sm" @click="info(row.item, row.index, $event.target)" >
+						
+							{{ row.item.Name }}
+						  
+					</b-button>
+				  </template>
+
+		
+
+			</b-table>
 
 			<div id="more" ></div>
 
@@ -170,6 +188,10 @@
 			return fr;
 		}
 
+		function format_name(name) {
+			return name.toLowerCase().replace(/\s+/g, '');
+		}
+
 		function parse_lengths(str) {
 			var list = str;
 			if (typeof str === 'string' || str instanceof String) {
@@ -184,9 +206,29 @@
 			if (Array.isArray(list)) {
 				if (isNaN(list[0])) list[0] = null;  
 			}
-
 			return list;
-		
+		}
+
+		function setupDevices(data) {
+			data.forEach(device => {
+				device.name = device.name.trim();
+				device.name_man = device.name + " (" + device.manufacturer + ")";
+			}
+			)
+		}
+
+		function check_compatibility(parent, child) {
+			parent_str = format_name(parent.name); 
+			child_str = format_name(child.name);
+
+			if (parent.incompatibility != null) {
+				var parent_incompat = parent.incompatibility.split(/\//);
+			}
+			if (child.incompatibility != null) {
+				var child_incompat = parent.incompatibility.split(/\//);
+			}
+
+			return ""; 
 		}
 
 		function compare_list_lengths(parent_str, child_str, parent_name, child_name) { 
@@ -208,12 +250,12 @@
 						for (var y = 0; y < parent_list.length; y++) {
 							if (child_list[x] > parent_list[y]) {	/* Obtain all combinations that will fit */					
 								solution_list.push(
-									" " + strip_man(parent_name) + " " + parent_list[y] + " cm and " + strip_man(child_name) + " " + child_list[x] + " cm"
+									" " + parent_name + " " + parent_list[y] + " cm and " + child_name + " " + child_list[x] + " cm"
 								);
 							}
 							if (child_list[x] <= parent_list[y]) {	/* Obtain all combinations that will NOT fit */				
 								problem_list.push(
-									" " + strip_man(parent_name) + " " + parent_list[y] + " cm and " + strip_man(child_name) + " " + child_list[x] + " cm"
+									" " + parent_name + " " + parent_list[y] + " cm and " + child_name + " " + child_list[x] + " cm"
 								);
 							}
 
@@ -233,7 +275,7 @@
 							solution_text = "";
 							break;
 						case 0: /* There are no solutions */ 
-							solution_text = strip_man(child_name) + " is too short for the " + strip_man(parent_name) + ". "; 
+							solution_text = child_name + " is too short for the " + parent_name + ". "; 
 							break
 						default: /* There are a few solutions */
 							if (solution_list.length < problem_list.length) {
@@ -256,6 +298,8 @@
 		var tree = (new DOMParser).parseFromString(tXML, "text/xml"); // Stores device info
 		var deviceInputs = []; // Stores info about input boxes
 
+		setupDevices(deviceList);
+
 		/* Specific functions */
 
 		function checkSizes() {
@@ -272,16 +316,26 @@
 					var child_list = [];
 					var length_txt = "";
 					var child_str = "";
+					var compat_str = "";
 
 					children.forEach(child => { /* Add up all devices inside parent catheter */
 							if (child.getAttribute("data") != "") {
 							child_data = JSON.parse(child.getAttribute("data"));
 
-							child_total_od = child_total_od + child_data.maxod;
-							child_list.push(strip_man(child_data.name));
+							if (child_data.recommendedParentId != null) {
+								child_total_od = child_total_od + child_data.recommendedParentId ;
+								console.log(child_data.recommendedParentId);
+							}
+							else {
+								child_total_od = child_total_od + child_data.maxod;
+							}
+							child_list.push(child_data.name);
 
 							// Compare lengths
 							length_txt = length_txt + compare_list_lengths(parent_data.length, child_data.length, parent_data.name, child_data.name);
+
+							// Compare compatibility
+							compat_str = compat_str + check_compatibility(parent_data, child_data);
 
 						}
 						}
@@ -303,50 +357,22 @@
 							}
 							break;
 						}
-						summary = "<p style=\"color:red\">" + summary + child_str + " does not fit in to " + strip_man(parent_data.name) + ". " +  "</p>";
+						summary = "<p style=\"color:red\">" + summary + child_str + " does not fit in to " + parent_data.name + ". " +  "</p>";
 					}
-					else summary = summary + length_txt;
+					else summary = summary + length_txt + compat_str;
 
 					
 				}
 			}
 			)
+
+			summary = summary; 
+
 			return summary;
 		}
 
 
 		var address = "https://evtoday.com/device-guide/us";
-
-		function generateDeviceTable() {
-			var table = "<p></p><table id= \"detailsTable\">"
-			table = table + "<tr><th>Name</th><th>Max outer</th><th>Min inner</th><th>Lengths</th></tr>";
-
-			var x = tree.querySelectorAll("device");
-
-			x.forEach(y => {
-				var y_data = y.getAttribute("data");
-				if (y_data != "") {
-					var y_data_parsed = JSON.parse(y.getAttribute("data"));
-					var maxod = y_data_parsed.maxod;
-					var maxod_in = maxod.toFixed(4) + "\"";
-					var maxod_mm = in_to_mm(maxod).toFixed(2) + " mm";
-					var maxod_fr = in_to_fr(maxod).toFixed(1) + " fr";
-					var minid = y_data_parsed.minid;
-					var minid_in = minid.toFixed(4) + "\"";
-					var minid_mm = in_to_mm(minid).toFixed(2) + " mm";
-					var minid_fr = in_to_fr(minid).toFixed(1) + " fr";
-
-					if (y_data_parsed.name != null) table = table + "<td>" + y_data_parsed.name + "</td>";
-					if (y_data_parsed.maxod != null) table = table + "<td>" + maxod_in + " (" + maxod_mm + ", " + maxod_fr + ")" + "</td>";
-					if (y_data_parsed.minid != null) table = table + "<td>" + minid_in + " (" + minid_mm + ", " + minid_fr + ")" + "</td>";
-					if (y_data_parsed.length != null) table = table + "<td>" + y_data_parsed.length + " cm" + "</td>";
-					table = table + "</tr>";
-				}
-			}
-			)
-			table = table + "</tr></tbody></table>";
-			return table;
-		}
 
 
 		window.app = new Vue({
@@ -359,7 +385,13 @@
 				devices: deviceList,
 				query: '',
 				deviceInputs: deviceInputs,
-				id_count: 0
+				id_count: 0,
+				device_items: [],
+				infoModal: {
+					id: 'info-modal',
+					title: '',
+					content: ''
+					}
 			},
 
 			methods: {
@@ -382,6 +414,63 @@
 			*/
 				},
 
+				info(item, index, button) {
+					this.infoModal.title = `${item.Name}`;
+					this.infoModal.content = JSON.stringify(item, null, 2);
+					this.$root.$emit('bv::show::modal', this.infoModal.id, button);
+				},
+				resetInfoModal() {
+					this.infoModal.title = ''
+					this.infoModal.content = ''
+				},
+
+				drawDeviceTable: function() {
+
+					this.device_items = [];
+					temp = [];
+
+					var x = tree.querySelectorAll("device");
+
+					x.forEach(y => {
+						var y_data = y.getAttribute("data");
+						if (y_data != "") {
+							var y_data_parsed = JSON.parse(y.getAttribute("data"));
+							var maxod = y_data_parsed.maxod;
+							var maxod_in = maxod.toFixed(4) + "\"";
+							var maxod_mm = in_to_mm(maxod).toFixed(2) + " mm";
+							var maxod_fr = in_to_fr(maxod).toFixed(1) + " fr";
+							var minid = y_data_parsed.minid;
+							var minid_in = minid.toFixed(4) + "\"";
+							var minid_mm = in_to_mm(minid).toFixed(2) + " mm";
+							var minid_fr = in_to_fr(minid).toFixed(1) + " fr";
+
+							var table_name = "";
+							var table_od = "";
+							var table_id = "";
+							var table_lengths = "";
+
+							if (y_data_parsed.name != null) table_name = y_data_parsed.name_man;
+							if (y_data_parsed.maxod != null) table_od = maxod_in + " (" + maxod_mm + ", " + maxod_fr + ")";
+							if (y_data_parsed.minid != null) table_id = minid_in + " (" + minid_mm + ", " + minid_fr + ")";
+							if (y_data_parsed.length != null) table_lengths = y_data_parsed.length + " cm";
+
+							temp.push({ Name: table_name, Max_Outer: table_od, Min_Inner: table_id, Lengths: table_lengths });
+						}
+					}
+					)
+
+					var unique = [];
+
+					for(let i of temp) {
+						if(unique.indexOf(i) === -1) {
+							unique.push(i);
+						}
+					}
+
+					this.device_items = unique; 
+
+				},
+
 				updateSizer: function () {
 					var result = checkSizes();
 					if (result == "") {
@@ -392,7 +481,7 @@
 						//document.getElementById("result").style.color = "rgb(175,0,42)"
 					}
 					document.getElementById("result").innerHTML = result;
-					document.getElementById("more").innerHTML = generateDeviceTable();
+					this.drawDeviceTable();
 
 					this.drawDiagram();
 
@@ -486,11 +575,6 @@
 				var newInput1 = this.addInput("inside", "Enter outer device e.g. guide sheath ", "guide catheters", null);
 			}
 		})
-
-
-		var parent = "100 ";
-		var child = "115 "; 
-		//console.log(compare_list_lengths(parent, child, "neuron max", "sl-10")); 
 
 
 

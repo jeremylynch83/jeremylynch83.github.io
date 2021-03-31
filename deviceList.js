@@ -1,10 +1,9 @@
 deviceList = 
 
-
 [
     {
         "type": "guide catheters",
-        "name": "Fubuki 7 Fr (Asahi)",
+        "name": "Fubuki 7 Fr ",
         "manufacturer": "Asahi",
         "minid": 0.081,
         "maxod": 0,
@@ -12,7 +11,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "Fubuki 8 Fr (Asahi)",
+        "name": "Fubuki 8 Fr ",
         "manufacturer": "Asahi",
         "minid": 0.09,
         "maxod": 0,
@@ -20,7 +19,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "Fubuki, 4.2Fr (Asahi)",
+        "name": "Fubuki, 4.2Fr ",
         "manufacturer": "Asahi",
         "minid": 0.043,
         "maxod": 0.06,
@@ -28,7 +27,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "Fubuki, 6 Fr (Asahi)",
+        "name": "Fubuki, 6 Fr ",
         "manufacturer": "Asahi",
         "minid": 0.071,
         "maxod": 0.079,
@@ -36,7 +35,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "Fargo Max (Balt)",
+        "name": "Fargo Max ",
         "manufacturer": "Balt",
         "minid": 0.07,
         "maxod": 0.07874,
@@ -44,7 +43,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "Fargo (Balt)",
+        "name": "Fargo ",
         "manufacturer": "Balt",
         "minid": 0.058,
         "maxod": 0.07874,
@@ -52,7 +51,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "Fargo Mini (Balt)",
+        "name": "Fargo Mini ",
         "manufacturer": "Balt",
         "minid": 0.04,
         "maxod": 0.05512,
@@ -60,7 +59,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "Ballast (Balt)",
+        "name": "Ballast ",
         "manufacturer": "Balt",
         "minid": 0.088,
         "maxod": 0.106,
@@ -69,7 +68,7 @@ deviceList =
     },
     {
         "type": "Microcatheters",
-        "name": "Magic 1.2 (Balt)",
+        "name": "Magic 1.2 ",
         "manufacturer": "Balt",
         "minid": 0.009,
         "maxod": 0.03543,
@@ -77,7 +76,7 @@ deviceList =
     },
     {
         "type": "Microcatheters",
-        "name": "Magic 1.5 (Balt)",
+        "name": "Magic 1.5 ",
         "manufacturer": "Balt",
         "minid": 0.01,
         "maxod": 0.03543,
@@ -85,7 +84,7 @@ deviceList =
     },
     {
         "type": "Microcatheters",
-        "name": "Baltacci 1.2 (Balt)",
+        "name": "Baltacci 1.2 ",
         "manufacturer": "Balt",
         "minid": 0.008,
         "maxod": 0.03543,
@@ -93,7 +92,7 @@ deviceList =
     },
     {
         "type": "Microcatheters",
-        "name": "Baltacci 1.5 (Balt)",
+        "name": "Baltacci 1.5 ",
         "manufacturer": "Balt",
         "minid": 0.01,
         "maxod": 0.03543,
@@ -101,7 +100,7 @@ deviceList =
     },
     {
         "type": "Microcatheters",
-        "name": "Baltacci 1.8 (Balt)",
+        "name": "Baltacci 1.8 ",
         "manufacturer": "Balt",
         "minid": 0.01,
         "maxod": 0.03543,
@@ -109,7 +108,7 @@ deviceList =
     },
     {
         "type": "Balloons",
-        "name": "Copernic 8 RC Venous (Balt)",
+        "name": "Copernic 8 RC Venous ",
         "manufacturer": "Balt",
         "minid": 0.015,
         "maxod": 0.05709,
@@ -117,7 +116,7 @@ deviceList =
     },
     {
         "type": "Balloons",
-        "name": "Copernic 10 RC Venous (Balt)",
+        "name": "Copernic 10 RC Venous ",
         "manufacturer": "Balt",
         "minid": 0.015,
         "maxod": 0.06562,
@@ -125,7 +124,7 @@ deviceList =
     },
     {
         "type": "Balloons",
-        "name": "Eclipse 6 (Balt)",
+        "name": "Eclipse 6 ",
         "manufacturer": "Balt",
         "minid": 0.017,
         "maxod": 0.02625,
@@ -133,7 +132,7 @@ deviceList =
     },
     {
         "type": "Microcatheters",
-        "name": "Vasco+ 10 / 10MH  (Balt)",
+        "name": "Vasco+ 10 / 10MH  ",
         "manufacturer": "Balt",
         "minid": 0.017,
         "maxod": 0.028871,
@@ -142,7 +141,7 @@ deviceList =
     },
     {
         "type": "Microcatheters",
-        "name": "Vasco+ 18  (Balt)",
+        "name": "Vasco+ 18  ",
         "manufacturer": "Balt",
         "minid": 0.021,
         "maxod": 0.035433,
@@ -151,7 +150,7 @@ deviceList =
     },
     {
         "type": "Microcatheters",
-        "name": "Vasco+ 21  (Balt)",
+        "name": "Vasco+ 21  ",
         "manufacturer": "Balt",
         "minid": 0.024,
         "maxod": 0.035433,
@@ -160,7 +159,7 @@ deviceList =
     },
     {
         "type": "Microcatheters",
-        "name": "Vasco+ 25  (Balt)",
+        "name": "Vasco+ 25  ",
         "manufacturer": "Balt",
         "minid": 0.029,
         "maxod": 0.043307,
@@ -169,7 +168,7 @@ deviceList =
     },
     {
         "type": "Microcatheters",
-        "name": "Vasco+ 28  (Balt)",
+        "name": "Vasco+ 28  ",
         "manufacturer": "Balt",
         "minid": 0.032,
         "maxod": 0.044619,
@@ -178,7 +177,7 @@ deviceList =
     },
     {
         "type": "Microcatheters",
-        "name": "Vasco+ 35  (Balt)",
+        "name": "Vasco+ 35  ",
         "manufacturer": "Balt",
         "minid": 0.04,
         "maxod": 0.052493,
@@ -187,7 +186,7 @@ deviceList =
     },
     {
         "type": "Microcatheters",
-        "name": "Vasco+ 35ASPI  (Balt)",
+        "name": "Vasco+ 35ASPI  ",
         "manufacturer": "Balt",
         "minid": 0.04,
         "maxod": 0.066929,
@@ -196,7 +195,7 @@ deviceList =
     },
     {
         "type": "Microcatheters",
-        "name": "Gama 17  (Balt)",
+        "name": "Gama 17  ",
         "manufacturer": "Balt",
         "minid": 0.017,
         "maxod": 0.032808,
@@ -205,7 +204,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "Cerebrase DA (Cerenovus)",
+        "name": "Cerebrase DA ",
         "manufacturer": "Cerenovus",
         "minid": 0.09,
         "maxod": 0.105,
@@ -213,7 +212,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "Phenom Plus (Medtronic)",
+        "name": "Phenom Plus ",
         "manufacturer": "Cerenovus",
         "minid": 0.0445,
         "maxod": 0.061,
@@ -221,7 +220,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "Phenom 017 (Medtronic)",
+        "name": "Phenom 017 ",
         "manufacturer": "Cerenovus",
         "minid": 0.017,
         "maxod": 0.029,
@@ -229,7 +228,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Phenom 021 (Medtronic)",
+        "name": "Phenom 021 ",
         "manufacturer": "Cerenovus",
         "minid": 0.021,
         "maxod": 0.034,
@@ -237,7 +236,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Phenom 027 (Medtronic)",
+        "name": "Phenom 027 ",
         "manufacturer": "Cerenovus",
         "minid": 0.027,
         "maxod": 0.041,
@@ -245,7 +244,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Prowler 10 (Cerenovus)",
+        "name": "Prowler 10 ",
         "manufacturer": "Cerenovus",
         "minid": 0.015,
         "maxod": 0.03,
@@ -253,7 +252,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Prowler 14 (Cerenovus)",
+        "name": "Prowler 14 ",
         "manufacturer": "Cerenovus",
         "minid": 0.0165,
         "maxod": 0.03,
@@ -261,7 +260,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Prowler 27 (Cerenovus)",
+        "name": "Prowler 27 ",
         "manufacturer": "Cerenovus",
         "minid": 0.028,
         "maxod": 0.04,
@@ -269,7 +268,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Prowler Select (Cerenovus)",
+        "name": "Prowler Select ",
         "manufacturer": "Cerenovus",
         "minid": 0.0165,
         "maxod": 0.03,
@@ -277,7 +276,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Prowler Plus (Cerenovus)",
+        "name": "Prowler Plus ",
         "manufacturer": "Cerenovus",
         "minid": 0.021,
         "maxod": 0.037,
@@ -285,7 +284,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Prowler Select Plus (Cerenovus)",
+        "name": "Prowler Select Plus ",
         "manufacturer": "Cerenovus",
         "minid": 0.021,
         "maxod": 0.037,
@@ -293,7 +292,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "RapidTransit (Cerenovus)/Micrus",
+        "name": "RapidTransit /Micrus",
         "manufacturer": "Cerenovus",
         "minid": 0.021,
         "maxod": 0.037,
@@ -301,7 +300,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Transit (Cerenovus)/Micrus",
+        "name": "Transit /Micrus",
         "manufacturer": "Cerenovus",
         "minid": 0.021,
         "maxod": 0.037,
@@ -309,7 +308,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "5F Envoy (Cerenovus)",
+        "name": "5F Envoy ",
         "manufacturer": "Cerenovus",
         "minid": 0.056,
         "maxod": 0.065,
@@ -317,7 +316,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "6F Envoy (Cerenovus)",
+        "name": "6F Envoy ",
         "manufacturer": "Cerenovus",
         "minid": 0.07,
         "maxod": 0.079,
@@ -325,7 +324,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "6F Envoy DA / XB (Cerenovus)",
+        "name": "6F Envoy DA / XB ",
         "manufacturer": "Cerenovus",
         "minid": 0.071,
         "maxod": 0.079,
@@ -333,7 +332,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "7F Envoy (Cerenovus)",
+        "name": "7F Envoy ",
         "manufacturer": "Cerenovus",
         "minid": 0.078,
         "maxod": 0.09186,
@@ -341,7 +340,7 @@ deviceList =
     },
     {
         "type": "balloons",
-        "name": "Ascent 4 mm (Cerenovus)",
+        "name": "Ascent 4 mm ",
         "manufacturer": "Cerenovus",
         "minid": 0.017,
         "maxod": 0.038,
@@ -349,7 +348,7 @@ deviceList =
     },
     {
         "type": "balloons",
-        "name": "Ascent 6 mm (Cerenovus)",
+        "name": "Ascent 6 mm ",
         "manufacturer": "Cerenovus",
         "minid": 0.017,
         "maxod": 0.038,
@@ -357,7 +356,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Courier, 170 (Cerenovus)",
+        "name": "Courier, 170 ",
         "manufacturer": "Cerenovus",
         "minid": 0.017,
         "maxod": 0.03,
@@ -365,7 +364,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Courier, 190 (Cerenovus)",
+        "name": "Courier, 190 ",
         "manufacturer": "Cerenovus",
         "minid": 0.019,
         "maxod": 0.032,
@@ -373,7 +372,7 @@ deviceList =
     },
     {
         "type": "intermediate catheters",
-        "name": "Large Bore Catheter (Cerenovus)",
+        "name": "Large Bore Catheter ",
         "manufacturer": "Cerenovus",
         "minid": 0.071,
         "maxod": 0.0825,
@@ -381,14 +380,14 @@ deviceList =
     },
     {
         "type": "stentrievers",
-        "name": "Embotrap III (Cerenovus)",
+        "name": "Embotrap III ",
         "manufacturer": "Cerenovus",
         "minid": 0,
         "maxod": 0.02
     },
     {
         "type": "guide catheters",
-        "name": "7F Shuttle (Cook Medical)",
+        "name": "7F Shuttle ",
         "manufacturer": "Cook Medical",
         "minid": 0.074,
         "maxod": 0.09186,
@@ -396,7 +395,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "8F Shuttle (Cook Medical)",
+        "name": "8F Shuttle ",
         "manufacturer": "Cook Medical",
         "minid": 0.087,
         "maxod": 0.10499,
@@ -404,7 +403,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "Cello 6F+ (Medtronic)",
+        "name": "Cello 6F+ ",
         "manufacturer": "Medtronic",
         "minid": 0.051,
         "maxod": 0.075,
@@ -412,7 +411,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "Cello 7F+ (Medtronic)",
+        "name": "Cello 7F+ ",
         "manufacturer": "Medtronic",
         "minid": 0.067,
         "maxod": 0.095,
@@ -420,7 +419,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "Cello 8F (Medtronic)",
+        "name": "Cello 8F ",
         "manufacturer": "Medtronic",
         "minid": 0.075,
         "maxod": 0.102,
@@ -428,7 +427,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "Cello 9F (Medtronic)",
+        "name": "Cello 9F ",
         "manufacturer": "Medtronic",
         "minid": 0.085,
         "maxod": 0.118,
@@ -436,7 +435,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "Navien 058 (Medtronic)",
+        "name": "Navien 058 ",
         "manufacturer": "Medtronic",
         "minid": 0.058,
         "maxod": 0.07,
@@ -444,7 +443,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "Navien 072 (Medtronic)",
+        "name": "Navien 072 ",
         "manufacturer": "Medtronic",
         "minid": 0.072,
         "maxod": 0.084,
@@ -452,7 +451,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "ARC 160 (Medtronic)",
+        "name": "ARC 160 ",
         "manufacturer": "Medtronic",
         "minid": 0.035,
         "maxod": 0.06,
@@ -460,7 +459,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "ARC 132 (Medtronic)",
+        "name": "ARC 132 ",
         "manufacturer": "Medtronic",
         "minid": 0.061,
         "maxod": 0.08,
@@ -468,7 +467,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Apollo, 1.5 (Medtronic)",
+        "name": "Apollo, 1.5 ",
         "manufacturer": "Medtronic",
         "minid": 0.013,
         "maxod": 0.036,
@@ -478,7 +477,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Echelon 10 (Medtronic)",
+        "name": "Echelon 10 ",
         "manufacturer": "Medtronic",
         "minid": 0.017,
         "maxod": 0.028,
@@ -487,7 +486,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Echelon 14 (Medtronic)",
+        "name": "Echelon 14 ",
         "manufacturer": "Medtronic",
         "minid": 0.017,
         "maxod": 0.031496,
@@ -496,7 +495,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Marathon 1.5 (Medtronic)",
+        "name": "Marathon 1.5 ",
         "manufacturer": "Medtronic",
         "minid": 0.013,
         "maxod": 0.036,
@@ -505,7 +504,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Marksman (Medtronic)",
+        "name": "Marksman ",
         "manufacturer": "Medtronic",
         "minid": 0.027,
         "maxod": 0.042,
@@ -553,7 +552,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Ultra Flow (Medtronic)",
+        "name": "Ultra Flow ",
         "manufacturer": "Medtronic",
         "minid": 0.013,
         "maxod": 0.039,
@@ -561,7 +560,7 @@ deviceList =
     },
     {
         "type": "balloons",
-        "name": "HyperForm 3 mm (Medtronic)",
+        "name": "HyperForm 3 mm ",
         "manufacturer": "Medtronic",
         "minid": 0.011,
         "maxod": 0.036,
@@ -569,7 +568,7 @@ deviceList =
     },
     {
         "type": "balloons",
-        "name": "HyperForm 4 mm (Medtronic)",
+        "name": "HyperForm 4 mm ",
         "manufacturer": "Medtronic",
         "minid": 0.011,
         "maxod": 0.036,
@@ -577,7 +576,7 @@ deviceList =
     },
     {
         "type": "balloons",
-        "name": "HyperForm 7 mm (Medtronic)",
+        "name": "HyperForm 7 mm ",
         "manufacturer": "Medtronic",
         "minid": 0.011,
         "maxod": 0.0394,
@@ -585,7 +584,7 @@ deviceList =
     },
     {
         "type": "balloons",
-        "name": "HyperGlide 3mm (Medtronic)",
+        "name": "HyperGlide 3mm ",
         "manufacturer": "Medtronic",
         "minid": 0.011,
         "maxod": 0.0367,
@@ -593,7 +592,7 @@ deviceList =
     },
     {
         "type": "balloons",
-        "name": "HyperGlide 4mm (Medtronic)",
+        "name": "HyperGlide 4mm ",
         "manufacturer": "Medtronic",
         "minid": 0.011,
         "maxod": 0.0367,
@@ -601,7 +600,7 @@ deviceList =
     },
     {
         "type": "balloons",
-        "name": "HyperGlide 5mm (Medtronic)",
+        "name": "HyperGlide 5mm ",
         "manufacturer": "Medtronic",
         "minid": 0.011,
         "maxod": 0.0367,
@@ -609,7 +608,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "REACT 68 (Medtronic)",
+        "name": "REACT 68 ",
         "manufacturer": "Medtronic",
         "minid": 0.068,
         "maxod": 0.083,
@@ -617,7 +616,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "REACT 71 (Medtronic)",
+        "name": "REACT 71 ",
         "manufacturer": "Medtronic",
         "minid": 0.071,
         "maxod": 0.0855,
@@ -625,15 +624,15 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Micro Ferret, Cook",
-        "manufacturer": "Micro Ferret",
+        "name": "Micro Ferret",
+        "manufacturer": "Cook Medical",
         "minid": 0.018,
         "maxod": 0.039,
         "length": "150"
     },
     {
         "type": "guide catheters",
-        "name": "Chaperon 5F (Microvention)",
+        "name": "Chaperon 5F ",
         "manufacturer": "MicroVention",
         "minid": 0.059,
         "maxod": 0.066,
@@ -641,7 +640,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "Chaperon 6F (Microvention)",
+        "name": "Chaperon 6F ",
         "manufacturer": "MicroVention",
         "minid": 0.071,
         "maxod": 0.079,
@@ -649,32 +648,34 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "Sofia 5F (Microvention)",
+        "name": "Sofia 5F ",
         "manufacturer": "MicroVention",
         "minid": 0.055,
         "maxod": 0.068,
+        "recommendedParentId": 0.07,
         "length": "115 / 125"
     },
     {
         "type": "guide catheters",
-        "name": "Sofia 6F (Microvention)",
+        "name": "Sofia 6F ",
         "manufacturer": "MicroVention",
         "minid": 0.07,
         "maxod": 0.0815,
+        "recommendedParentId": 0.085,
         "length": 115
     },
     {
         "type": "guide catheters",
-        "name": "Sofia Plus 6F (Microvention)",
+        "name": "Sofia Plus 6F ",
         "manufacturer": "MicroVention",
         "minid": 0.07,
         "maxod": 0.0825,
-        "length": "125 / 131",
-        "comments": "Requires guide of 0.088 or larger"
+        "recommendedParentId": 0.088,
+        "length": "125 / 131"
     },
     {
         "type": "microcatheters",
-        "name": "Headway Duo 167 cm (MicroVention)",
+        "name": "Headway Duo 167 cm ",
         "manufacturer": "Microvention",
         "minid": 0.013,
         "maxod": 0.027559,
@@ -682,7 +683,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Headway-17 (MicroVention)",
+        "name": "Headway-17 ",
         "manufacturer": "Microvention",
         "minid": 0.017,
         "maxod": 0.032,
@@ -690,7 +691,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Headway-21 (MicroVention)",
+        "name": "Headway-21 ",
         "manufacturer": "Microvention",
         "minid": 0.021,
         "maxod": 0.033,
@@ -698,7 +699,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Headway-27 (MicroVention)",
+        "name": "Headway-27 ",
         "manufacturer": "Microvention",
         "minid": 0.027,
         "maxod": 0.041,
@@ -706,7 +707,7 @@ deviceList =
     },
     {
         "type": "balloons",
-        "name": "Scepter C 4 mm (MicroVention)",
+        "name": "Scepter C 4 mm ",
         "manufacturer": "MicroVention",
         "minid": 0.0165,
         "maxod": 0.037,
@@ -714,7 +715,7 @@ deviceList =
     },
     {
         "type": "balloons",
-        "name": "Scepter XC 4 mm (MicroVention)",
+        "name": "Scepter XC 4 mm ",
         "manufacturer": "MicroVention",
         "minid": 0.0165,
         "maxod": 0.037,
@@ -722,7 +723,7 @@ deviceList =
     },
     {
         "type": "Microcatheters",
-        "name": "Headway Duo 156 cm (Microvention)",
+        "name": "Headway Duo 156 cm ",
         "manufacturer": "Microvention",
         "minid": 0.0165,
         "maxod": 0.02756,
@@ -730,7 +731,7 @@ deviceList =
     },
     {
         "type": "Microcatheters",
-        "name": "Via 21 (Microvention)",
+        "name": "Via 21 ",
         "manufacturer": "Microvention",
         "minid": 0.021,
         "maxod": 0.03281,
@@ -738,7 +739,7 @@ deviceList =
     },
     {
         "type": "Microcatheters",
-        "name": "Via 27 (Microvention)",
+        "name": "Via 27 ",
         "manufacturer": "Microvention",
         "minid": 0.027,
         "maxod": 0.03937,
@@ -746,7 +747,7 @@ deviceList =
     },
     {
         "type": "Microcatheters",
-        "name": "Via 33 (Microvention)",
+        "name": "Via 33 ",
         "manufacturer": "Microvention",
         "minid": 0.033,
         "maxod": 0.04987,
@@ -754,7 +755,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "Neuron Max 088 (Penumbra)",
+        "name": "Neuron Max 088 ",
         "manufacturer": "Penumbra",
         "minid": 0.088,
         "maxod": 0.112,
@@ -762,7 +763,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "3MAX DDC (Penumbra)",
+        "name": "3MAX DDC ",
         "manufacturer": "Penumbra",
         "minid": 0.035,
         "maxod": 0.062,
@@ -770,7 +771,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "4MAX DDC (Penumbra)",
+        "name": "4MAX DDC ",
         "manufacturer": "Penumbra",
         "minid": 0.041,
         "maxod": 0.08,
@@ -778,7 +779,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "5MAX DDC (Penumbra)",
+        "name": "5MAX DDC ",
         "manufacturer": "Penumbra",
         "minid": 0.054,
         "maxod": 0.08,
@@ -786,7 +787,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "Neuron 053 (Penumbra)",
+        "name": "Neuron 053 ",
         "manufacturer": "Penumbra",
         "minid": 0.054,
         "maxod": 0.08,
@@ -794,7 +795,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "Neuron 070 (Penumbra)",
+        "name": "Neuron 070 ",
         "manufacturer": "Penumbra",
         "minid": 0.07,
         "maxod": 0.08,
@@ -802,7 +803,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "Neuron 5F Select (Penumbra)",
+        "name": "Neuron 5F Select ",
         "manufacturer": "Penumbra",
         "minid": 0.04,
         "maxod": 0.066,
@@ -810,7 +811,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "Benchmark 071 (Penumbra)",
+        "name": "Benchmark 071 ",
         "manufacturer": "Penumbra",
         "minid": 0.071,
         "maxod": 0.079,
@@ -818,7 +819,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "ACE 64 (Penumbra)",
+        "name": "ACE 64 ",
         "manufacturer": "Penumbra",
         "minid": 0.064,
         "maxod": 0.08,
@@ -826,7 +827,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "PX Slim (Penumbra)",
+        "name": "PX Slim ",
         "manufacturer": "Penumbra",
         "minid": 0.025,
         "maxod": 0.034,
@@ -834,7 +835,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Velocity (Penumbra)",
+        "name": "Velocity ",
         "manufacturer": "Penumbra",
         "minid": 0.025,
         "maxod": 0.0387,
@@ -842,7 +843,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "Jet 7 Reperfusion Catheter (Penumbra)",
+        "name": "Jet 7 Reperfusion Catheter ",
         "manufacturer": "Penumbra",
         "minid": 0.072,
         "maxod": 0.085,
@@ -850,7 +851,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "Jet D Reperfusion Catheter (Penumbra)",
+        "name": "Jet D Reperfusion Catheter ",
         "manufacturer": "Penumbra",
         "minid": 0.054,
         "maxod": 0.08,
@@ -858,7 +859,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "ACE 68 (Penumbra)",
+        "name": "ACE 68 ",
         "manufacturer": "Penumbra",
         "minid": 0.068,
         "maxod": 0.08,
@@ -866,7 +867,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "ACE 60 (Penumbra)",
+        "name": "ACE 60 ",
         "manufacturer": "Penumbra",
         "minid": 0.06,
         "maxod": 0.08,
@@ -874,7 +875,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "8F Merci (Stryker)",
+        "name": "8F Merci ",
         "manufacturer": "Stryker",
         "minid": 0.078,
         "maxod": 0.105,
@@ -882,7 +883,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "9F Merci (Stryker)",
+        "name": "9F Merci ",
         "manufacturer": "Stryker",
         "minid": 0.085,
         "maxod": 0.118,
@@ -890,7 +891,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "DAC 038 (Stryker)",
+        "name": "DAC 038 ",
         "manufacturer": "Stryker",
         "minid": 0.038,
         "maxod": 0.051,
@@ -898,7 +899,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "DAC 044 (Stryker)",
+        "name": "DAC 044 ",
         "manufacturer": "Stryker",
         "minid": 0.044,
         "maxod": 0.056,
@@ -906,7 +907,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "DAC 057 (Stryker)",
+        "name": "DAC 057 ",
         "manufacturer": "Stryker",
         "minid": 0.057,
         "maxod": 0.068,
@@ -914,7 +915,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "DAC 070 (Stryker)",
+        "name": "DAC 070 ",
         "manufacturer": "Stryker",
         "minid": 0.07,
         "maxod": 0.082,
@@ -922,7 +923,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Excelsior 1018 (Stryker)",
+        "name": "Excelsior 1018 ",
         "manufacturer": "Stryker",
         "minid": 0.019,
         "maxod": 0.035,
@@ -930,7 +931,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Trak 21 (Stryker)",
+        "name": "Trak 21 ",
         "manufacturer": "Stryker",
         "minid": 0.021,
         "maxod": 0.035433,
@@ -938,7 +939,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "AXS Offset (Stryker)",
+        "name": "AXS Offset ",
         "manufacturer": "Stryker",
         "minid": 0.021,
         "maxod": 0.05,
@@ -946,7 +947,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Excelsior SL-10 (Stryker)",
+        "name": "Excelsior SL-10 ",
         "manufacturer": "Stryker",
         "minid": 0.0165,
         "maxod": 0.032,
@@ -954,7 +955,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "FasTracker-18  (Stryker)",
+        "name": "FasTracker-18  ",
         "manufacturer": "Stryker",
         "minid": 0.022,
         "maxod": 0.039,
@@ -962,7 +963,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Renegade, 18  (Stryker)",
+        "name": "Renegade, 18  ",
         "manufacturer": "Stryker",
         "minid": 0.021,
         "maxod": 0.039,
@@ -970,7 +971,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Renegade, Hi Flo  (Stryker)",
+        "name": "Renegade, Hi Flo  ",
         "manufacturer": "Stryker",
         "minid": 0.027,
         "maxod": 0.039,
@@ -978,7 +979,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Spinnaker Elite, 1.5F  (Stryker)",
+        "name": "Spinnaker Elite, 1.5F  ",
         "manufacturer": "Stryker",
         "minid": 0.011,
         "maxod": 0.039,
@@ -986,7 +987,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Spinnaker Elite, 1.8F  (Stryker)",
+        "name": "Spinnaker Elite, 1.8F  ",
         "manufacturer": "Stryker",
         "minid": 0.013,
         "maxod": 0.039,
@@ -994,7 +995,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "XT-27 (Stryker)",
+        "name": "XT-27 ",
         "manufacturer": "Stryker",
         "minid": 0.027,
         "maxod": 0.038,
@@ -1002,7 +1003,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "XT-17 (Stryker)",
+        "name": "XT-17 ",
         "manufacturer": "Stryker",
         "minid": 0.017,
         "maxod": 0.03,
@@ -1010,7 +1011,7 @@ deviceList =
     },
     {
         "type": "balloons",
-        "name": "Transform C & SC: 3, 4, 5, 6 mm (Stryker)",
+        "name": "Transform C & SC: 3, 4, 5, 6 mm ",
         "manufacturer": "Stryker",
         "minid": 0.015,
         "maxod": 0.037,
@@ -1018,7 +1019,7 @@ deviceList =
     },
     {
         "type": "Intermediate catheters",
-        "name": "7F Catalyst (Stryker)",
+        "name": "Catalyst 7 Fr",
         "manufacturer": "Stryker",
         "minid": 0.068,
         "maxod": 0.0825,
@@ -1026,7 +1027,7 @@ deviceList =
     },
     {
         "type": "Intermediate catheters",
-        "name": "6F Catalyst (Stryker)",
+        "name": "Catalyst 6 Fr",
         "manufacturer": "Stryker",
         "minid": 0.06,
         "maxod": 0.079,
@@ -1034,7 +1035,7 @@ deviceList =
     },
     {
         "type": "Intermediate catheters",
-        "name": "5F Catalyst (Stryker)",
+        "name": "Catalyst 5 Fr",
         "manufacturer": "Stryker",
         "minid": 0.058,
         "maxod": 0.073,
@@ -1042,15 +1043,16 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "Flowgate 2 (Stryker)",
+        "name": "Flowgate 2 ",
         "manufacturer": "Stryker",
         "minid": 0.084,
         "maxod": 0.10499,
-        "length": "85 / 95"
+        "length": "85 / 95",
+        "incompatibility": "ACE68 / Sofia"
     },
     {
         "type": "guide catheters",
-        "name": "AXS Infinity LS (Stryker)",
+        "name": "AXS Infinity LS ",
         "manufacturer": "Stryker",
         "minid": 0.088,
         "maxod": 0.105,
@@ -1058,7 +1060,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "AXS Infinity LS Plus (Stryker)",
+        "name": "AXS Infinity LS Plus ",
         "manufacturer": "Stryker",
         "minid": 0.091,
         "maxod": 0.105,
@@ -1066,7 +1068,7 @@ deviceList =
     },
     {
         "type": "Intermediate catheters",
-        "name": "AXS Vecta 71 (Stryker)",
+        "name": "AXS Vecta 71 ",
         "manufacturer": "Stryker",
         "minid": 0.071,
         "maxod": 0.085,
@@ -1074,7 +1076,7 @@ deviceList =
     },
     {
         "type": "Intermediate catheters",
-        "name": "AXS Vecta 74 (Stryker)",
+        "name": "AXS Vecta 74 ",
         "manufacturer": "Stryker",
         "minid": 0.074,
         "maxod": 0.087,
@@ -1082,7 +1084,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Trevo Pro 14 microcatheter (Stryker)",
+        "name": "Trevo Pro 14 microcatheter ",
         "manufacturer": "Stryker",
         "minid": 0.017,
         "maxod": 0.032,
@@ -1090,7 +1092,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Trevo Pro 18 microcatheter (Stryker)",
+        "name": "Trevo Pro 18 microcatheter ",
         "manufacturer": "Stryker",
         "minid": 0.021,
         "maxod": 0.035,
@@ -1098,7 +1100,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "trevo",
+        "name": "Trevo",
         "manufacturer": "Teleflex Medical",
         "minid": 0.074,
         "maxod": 0,
@@ -1106,7 +1108,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "6F Arrow-Flex (Teleflex Medical)",
+        "name": "6F Arrow-Flex ",
         "manufacturer": "Teleflex Medical",
         "minid": 0.087,
         "maxod": 0,
@@ -1114,7 +1116,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "7F Arrow-Flex (Teleflex Medical)",
+        "name": "7F Arrow-Flex ",
         "manufacturer": "Teleflex Medical",
         "minid": 0.1,
         "maxod": 0,
@@ -1122,7 +1124,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "8F Arrow-Flex (Teleflex Medical)",
+        "name": "8F Arrow-Flex ",
         "manufacturer": "Teleflex Medical",
         "minid": 0.113,
         "maxod": 0,
@@ -1130,7 +1132,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "9F Arrow-Flex (Teleflex Medical)",
+        "name": "9F Arrow-Flex ",
         "manufacturer": "Teleflex Medical",
         "minid": 0.126,
         "maxod": 0,
@@ -1138,7 +1140,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "5F Pinnacle Destination (Terumo)",
+        "name": "5F Pinnacle Destination ",
         "manufacturer": "Terumo",
         "minid": 0.076,
         "maxod": 0,
@@ -1146,7 +1148,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "6F Pinnacle Destination (Terumo)",
+        "name": "6F Pinnacle Destination ",
         "manufacturer": "Terumo",
         "minid": 0.087,
         "maxod": 0,
@@ -1162,7 +1164,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "7F Pinnacle Destination (Terumo)",
+        "name": "7F Pinnacle Destination ",
         "manufacturer": "Terumo",
         "minid": 0.1,
         "maxod": 0,
@@ -1178,7 +1180,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "8F Pinnacle Destination (Terumo)",
+        "name": "8F Pinnacle Destination ",
         "manufacturer": "Terumo",
         "minid": 0.114,
         "maxod": 0,
@@ -1194,7 +1196,7 @@ deviceList =
     },
     {
         "type": "Intermediate catheters",
-        "name": "Syphontrak (Boston Scientific)",
+        "name": "Syphontrak ",
         "manufacturer": "Boston Scientific",
         "minid": 0.06,
         "maxod": 0.076,
@@ -1202,7 +1204,7 @@ deviceList =
     },
     {
         "type": "guide catheters",
-        "name": "BMX 96 (Penumbra)",
+        "name": "BMX 96 ",
         "manufacturer": "Penumbra",
         "minid": 0.096,
         "maxod": 0.109,
@@ -1210,7 +1212,7 @@ deviceList =
     },
     {
         "type": "balloons",
-        "name": "Scepter Mini (Microvention)",
+        "name": "Scepter Mini ",
         "manufacturer": "Microvention",
         "minid": 0.009,
         "maxod": 0.03675,
@@ -1218,7 +1220,7 @@ deviceList =
     },
     {
         "type": "wire",
-        "name": "Terumo Headliner 012 (Microvention)",
+        "name": "Terumo Headliner 012 ",
         "manufacturer": "Microvention",
         "minid": 0,
         "maxod": 0.012,
@@ -1227,7 +1229,7 @@ deviceList =
     },
     {
         "type": "wire",
-        "name": "Terumo Headliner 014 (Microvention)",
+        "name": "Terumo Headliner 014 ",
         "manufacturer": "Microvention",
         "minid": 0,
         "maxod": 0.014,
@@ -1236,7 +1238,7 @@ deviceList =
     },
     {
         "type": "wire",
-        "name": "Terumo Headliner 016 (Microvention)",
+        "name": "Terumo Headliner 016 ",
         "manufacturer": "Microvention",
         "minid": 0,
         "maxod": 0.016,
@@ -1245,7 +1247,7 @@ deviceList =
     },
     {
         "type": "wire",
-        "name": "Terumo Glidewire 035 (Microvention)",
+        "name": "Terumo Glidewire 035 ",
         "manufacturer": "Microvention",
         "minid": 0,
         "maxod": 0.014,
@@ -1254,7 +1256,7 @@ deviceList =
     },
     {
         "type": "wire",
-        "name": "Terumo Glidewire Advantage 035 (Microvention)",
+        "name": "Terumo Glidewire Advantage 035 ",
         "manufacturer": "Microvention",
         "minid": 0,
         "maxod": 0.035,
@@ -1263,7 +1265,7 @@ deviceList =
     },
     {
         "type": "wire",
-        "name": "Transend 010 (Stryker)",
+        "name": "Transend 010 ",
         "manufacturer": "Stryker",
         "minid": 0,
         "maxod": 0.01,
@@ -1272,7 +1274,7 @@ deviceList =
     },
     {
         "type": "wire",
-        "name": "Transend Ex Platinum (Stryker)",
+        "name": "Transend Ex Platinum ",
         "manufacturer": "Stryker",
         "minid": 0,
         "maxod": 0.0155,
@@ -1280,7 +1282,7 @@ deviceList =
     },
     {
         "type": "wire",
-        "name": "Transend Ex Standard (Stryker)",
+        "name": "Transend Ex Standard ",
         "manufacturer": "Stryker",
         "minid": 0,
         "maxod": 0.0155,
@@ -1288,7 +1290,7 @@ deviceList =
     },
     {
         "type": "wire",
-        "name": "Traxcess 014 (Terumo)",
+        "name": "Traxcess 014 ",
         "manufacturer": "Terumo",
         "minid": 0,
         "maxod": 0.014,
@@ -1296,7 +1298,7 @@ deviceList =
     },
     {
         "type": "wire",
-        "name": "Synchro 14 (Stryker)",
+        "name": "Synchro 14 ",
         "manufacturer": "Stryker",
         "minid": 0,
         "maxod": 0.014,
@@ -1304,7 +1306,7 @@ deviceList =
     },
     {
         "type": "wire",
-        "name": "Synchro2 (Stryker)",
+        "name": "Synchro2 ",
         "manufacturer": "Stryker",
         "minid": 0,
         "maxod": 0.014,
@@ -1312,7 +1314,7 @@ deviceList =
     },
     {
         "type": "wire",
-        "name": "Synchro 010 (Stryker)",
+        "name": "Synchro 010 ",
         "manufacturer": "Stryker",
         "minid": 0,
         "maxod": 0.01,
@@ -1320,7 +1322,7 @@ deviceList =
     },
     {
         "type": "wire",
-        "name": "Hybrid 007 (Balt)",
+        "name": "Hybrid 007 ",
         "manufacturer": "Balt",
         "minid": 0,
         "maxod": 0.007,
@@ -1329,7 +1331,7 @@ deviceList =
     },
     {
         "type": "wire",
-        "name": "Hybrid 008  (Balt)",
+        "name": "Hybrid 008  ",
         "manufacturer": "Balt",
         "minid": 0,
         "maxod": 0.008,
@@ -1338,7 +1340,7 @@ deviceList =
     },
     {
         "type": "wire",
-        "name": "Hybrid 012  (Balt)",
+        "name": "Hybrid 012  ",
         "manufacturer": "Balt",
         "minid": 0,
         "maxod": 0.012,
@@ -1347,7 +1349,7 @@ deviceList =
     },
     {
         "type": "wire",
-        "name": "Hybrid 014  (Balt)",
+        "name": "Hybrid 014  ",
         "manufacturer": "Balt",
         "minid": 0,
         "maxod": 0.014,
@@ -1356,7 +1358,7 @@ deviceList =
     },
     {
         "type": "wire",
-        "name": "Hybrid 010  (Balt)",
+        "name": "Hybrid 010  ",
         "manufacturer": "Balt",
         "minid": 0,
         "maxod": 0.01,
@@ -1365,7 +1367,7 @@ deviceList =
     },
     {
         "type": "wire",
-        "name": "Transend 014 (Stryker)",
+        "name": "Transend 014 ",
         "manufacturer": "Stryker",
         "minid": 0,
         "maxod": 0.014,
@@ -1373,7 +1375,7 @@ deviceList =
     },
     {
         "type": "wire",
-        "name": "Transend 010 (Stryker)",
+        "name": "Transend 010 ",
         "manufacturer": "Stryker",
         "minid": 0,
         "maxod": 0.01,
@@ -1381,7 +1383,7 @@ deviceList =
     },
     {
         "type": "wire",
-        "name": "Asahi Chikai 10 (Asahi)",
+        "name": "Asahi Chikai 10 ",
         "manufacturer": "Asahi",
         "minid": 0,
         "maxod": 0.01,
@@ -1389,7 +1391,7 @@ deviceList =
     },
     {
         "type": "wire",
-        "name": "Asahi Chikai 14 (Asahi)",
+        "name": "Asahi Chikai 14 ",
         "manufacturer": "Asahi",
         "minid": 0,
         "maxod": 0.014,
@@ -1397,7 +1399,7 @@ deviceList =
     },
     {
         "type": "wire",
-        "name": "Asahi Chikai 008 (Asahi)",
+        "name": "Asahi Chikai 008 ",
         "manufacturer": "Asahi",
         "minid": 0,
         "maxod": 0.008,
@@ -1405,7 +1407,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Sonic 1.2 (Balt)",
+        "name": "Sonic 1.2 ",
         "manufacturer": "Balt",
         "minid": 0.009055118,
         "maxod": 0.015748,
@@ -1414,7 +1416,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Sonic 1.5 (Balt)",
+        "name": "Sonic 1.5 ",
         "manufacturer": "Balt",
         "minid": 0.01181102,
         "maxod": 0.019685,
@@ -1422,7 +1424,7 @@ deviceList =
     },
     {
         "type": "stentrievers",
-        "name": "Solitaire X 4 - 6 mm (Medtronic)",
+        "name": "Solitaire X 4 - 6 mm ",
         "manufacturer": "Medtronic",
         "minid": 0,
         "maxod": 0.02,
@@ -1430,7 +1432,7 @@ deviceList =
     },
     {
         "type": "stentrievers",
-        "name": "Solitaire Platinum 4 mm (Medtronic)",
+        "name": "Solitaire Platinum 4 mm ",
         "manufacturer": "Medtronic",
         "minid": 0,
         "maxod": 0.02,
@@ -1438,7 +1440,7 @@ deviceList =
     },
     {
         "type": "stentrievers",
-        "name": "Solitaire Platinum 6 mm (Medtronic)",
+        "name": "Solitaire Platinum 6 mm ",
         "manufacturer": "Medtronic",
         "minid": 0,
         "maxod": 0.026,
@@ -1446,7 +1448,7 @@ deviceList =
     },
     {
         "type": "stent",
-        "name": "Solitaire AB 4 mm (Medtronic)",
+        "name": "Solitaire AB 4 mm ",
         "manufacturer": "Medtronic",
         "minid": 0,
         "maxod": 0.02,
@@ -1454,7 +1456,7 @@ deviceList =
     },
     {
         "type": "stent",
-        "name": "Solitaire AB 6 mm (Medtronic)",
+        "name": "Solitaire AB 6 mm ",
         "manufacturer": "Medtronic",
         "minid": 0,
         "maxod": 0.026,
@@ -1462,7 +1464,7 @@ deviceList =
     },
     {
         "type": "stent",
-        "name": "Carotid Wallstent 9x40 (Boston Scientific)",
+        "name": "Carotid Wallstent 9x40 ",
         "manufacturer": "Boston Scientific",
         "minid": 0.015,
         "maxod": 0.086,
@@ -1470,7 +1472,7 @@ deviceList =
     },
     {
         "type": "stent",
-        "name": "Carotid Wallstent 7x40 (Boston Scientific)",
+        "name": "Carotid Wallstent 7x40 ",
         "manufacturer": "Boston Scientific",
         "minid": 0.015,
         "maxod": 0.071,
@@ -1478,7 +1480,7 @@ deviceList =
     },
     {
         "type": "stent",
-        "name": "Carotid Wallstent 5x30 (Boston Scientific)",
+        "name": "Carotid Wallstent 5x30 ",
         "manufacturer": "Boston Scientific",
         "minid": 0.015,
         "maxod": 0.071,
@@ -1486,32 +1488,32 @@ deviceList =
     },
     {
         "type": "stent",
-        "name": "Wingspan 3.5x20 / 4x20 (Stryker)",
+        "name": "Wingspan 3.5x20 / 4x20 ",
         "manufacturer": "Stryker",
         "minid": 0.016,
         "maxod": 0.063,
         "length": 135,
-        "incompatibility": "Recommended 300cm guidewire"
+        "comments": "Recommended 300cm guidewire"
     },
     {
         "type": "stent",
-        "name": "LVIS (Microvention)",
+        "name": "LVIS ",
         "manufacturer": "Microvention",
         "minid": 0,
         "maxod": 0.02
     },
     {
         "type": "stent",
-        "name": "LVIS Jr (Microvention)",
+        "name": "LVIS Jr ",
         "manufacturer": "Microvention",
         "minid": 0,
         "maxod": 0.0155,
         "length": "?",
-        "incompatibility": "Recommended catheters Headway-17, Headway-21, Scepter C, Scepter XC"
+        "recommended": "Headway 17 / Headway 21 / Scepter C / Scepter XC"
     },
     {
         "type": "balloons",
-        "name": "Trek Coronary Dilatation Balloon (Abbott)",
+        "name": "Trek Coronary Dilatation Balloon ",
         "manufacturer": "Abbott",
         "minid": 0.015,
         "maxod": 0.031496,
@@ -1519,7 +1521,7 @@ deviceList =
     },
     {
         "type": "balloons",
-        "name": "Mini Trek Coronary Dilatation Catheter (Abbott)",
+        "name": "Mini Trek Coronary Dilatation Catheter ",
         "manufacturer": "Abbott",
         "minid": 0.015,
         "maxod": 0.030184,
@@ -1527,7 +1529,7 @@ deviceList =
     },
     {
         "type": "stent",
-        "name": "Leo+ baby (Balt)",
+        "name": "Leo+ baby ",
         "manufacturer": "Balt",
         "minid": 0.015,
         "maxod": 0.0155,
@@ -1535,7 +1537,7 @@ deviceList =
     },
     {
         "type": "stent",
-        "name": "Leo+ 3,5 (Balt)",
+        "name": "Leo+ 3,5 ",
         "manufacturer": "Balt",
         "minid": 0.015,
         "maxod": 0.021,
@@ -1543,7 +1545,7 @@ deviceList =
     },
     {
         "type": "stent",
-        "name": "Leo+ 4,5 (Balt)",
+        "name": "Leo+ 4,5 ",
         "manufacturer": "Balt",
         "minid": 0.015,
         "maxod": 0.025,
@@ -1551,7 +1553,7 @@ deviceList =
     },
     {
         "type": "stent",
-        "name": "Leo+ 5,5 (Balt)",
+        "name": "Leo+ 5,5 ",
         "manufacturer": "Balt",
         "minid": 0.015,
         "maxod": 0.028,
@@ -1559,7 +1561,7 @@ deviceList =
     },
     {
         "type": "stent",
-        "name": "Silk Vista (Balt)",
+        "name": "Silk Vista ",
         "manufacturer": "Balt",
         "minid": 0.015,
         "maxod": 0.02,
@@ -1567,7 +1569,7 @@ deviceList =
     },
     {
         "type": "stent",
-        "name": "Silk Vista Baby (Balt)",
+        "name": "Silk Vista Baby ",
         "manufacturer": "Balt",
         "minid": 0.015,
         "maxod": 0.0166,
@@ -1575,35 +1577,35 @@ deviceList =
     },
     {
         "type": "stent",
-        "name": "Silk+ 2,0 to 4,5 (Balt)",
+        "name": "Silk+ 2,0 to 4,5 ",
         "manufacturer": "Balt",
         "minid": 0.015,
         "maxod": 0.02
     },
     {
         "type": "stent",
-        "name": "Silk+ 5,0 to 5,5 (Balt)",
+        "name": "Silk+ 5,0 to 5,5 ",
         "manufacturer": "Balt",
         "minid": 0.015,
         "maxod": 0.024
     },
     {
         "type": "Select catheter",
-        "name": "Select 5 F (Penumbra)",
+        "name": "Select 5 F ",
         "manufacturer": "Penumbra",
         "minid": 0.04,
         "maxod": 0.0656168
     },
     {
         "type": "Select catheter",
-        "name": "Select 6 F (Penumbra)",
+        "name": "Select 6 F ",
         "manufacturer": "Penumbra",
         "minid": 0.04,
         "maxod": 0.07992126
     },
     {
         "type": "sheath",
-        "name": "Glidesheath 4F (Terumo)",
+        "name": "Glidesheath 4F ",
         "manufacturer": "Terumo",
         "minid": 0.061,
         "maxod": 0.0656168,
@@ -1611,7 +1613,7 @@ deviceList =
     },
     {
         "type": "sheath",
-        "name": "Glidesheath 5F (Terumo)",
+        "name": "Glidesheath 5F ",
         "manufacturer": "Terumo",
         "minid": 0.074,
         "maxod": 0.07874016,
@@ -1619,7 +1621,7 @@ deviceList =
     },
     {
         "type": "sheath",
-        "name": "Glidesheath 6F (Terumo)",
+        "name": "Glidesheath 6F ",
         "manufacturer": "Terumo",
         "minid": 0.087,
         "maxod": 0.09186352,
@@ -1627,24 +1629,24 @@ deviceList =
     },
     {
         "type": "stentrievers",
-        "name": "Trevo NXT ProVue Retriever 3x32 (Stryker)",
+        "name": "Trevo NXT ProVue Retriever 3x32 ",
         "manufacturer": "Stryker",
         "minid": 0,
         "maxod": 0.016,
         "length": 200,
-        "incompatibility": "Recommended to use the Trak21 microcatheter"
+        "recommended": "Trak 21"
     },
     {
         "type": "stentrievers",
-        "name": "Trevo NXT ProVue Retriever 4 to 6 mm (Stryker)",
+        "name": "Trevo NXT ProVue Retriever 4 to 6 mm ",
         "minid": 0,
         "maxod": 0.02,
         "length": 200,
-        "incompatibility": "Recommended to use the Trak21 microcatheter"
+        "recommended": "Trak 21"
     },
     {
         "type": "stentrievers",
-        "name": "Catch+ catchmini 3x15 (Balt)",
+        "name": "Catch+ catchmini 3x15 ",
         "manufacturer": "Balt",
         "minid": 0,
         "maxod": 0.016,
@@ -1655,7 +1657,7 @@ deviceList =
     },
     {
         "type": "stentrievers",
-        "name": "Catch+ catch 4x20 (Balt)",
+        "name": "Catch+ catch 4x20 ",
         "manufacturer": "Balt",
         "minid": 0,
         "maxod": 0.02,
@@ -1666,7 +1668,7 @@ deviceList =
     },
     {
         "type": "stentrievers",
-        "name": "Catch+ catchmaxi 6x30 (Balt)",
+        "name": "Catch+ catchmaxi 6x30 ",
         "manufacturer": "Balt",
         "minid": 0,
         "maxod": 0.023,
@@ -1677,7 +1679,7 @@ deviceList =
     },
     {
         "type": "stentrievers",
-        "name": "Tigertriever (Rapid)",
+        "name": "Tigertriever ",
         "manufacturer": "Rapid Medical",
         "minid": 0,
         "maxod": 0.02,
@@ -1688,7 +1690,7 @@ deviceList =
     },
     {
         "type": "stentrievers",
-        "name": "Tigertriever 17 (Rapid)",
+        "name": "Tigertriever 17 ",
         "manufacturer": "Rapid Medical",
         "minid": 0,
         "maxod": 0.0165,
@@ -1699,7 +1701,7 @@ deviceList =
     },
     {
         "type": "stentrievers",
-        "name": "Tigertriever 13 (Rapid)",
+        "name": "Tigertriever 13 ",
         "manufacturer": "Rapid Medical",
         "minid": 0,
         "maxod": 0.012,
@@ -1710,7 +1712,7 @@ deviceList =
     },
     {
         "type": "stentrievers",
-        "name": "Tigertriever XL (Rapid)",
+        "name": "Tigertriever XL ",
         "manufacturer": "Rapid Medical",
         "minid": 0,
         "maxod": 0.02,
@@ -1721,7 +1723,7 @@ deviceList =
     },
     {
         "type": "intermediate catheters",
-        "name": "Titan 036 (Balt)",
+        "name": "Titan 036 ",
         "manufacturer": "Balt",
         "minid": 0.036,
         "maxod": 0.056,
@@ -1729,7 +1731,7 @@ deviceList =
     },
     {
         "type": "intermediate catheters",
-        "name": "Titan 070 (Balt)",
+        "name": "Titan 070 ",
         "manufacturer": "Balt",
         "minid": 0.07,
         "maxod": 0.083,
@@ -1737,7 +1739,7 @@ deviceList =
     },
     {
         "type": "liquid embolic",
-        "name": "Onyx 18 / 34 (Medtronic)",
+        "name": "Onyx 18 / 34 ",
         "manufacturer": "Balt",
         "minid": 0,
         "maxod": 0.009055118,
@@ -1745,7 +1747,7 @@ deviceList =
     },
     {
         "type": "liquid embolic",
-        "name": "Squid (Balt)",
+        "name": "Squid ",
         "manufacturer": "Balt",
         "minid": 0,
         "maxod": 0.009055118,
@@ -1753,7 +1755,7 @@ deviceList =
     },
     {
         "type": "liquid embolic",
-        "name": "Phil (Microvention)",
+        "name": "Phil ",
         "manufacturer": "Microvention",
         "minid": 0,
         "maxod": 0.009055118,
@@ -1761,7 +1763,7 @@ deviceList =
     },
     {
         "type": "Coil",
-        "name": "Micrusframe S 18 (Cerenovus)",
+        "name": "Micrusframe S 18 ",
         "manufacturer": "Cerenovus",
         "minid": 0,
         "maxod": 0.015,
@@ -1769,7 +1771,7 @@ deviceList =
     },
     {
         "type": "Coil",
-        "name": "Micrusframe S 10 (Cerenovus)",
+        "name": "Micrusframe S 10 ",
         "manufacturer": "Cerenovus",
         "minid": 0,
         "maxod": 0.0105,
@@ -1777,7 +1779,7 @@ deviceList =
     },
     {
         "type": "Coil",
-        "name": "Galaxy G3 Complex (Cerenovus)",
+        "name": "Galaxy G3 Complex ",
         "manufacturer": "Cerenovus",
         "minid": 0,
         "maxod": 0.012,
@@ -1785,7 +1787,7 @@ deviceList =
     },
     {
         "type": "Coil",
-        "name": "Galaxy G3 XSFT Complex (Cerenovus)",
+        "name": "Galaxy G3 XSFT Complex ",
         "manufacturer": "Cerenovus",
         "minid": 0,
         "maxod": 0.012,
@@ -1833,7 +1835,7 @@ deviceList =
     },
     {
         "type": "Stent",
-        "name": "Pipeline (Medtronic)",
+        "name": "Pipeline ",
         "manufacturer": "Medtronic",
         "minid": 0,
         "maxod": 0.026,
@@ -1843,7 +1845,7 @@ deviceList =
     },
     {
         "type": "Wire",
-        "name": "Silverspeed 010 (Medtronic)",
+        "name": "Silverspeed 010 ",
         "manufacturer": "Medtronic",
         "minid": 0,
         "maxod": 0.01,
@@ -1851,7 +1853,7 @@ deviceList =
     },
     {
         "type": "Wire",
-        "name": "Silverspeed 014 (Medtronic)",
+        "name": "Silverspeed 014 ",
         "manufacturer": "Medtronic",
         "minid": 0,
         "maxod": 0.014,
@@ -1859,7 +1861,7 @@ deviceList =
     },
     {
         "type": "Coil",
-        "name": "Cosmos/MicroPlex/VFC/Hypersoft/MicroPlex/HydroFrame/Hydrofill/Hydrosoft (Microvention)",
+        "name": "Cosmos/MicroPlex/VFC/Hypersoft/MicroPlex/HydroFrame/Hydrofill/Hydrosoft ",
         "manufacturer": "Microvention",
         "minid": 0,
         "maxod": 0.0155,
@@ -1867,7 +1869,7 @@ deviceList =
     },
     {
         "type": "Stent",
-        "name": "FRED (Microvention)",
+        "name": "FRED ",
         "manufacturer": "Microvention",
         "minid": 0,
         "maxod": 0.026,
@@ -1875,7 +1877,7 @@ deviceList =
     },
     {
         "type": "Stent",
-        "name": "CASPER RX Carotid Stent (Microvention)",
+        "name": "CASPER RX Carotid Stent ",
         "minid": 0.015,
         "maxod": 0.0656168,
         "length": "?",
@@ -1883,7 +1885,7 @@ deviceList =
     },
     {
         "type": "Protection device",
-        "name": "Mo.Ma (Medtronic)",
+        "name": "Mo.Ma ",
         "manufacturer": "Medtronic",
         "minid": 0.083,
         "maxod": 0.1181102,
@@ -1892,7 +1894,7 @@ deviceList =
     },
     {
         "type": "Stent",
-        "name": "Atlas (Stryker)",
+        "name": "Atlas ",
         "manufacturer": "Stryker",
         "minid": 0,
         "maxod": 0.016,
@@ -1900,7 +1902,7 @@ deviceList =
     },
     {
         "type": "Wire",
-        "name": "V-18 Control Wire (Boston Scientific)",
+        "name": "V-18 Control Wire ",
         "manufacturer": "Boston Scientific",
         "minid": 0,
         "maxod": 0.018,
@@ -1908,7 +1910,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Amplatz Microsnare microcatheter (Medtronic)",
+        "name": "Amplatz Microsnare microcatheter ",
         "manufacturer": "Medtronic",
         "minid": 0.021,
         "maxod": 0.03937,
@@ -1916,7 +1918,7 @@ deviceList =
     },
     {
         "type": "Protection device",
-        "name": "SpiderFx (Medtronic)",
+        "name": "SpiderFx ",
         "manufacturer": "Medtronic",
         "minid": 0.015,
         "maxod": 0.054,
@@ -1924,7 +1926,7 @@ deviceList =
     },
     {
         "type": "Stent",
-        "name": "PK Papyrus Covered Coronary Stent (Biotronik)",
+        "name": "PK Papyrus Covered Coronary Stent ",
         "manufacturer": "Biotronik",
         "minid": 0.015,
         "maxod": 0.055,
@@ -1932,7 +1934,7 @@ deviceList =
     },
     {
         "type": "Balloons",
-        "name": "Pantera Lux PTCA Balloon Catheter (Biotronik)",
+        "name": "Pantera Lux PTCA Balloon Catheter ",
         "manufacturer": "Biotronik",
         "minid": 0.015,
         "maxod": 0.055,
@@ -1940,7 +1942,7 @@ deviceList =
     },
     {
         "type": "stent",
-        "name": "Surpass Evolve (Stryker)",
+        "name": "Surpass Evolve ",
         "manufacturer": "Stryker",
         "minid": 0,
         "maxod": 0.0265,
@@ -1950,7 +1952,7 @@ deviceList =
     },
     {
         "type": "stent",
-        "name": "Comaneci (Rapid Medical)",
+        "name": "Comaneci ",
         "manufacturer": "Rapid Medical",
         "minid": 0,
         "maxod": 0.02,
@@ -1961,7 +1963,7 @@ deviceList =
     },
     {
         "type": "stent",
-        "name": "Comaneci Petit (Rapid Medical)",
+        "name": "Comaneci Petit ",
         "manufacturer": "Rapid Medical",
         "minid": 0,
         "maxod": 0.02,
@@ -1972,7 +1974,7 @@ deviceList =
     },
     {
         "type": "stent",
-        "name": "Comaneci 17 (Rapid Medical)",
+        "name": "Comaneci 17 ",
         "manufacturer": "Rapid Medical",
         "minid": 0,
         "maxod": 0.016,
@@ -1983,7 +1985,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Lantern 025 (Penumbra)",
+        "name": "Lantern 025 ",
         "manufacturer": "Penumbra",
         "minid": 0.025,
         "maxod": 0.03413386,
@@ -1992,7 +1994,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Terumo Progreat 2 Fr (Microvention)",
+        "name": "Terumo Progreat 2 Fr ",
         "manufacturer": "Microvention",
         "minid": 0.019,
         "maxod": 0.035433,
@@ -2001,7 +2003,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Terumo Progreat 2.4 Fr (Microvention)",
+        "name": "Terumo Progreat 2.4 Fr ",
         "manufacturer": "Microvention",
         "minid": 0.022,
         "maxod": 0.038058,
@@ -2010,7 +2012,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Terumo Progreat 2.7 Fr (Microvention)",
+        "name": "Terumo Progreat 2.7 Fr ",
         "manufacturer": "Microvention",
         "minid": 0.025,
         "maxod": 0.038058,
@@ -2019,7 +2021,7 @@ deviceList =
     },
     {
         "type": "microcatheters",
-        "name": "Terumo Progreat 2.8 Fr (Microvention)",
+        "name": "Terumo Progreat 2.8 Fr ",
         "manufacturer": "Microvention",
         "minid": 0.027,
         "maxod": 0.03937,
