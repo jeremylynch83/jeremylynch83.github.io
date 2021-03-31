@@ -1,5 +1,6 @@
 deviceList = 
 
+
 [
     {
         "type": "guide catheters",
@@ -472,8 +473,8 @@ deviceList =
         "minid": 0.013,
         "maxod": 0.036,
         "length": "165",
-        "tipLengths": "1.5 / 3 / 5",
-        "comments": "Onyx compatible"
+        "comments": "Onyx compatible",
+        "tipLengths": "1.5 / 3 / 5"
     },
     {
         "type": "microcatheters",
@@ -1217,11 +1218,48 @@ deviceList =
     },
     {
         "type": "wire",
-        "name": "Terumo Glidewire (Terumo)",
-        "manufacturer": "Terumo",
+        "name": "Terumo Headliner 012 (Microvention)",
+        "manufacturer": "Microvention",
+        "minid": 0,
+        "maxod": 0.012,
+        "length": 200,
+        "url": "https://www.microvention.com/product/headliner"
+    },
+    {
+        "type": "wire",
+        "name": "Terumo Headliner 014 (Microvention)",
+        "manufacturer": "Microvention",
+        "minid": 0,
+        "maxod": 0.014,
+        "length": 200,
+        "url": "https://www.microvention.com/product/headliner"
+    },
+    {
+        "type": "wire",
+        "name": "Terumo Headliner 016 (Microvention)",
+        "manufacturer": "Microvention",
+        "minid": 0,
+        "maxod": 0.016,
+        "length": 200,
+        "url": "https://www.microvention.com/product/headliner"
+    },
+    {
+        "type": "wire",
+        "name": "Terumo Glidewire 035 (Microvention)",
+        "manufacturer": "Microvention",
+        "minid": 0,
+        "maxod": 0.014,
+        "length": "150 / 180 / 300",
+        "url": "https://www.terumois.com/products/guidewires/glidewire.html"
+    },
+    {
+        "type": "wire",
+        "name": "Terumo Glidewire Advantage 035 (Microvention)",
+        "manufacturer": "Microvention",
         "minid": 0,
         "maxod": 0.035,
-        "length": 180
+        "length": "180 / 260",
+        "url": "https://www.terumois.com/products/guidewires/glidewire-advantage.html"
     },
     {
         "type": "wire",
@@ -1909,5 +1947,83 @@ deviceList =
         "length": "?",
         "url": "https://www.strykerneurovascular.com/uk/products/hemorrhagic/surpass-evolve-flow-diverter",
         "recommended": "XT-27"
+    },
+    {
+        "type": "stent",
+        "name": "Comaneci (Rapid Medical)",
+        "manufacturer": "Rapid Medical",
+        "minid": 0,
+        "maxod": 0.02,
+        "length": 165,
+        "url": "https://www.rapid-medical.com/comaneci",
+        "stentDiameterMm": 4.5,
+        "stentLengthMm": 32
+    },
+    {
+        "type": "stent",
+        "name": "Comaneci Petit (Rapid Medical)",
+        "manufacturer": "Rapid Medical",
+        "minid": 0,
+        "maxod": 0.02,
+        "length": 165,
+        "url": "https://www.rapid-medical.com/comaneci",
+        "stentDiameterMm": 3.5,
+        "stentLengthMm": 24
+    },
+    {
+        "type": "stent",
+        "name": "Comaneci 17 (Rapid Medical)",
+        "manufacturer": "Rapid Medical",
+        "minid": 0,
+        "maxod": 0.016,
+        "length": 173,
+        "url": "https://www.rapid-medical.com/comaneci",
+        "stentDiameterMm": 2.5,
+        "stentLengthMm": 22
+    },
+    {
+        "type": "microcatheters",
+        "name": "Lantern 025 (Penumbra)",
+        "manufacturer": "Penumbra",
+        "minid": 0.025,
+        "maxod": 0.03413386,
+        "length": "115 / 135 / 150",
+        "url": "https://www.penumbrainc.com/peripheral-device/lantern/"
+    },
+    {
+        "type": "microcatheters",
+        "name": "Terumo Progreat 2 Fr (Microvention)",
+        "manufacturer": "Microvention",
+        "minid": 0.019,
+        "maxod": 0.035433,
+        "length": "110 / 130 / 150",
+        "url": "https://www.terumois.com/content/dam/terumo-www/global-shared/terumo-tis/en-us/product-assets/progreat/Progreat-Family-Brochure.pdf"
+    },
+    {
+        "type": "microcatheters",
+        "name": "Terumo Progreat 2.4 Fr (Microvention)",
+        "manufacturer": "Microvention",
+        "minid": 0.022,
+        "maxod": 0.038058,
+        "length": "110 / 130 / 150",
+        "url": "https://www.terumois.com/content/dam/terumo-www/global-shared/terumo-tis/en-us/product-assets/progreat/Progreat-Family-Brochure.pdf"
+    },
+    {
+        "type": "microcatheters",
+        "name": "Terumo Progreat 2.7 Fr (Microvention)",
+        "manufacturer": "Microvention",
+        "minid": 0.025,
+        "maxod": 0.038058,
+        "length": "110 / 130",
+        "url": "https://www.terumois.com/content/dam/terumo-www/global-shared/terumo-tis/en-us/product-assets/progreat/Progreat-Family-Brochure.pdf"
+    },
+    {
+        "type": "microcatheters",
+        "name": "Terumo Progreat 2.8 Fr (Microvention)",
+        "manufacturer": "Microvention",
+        "minid": 0.027,
+        "maxod": 0.03937,
+        "length": "110 / 130 / 150",
+        "url": "https://www.terumois.com/content/dam/terumo-www/global-shared/terumo-tis/en-us/product-assets/progreat/Progreat-Family-Brochure.pdf"
     }
 ]
