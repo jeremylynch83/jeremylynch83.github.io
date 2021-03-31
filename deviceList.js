@@ -1691,7 +1691,7 @@ deviceList =
         "name": "Tigertriever 17 (Rapid)",
         "manufacturer": "Rapid Medical",
         "minid": 0,
-        "maxod": 0.016,
+        "maxod": 0.0165,
         "length": "?",
         "url": "https://web.archive.org/web/20201203224140/https://www.rapid-medical.com/tigertriever",
         "stentDesign": "braided",
