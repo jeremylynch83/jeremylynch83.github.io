@@ -80,8 +80,9 @@
 				</div>
 			</b-modal>
 
-			<b-modal :id="infoModal.id" :title="infoModal.title" ok-only @hide="resetInfoModal">
-				<pre>{{ infoModal.content }}</pre>
+			<b-modal :id="infoModal.id" :title="infoModal.title" ok-only @hide="resetInfoModal" :static="true">
+				<div id="info_content">
+				</div>
 			  </b-modal>
 
 
@@ -114,13 +115,19 @@
 							@hit="updateDevice(n.id, $event); updateSizer()">
 							</vue-bootstrap-typeahead>
 
+							<div class="text-right" style="color:rgb(124, 124, 124); font-size: 0.9em;">Max O.D: {{n.max_od}}. Min I.D: {{n.min_id}}. Lengths: {{n.lengths}}.  </div>
+
+
 							<div class="text-right">
 							<b-button-group  >
+
 								<b-button variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.8em;" @click="addInput('inside', 'Enter device e.g. catheter, balloon, stent, wire ...', 'guide catheters', n.id)">New device inside</b-button>
 								<b-button  variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.8em;" @click="addInput('beside', 'Enter device e.g. catheter, balloon, stent, wire ...', 'guide catheters', n.id)">New device beside</b-button>
 								<b-button  variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.8em;" @click="removeInput(n.id)">Remove</b-button>
+								<b-button variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.8em;" @click="info(n.id)">Info</b-button>
+
 							</b-button-group>
-						</div>
+							</div>
 
 
 				</b-form-group>
@@ -397,6 +404,20 @@
 			methods: {
 				updateDevice: function (passed, e) {
 					tree.getElementById(passed).setAttribute("data", JSON.stringify(e));
+
+					var index = deviceInputs.findIndex(
+								function (i) {
+									return i.id == passed;
+								}
+							);
+
+							
+					deviceInputs[index].max_od = e.maxod.toFixed(4) + "\"";
+					deviceInputs[index].min_id = e.minid.toFixed(4) + "\"";
+					deviceInputs[index].lengths = e.length + " cm";
+
+
+
 				},
 				drawDiagram: function () {
 					//var paper = Raphael("paper", 500, 500);
@@ -414,14 +435,22 @@
 			*/
 				},
 
-				info(item, index, button) {
-					this.infoModal.title = `${item.Name}`;
-					this.infoModal.content = JSON.stringify(item, null, 2);
-					this.$root.$emit('bv::show::modal', this.infoModal.id, button);
+				info: function(index) {
+					
+					var deviceInfo = JSON.parse(tree.getElementById(index).getAttribute("data")); 
+					this.infoModal.title = deviceInfo.name;
+					var content = "";
+					if (deviceInfo.type != null) content += "<p><b>Type: </b>" + deviceInfo.type + "</p>";
+					if (deviceInfo.manufacturer != null) content += "<p><b>Manufacturer: </b>" + deviceInfo.manufacturer + "</p>";
+					if (deviceInfo.url != null) content += "<p><b>Website: </b>" + deviceInfo.url + "</p>";
+
+					document.getElementById("info_content").innerHTML = content;
+					
+					this.$root.$emit('bv::show::modal', this.infoModal.id);
 				},
 				resetInfoModal() {
 					this.infoModal.title = ''
-					this.infoModal.content = ''
+					//this.infoModal.content = ''
 				},
 
 				drawDeviceTable: function() {
@@ -467,7 +496,7 @@
 						}
 					}
 
-					this.device_items = unique; 
+					//this.device_items = unique; 
 
 				},
 
@@ -497,7 +526,7 @@
 					var node = {};
 					node.child_id = id;
 
-					var n = { 'id': id, 'text': text, 'type': type, 'parent': parent, 'hierarchy': 0 };
+					var n = { 'id': id, 'text': text, 'type': type, 'parent': parent, 'hierarchy': 0, 'max_od': "", 'min_id': "", 'lengths': "" };
 
 					// Set up data structure
 					var struct = tree.createElement("device");
@@ -512,7 +541,6 @@
 						els.unshift(a);
 						a = a.parentNode;
 					}
-
 					
 					// First element
 					if (parent == null) {
