@@ -442,7 +442,6 @@
 					var content = "";
 					if (deviceInfo.type != null) content += "<p><b>Type: </b>" + deviceInfo.type + "</p>";
 					if (deviceInfo.manufacturer != null) content += "<p><b>Manufacturer: </b>" + deviceInfo.manufacturer + "</p>";
-					if (deviceInfo.url != null) content += "<p><b>Website: </b>" + deviceInfo.url + "</p>";
 
 					var maxod = deviceInfo.maxod;
 					var maxod_in = maxod.toFixed(4) + "\"";
@@ -456,6 +455,8 @@
 					content += "<p><b>Maximum outer diameter: </b>" + maxod_in + " (" + maxod_mm + ", " + maxod_fr + ")</p>";
 					content += "<p><b>Minimum inner diameter: </b>" + minid_in + " (" + minid_mm + ", " + minid_fr + ")</p>";
 					content += "<p><b>Lengths: </b>" + deviceInfo.length + " cm</p>";
+
+					if (deviceInfo.url1 != null) content += "<p><b>Links: </b><a href=\"" + deviceInfo.url1 + "\">Manufacturer information</a></p>";
 
 					document.getElementById("info_content").innerHTML = content;
 					
