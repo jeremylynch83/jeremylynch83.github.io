@@ -458,6 +458,8 @@
 
 					if (deviceInfo.url1 != null) content += "<p><b>Links: </b><a href=\"" + deviceInfo.url1 + "\">Manufacturer information</a></p>";
 
+					//content += "<iframe id=\"theFrame\" src=\"" + deviceInfo.url1 + "\" style=\"width:100%;\" frameborder=\"0\"></iframe>";
+
 					document.getElementById("info_content").innerHTML = content;
 					
 					this.$root.$emit('bv::show::modal', this.infoModal.id);
