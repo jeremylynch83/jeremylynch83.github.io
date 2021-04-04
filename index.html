@@ -28,11 +28,13 @@
 	<!-- Required scripts -->
 	<script src="https://unpkg.com/vue@latest/dist/vue.js"></script>
 	<script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
+	<script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js"></script>
 	<!-- Type Ahead Library -->
 	<script src="https://unpkg.com/vue-bootstrap-typeahead"></script>
 	<!-- Device Library -->
 	<script src="deviceList.js"></script>
 	<script src="raphael.js"></script>
+
 
 
 </head>
@@ -121,10 +123,17 @@
 							<div class="text-right">
 							<b-button-group  >
 
-								<b-button variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.8em;" @click="addInput('inside', 'Enter device e.g. catheter, balloon, stent, wire ...', 'guide catheters', n.id)">New device inside</b-button>
-								<b-button  variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.8em;" @click="addInput('beside', 'Enter device e.g. catheter, balloon, stent, wire ...', 'guide catheters', n.id)">New device beside</b-button>
-								<b-button  variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.8em;" @click="removeInput(n.id)">Remove</b-button>
-								<b-button variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.8em;" @click="info(n.id)">Info</b-button>
+								<b-button variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.8em;" @click="addInput('inside', 'Enter device e.g. catheter, balloon, stent, wire ...', 'guide catheters', n.id)">
+									<b-icon icon="plus" scale="1" variant="success"></b-icon>
+
+									Add</b-button>
+								<!--<b-button  variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.8em;" @click="addInput('beside', 'Enter device e.g. catheter, balloon, stent, wire ...', 'guide catheters', n.id)">New device beside</b-button>-->
+								<b-button  variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.8em;" @click="removeInput(n.id)">
+									<b-icon icon="x-circle" scale="1" variant="danger"></b-icon>
+									Remove</b-button>
+								<b-button variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.8em;" @click="info(n.id)">
+									<b-icon icon="info-circle" scale="1" variant="info"></b-icon>
+									Info</b-button>
 
 							</b-button-group>
 							</div>
@@ -177,6 +186,11 @@
 
 
 	<script>
+
+
+//Vue.use(BootstrapVue)
+//Vue.use(BootstrapVueIcons)
+
 
 		/* GENERIC FUNCTIONS */
 
