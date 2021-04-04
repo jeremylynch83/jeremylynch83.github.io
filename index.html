@@ -115,7 +115,7 @@
 							@hit="updateDevice(n.id, $event); updateSizer()">
 							</vue-bootstrap-typeahead>
 
-							<div class="text-right" style="color:rgb(124, 124, 124); font-size: 0.9em;">Max O.D: {{n.max_od}}. Min I.D: {{n.min_id}}. Lengths: {{n.lengths}}.  </div>
+							<div class="text-right" style="color:rgb(124, 124, 124); font-size: 0.9em;">OD: {{n.max_od}}. ID: {{n.min_id}}. {{n.lengths}}.  </div>
 
 
 							<div class="text-right">
@@ -443,6 +443,19 @@
 					if (deviceInfo.type != null) content += "<p><b>Type: </b>" + deviceInfo.type + "</p>";
 					if (deviceInfo.manufacturer != null) content += "<p><b>Manufacturer: </b>" + deviceInfo.manufacturer + "</p>";
 					if (deviceInfo.url != null) content += "<p><b>Website: </b>" + deviceInfo.url + "</p>";
+
+					var maxod = deviceInfo.maxod;
+					var maxod_in = maxod.toFixed(4) + "\"";
+					var maxod_mm = in_to_mm(maxod).toFixed(2) + " mm";
+					var maxod_fr = in_to_fr(maxod).toFixed(1) + " Fr";						
+					var minid = deviceInfo.minid;
+					var minid_in = minid.toFixed(4) + "\"";
+					var minid_mm = in_to_mm(minid).toFixed(2) + " mm";
+					var minid_fr = in_to_fr(minid).toFixed(1) + " Fr";
+
+					content += "<p><b>Maximum outer diameter: </b>" + maxod_in + " (" + maxod_mm + ", " + maxod_fr + ")</p>";
+					content += "<p><b>Minimum inner diameter: </b>" + minid_in + " (" + minid_mm + ", " + minid_fr + ")</p>";
+					content += "<p><b>Lengths: </b>" + deviceInfo.length + " cm</p>";
 
 					document.getElementById("info_content").innerHTML = content;
 					
