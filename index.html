@@ -43,7 +43,7 @@
 	<div id="app">
 
 		<b-navbar toggleable="lg" type="dark" variant="info">
-			<b-navbar-brand href="#">NeuroTool (Beta)</b-navbar-brand>
+			<b-navbar-brand href="#">NeuroTool<sup>BETA</sup></b-navbar-brand>
 
 			<b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -117,7 +117,7 @@
 							@hit="updateDevice(n.id, $event); updateSizer()">
 							</vue-bootstrap-typeahead>
 
-							<div class="text-right" style="color:rgb(124, 124, 124); font-size: 0.9em;">OD: {{n.max_od}}. ID: {{n.min_id}}. {{n.lengths}}.  </div>
+							<div class="text-right" style="color:rgb(124, 124, 124); font-size: 0.9em;">{{n.display_info}}  </div>
 
 
 							<div class="text-right">
@@ -425,10 +425,11 @@
 								}
 							);
 
-							
-					deviceInputs[index].max_od = e.maxod.toFixed(4) + "\"";
-					deviceInputs[index].min_id = e.minid.toFixed(4) + "\"";
-					deviceInputs[index].lengths = e.length + " cm";
+					deviceInputs[index].display_info = 	"OD: " + e.maxod.toFixed(4) + "\". " + "ID: " +  e.minid.toFixed(4) + "\". " + e.length + " cm";
+
+					//deviceInputs[index].max_od = e.maxod.toFixed(4) + "\"";
+					//deviceInputs[index].min_id = e.minid.toFixed(4) + "\"";
+					//deviceInputs[index].lengths = e.length + " cm";
 
 
 
@@ -556,7 +557,7 @@
 					var node = {};
 					node.child_id = id;
 
-					var n = { 'id': id, 'text': text, 'type': type, 'parent': parent, 'hierarchy': 0, 'max_od': "", 'min_id': "", 'lengths': "" };
+					var n = { 'id': id, 'text': text, 'type': type, 'parent': parent, 'hierarchy': 0, 'display_info': "" };
 
 					// Set up data structure
 					var struct = tree.createElement("device");
