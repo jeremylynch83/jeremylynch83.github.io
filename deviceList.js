@@ -79,7 +79,7 @@ deviceList =
         "name": "Magic 1.5 ",
         "manufacturer": "Balt",
         "url1": "https://balt-usa.com/wp-content/uploads/2018/02/MKTG_063_MAGICCard_RevD_2-002.pdf",
-        "minid": 0.01,
+        "minid": 0.011,
         "maxod": 0.03543,
         "length": "160 / 165"
     },
@@ -133,6 +133,7 @@ deviceList =
         "name": "Eclipse 6 ",
         "manufacturer": "Balt",
         "url1": "https://balt-usa.com/products/eclipse-2l-dual-lumen-balloon-catheter/",
+        "dmso": "yes",
         "minid": 0.017,
         "maxod": 0.02625,
         "length": "?"
@@ -521,6 +522,7 @@ deviceList =
         "type": "Microcatheter",
         "name": "Apollo",
         "manufacturer": "Medtronic",
+        "dmso": "yes",
         "minid": 0.013,
         "maxod": 0.036,
         "length": "165",
@@ -531,6 +533,7 @@ deviceList =
         "type": "Microcatheter",
         "name": "Echelon 10 ",
         "manufacturer": "Medtronic",
+        "dmso": "yes",
         "minid": 0.017,
         "maxod": 0.028,
         "length": "150",
@@ -540,6 +543,7 @@ deviceList =
         "type": "Microcatheter",
         "name": "Echelon 14 ",
         "manufacturer": "Medtronic",
+        "dmso": "yes",
         "minid": 0.017,
         "maxod": 0.031496,
         "length": "150",
@@ -549,6 +553,7 @@ deviceList =
         "type": "Microcatheter",
         "name": "Marathon",
         "manufacturer": "Medtronic",
+        "dmso": "yes",
         "minid": 0.013,
         "maxod": 0.036,
         "length": "165",
@@ -558,24 +563,20 @@ deviceList =
         "type": "Microcatheter",
         "name": "Marksman ",
         "manufacturer": "Medtronic",
+        "url1": "https://europe.medtronic.com/xd-en/healthcare-professionals/products/neurological/access-delivery-nv/marksman.html",
+        "ifu": "https://europe.medtronic.com/xd-en/healthcare-professionals/products/neurological/access-delivery-nv/marksman/indications-safety-warnings.html",
         "minid": 0.027,
         "maxod": 0.042,
         "length": "105 / 135 / 150 / 160"
     },
     {
         "type": "Microcatheter",
-        "name": "Orion-21 Medtronic",
-        "manufacturer": "Medtronic",
-        "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
-        "minid": 0.021,
-        "maxod": 0.034,
-        "length": "150"
-    },
-    {
-        "type": "Microcatheter",
         "name": "Rebar-027 Medtronic",
         "manufacturer": "Medtronic",
+        "url1": "https://www.medtronic.com/us-en/healthcare-professionals/products/cardiovascular/peripheral-embolization/rebar.html",
         "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
+        "ifu": "https://www.medtronic.com/us-en/healthcare-professionals/products/cardiovascular/peripheral-embolization/rebar/indications-safety-warnings.html",
+        "dmso": "yes",
         "minid": 0.027,
         "maxod": 0.037,
         "length": "130 / 145"
@@ -584,7 +585,9 @@ deviceList =
         "type": "Microcatheter",
         "name": "Rebar-10 Medtronic",
         "manufacturer": "Medtronic",
+        "url1": "https://europe.medtronic.com/content/dam/medtronic-com/xd-en/c/od08014-nv-access-delivery/pdfs/Rebar_IFU.pdf",
         "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
+        "dmso": "yes",
         "minid": 0.015,
         "maxod": 0.03,
         "length": "153"
@@ -593,7 +596,9 @@ deviceList =
         "type": "Microcatheter",
         "name": "Rebar-14 Medtronic",
         "manufacturer": "Medtronic",
+        "url1": "https://europe.medtronic.com/content/dam/medtronic-com/xd-en/c/od08014-nv-access-delivery/pdfs/Rebar_IFU.pdf",
         "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
+        "dmso": "yes",
         "minid": 0.017,
         "maxod": 0.032,
         "length": "153"
@@ -602,25 +607,21 @@ deviceList =
         "type": "Microcatheter",
         "name": "Rebar-18 Medtronic",
         "manufacturer": "Medtronic",
+        "url1": "https://www.medtronic.com/us-en/healthcare-professionals/products/cardiovascular/peripheral-embolization/rebar.html",
         "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
+        "ifu": "https://www.medtronic.com/us-en/healthcare-professionals/products/cardiovascular/peripheral-embolization/rebar/indications-safety-warnings.html",
+        "dmso": "yes",
         "minid": 0.021,
         "maxod": 0.036,
         "length": "153"
     },
     {
-        "type": "Microcatheter",
-        "name": "Ultra Flow ",
-        "manufacturer": "Medtronic",
-        "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
-        "minid": 0.013,
-        "maxod": 0.039,
-        "length": "165"
-    },
-    {
         "type": "Balloon",
         "name": "HyperForm 3 mm ",
         "manufacturer": "Medtronic",
+        "url1": "https://web.archive.org/web/20210405011659/http://www.forecastscience.com/download/forecastscience_com/HyperForm%20brochure.pdf",
         "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
+        "dmso": "yes",
         "minid": 0.011,
         "maxod": 0.036,
         "length": "150"
@@ -629,7 +630,9 @@ deviceList =
         "type": "Balloon",
         "name": "HyperForm 4 mm ",
         "manufacturer": "Medtronic",
+        "url1": "https://web.archive.org/web/20210405011659/http://www.forecastscience.com/download/forecastscience_com/HyperForm%20brochure.pdf",
         "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
+        "dmso": "yes",
         "minid": 0.011,
         "maxod": 0.036,
         "length": "150"
@@ -638,7 +641,9 @@ deviceList =
         "type": "Balloon",
         "name": "HyperForm 7 mm ",
         "manufacturer": "Medtronic",
+        "url1": "https://web.archive.org/web/20210405011659/http://www.forecastscience.com/download/forecastscience_com/HyperForm%20brochure.pdf",
         "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
+        "dmso": "yes",
         "minid": 0.011,
         "maxod": 0.0394,
         "length": "150"
@@ -647,7 +652,9 @@ deviceList =
         "type": "Balloon",
         "name": "HyperGlide 3mm ",
         "manufacturer": "Medtronic",
+        "url1": "https://web.archive.org/web/20210405011659/http://www.forecastscience.com/download/forecastscience_com/HyperForm%20brochure.pdf",
         "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
+        "dmso": "yes",
         "minid": 0.011,
         "maxod": 0.0367,
         "length": "150"
@@ -656,7 +663,9 @@ deviceList =
         "type": "Balloon",
         "name": "HyperGlide 4mm ",
         "manufacturer": "Medtronic",
+        "url1": "https://web.archive.org/web/20210405011659/http://www.forecastscience.com/download/forecastscience_com/HyperForm%20brochure.pdf",
         "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
+        "dmso": "yes",
         "minid": 0.011,
         "maxod": 0.0367,
         "length": "150"
@@ -665,7 +674,9 @@ deviceList =
         "type": "Balloon",
         "name": "HyperGlide 5mm ",
         "manufacturer": "Medtronic",
+        "url1": "https://web.archive.org/web/20210405011659/http://www.forecastscience.com/download/forecastscience_com/HyperForm%20brochure.pdf",
         "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
+        "dmso": "yes",
         "minid": 0.011,
         "maxod": 0.0367,
         "length": "150"
@@ -750,6 +761,7 @@ deviceList =
         "name": "Headway Duo 167 cm ",
         "manufacturer": "Microvention",
         "url1": "https://www.microvention.com/product/headway",
+        "dmso": "yes",
         "minid": 0.013,
         "maxod": 0.027559,
         "length": "167"
@@ -759,6 +771,7 @@ deviceList =
         "name": "Headway-17 ",
         "manufacturer": "Microvention",
         "url1": "https://www.microvention.com/product/headway",
+        "dmso": "yes",
         "minid": 0.017,
         "maxod": 0.032,
         "length": "150"
@@ -786,6 +799,7 @@ deviceList =
         "name": "Scepter C 4 mm ",
         "manufacturer": "MicroVention",
         "url1": "https://www.microvention.com/product/scepter",
+        "dmso": "yes",
         "minid": 0.0165,
         "maxod": 0.037,
         "length": "150"
@@ -795,6 +809,7 @@ deviceList =
         "name": "Scepter XC 4 mm ",
         "manufacturer": "MicroVention",
         "url1": "https://www.microvention.com/product/scepter",
+        "dmso": "yes",
         "minid": 0.0165,
         "maxod": 0.037,
         "length": "150"
@@ -804,6 +819,7 @@ deviceList =
         "name": "Headway Duo 156 cm ",
         "manufacturer": "Microvention",
         "url1": "https://www.microvention.com/product/headway",
+        "dmso": "yes",
         "minid": 0.0165,
         "maxod": 0.02756,
         "length": "156"
@@ -1100,6 +1116,7 @@ deviceList =
         "name": "XT-27 ",
         "manufacturer": "Stryker",
         "url1": "https://www.strykerneurovascular.com/us/products/access/excelsior-xt-27-microcatheter",
+        "ifu": "https://www.strykerneurovascular.com/downloads/NV00009611_AA_V3.pdf",
         "minid": 0.027,
         "maxod": 0.038,
         "length": "135 / 150"
@@ -1109,6 +1126,7 @@ deviceList =
         "name": "XT-17 ",
         "manufacturer": "Stryker",
         "url1": "https://www.strykerneurovascular.com/us/products/access/excelsior-xt-17-microcatheter",
+        "dmso": "yes",
         "minid": 0.017,
         "maxod": 0.03,
         "length": "150"
@@ -1337,6 +1355,7 @@ deviceList =
         "name": "Scepter Mini ",
         "manufacturer": "Microvention",
         "url1": "https://www.accessdata.fda.gov/cdrh_docs/pdf18/K182829.pdf",
+        "dmso": "yes",
         "minid": 0.009,
         "maxod": 0.03675,
         "length": "?"
@@ -1540,6 +1559,7 @@ deviceList =
         "name": "Sonic 1.2 ",
         "manufacturer": "Balt",
         "url1": "http://www.1amedical.org/wordpress/wp-content/uploads/2020/03/201808-SONIC.pdf",
+        "dmso": "yes",
         "minid": 0.009055118,
         "maxod": 0.015748,
         "length": "167 / 190",
@@ -1550,6 +1570,7 @@ deviceList =
         "name": "Sonic 1.5 ",
         "manufacturer": "Balt",
         "url1": "http://www.1amedical.org/wordpress/wp-content/uploads/2020/03/201808-SONIC.pdf",
+        "dmso": "yes",
         "minid": 0.01181102,
         "maxod": 0.019685,
         "length": 167
@@ -1931,6 +1952,7 @@ deviceList =
         "name": "Onyx 18 / 34 ",
         "manufacturer": "Medtronic",
         "url1": "https://www.medtronic.com/us-en/healthcare-professionals/products/neurological/avm-embolization/onyx-liquid-embolic.html",
+        "ifu": "https://www.medtronic.com/us-en/healthcare-professionals/products/neurological/avm-embolization/onyx-liquid-embolic/indications-safety-warnings.html",
         "minid": 0,
         "maxod": 0.009055118,
         "length": "?"
@@ -1948,7 +1970,7 @@ deviceList =
         "type": "Liquid Embolic",
         "name": "Phil ",
         "manufacturer": "Microvention",
-        "url1": "https://baltspainmedical.es/wp-content/uploads/2019/05/SQUID.pdf",
+        "url1": "https://web.archive.org/web/20210405012855/https://microvention.s3.amazonaws.com/static/product_specification_sheet_EMEA/PHIL_Spec_Sheet_International_MM387I_Rev.A_1015_9595b7.pdf",
         "minid": 0,
         "maxod": 0.009055118,
         "length": "?"
@@ -2075,7 +2097,16 @@ deviceList =
     },
     {
         "type": "Stent",
-        "name": "FRED ",
+        "name": "FRED 21 (2.5 - 3 mm diameter)",
+        "manufacturer": "Microvention",
+        "url1": "https://www.microvention.com/product/fred-family",
+        "minid": 0,
+        "maxod": 0.02,
+        "length": "?"
+    },
+    {
+        "type": "Stent",
+        "name": "FRED 27 (3.5 - 5.5 mm diameter)",
         "manufacturer": "Microvention",
         "url1": "https://www.microvention.com/product/fred-family",
         "minid": 0,

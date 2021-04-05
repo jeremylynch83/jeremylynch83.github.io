@@ -187,11 +187,6 @@
 
 	<script>
 
-
-//Vue.use(BootstrapVue)
-//Vue.use(BootstrapVueIcons)
-
-
 		/* GENERIC FUNCTIONS */
 
 		function strip_man(text) {
@@ -239,6 +234,8 @@
 		}
 
 		function check_compatibility(parent, child) {
+			var comment = "";
+
 			parent_str = format_name(parent.name); 
 			child_str = format_name(child.name);
 
@@ -249,7 +246,20 @@
 				var child_incompat = parent.incompatibility.split(/\//);
 			}
 
-			return ""; 
+			//DMSO
+
+			if (child_str.search("onyx") != -1 || child_str.search("phil") != -1 || child_str.search("squid") != -1) {
+				if (parent.dmso != null) {
+					if (parent.dmso != "yes") {
+						comment += parent.name + " is not DMSO compatible. "; 
+					}
+				}
+				else {
+					comment += parent.name + " is not DMSO compatible. "; 
+				}
+			}
+
+			return comment; 
 		}
 
 		function compare_list_lengths(parent_str, child_str, parent_name, child_name) { 
