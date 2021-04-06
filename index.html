@@ -123,16 +123,20 @@
 
 							<div class="text-right">
 							<b-button-group  >
+								<b-dropdown variant="outline-primary">
+									<template #button-content >
+										<b-icon icon="plus" ></b-icon>
+										Add
+									  </template>
+									<b-dropdown-item variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.9em;" @click="addInput('inside', 'Enter device e.g. catheter, balloon, stent, wire ...', 'guide catheters', n.id)">Add Inside</b-dropdown-item>
+									
+									<b-dropdown-item  class="btn btn-sm  py-0" style="font-size: 0.9em;" variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.8em;" @click="addInput('beside', 'Enter device e.g. catheter, balloon, stent, wire ...', 'guide catheters', n.id)">New device beside</b-dropdown-item>
+								</b-dropdown>
 
-								<b-button variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.9em;" @click="addInput('inside', 'Enter device e.g. catheter, balloon, stent, wire ...', 'guide catheters', n.id)">
-									<b-icon icon="plus" scale="0.8" variant="success"></b-icon>
-
-									Add</b-button>
-								<!--<b-button  variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.8em;" @click="addInput('beside', 'Enter device e.g. catheter, balloon, stent, wire ...', 'guide catheters', n.id)">New device beside</b-button>-->
-								<b-button  variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.9em;" @click="removeInput(n.id)">
+								<b-button  variant="outline-primary" class="btn btn-sm  py-0" style="font-size: 0.9em;" @click="removeInput(n.id)">
 									<b-icon icon="x-circle" scale="0.8" variant="danger"></b-icon>
 									Remove</b-button>
-								<b-button variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.9em;" @click="info(n.id)">
+								<b-button variant="outline-primary" class="btn btn-sm  py-0" style="font-size: 0.9em;" @click="info(n.id)">
 									<b-icon icon="info-circle" scale="0.8" variant="info"></b-icon>
 									Info</b-button>
 
