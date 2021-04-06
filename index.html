@@ -53,7 +53,7 @@
 				</b-navbar-nav>
 
 				<b-navbar-nav class="ml-auto">
-					<b-nav-item right href="#">Settings</b-nav-item>
+					<!--<b-nav-item right href="#">Settings</b-nav-item>-->
 
 					<b-nav-item-dropdown right>
 
@@ -110,7 +110,21 @@
 		<b-container>
 
 <h3></h3>			
-			<h3>Select devices</h3>
+
+<div id = "intro_text">
+	<b-container  fluid>
+		<b-row align-v="center" style="height: 200px; ">
+			<b-col class="intro_text">
+				<p>
+				</p>
+				<p>A tool providing information about neurointerventional devices including whether they fit inside each other. </p>
+			</b-col>
+		  </b-row>
+		
+	</b-container>
+</div>
+
+<p></p><p></p>
 			<template v-for="n in deviceInputs"  >
 				<b-form-group  :label-cols="n.hierarchy"  :key="n.id">
 	
@@ -152,7 +166,7 @@
 
 		<b-container style="display: none" id="result_container">
 
-			<h3>Results</h3>
+			<h3 class="results">Results</h3>
 			<strong>
 				<p id="result">You need to enter some devices ;)</p>
 			</strong>
@@ -547,6 +561,9 @@
 				},
 
 				updateSizer: function () {
+
+					document.getElementById("intro_text").style.display = "none";
+
 					var result = checkSizes();
 					if (result == "") {
 						//document.getElementById("result").style.color = "rgb(0, 153, 51)";
@@ -556,7 +573,7 @@
 						//document.getElementById("result").style.color = "rgb(175,0,42)"
 					}
 
-					if (this.id_count == 1) document.getElementById("result").innerHTML = "Enter one or more devices inside this one by clicking the Add button. "
+					if (this.id_count == 1) document.getElementById("result").innerHTML = "Enter one or more devices inside the one you have entered by clicking the Add button. "
 					else document.getElementById("result").innerHTML = result;
 
 					this.drawDeviceTable();
