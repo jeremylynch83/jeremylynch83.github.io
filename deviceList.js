@@ -522,6 +522,8 @@ deviceList =
         "type": "Microcatheter",
         "name": "Apollo",
         "manufacturer": "Medtronic",
+        "url1": "https://www.medtronic.com/uk-en/healthcare-professionals/products/neurological/avm-embolization/apollo-marathon.html",
+        "ifu": "https://www.medtronic.com/content/dam/medtronic-com/xd-en/c/od08014-nv-access-delivery/pdfs/Apollo_IFU.pdf",
         "dmso": "yes",
         "minid": 0.013,
         "maxod": 0.036,
@@ -533,6 +535,8 @@ deviceList =
         "type": "Microcatheter",
         "name": "Echelon 10 ",
         "manufacturer": "Medtronic",
+        "url1": "https://europe.medtronic.com/xd-en/healthcare-professionals/products/neurological/access-delivery-nv/echelon.html",
+        "ifu": "https://europe.medtronic.com/content/dam/medtronic-com/xd-en/c/od08014-nv-access-delivery/pdfs/Echelon_IFU.pdf",
         "dmso": "yes",
         "minid": 0.017,
         "maxod": 0.028,
@@ -543,6 +547,8 @@ deviceList =
         "type": "Microcatheter",
         "name": "Echelon 14 ",
         "manufacturer": "Medtronic",
+        "url1": "https://europe.medtronic.com/xd-en/healthcare-professionals/products/neurological/access-delivery-nv/echelon.html",
+        "ifu": "https://europe.medtronic.com/content/dam/medtronic-com/xd-en/c/od08014-nv-access-delivery/pdfs/Echelon_IFU.pdf",
         "dmso": "yes",
         "minid": 0.017,
         "maxod": 0.031496,
@@ -553,6 +559,8 @@ deviceList =
         "type": "Microcatheter",
         "name": "Marathon",
         "manufacturer": "Medtronic",
+        "url1": "https://www.medtronic.com/uk-en/healthcare-professionals/products/neurological/avm-embolization/apollo-marathon.html",
+        "ifu": "https://www.medtronic.com/content/dam/medtronic-com/xd-en/c/od08014-nv-access-delivery/pdfs/Marathon_IFU.pdf",
         "dmso": "yes",
         "minid": 0.013,
         "maxod": 0.036,
@@ -1144,6 +1152,8 @@ deviceList =
         "type": "Intermediate Catheter",
         "name": "Catalyst 7 Fr",
         "manufacturer": "Stryker",
+        "url1": "https://info.stryker.com/AXS-Catalyst-7",
+        "ifu": "https://www.stryker.com/content/dam/stryker/neurovascular/products/axs-catalyst-5/resources/AXS-Catalyst_DFU_US_Sep19.pdf",
         "minid": 0.068,
         "maxod": 0.0825,
         "length": "115 / 125 / 132"
@@ -1189,6 +1199,7 @@ deviceList =
         "type": "Guide Catheter",
         "name": "AXS Infinity LS Plus ",
         "manufacturer": "Stryker",
+        "url1": "https://www.stryker.com/us/en/neurovascular/products/axs-infinity-plus.html",
         "minid": 0.091,
         "maxod": 0.105,
         "length": "70 / 80 / 90"
@@ -1206,6 +1217,7 @@ deviceList =
         "type": "Intermediate Catheter",
         "name": "AXS Vecta 74 ",
         "manufacturer": "Stryker",
+        "url1": "https://www.stryker.com/us/en/neurovascular/products/axs-vecta-intermediate-catheter.html",
         "minid": 0.074,
         "maxod": 0.087,
         "length": "115 / 125 / 132"
@@ -1393,7 +1405,7 @@ deviceList =
         "manufacturer": "Microvention",
         "url1": "https://www.terumois.com/products/guidewires/glidewire.html",
         "minid": 0,
-        "maxod": 0.014,
+        "maxod": 0.035,
         "length": "150 / 180 / 300"
     },
     {
@@ -2301,12 +2313,110 @@ deviceList =
         "length": 160
     },
     {
-        "type": "Coil",
+        "type": "Intrasaccular Device",
         "name": "WEB SL/SLS all sizes 17 system",
         "manufacturer": "Microvention",
         "url1": "https://www.microvention.com/product/web-family",
         "minid": 0,
         "maxod": 0.0165,
+        "length": "?"
+    },
+    {
+        "type": "Guide Catheter",
+        "name": "RIST 079",
+        "manufacturer": "Medtronic",
+        "minid": 0.079,
+        "maxod": 0.093,
+        "length": "95 / 100 / 105"
+    },
+    {
+        "type": "Select Catheter",
+        "name": "RST Selective Catheter Berenstein/Sim2",
+        "manufacturer": "Medtronic",
+        "minid": 0.04,
+        "maxod": 0.07,
+        "length": "120 / 130"
+    },
+    {
+        "type": "Wire",
+        "name": "pORTAL 14",
+        "manufacturer": "Phenox",
+        "url1": "https://phenox.net/international/uploads/KIF/pORTAL_KIF-0028C_LR.pdf",
+        "url2": "https://phenox.net/international/portal-14-microguidewire/",
+        "minid": 0,
+        "maxod": 0.014,
+        "length": 205,
+        "comments": "There is a \"EXT\" extension wire"
+    },
+    {
+        "type": "Stent Retriever ",
+        "name": "pRESET 4x20 /5x40 / 6x30 ",
+        "manufacturer": "Phenox",
+        "url1": "https://phenox.net/international/uploads/KIF/pRESET_KIF-0005G-WEB.pdf",
+        "minid": 0,
+        "maxod": 0.02,
+        "length": "?"
+    },
+    {
+        "type": "Stent Retriever ",
+        "name": "pRESET LITE",
+        "manufacturer": "Phenox",
+        "url1": "https://phenox.net/international/uploads/KIF/pRESET_KIF-0005G-WEB.pdf",
+        "minid": 0,
+        "maxod": 0.0155,
+        "length": "?"
+    },
+    {
+        "type": "Balloon",
+        "name": "pITA RX Neuro PTA Balloon Catheter",
+        "manufacturer": "Phenox",
+        "url1": "https://phenox.net/international/uploads/KIF/KIF-0031C.pdf",
+        "url2": "https://phenox.net/international/pita-rx-neuro-pta-balloon-catheter/",
+        "maxod": 0.032808,
+        "length": 160
+    },
+    {
+        "type": "Stent",
+        "name": "p64 MW Flow Modulation Device (all sizes)",
+        "manufacturer": "Phenox",
+        "url1": "https://phenox.net/international/uploads/KIF/pFMD-KIF-0057C_v2.pdf",
+        "minid": 0,
+        "maxod": 0.02,
+        "length": "?"
+    },
+    {
+        "type": "Stent",
+        "name": "p48 MW Flow Modulation Device (all sizes)",
+        "manufacturer": "Phenox",
+        "url1": "https://phenox.net/international/uploads/KIF/pFMD-KIF-0057C_v2.pdf",
+        "minid": 0,
+        "maxod": 0.02,
+        "length": "?"
+    },
+    {
+        "type": "Stent",
+        "name": "p64 Flow Modulation Device (all sizes)",
+        "manufacturer": "Phenox",
+        "url1": "https://phenox.net/international/uploads/KIF/p64_KIF-0008G_LR.pdf",
+        "minid": 0,
+        "maxod": 0.026,
+        "length": "?"
+    },
+    {
+        "type": "Intrasaccular Device",
+        "name": "pCONUS 1 / 2 / mini",
+        "manufacturer": "Phenox",
+        "url1": "https://phenox.net/international/uploads/KIF/pCONUS_KIF-0020J_LR.pdf",
+        "minid": 0,
+        "maxod": 0.02
+    },
+    {
+        "type": "Coil",
+        "name": "Avenir Wallaby Coil System\n",
+        "url1": "https://phenox.net//international/uploads/KIF/Avenir-KIF-0075A-WEB.pdf",
+        "url2": "https://phenox.net/international/avenir-wallaby-coil-system/",
+        "minid": 0,
+        "maxod": 0.055,
         "length": "?"
     }
 ]
