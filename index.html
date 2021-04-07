@@ -20,18 +20,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 	<title>NeuroTool: Neurointervention Device Sizer</title>
-	<link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
-	<link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css" />
-	<link href="https://unpkg.com/vue-bootstrap-typeahead/dist/VueBootstrapTypeahead.css" rel="stylesheet" />
-	<link type="text/css" rel="stylesheet" href="my.css" />
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+	<link type="text/css" rel="stylesheet" href="css/bootstrap-vue.css" />
+	<link href="css/VueBootstrapTypeahead.css" rel="stylesheet" />
+	<link type="text/css" rel="stylesheet" href="css/my.css" />
 	<!-- Load polyfills to support older browsers -->
 	<script src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver"></script>
 	<!-- Required scripts -->
-	<script src="https://unpkg.com/vue@latest/dist/vue.js"></script>
-	<script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
-	<script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js"></script>
+	<script src="js/vue.js"></script>
+	<script src="js/bootstrap-vue.js"></script>
+	<script src="js/bootstrap-vue-icons.min.js"></script>
 	<!-- Type Ahead Library -->
-	<script src="https://unpkg.com/vue-bootstrap-typeahead"></script>
+	<script src="js/VueBootstrapTypeahead.umd.min.js"></script>
 	<!-- Device Library -->
 	<script src="deviceList.js"></script>
 	<script src="raphael.js"></script>
@@ -44,7 +44,7 @@
 	<div id="app">
 
 		<b-navbar toggleable="lg" type="dark" variant="info">
-			<b-navbar-brand href="#">NeuroTool<sup>BETA</sup></b-navbar-brand>
+			<b-navbar-brand href="#">NeuroTool</b-navbar-brand>
 
 			<b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -111,7 +111,7 @@
 
 <h3></h3>			
 
-<div id = "intro_text">
+<!--<div id = "intro_text">
 	<b-container  fluid>
 		<b-row align-v="center" style="height: 200px; ">
 			<b-col class="intro_text">
@@ -122,14 +122,22 @@
 		  </b-row>
 		
 	</b-container>
-</div>
+</div>-->
+
 
 <p></p><p></p>
+
+
+<div id = "intro_text">
+	<b-jumbotron  bg-variant="light" style="text-align: center" lead="A tool providing information about neurointerventional devices including whether they fit inside each other.">
+	</b-jumbotron>
+  </div>
+
 			<template v-for="n in deviceInputs"  >
 				<b-form-group  :label-cols="n.hierarchy"  :key="n.id">
 	
 							<vue-bootstrap-typeahead  :key="n.id" :data="devices" :placeholder="n.text" :serializer="item => item.name_man"
-							@hit="updateDevice(n.id, $event); updateSizer()">
+							@hit="updateDevice(n.id, $event); updateSizer()" >
 							</vue-bootstrap-typeahead>
 
 							<div class="text-right" style="color:rgb(124, 124, 124); font-size: 0.9em;">{{n.display_info}}  </div>
