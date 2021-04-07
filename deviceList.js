@@ -2003,7 +2003,7 @@ deviceList =
         "manufacturer": "Cerenovus",
         "url1": "https://www.jnjmedicaldevices.com/en-US/product/galaxy-g3-microcoil",
         "minid": 0,
-        "maxod": 0.012,
+        "maxod": 0.0155,
         "length": "?"
     },
     {
@@ -2012,7 +2012,7 @@ deviceList =
         "manufacturer": "Cerenovus",
         "url1": "https://www.jnjmedicaldevices.com/en-US/product/galaxy-g3-xsft-microcoil",
         "minid": 0,
-        "maxod": 0.012,
+        "maxod": 0.0155,
         "length": "?"
     },
     {
@@ -2021,7 +2021,7 @@ deviceList =
         "manufacturer": "Cerenovus",
         "url1": "https://www.jnjmedicaldevices.com/en-US/product/galaxy-g3-mini-microcoil",
         "minid": 0,
-        "maxod": 0.009,
+        "maxod": 0.0155,
         "length": "?"
     },
     {
