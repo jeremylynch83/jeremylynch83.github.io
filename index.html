@@ -5,14 +5,12 @@
 
 	<!--
 		FEATURES TO IMPLEMENT:
-		* How to use
+		* Info box
 		* Delete running properly
 		* Cross/delete on iphone
 		* Unit convertor
 		* Potential incompatibilities: e.g. Flowgate and ACE/Sofia
 		* Frictionless submission of incompatibility
-		* Download Vue
-		* Phenox kit
 
 	-->
 
@@ -117,7 +115,7 @@
 			<b-col class="intro_text">
 				<p>
 				</p>
-				<p>A tool providing information about neurointerventional devices including whether they fit inside each other. </p>
+				<p>Providing information about neurointerventional devices including whether they fit inside each other. </p>
 			</b-col>
 		  </b-row>
 		
@@ -150,7 +148,8 @@
 										<b-icon icon="plus" ></b-icon>
 										Add
 									  </template>
-									<b-dropdown-item variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.9em;" @click="addInput('inside', 'Enter device e.g. catheter, balloon, stent, wire ...', 'guide catheters', n.id)">New device inside</b-dropdown-item>
+									<b-dropdown-item variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.9em;" @click="addInput('inside', 'Enter device e.g. catheter, balloon, stent, wire ...', 'guide catheters', n.id); 
+									">New device inside</b-dropdown-item>
 									
 									<b-dropdown-item  class="btn btn-sm  py-0" style="font-size: 0.9em;" variant="outline-secondary" class="btn btn-sm  py-0" style="font-size: 0.8em;" @click="addInput('beside', 'Enter device e.g. catheter, balloon, stent, wire ...', 'guide catheters', n.id)">New device beside</b-dropdown-item>
 								</b-dropdown>
@@ -592,6 +591,8 @@
 
 				},
 				addInput: function (where, text, type, parent) {
+
+
 
 					id = "device" + this.id_count;
 					this.id_count++;

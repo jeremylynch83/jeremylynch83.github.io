@@ -1,6 +1,5 @@
 deviceList = 
 
-
 [
     {
         "type": "Guide Catheter",
@@ -432,16 +431,9 @@ deviceList =
     },
     {
         "type": "Guide Catheter",
-        "name": "7F Shuttle ",
+        "name": "6F Flexor Shuttle ",
         "manufacturer": "Cook Medical",
-        "minid": 0.074,
-        "maxod": 0.09186,
-        "length": 90
-    },
-    {
-        "type": "Guide Catheter",
-        "name": "8F Shuttle ",
-        "manufacturer": "Cook Medical",
+        "url1": "https://www.cookmedical.com/products/di_ksawsh_webds/",
         "minid": 0.087,
         "maxod": 0.10499,
         "length": "80 / 90"
@@ -1072,7 +1064,7 @@ deviceList =
     },
     {
         "type": "Microcatheter",
-        "name": "Excelsior SL-10 ",
+        "name": "Excelsior SL 10 ",
         "manufacturer": "Stryker",
         "url1": "https://www.strykerneurovascular.com/us/products/access/excelsior-microcatheter",
         "minid": 0.0165,
@@ -2350,7 +2342,7 @@ deviceList =
     },
     {
         "type": "Stent Retriever ",
-        "name": "pRESET 4x20 /5x40 / 6x30 ",
+        "name": "pRESET 4x20 / 5x40 / 6x30 ",
         "manufacturer": "Phenox",
         "url1": "https://phenox.net/international/uploads/KIF/pRESET_KIF-0005G-WEB.pdf",
         "minid": 0,
@@ -2418,5 +2410,29 @@ deviceList =
         "minid": 0,
         "maxod": 0.055,
         "length": "?"
+    },
+    {
+        "type": "Sheath",
+        "name": "Terumo Pinnacle 5F Introducer Sheath",
+        "manufacturer": "Microvention",
+        "minid": 0.066617,
+        "maxod": 0.091864,
+        "length": 10
+    },
+    {
+        "type": "Sheath",
+        "name": "Terumo Pinnacle 6F Introducer Sheath",
+        "manufacturer": "Microvention",
+        "minid": 0.07974,
+        "maxod": 0.104987,
+        "length": 10
+    },
+    {
+        "type": "Sheath",
+        "name": "Terumo Pinnacle 8F Introducer Sheath",
+        "manufacturer": "Microvention",
+        "minid": 0.114987,
+        "maxod": 0.131234,
+        "length": 10
     }
 ]
