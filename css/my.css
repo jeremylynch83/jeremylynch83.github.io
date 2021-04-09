@@ -18,3 +18,10 @@
 	border-top-color: #f8f8f8;
 	color: #343434;
 }
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+  }
