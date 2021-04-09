@@ -58,16 +58,13 @@
 						<template #button-content>
 							Help
 						</template>
-						<b-dropdown-item v-b-modal.about_modal>About</b-dropdown-item>
+						<b-dropdown-item v-b-modal.help_modal>About</b-dropdown-item>
 					</b-nav-item-dropdown>
 				</b-navbar-nav>
 			</b-collapse>
 		</b-navbar>
 
-		<b-modal id="about_modal" title="NeuroTool: Neurointervention Device Sizer" ok-only>
-			<p>A tool to help select the right catheters for neurointerventional procedures.</p>
-			<p>Written by Dr Jeremy Lynch. With thanks to Dr Patrick Nicholson. </p>
-		</b-modal>
+
 
 		<b-modal id="feedback_modal" title="Feedback" ok-only>
 			<div id ="feedback">
@@ -111,25 +108,39 @@
 
 <!--<div id = "intro_text">
 	<b-container  fluid>
-		<b-row align-v="center" style="height: 200px; ">
+		<b-row align-v="center" style=" ">
 			<b-col class="intro_text">
-				<p>
-				</p>
-				<p>Providing information about neurointerventional devices including whether they fit inside each other. </p>
+			
+			
+				<p>Neurointerventional device information and compatibility. </p>
 			</b-col>
 		  </b-row>
 		
 	</b-container>
 </div>-->
 
-
 <p></p><p></p>
 
 
 <div id = "intro_text">
-	<b-jumbotron  bg-variant="light" style="text-align: center" lead="A tool providing information about neurointerventional devices including whether they fit inside each other.">
+	<b-jumbotron  bg-variant="light" style="text-align: center" lead="Providing neurointerventional device information and  compatibility. ">
+		<b-button variant="primary" v-b-modal.help_modal>Help</b-button>
 	</b-jumbotron>
   </div>
+
+
+  <b-modal id="help_modal" title="NeuroTool: Help" ok-only>
+	<p>A tool to help select the right catheters for neurointerventional procedures.</p>
+	<h4>How to use</h4>
+	<p>Start to type the device you are interested in the search box and then select from the list that pops up.</p>
+	<img src="img/help1.png"   width="50%" > 
+	<p>Insert a device inside this one by selecting "Add inside". You can also view device information by selecting "Info". </p>
+	<img src="img/help2.png"   width="50%" > 
+	<p>Further devices can be inserted either inside or beside this device using "Add inside" or "Add beside". Under Results you will see whether the devices are compatible in terms of diameter and length. If there are incompatibilities then a message will appear describing the problem.  </p>
+
+	<img src="img/help3.png"   width="50%" > 
+
+</b-modal>
 
 			<template v-for="n in deviceInputs"  >
 				<b-form-group  :label-cols="n.hierarchy"  :key="n.id">
