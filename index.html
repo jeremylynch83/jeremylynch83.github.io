@@ -122,12 +122,14 @@
 
 <p></p><p></p>
 
+<transition name="slide-fade">
 
 <div id = "intro_text" v-show="deviceInputs.length ==1 && deviceInputs[0].active == null">
 	<b-jumbotron  bg-variant="light" style="text-align: center" lead="Providing neurointerventional device information and  compatibility. ">
 		<b-button variant="primary" v-b-modal.help_modal>Help</b-button>
 	</b-jumbotron>
   </div>
+</transition>
 
 
   <b-modal id="help_modal" title="NeuroTool: Help" ok-only>
@@ -187,11 +189,18 @@
 			<div id="inputs"></div>
 		</b-container>
 
-		<b-container style="display: none" id="result_container">
+		<b-container  v-show="deviceInputs.length == 1 && deviceInputs[0].active != null">
+			<h3>Tip</h3>
+			<strong>
+				<p>Add another device inside this one by seleting Add → New device inside</p>
+			</strong>
+		</b-container>
+
+		<b-container  id="result_container" v-show="deviceInputs.length >1 && deviceInputs[0].active != null && deviceInputs[1].active != null">
 
 			<h3 class="results">Results</h3>
 			<strong>
-				<p id="result">You need to enter some devices ;)</p>
+				<p id="result"></p>
 			</strong>
 			<div id="details" style="color:rgb(179, 179, 179)" ></div>
 			<b-button size="sm" variant="danger" @click="" v-b-modal.feedback_modal>
@@ -199,29 +208,15 @@
 			</b-button>
 			<p></p>
 
-			<b-table  hover :items="device_items">	
-			
-				  <template #cell(name)="row">
-					<b-button size="sm" @click="info(row.item, row.index, $event.target)" >
-						
-							{{ row.item.Name }}
-						  
-					</b-button>
-				  </template>
-
-		
-
-			</b-table>
-
 			<div id="more" ></div>
-
 			<div id="paper"></div>
-
 			<p></p>
-			<p style="font-size: 0.8em;">Note: This tool is in development and there may occasionally be inaccuracies in results. Some of the dimensions given may be estimated in cases where manufacturers do not provide exact measurements. <b-link href="mailto: jeremy.lynch@gmail.com"> Contact us.</b-link>
-			</p>
 
-			
+		</b-container>
+
+		<b-container>
+		<p style="font-size: 0.8em;">Note: This tool is in development and there may occasionally be inaccuracies in results. <b-link href="mailto: jeremy.lynch@gmail.com"> Contact us.</b-link>
+		</p>
 		</b-container>
 
 	</div>
@@ -433,8 +428,6 @@
 						summary = "<p style=\"color:red\">" + summary + child_str + " does not fit in to " + parent_data.name + ". " +  "</p>";
 					}
 					else summary = summary + length_txt + compat_str;
-
-					
 				}
 			}
 			)
@@ -479,8 +472,6 @@
 
 					deviceInputs[index].display_info = 	"OD: " + e.maxod.toFixed(4) + "\". " + "ID: " +  e.minid.toFixed(4) + "\". " + e.length + " cm";
 					deviceInputs[index].active = "true";
-
-
 
 				},
 				drawDiagram: function () {
@@ -597,7 +588,7 @@
 
 					this.drawDiagram();
 
-					document.getElementById("result_container").style = "display:block";
+					//document.getElementById("result_container").style = "display:block";
 
 				},
 				addInput: function (where, text, type, parent) {
