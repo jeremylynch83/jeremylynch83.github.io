@@ -122,14 +122,11 @@
 
 <p></p><p></p>
 
-<transition name="slide-fade">
-
 <div id = "intro_text" v-show="deviceInputs.length ==1 && deviceInputs[0].active == null">
 	<b-jumbotron  bg-variant="light" style="text-align: center" lead="Providing neurointerventional device information and  compatibility. ">
 		<b-button variant="primary" v-b-modal.help_modal>Help</b-button>
 	</b-jumbotron>
   </div>
-</transition>
 
 
   <b-modal id="help_modal" title="NeuroTool: Help" ok-only>
@@ -146,6 +143,7 @@
 </b-modal>
 
 			<template v-for="n in deviceInputs"  >
+				
 				<b-form-group  :label-cols="n.hierarchy"  :key="n.id"       :label="n.hierarchy_text" label-size="sm" > 
 					<!--<label style="color: red;" >{{n.hierarchy_text}}</label>-->
 							
@@ -181,8 +179,6 @@
 
 							</b-button-group>
 							</div>
-						
-
 				</b-form-group>
 			</template>
 
@@ -190,27 +186,28 @@
 		</b-container>
 
 		<b-container  v-show="deviceInputs.length == 1 && deviceInputs[0].active != null">
-			<h3>Tip</h3>
-			<strong>
+			<b-jumbotron  bg-variant="warning"  lead="Tip ">
 				<p>Add another device inside this one by seleting Add → New device inside</p>
-			</strong>
+			</b-jumbotron>
 		</b-container>
+
 
 		<b-container  id="result_container" v-show="deviceInputs.length >1 && deviceInputs[0].active != null && deviceInputs[1].active != null">
 
-			<h3 class="results">Results</h3>
-			<strong>
-				<p id="result"></p>
-			</strong>
-			<div id="details" style="color:rgb(179, 179, 179)" ></div>
-			<b-button size="sm" variant="danger" @click="" v-b-modal.feedback_modal>
-				Disagree with this?
-			</b-button>
-			<p></p>
+				<b-jumbotron  bg-variant="light"  >
+						<p id="result" class="lead"></p>
 
-			<div id="more" ></div>
-			<div id="paper"></div>
-			<p></p>
+					<div id="details" style="color:rgb(179, 179, 179)" ></div>
+					<b-button size="sm" variant="danger" @click="" v-b-modal.feedback_modal>
+						Disagree with this?
+					</b-button>
+					<p></p>
+		
+					<div id="more" ></div>
+					<div id="paper"></div>
+					<p></p>
+						</b-jumbotron>
+
 
 		</b-container>
 
