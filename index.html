@@ -192,7 +192,7 @@
 		</b-container>
 
 
-		<b-container  id="result_container" v-show="deviceInputs.length >1 && deviceInputs[0].active != null && deviceInputs[1].active != null">
+		<b-container  id="result_container" v-show="deviceInputs.length >1 && deviceInputs[0].active != null ">
 
 				<b-jumbotron  bg-variant="light"  >
 						<p id="result" class="lead"></p>
@@ -581,8 +581,10 @@
 						//document.getElementById("result").style.color = "rgb(175,0,42)"
 					}
 
-					if (this.id_count == 1) document.getElementById("result").innerHTML = "Enter one or more devices inside the one you have entered by clicking the Add button. "
-					else document.getElementById("result").innerHTML = result;
+					//if (this.id_count == 1) document.getElementById("result").innerHTML = "Enter one or more devices inside the one you have entered by clicking the Add button. "
+					//else 
+					
+					document.getElementById("result").innerHTML = result;
 
 					this.drawDeviceTable();
 
