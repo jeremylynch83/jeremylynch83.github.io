@@ -472,8 +472,16 @@
 									return i.id == passed;
 								}
 							);
+					
 
-					deviceInputs[index].display_info = 	"OD: " + e.maxod.toFixed(4) + "\". " + "ID: " +  e.minid.toFixed(4) + "\". " + e.length + " cm";
+					deviceInputs[index].display_info = 	"OD: " + e.maxod.toFixed(4) + "."; 
+
+					if (e.minid != null && e.minid != 0) deviceInputs[index].display_info += " ID: " +  e.minid.toFixed(4) + ".";
+					if (e.length != null) deviceInputs[index].display_info += " " + e.length + " cm"; 
+
+					console.log(e.minid);
+
+					
 					deviceInputs[index].active = "true";
 
 				},
