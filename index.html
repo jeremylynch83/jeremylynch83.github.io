@@ -5,6 +5,7 @@
 
 	<!--
 		FEATURES TO IMPLEMENT:
+		* Radial / femoral
 		* What does xxx fit in to ?
 		* Info box
 		* Delete running properly
@@ -31,9 +32,10 @@
 	<script src="js/bootstrap-vue-icons.min.js"></script>
 	<!-- Type Ahead Library -->
 	<script src="js/VueBootstrapTypeahead.umd.min.js"></script>
+	<!-- Graphical Suppor -->
+	<script src="raphael.js"></script>
 	<!-- Device Library -->
 	<script src="deviceList.js"></script>
-	<script src="raphael.js"></script>
 
 
 
@@ -52,8 +54,6 @@
 				</b-navbar-nav>
 
 				<b-navbar-nav class="ml-auto">
-					<!--<b-nav-item right href="#">Settings</b-nav-item>-->
-
 					<b-nav-item-dropdown right>
 
 						<template #button-content>
@@ -65,88 +65,20 @@
 			</b-collapse>
 		</b-navbar>
 
-
-
-		<b-modal id="feedback_modal" title="Feedback" ok-only>
-			<div id ="feedback">
-				<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xbjqrwnz" method="post">
-					<fieldset id="fs-frm-inputs">
-					  <textarea rows="5" name="message" id="message" placeholder="Enter text here." required=""></textarea>
-					  <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-					</fieldset>
-					<input type="submit" value="Submit">
-				  </form>
-				</div>
-			</b-modal>
-
-			<b-modal :id="infoModal.id" :title="infoModal.title" ok-only @hide="resetInfoModal" :static="true">
-				<div id="info_content">
-				</div>
-			  </b-modal>
-
-
-		<b-modal id="new_input" title="NeuroTool: Neurointervention Device Sizer" ok-only>
-			<p>Test. </p>
-			<template #modal-footer="{ ok, cancel, hide }">
-				<b>Custom Footer</b>
-				<!-- Emulate built in modal footer ok and cancel button actions -->
-				<b-button size="sm" variant="success" @click="ok()">
-					OK
-				</b-button>
-				<b-button size="sm" variant="danger" @click="cancel()">
-					Cancel
-				</b-button>
-				<!-- Button with custom close trigger value -->
-				<b-button size="sm" variant="outline-secondary" @click="hide('forget')">
-					Forget it
-				</b-button>
-			</template>
-		</b-modal>
-
 		<b-container>
-
-<h3></h3>			
-
-<!--<div id = "intro_text">
-	<b-container  fluid>
-		<b-row align-v="center" style=" ">
-			<b-col class="intro_text">
-			
-			
-				<p>Neurointerventional device information and compatibility. </p>
-			</b-col>
-		  </b-row>
-		
-	</b-container>
-</div>-->
 
 <p></p><p></p>
 
 <div id = "intro_text" v-show="deviceInputs.length ==1 && deviceInputs[0].active == null">
-	<b-jumbotron  bg-variant="light" style="text-align: center" lead="Providing neurointerventional device information and  compatibility. ">
+	<b-jumbotron  bg-variant="light" style="text-align: center" lead="Independent neurointerventional device information and  compatibility. ">
 		<b-button variant="primary" v-b-modal.help_modal>Help</b-button>
 	</b-jumbotron>
   </div>
 
 
-  <b-modal id="help_modal" title="NeuroTool: Help" ok-only>
-	<p>A tool to help select the right devices for neurointerventional procedures.</p>
-	<h4>How to use</h4>
-	<p>Start to type the device you are interested in the search box and then select from the list that pops up. You can select catheters, wires, stents, balloons, and other devices. </p>
-	<img src="img/help1.png" class="center"  width="75%" > 
-	<p>Insert a device inside this one by selecting "Add" Then "New device inside". You can also view device information by selecting "Info". </p>
-	<img src="img/help2.png"  class="center" width="75%" > 
-	<p>Further devices can be inserted either inside or beside this device using "New device inside" or "New device beside". Under Results you will see whether the devices are compatible in terms of diameter and length. If there are incompatibilities then a message will appear describing the problem.  </p>
-
-	<img src="img/help3.png" class="center"  width="75%" > 
-
-</b-modal>
-
 			<template v-for="n in deviceInputs"  >
 				
-				<b-form-group  :label-cols="n.hierarchy"  :key="n.id"       :label="n.hierarchy_text" label-size="sm" > 
-					<!--<label style="color: red;" >{{n.hierarchy_text}}</label>-->
-							
+				<b-form-group  :label-cols="n.hierarchy"  :key="n.id"       :label="n.hierarchy_text" label-size="sm" > 		
 	
 							<vue-bootstrap-typeahead  :key="n.id" :data="devices" :placeholder="n.text" :serializer="item => item.name_man"
 							@hit="updateDevice(n.id, $event); updateSizer()" >
@@ -160,22 +92,47 @@
 								<b-dropdown variant="success" style="font-size: 0.9em;" right >
 									<template #button-content >
 										<b-icon icon="plus" ></b-icon>
-										Add
+										Fit
 									  </template>
 
-									<b-dropdown-item variant="outline-secondary" class="btn btn-sm  py-0"  @click="addInput('inside', 'Enter device e.g. catheter, balloon, stent, wire ...', 'guide catheters', n.id); 
-									">New device inside</b-dropdown-item>
+								<b-dropdown-item variant="outline-secondary" class="btn btn-sm  py-0"  @click="addInput('inside', 'Enter device e.g. catheter, balloon, stent, wire ...', 'guide catheters', n.id); 
+									">Fit device inside</b-dropdown-item>
 									
-									<b-dropdown-item v-show= "n.hierarchy != 0" class="btn btn-sm  py-0"  variant="outline-secondary" class="btn btn-sm  py-0"  @click="addInput('beside', 'Enter device e.g. catheter, balloon, stent, wire ...', 'guide catheters', n.id)">New device beside</b-dropdown-item>
+								<b-dropdown-item v-show= "n.hierarchy != 0" class="btn btn-sm  py-0"  variant="outline-secondary" class="btn btn-sm  py-0"  @click="addInput('beside', 'Enter device e.g. catheter, balloon, stent, wire ...', 'guide catheters', n.id)">Fit device beside</b-dropdown-item>
+
+								<b-dropdown-item v-show= "n.active != null" class="btn btn-sm  py-0"  variant="outline-secondary" class="btn btn-sm  py-0"  @click="fitLaunch(n.id)">What devices does this fit inside?</b-dropdown-item>
+
 								</b-dropdown>
 
 								<b-button  v-show= "n.hierarchy != 0" variant="danger" class="btn btn-sm  py-0" style="font-size: 0.9em;" @click="removeInput(n.id)">
 									<b-icon icon="x-circle" scale="0.8" ></b-icon>
 									Remove</b-button>
 
-								<b-button v-show= "n.active != null" variant="info" class="btn btn-sm  py-0" style="font-size: 0.9em;" @click="info(n.id)">
-									<b-icon icon="info-circle" scale="0.8" ></b-icon>
-									Info</b-button>
+								<b-dropdown v-show= "n.hierarchy == 0 && n.active != null" variant="secondary" style="font-size: 0.9em;" right >
+									<template #button-content >
+										<b-icon icon="arrow-up-circle" scale="0.8" ></b-icon>
+										{{access}}
+									  </template>
+
+									  <b-dropdown-item  class="btn btn-sm  py-0"  variant="outline-secondary" class="btn btn-sm  py-0"  @click="access = 'Femoral artery'">Femoral artery</b-dropdown-item>
+
+									  <b-dropdown-item  class="btn btn-sm  py-0"  variant="outline-secondary" class="btn btn-sm  py-0"  @click="access = 'Radial artery'">Radial artery</b-dropdown-item>
+
+									  <b-dropdown-item  class="btn btn-sm  py-0"  variant="outline-secondary" class="btn btn-sm  py-0"  @click="access = 'Brachial artery'">Brachial artery</b-dropdown-item>
+
+								</b-dropdown>
+
+								<b-dropdown v-show= "n.active != null" variant="info" style="font-size: 0.9em;" right >
+										<template #button-content >
+											<b-icon icon="info-circle" scale="0.8" ></b-icon>
+											Info
+										  </template>
+	
+										  <b-dropdown-item  class="btn btn-sm  py-0"  variant="outline-secondary" class="btn btn-sm  py-0"  @click="info(n.id)">Device info</b-dropdown-item>
+
+										  <b-dropdown-item  class="btn btn-sm  py-0"  variant="outline-secondary" class="btn btn-sm  py-0"  @click="compareLaunch(n.id)">Compare with ...</b-dropdown-item>
+	
+								</b-dropdown>
 
 							</b-button-group>
 							</div>
@@ -195,30 +152,92 @@
 		<b-container  id="result_container" v-show="deviceInputs.length >1 && deviceInputs[0].active != null ">
 
 				<b-jumbotron  bg-variant="light"  >
-						<p id="result" class="lead"></p>
+				<p id="result" class="lead"></p>
 
-					<div id="details" style="color:rgb(179, 179, 179)" ></div>
-					<b-button size="sm" variant="danger" @click="" v-b-modal.feedback_modal>
+				<div id="details" style="color:rgb(179, 179, 179)" ></div>
+				<b-button size="sm" variant="danger" @click="" v-b-modal.feedback_modal>
 						Disagree with this?
-					</b-button>
-					<b-button size="sm" href="http://neurotool.org/">
+				</b-button>
+				<b-button size="sm" href="http://neurotool.org/">
 						Reset
-					</b-button>
-					<p></p>
+				</b-button>
+				<p></p>
 		
-					<div id="more" ></div>
-					<div id="paper"></div>
-					<p></p>
-						</b-jumbotron>
-
+				<div id="more" ></div>
+				<div id="paper"></div>
+				<p></p>
+				</b-jumbotron>
 
 		</b-container>
 
+		<!---------------- MODALS -------------->
+
+		<b-modal id="help_modal" title="NeuroTool: Help" ok-only>
+			<p>A tool to help select the right devices for neurointerventional procedures.</p>
+			<h4>How to use</h4>
+			<p>Start to type the device you are interested in the search box and then select from the list that pops up. You can select catheters, wires, stents, balloons, and other devices. </p>
+			<img src="img/help1.png" class="center"  width="75%" > 
+			<p>Insert a device inside this one by selecting "Add" Then "New device inside". You can also view device information by selecting "Info". </p>
+			<img src="img/help2.png"  class="center" width="75%" > 
+			<p>Further devices can be inserted either inside or beside this device using "New device inside" or "New device beside". Under Results you will see whether the devices are compatible in terms of diameter and length. If there are incompatibilities then a message will appear describing the problem.  </p>
+			<img src="img/help3.png" class="center"  width="75%" > 
+			</b-modal>
+
 	
+		<b-modal :id="fitModal.id" :title="fitModal.title" ok-only >
+			<p>The <b>{{fitModal.first_device.name}}</b> will fit inside: </p>
+			<p></p><p></p>
+			<div>
+				<b-table sticky-header small :items="fitModal.table" style="font-size: 0.9em; " head-variant="light"></b-table>
+			</div>
+		</b-modal>
+
+		<b-modal id="feedback_modal" title="Feedback" ok-only>
+			<div id ="feedback">
+				<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xbjqrwnz" method="post">
+					<fieldset id="fs-frm-inputs">
+					  <textarea rows="5" name="message" id="message" placeholder="Enter text here." required=""></textarea>
+					  <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+					</fieldset>
+					<input type="submit" value="Submit">
+				  </form>
+				</div>
+			</b-modal>
+
+			<b-modal :id="infoModal.id" :title="infoModal.device.name" ok-only >
+				The <b>{{infoModal.device.name}}</b> is a {{infoModal.device.type}} manufactured by {{infoModal.device.manufacturer}}. 
+				<p></p>
+				<div>
+					<b-table small :items="info_table" style="font-size: 0.9em; " head-variant="light"></b-table>
+				</div>
+				<p v-show= "infoModal.device.url1 != null"> <b>Manufacturer information:  </b> 
+					<b-link :href= "infoModal.device.url1"> Link</b-link> 
+				</p>
+				<p v-show= "infoModal.device.url2 != null"> <b>More information:  </b> 
+					<b-link :href= "infoModal.device.url2"> Link</b-link> 
+				</p>
+				<p v-show= "infoModal.device.ifu != null"> <b>IFU:  </b> 
+					<b-link :href= "infoModal.device.ifu"> Link</b-link> 
+				</p>
+			</b-modal>
+
+			<b-modal :id="compareModal.id" :title="compareModal.title" ok-only >
+
+				<p>Compare <b> {{ compareModal.first_device.name }} </b> with: </p>
+				<vue-bootstrap-typeahead  :data="devices"  :serializer="item => item.name_man"
+					@hit="compare_device($event)" >
+				</vue-bootstrap-typeahead>
+
+				<p></p><p></p>
+					<div>
+						<b-table small :items="compareModal.table" style="font-size: 0.9em; " head-variant="light"></b-table>
+					</div>
+			</b-modal>
+
 
 	
 		<b-container class="footer" >
-								This tool is for educational purposes only. <b-link href="mailto: jeremy.lynch@gmail.com"> Contact us.</b-link>
+			This tool is for educational purposes only. <b-link href="mailto: jeremy.lynch@gmail.com"> Contact us.</b-link>
 		</b-container>
 		  
 
@@ -242,6 +261,13 @@
 		function in_to_fr(inches) {
 			var fr = inches * 76.2;
 			return fr;
+		}
+
+		function in_to_all(inches) {
+			var in_short = inches.toFixed(4) + "\"";
+			var mm = in_to_mm(inches).toFixed(2) + " mm";
+			var fr = in_to_fr(inches).toFixed(1) + " Fr";	
+			return in_short + " (" + mm + ", " + fr + ")";
 		}
 
 		function format_name(name) {
@@ -380,7 +406,6 @@
 				if (parent.hasChildNodes() && (parent.getAttribute("data") != "")) {
 					
 					var parent_data = JSON.parse(parent.getAttribute("data"));
-					//summary = summary + "Parent: " + parent_data.name + ". ";
 
 					children = parent.childNodes;
 					var child_total_od = 0;
@@ -395,7 +420,6 @@
 
 							if (child_data.recommendedParentId != null) {
 								child_total_od = child_total_od + child_data.recommendedParentId ;
-								console.log(child_data.recommendedParentId);
 							}
 							else {
 								child_total_od = child_total_od + child_data.maxod;
@@ -450,17 +474,37 @@
 			},
 			el: '#app',
 			data: {
-				app_box: '',
+				access: 'Femoral artery',
 				devices: deviceList,
-				query: '',
 				deviceInputs: deviceInputs,
 				id_count: 0,
-				device_items: [],
 				infoModal: {
 					id: 'info-modal',
-					title: '',
-					content: ''
-					}
+					device: {
+						name:null,
+						type:null,
+						manufacturer: null,
+						url1: null,
+						url2: null,
+						ifu:null
+						},
+					},
+				fitModal: {
+					id: 'fit-modal',
+					title: 'Fit Inside',
+					first_device: "",
+					table : []
+					},
+				compareModal: {
+				id: 'compare-modal',
+				title: 'Compare',
+				first_device: "",
+				second_device: "",
+				table : []
+				},
+
+				info_table:  [
+						]
 			},
 
 			methods: {
@@ -478,10 +522,6 @@
 
 					if (e.minid != null && e.minid != 0) deviceInputs[index].display_info += " ID: " +  e.minid.toFixed(4) + ".";
 					if (e.length != null) deviceInputs[index].display_info += " " + e.length + " cm"; 
-
-					console.log(e.minid);
-
-					
 					deviceInputs[index].active = "true";
 
 				},
@@ -502,111 +542,104 @@
 				},
 
 				info: function(index) {
-					
 					var deviceInfo = JSON.parse(tree.getElementById(index).getAttribute("data")); 
-					this.infoModal.title = deviceInfo.name;
+					this.infoModal.device = deviceInfo;
+					this.info_table = [];
+
+					this.info_table.push(
+						{
+						'Maximum outer diameter': in_to_all(deviceInfo.maxod),
+						'Minimum inner diameter': in_to_all(deviceInfo.minid), 
+						Lengths: deviceInfo.length + " cm"
+						}
+					);
 					var content = "";
-					if (deviceInfo.type != null) content += "<p><b>Type: </b>" + deviceInfo.type + "</p>";
-					if (deviceInfo.manufacturer != null) content += "<p><b>Manufacturer: </b>" + deviceInfo.manufacturer + "</p>";
-
-					var maxod = deviceInfo.maxod;
-					var maxod_in = maxod.toFixed(4) + "\"";
-					var maxod_mm = in_to_mm(maxod).toFixed(2) + " mm";
-					var maxod_fr = in_to_fr(maxod).toFixed(1) + " Fr";						
-					var minid = deviceInfo.minid;
-					var minid_in = minid.toFixed(4) + "\"";
-					var minid_mm = in_to_mm(minid).toFixed(2) + " mm";
-					var minid_fr = in_to_fr(minid).toFixed(1) + " Fr";
-
-					content += "<p><b>Maximum outer diameter: </b>" + maxod_in + " (" + maxod_mm + ", " + maxod_fr + ")</p>";
-					content += "<p><b>Minimum inner diameter: </b>" + minid_in + " (" + minid_mm + ", " + minid_fr + ")</p>";
-					content += "<p><b>Lengths: </b>" + deviceInfo.length + " cm</p>";
-
 					if (deviceInfo.url1 != null) content += "<p><b>Links: </b><a target=\"_blank\". href=\"" + deviceInfo.url1 + "\">Manufacturer information</a></p>";
+					if (deviceInfo.url2 != null) content += "<p><b>More info: </b><a target=\"_blank\". href=\"" + deviceInfo.url2 + "\">Information</a></p>";
 
-					//content += "<iframe id=\"theFrame\" src=\"" + deviceInfo.url1 + "\" style=\"width:100%;\" frameborder=\"0\"></iframe>";
 
-					document.getElementById("info_content").innerHTML = content;
-					
+					//document.getElementById("info_content").innerHTML = content;
 					this.$root.$emit('bv::show::modal', this.infoModal.id);
 				},
 				resetInfoModal() {
 					this.infoModal.title = ''
-					//this.infoModal.content = ''
 				},
 
-				drawDeviceTable: function() {
+				compareLaunch: function(index) {
+					this.compareModal.first_device = JSON.parse(tree.getElementById(index).getAttribute("data")); 
+					var second_device = index; 
+					this.compareModal.table = [];	
+					this.$root.$emit('bv::show::modal', this.compareModal.id);
+				},
 
-					this.device_items = [];
-					temp = [];
-
-					var x = tree.querySelectorAll("device");
-
-					x.forEach(y => {
-						var y_data = y.getAttribute("data");
-						if (y_data != "") {
-							var y_data_parsed = JSON.parse(y.getAttribute("data"));
-							var maxod = y_data_parsed.maxod;
-							var maxod_in = maxod.toFixed(4) + "\"";
-							var maxod_mm = in_to_mm(maxod).toFixed(2) + " mm";
-							var maxod_fr = in_to_fr(maxod).toFixed(1) + " fr";
-							var minid = y_data_parsed.minid;
-							var minid_in = minid.toFixed(4) + "\"";
-							var minid_mm = in_to_mm(minid).toFixed(2) + " mm";
-							var minid_fr = in_to_fr(minid).toFixed(1) + " fr";
-
-							var table_name = "";
-							var table_od = "";
-							var table_id = "";
-							var table_lengths = "";
-
-							if (y_data_parsed.name != null) table_name = y_data_parsed.name_man;
-							if (y_data_parsed.maxod != null) table_od = maxod_in + " (" + maxod_mm + ", " + maxod_fr + ")";
-							if (y_data_parsed.minid != null) table_id = minid_in + " (" + minid_mm + ", " + minid_fr + ")";
-							if (y_data_parsed.length != null) table_lengths = y_data_parsed.length + " cm";
-
-							temp.push({ Name: table_name, Max_Outer: table_od, Min_Inner: table_id, Lengths: table_lengths });
+				compare_device: function(index) {
+					var second_device = index; 
+					this.compareModal.table = [];
+					
+					this.compareModal.table.push(
+						{
+						Name: this.compareModal.first_device.name, 
+						Manufacturer: this.compareModal.first_device.manufacturer,
+						'Maximum outer diameter': in_to_all(this.compareModal.first_device.maxod),
+						'Minimum inner diameter': in_to_all(this.compareModal.first_device.minid), 
+						Lengths: this.compareModal.first_device.length + " cm"
+						},
+						{
+						Name: second_device.name,
+						Type: second_device.type,
+						Manufacturer: second_device.manufacturer,
+						'Maximum outer diameter': in_to_all(second_device.maxod),
+						'Minimum inner diameter': in_to_all(second_device.minid), 
+						Lengths: second_device.length + " cm"
 						}
-					}
-					)
+					);
+				},
 
-					var unique = [];
+				fitLaunch: function(index) {
+					this.fitModal.first_device = JSON.parse(tree.getElementById(index).getAttribute("data")); 
+					var first_device = this.fitModal.first_device;
 
-					for(let i of temp) {
-						if(unique.indexOf(i) === -1) {
-							unique.push(i);
+					deviceList.forEach(d => {
+						var required_id = null;
+						if (first_device.recommendedParentId != null) required_id = first_device.recommendedParentId;
+						else required_id = first_device.maxod;
+
+						if (required_id < d.minid) {
+							this.fitModal.table.push(		
+								{ 
+									Name: d.name,
+									Manufacturer: d.manufacturer,
+									'Maximum outer diameter': in_to_all(d.maxod),
+									'Minimum inner diameter': in_to_all(d.minid), 
+									Lengths: d.length + " cm"
+								}
+								);
 						}
+					});
+
+					//console.log(this.fitModal.table);
+
+					this.fitModal.table.sort(function(a, b){
+						return b[2]-a[2]
 					}
+						);
+					
+
+					this.$root.$emit('bv::show::modal', this.fitModal.id);
 				},
 
 				updateSizer: function () {
 
-					//document.getElementById("intro_text").style.display = "none";
-
 					var result = checkSizes();
 					if (result == "") {
-						//document.getElementById("result").style.color = "rgb(0, 153, 51)";
 						var result = "<p style=\"color:green\">Everything fits ok.</p>";
 					}
-					else {
-						//document.getElementById("result").style.color = "rgb(175,0,42)"
-					}
 
-					//if (this.id_count == 1) document.getElementById("result").innerHTML = "Enter one or more devices inside the one you have entered by clicking the Add button. "
-					//else 
-					
 					document.getElementById("result").innerHTML = result;
-
-					this.drawDeviceTable();
-
+					//this.drawDeviceTable();
 					this.drawDiagram();
-
-					//document.getElementById("result_container").style = "display:block";
-
 				},
 				addInput: function (where, text, type, parent) {
-
-
 
 					id = "device" + this.id_count;
 					this.id_count++;
@@ -692,6 +725,8 @@
 
 			}
 			},
+
+	
 
 			created: function () {
 				var newInput1 = this.addInput("inside", "Enter outer device e.g. guide sheath ", "guide catheters", null);

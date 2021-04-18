@@ -826,6 +826,16 @@ deviceList =
     },
     {
         "type": "Microcatheter",
+        "name": "Via 17",
+        "manufacturer": "Microvention",
+        "url1": "https://www.microvention.com/product/VIA",
+        "minid": 0.017,
+        "maxod": 0.032,
+        "length": 154,
+        "comments": "Needs confirming"
+    },
+    {
+        "type": "Microcatheter",
         "name": "Via 21 ",
         "manufacturer": "Microvention",
         "url1": "https://www.microvention.com/product/VIA",
@@ -1231,111 +1241,76 @@ deviceList =
         "length": 150
     },
     {
-        "type": "Guide Catheter",
-        "name": "Trevo",
-        "manufacturer": "Stryker",
-        "minid": 0.074,
-        "maxod": 0,
-        "length": "90"
-    },
-    {
-        "type": "Guide Catheter",
+        "type": "Sheath",
         "name": "6F Arrow-Flex ",
         "manufacturer": "Teleflex Medical",
         "url1": "https://www.teleflex.com/usa/en/product-areas/interventional/vascular-access-closure/super-arrow-flex-sheaths/Arrow-Super-Arrow-Flex-Sheath-Introducer-Brochure-2012-0722.pdf",
         "minid": 0.087,
-        "maxod": 0,
+        "maxod": 0.104987,
         "length": "90"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Sheath",
         "name": "7F Arrow-Flex ",
         "manufacturer": "Teleflex Medical",
         "url1": "https://www.teleflex.com/usa/en/product-areas/interventional/vascular-access-closure/super-arrow-flex-sheaths/Arrow-Super-Arrow-Flex-Sheath-Introducer-Brochure-2012-0722.pdf",
         "minid": 0.1,
-        "maxod": 0,
+        "maxod": 0.11811,
         "length": "80 / 100"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Sheath",
         "name": "8F Arrow-Flex ",
         "manufacturer": "Teleflex Medical",
         "url1": "https://www.teleflex.com/usa/en/product-areas/interventional/vascular-access-closure/super-arrow-flex-sheaths/Arrow-Super-Arrow-Flex-Sheath-Introducer-Brochure-2012-0722.pdf",
         "minid": 0.113,
-        "maxod": 0,
+        "maxod": 0.131234,
         "length": "80 / 100"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Sheath",
         "name": "9F Arrow-Flex ",
         "manufacturer": "Teleflex Medical",
         "url1": "https://www.teleflex.com/usa/en/product-areas/interventional/vascular-access-closure/super-arrow-flex-sheaths/Arrow-Super-Arrow-Flex-Sheath-Introducer-Brochure-2012-0722.pdf",
         "minid": 0.126,
-        "maxod": 0,
+        "maxod": 0.144357,
         "length": "80 / 100"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Sheath",
         "name": "5F Pinnacle Destination ",
         "manufacturer": "Terumo",
         "url1": "https://www.terumois.com/products/access/pinnacle-destination.html",
         "minid": 0.076,
-        "maxod": 0,
+        "maxod": 0.098,
         "length": "90"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Sheath",
         "name": "6F Pinnacle Destination ",
         "manufacturer": "Terumo",
         "url1": "https://www.terumois.com/products/access/pinnacle-destination.html",
         "minid": 0.087,
-        "maxod": 0,
+        "maxod": 0.109,
         "length": "90"
     },
     {
-        "type": "Guide Catheter",
-        "name": "6F Pinnacle, R/O II Terumo",
-        "manufacturer": "Terumo",
-        "url1": "https://www.terumois.com/products/access/pinnacle-destination.html",
-        "minid": 0.087,
-        "maxod": 0,
-        "length": "45 / 65 / 90"
-    },
-    {
-        "type": "Guide Catheter",
+        "type": "Sheath",
         "name": "7F Pinnacle Destination ",
         "manufacturer": "Terumo",
         "url1": "https://www.terumois.com/products/access/pinnacle-destination.html",
         "minid": 0.1,
-        "maxod": 0,
+        "maxod": 0.122,
         "length": "90"
     },
     {
-        "type": "Guide Catheter",
-        "name": "7F Pinnacle, R/O II Terumo",
-        "manufacturer": "Terumo",
-        "url1": "https://www.terumois.com/products/access/pinnacle-destination.html",
-        "minid": 0.1,
-        "maxod": 0,
-        "length": "45 / 65 / 90"
-    },
-    {
-        "type": "Guide Catheter",
+        "type": "Sheath",
         "name": "8F Pinnacle Destination ",
         "manufacturer": "Terumo",
         "url1": "https://www.terumois.com/products/access/pinnacle-destination.html",
         "minid": 0.114,
-        "maxod": 0,
+        "maxod": 0.136,
         "length": "90"
-    },
-    {
-        "type": "Guide Catheter",
-        "name": "8F Pinnacle R/O II Terumo",
-        "manufacturer": "Terumo",
-        "url1": "https://www.terumois.com/products/access/pinnacle-destination.html",
-        "minid": 0.114,
-        "maxod": 0,
-        "length": "45 / 65 / 90"
     },
     {
         "type": "Intermediate Catheter",
@@ -1702,7 +1677,7 @@ deviceList =
         "name": "Leo+ baby ",
         "manufacturer": "Balt",
         "url1": "https://baltspainmedical.es/wp-content/uploads/2019/05/Leo-LeoBaby-Stent.pdf",
-        "minid": 0.015,
+        "minid": 0,
         "maxod": 0.0155,
         "length": "?"
     },
@@ -1711,7 +1686,7 @@ deviceList =
         "name": "Leo+ 3,5 ",
         "manufacturer": "Balt",
         "url1": "https://baltspainmedical.es/wp-content/uploads/2019/05/Leo-LeoBaby-Stent.pdf",
-        "minid": 0.015,
+        "minid": 0,
         "maxod": 0.021,
         "length": "?"
     },
@@ -1720,7 +1695,7 @@ deviceList =
         "name": "Leo+ 4,5 ",
         "manufacturer": "Balt",
         "url1": "https://baltspainmedical.es/wp-content/uploads/2019/05/Leo-LeoBaby-Stent.pdf",
-        "minid": 0.015,
+        "minid": 0,
         "maxod": 0.025,
         "length": "?"
     },
@@ -1729,7 +1704,7 @@ deviceList =
         "name": "Leo+ 5,5 ",
         "manufacturer": "Balt",
         "url1": "https://baltspainmedical.es/wp-content/uploads/2019/05/Leo-LeoBaby-Stent.pdf",
-        "minid": 0.015,
+        "minid": 0,
         "maxod": 0.028,
         "length": "?"
     },
@@ -1738,7 +1713,7 @@ deviceList =
         "name": "Silk Vista ",
         "manufacturer": "Balt",
         "url1": "https://baltspainmedical.es/wp-content/uploads/2020/10/SILK-VISTA-Catalogo.pdf",
-        "minid": 0.015,
+        "minid": 0,
         "maxod": 0.02,
         "length": "?"
     },
@@ -1747,7 +1722,7 @@ deviceList =
         "name": "Silk Vista Baby ",
         "manufacturer": "Balt",
         "url1": "https://baltspainmedical.es/wp-content/uploads/2019/05/SILK-VISTA-BABY.pdf",
-        "minid": 0.015,
+        "minid": 0,
         "maxod": 0.0166,
         "length": "?"
     },
@@ -1756,7 +1731,7 @@ deviceList =
         "name": "Silk+ 2,0 to 4,5 ",
         "manufacturer": "Balt",
         "url1": "https://baltspainmedical.es/wp-content/uploads/2020/11/Balt-catalogo-completo-2020.pdf",
-        "minid": 0.015,
+        "minid": 0,
         "maxod": 0.02
     },
     {
@@ -1764,7 +1739,7 @@ deviceList =
         "name": "Silk+ 5,0 to 5,5 ",
         "manufacturer": "Balt",
         "url1": "https://baltspainmedical.es/wp-content/uploads/2020/11/Balt-catalogo-completo-2020.pdf",
-        "minid": 0.015,
+        "minid": 0,
         "maxod": 0.024
     },
     {
@@ -2306,7 +2281,7 @@ deviceList =
     },
     {
         "type": "Intrasaccular Device",
-        "name": "WEB SL/SLS all sizes 17 system",
+        "name": "WEB SL/SLS 17 system",
         "manufacturer": "Microvention",
         "url1": "https://www.microvention.com/product/web-family",
         "minid": 0,
@@ -2323,7 +2298,7 @@ deviceList =
     },
     {
         "type": "Select Catheter",
-        "name": "RST Selective Catheter Berenstein/Sim2",
+        "name": "RIST Selective Catheter Berenstein/Sim2",
         "manufacturer": "Medtronic",
         "minid": 0.04,
         "maxod": 0.07,
