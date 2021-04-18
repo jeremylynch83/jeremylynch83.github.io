@@ -578,16 +578,13 @@
 					
 					this.compareModal.table.push(
 						{
-						Name: this.compareModal.first_device.name, 
-						Manufacturer: this.compareModal.first_device.manufacturer,
+						Name: this.compareModal.first_device.name + " (" + this.compareModal.first_device.manufacturer+ ")", 
 						'Maximum outer diameter': in_to_all(this.compareModal.first_device.maxod),
 						'Minimum inner diameter': in_to_all(this.compareModal.first_device.minid), 
 						Lengths: this.compareModal.first_device.length + " cm"
 						},
 						{
-						Name: second_device.name,
-						Type: second_device.type,
-						Manufacturer: second_device.manufacturer,
+						Name: second_device.name + " (" + second_device.manufacturer+ ")",
 						'Maximum outer diameter': in_to_all(second_device.maxod),
 						'Minimum inner diameter': in_to_all(second_device.minid), 
 						Lengths: second_device.length + " cm"
@@ -607,8 +604,7 @@
 						if (required_id < d.minid) {
 							this.fitModal.table.push(		
 								{ 
-									Name: d.name,
-									Manufacturer: d.manufacturer,
+									Name: d.name + " (" + d.manufacturer+ ")",
 									'Maximum outer diameter': in_to_all(d.maxod),
 									'Minimum inner diameter': in_to_all(d.minid), 
 									Lengths: d.length + " cm"
