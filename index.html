@@ -264,10 +264,18 @@
 		}
 
 		function in_to_all(inches) {
-			var in_short = inches.toFixed(4) + "\"";
-			var mm = in_to_mm(inches).toFixed(2) + " mm";
-			var fr = in_to_fr(inches).toFixed(1) + " Fr";	
-			return in_short + " (" + mm + ", " + fr + ")";
+			var text = "";
+
+			if (inches != null || inches == "0") {
+				var in_short = inches.toFixed(4) + "\"";
+				var mm = in_to_mm(inches).toFixed(2) + " mm";
+				var fr = in_to_fr(inches).toFixed(1) + " Fr";
+				text = 	in_short + " (" + mm + ", " + fr + ")";
+			}
+			else {
+				text = "N/A"
+			}
+			return text;
 		}
 
 		function format_name(name) {
