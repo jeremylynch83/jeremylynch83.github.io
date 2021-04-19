@@ -29,7 +29,7 @@ deviceList =
         "length": "80 / 90 / 100 / 110"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Intermediate Catheter",
         "name": "Fargo Max ",
         "manufacturer": "Balt",
         "url1": "www.plusmedica.at",
@@ -38,7 +38,7 @@ deviceList =
         "length": "95 / 105 / 115 / 125"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Intermediate Catheter",
         "name": "Fargo ",
         "manufacturer": "Balt",
         "url1": "www.plusmedica.at",
@@ -47,7 +47,7 @@ deviceList =
         "length": "105 / 115 / 125 / 135"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Intermediate Catheter",
         "name": "Fargo Mini ",
         "manufacturer": "Balt",
         "url1": "www.plusmedica.at",
@@ -227,7 +227,7 @@ deviceList =
         "length": "70 / 80 / 90 / 95"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Intermediate Catheter",
         "name": "Phenom Plus ",
         "manufacturer": "Medtronic",
         "url1": "https://europe.medtronic.com/xd-en/healthcare-professionals/products/neurological/access-delivery-nv/phenom.html",
@@ -236,7 +236,7 @@ deviceList =
         "length": "105 / 120"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Microcatheter",
         "name": "Phenom 017 ",
         "manufacturer": "Medtronic",
         "url1": "https://europe.medtronic.com/xd-en/healthcare-professionals/products/neurological/access-delivery-nv/phenom.html",
@@ -475,7 +475,7 @@ deviceList =
         "length": "92"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Intermediate Catheter",
         "name": "Navien 058 ",
         "manufacturer": "Medtronic",
         "url1": "https://europe.medtronic.com/xd-en/healthcare-professionals/products/neurological/access-delivery-nv/navien.html",
@@ -485,7 +485,7 @@ deviceList =
         "length": "105 / 115 / 125 / 130"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Intermediate Catheter",
         "name": "Navien 072 ",
         "manufacturer": "Medtronic",
         "url1": "https://europe.medtronic.com/xd-en/healthcare-professionals/products/neurological/access-delivery-nv/navien.html",
@@ -495,7 +495,7 @@ deviceList =
         "length": "95 / 105 / 115 / 125 / 130"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Intermediate catheter",
         "name": "ARC 160 ",
         "manufacturer": "Medtronic",
         "minid": 0.035,
@@ -682,7 +682,7 @@ deviceList =
         "length": "150"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Intermediate Catheter",
         "name": "REACT 68 ",
         "manufacturer": "Medtronic",
         "url1": "https://www.medtronic.com/us-en/healthcare-professionals/products/neurological/revascularization-stroke/react-catheters.html",
@@ -692,7 +692,7 @@ deviceList =
         "length": "132"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Intermediate Catheter",
         "name": "REACT 71 ",
         "manufacturer": "Medtronic",
         "url1": "https://www.medtronic.com/us-en/healthcare-professionals/products/neurological/revascularization-stroke/react-catheters.html",
@@ -727,7 +727,7 @@ deviceList =
         "length": "95"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Intermediate Catheter",
         "name": "Sofia 5F ",
         "manufacturer": "MicroVention",
         "url1": "https://www.microvention.com/product/sofia",
@@ -737,7 +737,7 @@ deviceList =
         "recommendedparentid": 0.07
     },
     {
-        "type": "Guide Catheter",
+        "type": "Intermediate Catheter",
         "name": "Sofia 6F ",
         "manufacturer": "MicroVention",
         "url1": "https://www.microvention.com/product/sofia",
@@ -747,7 +747,7 @@ deviceList =
         "recommendedparentid": 0.085
     },
     {
-        "type": "Guide Catheter",
+        "type": "Intermediate Catheter",
         "name": "Sofia Plus 6F ",
         "manufacturer": "MicroVention",
         "url1": "https://www.microvention.com/product/sofia-plus",
@@ -871,7 +871,7 @@ deviceList =
         "length": "80 / 90"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Intermediate Catheter",
         "name": "3MAX DDC ",
         "manufacturer": "Penumbra",
         "url1": "https://www.penumbrainc.com/neuro-device/max-reperfusion-catheters/",
@@ -880,7 +880,7 @@ deviceList =
         "length": 153
     },
     {
-        "type": "Guide Catheter",
+        "type": "Intermediate Catheter",
         "name": "4MAX DDC ",
         "manufacturer": "Penumbra",
         "url1": "https://www.penumbrainc.com/neuro-device/max-reperfusion-catheters/",
@@ -889,7 +889,7 @@ deviceList =
         "length": 130
     },
     {
-        "type": "Guide Catheter",
+        "type": "Intermediate Catheter",
         "name": "5MAX DDC ",
         "manufacturer": "Penumbra",
         "url1": "https://www.penumbrainc.com/neuro-device/max-reperfusion-catheters/",
@@ -961,7 +961,7 @@ deviceList =
         "length": "160"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Intermediate Catheter",
         "name": "Jet 7 Reperfusion Catheter ",
         "manufacturer": "Penumbra",
         "url1": "https://www.penumbrainc.com/neuro-device/penumbra-jet-7/",
@@ -970,7 +970,7 @@ deviceList =
         "length": "132"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Intermediate Catheter",
         "name": "Jet D Reperfusion Catheter ",
         "manufacturer": "Penumbra",
         "url1": "https://www.penumbrainc.com/neuro-device/penumbra-jet-d/",
@@ -979,7 +979,7 @@ deviceList =
         "length": "138"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Intermediate Catheter",
         "name": "ACE 68 ",
         "manufacturer": "Penumbra",
         "url1": "https://www.penumbrainc.com/neuro-device/ace-reperfusion-catheters/",
@@ -988,7 +988,7 @@ deviceList =
         "length": "132"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Intermediate Catheter",
         "name": "ACE 60 ",
         "manufacturer": "Penumbra",
         "url1": "https://www.penumbrainc.com/neuro-device/ace-reperfusion-catheters/",
@@ -1013,7 +1013,7 @@ deviceList =
         "length": "80 / 95"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Intermediate Catheter",
         "name": "DAC 038 ",
         "manufacturer": "Stryker",
         "url1": "https://www.esutures.com/product/2-indate-expired/99-stryker-neurovascular/1222-distal-access-catheter/46230233-concentric-medical-dac-038-distal-access-catheter-0.038-x-125cm-90120/",
@@ -1022,7 +1022,7 @@ deviceList =
         "length": "125 / 136"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Intermediate Catheter",
         "name": "DAC 044 ",
         "manufacturer": "Stryker",
         "minid": 0.044,
@@ -1030,7 +1030,7 @@ deviceList =
         "length": "115 / 130 / 136"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Intermediate Catheter",
         "name": "DAC 057 ",
         "manufacturer": "Stryker",
         "minid": 0.057,
@@ -2339,6 +2339,7 @@ deviceList =
         "manufacturer": "Phenox",
         "url1": "https://phenox.net/international/uploads/KIF/KIF-0031C.pdf",
         "url2": "https://phenox.net/international/pita-rx-neuro-pta-balloon-catheter/",
+        "minid": 0,
         "maxod": 0.032808,
         "length": 160
     },
@@ -2380,6 +2381,7 @@ deviceList =
     {
         "type": "Coil",
         "name": "Avenir Wallaby Coil System\n",
+        "manufacturer": "Phenox",
         "url1": "https://phenox.net//international/uploads/KIF/Avenir-KIF-0075A-WEB.pdf",
         "url2": "https://phenox.net/international/avenir-wallaby-coil-system/",
         "minid": 0,

@@ -188,7 +188,7 @@
 			<p>The <b>{{fitModal.first_device.name}}</b> will fit inside ({{fitModal.n}} items): </p>
 			<p></p><p></p>
 			<div>
-				<b-table sticky-header small :items="fitModal.table" :fields="fitModal.fields" style="font-size: 0.9em; " head-variant="light" :sort-by.sync="fitModal.sortBy" :sort-desc.sync="fitModal.sortDesc"
+				<b-table sticky-header small :items="fitModal.table" :fields="fitModal.fields" style="font-size: 0.8em; " head-variant="light" :sort-by.sync="fitModal.sortBy" :sort-desc.sync="fitModal.sortDesc"
 				></b-table>
 			</div>
 		</b-modal>
@@ -632,6 +632,7 @@
 					this.fitModal.first_device = JSON.parse(tree.getElementById(index).getAttribute("data")); 
 					var first_device = this.fitModal.first_device;
 					this.fitModal.n=0;
+					this.fitModal.table = [];
 
 					deviceList.forEach(d => {
 						var required_id = null;
