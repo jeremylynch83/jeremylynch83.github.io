@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title>NeuroTool: Neurointervention Device Sizer</title>
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+	<link type="text/css" rel="stylesheet" href="css/bootstrap-vue.css" />
+	<link href="css/VueBootstrapTypeahead.css" rel="stylesheet" />
+	<link type="text/css" rel="stylesheet" href="css/my.css" />
+	<!-- Load polyfills to support older browsers -->
+	<script src="js/polyfill.min.js"></script>
+	<!-- Required scripts -->
+	<script src="js/vue.js"></script>
+	<script src="js/bootstrap-vue.js"></script>
+	<script src="js/bootstrap-vue-icons.min.js"></script>
+	<!-- Type Ahead Library -->
+	<script src="js/VueBootstrapTypeahead.umd.min.js"></script>
+	<!-- Device Library -->
+	<script src="deviceList.js"></script>
+	<script src="templateList.js"></script>
+
+
+</head>
+
+<body>
+	<div id="app">
+
+		<b-navbar toggleable="lg" type="dark" variant="info">
+			<b-navbar-brand href="#">NeuroTool</b-navbar-brand>
+
+			<b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+			<b-collapse id="nav-collapse" is-nav>
+				<b-navbar-nav>
+				</b-navbar-nav>
+
+				<b-navbar-nav class="ml-auto">
+					<b-nav-item-dropdown right>
+
+						<template #button-content>
+							Help
+						</template>
+						<b-dropdown-item v-b-modal.help_modal>About</b-dropdown-item>
+					</b-nav-item-dropdown>
+				</b-navbar-nav>
+			</b-collapse>
+		</b-navbar>
+
+		<b-container>
+			<p></p>
+			<h2>Template entry: </h2>
+
+			<vue-bootstrap-typeahead :data="templates" :serializer="item => item.name" @hit="selectTemplate($event)">
+			</vue-bootstrap-typeahead>
+			<p></p>
+
+			<h2>Report text: </h2>
+
+			<template>
+				<div>
+					<b-form-textarea id="textarea-plaintext" plaintext :value="reportText"></b-form-textarea>
+				</div>
+			</template>
+		</b-container>
+
+
+		<p></p>
+		<p></p>
+
+
+		<!---------------- MODALS -------------->
+
+		<b-modal id="help_modal" title="NeuroTool: Help" ok-only>
+			<p>A tool to help select the right devices for neurointerventional procedures.</p>
+			<h4>How to use</h4>
+			<p>Start to type the device you are interested in the search box and then select from the list that pops
+				up. You can select catheters, wires, stents, balloons, and other devices. </p>
+			<img src="img/help1.png" class="center" width="75%">
+			<p>Insert a device inside this one by selecting "Add" Then "New device inside". You can also view device
+				information by selecting "Info". </p>
+			<img src="img/help2.png" class="center" width="75%">
+			<p>Further devices can be inserted either inside or beside this device using "New device inside" or "New
+				device beside". Under Results you will see whether the devices are compatible in terms of diameter
+				and length. If there are incompatibilities then a message will appear describing the problem. </p>
+			<img src="img/help3.png" class="center" width="75%">
+		</b-modal>
+
+		<b-container class="footer">
+			This tool is for educational purposes only. <b-link href="mailto: jeremy.lynch@gmail.com"> Contact us.
+			</b-link>
+		</b-container>
+
+	</div>
+
+
+	<script>
+		/* GENERIC FUNCTIONS */
+
+
+		/* GLOBAL VARIABLES */
+
+		window.app = new Vue({
+			components: {
+				VueBootstrapTypeahead
+			},
+			el: '#app',
+			data: {
+				templates: templateList,
+				reportText: "This is some text.\nIt is read only and doesn't look like an input."
+			},
+
+			methods: {
+				selectTemplate: function (event) {
+					console.log(event.name);
+				},
+				loadXMLDoc: function () {},
+
+				created: function () {
+					var xhttp = new XMLHttpRequest();
+					xhttp.onreadystatechange = function () {
+						if (this.readyState == 4 && this.status == 200) {
+							myFunction(this);
+						}
+					};
+					xhttp.open("GET", "templates.xml", true);
+					xhttp.send();
+
+					function myFunction(xml) {
+						var xmlDoc = xml.responseXML;
+						//document.getElementById("demo").innerHTML =
+						console.log(xmlDoc.getElementsByTagName("TITLE")[0].childNodes[0].nodeValue);
+					}
+
+
+
+				}
+			}
+		});
+
+
+		window.app.created();
+	</script>
+
+
+</body>
+
+</html>
