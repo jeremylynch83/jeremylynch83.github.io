@@ -510,6 +510,10 @@
 							sortable: false
 						},
 						{
+							key: 'Type',
+							sortable: false
+						},
+						{
 							key: 'minid',
 							label: "Minimum inner diameter (inches)",
 							sortable: true
@@ -637,8 +641,9 @@
 							this.fitModal.table.push(		
 								{ 
 									Name: d.name + " (" + d.manufacturer+ ")",
-									minid: d.minid, 
-									maxod: d.maxod,
+									Type: d.type,
+									minid: d.minid.toFixed(3), 
+									maxod: d.maxod.toFixed(3),
 									Lengths: d.length + " cm"
 								}
 								);
