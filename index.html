@@ -185,10 +185,11 @@
 
 	
 		<b-modal :id="fitModal.id" :title="fitModal.title" ok-only >
-			<p>The <b>{{fitModal.first_device.name}}</b> will fit inside: </p>
+			<p>The <b>{{fitModal.first_device.name}}</b> will fit inside ({{fitModal.n}} items): </p>
 			<p></p><p></p>
 			<div>
-				<b-table sticky-header small :items="fitModal.table" style="font-size: 0.9em; " head-variant="light"></b-table>
+				<b-table sticky-header small :items="fitModal.table" :fields="fitModal.fields" style="font-size: 0.9em; " head-variant="light" :sort-by.sync="fitModal.sortBy" :sort-desc.sync="fitModal.sortDesc"
+				></b-table>
 			</div>
 		</b-modal>
 
@@ -501,7 +502,30 @@
 					id: 'fit-modal',
 					title: 'Fit Inside',
 					first_device: "",
-					table : []
+					n:0,
+					table : [],
+					fields: [
+						{
+							key: 'Name',
+							sortable: false
+						},
+						{
+							key: 'minid',
+							label: "Minimum inner diameter (inches)",
+							sortable: true
+						},
+						{
+							key: 'maxod',
+							label: "Maximum outer diameter (inches)",
+							sortable: true
+						},
+						{
+							key: 'Lengths',
+							sortable: false
+						},
+						],
+					sortBy: 'minid',
+        			sortDesc: false,
 					},
 				compareModal: {
 				id: 'compare-modal',
@@ -603,21 +627,22 @@
 				fitLaunch: function(index) {
 					this.fitModal.first_device = JSON.parse(tree.getElementById(index).getAttribute("data")); 
 					var first_device = this.fitModal.first_device;
+					this.fitModal.n=0;
 
 					deviceList.forEach(d => {
 						var required_id = null;
 						if (first_device.recommendedParentId != null) required_id = first_device.recommendedParentId;
 						else required_id = first_device.maxod;
-
 						if (required_id < d.minid) {
 							this.fitModal.table.push(		
 								{ 
 									Name: d.name + " (" + d.manufacturer+ ")",
-									'Maximum outer diameter': in_to_all(d.maxod),
-									'Minimum inner diameter': in_to_all(d.minid), 
+									minid: d.minid, 
+									maxod: d.maxod,
 									Lengths: d.length + " cm"
 								}
 								);
+							this.fitModal.n++;
 						}
 					});
 
