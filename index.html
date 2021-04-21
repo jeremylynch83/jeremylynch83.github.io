@@ -66,19 +66,12 @@
 			<p></p>
 			<p></p>
 
-			<div id="intro_text" v-show="deviceInputs.length ==1 && deviceInputs[0].active == null">
-				<b-jumbotron bg-variant="light" lead=" ">
+			<div id="intro_text" v-show="deviceInputs.length ==1 && deviceInputs[0].active == null"
+			style="background-color:rgb(241, 247, 255); padding: 20px; border-radius: 5px"
+			>
 					<h4>Independent neurointerventional device information.</h4>
-					<p>
-						<ul>
-							<li>Sizes of catheters, balloons, stents, coils, and other devices.</li>
-							<li>Find out which devices fit inside each other.</li>
-							<li>Direct links to manufacturer information. </li>
-						</ul>
-
 					</p>
 					<b-button variant="primary" v-b-modal.help_modal>Help</b-button>
-				</b-jumbotron>
 			</div>
 
 
@@ -222,7 +215,15 @@
 		<!---------------- MODALS -------------->
 
 		<b-modal id="help_modal" title="NeuroTool: Help" ok-only>
-			<p>A tool to help select the right devices for neurointerventional procedures.</p>
+			<h4>What is this for?</h4>
+			<p>
+				The number of devices used in neurointerventional procedures has exploded in recent years and there are new ones coming out rapidly. This tool provides information on:
+			</p>
+			<ul>
+				<li>Sizes of catheters, balloons, stents, coils, and other devices.</li> <li>Find out which devices fit inside each other. </li>
+				<li>Direct links to manufacturer information. </li>
+			</ul>
+
 			<h4>How to use</h4>
 			<p>Start to type the device you are interested in the search box and then select from the list that pops up.
 				You can select catheters, wires, stents, balloons, and other devices. </p>
