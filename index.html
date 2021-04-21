@@ -84,6 +84,9 @@
 
 			<template v-for="n in deviceInputs">
 
+
+				<p></p>
+
 				<b-form-group :label-cols="n.hierarchy" :key="n.id" :label="n.hierarchy_text" label-size="sm">
 
 					<vue-bootstrap-typeahead :key="n.id" :data="devices" :placeholder="n.text"
@@ -96,6 +99,27 @@
 
 					<div class="text-right">
 						<b-button-group>
+
+							<b-dropdown v-show="n.hierarchy == 0 && n.active != null" variant="transparent" style="font-size: 0.9em;"
+							right>
+							<template #button-content>
+								<!--<b-icon icon="arrow-up-circle" scale="0.8" ></b-icon>-->
+								{{access}}
+							</template>
+		
+							<b-dropdown-item class="btn btn-sm  py-0" variant="outline-secondary" class="btn btn-sm  py-0"
+								@click="access = 'Femoral artery'">Femoral artery
+							</b-dropdown-item>
+		
+							<b-dropdown-item class="btn btn-sm  py-0" variant="outline-secondary" class="btn btn-sm  py-0"
+								@click="access = 'Radial artery'">Radial artery
+							</b-dropdown-item>
+		
+							<b-dropdown-item class="btn btn-sm  py-0" variant="outline-secondary" class="btn btn-sm  py-0"
+								@click="access = 'Brachial artery'">Brachial artery
+							</b-dropdown-item>
+		
+						</b-dropdown>
 							<b-dropdown variant="success" style="font-size: 0.9em;" right>
 								<template #button-content>
 									<!--<b-icon icon="plus" ></b-icon>-->
@@ -120,27 +144,6 @@
 								style="font-size: 0.9em;" @click="removeInput(n.id)">
 								<!--<b-icon icon="x-circle" scale="0.8" ></b-icon>-->
 								Remove</b-button>
-
-							<b-dropdown v-show="n.hierarchy == 0 && n.active != null" variant="secondary"
-								style="font-size: 0.9em;" right>
-								<template #button-content>
-									<!--<b-icon icon="arrow-up-circle" scale="0.8" ></b-icon>-->
-									{{access}}
-								</template>
-
-								<b-dropdown-item class="btn btn-sm  py-0" variant="outline-secondary"
-									class="btn btn-sm  py-0" @click="access = 'Femoral artery'">Femoral artery
-								</b-dropdown-item>
-
-								<b-dropdown-item class="btn btn-sm  py-0" variant="outline-secondary"
-									class="btn btn-sm  py-0" @click="access = 'Radial artery'">Radial artery
-								</b-dropdown-item>
-
-								<b-dropdown-item class="btn btn-sm  py-0" variant="outline-secondary"
-									class="btn btn-sm  py-0" @click="access = 'Brachial artery'">Brachial artery
-								</b-dropdown-item>
-
-							</b-dropdown>
 
 							<b-dropdown v-show="n.active != null" variant="info" style="font-size: 0.9em;" right>
 								<template #button-content>
@@ -544,7 +547,7 @@
 			},
 			el: '#app',
 			data: {
-				access: 'Femoral artery',
+				access: 'Access (optional)',
 				devices: deviceList,
 				deviceInputs: deviceInputs,
 				id_count: 0,
@@ -639,7 +642,7 @@
 			*/
 				},
 
-				updateInfo:function(deviceInfo) {
+				updateInfo: function (deviceInfo) {
 					this.infoModal.device = deviceInfo;
 					this.infoModal.device.type = this.infoModal.device.type.toLowerCase();
 
