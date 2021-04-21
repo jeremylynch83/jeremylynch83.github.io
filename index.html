@@ -641,6 +641,8 @@
 
 				updateInfo:function(deviceInfo) {
 					this.infoModal.device = deviceInfo;
+					this.infoModal.device.type = this.infoModal.device.type.toLowerCase();
+
 					this.info_table = [];
 
 					this.info_table.push({

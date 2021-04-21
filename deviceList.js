@@ -403,7 +403,7 @@ deviceList =
         "length": "150"
     },
     {
-        "type": "Intermediate catheters",
+        "type": "Intermediate catheter",
         "name": "Large Bore Catheter ",
         "manufacturer": "Cerenovus",
         "url1": "https://www.jnjmedicaldevices.com/en-US/product/cerenovus-large-bore-catheter",
