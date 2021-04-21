@@ -219,7 +219,7 @@ deviceList =
     },
     {
         "type": "Guide Catheter",
-        "name": "Cerebrase DA ",
+        "name": "Cerebase DA ",
         "manufacturer": "Cerenovus",
         "url1": "https://www.jnjmedicaldevices.com/en-US/product/cerebase-da-guide-sheath",
         "minid": 0.09,
