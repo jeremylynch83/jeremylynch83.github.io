@@ -131,7 +131,7 @@
 
 					function myFunction(xml) {
 						var xmlDoc = xml.responseXML;
-						console.log(xmlDoc.getElementsByTagName("TEMPLATE")[0].childNodes[0].nodeValue);
+						console.log(xmlDoc.getElementsByTagName("TEMPLATE")[0].getElementsByTagName("NAME")[0].innerHTML);
 					}
 
 

@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="ISO8859-1" ?>
 <ALL>
     <TEMPLATE>
-        <NAME>Aneurysm</NAME>
+        <NAME>Aneurysm ruptured</NAME>
         <TEXT>Bob Dylan
-        Bob Dylan
-        Bob Dylan
-        Bob Dylan
+            Bob Dylan
+            Bob Dylan
+            Bob Dylan
         </TEXT>
-
+    </TEMPLATE>
+    <TEMPLATE>
+        <NAME>Aneurysm unruptured</NAME>
+        <TEXT>Bob Dylan
+            Bob Dylan
+            Bob Dylan
+            Bob Dylan
+        </TEXT>
     </TEMPLATE>
 
 </ALL>

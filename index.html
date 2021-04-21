@@ -5,9 +5,6 @@
 
 	<!--
 		FEATURES TO IMPLEMENT:
-		* Radial / femoral
-		* What does xxx fit in to ?
-		* Info box
 		* Delete running properly
 		* Cross/delete on iphone
 		* Unit convertor
@@ -29,11 +26,10 @@
 	<!-- Required scripts -->
 	<script src="js/vue.js"></script>
 	<script src="js/bootstrap-vue.js"></script>
-	<script src="js/bootstrap-vue-icons.min.js"></script>
 	<!-- Type Ahead Library -->
 	<script src="js/VueBootstrapTypeahead.umd.min.js"></script>
 	<!-- Graphical Suppor -->
-	<script src="raphael.js"></script>
+	<!--<script src="raphael.js"></script>-->
 	<!-- Device Library -->
 	<script src="deviceList.js"></script>
 
@@ -91,7 +87,7 @@
 							<b-button-group  >
 								<b-dropdown variant="success" style="font-size: 0.9em;" right >
 									<template #button-content >
-										<b-icon icon="plus" ></b-icon>
+										<!--<b-icon icon="plus" ></b-icon>-->
 										Fit
 									  </template>
 
@@ -105,12 +101,12 @@
 								</b-dropdown>
 
 								<b-button  v-show= "n.hierarchy != 0" variant="danger" class="btn btn-sm  py-0" style="font-size: 0.9em;" @click="removeInput(n.id)">
-									<b-icon icon="x-circle" scale="0.8" ></b-icon>
+									<!--<b-icon icon="x-circle" scale="0.8" ></b-icon>-->
 									Remove</b-button>
 
 								<b-dropdown v-show= "n.hierarchy == 0 && n.active != null" variant="secondary" style="font-size: 0.9em;" right >
 									<template #button-content >
-										<b-icon icon="arrow-up-circle" scale="0.8" ></b-icon>
+										<!--<b-icon icon="arrow-up-circle" scale="0.8" ></b-icon>-->
 										{{access}}
 									  </template>
 
@@ -124,7 +120,7 @@
 
 								<b-dropdown v-show= "n.active != null" variant="info" style="font-size: 0.9em;" right >
 										<template #button-content >
-											<b-icon icon="info-circle" scale="0.8" ></b-icon>
+											<!--<b-icon icon="info-circle" scale="0.8" ></b-icon>-->
 											Info
 										  </template>
 	
