@@ -165,7 +165,7 @@
 			<div id="inputs"></div>
 			<b-container v-show="deviceInputs.length == 1 && deviceInputs[0].active != null"
 				style="background-color:rgb(255, 255, 239); padding: 20px; border-radius: 5px">
-				<p>Tip: Add another device inside this one by seleting Fit → New device inside</p>
+				<p>Tip: Add another device inside this one by seleting Fit → Fit device inside</p>
 			</b-container>
 
 			<p></p>
@@ -186,7 +186,7 @@
 				<p v-show="infoModal.device.url2 != null"> <b>More information: </b>
 					<b-link :href="infoModal.device.url2"> Link</b-link>
 				</p>
-				<p v-show="infoModal.device.ifu != null"> <b>IFU: </b>
+				<p v-show="infoModal.device.ifu != null"> <b>Instructions for use: </b>
 					<b-link :href="infoModal.device.ifu"> Link</b-link>
 				</p>
 			</b-jumbotron>
@@ -224,10 +224,10 @@
 			<p>Start to type the device you are interested in the search box and then select from the list that pops up.
 				You can select catheters, wires, stents, balloons, and other devices. </p>
 			<img src="img/help1.png" class="center" width="75%">
-			<p>Insert a device inside this one by selecting "Add" Then "New device inside". You can also view device
+			<p>Insert a device inside this one by selecting "Fit" Then "Fit device inside". You can also view device
 				information by selecting "Info". </p>
 			<img src="img/help2.png" class="center" width="75%">
-			<p>Further devices can be inserted either inside or beside this device using "New device inside" or "New
+			<p>Further devices can be inserted either inside or beside this device using "Fit device inside" or "New
 				device beside". Under Results you will see whether the devices are compatible in terms of diameter and
 				length. If there are incompatibilities then a message will appear describing the problem. </p>
 			<img src="img/help3.png" class="center" width="75%">
@@ -828,7 +828,7 @@
 
 
 			created: function () {
-				var newInput1 = this.addInput("inside", "Enter outer device e.g. guide sheath ",
+				var newInput1 = this.addInput("inside", "Enter outer e.g. guide sheath ",
 					"guide catheters", null);
 			}
 		})
