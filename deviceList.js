@@ -2106,6 +2106,7 @@ deviceList =
         "name": "Mo.Ma ",
         "manufacturer": "Medtronic",
         "url1": "https://web.archive.org/web/20210116144904/https://www.medtronic.com/us-en/healthcare-professionals/products/cardiovascular/embolic-protection-devices/mo-ma.html",
+        "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/cardiovascular/peripheral-therapies/documents/peripheral-us-product-catalog.pdf",
         "minid": 0.083,
         "maxod": 0.1181102,
         "length": 95
@@ -2411,5 +2412,70 @@ deviceList =
         "minid": 0.114987,
         "maxod": 0.131234,
         "length": 10
+    },
+    {
+        "type": "Coil",
+        "name": "Target XL / 360 / 3D / Nano",
+        "manufacturer": "Stryker",
+        "url1": "https://www.strykerneurovascular.com/products/hemorrhagic",
+        "minid": 0,
+        "maxod": 0.016,
+        "length": "?"
+    },
+    {
+        "type": "Balloon",
+        "name": "Mustang 3-7 mm diameter",
+        "manufacturer": "Boston Scientific",
+        "url1": "https://www.bostonscientific.com/en-US/products/catheters--balloon/Mustang_Balloon_Dilatation_Catheter.html",
+        "minid": 0.04,
+        "maxod": 0.065617,
+        "length": "40 / 75 / 135"
+    },
+    {
+        "type": "Balloon",
+        "name": "Mustang 8-10 mm diameter",
+        "manufacturer": "Boston Scientific",
+        "url1": "https://www.bostonscientific.com/en-US/products/catheters--balloon/Mustang_Balloon_Dilatation_Catheter.html",
+        "minid": 0.04,
+        "maxod": 0.07874,
+        "length": "40 / 75 / 135"
+    },
+    {
+        "type": "Balloon",
+        "name": "Mustang 12 mm diameter",
+        "manufacturer": "Boston Scientific",
+        "url1": "https://www.bostonscientific.com/en-US/products/catheters--balloon/Mustang_Balloon_Dilatation_Catheter.html",
+        "minid": 0.04,
+        "maxod": 0.091864,
+        "length": "40 / 75 / 135"
+    },
+    {
+        "type": "Stent",
+        "name": "Protege",
+        "manufacturer": "Medtronic",
+        "url1": "https://www.medtronic.com/us-en/healthcare-professionals/products/cardiovascular/peripheral-biliary-stents/protege-rx.html",
+        "minid": 0.016,
+        "maxod": 0.07874,
+        "length": 135
+    },
+    {
+        "type": "Stent",
+        "name": "Precise Pro RX Carotid Stent 5-8 mm diameter",
+        "manufacturer": "Cordis",
+        "url1": "https://www.cordis.com/en_us/endovascular/intervene/self-expanding-stents/precise-pro-rx-carotid-stent.html",
+        "url2": "https://www.cordis.com/content/dam/cordis/web/documents/catalog/cordis-us-endovascular-catalog.pdf",
+        "minid": 0.016,
+        "maxod": 0.0787402,
+        "length": 135
+    },
+    {
+        "type": "Stent",
+        "name": "Precise Pro RX Carotid Stent 9-10 mm diameter",
+        "manufacturer": "Cordis",
+        "url1": "https://www.cordis.com/en_us/endovascular/intervene/self-expanding-stents/precise-pro-rx-carotid-stent.html",
+        "url2": "https://www.cordis.com/content/dam/cordis/web/documents/catalog/cordis-us-endovascular-catalog.pdf",
+        "minid": 0.016,
+        "maxod": 0.1049869,
+        "length": 135
     }
 ]
