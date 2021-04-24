@@ -167,24 +167,26 @@
 			<p></p>
 			<p></p>
 
-			<b-container v-show="deviceInputs.length == 1 && deviceInputs[0].active != null">
-				<b-jumbotron bg-variant="light">
-					The <b>{{infoModal.device.name}}</b> is a {{infoModal.device.type}} manufactured by
-					{{infoModal.device.manufacturer}}.
-					<p></p>
-					<div>
-						<b-table small :items="info_table" style="font-size: 0.9em; " head-variant="light">
-						</b-table>
-					</div>
-					<div id="info_extra">
-					</div>
-
-
-				</b-jumbotron>
-			</b-container>
-
 
 		</b-container>
+
+		<b-container v-show="deviceInputs.length == 1 && deviceInputs[0].active != null">
+			<b-jumbotron bg-variant="light">
+				The <b>{{infoModal.device.name}}</b> is a {{infoModal.device.type}} manufactured by
+				{{infoModal.device.manufacturer}}.
+				<p></p>
+				<div>
+					<b-table small :items="info_table" style="font-size: 0.9em; " head-variant="light">
+					</b-table>
+				</div>
+				<div id="info_extra">
+				</div>
+
+
+			</b-jumbotron>
+		</b-container>
+
+
 
 
 
@@ -672,8 +674,22 @@
 							switch (prop) {
 								case "url1":
 									info_extra += "<p><b>Manufacturer Information: </b>" + "<a href = \"" +
+										deviceInfo[prop] + "\" target=\"_blank\">Link</a></p>";
+									"</p>";
+									break;
+								case "url2":
+									info_extra += "<p><b>Manufacturer Information 2: </b>" + "<a href = \"" +
 										deviceInfo[prop] + "\">Link</a></p>";
 									"</p>";
+									break;
+								case "recommended":
+									info_extra += "<p><b>Recommended Catheter: </b>" + deviceInfo[prop] + "</p>";
+
+									break;
+								case "dmso":
+									info_extra += "<p><b>DMSO Compatibility: </b> Yes</p>";
+									break;
+								case "tiplengths":
 									break;
 
 								default:
@@ -685,6 +701,8 @@
 							}
 						}
 					}
+
+					// https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=17284678&retmode=XML&rettype=abstract
 
 					document.getElementById("info_extra").innerHTML = info_extra;
 					document.getElementById("info_extra2").innerHTML = info_extra;
