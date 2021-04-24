@@ -1,5 +1,6 @@
 deviceList = 
 
+
 [
     {
         "type": "Guide Catheter",
@@ -404,7 +405,7 @@ deviceList =
     },
     {
         "type": "Intermediate catheter",
-        "name": "Large Bore Catheter ",
+        "name": "Large Bore Catheter / Embovac",
         "manufacturer": "Cerenovus",
         "url1": "https://www.jnjmedicaldevices.com/en-US/product/cerenovus-large-bore-catheter",
         "minid": 0.071,
@@ -1724,7 +1725,9 @@ deviceList =
         "url1": "https://baltspainmedical.es/wp-content/uploads/2019/05/SILK-VISTA-BABY.pdf",
         "minid": 0,
         "maxod": 0.0166,
-        "length": "?"
+        "length": "?",
+        "trials": "[Schob S, Hoffmann K-T, Richter C, et al. Flow diversion beyond the circle of Willis: endovascular aneurysm treatment in peripheral cerebral arteries employing a novel low-profile flow diverting stent. J Neurointerv Surg 2019;11:1227.]",
+        "design": "48 braided nitinol wires with platinum"
     },
     {
         "type": "Stent",
@@ -1732,7 +1735,10 @@ deviceList =
         "manufacturer": "Balt",
         "url1": "https://baltspainmedical.es/wp-content/uploads/2020/11/Balt-catalogo-completo-2020.pdf",
         "minid": 0,
-        "maxod": 0.02
+        "maxod": 0.02,
+        "trials": "[Lubicz B, Van der Elst O, Collignon L, et al. Silk flow-diverter stent for the treatment\nof intracranial aneurysms: a series of 58 patients with emphasis on long-term results. AJNR Am J Neuroradiol 2015;36:542–6.]",
+        "material": "Nitinol; Platinum",
+        "design": "48 braided wires with eight platinum wires and four platinum coils to promote its visibility and flared ends to increase wall apposition."
     },
     {
         "type": "Stent",
@@ -1740,7 +1746,10 @@ deviceList =
         "manufacturer": "Balt",
         "url1": "https://baltspainmedical.es/wp-content/uploads/2020/11/Balt-catalogo-completo-2020.pdf",
         "minid": 0,
-        "maxod": 0.024
+        "maxod": 0.024,
+        "trials": "[Lubicz B, Van der Elst O, Collignon L, et al. Silk flow-diverter stent for the treatment\nof intracranial aneurysms: a series of 58 patients with emphasis on long-term results. AJNR Am J Neuroradiol 2015;36:542–6.]",
+        "material": "Nitinol; Platinum",
+        "design": "48 braided wires with eight platinum wires and four platinum coils to promote its visibility and flared ends to increase wall apposition."
     },
     {
         "type": "Select Catheter",
@@ -1837,8 +1846,8 @@ deviceList =
         "maxod": 0.016,
         "length": 200,
         "tipLengths": 15,
-        "materials": "Nitinol",
-        "stentDesign": "laser cut"
+        "material": "Nitinol",
+        "design": "laser cut"
     },
     {
         "type": "Stent Retriever ",
@@ -1849,8 +1858,8 @@ deviceList =
         "maxod": 0.02,
         "length": 200,
         "tipLengths": 20,
-        "materials": "Nitinol",
-        "stentDesign": "laser cut"
+        "material": "Nitinol",
+        "design": "laser cut"
     },
     {
         "type": "Stent Retriever ",
@@ -1861,8 +1870,8 @@ deviceList =
         "maxod": 0.023,
         "length": 200,
         "tipLengths": 30,
-        "materials": "Nitinol",
-        "stentDesign": "laser cut"
+        "material": "Nitinol",
+        "design": "laser cut"
     },
     {
         "type": "Stent Retriever ",
@@ -1872,7 +1881,7 @@ deviceList =
         "minid": 0,
         "maxod": 0.02,
         "length": "?",
-        "stentDesign": "braided",
+        "design": "braided",
         "stentLengthMm": 32
     },
     {
@@ -1883,7 +1892,7 @@ deviceList =
         "minid": 0,
         "maxod": 0.0165,
         "length": "?",
-        "stentDesign": "braided",
+        "design": "braided",
         "stentLengthMm": 23
     },
     {
@@ -1894,7 +1903,7 @@ deviceList =
         "minid": 0,
         "maxod": 0.012,
         "length": "?",
-        "stentDesign": "braided",
+        "design": "braided",
         "stentLengthMm": 20.5
     },
     {
@@ -1905,7 +1914,7 @@ deviceList =
         "minid": 0,
         "maxod": 0.02,
         "length": "?",
-        "stentDesign": "braided",
+        "design": "braided",
         "stentLengthMm": 53
     },
     {
@@ -2039,13 +2048,17 @@ deviceList =
     },
     {
         "type": "Stent",
-        "name": "Pipeline ",
+        "name": "Pipeline Flex / Shield",
         "manufacturer": "Medtronic",
         "url1": "https://web.archive.org/web/20201028182152/https://www.accessdata.fda.gov/cdrh_docs/pdf10/P100018C.pdf",
         "minid": 0,
         "maxod": 0.026,
         "length": "?",
-        "recommended": "Phenom 27"
+        "recommended": "Phenom 27",
+        "trials": "[Nelson PK, Lylyk P, Szikora I, et al. The Pipeline Embolization Device for the intracranial treatment of aneurysms trial. AJNR Am J Neuroradiol 2011;32:34-40.][Trivelato FP, Wajnberg E, Rezende MTS, et al. Safety and effectiveness of the Pipeline Flex Embolization Device with Shield technology for the treatment of intracranial aneurysms: midterm results from a multicenter study. Neurosurgery2019;87:104–11.]",
+        "material": "Cobalt-Chromium-nickel alloy; Platinum-tungsten",
+        "design": "48 braided wires; PTFE sleeves",
+        "features": "SHIELD provides a surface  modification  whereby  a  synthetic  layer  of  phosphorylcholine  coats  the  metal  strands  with the aim of reducing thrombogenicity"
     },
     {
         "type": "Wire",
@@ -2076,12 +2089,15 @@ deviceList =
     },
     {
         "type": "Stent",
-        "name": "FRED 21 (2.5 - 3 mm diameter)",
+        "name": "FRED Junior 21 (2.5 - 3 mm diameter)",
         "manufacturer": "Microvention",
         "url1": "https://www.microvention.com/product/fred-family",
         "minid": 0,
         "maxod": 0.02,
-        "length": "?"
+        "length": "?",
+        "trials": "[Pierot L, Spelle L, Berge J, et al. SAFE study (safety and efficacy analysis of FRED  embolic device in aneurysm treatment): 1-year clinical and anatomical results. J Neurointerv Surg 2019;11:184]",
+        "material": "Nitinol; Tantalum",
+        "design": "Low porosity (36 nitinol wires) inner layer and high porosity (16 nitinol wires) outer layer"
     },
     {
         "type": "Stent",
@@ -2090,7 +2106,10 @@ deviceList =
         "url1": "https://www.microvention.com/product/fred-family",
         "minid": 0,
         "maxod": 0.026,
-        "length": "?"
+        "length": "?",
+        "trials": "[Pierot L, Spelle L, Berge J, et al. SAFE study (safety and efficacy analysis of FRED  embolic device in aneurysm treatment): 1-year clinical and anatomical results. J Neurointerv Surg 2019;11:184]",
+        "material": "Nitinol; Tantalum",
+        "design": "Low porosity (48 nitinol wires) inner layer and high porosity (16 nitinol wires) outer layer"
     },
     {
         "type": "Stent",
@@ -2173,7 +2192,10 @@ deviceList =
         "minid": 0,
         "maxod": 0.0265,
         "length": "?",
-        "recommended": "XT-27"
+        "recommended": "XT-27",
+        "trials": "[Orru E, Rice H, De Villiers L, et al. First clinical experience with the new Surpass Evolve flow diverter: technical and clinical considerations. J Neurointerv Surg 2020. doi:10.1136/neurintsurg-2019-015734. [Epub ahead of print: 12 Feb 2020].]",
+        "material": "Cobalt-chromium alloy; Platinum-tungsten markers",
+        "design": "48 wires for 2.5 mm device and 64 wires for 3.25-5 mm devices"
     },
     {
         "type": "Stent",
@@ -2351,7 +2373,10 @@ deviceList =
         "url1": "https://phenox.net/international/uploads/KIF/pFMD-KIF-0057C_v2.pdf",
         "minid": 0,
         "maxod": 0.02,
-        "length": "?"
+        "length": "?",
+        "material": "Nitinol; Platinum",
+        "design": "Drawn  filled  tubing  (DFT)  wires: Nitinol braided outer tube with platinum core ",
+        "features": "Antithrombotic HPC coating technology (optional)"
     },
     {
         "type": "Stent",
@@ -2360,7 +2385,10 @@ deviceList =
         "url1": "https://phenox.net/international/uploads/KIF/pFMD-KIF-0057C_v2.pdf",
         "minid": 0,
         "maxod": 0.02,
-        "length": "?"
+        "length": "?",
+        "material": "Nitinol; Platinum",
+        "design": "Drawn  filled  tubing  (DFT)  wires: Nitinol braided outer tube with platinum core ",
+        "features": "Antithrombotic HPC coating technology (optional)"
     },
     {
         "type": "Stent",
@@ -2369,7 +2397,9 @@ deviceList =
         "url1": "https://phenox.net/international/uploads/KIF/p64_KIF-0008G_LR.pdf",
         "minid": 0,
         "maxod": 0.026,
-        "length": "?"
+        "length": "?",
+        "material": "Nitinol",
+        "design": "64 Nitinol braided wires "
     },
     {
         "type": "Intrasaccular Device",

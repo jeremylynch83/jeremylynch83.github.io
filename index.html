@@ -29,7 +29,7 @@
 	<script src="js/bootstrap-vue.js"></script>
 	<!-- Type Ahead Library -->
 	<script src="js/VueBootstrapTypeahead.umd.min.js"></script>
-	<!-- Graphical Suppor -->
+	<!-- Graphical Support -->
 	<!--<script src="raphael.js"></script>-->
 	<!-- Device Library -->
 	<script src="deviceList.js"></script>
@@ -68,11 +68,10 @@
 			<p></p>
 
 			<div id="intro_text" v-show="deviceInputs.length ==1 && deviceInputs[0].active == null"
-			style="background-color:rgb(241, 247, 255); padding: 20px; border-radius: 5px"
-			>
-					<h4>Independent neurointerventional device information.</h4>
-					</p>
-					<b-button variant="primary" v-b-modal.help_modal>Help</b-button>
+				style="background-color:rgb(241, 247, 255); padding: 20px; border-radius: 5px">
+				<h4>Independent neurointerventional device information.</h4>
+				</p>
+				<b-button variant="primary" v-b-modal.help_modal>Help</b-button>
 			</div>
 
 
@@ -94,33 +93,33 @@
 					<div class="text-right">
 						<b-button-group>
 
-							<b-dropdown v-show="n.hierarchy == 0 && n.active != null" variant="transparent" style="font-size: 0.9em;"
-							right>
-							<template #button-content>
-								<!--<b-icon icon="arrow-up-circle" scale="0.8" ></b-icon>-->
-								{{access}}
-							</template>
-		
-							<b-dropdown-item class="btn btn-sm  py-0" variant="outline-secondary" class="btn btn-sm  py-0"
-								@click="access = 'Femoral artery'">Femoral artery
-							</b-dropdown-item>
-		
-							<b-dropdown-item class="btn btn-sm  py-0" variant="outline-secondary" class="btn btn-sm  py-0"
-								@click="access = 'Radial artery'">Radial artery
-							</b-dropdown-item>
-		
-							<b-dropdown-item class="btn btn-sm  py-0" variant="outline-secondary" class="btn btn-sm  py-0"
-								@click="access = 'Brachial artery'">Brachial artery
-							</b-dropdown-item>
-		
-						</b-dropdown>
+							<b-dropdown v-show="n.hierarchy == 0 && n.active != null" variant="transparent"
+								style="font-size: 0.9em;" right>
+								<template #button-content>
+									<!--<b-icon icon="arrow-up-circle" scale="0.8" ></b-icon>-->
+									{{access}}
+								</template>
+
+								<b-dropdown-item class="btn btn-sm  py-0" variant="outline-secondary"
+									class="btn btn-sm  py-0" @click="access = 'Femoral artery'">Femoral artery
+								</b-dropdown-item>
+
+								<b-dropdown-item class="btn btn-sm  py-0" variant="outline-secondary"
+									class="btn btn-sm  py-0" @click="access = 'Radial artery'">Radial artery
+								</b-dropdown-item>
+
+								<b-dropdown-item class="btn btn-sm  py-0" variant="outline-secondary"
+									class="btn btn-sm  py-0" @click="access = 'Brachial artery'">Brachial artery
+								</b-dropdown-item>
+
+							</b-dropdown>
 							<b-dropdown variant="success" style="font-size: 0.9em;" right>
 								<template #button-content>
 									<!--<b-icon icon="plus" ></b-icon>-->
 									Fit
 								</template>
 
-								<b-dropdown-item variant="outline-secondary" class="btn btn-sm  py-0" @click="addInput('inside', 'Enter device e.g. catheter, balloon, stent, wire ...', 'guide catheters', n.id); 
+								<b-dropdown-item variant="outline-secondary" class="btn btn-sm  py-0" @click="addInput('inside', 'Enter device e.g. catheter, balloon, stent, flow-diverter, Onyx, wire ...', 'guide catheters', n.id); 
 									">Fit device inside</b-dropdown-item>
 
 								<b-dropdown-item v-show="n.hierarchy != 0" class="btn btn-sm  py-0"
@@ -168,25 +167,23 @@
 			<p></p>
 			<p></p>
 
+			<b-container v-show="deviceInputs.length == 1 && deviceInputs[0].active != null">
+				<b-jumbotron bg-variant="light">
+					The <b>{{infoModal.device.name}}</b> is a {{infoModal.device.type}} manufactured by
+					{{infoModal.device.manufacturer}}.
+					<p></p>
+					<div>
+						<b-table small :items="info_table" style="font-size: 0.9em; " head-variant="light">
+						</b-table>
+					</div>
+					<div id="info_extra">
+					</div>
 
-			<b-jumbotron bg-variant="light" v-show="deviceInputs.length == 1 && deviceInputs[0].active != null">
 
-				The <b>{{infoModal.device.name}}</b> is a {{infoModal.device.type}} manufactured by
-				{{infoModal.device.manufacturer}}.
-				<p></p>
-				<div>
-					<b-table small :items="info_table" style="font-size: 0.9em; " head-variant="light"></b-table>
-				</div>
-				<p v-show="infoModal.device.url1 != null"> <b>Manufacturer information: </b>
-					<b-link :href="infoModal.device.url1"> Link</b-link>
-				</p>
-				<p v-show="infoModal.device.url2 != null"> <b>More information: </b>
-					<b-link :href="infoModal.device.url2"> Link</b-link>
-				</p>
-				<p v-show="infoModal.device.ifu != null"> <b>Instructions for use: </b>
-					<b-link :href="infoModal.device.ifu"> Link</b-link>
-				</p>
-			</b-jumbotron>
+				</b-jumbotron>
+			</b-container>
+
+
 		</b-container>
 
 
@@ -218,22 +215,27 @@
 		<b-modal id="help_modal" title="NeuroTool: Help" ok-only>
 			<h4>What is this for?</h4>
 			<p>
-				The number of devices used in neurointerventional procedures has exploded in recent years and there are new ones coming out rapidly. This tool provides information on:
+				The number of devices used in neurointerventional procedures has exploded in recent years and there
+				are
+				new ones coming out rapidly. This tool provides information on:
 			</p>
 			<ul>
-				<li>Sizes of catheters, balloons, stents, coils, and other devices.</li> <li>Find out which devices fit inside each other. </li>
+				<li>Sizes of catheters, balloons, stents, coils, and other devices.</li>
+				<li>Find out which devices fit inside each other. </li>
 				<li>Direct links to manufacturer information. </li>
 			</ul>
 
 			<h4>How to use</h4>
-			<p>Start to type the device you are interested in the search box and then select from the list that pops up.
+			<p>Start to type the device you are interested in the search box and then select from the list that pops
+				up.
 				You can select catheters, wires, stents, balloons, and other devices. </p>
 			<img src="img/help1.png" class="center" width="75%">
 			<p>Insert a device inside this one by selecting "Fit" Then "Fit device inside". You can also view device
 				information by selecting "Info". </p>
 			<img src="img/help2.png" class="center" width="75%">
 			<p>Further devices can be inserted either inside or beside this device using "Fit device inside" or "New
-				device beside". Under Results you will see whether the devices are compatible in terms of diameter and
+				device beside". Under Results you will see whether the devices are compatible in terms of diameter
+				and
 				length. If there are incompatibilities then a message will appear describing the problem. </p>
 			<img src="img/help3.png" class="center" width="75%">
 		</b-modal>
@@ -264,22 +266,17 @@
 			</div>
 		</b-modal>
 
-		<b-modal :id="infoModal.id" :title="infoModal.device.name" ok-only>
+		<b-modal :id="infoModal.id" :title="infoModal.device.name" ok-only static>
 			The <b>{{infoModal.device.name}}</b> is a {{infoModal.device.type}} manufactured by
 			{{infoModal.device.manufacturer}}.
 			<p></p>
 			<div>
-				<b-table small :items="info_table" style="font-size: 0.9em; " head-variant="light"></b-table>
+				<b-table small :items="info_table" style="font-size: 0.9em; " head-variant="light">
+				</b-table>
 			</div>
-			<p v-show="infoModal.device.url1 != null"> <b>Manufacturer information: </b>
-				<b-link :href="infoModal.device.url1"> Link</b-link>
-			</p>
-			<p v-show="infoModal.device.url2 != null"> <b>More information: </b>
-				<b-link :href="infoModal.device.url2"> Link</b-link>
-			</p>
-			<p v-show="infoModal.device.ifu != null"> <b>IFU: </b>
-				<b-link :href="infoModal.device.ifu"> Link</b-link>
-			</p>
+			<div id="info_extra2">
+			</div>
+
 		</b-modal>
 
 		<b-modal :id="compareModal.id" :title="compareModal.title" ok-only>
@@ -291,7 +288,8 @@
 			<p></p>
 			<p></p>
 			<div>
-				<b-table small :items="compareModal.table" style="font-size: 0.9em; " head-variant="light"></b-table>
+				<b-table small :items="compareModal.table" style="font-size: 0.9em; " head-variant="light">
+				</b-table>
 			</div>
 		</b-modal>
 
@@ -308,6 +306,13 @@
 
 	<script>
 		/* GENERIC FUNCTIONS */
+
+		function toTitleCase(str) {
+			str = str.replaceAll("_", " ");
+			return str.toLowerCase().split(' ').map(function (word) {
+				return (word.charAt(0).toUpperCase() + word.slice(1));
+			}).join(' ');
+		}
 
 		function strip_man(text) {
 			const reg = /\s\(([^)]+)\)/;
@@ -375,7 +380,7 @@
 				var parent_incompat = parent.incompatibility.split(/\//);
 			}
 			if (child.incompatibility != null) {
-				var child_incompat = parent.incompatibility.split(/\//);
+				var child_incompat = child.incompatibility.split(/\//);
 			}
 
 			//DMSO
@@ -558,11 +563,9 @@
 					device: {
 						name: null,
 						type: null,
-						manufacturer: null,
-						url1: null,
-						url2: null,
-						ifu: null
-					},
+						manufacturer: null
+					}
+
 				},
 				fitModal: {
 					id: 'fit-modal',
@@ -655,6 +658,39 @@
 						'Minimum inner diameter': in_to_all(deviceInfo.minid),
 						Lengths: deviceInfo.length + " cm"
 					});
+
+
+					//console.log(deviceInfo.length);
+
+					var info_extra = "";
+
+					for (let prop in deviceInfo) {
+						//console.log(prop);
+						//console.log(deviceInfo[prop])
+						if (prop != "name" && prop != "type" && prop != "minid" && prop != "maxod" && prop !=
+							"length" && prop != "name_man" && prop != "manufacturer") {
+							switch (prop) {
+								case "url1":
+									info_extra += "<p><b>Manufacturer Information: </b>" + "<a href = \"" +
+										deviceInfo[prop] + "\">Link</a></p>";
+									"</p>";
+									break;
+
+								default:
+									info_extra += "<p><b>" + toTitleCase(prop) + ": " + "</b>" + deviceInfo[
+											prop] +
+										"</p>";
+									break;
+
+							}
+						}
+					}
+
+					document.getElementById("info_extra").innerHTML = info_extra;
+					document.getElementById("info_extra2").innerHTML = info_extra;
+
+
+
 				},
 
 				info: function (index) {
@@ -735,6 +771,7 @@
 					document.getElementById("result").innerHTML = result;
 					//this.drawDeviceTable();
 					this.drawDiagram();
+					this.updateInfo(JSON.parse(tree.getElementById("device0").getAttribute("data")));
 				},
 				addInput: function (where, text, type, parent) {
 
@@ -833,7 +870,8 @@
 
 
 			created: function () {
-				var newInput1 = this.addInput("inside", "Enter device e.g. guide sheath ",
+				var newInput1 = this.addInput("inside",
+					"Enter device e.g. catheter, balloon, stent, flow-diverter, Onyx, wire ...",
 					"guide catheters", null);
 			}
 		})
