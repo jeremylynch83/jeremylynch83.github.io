@@ -386,7 +386,7 @@ deviceList =
         "url1": "http://synthes.vo.llnwd.net/o16/LLNWMB8/US%20Mobile/Synthes%20North%20America/Product%20Support%20Materials/Brochures/ENVOY%20FAMILY%20BROCHURE%20pages%20DSUSCOD12140219.pdf",
         "minid": 0.078,
         "maxod": 0.09186,
-        "length": "90, 100"
+        "length": "90 / 100"
     },
     {
         "type": "Guide Catheter",
@@ -1263,7 +1263,7 @@ deviceList =
     },
     {
         "type": "Microcatheter",
-        "name": "Rebar-027 Medtronic",
+        "name": "Rebar-027 ",
         "manufacturer": "Medtronic",
         "url1": "https://www.medtronic.com/us-en/healthcare-professionals/products/cardiovascular/peripheral-embolization/rebar.html",
         "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
@@ -1275,7 +1275,7 @@ deviceList =
     },
     {
         "type": "Microcatheter",
-        "name": "Rebar-10 Medtronic",
+        "name": "Rebar-10 ",
         "manufacturer": "Medtronic",
         "url1": "https://europe.medtronic.com/content/dam/medtronic-com/xd-en/c/od08014-nv-access-delivery/pdfs/Rebar_IFU.pdf",
         "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
@@ -1286,7 +1286,7 @@ deviceList =
     },
     {
         "type": "Microcatheter",
-        "name": "Rebar-14 Medtronic",
+        "name": "Rebar-14 ",
         "manufacturer": "Medtronic",
         "url1": "https://europe.medtronic.com/content/dam/medtronic-com/xd-en/c/od08014-nv-access-delivery/pdfs/Rebar_IFU.pdf",
         "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
@@ -1297,7 +1297,7 @@ deviceList =
     },
     {
         "type": "Microcatheter",
-        "name": "Rebar-18 Medtronic",
+        "name": "Rebar-18 ",
         "manufacturer": "Medtronic",
         "url1": "https://www.medtronic.com/us-en/healthcare-professionals/products/cardiovascular/peripheral-embolization/rebar.html",
         "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
@@ -1516,7 +1516,7 @@ deviceList =
     },
     {
         "type": "Microcatheter",
-        "name": "Trevo Pro 14 microcatheter ",
+        "name": "Trevo Pro 14  ",
         "manufacturer": "Stryker",
         "minid": 0.017,
         "maxod": 0.032,
@@ -1524,7 +1524,7 @@ deviceList =
     },
     {
         "type": "Microcatheter",
-        "name": "Trevo Pro 18 microcatheter ",
+        "name": "Trevo Pro 18  ",
         "manufacturer": "Stryker",
         "minid": 0.021,
         "maxod": 0.035,
@@ -2083,7 +2083,7 @@ deviceList =
     },
     {
         "type": "Stent",
-        "name": "CASPER RX Carotid Stent ",
+        "name": "CASPER RX Carotid  ",
         "manufacturer": "Microvention",
         "minid": 0.015,
         "maxod": 0.0656168,
@@ -2217,7 +2217,7 @@ deviceList =
     },
     {
         "type": "Stent",
-        "name": "Accero stent",
+        "name": "Accero ",
         "manufacturer": "Acandis",
         "url1": "https://www.acandis.com/accero-stent-86-en",
         "url2": "https://www.acandis.com/down/uploads/accero-brochure_296_1582187098.pdf",
@@ -2275,7 +2275,7 @@ deviceList =
     },
     {
         "type": "Stent",
-        "name": "Precise Pro RX Carotid Stent 5-8 mm diameter",
+        "name": "Precise Pro RX 5-8 mm diameter Carotid",
         "manufacturer": "Cordis",
         "url1": "https://www.cordis.com/en_us/endovascular/intervene/self-expanding-stents/precise-pro-rx-carotid-stent.html",
         "url2": "https://www.cordis.com/content/dam/cordis/web/documents/catalog/cordis-us-endovascular-catalog.pdf",
@@ -2285,7 +2285,7 @@ deviceList =
     },
     {
         "type": "Stent",
-        "name": "Precise Pro RX Carotid Stent 9-10 mm diameter",
+        "name": "Precise Pro RX 9-10 mm diameter Carotid",
         "manufacturer": "Cordis",
         "url1": "https://www.cordis.com/en_us/endovascular/intervene/self-expanding-stents/precise-pro-rx-carotid-stent.html",
         "url2": "https://www.cordis.com/content/dam/cordis/web/documents/catalog/cordis-us-endovascular-catalog.pdf",
@@ -2483,7 +2483,7 @@ deviceList =
     },
     {
         "type": "Stent Retriever ",
-        "name": "APERIO Hybrid Thrombectomy Device",
+        "name": "APERIO Hybrid ",
         "manufacturer": "Acandis",
         "url1": "https://www.acandis.com/html/page.php?page_id=95",
         "url2": "https://www.acandis.com/down/uploads/aperio-hybrid-brochure_373_1573059457.pdf",
@@ -2691,7 +2691,7 @@ deviceList =
     },
     {
         "type": "Wire",
-        "name": "Avigo 014 microwire",
+        "name": "Avigo 014 ",
         "manufacturer": "Medtronic",
         "url1": "https://europe.medtronic.com/xd-en/healthcare-professionals/products/neurological/access-delivery-nv/avigo.html",
         "ifu": "https://www.medtronic.com/uk-en/healthcare-professionals/products/neurological/access-delivery-nv/avigo/indications-safety-warnings.html",
@@ -2701,7 +2701,7 @@ deviceList =
     },
     {
         "type": "Wire",
-        "name": "Mirage 008 microwire",
+        "name": "Mirage 008 ",
         "manufacturer": "Medtronic",
         "url1": "https://europe.medtronic.com/xd-en/healthcare-professionals/products/neurological/access-delivery-nv/mirage.html",
         "ifu": "https://europe.medtronic.com/xd-en/healthcare-professionals/products/neurological/access-delivery-nv/mirage/indications-safety-warnings.html",
@@ -2711,7 +2711,7 @@ deviceList =
     },
     {
         "type": "Wire",
-        "name": "X-pedion microwire",
+        "name": "X-pedion ",
         "manufacturer": "Medtronic",
         "url1": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
         "minid": 0,
@@ -2738,7 +2738,7 @@ deviceList =
     },
     {
         "type": "Wire",
-        "name": "V-18 Control Wire ",
+        "name": "V-18 Control  ",
         "manufacturer": "Boston Scientific",
         "url1": "https://www.bostonscientific.com/en-US/products/guidewires/v18-v14-controlwire-guidewire.html",
         "minid": 0,
