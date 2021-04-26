@@ -1,6 +1,5 @@
 deviceList = 
 
-
 [
     {
         "type": "Balloon",
@@ -232,7 +231,7 @@ deviceList =
         "manufacturer": "Cerenovus",
         "url1": "https://www.jnjmedicaldevices.com/en-US/product/micrusframe-s-microcoil",
         "minid": 0,
-        "maxod": 0.015,
+        "maxod": 0.0155,
         "length": "?"
     },
     {
@@ -241,7 +240,7 @@ deviceList =
         "manufacturer": "Cerenovus",
         "url1": "https://www.jnjmedicaldevices.com/en-US/product/micrusframe-s-microcoil",
         "minid": 0,
-        "maxod": 0.0105,
+        "maxod": 0.0155,
         "length": "?"
     },
     {
@@ -926,9 +925,9 @@ deviceList =
         "minid": 0,
         "maxod": 0.009055118,
         "length": "?",
+        "description": "\"Onyx® is a non-adhesive liquid embolic agent comprised of EVOH (ethylene vinyl alcohol) copolymerdissolved in DMSO (dimethyl sulfoxide), and suspended micronized tantalum powder to provide contrast for visualization under fluoroscopy. The Onyx Liquid Embolic System (LESTM) consists of a 1.5 ml vial of Onyx, a 1.5 ml vial of DMSO, and three 1 ml Onyx delivery syringes. A DMSO compatible delivery microcatheter that is indicated for use in the neuro vasculature (e.g. MarathonTM, RebarTM or UltraFlowTM HPC catheters) is used to access the embolization site. Onyx is available in two product formulations, Onyx 18(6% EVOH) and Onyx 34 (8% EVOH). Onyx 18 will travel more distally and penetrate deeper into thenidus due to its lower viscosity compared to Onyx 34. Final solidification occurs within five minutes for both product formulations. Onyx is delivered by slow controlled injection through a micro catheter into the brain arteriovenous malformation under fluoroscopic control. The DMSO solvent dissipates into the blood, causing the EVOH copolymer and suspended tantalum to precipitate in situ into a spongy, coherent embolus. Onyx immediately forms a skin as the polymeric embolus solidifies from the outside to the inside, while traveling more distally in the lesion.\"",
         "material": "Ethylene vinyl alcohol (EVOH) copolymer dissolved in DMSO (dimethyl sulfoxide) and suspended micronised tantalum powder",
         "strengths": "18 (6% EVOH, low viscosity) and 34 (8% EVOH, high viscosity)",
-        "description": "\"Onyx® is a non-adhesive liquid embolic agent comprised of EVOH (ethylene vinyl alcohol) copolymerdissolved in DMSO (dimethyl sulfoxide), and suspended micronized tantalum powder to provide contrast for visualization under fluoroscopy. The Onyx Liquid Embolic System (LESTM) consists of a 1.5 ml vial of Onyx, a 1.5 ml vial of DMSO, and three 1 ml Onyx delivery syringes. A DMSO compatible delivery microcatheter that is indicated for use in the neuro vasculature (e.g. MarathonTM, RebarTM or UltraFlowTM HPC catheters) is used to access the embolization site. Onyx is available in two product formulations, Onyx 18(6% EVOH) and Onyx 34 (8% EVOH). Onyx 18 will travel more distally and penetrate deeper into thenidus due to its lower viscosity compared to Onyx 34. Final solidification occurs within five minutes for both product formulations. Onyx is delivered by slow controlled injection through a micro catheter into the brain arteriovenous malformation under fluoroscopic control. The DMSO solvent dissipates into the blood, causing the EVOH copolymer and suspended tantalum to precipitate in situ into a spongy, coherent embolus. Onyx immediately forms a skin as the polymeric embolus solidifies from the outside to the inside, while traveling more distally in the lesion.\"",
         "preparation": "Shaking is required (approximately 15-20 minutes)",
         "ctArtefacts": "High (due to tantalum)",
         "cautions": "DMSO may cause necrotising endotheliitis within the injected vessel (so slow and controlled injection necessary). Relatively contraindicated in infants and pregnancy.",
@@ -942,8 +941,8 @@ deviceList =
         "minid": 0,
         "maxod": 0.009055118,
         "length": "?",
-        "strengths": "12 (low viscosity), 12LD (low viscosity, low radiopacity), 18 (regular viscosity), 18LD (standard viscosity, low radiopacity)",
         "description": "\"Squid is indicated in the embolization of lesions in the peripheral and neurovasculature, including arteriovenous malformations and hypervascular tumours. Each Squid kit contains: One 1,5 mL vial of Squid, One 1,5 mL vial of DMSO, One 1 cc Blue syringe for DMSO, Two 1 cc White syringes for Squid, Two syringe adapters.\"",
+        "strengths": "12 (low viscosity), 12LD (low viscosity, low radiopacity), 18 (regular viscosity), 18LD (standard viscosity, low radiopacity)",
         "preparation": "Shaking is required (approximately 15-20 minutes)",
         "ctArtefacts": "High (due to tantalum)",
         "cautions": "DMSO may cause necrotising endotheliitis within the injected vessel (so slow and controlled injection necessary). Relatively contraindicated in infants and pregnancy."
@@ -956,9 +955,9 @@ deviceList =
         "minid": 0,
         "maxod": 0.009055118,
         "length": "?",
+        "description": "\"The PHIL™ Device is intended for use in the embolization of lesions in the peripheral and neurovasculature, including arteriovenous malformations and hypervascular tumors.\"",
         "material": "Non-adhesive co-polymer comprised of triiodophenol-lactide-co-glycolide acrylate (contains iodine)",
         "strengths": "25% (low viscosity), 30% (medium viscosity), 35% (high viscosity)",
-        "description": "\"The PHIL™ Device is intended for use in the embolization of lesions in the peripheral and neurovasculature, including arteriovenous malformations and hypervascular tumors.\"",
         "preparation": "No shaking needed. Comes in pre-loaded syringe. Requires catheter flushing with DMSO. ",
         "ctArtefacts": "Minimal",
         "features": "\"Iodine Bonded Radiopacifier: High volume of embolic precipitate. Homogeneous radiopacity. No added metal for minimal artifact. High volume of embolic precipitate. More embolic capacity with less DMSO agent.\""
@@ -1877,9 +1876,9 @@ deviceList =
         "minid": 0.015,
         "maxod": 0.086,
         "length": 135,
+        "description": "\"The closed-cell Carotid Wallstent has been engineered to combine a unique stent design with a minimal free cell area, and a highly flexible, intuitive delivery system.\"",
         "material": "Cobalt-chromium-iron-nickel-molybdenum  alloy  (commonly  known  as  Elgiloy®  or  Conichrome) containing  an  enhanced radiopaque tantalum core.",
         "design": "Closed cell",
-        "description": "\"The closed-cell Carotid Wallstent has been engineered to combine a unique stent design with a minimal free cell area, and a highly flexible, intuitive delivery system.\"",
         "features": "\"Low-profile, highly flexible delivery system designed to provide excellent tracking through tortuous anatomy. Monorail delivery system allows rapid catheter exchanges.\""
     },
     {
@@ -1892,9 +1891,9 @@ deviceList =
         "minid": 0.015,
         "maxod": 0.071,
         "length": 135,
+        "description": "\"The closed-cell Carotid Wallstent has been engineered to combine a unique stent design with a minimal free cell area, and a highly flexible, intuitive delivery system.\"",
         "material": "Cobalt-chromium-iron-nickel-molybdenum  alloy  (commonly  known  as  Elgiloy®  or  Conichrome) containing  an  enhanced radiopaque tantalum core.",
         "design": "Closed cell",
-        "description": "\"The closed-cell Carotid Wallstent has been engineered to combine a unique stent design with a minimal free cell area, and a highly flexible, intuitive delivery system.\"",
         "features": "\"Low-profile, highly flexible delivery system designed to provide excellent tracking through tortuous anatomy. Monorail delivery system allows rapid catheter exchanges.\""
     },
     {
@@ -1907,9 +1906,9 @@ deviceList =
         "minid": 0.015,
         "maxod": 0.071,
         "length": 135,
+        "description": "\"The closed-cell Carotid Wallstent has been engineered to combine a unique stent design with a minimal free cell area, and a highly flexible, intuitive delivery system.\"",
         "material": "Cobalt-chromium-iron-nickel-molybdenum  alloy  (commonly  known  as  Elgiloy®  or  Conichrome) containing  an  enhanced radiopaque tantalum core.",
         "design": "Closed cell",
-        "description": "\"The closed-cell Carotid Wallstent has been engineered to combine a unique stent design with a minimal free cell area, and a highly flexible, intuitive delivery system.\"",
         "features": "\"Low-profile, highly flexible delivery system designed to provide excellent tracking through tortuous anatomy. Monorail delivery system allows rapid catheter exchanges.\""
     },
     {
@@ -1921,11 +1920,11 @@ deviceList =
         "minid": 0.016,
         "maxod": 0.063,
         "length": 135,
+        "description": "\"Designed for intracranial atherosclerotic disease. The Wingspan Stent System with the Gateway PTA Balloon Catheter is designed to facilitate access through challenging neurovascular anatomy.\"",
         "comments": "Recommended 300cm guidewire",
         "research": 32073915,
         "material": "Nitinol (alloy of 5% nickel and 45% titanium). Markers composed of 90% platinum and 10% iridium",
-        "design": "Self-expanding, laser-cut, nitinol stent. Four radio-opaque markers at both ends of the stent",
-        "description": "\"Designed for intracranial atherosclerotic disease. The Wingspan Stent System with the Gateway PTA Balloon Catheter is designed to facilitate access through challenging neurovascular anatomy.\""
+        "design": "Self-expanding, laser-cut, nitinol stent. Four radio-opaque markers at both ends of the stent"
     },
     {
         "type": "Stent",
@@ -1958,10 +1957,10 @@ deviceList =
         "minid": 0,
         "maxod": 0.0155,
         "length": "?",
+        "description": "\"Designed for the treatment of intracranial aneurysms in association with embolization coils.\"\n",
         "material": "Nickel titanium",
         "design": "16 braided wires",
-        "resheathable": "Up to 90% of deployed length",
-        "description": "\"Designed for the treatment of intracranial aneurysms in association with embolization coils.\"\n"
+        "resheathable": "Up to 90% of deployed length"
     },
     {
         "type": "Stent",
@@ -1971,10 +1970,10 @@ deviceList =
         "minid": 0,
         "maxod": 0.021,
         "length": "?",
+        "description": "\"Designed for the treatment of intracranial aneurysms in association with embolization coils.\"\n",
         "material": "Nickel titanium",
         "design": "16 braided wires",
-        "resheathable": "Up to 90% of deployed length",
-        "description": "\"Designed for the treatment of intracranial aneurysms in association with embolization coils.\"\n"
+        "resheathable": "Up to 90% of deployed length"
     },
     {
         "type": "Stent",
@@ -1984,10 +1983,10 @@ deviceList =
         "minid": 0,
         "maxod": 0.025,
         "length": "?",
+        "description": "\"Designed for the treatment of intracranial aneurysms in association with embolization coils.\"\n",
         "material": "Nickel titanium",
         "design": "16 braided wires",
-        "resheathable": "Up to 90% of deployed length",
-        "description": "\"Designed for the treatment of intracranial aneurysms in association with embolization coils.\"\n"
+        "resheathable": "Up to 90% of deployed length"
     },
     {
         "type": "Stent",
@@ -1997,10 +1996,10 @@ deviceList =
         "minid": 0,
         "maxod": 0.028,
         "length": "?",
+        "description": "\"Designed for the treatment of intracranial aneurysms in association with embolization coils.\"\n",
         "material": "Nickel titanium",
         "design": "16 braided wires",
-        "resheathable": "Up to 90% of deployed length",
-        "description": "\"Designed for the treatment of intracranial aneurysms in association with embolization coils.\"\n"
+        "resheathable": "Up to 90% of deployed length"
     },
     {
         "type": "Stent",
@@ -2093,19 +2092,19 @@ deviceList =
     },
     {
         "type": "Stent",
-        "name": "Atlas ",
+        "name": "Neuroform Atlas ",
         "manufacturer": "Stryker",
         "url1": "https://www.strykerneurovascular.com/products/hemorrhagic/neuroform-atlas-stent-system",
         "ifu": "https://www.strykerneurovascular.com/downloads/SNV-3095_Atlas_SinglePg_DFU_M6a_mh.pdf",
         "minid": 0,
         "maxod": 0.016,
         "length": "?",
+        "description": "\"The Neuroform Atlas Stent System is purposefully designed to provide the coil support and wall apposition needed to perform effective stent-assisted coiling procedures. \"",
         "vesselDiameters": "2.0 - 4.5 mm",
         "research": 33252708,
         "material": "Nitinol",
         "design": "Laser cut hybrid cell structure with alternating 16- and 24- strut rows",
-        "resheathable": "No (due to open-cell design)",
-        "description": "\"The Neuroform Atlas Stent System is purposefully designed to provide the coil support and wall apposition needed to perform effective stent-assisted coiling procedures. \""
+        "resheathable": "No (due to open-cell design)"
     },
     {
         "type": "Stent",
@@ -2197,10 +2196,10 @@ deviceList =
         "minid": 0,
         "maxod": 0.0155,
         "length": "?",
+        "description": "\"Highly flexible self-expanding nitinol Stent for  the treatment of intracranial aneurysms\"",
         "vesselDiameters": "1.5 - 5.0 mm",
         "design": "Closed cell laser-cut. Three flat Platinum-Iridium X-ray markers on each end of the stent and the two golden markers on the transport wire.",
-        "resheathable": "Up to 90% of length",
-        "description": "\"Highly flexible self-expanding nitinol Stent for  the treatment of intracranial aneurysms\""
+        "resheathable": "Up to 90% of length"
     },
     {
         "type": "Stent",
@@ -2209,12 +2208,12 @@ deviceList =
         "url1": "https://www.acandis.com/acclino-flex-stent-14-en",
         "url2": "https://www.acandis.com/down/uploads/acclino-flex-plus-brochure_160_1507734262.pdf",
         "minid": 0,
-        "maxod": 0.0155,
+        "maxod": 0.02,
         "length": "?",
+        "description": "\"Highly flexible self-expanding nitinol Stent for  the treatment of intracranial aneurysms\"",
         "vesselDiameters": "4.0 - 6.0 mm",
         "design": "Closed cell laser-cut. Three flat Platinum-Iridium X-ray markers on each end of the stent and the two golden markers on the transport wire.",
-        "resheathable": "Up to 90% of length",
-        "description": "\"Highly flexible self-expanding nitinol Stent for  the treatment of intracranial aneurysms\""
+        "resheathable": "Up to 90% of length"
     },
     {
         "type": "Stent",
@@ -2225,10 +2224,10 @@ deviceList =
         "minid": 0,
         "maxod": 0.0155,
         "length": "?",
+        "description": "\"The ACCERO® Stent is a highly visible, braided self-expanding stent with BlueXide® surface finishing for treatment of intracranial aneurysms.\"",
         "surfaceCoating": "Yes (BlueXide)",
         "design": "Self-expanding braided stent ",
-        "resheathable": "Up to 95% of length",
-        "description": "\"The ACCERO® Stent is a highly visible, braided self-expanding stent with BlueXide® surface finishing for treatment of intracranial aneurysms.\""
+        "resheathable": "Up to 95% of length"
     },
     {
         "type": "Stent",
@@ -2303,9 +2302,9 @@ deviceList =
         "minid": 0,
         "maxod": 0.016,
         "length": "?",
+        "description": "\"Flexible self-expanding Nitinol stent for gentle treatment of intracranial stenosis\"",
         "vesselDiameters": "2.0 - 4.0 mm",
         "design": "Laser-cut",
-        "description": "\"Flexible self-expanding Nitinol stent for gentle treatment of intracranial stenosis\"",
         "features": "\"Due to its low profile the stent can be delivered through the NeuroSpeed® PTA Balloon Catheter with an inner diameter of 0.0165. Consequently, an exchange of the PTA balloon catheter by a microcatheter is not required for the stent delivery – minimising the procedure time and procedural risks.\""
     },
     {
@@ -2316,9 +2315,9 @@ deviceList =
         "minid": 0,
         "maxod": 0.028,
         "length": "?",
+        "description": "\"Tubridge® is the first intracranial flow diverter designed and developed in China. It is indicated specifically to the most fatal large(>20mm)or giant(>25mm) aneurysms. The device can effectively divert the blood flow of the parent arteryby hemodynamic mechanisms, reduce the impact of the blood flow to the cerebral aneurysm, and promote the endothelialization process at the aneurysm neck. This promotes healing of the aneusysm.\"",
         "material": "Nickel-titanium alloy, platinum, iridium",
-        "design": "46 braided nitinol wires and two platinum strands for smaller versions (2.5–3mm), whereas 62 nitinol wires and two platinum strands  constitute  larger  versions  (3.5–6.5mm). Pore size of 0.040–0.050 mm2 at the nominal diameter to provide high metal coverage (approximately 30.0%–35.0%) at the aneurysmal neck after full opening",
-        "description": "\"Tubridge® is the first intracranial flow diverter designed and developed in China. It is indicated specifically to the most fatal large(>20mm)or giant(>25mm) aneurysms. The device can effectively divert the blood flow of the parent arteryby hemodynamic mechanisms, reduce the impact of the blood flow to the cerebral aneurysm, and promote the endothelialization process at the aneurysm neck. This promotes healing of the aneusysm.\""
+        "design": "46 braided nitinol wires and two platinum strands for smaller versions (2.5–3mm), whereas 62 nitinol wires and two platinum strands  constitute  larger  versions  (3.5–6.5mm). Pore size of 0.040–0.050 mm2 at the nominal diameter to provide high metal coverage (approximately 30.0%–35.0%) at the aneurysmal neck after full opening"
     },
     {
         "type": "Stent Retriever ",
@@ -2491,9 +2490,9 @@ deviceList =
         "minid": 0,
         "maxod": 0.02,
         "length": "?",
+        "description": "\"The APERIO Hybrid Thrombectomy Device is the third generation of Acandis stent retriever featuring a perfect interplay in acute ischaemic strokes:\"",
         "vesselDiameters": "1.5 - 5.5 mm",
         "material": "\"Three distal platinum iridium device markers for  permanent control of device position and opening behaviour.Two radiopaque DFT wires featuring full length visibility  for precise alignment and additional control during procedure.One proximal platinum iridium device marker for  precise positioning within the thrombus.\"",
-        "description": "\"The APERIO Hybrid Thrombectomy Device is the third generation of Acandis stent retriever featuring a perfect interplay in acute ischaemic strokes:\"",
         "features": "\" The proven hybrid cell design leads to reliable and fast flow restoration. Small closed cells ensure a perfect vessel wall apposition and expansion into the clot. Large open cells with integrated anchoring elements assure efficient clot retention for reliable and atraumatic retrieval even in tortuous vessel anatomies. In combination, these two cell designs build up a functional segment.\""
     },
     {

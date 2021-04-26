@@ -368,7 +368,7 @@
 		function setupDevices(data) {
 			data.forEach(device => {
 				device.name = device.name.trim();
-				device.name_man = device.name + " (" + device.manufacturer + ")";
+				device.name_man = device.name + " " + device.type + " (" + device.manufacturer + ")";
 			})
 		}
 
