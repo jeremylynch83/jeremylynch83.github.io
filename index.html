@@ -654,21 +654,25 @@
 					this.infoModal.device.type = this.infoModal.device.type.toLowerCase();
 
 					this.info_table = [];
+					var table_row = null;
 
-					this.info_table.push({
-						'Maximum outer diameter': in_to_all(deviceInfo.maxod),
-						'Minimum inner diameter': in_to_all(deviceInfo.minid),
-						Lengths: deviceInfo.length + " cm"
-					});
+					table_row['Maximum outer diameter'] = in_to_all(deviceInfo.maxod);
+					//table_row['Minimum inner diameter'] = in_to_all(deviceInfo.maxod);
+					//table_row['Maximum outer diameter'] = deviceInfo.length + " cm";
 
 
-					//console.log(deviceInfo.length);
+
+					if (deviceInfo.type != "liquid embolic") {
+						this.info_table.push({
+							'Maximum outer diameter': in_to_all(deviceInfo.maxod),
+							'Minimum inner diameter': in_to_all(deviceInfo.minid),
+							Lengths: deviceInfo.length + " cm"
+						});
+					}
 
 					var info_extra = "";
 
 					for (let prop in deviceInfo) {
-						//console.log(prop);
-						//console.log(deviceInfo[prop])
 						if (prop != "name" && prop != "type" && prop != "minid" && prop != "maxod" && prop !=
 							"length" && prop != "name_man" && prop != "manufacturer") {
 							switch (prop) {
@@ -682,12 +686,20 @@
 										deviceInfo[prop] + "\">Link</a></p>";
 									"</p>";
 									break;
+								case "ifu":
+									info_extra += "<p><b>Instructions For Use: </b>" + "<a href = \"" +
+										deviceInfo[prop] + "\">Link</a></p>";
+									"</p>";
+									break;
 								case "recommended":
 									info_extra += "<p><b>Recommended Catheter: </b>" + deviceInfo[prop] + "</p>";
 
 									break;
 								case "dmso":
 									info_extra += "<p><b>DMSO Compatibility: </b> Yes</p>";
+									break;
+								case "vesselDiameters":
+									info_extra += "<p><b>Vessel diameters: </b>" + deviceInfo[prop] + "</p>";
 									break;
 								case "tiplengths":
 									break;
