@@ -625,11 +625,14 @@
 					);
 
 
-					deviceInputs[index].display_info = "OD: " + e.maxod.toFixed(4) + ".";
+					deviceInputs[index].display_info = "OD: " + e.maxod.toFixed(4) + "\" (" + in_to_fr(e.maxod)
+						.toFixed(1) +
+						" Fr).";
 
 					if (e.minid != null && e.minid != 0) deviceInputs[index].display_info += " ID: " + e.minid
-						.toFixed(4) + ".";
-					if (e.length != null) deviceInputs[index].display_info += " " + e.length + " cm";
+						.toFixed(4) + "\".";
+					if (e.length != null && e.length != "?") deviceInputs[index].display_info += " " + e.length +
+						" cm";
 					deviceInputs[index].active = "true";
 
 				},
@@ -654,20 +657,19 @@
 					this.infoModal.device.type = this.infoModal.device.type.toLowerCase();
 
 					this.info_table = [];
-					var table_row = null;
 
-					//table_row['Maximum outer diameter'] = in_to_all(deviceInfo.maxod);
-					//table_row['Minimum inner diameter'] = in_to_all(deviceInfo.maxod);
-					//table_row['Maximum outer diameter'] = deviceInfo.length + " cm";
-
-
+					console.log(deviceInfo.type);
 
 					if (deviceInfo.type != "liquid embolic") {
-						this.info_table.push({
+						this.info_table = [{
 							'Maximum outer diameter': in_to_all(deviceInfo.maxod),
-							'Minimum inner diameter': in_to_all(deviceInfo.minid),
-							Lengths: deviceInfo.length + " cm"
-						});
+							...(deviceInfo.minid != 0 && {
+								'Minimum inner diameter': in_to_all(deviceInfo.minid)
+							}),
+							...(deviceInfo.length != "?" && {
+								'Lengths': deviceInfo.length + " cm"
+							})
+						}];
 					}
 
 					var info_extra = "";
@@ -692,7 +694,8 @@
 									"</p>";
 									break;
 								case "recommended":
-									info_extra += "<p><b>Recommended Catheter: </b>" + deviceInfo[prop] + "</p>";
+									info_extra += "<p><b>Recommended Catheter: </b>" + deviceInfo[prop] +
+										"</p>";
 
 									break;
 								case "dmso":
@@ -700,6 +703,9 @@
 									break;
 								case "vesselDiameters":
 									info_extra += "<p><b>Vessel diameters: </b>" + deviceInfo[prop] + "</p>";
+									break;
+								case "ctArtefacts":
+									info_extra += "<p><b>CT Artefact: </b>" + deviceInfo[prop] + "</p>";
 									break;
 								case "tiplengths":
 									break;
@@ -734,7 +740,8 @@
 				},
 
 				compareLaunch: function (index) {
-					this.compareModal.first_device = JSON.parse(tree.getElementById(index).getAttribute("data"));
+					this.compareModal.first_device = JSON.parse(tree.getElementById(index).getAttribute(
+						"data"));
 					var second_device = index;
 					this.compareModal.table = [];
 					this.$root.$emit('bv::show::modal', this.compareModal.id);
@@ -745,7 +752,8 @@
 					this.compareModal.table = [];
 
 					this.compareModal.table.push({
-						Name: this.compareModal.first_device.name + " (" + this.compareModal.first_device
+						Name: this.compareModal.first_device.name + " (" + this.compareModal
+							.first_device
 							.manufacturer + ")",
 						'Maximum outer diameter': in_to_all(this.compareModal.first_device.maxod),
 						'Minimum inner diameter': in_to_all(this.compareModal.first_device.minid),
@@ -759,7 +767,8 @@
 				},
 
 				fitLaunch: function (index) {
-					this.fitModal.first_device = JSON.parse(tree.getElementById(index).getAttribute("data"));
+					this.fitModal.first_device = JSON.parse(tree.getElementById(index).getAttribute(
+						"data"));
 					var first_device = this.fitModal.first_device;
 					this.fitModal.n = 0;
 					this.fitModal.table = [];
@@ -877,12 +886,9 @@
 					for (var i = 0; i < n.hierarchy; i++) {
 						n.hierarchy_text = n.hierarchy_text + '◼   ';
 					}
-
-
 					return id;
 				},
 				removeInput: function (id) {
-
 					if (id != "device0") {
 						tree.getElementById(id).remove();
 						var index = deviceInputs.findIndex(
@@ -896,8 +902,6 @@
 
 				}
 			},
-
-
 
 			created: function () {
 				var newInput1 = this.addInput("inside",
