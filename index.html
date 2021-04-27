@@ -2,18 +2,16 @@
 <html lang="en">
 
 <head>
-
 	<!--
 		FEATURES TO IMPLEMENT:
 		* Similar devices
+		* Youtube
 		* Delete running properly
 		* Cross/delete on iphone
 		* Unit convertor
 		* Potential incompatibilities: e.g. Flowgate and ACE/Sofia
 		* Frictionless submission of incompatibility
-
 	-->
-
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -33,9 +31,6 @@
 	<!--<script src="raphael.js"></script>-->
 	<!-- Device Library -->
 	<script src="deviceList.js"></script>
-
-
-
 </head>
 
 <body>
@@ -63,7 +58,6 @@
 		</b-navbar>
 
 		<b-container>
-
 			<p></p>
 			<p></p>
 
@@ -74,61 +68,45 @@
 				<b-button variant="primary" v-b-modal.help_modal>Help</b-button>
 			</div>
 
-
 			<template v-for="n in deviceInputs">
-
-
 				<p></p>
-
 				<b-form-group :label-cols="n.hierarchy" :key="n.id" :label="n.hierarchy_text" label-size="sm">
-
 					<vue-bootstrap-typeahead :key="n.id" :data="devices" :placeholder="n.text"
 						:serializer="item => item.name_man" @hit="updateDevice(n.id, $event); updateSizer()">
 					</vue-bootstrap-typeahead>
-
 					<div class="text-right"
 						style="color:rgb(124, 124, 124); letter-spacing: 0px;  font-family:Arial Narrow, sans-serif-condensed">
 						{{n.display_info}}
 					</div>
-
-
 					<div class="text-right">
 						<b-button-group>
 
 							<b-dropdown v-show="n.hierarchy == 0 && n.active != null" variant="transparent"
 								style="font-size: 0.9em;" right>
 								<template #button-content>
-									<!--<b-icon icon="arrow-up-circle" scale="0.8" ></b-icon>-->
 									{{access}}
 								</template>
-
 								<b-dropdown-item class="btn btn-sm  py-0" variant="outline-secondary"
 									class="btn btn-sm  py-0" @click="access = 'Femoral artery'">Femoral artery
 								</b-dropdown-item>
-
 								<b-dropdown-item class="btn btn-sm  py-0" variant="outline-secondary"
 									class="btn btn-sm  py-0" @click="access = 'Radial artery'">Radial artery
 								</b-dropdown-item>
-
 								<b-dropdown-item class="btn btn-sm  py-0" variant="outline-secondary"
 									class="btn btn-sm  py-0" @click="access = 'Brachial artery'">Brachial artery
 								</b-dropdown-item>
-
 							</b-dropdown>
 							<b-dropdown variant="success" style="font-size: 0.9em;" right>
 								<template #button-content>
-									<!--<b-icon icon="plus" ></b-icon>-->
 									Fit
 								</template>
 
 								<b-dropdown-item variant="outline-secondary" class="btn btn-sm  py-0" @click="addInput('inside', 'Enter device e.g. catheter, balloon, stent, flow-diverter, Onyx, wire ...', 'guide catheters', n.id); 
 									">Fit device inside</b-dropdown-item>
-
 								<b-dropdown-item v-show="n.hierarchy != 0" class="btn btn-sm  py-0"
 									variant="outline-secondary" class="btn btn-sm  py-0"
 									@click="addInput('beside', 'Enter device e.g. catheter, balloon, stent, wire ...', 'guide catheters', n.id)">
 									Fit device beside</b-dropdown-item>
-
 								<b-dropdown-item v-show="n.active != null" class="btn btn-sm  py-0"
 									variant="outline-secondary" class="btn btn-sm  py-0" @click="fitLaunch(n.id)">What
 									devices does this fit inside?</b-dropdown-item>
@@ -137,12 +115,10 @@
 
 							<b-button v-show="n.hierarchy != 0" variant="danger" class="btn btn-sm  py-0"
 								style="font-size: 0.9em;" @click="removeInput(n.id)">
-								<!--<b-icon icon="x-circle" scale="0.8" ></b-icon>-->
 								Remove</b-button>
 
 							<b-dropdown v-show="n.active != null" variant="info" style="font-size: 0.9em;" right>
 								<template #button-content>
-									<!--<b-icon icon="info-circle" scale="0.8" ></b-icon>-->
 									Info
 								</template>
 
@@ -152,9 +128,7 @@
 								<b-dropdown-item class="btn btn-sm  py-0" variant="outline-secondary"
 									class="btn btn-sm  py-0" @click="compareLaunch(n.id)">Compare with ...
 								</b-dropdown-item>
-
 							</b-dropdown>
-
 						</b-button-group>
 					</div>
 				</b-form-group>
@@ -168,8 +142,6 @@
 
 			<p></p>
 			<p></p>
-
-
 		</b-container>
 
 		<b-container v-show="deviceInputs.length == 1 && deviceInputs[0].active != null">
@@ -183,18 +155,10 @@
 				</div>
 				<div id="info_extra">
 				</div>
-
-
 			</b-jumbotron>
 		</b-container>
 
-
-
-
-
-
 		<b-container id="result_container" v-show="deviceInputs.length >1 && deviceInputs[0].active != null ">
-
 			<b-jumbotron bg-variant="light">
 				<p id="result" class="lead"></p>
 
@@ -211,11 +175,9 @@
 				<div id="paper"></div>
 				<p></p>
 			</b-jumbotron>
-
 		</b-container>
 
 		<!---------------- MODALS -------------->
-
 		<b-modal id="help_modal" title="NeuroTool: Help" ok-only>
 			<h4>What is this for?</h4>
 			<p>
@@ -282,15 +244,12 @@
 			</div>
 			<div id="info_extra2">
 			</div>
-
 		</b-modal>
 
 		<b-modal :id="compareModal.id" :title="compareModal.title" ok-only>
-
 			<p>Compare <b> {{ compareModal.first_device.name }} </b> with: </p>
 			<vue-bootstrap-typeahead :data="devices" :serializer="item => item.name_man" @hit="compare_device($event)">
 			</vue-bootstrap-typeahead>
-
 			<p></p>
 			<p></p>
 			<div>
@@ -299,14 +258,10 @@
 			</div>
 		</b-modal>
 
-
-
 		<b-container class="footer">
 			This tool is for educational purposes only. <b-link href="mailto: jeremy.lynch@gmail.com"> Contact us.
 			</b-link>
 		</b-container>
-
-
 	</div>
 
 
@@ -321,23 +276,19 @@
 		}
 
 		function strip_man(text) {
-			const reg = /\s\(([^)]+)\)/;
-			return (text.replace(reg, ""));
+			return (text.replace(/\s\(([^)]+)\)/, ""));
 		}
 
 		function in_to_mm(inches) {
-			var mm = inches * 25.4;
-			return mm;
+			return inches * 25.4;
 		}
 
 		function in_to_fr(inches) {
-			var fr = inches * 76.2;
-			return fr;
+			return inches * 76.2;
 		}
 
 		function in_to_all(inches) {
 			var text = "";
-
 			if (inches != null || inches == "0") {
 				var in_short = inches.toFixed(4) + "\"";
 				var mm = in_to_mm(inches).toFixed(2) + " mm";
@@ -435,8 +386,6 @@
 										x] + " cm"
 								);
 							}
-
-
 						}
 					}
 					solution_list = solution_list.sort();
@@ -689,12 +638,12 @@
 									break;
 								case "url2":
 									info_extra += "<p><b>Manufacturer Information 2: </b>" + "<a href = \"" +
-										deviceInfo[prop] + "\">Link</a></p>";
+										deviceInfo[prop] + "\" target=\"_blank\">Link</a></p>";
 									"</p>";
 									break;
 								case "ifu":
 									info_extra += "<p><b>Instructions For Use: </b>" + "<a href = \"" +
-										deviceInfo[prop] + "\">Link</a></p>";
+										deviceInfo[prop] + "\" target=\"_blank\">Link</a></p>";
 									"</p>";
 									break;
 								case "recommended":
@@ -914,8 +863,6 @@
 			}
 		})
 	</script>
-
-
 </body>
 
 </html>

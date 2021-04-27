@@ -335,7 +335,7 @@ deviceList =
         "length": "80 / 90 / 100 / 110"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Long Sheath",
         "name": "Ballast",
         "manufacturer": "Balt",
         "url1": "https://balt-usa.com/products/ballast-088-long-sheath/",
@@ -389,7 +389,7 @@ deviceList =
         "length": "90 / 100"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Long Sheath",
         "name": "6F Flexor Shuttle ",
         "manufacturer": "Cook Medical",
         "url1": "https://www.cookmedical.com/products/di_ksawsh_webds/",
@@ -460,7 +460,7 @@ deviceList =
         "length": "95"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Long Sheath",
         "name": "Neuron Max 088 ",
         "manufacturer": "Penumbra",
         "url1": "https://www.penumbrainc.com/it/neuro-device/neuron-system/",
@@ -508,6 +508,8 @@ deviceList =
         "type": "Guide Catheter",
         "name": "8F Merci ",
         "manufacturer": "Stryker",
+        "url1": "https://www.stryker.com/us/en/neurovascular/products/merci-balloon-guide-catheter.html",
+        "ifu": "https://www.stryker.com/content/dam/stryker/neurovascular/products/merci-balloon-guide-catheter/resources/Merci-BGC_DFU_US_Jun19.pdf",
         "minid": 0.078,
         "maxod": 0.105,
         "length": "80 / 95"
@@ -516,6 +518,8 @@ deviceList =
         "type": "Guide Catheter",
         "name": "9F Merci ",
         "manufacturer": "Stryker",
+        "url1": "https://www.stryker.com/us/en/neurovascular/products/merci-balloon-guide-catheter.html",
+        "ifu": "https://www.stryker.com/content/dam/stryker/neurovascular/products/merci-balloon-guide-catheter/resources/Merci-BGC_DFU_US_Jun19.pdf",
         "minid": 0.085,
         "maxod": 0.118,
         "length": "80 / 95"
@@ -539,7 +543,7 @@ deviceList =
         "incompatibility": "ACE68 / Sofia"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Long Sheath",
         "name": "AXS Infinity LS ",
         "manufacturer": "Stryker",
         "url1": "https://www.strykerneurovascular.com/us/products/access/axs-infinity-ls-long-sheath",
@@ -548,7 +552,7 @@ deviceList =
         "length": "70 / 80 / 90"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Long Sheath",
         "name": "AXS Infinity LS Plus ",
         "manufacturer": "Stryker",
         "url1": "https://www.stryker.com/us/en/neurovascular/products/axs-infinity-plus.html",
@@ -914,6 +918,27 @@ deviceList =
         "url1": "https://phenox.net/international/uploads/KIF/pCONUS_KIF-0020J_LR.pdf",
         "minid": 0,
         "maxod": 0.02
+    },
+    {
+        "type": "Intrasaccular Device",
+        "name": "Neqstent",
+        "manufacturer": "Cerus",
+        "url1": "https://www.cerusendo.com/neqstent-bridging-device",
+        "url2": "https://c92319a4-9513-4c41-823f-a299417a6f3a.filesusr.com/ugd/a71523_e2bb5aaf26de4c859324b3cf7059b58d.pdf",
+        "minid": 0,
+        "maxod": 0.026,
+        "description": "\"Designed to assist with the embolization of intracranial aneurysms focusing on treatment at the neck. Treats a wide range of unruptured aneurysm morphologies including wide-necked bifurcation and bifurcation aneurysms. Adjunctive device providing stable aneurysm neck  coverage for the placement  of embolization coils within sac and long term stable occlusion of the aneurysm. Requires the physician to size only to the aneurysm neck; Smooth and controlled delivery into aneurysm sac; Minimal arterial components and some flow diverting properties to reduce  coil compaction and recurrences; Delivered using established catheterization techniques; Electrolytic method of detachment.\""
+    },
+    {
+        "type": "Intrasaccular Device",
+        "name": "Contour",
+        "manufacturer": "Cerus",
+        "url1": "https://www.cerusendo.com/contour-neurovascular-system",
+        "url2": "https://c92319a4-9513-4c41-823f-a299417a6f3a.filesusr.com/ugd/a71523_06535810e1324c67bf0ecab7a619a921.pdf",
+        "minid": 0,
+        "maxod": 0.026,
+        "length": "?",
+        "description": "\"Designed to treat a range of aneurysm morphologies including unruptured wide-necked bifurcation and bifurcation aneurysms.\""
     },
     {
         "type": "Liquid Embolic",
@@ -1643,6 +1668,16 @@ deviceList =
         "length": 155
     },
     {
+        "type": "Microcatheter",
+        "name": "CerusEndo MC021",
+        "manufacturer": "Cerus",
+        "url1": "https://www.cerusendo.com/mc021-microcatheter",
+        "minid": 0.021,
+        "maxod": 0.035433,
+        "length": "150 / 160",
+        "description": "\"The CerusEndo MC 021 is a state of the art microcatheter designed to meet the needs of accessing tortuous neurovasculature and delivering therapeutic devices to intended targets. It is comprised of a Teflon lined ID for optimum interaction with intraluminal devices, a metal reinforced wall transitioning from a supportive and pushable proximal shaft to a compliant yet stable distal shaft, and a variable stiffness polymer jacket with a hydrophilic OD coating for smooth and predictable advancement. In addition, it has a standard luer lock hub at the proximal end, and a radiopaque marker at the steam-shapeable distal tip.  Paramount to the design of the CerusEndo MC 021 was the drive to create a microcatheter providing optimum target vessel access, and best in class stability during delivery of intraluminal therapeutic devices such as stents, flow diverters, and intrasaccular embolization devices.\""
+    },
+    {
         "type": "Protection Device",
         "name": "SpiderFx ",
         "manufacturer": "Medtronic",
@@ -2047,13 +2082,17 @@ deviceList =
         "type": "Stent",
         "name": "Pipeline Flex / Shield",
         "manufacturer": "Medtronic",
-        "url1": "https://web.archive.org/web/20201028182152/https://www.accessdata.fda.gov/cdrh_docs/pdf10/P100018C.pdf",
+        "url1": "https://europe.medtronic.com/xd-en/healthcare-professionals/products/neurological/aneurysm-treatment/pipeline-shield.html",
+        "url2": "https://web.archive.org/web/20201028182152/https://www.accessdata.fda.gov/cdrh_docs/pdf10/P100018C.pdf",
+        "ifu": "https://europe.medtronic.com/content/dam/medtronic-com/xd-en/c/od08014-nv-access-delivery/pdfs/PipelineShield_IFU.pdf",
         "minid": 0,
         "maxod": 0.026,
         "length": "?",
+        "description": "\"Legacy of the Pipeline™ flow diverters, this third generation of flow diverters offers an alternative solution for the treatment of aneurysms.\"",
         "recommended": "Phenom 27",
         "research": "[Nelson PK, Lylyk P, Szikora I, et al. The Pipeline Embolization Device for the intracranial treatment of aneurysms trial. AJNR Am J Neuroradiol 2011;32:34-40.][Trivelato FP, Wajnberg E, Rezende MTS, et al. Safety and effectiveness of the Pipeline Flex Embolization Device with Shield technology for the treatment of intracranial aneurysms: midterm results from a multicenter study. Neurosurgery2019;87:104–11.]",
-        "material": "Cobalt-Chromium-nickel alloy; Platinum-tungsten",
+        "material": "48 braids: 36 cobalt-chromium and 12 platinum wires for radiopacity ",
+        "surfaceCoating": "Shield Technology™: a surface modification where synthetic phosphorylcholine (PC) polymer is covalently-chemically-bonded to the strands that make up the Pipeline™ device braid. ",
         "design": "48 braided wires; PTFE sleeves",
         "features": "SHIELD provides a surface  modification  whereby  a  synthetic  layer  of  phosphorylcholine  coats  the  metal  strands  with the aim of reducing thrombogenicity"
     },
