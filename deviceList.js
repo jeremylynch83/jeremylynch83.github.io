@@ -148,7 +148,13 @@ deviceList =
         "dmso": "yes",
         "minid": 0.009,
         "maxod": 0.03675,
-        "length": "?"
+        "length": 165,
+        "description": "\"The Scepter Mini has similar indications for use as the predicates, however, incorporates several minor design differences.  The Scepter Mini has a slightly longer length and a slightly smaller diameter.  The balloon of the Scepter Mini is slightly shorter.  The distal tip of the Scepter Mini extends a shorter distance from the distal end of the balloon than that of the Scepter C and XC.  For the Scepter Mini, the purge hole is covered by a semi-permeable  membrane  designed  to  allow  air  to  escape  while  preventing  liquids  from  passing.    Thepredicate  Scepter  C  and  XC  incorporate  3  radiopaque  marker  bands,  while  the  design  of  the  Scepter  Mini  allows  for  visualization  under  fluoroscopy  with  only  2  radiopaque  marker  bands  (due  to  shorter  distal  tip  segment).  All Scepter catheters have a hydrophilic coating. \"",
+        "tipLengths": "9 mm",
+        "material": "Polyurethrane elastomeric. Hydrophilic coating. ",
+        "design": "Dual coaxial lumen",
+        "cautions": "The tip is not shapeable",
+        "features": "Distal OD: 1.6 Fr (in comparison to the Scepter C and XC which have a distal OD of 2.6 Fr)."
     },
     {
         "type": "Balloon",

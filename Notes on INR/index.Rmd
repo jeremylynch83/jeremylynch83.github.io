@@ -1,0 +1,486 @@
+--- 
+title: "A Minimal Book Example"
+author: "Yihui Xie"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
+---
+
+
+# Introduction
+
+This is a few notes I have made on INR. [@xie2015]
+
+# Devices
+
+## Embolic Agents
+
+
+### Coils
+### Liquid embolics
+### Stents, flow-diverters, flow-disruptors
+
+
+
+
+# Safety and Complications
+
+
+# Access Techniques
+
+# Diagnostic Cerebral Angiography
+
+# Diagnostic Spinal Angiography
+
+# (PART) Control of Thrombosis {-} 
+
+
+# Thrombosis
+
+## Blood coagulation
+
+## Anticoagulation therapy
+### Heparin
+#### Reversal
+### Warfarin
+#### Reversal
+### Oral anticoagulants
+### Thrombophilia
+### Antiplatelet Therapy
+
+#### Aspirin
+#### Clopidogrel
+#### Ticagrelor
+#### Prasugrel
+#### Glycoprotein Iib/IIIa receptor inhibitors
+			
+## Thrombolytic therapy
+
+# (PART) Anatomy {-} 
+
+# Cranial arterial
+## Aortic arch
+## Subclavian artery
+## External carotid artery
+## Internal Carotid artery
+### Cervical
+### Petrous
+### Cavernous
+### Intradural
+## Middle Cerebral artery
+## Anterior Cerebral artery
+## Posterior Cerebral Artery
+## Vertebrobasilar
+### Vertebral artery
+### Basilar artery and branches
+## Posterior Cerebral artery
+			
+<!-- 			
+# Cranial Anastomoses
+
+[See Krings/Byrnes]
+			
+# Cranial Venous
+## Extracranial veins
+### Scalp
+### Face and neck
+## Intracranial
+### Diploic
+### Emissary
+### Meningeal
+### Dural
+## Cerebral
+### Cortical
+### Medullary
+### Pisterior fossa
+				
+# Spinal Vascular Anatomy
+## Supply
+### Radicular
+### Anterior radiculomedullary
+### Posterior radiculomedullary
+### ASA
+### PSA
+## Intrinsic/medullary
+### Sulcal
+### Perforator arteries of the spinal cord
+## Extradural multimetameric Spinal Arteries
+### Cervical
+### Thoracic
+### Lumbar
+### Sacral 
+## Venous drainage
+### Veins of the cord
+### Epidural venous plexus
+### External vertebral plexus
+
+# (PART) Vascular Disease {.unnumbered}
+
+# Treatment of Vascular Disease
+
+# Subarachnoid haemorrhage
+
+## Epidemiology
+
+## Acute effects
+
+## Grading of patients
+
+## Types
+
+### Perimesencephalic
+
+### RCVS
+
+## Complications
+
+### Vasospasm
+
+### Long-term
+
+## Management
+
+### Medical
+
+### Intra-arterial chemical
+
+### Angioplasty
+
+# Intracranial aneurysms
+
+## Introduction
+
+Aneurysms may be considered as manifestations of multiple disease processes, rather than as a single disease. This distinction may be helpful as it helps understand management of different aneurysms. 
+
+_Traumatic_ aneurysms occur after sudden force. They often present in a delayed fashion with haemorrhage days or weeks after the initial event. The aneurysm may be a pseudoaneurysm. Citation [@knitr2014].
+
+_
+
+### Location
+
+### Causes
+
+### Histopathology
+
+#### Small unruptured
+
+#### Large/giant
+
+-   Partially thrombosed aneurysms:
+
+    -   Can be chronic dissection OR
+    -   Vasa Vasorum bleeding
+
+#### Ruptured
+
+#### Fusiform
+
+#### Dissecting
+
+-   Dissection can result in:
+
+    -   Vessel occlusion
+    -   Rupture outside: SAH, false aneurysm
+    -   Reopen inside: emboli
+
+#### Blister
+
+### Epidemiology
+
+#### Prevalence
+
+#### Risk of aneurysm rupture
+
+## Diagnosis
+
+## When to treat
+
+## Basic principles of treatment
+
+### Baloon
+
+### Stent
+
+## Specific aneurysms:
+
+### Basilar tip
+
+### ACOM
+
+### PCOM
+
+### MCA
+
+## Complications
+
+# Stroke
+
+## Imaging
+
+## Indications for thrombectomy
+
+## Anaesthesia
+
+## Thrombolystics?
+
+## Techniques
+
+### Aspiration
+
+### Stent retrieval
+
+## Acute carotid stenting
+
+## Acute intracranial stenting
+
+## Tandem occlusion
+
+## Distal thombectomy M2+
+
+## Posterior circulation
+
+## Venous system
+
+## Complications of thrombectomy
+
+## Postoperative care
+
+# Atherosclerotic Disease
+
+## Carotid stenosis
+
+### Pathology
+
+### Medical and surgical treatment
+
+### Endovascular treatment
+
+#### Indications
+
+#### Angioplasty
+
+#### Stenting
+
+## Intracranial artery stenosis
+
+### Pathology
+
+### Medical and surgical treatment
+
+### Endovascular treatment
+
+# Vascular Malformations
+
+## Definitions
+
+## Epidemiology
+
+## Classifications
+
+## Capillary telangiectasia
+
+## Developmental venos anomaly
+
+## Cavernous malformations
+
+## Cerebral Arteriovenous Malformation
+
+# Cranial Dural Vascular Malformations
+
+## Definitions
+
+## Aetiology
+
+## Epidemiology
+
+## Classification
+
+## Clinical presentation
+
+### Risk of haemorrhage
+
+### Risk of progression
+
+### Imaging
+
+## Management
+
+### Indications
+
+### Techniques
+
+# Spinal Vascular Malformations
+
+## Epidemiology
+
+## Classifications
+
+## Spinal dural arteriovenous fistula
+
+### Aetiology
+
+### Presentation
+
+### Imaging
+
+### Endovascular treatment
+
+## Intradural perimedullary fistula
+
+### Aetiology
+
+### Presentation and natural history
+
+### Imaging
+
+### Treatment
+
+## Spinal aneurysms
+
+## Metameric syndromes
+
+## Cavernous malformations
+
+# Carotid Cavernous Fistula
+
+## Definitions
+
+## Aetiology
+
+## Anatomy of the cavernous sinus
+
+## Treatment
+
+# Epistaxis
+
+## Causes
+
+## Vascular anatomy
+
+## Indications
+
+## Technique
+
+### Preliminary angiography
+
+### IMA embolisation
+
+### Additional pedicles
+
+### Post-procedure
+
+### Complications
+
+# Extracranial vascular lesions
+
+## Classification
+
+## Childhood haemangioma
+
+### Pathology
+
+### Presentation
+
+### Natural history
+
+### Imgaing
+
+### Management
+
+## Adult
+
+## Vascular malformations
+
+### Capillary
+
+### Lymphatic
+
+### Venous vascular
+
+### AVM
+
+### Sinus pericranii
+
+# Intracranial tumours
+
+## General description
+
+## Meningioma
+
+### Pathology
+
+### Indications
+
+### Aims
+
+### Risks and benefits
+
+### Techniques
+
+### Post-procedure
+
+## Juvenile nasopharyngeal angiofibroma
+
+### Pathology
+
+### Indications
+
+### Aims
+
+### Risks and benefits
+
+### Techniques
+
+### Post-procedure
+
+# Spinal tumours
+
+### Vertebral haemangiomas
+
+### Aneurysmal Bone Cysts
+
+### Malignant spinal tumours
+
+# Paragangliomas
+
+### Pathology
+
+### Indications
+
+### Aims
+
+### Risks and benefits
+
+### Techniques
+
+### Post-procedure
+
+# MMA procedures
+
+## Indications
+
+## Techniques
+
+## Complications
+
+# Venous stenting procedures
+
+## Indications
+
+## Techniques
+
+# Complications
+
+-->
+
+`r if (knitr:::is_html_output()) '
+# References {-}
+'`
+
+

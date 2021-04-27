@@ -137,7 +137,7 @@
 			<div id="inputs"></div>
 			<b-container v-show="deviceInputs.length == 1 && deviceInputs[0].active != null"
 				style="background-color:rgb(255, 255, 239); padding: 20px; border-radius: 5px">
-				<p>Tip: Add another device inside this one by seleting Fit → Fit device inside</p>
+				<p>Tip: Add another device inside this one by selecting Fit → Fit device inside</p>
 			</b-container>
 
 			<p></p>
@@ -660,7 +660,8 @@
 								case "ctArtefacts":
 									info_extra += "<p><b>CT Artefact: </b>" + deviceInfo[prop] + "</p>";
 									break;
-								case "tiplengths":
+								case "tipLengths":
+									info_extra += "<p><b>Tip lengths: </b>" + deviceInfo[prop] + "</p>";
 									break;
 
 								default:
