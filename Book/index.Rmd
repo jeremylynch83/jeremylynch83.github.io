@@ -1,11 +1,11 @@
---- 
+---
 title: "A Minimal Book Example"
 author: "Yihui Xie"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
-bibliography: [book.bib, packages.bib]
+bibliography: [book.bib, packages.bib, Collection.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: rstudio/bookdown-demo
@@ -15,7 +15,9 @@ description: "This is a minimal example of using the bookdown package to write a
 
 # Introduction
 
-This is a few notes I have made on INR. [@xie2015]
+This is a few notes I have made on INR. [@MacGrory2019]
+
+<!--
 
 # Devices
 
@@ -59,7 +61,7 @@ This is a few notes I have made on INR. [@xie2015]
 #### Ticagrelor
 #### Prasugrel
 #### Glycoprotein Iib/IIIa receptor inhibitors
-			
+
 ## Thrombolytic therapy
 
 # (PART) Anatomy {-} 
@@ -80,8 +82,8 @@ This is a few notes I have made on INR. [@xie2015]
 ### Vertebral artery
 ### Basilar artery and branches
 ## Posterior Cerebral artery
-			
-<!-- 			
+
+
 # Cranial Anastomoses
 
 [See Krings/Byrnes]
@@ -99,7 +101,7 @@ This is a few notes I have made on INR. [@xie2015]
 ### Cortical
 ### Medullary
 ### Pisterior fossa
-				
+
 # Spinal Vascular Anatomy
 ## Supply
 ### Radicular
@@ -213,6 +215,11 @@ _
 
 ### ACOM
 
+1. Consider tilting head 
+2. Look for fenestration 
+3. Double curve on the     microcatheter
+4. Getting pushed out a prob 
+
 ### PCOM
 
 ### MCA
@@ -264,6 +271,8 @@ _
 #### Indications
 
 #### Angioplasty
+
+The angioplasty balloon must be sized correctly and prepared prior to usage. The balloon must be emptied of any gas. This can be achieved by connecting to a three-way tap, with a 20 ml syringe of saline on one arm and 50:50 contrast:saline on the other. Aspirate with the 20 ml syringe to create a vacuum and then turn the tap to fill the dead space with contrast. Repeat 3-times. Draw up 50:50 contrast saline in to the injection device.
 
 #### Stenting
 
@@ -403,6 +412,51 @@ _
 
 ### Venous vascular
 
+Consent: bleed, infection, pneumonitis / pulmonary fibrosis, skin discoloration (esp trauma or sticky tape).
+
+ 
+
+- Sign in: no tape.
+- Procedure performed under     conscious sedation and aseptic technique.
+
+ 
+
+- Anaesthesia:
+
+- - 2 mg midazolam 
+  - 50 mcg fentanyl
+  - 50 mg propofol
+  - 10-20 mg propofol topup
+
+- Clean area
+
+- Local anaesthesia 
+
+- If lymphagitic lesion then     can aspirate first
+
+- Ultrasound to     insert 22-gauge Cannula percutaneously in the compartment of the venous     malformation
+
+- Attach connecting line 
+
+- Confirm position     by digital subtraction venography by injecting contrast (small amounts to     avoid dilution)
+
+- Smart mask on (negative     subtraction technique) and glue roadmap
+
+- If you see veins you can     compress during injection 
+
+- Put another needle in to     another pouch 
+
+- Inject up to 15 ml in total 
+
+- Another contrast injection
+
+- Transoral
+
+- - Depress tongue
+  - Nystatin suspension for      mouthwash. 
+
+- After the procedure remove     needles and haemostasis achieved by manual pressure.
+
 ### AVM
 
 ### Sinus pericranii
@@ -475,12 +529,30 @@ _
 
 ## Techniques
 
-# Complications
-
 -->
 
+# Complications
+
+## Retroperitoneal haemorrhage
+
+This should be suspected if the patient complains of back pain or there are any signs of haemorrhagic shock - for example tachycardia, hypotension, increased respiratory rate, decreasing urine volume, or dropping haemoglobin values. It is especially common in patients receiving antiplatelet therapy. It may be more difficult to detect in obese patients. 
+
+If there is any suspicion of retroperitoneal haemorrhage you should consider doing the following:
+
+* Resuscitate the patient in a standard fashion: this may include oxygen, fluid boluses, increased rates of observations, catheterisation.
+* If the patient is unstable they may require transfer to a higher level of care, such as the intensive care unit. 
+* Place the patient nil by mouth.
+* Examine the groins, abdomen, and flanks carefully for evidence of haematoma. 
+* Take blood and send of for full blood count and lactate. If the haemoglobin is low they may require packed red cell transfusion. 
+* Request a triple phase CT (non-contrast, arterial, delayed) from the thighs and covering the entire abdomen.
+* Examine any available angiographic procedural imaging for evidence of vessel injury. 
+
+If the CT scan shows evidence of retroperitoneal haematoma without active extravasation they may simply require resuscitation and observation and possibly packed red cell transfuion. Consider withholding prophylactic heparin. Beware of stopping antiplatelets or transfusing platelets in patients who have stents, as this may cause stent thrombosis. 
+
+If there is evidence of active extravasation this may be managed endovascularly (for example by placing a stent in the artery) or by open vascular surgery. Exact treatment depends on the exact source of bleeding. Generally, the first-line treatment in a stable patient would be endovascular, such as placement of a stent. If the patient is unstable and rapidly deteriorating endovascular treatment may not be feasible and they may need to go for open vascular repair. In any event it is best to involve both teams (if they are provided by different services) at the outset in case the plan changes. 
+
 `r if (knitr:::is_html_output()) '
+
 # References {-}
 '`
-
 
