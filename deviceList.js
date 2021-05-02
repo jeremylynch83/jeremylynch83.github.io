@@ -1,5 +1,6 @@
 deviceList = 
 
+
 [
     {
         "type": "Balloon",
@@ -551,7 +552,8 @@ deviceList =
         "minid": 0.084,
         "maxod": 0.10499,
         "length": "85 / 95",
-        "incompatibility": "ACE68 / Sofia"
+        "incompatibility": "ACE68 / Sofia",
+        "youtube": "https://www.youtube.com/embed/i-v4fCYQUUc"
     },
     {
         "type": "Long Sheath",
@@ -635,7 +637,7 @@ deviceList =
         "length": "105 / 120"
     },
     {
-        "type": "Intermediate catheter",
+        "type": "Intermediate Catheter",
         "name": "Large Bore Catheter / Embovac",
         "manufacturer": "Cerenovus",
         "url1": "https://www.jnjmedicaldevices.com/en-US/product/cerenovus-large-bore-catheter",
@@ -664,7 +666,7 @@ deviceList =
         "length": "95 / 105 / 115 / 125 / 130"
     },
     {
-        "type": "Intermediate catheter",
+        "type": "Intermediate Catheter",
         "name": "ARC 160 ",
         "manufacturer": "Medtronic",
         "minid": 0.035,
@@ -981,7 +983,8 @@ deviceList =
         "strengths": "12 (low viscosity), 12LD (low viscosity, low radiopacity), 18 (regular viscosity), 18LD (standard viscosity, low radiopacity)",
         "preparation": "Shaking is required (approximately 15-20 minutes)",
         "ctArtefacts": "High (due to tantalum)",
-        "cautions": "DMSO may cause necrotising endotheliitis within the injected vessel (so slow and controlled injection necessary). Relatively contraindicated in infants and pregnancy."
+        "cautions": "DMSO may cause necrotising endotheliitis within the injected vessel (so slow and controlled injection necessary). Relatively contraindicated in infants and pregnancy.",
+        "youtube": "https://www.youtube.com/embed/Q9Waeg7rZPM"
     },
     {
         "type": "Liquid Embolic",

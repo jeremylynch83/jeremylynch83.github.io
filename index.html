@@ -742,6 +742,12 @@
 								case "tipLengths":
 									info_extra += "<p><b>Tip lengths: </b>" + deviceInfo[prop] + "</p>";
 									break;
+								case "youtube":
+									info_extra += "<p><b>Preparation: </b></p>";
+									info_extra +=
+										"<iframe width=\"560\" height=\"315\" src=\"" + deviceInfo[prop] +
+										"\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
+									break;
 
 								default:
 									info_extra += "<p><b>" + toTitleCase(prop) + ": " + "</b>" + deviceInfo[
