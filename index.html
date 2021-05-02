@@ -230,7 +230,7 @@
 							required="" style="width:100%"></textarea>
 
 						<textarea style="display:none;" name="message2" id="message2" required=""></textarea>
-
+						<textarea style="display:none;" name="message3" id="message3" required=""></textarea>
 						<input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
 					</fieldset>
 					<button style="display:none;" type="submit" id="submit_button">Send</button>
@@ -576,7 +576,9 @@
 
 			methods: {
 				feedbackSubmit: function () {
-					document.getElementById("message").value = "No comment. ";
+					if (document.getElementById("message").value == "") {
+						document.getElementById("message").value = "No comment. ";
+					}
 					document.getElementById("submit_button").click();
 				},
 
@@ -697,6 +699,7 @@
 					document.getElementById("info_extra").innerHTML = info_extra;
 					document.getElementById("info_extra2").innerHTML = info_extra;
 
+
 				},
 
 				info: function (index) {
@@ -778,6 +781,8 @@
 					}
 
 					document.getElementById("result").innerHTML = result;
+					document.getElementById("message3").value = result;
+
 					//this.drawDeviceTable();
 					this.drawDiagram();
 					this.updateInfo(JSON.parse(tree.getElementById("device0").getAttribute("data")));
