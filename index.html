@@ -220,18 +220,27 @@
 			</div>
 		</b-modal>
 
-		<b-modal id="feedback_modal" title="Feedback" ok-only>
+		<b-modal id="feedback_modal" title="Feedback" static>
 			<div id="feedback">
+
 				<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8"
 					action="https://formspree.io/f/xbjqrwnz" method="post">
 					<fieldset id="fs-frm-inputs">
-						<textarea rows="5" name="message" id="message" placeholder="Enter text here."
-							required=""></textarea>
+						<textarea rows="10" name="message" id="message" placeholder="Enter comments (optional)"
+							required="" style="width:100%"></textarea>
+
+						<textarea style="display:none;" name="message2" id="message2" required=""></textarea>
+
 						<input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
 					</fieldset>
-					<input type="submit" value="Submit">
+					<button style="display:none;" type="submit" id="submit_button">Send</button>
 				</form>
 			</div>
+
+			<template #modal-footer="{ Submit, close }">
+				<b-button @click="feedbackSubmit">Submit</b-button>
+				<b-button @click="close()">Cancel</b-button>
+			</template>
 		</b-modal>
 
 		<b-modal :id="infoModal.id" :title="infoModal.device.name" ok-only static>
@@ -566,6 +575,10 @@
 			},
 
 			methods: {
+				feedbackSubmit: function () {
+					document.getElementById("submit_button").click();
+				},
+
 				updateDevice: function (passed, e) {
 					tree.getElementById(passed).setAttribute("data", JSON.stringify(e));
 
@@ -587,6 +600,10 @@
 					if (e.length != null && e.length != "?") deviceInputs[index].display_info += " " + e.length +
 						" cm";
 					deviceInputs[index].active = "true";
+
+					var xmlText = new XMLSerializer().serializeToString(tree);
+
+					document.getElementById("message2").value = xmlText;
 
 				},
 				drawDiagram: function () {
@@ -611,7 +628,7 @@
 
 					this.info_table = [];
 
-					console.log(deviceInfo.type);
+					//console.log(deviceInfo.type);
 
 					if (deviceInfo.type != "liquid embolic") {
 						this.info_table = [{
@@ -678,8 +695,6 @@
 
 					document.getElementById("info_extra").innerHTML = info_extra;
 					document.getElementById("info_extra2").innerHTML = info_extra;
-
-
 
 				},
 

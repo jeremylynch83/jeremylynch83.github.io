@@ -149,7 +149,7 @@ deviceList =
         "minid": 0.009,
         "maxod": 0.03675,
         "length": 165,
-        "description": "\"The Scepter Mini has similar indications for use as the predicates, however, incorporates several minor design differences.  The Scepter Mini has a slightly longer length and a slightly smaller diameter.  The balloon of the Scepter Mini is slightly shorter.  The distal tip of the Scepter Mini extends a shorter distance from the distal end of the balloon than that of the Scepter C and XC.  For the Scepter Mini, the purge hole is covered by a semi-permeable  membrane  designed  to  allow  air  to  escape  while  preventing  liquids  from  passing.    Thepredicate  Scepter  C  and  XC  incorporate  3  radiopaque  marker  bands,  while  the  design  of  the  Scepter  Mini  allows  for  visualization  under  fluoroscopy  with  only  2  radiopaque  marker  bands  (due  to  shorter  distal  tip  segment).  All Scepter catheters have a hydrophilic coating. \"",
+        "description": "\"The Scepter Mini has similar indications for use as the predicates, however, incorporates several minor design differences.  The Scepter Mini has a slightly longer length and a slightly smaller diameter.  The balloon of the Scepter Mini is slightly shorter.  The distal tip of the Scepter Mini extends a shorter distance from the distal end of the balloon than that of the Scepter C and XC.  For the Scepter Mini, the purge hole is covered by a semi-permeable  membrane  designed  to  allow  air  to  escape  while  preventing  liquids  from  passing.    The predicate  Scepter  C  and  XC  incorporate  3  radiopaque  marker  bands,  while  the  design  of  the  Scepter  Mini  allows  for  visualization  under  fluoroscopy  with  only  2  radiopaque  marker  bands  (due  to  shorter  distal  tip  segment).  All Scepter catheters have a hydrophilic coating.\"",
         "tipLengths": "9 mm",
         "material": "Polyurethrane elastomeric. Hydrophilic coating. ",
         "design": "Dual coaxial lumen",
@@ -163,7 +163,10 @@ deviceList =
         "url1": "https://www.cardiovascular.abbott/us/en/hcp/products/percutaneous-coronary-intervention/nc-trek-mini-coronary-dilation-catheters.html",
         "minid": 0.015,
         "maxod": 0.031496,
-        "length": 145
+        "length": 145,
+        "sizes": "Available in balloon diameters 2.25 to 5.00, and lengths 6 to 30 mm (not all combinations are availably)",
+        "comments": "Used off-label for carotid stenosis",
+        "strengths": "Rapid-exchange system"
     },
     {
         "type": "Balloon",
@@ -172,7 +175,9 @@ deviceList =
         "url1": "https://www.cardiovascular.abbott/us/en/hcp/products/percutaneous-coronary-intervention/nc-trek-mini-coronary-dilation-catheters.html",
         "minid": 0.015,
         "maxod": 0.030184,
-        "length": 145
+        "length": 145,
+        "sizes": "Available in balloon diameters 1.20 to 2.00, and lengths 6 to 30 mm (not all combinations are availably)",
+        "comments": "Used off-label for intracranial stenosis"
     },
     {
         "type": "Balloon",
@@ -956,7 +961,7 @@ deviceList =
         "minid": 0,
         "maxod": 0.009055118,
         "length": "?",
-        "description": "\"Onyx® is a non-adhesive liquid embolic agent comprised of EVOH (ethylene vinyl alcohol) copolymerdissolved in DMSO (dimethyl sulfoxide), and suspended micronized tantalum powder to provide contrast for visualization under fluoroscopy. The Onyx Liquid Embolic System (LESTM) consists of a 1.5 ml vial of Onyx, a 1.5 ml vial of DMSO, and three 1 ml Onyx delivery syringes. A DMSO compatible delivery microcatheter that is indicated for use in the neuro vasculature (e.g. MarathonTM, RebarTM or UltraFlowTM HPC catheters) is used to access the embolization site. Onyx is available in two product formulations, Onyx 18(6% EVOH) and Onyx 34 (8% EVOH). Onyx 18 will travel more distally and penetrate deeper into thenidus due to its lower viscosity compared to Onyx 34. Final solidification occurs within five minutes for both product formulations. Onyx is delivered by slow controlled injection through a micro catheter into the brain arteriovenous malformation under fluoroscopic control. The DMSO solvent dissipates into the blood, causing the EVOH copolymer and suspended tantalum to precipitate in situ into a spongy, coherent embolus. Onyx immediately forms a skin as the polymeric embolus solidifies from the outside to the inside, while traveling more distally in the lesion.\"",
+        "description": "\"Onyx® is a non-adhesive liquid embolic agent comprised of EVOH (ethylene vinyl alcohol) copolymerdissolved in DMSO (dimethyl sulfoxide), and suspended micronized tantalum powder to provide contrast for visualization under fluoroscopy. The Onyx Liquid Embolic System (LESTM) consists of a 1.5 ml vial of Onyx, a 1.5 ml vial of DMSO, and three 1 ml Onyx delivery syringes. A DMSO compatible delivery microcatheter that is indicated for use in the neuro vasculature (e.g. MarathonTM, RebarTM or UltraFlowTM HPC catheters) is used to access the embolization site. Onyx is available in two product formulations, Onyx 18(6% EVOH) and Onyx 34 (8% EVOH). Onyx 18 will travel more distally and penetrate deeper into the nidus due to its lower viscosity compared to Onyx 34. Final solidification occurs within five minutes for both product formulations. Onyx is delivered by slow controlled injection through a micro catheter into the brain arteriovenous malformation under fluoroscopic control. The DMSO solvent dissipates into the blood, causing the EVOH copolymer and suspended tantalum to precipitate in situ into a spongy, coherent embolus. Onyx immediately forms a skin as the polymeric embolus solidifies from the outside to the inside, while traveling more distally in the lesion.\"",
         "material": "Ethylene vinyl alcohol (EVOH) copolymer dissolved in DMSO (dimethyl sulfoxide) and suspended micronised tantalum powder",
         "strengths": "18 (6% EVOH, low viscosity) and 34 (8% EVOH, high viscosity)",
         "preparation": "Shaking is required (approximately 15-20 minutes)",
@@ -1243,7 +1248,6 @@ deviceList =
         "minid": 0.013,
         "maxod": 0.036,
         "length": "165",
-        "comments": "Onyx compatible",
         "tipLengths": "1.5 / 3 / 5"
     },
     {
@@ -1255,8 +1259,7 @@ deviceList =
         "dmso": "yes",
         "minid": 0.017,
         "maxod": 0.028,
-        "length": "150",
-        "comments": "Onyx compatible"
+        "length": "150"
     },
     {
         "type": "Microcatheter",
@@ -1267,8 +1270,7 @@ deviceList =
         "dmso": "yes",
         "minid": 0.017,
         "maxod": 0.031496,
-        "length": "150",
-        "comments": "Onyx compatible"
+        "length": "150"
     },
     {
         "type": "Microcatheter",
@@ -1279,8 +1281,7 @@ deviceList =
         "dmso": "yes",
         "minid": 0.013,
         "maxod": 0.036,
-        "length": "165",
-        "comments": "Onyx compatible"
+        "length": "165"
     },
     {
         "type": "Microcatheter",
