@@ -2414,7 +2414,7 @@ deviceList =
         "type": "Stent Retriever ",
         "name": "Trevo NXT ProVue Retriever 3x32 ",
         "manufacturer": "Stryker",
-        "url1": "https://www.strykerneurovascular.com/us/products/ais/trevo-xp-provue-retriever",
+        "url1": "https://www.stryker.com/us/en/neurovascular/products/trevo-nxt.html",
         "minid": 0,
         "maxod": 0.016,
         "length": 200,
@@ -2423,7 +2423,7 @@ deviceList =
     {
         "type": "Stent Retriever ",
         "name": "Trevo NXT ProVue Retriever 4 to 6 mm ",
-        "url1": "https://www.strykerneurovascular.com/us/products/ais/trevo-xp-provue-retriever",
+        "url1": "https://www.stryker.com/us/en/neurovascular/products/trevo-nxt.html",
         "minid": 0,
         "maxod": 0.02,
         "length": 200,
