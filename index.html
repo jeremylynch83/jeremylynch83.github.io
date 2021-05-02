@@ -128,6 +128,10 @@
 								<b-dropdown-item class="btn btn-sm  py-0" variant="outline-secondary"
 									class="btn btn-sm  py-0" @click="compareLaunch(n.id)">Compare with ...
 								</b-dropdown-item>
+
+								<b-dropdown-item class="btn btn-sm  py-0" variant="outline-secondary"
+									class="btn btn-sm  py-0" @click="similarLaunch(n.id)">Similar devices
+								</b-dropdown-item>
 							</b-dropdown>
 						</b-button-group>
 					</div>
@@ -206,6 +210,10 @@
 				and
 				length. If there are incompatibilities then a message will appear describing the problem. </p>
 			<img src="img/help3.png" class="center" width="75%">
+			<h4>Who made this?</h4>
+			This website was made and entirely funded by Dr Jeremy Lynch. Special thanks to Dr Patrick Nicholson for
+			ideas and feedback.
+
 		</b-modal>
 
 
@@ -217,6 +225,17 @@
 				<b-table sticky-header small :items="fitModal.table" :fields="fitModal.fields"
 					style="font-size: 0.8em; " head-variant="light" :sort-by.sync="fitModal.sortBy"
 					:sort-desc.sync="fitModal.sortDesc"></b-table>
+			</div>
+		</b-modal>
+
+		<b-modal :id="similarModal.id" :title="similarModal.title" ok-only>
+			<p>Similar devices: ({{similarModal.n}} items): </p>
+			<p></p>
+			<p></p>
+			<div>
+				<b-table sticky-header small :items="similarModal.table" :fields="similarModal.fields"
+					style="font-size: 0.8em; " head-variant="light" :sort-by.sync="similarModal.sortBy"
+					:sort-desc.sync="similarModal.sortDesc"></b-table>
 			</div>
 		</b-modal>
 
@@ -563,6 +582,38 @@
 					sortBy: 'minid',
 					sortDesc: false,
 				},
+				similarModal: {
+					id: 'similar-modal',
+					title: 'Similar Devices',
+					first_device: "",
+					n: 0,
+					table: [],
+					fields: [{
+							key: 'Name',
+							sortable: false
+						},
+						{
+							key: 'Type',
+							sortable: false
+						},
+						{
+							key: 'minid',
+							label: "Minimum inner diameter (inches)",
+							sortable: true
+						},
+						{
+							key: 'maxod',
+							label: "Maximum outer diameter (inches)",
+							sortable: true
+						},
+						{
+							key: 'Lengths',
+							sortable: false
+						},
+					],
+					sortBy: 'minid',
+					sortDesc: false,
+				},
 				compareModal: {
 					id: 'compare-modal',
 					title: 'Compare',
@@ -737,6 +788,104 @@
 						'Minimum inner diameter': in_to_all(second_device.minid),
 						Lengths: second_device.length + " cm"
 					});
+				},
+
+				similarLaunch: function (index) {
+					this.similarModal.first_device = JSON.parse(tree.getElementById(index).getAttribute(
+						"data"));
+					var first_device = this.similarModal.first_device;
+					this.similarModal.n = 0;
+					this.similarModal.table = [];
+
+					deviceList.forEach(d => {
+						var required_id = null;
+
+						switch (d.type) {
+							case "Microcatheter":
+							case "Guide Catheter":
+							case "Long Sheath":
+							case "Intermediate Catheter":
+							case "Balloon":
+							case "Sheath":
+								//console.log(d.type + ": " + first_device.type);
+								if (d.minid < (first_device.minid * 1.05) &&
+									d.minid > (first_device.minid * 0.95) &&
+									d.type == first_device.type
+								) {
+									this.similarModal.table.push({
+										Name: d.name + " (" + d.manufacturer + ")",
+										Type: d.type,
+										minid: d.minid.toFixed(3),
+										maxod: d.maxod.toFixed(3),
+										Lengths: d.length + " cm"
+									});
+									this.similarModal.n++;
+								}
+								break;
+							case "Stent":
+							case "Coil":
+							case "Select Catheter":
+							case "Wire":
+							case "Stent Retriever":
+							case "Protection Device":
+								if (d.maxod < (first_device.maxod * 1.05) &&
+									d.maxod > (first_device.maxod * 0.95) &&
+									d.type == first_device.type
+								) {
+									this.similarModal.table.push({
+										Name: d.name + " (" + d.manufacturer + ")",
+										Type: d.type,
+										minid: d.minid.toFixed(3),
+										maxod: d.maxod.toFixed(3),
+										Lengths: d.length + " cm"
+									});
+									this.similarModal.n++;
+								}
+								break;
+							case "Liquid Embolic":
+								if (
+									d.type == first_device.type) {
+
+									this.similarModal.table.push({
+										Name: d.name + " (" + d.manufacturer + ")",
+										Type: d.type
+									});
+									this.similarModal.n++;
+								}
+								break;
+							case "Intrasaccular Device":
+								if (
+									d.type == first_device.type) {
+
+									this.similarModal.table.push({
+										Name: d.name + " (" + d.manufacturer + ")",
+										Type: d.type,
+										minid: d.minid.toFixed(3),
+										maxod: d.maxod.toFixed(3),
+										Lengths: d.length + " cm"
+									});
+									this.similarModal.n++;
+								}
+								break;
+							default:
+								break
+						}
+
+
+
+					});
+
+					//console.log(this.fitModal.table);
+
+					this.similarModal.table.sort(function (a, b) {
+						return b[2] - a[2]
+					});
+
+
+					this.$root.$emit('bv::show::modal', this.similarModal.id);
+
+
+
 				},
 
 				fitLaunch: function (index) {
