@@ -355,6 +355,7 @@
 		function setupDevices(data) {
 			data.forEach(device => {
 				device.name = device.name.trim();
+				device.type = device.type.trim();
 				device.name_man = device.name + " (" + device.type + ", " + device.manufacturer + ")";
 			})
 		}
@@ -470,9 +471,7 @@
 			var x = tree.querySelectorAll("device");
 			x.forEach(parent => {
 				if (parent.hasChildNodes() && (parent.getAttribute("data") != "")) {
-
 					var parent_data = JSON.parse(parent.getAttribute("data"));
-
 					children = parent.childNodes;
 					var child_total_od = 0;
 					var child_list = [];
@@ -498,7 +497,6 @@
 
 							// Compare compatibility
 							compat_str = compat_str + check_compatibility(parent_data, child_data);
-
 						}
 					})
 
@@ -524,9 +522,10 @@
 							parent_data.name + ". " + "</p>";
 					} else summary = summary + length_txt + compat_str;
 				}
-			})
+			});
 
-			summary = summary;
+			// Check radial artery compatibility
+
 
 			return summary;
 		}
@@ -874,9 +873,6 @@
 							default:
 								break
 						}
-
-
-
 					});
 
 					//console.log(this.fitModal.table);
@@ -916,8 +912,6 @@
 						}
 					});
 
-					//console.log(this.fitModal.table);
-
 					this.fitModal.table.sort(function (a, b) {
 						return b[2] - a[2]
 					});
@@ -927,7 +921,6 @@
 				},
 
 				updateSizer: function () {
-
 					var result = checkSizes();
 					if (result == "") {
 						var result = "<p style=\"color:green\">Everything fits ok.</p>";
@@ -936,12 +929,10 @@
 					document.getElementById("result").innerHTML = result;
 					document.getElementById("message3").value = result;
 
-					//this.drawDeviceTable();
 					this.drawDiagram();
 					this.updateInfo(JSON.parse(tree.getElementById("device0").getAttribute("data")));
 				},
 				addInput: function (where, text, type, parent) {
-
 					id = "device" + this.id_count;
 					this.id_count++;
 
