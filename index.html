@@ -4,7 +4,7 @@
 <head>
 	<!--
 		FEATURES TO IMPLEMENT:
-		* Youtube
+		* Youtube videos more
 		* Delete running properly
 		* Cross/delete on iphone
 		* Unit convertor
@@ -284,7 +284,8 @@
 
 		<b-modal :id="compareModal.id" :title="compareModal.title" ok-only>
 			<p>Compare <b> {{ compareModal.first_device.name }} </b> with: </p>
-			<vue-bootstrap-typeahead :data="devices" :serializer="item => item.name_man" @hit="compare_device($event)">
+			<vue-bootstrap-typeahead :data="devices" :serializer="item => item.name_man" @hit="compare_device($event)"
+				placeholder="Enter device to compare...">
 			</vue-bootstrap-typeahead>
 			<p></p>
 			<p></p>
@@ -371,12 +372,37 @@
 			parent_str = format_name(parent.name);
 			child_str = format_name(child.name);
 
+			var parent_incompat = [];
+			var child_incompat = [];
+
 			if (parent.incompatibility != null) {
-				var parent_incompat = parent.incompatibility.split(/\//);
+				parent_incompat = parent.incompatibility.split(/\//);
+				for (var n = 0; n < parent_incompat.length; n++) {
+					parent_incompat[n] = format_name(parent_incompat[n]);
+				}
 			}
+
 			if (child.incompatibility != null) {
-				var child_incompat = child.incompatibility.split(/\//);
+				child_incompat = child.incompatibility.split(/\//);
+				for (var n = 0; n < parent_incompat.length; n++) {
+					parent_incompat[n] = format_name(parent_incompat[n]);
+				}
 			}
+
+			for (var x = 0; x < parent_incompat.length; x++) {
+				if (child_str.includes(parent_incompat[x])) {
+					comment = comment + "There is a possible incompatibility between the " + parent_str + " and the " +
+						child_str + ".";
+				}
+			}
+
+			for (var x = 0; x < child_incompat.length; x++) {
+				if (parent_incompat.includes(child_incompat[x])) {
+					comment = comment + "There is a possible incompatibility between the " + parent_str + " and the " +
+						child_str + ".";
+				}
+			}
+
 
 			//DMSO
 
@@ -402,10 +428,12 @@
 			var problem_list = [];
 
 			/* No lengths for 1 catheter or if catheters are the same type */
-			if (parent_list != null && parent_list[0] != null && child_list != null && child_list[0] != null && parent_name !=
+			if (parent_list != null && parent_list[0] != null && child_list != null && child_list[0] != null &&
+				parent_name !=
 				child_name) {
 				/* Only one length for each catheter and they both fit */
-				if (parent_list.length == 1 && child_list.length == 1 && parent_list[0] < child_list[0]) solution_text = "";
+				if (parent_list.length == 1 && child_list.length == 1 && parent_list[0] < child_list[0]) solution_text =
+					"";
 				else {
 
 					for (var x = 0; x < child_list.length; x++) {
@@ -413,14 +441,16 @@
 							if (child_list[x] > parent_list[y]) {
 								/* Obtain all combinations that will fit */
 								solution_list.push(
-									" " + parent_name + " " + parent_list[y] + " cm and " + child_name + " " + child_list[
+									" " + parent_name + " " + parent_list[y] + " cm and " + child_name + " " +
+									child_list[
 										x] + " cm"
 								);
 							}
 							if (child_list[x] <= parent_list[y]) {
 								/* Obtain all combinations that will NOT fit */
 								problem_list.push(
-									" " + parent_name + " " + parent_list[y] + " cm and " + child_name + " " + child_list[
+									" " + parent_name + " " + parent_list[y] + " cm and " + child_name + " " +
+									child_list[
 										x] + " cm"
 								);
 							}
@@ -434,7 +464,8 @@
 					switch (solution_list.length) {
 						case 1:
 							/* Just 1 solution */
-							solution_text = "The following combinations of lengths is necessary: " + solution_list[0] + ". ";
+							solution_text = "The following combinations of lengths is necessary: " + solution_list[0] +
+								". ";
 							break;
 						case (child_list.length * parent_list.length):
 							/* All combinations are fine */
@@ -447,10 +478,12 @@
 						default:
 							/* There are a few solutions */
 							if (solution_list.length < problem_list.length) {
-								solution_text = "Avoid the following combinations of lengths: " + solution_list.toString() +
+								solution_text = "Avoid the following combinations of lengths: " + solution_list
+									.toString() +
 									". ";
 							} else {
-								solution_text = "Avoid the following combinations of lengths: " + problem_list.toString() +
+								solution_text = "Avoid the following combinations of lengths: " + problem_list
+									.toString() +
 									". ";
 							}
 							break
@@ -511,15 +544,17 @@
 								child_str = child_list[0];
 								break;
 							case 2:
-								child_str = "The combination of " + child_str + child_list[0] + " and " + child_list[
-									1];
+								child_str = "The combination of " + child_str + child_list[0] + " and " +
+									child_list[
+										1];
 								break;
 							default:
 								child_str = child_str + "The combination of ";
 								for (var n = 0; n < child_list.length; n++) {
 									if (n < (child_list.length - 1)) child_str = child_str + child_list[n] + ", ";
-									if (n == (child_list.length - 1)) child_str = child_str + " and " + child_list[
-										n] + ",";
+									if (n == (child_list.length - 1)) child_str = child_str + " and " +
+										child_list[
+											n] + ",";
 								}
 								break;
 						}
@@ -653,13 +688,15 @@
 					);
 
 
-					deviceInputs[index].display_info = "OD: " + e.maxod.toFixed(4) + "\" (" + in_to_fr(e.maxod)
+					deviceInputs[index].display_info = "OD: " + e.maxod.toFixed(4) + "\" (" + in_to_fr(e
+							.maxod)
 						.toFixed(1) +
 						" Fr).";
 
 					if (e.minid != null && e.minid != 0) deviceInputs[index].display_info += " ID: " + e.minid
 						.toFixed(4) + "\".";
-					if (e.length != null && e.length != "?") deviceInputs[index].display_info += " " + e.length +
+					if (e.length != null && e.length != "?") deviceInputs[index].display_info += " " + e
+						.length +
 						" cm";
 					deviceInputs[index].active = "true";
 
