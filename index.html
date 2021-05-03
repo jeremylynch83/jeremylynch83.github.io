@@ -391,15 +391,15 @@
 
 			for (var x = 0; x < parent_incompat.length; x++) {
 				if (child_str.includes(parent_incompat[x])) {
-					comment = comment + "There is a possible incompatibility between the " + parent_str + " and the " +
-						child_str + ".";
+					comment = comment + "There is a possible incompatibility between the " + parent.name + " and the " +
+						child.name + ".";
 				}
 			}
 
 			for (var x = 0; x < child_incompat.length; x++) {
 				if (parent_incompat.includes(child_incompat[x])) {
-					comment = comment + "There is a possible incompatibility between the " + parent_str + " and the " +
-						child_str + ".";
+					comment = comment + "There is a possible incompatibility between the " + parent.name + " and the " +
+						child.name + ".";
 				}
 			}
 
