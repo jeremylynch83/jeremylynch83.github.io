@@ -1,6 +1,5 @@
 deviceList = 
 
-
 [
     {
         "type": "Balloon",
@@ -552,7 +551,7 @@ deviceList =
         "minid": 0.084,
         "maxod": 0.10499,
         "length": "85 / 95",
-        "incompatibility": "ACE68 / Sofia",
+        "incompatibility": "ACE68 / Sofia 6F",
         "youtube": "https://www.youtube.com/embed/i-v4fCYQUUc"
     },
     {
