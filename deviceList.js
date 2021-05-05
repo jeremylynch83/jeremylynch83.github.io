@@ -1,5 +1,6 @@
 deviceList = 
 
+
 [
     {
         "type": "Balloon",
@@ -27,7 +28,8 @@ deviceList =
         "dmso": "yes",
         "minid": 0.017,
         "maxod": 0.02625,
-        "length": "?"
+        "length": "?",
+        "youtube": "https://www.youtube.com/embed/x8niYfRweec"
     },
     {
         "type": "Balloon",
@@ -138,7 +140,8 @@ deviceList =
         "url1": "https://www.strykerneurovascular.com/us/products/hemorrhagic/transform-occlusion-balloon-catheter",
         "minid": 0.015,
         "maxod": 0.037,
-        "length": "150"
+        "length": "150",
+        "youtube": "https://www.youtube.com/embed/wm2HTuVqOhA"
     },
     {
         "type": "Balloon",
@@ -2017,7 +2020,8 @@ deviceList =
         "description": "\"Designed for the treatment of intracranial aneurysms in association with embolization coils.\"\n",
         "material": "Nickel titanium",
         "design": "16 braided wires",
-        "resheathable": "Up to 90% of deployed length"
+        "resheathable": "Up to 90% of deployed length",
+        "youtube": "https://www.youtube.com/embed/UoZZtMRfVFc"
     },
     {
         "type": "Stent",
@@ -2030,7 +2034,8 @@ deviceList =
         "description": "\"Designed for the treatment of intracranial aneurysms in association with embolization coils.\"\n",
         "material": "Nickel titanium",
         "design": "16 braided wires",
-        "resheathable": "Up to 90% of deployed length"
+        "resheathable": "Up to 90% of deployed length",
+        "youtube": "https://www.youtube.com/embed/UoZZtMRfVFc"
     },
     {
         "type": "Stent",
@@ -2043,7 +2048,8 @@ deviceList =
         "description": "\"Designed for the treatment of intracranial aneurysms in association with embolization coils.\"\n",
         "material": "Nickel titanium",
         "design": "16 braided wires",
-        "resheathable": "Up to 90% of deployed length"
+        "resheathable": "Up to 90% of deployed length",
+        "youtube": "https://www.youtube.com/embed/UoZZtMRfVFc"
     },
     {
         "type": "Stent",
@@ -2074,7 +2080,8 @@ deviceList =
         "maxod": 0.02,
         "research": "[Lubicz B, Van der Elst O, Collignon L, et al. Silk flow-diverter stent for the treatment\nof intracranial aneurysms: a series of 58 patients with emphasis on long-term results. AJNR Am J Neuroradiol 2015;36:542–6.]",
         "material": "Nitinol; Platinum",
-        "design": "48 braided wires with eight platinum wires and four platinum coils to promote its visibility and flared ends to increase wall apposition."
+        "design": "48 braided wires with eight platinum wires and four platinum coils to promote its visibility and flared ends to increase wall apposition.",
+        "youtube": "https://www.youtube.com/embed/UoZZtMRfVFc"
     },
     {
         "type": "Stent",
@@ -2085,7 +2092,8 @@ deviceList =
         "maxod": 0.024,
         "research": "[Lubicz B, Van der Elst O, Collignon L, et al. Silk flow-diverter stent for the treatment\nof intracranial aneurysms: a series of 58 patients with emphasis on long-term results. AJNR Am J Neuroradiol 2015;36:542–6.]",
         "material": "Nitinol; Platinum",
-        "design": "48 braided wires with eight platinum wires and four platinum coils to promote its visibility and flared ends to increase wall apposition."
+        "design": "48 braided wires with eight platinum wires and four platinum coils to promote its visibility and flared ends to increase wall apposition.",
+        "youtube": "https://www.youtube.com/embed/UoZZtMRfVFc"
     },
     {
         "type": "Stent",
@@ -2152,7 +2160,8 @@ deviceList =
         "research": 33252708,
         "material": "Nitinol",
         "design": "Laser cut hybrid cell structure with alternating 16- and 24- strut rows",
-        "resheathable": "No (due to open-cell design)"
+        "resheathable": "No (due to open-cell design)",
+        "youtube": "https://www.youtube.com/embed/sZeX7X799F0"
     },
     {
         "type": "Stent",
@@ -2328,7 +2337,7 @@ deviceList =
         "url1": "https://www.cordis.com/en_us/endovascular/intervene/self-expanding-stents/precise-pro-rx-carotid-stent.html",
         "url2": "https://www.cordis.com/content/dam/cordis/web/documents/catalog/cordis-us-endovascular-catalog.pdf",
         "minid": 0.016,
-        "maxod": 0.0787402,
+        "maxod": 0.065617,
         "length": 135
     },
     {
@@ -2338,7 +2347,7 @@ deviceList =
         "url1": "https://www.cordis.com/en_us/endovascular/intervene/self-expanding-stents/precise-pro-rx-carotid-stent.html",
         "url2": "https://www.cordis.com/content/dam/cordis/web/documents/catalog/cordis-us-endovascular-catalog.pdf",
         "minid": 0.016,
-        "maxod": 0.1049869,
+        "maxod": 0.07874,
         "length": 135
     },
     {
@@ -2374,7 +2383,8 @@ deviceList =
         "url1": "https://www.jnjmedicaldevices.com/en-US/product/embotrap-ii-revascularization-device",
         "minid": 0,
         "maxod": 0.02,
-        "length": "194 / 195"
+        "length": "194 / 195",
+        "youtube": "https://www.youtube.com/embed/1MgvfCzAXwA"
     },
     {
         "type": "Stent Retriever ",
@@ -2465,7 +2475,8 @@ deviceList =
         "length": 200,
         "tipLengths": 30,
         "material": "Nitinol",
-        "design": "laser cut"
+        "design": "laser cut",
+        "youtube": "https://www.youtube.com/embed/jw30acHGtR4"
     },
     {
         "type": "Stent Retriever ",
