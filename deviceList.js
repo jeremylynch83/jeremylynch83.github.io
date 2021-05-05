@@ -1,6 +1,5 @@
 deviceList = 
 
-
 [
     {
         "type": "Balloon",
@@ -291,7 +290,8 @@ deviceList =
         "url1": "https://www.medtronic.com/us-en/healthcare-professionals/products/neurological/aneurysm-treatment/axium.html",
         "minid": 0,
         "maxod": 0.0155,
-        "length": "?"
+        "length": "?",
+        "detachment": "Mechanical"
     },
     {
         "type": "Coil",
@@ -310,7 +310,8 @@ deviceList =
         "url2": "https://phenox.net/international/avenir-wallaby-coil-system/",
         "minid": 0,
         "maxod": 0.055,
-        "length": "?"
+        "length": "?",
+        "detachment": "Mechanical"
     },
     {
         "type": "Coil",
@@ -319,7 +320,35 @@ deviceList =
         "url1": "https://www.strykerneurovascular.com/products/hemorrhagic",
         "minid": 0,
         "maxod": 0.016,
-        "length": "?"
+        "length": "?",
+        "detachment": "Electrolytic"
+    },
+    {
+        "type": "Coil",
+        "name": "PC400",
+        "manufacturer": "Penumbra",
+        "url1": "https://www.penumbrainc.com/neuro-device/pc-400/",
+        "minid": 0,
+        "maxod": 0.02,
+        "length": "?",
+        "description": "\"The Penumbra Coil 400™ (PC400™) is a large-volume platinum coil. With its larger .020″ (.508 mm) diameter, PC400 is designed to enable higher packing densities using fewer coils, leading to potential efficiencies in procedure duration, time under fluoroscopy, and treatment cost.\"",
+        "sizes": "2 mm to 32 mm in diameter and 1 cm to 60 cm in length",
+        "detachment": "Mechanical",
+        "recommendedparentid": "px slim",
+        "features": "\"Offering includes multiple shapes and softness levels: Complex Standard, Complex Soft, Complex Extra Soft, Curve Extra Soft. Ultra HD Fiber for stretch resistance. 3x stronger and 3x more flexible than conventional polypropylene.\""
+    },
+    {
+        "type": "Coil",
+        "name": "Smart Coil",
+        "manufacturer": "Penumbra",
+        "url1": "https://www.penumbrainc.com/neuro-device/penumbra-smart-coil/",
+        "minid": 0,
+        "maxod": 0.016,
+        "length": "?",
+        "description": "\"The Penumbra SMART COIL® System is comprised of complex and WAVE™ coils designed for framing, filling, and finishing. These coils have varying levels of softness designed to simplify complex cases. All coils within the Penumbra SMART COIL System are built with Ultra HD Fiber which is designed to be 3x stronger and 3x more flexible than polypropylene. Penumbra SMART COIL also features an instant, single-click mechanical detachment system for ease of use and reliability. The Penumbra SMART COIL System is used to treat a wide range of neurovascular lesions, including small, medium, and large-sized aneurysms.\"",
+        "sizes": "1 – 18 mm in diameter and 1 – 60 cm in length",
+        "detachment": "Mechanical",
+        "features": "\"Offering includes multiple shape and softness levels: Plus Standard, Standard, Soft, Extra Soft, WAVE Extra Soft. Ultra HD Fiber for stretch resistance. 3x stronger and 3x more flexible than polypropylene.\""
     },
     {
         "type": "Guide Catheter",
@@ -364,7 +393,9 @@ deviceList =
         "url1": "https://www.jnjmedicaldevices.com/en-US/product/cerebase-da-guide-sheath",
         "minid": 0.09,
         "maxod": 0.105,
-        "length": "70 / 80 / 90 / 95"
+        "length": "70 / 80 / 90 / 95",
+        "description": "\"Designed for atraumatic vessel interaction with soft, compliant, and rounded distal edges and a highly flexible Dexterous (DEX) tip that can minimize direct vessel wall contact.\"",
+        "features": "\"Engineered to secure Distal Access: CEREBASE DA is engineered to secure Distal Access for geometric anchoring, resulting in more procedural support. Engineered to take tight turns: The Dexterous (DEX) Tip facilitates tight turns for enhanced tracking through challenging anatomy, tracking closer to the target treatment site. More proximal shaft stiffness: More proximal shaft stiffness designed for arch support.\""
     },
     {
         "type": "Guide Catheter",
@@ -391,7 +422,9 @@ deviceList =
         "url1": "http://synthes.vo.llnwd.net/o16/LLNWMB8/US%20Mobile/Synthes%20North%20America/Product%20Support%20Materials/Brochures/ENVOY%20FAMILY%20BROCHURE%20pages%20DSUSCOD12140219.pdf",
         "minid": 0.069,
         "maxod": 0.079,
-        "length": "95 / 105"
+        "length": "95 / 105",
+        "description": "\"ENVOY DA: Distal 8 cm flexible section allows access to more distal anatomy to achieve geometric anchoring in petrocavernous ICA and provide support for a stable procedure. ENVOY XB Catheter has the same end-to-end braided construction as the ENVOY Catheter with an estimated 27% additional back-up support at the bifurcation of the common carotid.\"",
+        "comments": "DA = Distal Access. XB = eXtra Backup. "
     },
     {
         "type": "Guide Catheter",
@@ -480,7 +513,9 @@ deviceList =
         "url1": "https://www.penumbrainc.com/it/neuro-device/neuron-system/",
         "minid": 0.088,
         "maxod": 0.112,
-        "length": "80 / 90"
+        "length": "80 / 90",
+        "description": "\"\"Neuron MAX 088 is designed to deliver a wide range of devices during neurovascular procedures.\"",
+        "features": "\"6 F (2.03 mm) long sheath. 0.088\" (2.24 mm) lumen allows for a wide range of device compatibility. Proximal shaft engineered for support throughout aortic arch. Soft, atraumatic tip for distal placement. Full distal shaft radiopacity for visualisation throughout procedure. Compatible with Penumbra 6 F (2.03 mm) Select Catheters.\""
     },
     {
         "type": "Guide Catheter",
@@ -507,7 +542,8 @@ deviceList =
         "url1": "https://www.penumbrainc.com/neuro-device/benchmark/",
         "minid": 0.071,
         "maxod": 0.079,
-        "length": "95 / 105 / 115"
+        "length": "95 / 105 / 115",
+        "description": "\"The BENCHMARK™ 071 Intracranial Access System combines Penumbra’s innovative tracking technology with its original Neuron® intracranial access concept. The result is a next-generation 6 F (2.03 mm) guide catheter built for delivery of today’s most complex therapies. Enables Rapid Primary Access when utilized with the 5 F (1.65 mm) Select Catheter.\""
     },
     {
         "type": "Guide Catheter",
@@ -562,18 +598,23 @@ deviceList =
         "name": "AXS Infinity LS ",
         "manufacturer": "Stryker",
         "url1": "https://www.strykerneurovascular.com/us/products/access/axs-infinity-ls-long-sheath",
+        "ifu": "https://www.strykerneurovascular.com/downloads/AXS_Infinity_DFUe.pdf",
         "minid": 0.088,
         "maxod": 0.105,
-        "length": "70 / 80 / 90"
+        "length": "70 / 80 / 90",
+        "description": "\"AXS Infinity LS Long Sheath is the next-generation neurovascular sheath designed for rapid access and excellent support.\"",
+        "features": "\"Stable platform: A stable platform from the start with a longer proximal segment and more midshaft support. Rapid access: Navigates various arch types with ease with its 9.5cm distal flex zone and supportive proximal shaft. Large 0.088in lumen: The large 0.088in ID is designed to deliver a wide range of devices including most dual-catheter therapies and tri-axial approaches.\""
     },
     {
         "type": "Long Sheath",
         "name": "AXS Infinity LS Plus ",
         "manufacturer": "Stryker",
         "url1": "https://www.stryker.com/us/en/neurovascular/products/axs-infinity-plus.html",
+        "ifu": "https://www.stryker.com/content/dam/stryker/neurovascular/products/axs-infinity-ls-plus/resources/AXS-Infinity-LS-Plus_DFU_US_Jun18.pdf",
         "minid": 0.091,
         "maxod": 0.105,
-        "length": "70 / 80 / 90"
+        "length": "70 / 80 / 90",
+        "description": "\"The AXS infinity LS Plus Long Sheath is designed for greater distal support and enhanced access.\""
     },
     {
         "type": "Guide Catheter",
@@ -582,7 +623,9 @@ deviceList =
         "url1": "https://www.penumbrainc.com/neuro-device/benchmark-bmx96-access-system/",
         "minid": 0.096,
         "maxod": 0.109,
-        "length": "80 / 90 / 100"
+        "length": "80 / 90 / 100",
+        "description": "\"The BENCHMARK BMX96 Access System is designed for today’s most complex neurovascular interventions. The advanced stainless steel hypotube technology of BENCHMARK BMX96 provides distal deliverability and proximal stability for most complex therapies. Furthermore, the catheter’s 0.096″ lumen is designed to increase procedural versatility and intraprocedural visualization.\"",
+        "features": "\"8 F OD (2.77 mm) delivery catheter. 096\" (2.4 mm) ID expands procedural versatility and intraprocedural visualizationSoft, atraumatic tip for distal placement. Mechanically optimized proximal shaft designed to maximize procedural stability. Prepackaged options with Penumbra 6 F Select Catheters for Rapid Primary Access. Packaged with a dilator designed to provide seamless dilator-to-catheter transition (.038″ guidewire compatible). Tip Shapes: Straight, MP.\""
     },
     {
         "type": "Guide Catheter",
@@ -1002,6 +1045,17 @@ deviceList =
         "preparation": "No shaking needed. Comes in pre-loaded syringe. Requires catheter flushing with DMSO. ",
         "ctArtefacts": "Minimal",
         "features": "\"Iodine Bonded Radiopacifier: High volume of embolic precipitate. Homogeneous radiopacity. No added metal for minimal artifact. High volume of embolic precipitate. More embolic capacity with less DMSO agent.\""
+    },
+    {
+        "type": "Liquid Embolic",
+        "name": "Glubran 2",
+        "manufacturer": "GEM Italy",
+        "url1": "https://www.gemitaly.it/en/products/glubran-2/",
+        "minid": 0,
+        "maxod": 0.026,
+        "length": "?",
+        "material": "Synthetic biodegradable cyanoacrylate basis glue, modified by the addition of a monomer synthesized by the manufacturer GEM",
+        "features": "\"Glubran 2 polymerises quickly in contact with live tissue and wet environment creating a thin and elastic film having high tensile properties which guarantee strong adhesion to the tissues. This film naturally conforms with the tissues on which it was applied; it is not permeable to liquids and is not altered by blood or organic liquids.\""
     },
     {
         "type": "Microcatheter",
