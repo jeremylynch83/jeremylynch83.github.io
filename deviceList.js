@@ -371,7 +371,7 @@ deviceList =
         "name": "5F Envoy ",
         "manufacturer": "Cerenovus",
         "url1": "http://synthes.vo.llnwd.net/o16/LLNWMB8/US%20Mobile/Synthes%20North%20America/Product%20Support%20Materials/Brochures/ENVOY%20FAMILY%20BROCHURE%20pages%20DSUSCOD12140219.pdf",
-        "minid": 0.056,
+        "minid": 0.054,
         "maxod": 0.065,
         "length": "90 / 100"
     },
@@ -380,7 +380,7 @@ deviceList =
         "name": "6F Envoy ",
         "manufacturer": "Cerenovus",
         "url1": "http://synthes.vo.llnwd.net/o16/LLNWMB8/US%20Mobile/Synthes%20North%20America/Product%20Support%20Materials/Brochures/ENVOY%20FAMILY%20BROCHURE%20pages%20DSUSCOD12140219.pdf",
-        "minid": 0.07,
+        "minid": 0.068,
         "maxod": 0.079,
         "length": "90 / 100"
     },
@@ -389,7 +389,7 @@ deviceList =
         "name": "6F Envoy DA / XB ",
         "manufacturer": "Cerenovus",
         "url1": "http://synthes.vo.llnwd.net/o16/LLNWMB8/US%20Mobile/Synthes%20North%20America/Product%20Support%20Materials/Brochures/ENVOY%20FAMILY%20BROCHURE%20pages%20DSUSCOD12140219.pdf",
-        "minid": 0.071,
+        "minid": 0.069,
         "maxod": 0.079,
         "length": "95 / 105"
     },
@@ -398,7 +398,7 @@ deviceList =
         "name": "7F Envoy ",
         "manufacturer": "Cerenovus",
         "url1": "http://synthes.vo.llnwd.net/o16/LLNWMB8/US%20Mobile/Synthes%20North%20America/Product%20Support%20Materials/Brochures/ENVOY%20FAMILY%20BROCHURE%20pages%20DSUSCOD12140219.pdf",
-        "minid": 0.078,
+        "minid": 0.076,
         "maxod": 0.09186,
         "length": "90 / 100"
     },
@@ -2326,8 +2326,9 @@ deviceList =
         "name": "Protege",
         "manufacturer": "Medtronic",
         "url1": "https://www.medtronic.com/us-en/healthcare-professionals/products/cardiovascular/peripheral-biliary-stents/protege-rx.html",
-        "minid": 0.016,
-        "maxod": 0.07874,
+        "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/cardiovascular/peripheral-therapies/documents/peripheral-us-product-catalog.pdf",
+        "minid": 0.015,
+        "maxod": 0.077428,
         "length": 135
     },
     {
@@ -2337,7 +2338,7 @@ deviceList =
         "url1": "https://www.cordis.com/en_us/endovascular/intervene/self-expanding-stents/precise-pro-rx-carotid-stent.html",
         "url2": "https://www.cordis.com/content/dam/cordis/web/documents/catalog/cordis-us-endovascular-catalog.pdf",
         "minid": 0.016,
-        "maxod": 0.065617,
+        "maxod": 0.053,
         "length": 135
     },
     {
@@ -2347,7 +2348,7 @@ deviceList =
         "url1": "https://www.cordis.com/en_us/endovascular/intervene/self-expanding-stents/precise-pro-rx-carotid-stent.html",
         "url2": "https://www.cordis.com/content/dam/cordis/web/documents/catalog/cordis-us-endovascular-catalog.pdf",
         "minid": 0.016,
-        "maxod": 0.07874,
+        "maxod": 0.068,
         "length": 135
     },
     {

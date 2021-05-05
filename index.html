@@ -65,6 +65,8 @@
 				<h4>Independent neurointerventional device information.</h4>
 				</p>
 				<b-button variant="primary" v-b-modal.help_modal>Help</b-button>
+				<b-button variant="info" v-b-modal.updates_modal>Updates</b-button>
+
 			</div>
 
 			<template v-for="n in deviceInputs">
@@ -181,7 +183,7 @@
 		</b-container>
 
 		<!---------------- MODALS -------------->
-		<b-modal id="help_modal" title="NeuroTool: Help" ok-only>
+		<b-modal id="help_modal" title="Help" ok-only>
 
 			<h4>What is this for?</h4>
 			<p>
@@ -223,6 +225,13 @@
 
 
 		</b-modal>
+
+		<b-modal id="updates_modal" title="Updates" ok-only>
+			<h5>5 May 2021</h5>
+			Precise and Envoy catheter sizing information corrected.
+		</b-modal>
+
+
 
 
 		<b-modal :id="fitModal.id" :title="fitModal.title" ok-only>
