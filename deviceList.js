@@ -382,9 +382,12 @@ deviceList =
         "name": "Ballast",
         "manufacturer": "Balt",
         "url1": "https://balt-usa.com/products/ballast-088-long-sheath/",
+        "url2": "https://balt-usa.com/wp-content/uploads/2019/03/MKTG-126_BallastCard.pdf",
+        "ifu": "https://balt-usa.com/wp-content/uploads/2019/04/IFU-022-rev-B-Ballast-Sheath.pdf",
         "minid": 0.088,
         "maxod": 0.106,
-        "length": "80 / 90 / 100 / 105"
+        "length": "80 / 90 / 100 / 105",
+        "description": "\"The Ballast™ 088 Long Sheath is a single lumen, braid-reinforced, variable stiffness catheter with a radiopaque zone on the distal end and a luer hub on the proximal end. The Ballast 088 Long Sheath is compatible with introducer sheaths appropriately sized for the outer diameter of the Ballast088 Long Sheath. The Ballast 088 Long Sheath includes the Ballast 088 Long Sheath, Dilator, Introducer Sheath, 9F Rotating Hemostasis Valve (RHV) and 8F Hemostasis Valve Adapter (HVA). \""
     },
     {
         "type": "Guide Catheter",
@@ -395,7 +398,7 @@ deviceList =
         "maxod": 0.105,
         "length": "70 / 80 / 90 / 95",
         "description": "\"Designed for atraumatic vessel interaction with soft, compliant, and rounded distal edges and a highly flexible Dexterous (DEX) tip that can minimize direct vessel wall contact.\"",
-        "features": "\"Engineered to secure Distal Access: CEREBASE DA is engineered to secure Distal Access for geometric anchoring, resulting in more procedural support. Engineered to take tight turns: The Dexterous (DEX) Tip facilitates tight turns for enhanced tracking through challenging anatomy, tracking closer to the target treatment site. More proximal shaft stiffness: More proximal shaft stiffness designed for arch support.\""
+        "features": "\"Engineered to secure Distal Access: CEREBASE DA is engineered to secure Distal Access for geometric anchoring, resulting in more procedural support. Engineered to take tight turns: The Dexterous (DEX) Tip facilitates tight turns (i.e. a radius bend of 2 cm) for enhanced tracking through challenging anatomy, tracking closer to the target treatment site. More proximal shaft stiffness: More proximal shaft stiffness designed for arch support.\""
     },
     {
         "type": "Guide Catheter",
@@ -514,7 +517,7 @@ deviceList =
         "minid": 0.088,
         "maxod": 0.112,
         "length": "80 / 90",
-        "description": "\"\"Neuron MAX 088 is designed to deliver a wide range of devices during neurovascular procedures.\"",
+        "description": "\"Neuron MAX 088 is designed to deliver a wide range of devices during neurovascular procedures.\"",
         "features": "\"6 F (2.03 mm) long sheath. 0.088\" (2.24 mm) lumen allows for a wide range of device compatibility. Proximal shaft engineered for support throughout aortic arch. Soft, atraumatic tip for distal placement. Full distal shaft radiopacity for visualisation throughout procedure. Compatible with Penumbra 6 F (2.03 mm) Select Catheters.\""
     },
     {
@@ -688,7 +691,9 @@ deviceList =
         "url1": "https://www.jnjmedicaldevices.com/en-US/product/cerenovus-large-bore-catheter",
         "minid": 0.071,
         "maxod": 0.0825,
-        "length": "125 / 132"
+        "length": "125 / 132",
+        "description": "\"The\n CERENOVUS Large Bore Catheter, Aspiration Tubing Set and NOUVAG Vacuson\n 60 aspiration pump (or equivalent aspiration pump) are indicated to \nrestore blood flow by removing thrombus in patients experiencing \nischemic stroke. The CERENOVUS Large Bore Catheter is indicated for use \nas a conduit for retrieval devices.\"",
+        "features": "Rapid navigation to MCA: CERENOVUS Large Bore Catheter has rapid navigation to the middle cerebral artery (MCA) based on optimized design: variable braid density for optimized trackability and seamless transition zones for efficient control. Smooth stent retrieval: Smooth stent interaction and retrieval due to enhanced tip durability: end to end polytetrafluoroethylene (PTFE) liner, durable tip design and optimized distal column strength1,3,4. Tip durability, Excellent kink resistance in a thin wall design****, robust clot ingestion due to catheter tip durability. Low profile design: Lowest profile in a large bore catheter* for base catheter compatibility options (compatible with 0.085” interior diameter (ID)base catheter or greater). "
     },
     {
         "type": "Intermediate Catheter",
@@ -726,7 +731,8 @@ deviceList =
         "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
         "minid": 0.068,
         "maxod": 0.083,
-        "length": "132"
+        "length": "132",
+        "description": "\"The React™ 68 catheter and the React™ 71 catheter feature a coil and braid design along with end-to-end nitinol construction — easing navigation to the M1 and M2 segments. Combined with the Riptide™ aspiration system, these catheters are designed to revascularize patients experiencing acute ischemic stroke.\""
     },
     {
         "type": "Intermediate Catheter",
@@ -735,16 +741,20 @@ deviceList =
         "url1": "https://www.medtronic.com/us-en/healthcare-professionals/products/neurological/revascularization-stroke/react-catheters.html",
         "minid": 0.071,
         "maxod": 0.0855,
-        "length": "132"
+        "length": "132",
+        "description": "\"The React™ 68 catheter and the React™ 71 catheter feature a coil and braid design along with end-to-end nitinol construction — easing navigation to the M1 and M2 segments. Combined with the Riptide™ aspiration system, these catheters are designed to revascularize patients experiencing acute ischemic stroke.\""
     },
     {
         "type": "Intermediate Catheter",
         "name": "Sofia 5F ",
         "manufacturer": "MicroVention",
         "url1": "https://www.microvention.com/product/sofia",
+        "url2": "https://microvention.s3.amazonaws.com/static/product_specification_sheet_north_america/Sofia_Stand_Alone_-_NA_c68822.pdf",
         "minid": 0.055,
         "maxod": 0.068,
         "length": "115 / 125",
+        "description": "\"The SOFIA Catheter is designed for distal navigation and supports precise delivery of a variety of neurovascular therapies.\"",
+        "comments": "The SOFIA 5F catheter is compatible with guide or balloon guide catheters with an ID of 0.070\" or larger. ",
         "recommendedparentid": 0.07
     },
     {
@@ -755,6 +765,8 @@ deviceList =
         "minid": 0.07,
         "maxod": 0.0825,
         "length": 115,
+        "description": "\"The SOFIA Catheter is designed for distal navigation and supports precise delivery of a variety of neurovascular therapies.\"",
+        "comments": "The SOFIA 6F catheter is compatible with guide or balloon guide catheters with an ID of 0.085\" or larger.",
         "recommendedparentid": 0.085
     },
     {
@@ -765,6 +777,8 @@ deviceList =
         "minid": 0.07,
         "maxod": 0.0825,
         "length": "125 / 131",
+        "description": "\"The SOFIA Plus catheter is designed to work in a support device to facilitate thrombectomy with a stentriever. Its ideal combination of distal trackability and a large 0.070\" inner diameter enable it to engage with larger clot burdens.\"",
+        "comments": "The SOFIA Plus catheter is compatible with guide or balloon guide catheters with an ID of 0.088\" or larger.",
         "recommendedparentid": 0.088
     },
     {
@@ -801,7 +815,8 @@ deviceList =
         "url1": "https://www.penumbrainc.com/neuro-device/penumbra-jet-7/",
         "minid": 0.072,
         "maxod": 0.085,
-        "length": "132"
+        "length": "132",
+        "description": "\"The Penumbra JET® 7 Reperfusion Catheter is intended for use in the revascularization of patients with acute ischemic stroke secondary to large vessel occlusion. The larger lumen of Penumbra JET 7, powered by Penumbra ENGINE®, is designed to increase thrombus removal force. The Penumbra JET 7 allows for the combined use with the 3D Revascularization Device™, which offers four intraluminal chambers designed to lock clot, along with outer petals to trap clot for maximum thrombus extraction.\""
     },
     {
         "type": "Intermediate Catheter",
@@ -810,7 +825,8 @@ deviceList =
         "url1": "https://www.penumbrainc.com/neuro-device/penumbra-jet-d/",
         "minid": 0.054,
         "maxod": 0.08,
-        "length": "138"
+        "length": "138",
+        "description": "\"The Penumbra JET™ D Reperfusion Catheter is intended for use in the revascularization of patients with acute ischemic stroke secondary to large vessel occlusion. The Penumbra JET D is designed to navigate smaller, distal vessels and extract clot efficiently with the power of the Penumbra ENGINE™ aspiration source.\""
     },
     {
         "type": "Intermediate Catheter",
@@ -819,7 +835,8 @@ deviceList =
         "url1": "https://www.penumbrainc.com/neuro-device/ace-reperfusion-catheters/",
         "minid": 0.068,
         "maxod": 0.08,
-        "length": "132"
+        "length": "132",
+        "description": "\"Penumbra’s ACE Reperfusion Catheters (ACE68 and ACE60) are intended for use in the revascularization of patients with acute ischemic stroke secondary to large vessel occlusion. The ACE catheter design further increases the distal and proximal lumen sizes, providing optimal trackability and even greater aspiration power. ACE68 is designed to easily navigate tortuous vessels to facilitate extraction of clot quickly and reliably through its large .068″ (1.73 mm) inner lumen with the deep vacuum power of the Penumbra ENGINE™ aspiration source.\""
     },
     {
         "type": "Intermediate Catheter",
@@ -828,7 +845,8 @@ deviceList =
         "url1": "https://www.penumbrainc.com/neuro-device/ace-reperfusion-catheters/",
         "minid": 0.06,
         "maxod": 0.08,
-        "length": "132"
+        "length": "132",
+        "description": "\"Penumbra’s ACE Reperfusion Catheters (ACE68 and ACE60) are intended for use in the revascularization of patients with acute ischemic stroke secondary to large vessel occlusion. The ACE catheter design further increases the distal and proximal lumen sizes, providing optimal trackability and even greater aspiration power. ACE68 is designed to easily navigate tortuous vessels to facilitate extraction of clot quickly and reliably through its large .068″ (1.73 mm) inner lumen with the deep vacuum power of the Penumbra ENGINE™ aspiration source.\""
     },
     {
         "type": "Intermediate Catheter",
@@ -863,7 +881,8 @@ deviceList =
         "ifu": "https://www.stryker.com/content/dam/stryker/neurovascular/products/axs-catalyst-5/resources/AXS-Catalyst_DFU_US_Sep19.pdf",
         "minid": 0.068,
         "maxod": 0.0825,
-        "length": "115 / 125 / 132"
+        "length": "115 / 125 / 132",
+        "description": "\"Improve your confidence in first pass efficacy by engaging the clot with full control using the AXS Catalyst 7 Distal Access Catheter, the only 0.068in catheter designed to TRAP more with the fully compatible FlowGate2 Balloon Guide Catheter and Trevo XP ProVue Retriever.\""
     },
     {
         "type": "Intermediate Catheter",
@@ -872,7 +891,8 @@ deviceList =
         "url1": "https://www.strykerneurovascular.com/us/products/access/axs-catalyst-6",
         "minid": 0.06,
         "maxod": 0.079,
-        "length": "132"
+        "length": "132",
+        "description": "\" The CAT™ 6 Distal Access Catheter is designed for fast access and rapid revascularization with Trevo XP Retriever \""
     },
     {
         "type": "Intermediate Catheter",
@@ -881,16 +901,21 @@ deviceList =
         "url1": "https://www.strykerneurovascular.com/us/products/access/axs-catalyst-5",
         "minid": 0.058,
         "maxod": 0.073,
-        "length": "115 / 132"
+        "length": "115 / 132",
+        "description": " The CAT™ 5 Distal Access Catheter provides easy navigation and reliable support for distal access cases.\""
     },
     {
         "type": "Intermediate Catheter",
         "name": "AXS Vecta 71 ",
         "manufacturer": "Stryker",
         "url1": "https://www.strykerneurovascular.com/us/products/ais/axs-vecta-aspiration-catheter",
+        "ifu": "https://www.strykerneurovascular.com/downloads/AXS_Vecta_DFUe.pdf",
         "minid": 0.071,
         "maxod": 0.085,
-        "length": "115 / 125 / 132"
+        "length": "115 / 125 / 132",
+        "description": "\"Redefine aspiration. Introducing Stryker’s large-bore aspiration platform to complement our comprehensive portfolio of retrieval, access, and flow control products for treating acute ischemic stroke.\"",
+        "comments": "Recommended 0.088 inches inner diameter",
+        "recommendedparentid": 0.088
     },
     {
         "type": "Intermediate Catheter",
@@ -899,7 +924,10 @@ deviceList =
         "url1": "https://www.stryker.com/us/en/neurovascular/products/axs-vecta-intermediate-catheter.html",
         "minid": 0.074,
         "maxod": 0.087,
-        "length": "115 / 125 / 132"
+        "length": "115 / 125 / 132",
+        "description": "\"How you perform thrombectomy is as unique as each of your patients. That's why we're introducing the AXS Vecta Intermediate Catheter. Upgraded with Pro Technology, this catheter's extra-large lumen is designed for powerful clot removal through aspiration alone or with a stent retriever. Together, with our customers, we are driven to make healthcare better. \"",
+        "comments": "Recommended 0.091 inches inner diameter",
+        "recommendedparentid": 0.091
     },
     {
         "type": "Intermediate Catheter",
@@ -925,7 +953,8 @@ deviceList =
         "url1": "https://www.1amedical.org/wordpress/wp-content/uploads/2020/03/201907_TITAN-FLYER-A4-1.pdf",
         "minid": 0.07,
         "maxod": 0.083,
-        "length": 128
+        "length": 128,
+        "description": "\"Aspiration Catheter System. Indicated for injection of intravascular fluids, the introduction of interventional devices into the peripheral & neuro vasculature, and/or aspiration of soft emboli and thrombi from the arterial system, including the peripheral and neuro vasculature.\""
     },
     {
         "type": "Intermediate Catheter",
@@ -965,17 +994,30 @@ deviceList =
         "name": "WEB SL/SLS 17 system",
         "manufacturer": "Microvention",
         "url1": "https://www.microvention.com/product/web-family",
+        "url2": "https://www.microvention.com/product/web-family/instructions-for-use/web-copy",
         "minid": 0,
         "maxod": 0.0165,
-        "length": "?"
+        "length": "?",
+        "description": "\"The WEB™ Embolization System is first-in-class intrasaccular technology offering a single-device treatment alternative to endovascular coils and complex stenting procedures. The intrasaccular embolization system minimizes the need for a dual antiplatelet regimen required for intraluminal therapies.\"",
+        "detachment": "Electrothermal",
+        "comments": "WEB = Woven EndoBridge. SL = Single Layer (barrel shaped). SLS = Single Layer Sphere. Designed to be placed completely within the aneurysm sac and span the ostium, where it disrupts local flow.",
+        "recommended": "Via",
+        "material": "Braided nitinol wire that holds a globular shape.",
+        "resheathable": "Completely resheathable."
     },
     {
         "type": "Intrasaccular Device",
         "name": "pCONUS 1 / 2 / mini",
         "manufacturer": "Phenox",
-        "url1": "https://phenox.net/international/uploads/KIF/pCONUS_KIF-0020J_LR.pdf",
+        "url1": "https://phenox.net/international/pconus-bifurcation-aneurysm-implant/",
+        "url2": "https://phenox.net/international/uploads/KIF/pCONUS_KIF-0020J_LR.pdf",
         "minid": 0,
-        "maxod": 0.02
+        "maxod": 0.02,
+        "description": "\"The pCONUS  Bifurcation  Aneurysm  Implant  is  a  new category of intraluminal device intended to treat complex,     wide     neck     intracranial     bifurcation     aneurysms. It  is  designed  to  support  the  coil  mass  at  the  levelof   the   neck   of   those   aneurysms   that   cannot   be easily coiled or surgically treated.\"",
+        "detachment": "Electrolytic",
+        "comments": "Available in 2 design shapes",
+        "surfaceCoating": "Available with Hydrophilic Polymer Coating (HPC)",
+        "resheathable": "Completely resheathable."
     },
     {
         "type": "Intrasaccular Device",
@@ -996,7 +1038,9 @@ deviceList =
         "minid": 0,
         "maxod": 0.026,
         "length": "?",
-        "description": "\"Designed to treat a range of aneurysm morphologies including unruptured wide-necked bifurcation and bifurcation aneurysms.\""
+        "description": "\"Designed to treat a range of aneurysm morphologies including unruptured wide-necked bifurcation and bifurcation aneurysms. Provides a combination of flow diversion at the neck of the aneurysm and flow disruption within the aneurysm sac; Supports neo-intimal growth across mesh at neck and subsequent thrombosis of aneurysm; Deployed with proven existing clinical techniques; A single device occlusion that is re-sheathable & re-deployable; Electrolytic method of detachment; Strong IP portfolio - 3 patents issued and 3 patents pending; No intra-arterial stabilizing component; Reduces/eliminates need for dual anti-platelet therapy; Simplified sizing approach compared to other intra-saccular devices (i.e. neck  and widest diameter only).\"",
+        "detachment": "Electrolytic",
+        "resheathable": "Completely resheathable."
     },
     {
         "type": "Liquid Embolic",
@@ -2432,6 +2476,30 @@ deviceList =
         "design": "46 braided nitinol wires and two platinum strands for smaller versions (2.5–3mm), whereas 62 nitinol wires and two platinum strands  constitute  larger  versions  (3.5–6.5mm). Pore size of 0.040–0.050 mm2 at the nominal diameter to provide high metal coverage (approximately 30.0%–35.0%) at the aneurysmal neck after full opening"
     },
     {
+        "type": "Stent",
+        "name": "eCLIPs bifurcation system 21",
+        "manufacturer": "Evasc",
+        "url1": "https://www.evasc.com/features",
+        "minid": 0,
+        "maxod": 0.02,
+        "length": "?",
+        "description": "\"The system is comprised of an eCLIPs™ Implant, an eCLIPs™ Delivery Wire and an eCLIPs™ Sheath. The Implant is a permanent implant that provides an initial framework or scaffold at the opening of an aneurysm in support of embolic coils and to provide an ancillary flow diverting effect. The Delivery Wire is designed to deliver and detach the Implant at the target location. The System is available in two sizes: one is compatible with 0.027\" ID microcatheters and the other is compatible with 0.021\" ID microcatheters.\"",
+        "vesselDiameters": "1.5 - 2.5",
+        "features": "\"Self-aligning delivery. Full retractable & repositionable. Compatible with standard 021 and 027 micro catheters. Non-shortening. Anchor segment prevents migration. No need to access both side branches. Can cross implant leaf segment at any time for adjunctive coiling.\""
+    },
+    {
+        "type": "Stent",
+        "name": "eCLIPs bifurcation system 27 ",
+        "manufacturer": "Evasc",
+        "url1": "https://www.evasc.com/features",
+        "minid": 0,
+        "maxod": 0.026,
+        "length": "?",
+        "description": "\"The system is comprised of an eCLIPs™ Implant, an eCLIPs™ Delivery Wire and an eCLIPs™ Sheath. The Implant is a permanent implant that provides an initial framework or scaffold at the opening of an aneurysm in support of embolic coils and to provide an ancillary flow diverting effect. The Delivery Wire is designed to deliver and detach the Implant at the target location. The System is available in two sizes: one is compatible with 0.027\" ID microcatheters and the other is compatible with 0.021\" ID microcatheters.\"",
+        "vesselDiameters": "1.5 - 3.25",
+        "features": "\"Self-aligning delivery. Full retractable & repositionable. Compatible with standard 021 and 027 micro catheters. Non-shortening. Anchor segment prevents migration. No need to access both side branches. Can cross implant leaf segment at any time for adjunctive coiling.\""
+    },
+    {
         "type": "Stent Retriever ",
         "name": "Embotrap II 5x21 & 5x33",
         "manufacturer": "Cerenovus",
@@ -2448,7 +2516,10 @@ deviceList =
         "url1": "https://www.jnjmedicaldevices.com/en-US/product/embotrap-iii-revascularization-device",
         "minid": 0,
         "maxod": 0.02,
-        "length": "194 / 195"
+        "length": "194 / 195",
+        "description": "\"The EMBOTRAP® III Revascularization Device is designed for use in the anterior and posterior neurovasculature in vessels such as the internal carotid artery, the M1 or M2 segments of the middle cerebral artery, and basilar arteries. The EMBOTRAP Platform is indicated for vessels from 5.0mm down to 1.5mm and is the only dual layer design, designed to engage and grip the clot differently.  EMBOTRAP® III Device has been shown to retrieve various thrombus types, whether fibrin-rich thrombus (hard) or RBC-rich thrombus types (soft).\"",
+        "vesselDiameters": "1.5 - 5.0 mm  ",
+        "features": "\"Open and articulated outer cage: Open, articulated outer cage serves to engage and grip the clot. Multiple, large, inlet windows on the outer cage allow thrombus to move into the outer cage. An articulating outer cage maintains wall apposition during retrieval. Closed cell inner channel: Secures and stabilizes the thrombus to maintain engagement. Distal closed end mesh: Maintains control of thrombus during retrieval.\""
     },
     {
         "type": "Stent Retriever ",

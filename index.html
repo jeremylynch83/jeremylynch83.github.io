@@ -513,72 +513,6 @@
 
 		/* Specific functions */
 
-		function checkSizes() {
-			var summary = "";
-			var x = tree.querySelectorAll("device");
-			x.forEach(parent => {
-				if (parent.hasChildNodes() && (parent.getAttribute("data") != "")) {
-					var parent_data = JSON.parse(parent.getAttribute("data"));
-					children = parent.childNodes;
-					var child_total_od = 0;
-					var child_list = [];
-					var length_txt = "";
-					var child_str = "";
-					var compat_str = "";
-
-					children.forEach(child => {
-						/* Add up all devices inside parent catheter */
-						if (child.getAttribute("data") != "") {
-							child_data = JSON.parse(child.getAttribute("data"));
-
-							if (child_data.recommendedParentId != null) {
-								child_total_od = child_total_od + child_data.recommendedParentId;
-							} else {
-								child_total_od = child_total_od + child_data.maxod;
-							}
-							child_list.push(child_data.name);
-
-							// Compare lengths
-							length_txt = length_txt + compare_list_lengths(parent_data.length, child_data
-								.length, parent_data.name, child_data.name);
-
-							// Compare compatibility
-							compat_str = compat_str + check_compatibility(parent_data, child_data);
-						}
-					})
-
-					if (child_total_od >= parent_data.minid) {
-						switch (child_list.length) {
-							case 1:
-								child_str = child_list[0];
-								break;
-							case 2:
-								child_str = "The combination of " + child_str + child_list[0] + " and " +
-									child_list[
-										1];
-								break;
-							default:
-								child_str = child_str + "The combination of ";
-								for (var n = 0; n < child_list.length; n++) {
-									if (n < (child_list.length - 1)) child_str = child_str + child_list[n] + ", ";
-									if (n == (child_list.length - 1)) child_str = child_str + " and " +
-										child_list[
-											n] + ",";
-								}
-								break;
-						}
-						summary = "<p style=\"color:red\">" + summary + child_str + " does not fit in to " +
-							parent_data.name + ". " + "</p>";
-					} else summary = summary + length_txt + compat_str;
-				}
-			});
-
-			// Check radial artery compatibility
-
-
-			return summary;
-		}
-
 
 		var address = "https://evtoday.com/device-guide/us";
 
@@ -696,7 +630,6 @@
 						}
 					);
 
-
 					deviceInputs[index].display_info = "OD: " + e.maxod.toFixed(4) + "\" (" + in_to_fr(e
 							.maxod)
 						.toFixed(1) +
@@ -712,6 +645,8 @@
 					var xmlText = new XMLSerializer().serializeToString(tree);
 
 					document.getElementById("message2").value = xmlText;
+
+					//var result = this.checkSizes();
 
 				},
 				drawDiagram: function () {
@@ -735,8 +670,6 @@
 					this.infoModal.device.type = this.infoModal.device.type.toLowerCase();
 
 					this.info_table = [];
-
-					//console.log(deviceInfo.type);
 
 					if (deviceInfo.type != "liquid embolic") {
 						this.info_table = [{
@@ -856,6 +789,8 @@
 					var first_device = this.similarModal.first_device;
 					this.similarModal.n = 0;
 					this.similarModal.table = [];
+
+					//if (first_device.type == "Long Sheath") first_device.type = "Guide Catheter";
 
 					deviceList.forEach(d => {
 						var required_id = null;
@@ -977,8 +912,94 @@
 					this.$root.$emit('bv::show::modal', this.fitModal.id);
 				},
 
+				checkSizes: function () {
+					var summary = "";
+					var x = tree.querySelectorAll("device");
+					x.forEach(parent => {
+						if (parent.hasChildNodes() && (parent.getAttribute("data") != "")) {
+							var parent_data = JSON.parse(parent.getAttribute("data"));
+							children = parent.childNodes;
+							var child_total_od = 0;
+							var child_list = [];
+							var length_txt = "";
+							var child_str = "";
+							var compat_str = "";
+
+							children.forEach(child => {
+								/* Add up all devices inside parent catheter */
+								if (child.getAttribute("data") != "") {
+									child_data = JSON.parse(child.getAttribute("data"));
+
+									if (child_data.recommendedParentId != null) {
+										child_total_od = child_total_od + child_data
+											.recommendedParentId;
+									} else {
+										child_total_od = child_total_od + child_data.maxod;
+									}
+									child_list.push(child_data.name);
+
+									// Compare lengths
+									length_txt = length_txt + compare_list_lengths(parent_data
+										.length, child_data
+										.length, parent_data.name, child_data.name);
+
+									// Compare compatibility
+									compat_str = compat_str + check_compatibility(parent_data,
+										child_data);
+								}
+							})
+
+							if (child_total_od >= parent_data.minid) {
+								switch (child_list.length) {
+									case 1:
+										child_str = child_list[0];
+										break;
+									case 2:
+										child_str = "The combination of " + child_str + child_list[0] +
+											" and " +
+											child_list[
+												1];
+										break;
+									default:
+										child_str = child_str + "The combination of ";
+										for (var n = 0; n < child_list.length; n++) {
+											if (n < (child_list.length - 1)) child_str = child_str +
+												child_list[n] + ", ";
+											if (n == (child_list.length - 1)) child_str = child_str +
+												" and " +
+												child_list[
+													n] + ",";
+										}
+										break;
+								}
+								summary = "<p style=\"color:red\">" + summary + child_str +
+									" does not fit in to " +
+									parent_data.name + ". " + "</p>";
+							} else summary = summary + length_txt + compat_str;
+						}
+					});
+
+					// Check radial artery compatibility
+
+					if (this.access == "Radial artery") {
+						console.log("hi");
+						var first_device = tree.getElementById("device0");
+						if (first_device.getAttribute("data") != "") {
+							first_data = JSON.parse(first_device.getAttribute("data"));
+							if (first_data.maxod > 0.01811) {
+								summary += "The device is probably too large for the radial artery";
+							}
+
+						}
+
+					}
+
+
+					return summary;
+				},
+
 				updateSizer: function () {
-					var result = checkSizes();
+					var result = this.checkSizes();
 					if (result == "") {
 						var result = "<p style=\"color:green\">Everything fits ok.</p>";
 					}
