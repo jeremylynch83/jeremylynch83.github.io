@@ -162,7 +162,7 @@
 				</div>
 				<b-table small :items="sizes_table" style="font-size: 0.9em; " thead-class="d-none" responsive
 					caption-top head-variant="light" v-show="sizes_table.length != 0">
-					<template #table-caption><b>Devices sizing:<b></template>
+					<template #table-caption><b>Catalogue:<b></template>
 				</b-table>
 			</b-jumbotron>
 		</b-container>
@@ -293,6 +293,10 @@
 			</div>
 			<div id="info_extra2">
 			</div>
+			<b-table small :items="sizes_table" style="font-size: 0.9em; " thead-class="d-none" responsive caption-top
+				head-variant="light" v-show="sizes_table.length != 0">
+				<template #table-caption><b>Catalogue:<b></template>
+			</b-table>
 		</b-modal>
 
 		<b-modal :id="compareModal.id" :title="compareModal.title" ok-only>
@@ -728,6 +732,10 @@
 								case "tipLengths":
 									info_extra += "<p><b>Tip lengths: </b>" + deviceInfo[prop] + "</p>";
 									break;
+								case "surfaceCoating":
+									info_extra += "<p><b>Surface Coating: </b>" + deviceInfo[prop] + "</p>";
+									break;
+
 								case "youtube":
 									info_extra += "<p><b>Preparation: </b></p>";
 									info_extra +=
