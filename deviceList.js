@@ -1,4 +1,6 @@
+
 deviceList = 
+
 
 [
     {
@@ -120,7 +122,10 @@ deviceList =
         "dmso": "yes",
         "minid": 0.0165,
         "maxod": 0.037,
-        "length": "150"
+        "length": "150",
+        "description": "\"The Scepter balloon offers versatility with clinical applications in four key areas: Balloon Remodeling, Stent Delivery, Liquid Embolic Injection, and Balloon-Test Occlusion\"",
+        "sizetable": "[[\"Product Name\", \"Product Code\", \"Nominal Balloon Diameter\", \"Working Balloon Range\", \"Balloon Length\", \"Tip Length\", \"Catheter Working Length\", \"Inflation Lumen Dead Volume\", \"Balloon Inflation Volume (Nominal)\", \"Proximal Shaft OD\", \"Distal Tip OD\", \"Inner Lumen Diameter\"], [\"Scepter C\", \"BC0410C\", \"4.0mm\", \"2.0-5.0mm\", \"10mm\", \"5mm\", \"150cm\", \"0.40cc\", \"0.16cc\", \"2.8F\", \"2.1F\", \"0.0165 in\"], [\"Scepter C\", \"BC0415C\", \"4.0mm\", \"2.0-5.0mm\", \"15mm\", \"5mm\", \"150cm\", \"0.40cc\", \"0.18cc\", \"2.8F\", \"2.1F\", \"0.0165 in\"], [\"Scepter C\", \"BC0420C\", \"4.0mm\", \"2.0-5.0mm\", \"20mm\", \"5mm\", \"150cm\", \"0.40cc\", \"0.22cc\", \"2.8F\", \"2.1F\", \"0.0165 in\"]]",
+        "comments": "\"C\" stands for Compliant"
     },
     {
         "type": "Balloon",
@@ -130,7 +135,9 @@ deviceList =
         "dmso": "yes",
         "minid": 0.0165,
         "maxod": 0.037,
-        "length": "150"
+        "length": "150",
+        "description": "\"The Scepter balloon offers versatility with clinical applications in four key areas: Balloon Remodeling, Stent Delivery, Liquid Embolic Injection, and Balloon-Test Occlusion\"",
+        "comments": "\"XC\" means eXtra Compliant"
     },
     {
         "type": "Balloon",
@@ -999,9 +1006,10 @@ deviceList =
         "maxod": 0.0165,
         "length": "?",
         "description": "\"The WEB™ Embolization System is first-in-class intrasaccular technology offering a single-device treatment alternative to endovascular coils and complex stenting procedures. The intrasaccular embolization system minimizes the need for a dual antiplatelet regimen required for intraluminal therapies.\"",
+        "sizetable": "[[\"WEB SL & WEB SLS\", \"\", \"\", \"\", \"\", \"\"], [\"Name\", \"Ref. No.\", \"Diameter\", \"Height\", \"Min. Catheter ID\", \"Recommended Catheter\"], [\"WEB SL 4x2\", \"W5-4-2\", \"4\", \"2\", \".017\\\"\", \"VIA 17\"], [\"WEB SL 4x3\", \"W5-4-3\", \"4\", \"3\", \".017\\\"\", \"VIA 17\"], [\"WEB SLS 4\", \"W5-4-S\", \"4\", \"2.6\", \".017\\\"\", \"VIA 17\"], [\"WEB SL 4.5x2\", \"W5-4.5-2\", \"4.5\", \"2\", \".017\\\"\", \"VIA 17\"], [\"WEB SL 4.5x3\", \"W5-4.5-3\", \"4.5\", \"3\", \".017\\\"\", \"VIA 17\"], [\"WEB SL 5x2\", \"W5-5-2\", \"5\", \"2\", \".017\\\"\", \"VIA 17\"], [\"WEB SL 5x3\", \"W5-5-3\", \"5\", \"3\", \".017\\\"\", \"VIA 17\"], [\"WEB SL 5x4\", \"W5-5-4\", \"5\", \"4\", \".017\\\"\", \"VIA 17\"], [\"WEB SLS 5\", \"W5-5-S\", \"5\", \"3.6\", \".017\\\"\", \"VIA 17\"], [\"WEB SL 6x3\", \"W5-6-3\", \"6\", \"3\", \".017\\\"\", \"VIA 17\"], [\"WEB SL 6x4\", \"W5-6-4\", \"6\", \"4\", \".017\\\"\", \"VIA 17\"], [\"WEB SL 6x5\", \"W5-6-5\", \"6\", \"5\", \".017\\\"\", \"VIA 17\"], [\"WEB SLS 6\", \"W5-6-S\", \"6\", \"4.6\", \".017\\\"\", \"VIA 17\"], [\"WEB SL 7x3\", \"W5-7-3\", \"7\", \"3\", \".017\\\"\", \"VIA 17\"], [\"WEB SL 7x4\", \"W5-7-4\", \"7\", \"4\", \".017\\\"\", \"VIA 17\"], [\"WEB SL 7x5\", \"W5-7-5\", \"7\", \"5\", \".017\\\"\", \"VIA 17\"], [\"WEB SL 7x6\", \"W5-7-6\", \"7\", \"6\", \".017\\\"\", \"VIA 17\"], [\"WEB SLS 7\", \"W5-7-S\", \"7\", \"5.6\", \".017\\\"\", \"VIA 17\"]]",
         "detachment": "Electrothermal",
         "comments": "WEB = Woven EndoBridge. SL = Single Layer (barrel shaped). SLS = Single Layer Sphere. Designed to be placed completely within the aneurysm sac and span the ostium, where it disrupts local flow.",
-        "recommended": "Via",
+        "recommended": "Via 17",
         "material": "Braided nitinol wire that holds a globular shape.",
         "resheathable": "Completely resheathable."
     },
@@ -1505,8 +1513,7 @@ deviceList =
         "url1": "https://www.microvention.com/product/VIA",
         "minid": 0.017,
         "maxod": 0.032,
-        "length": 154,
-        "comments": "Needs confirming"
+        "length": 154
     },
     {
         "type": "Microcatheter",
@@ -2498,6 +2505,21 @@ deviceList =
         "description": "\"The system is comprised of an eCLIPs™ Implant, an eCLIPs™ Delivery Wire and an eCLIPs™ Sheath. The Implant is a permanent implant that provides an initial framework or scaffold at the opening of an aneurysm in support of embolic coils and to provide an ancillary flow diverting effect. The Delivery Wire is designed to deliver and detach the Implant at the target location. The System is available in two sizes: one is compatible with 0.027\" ID microcatheters and the other is compatible with 0.021\" ID microcatheters.\"",
         "vesselDiameters": "1.5 - 3.25",
         "features": "\"Self-aligning delivery. Full retractable & repositionable. Compatible with standard 021 and 027 micro catheters. Non-shortening. Anchor segment prevents migration. No need to access both side branches. Can cross implant leaf segment at any time for adjunctive coiling.\""
+    },
+    {
+        "type": "stent",
+        "name": "Enterprise 2",
+        "manufacturer": "Cerenovus",
+        "url1": "http://synthes.vo.llnwd.net/o16/LLNWMB8/INT%20Mobile/Synthes%20International/Product%20Support%20Material/legacy_Synthes_PDF/DSEM-COD-0216-0174_LR.pdf",
+        "minid": 0,
+        "maxod": 0.02,
+        "length": "?",
+        "description": "\"Based upon the principles of the original CODMAN ENTERPRISE® stent design, the CODMAN ENTERPRISE® 2 Vascular Reconstruction Device has been enhanced to improve conformability and wall apposition while maintaining the significant benefits of its closed cell design.\"",
+        "vesselDiameters": "2.0 - 4.0 mm",
+        "sizes": "16 - 39 mm",
+        "design": "Self-expandable laser cut closed cell with variable strut width. ",
+        "resheathable": "Yes",
+        "features": "\"Stent Positioning Marker: A fluoroscopic guide helps provide precise deployment at the aneurysm neck.  Enhanced closed cell design: The closed cells were redesigned allowing the stent to better expand and contract in vessel tortuosity, optimizing wall apposition.  Recapturable stent: The closed cell design allows for deployment and recapture, facilitating precise placement. 0.021” Microcatheter delivery: Allowing easy, precise navigation 99.8% of the time.  Stent markers: New solid platinum stent markers with increased radiopacity provide clear visibility of the device during and after deployment. Coil mass support: The CODMAN ENTERPRISE® 2 Stent has the highest point load force measurements, demonstrating its ability to effectively support the coil mass. Minimal foreshortening: The CODMAN ENTERPRISE® Stent deploys with minimal foreshortening.\""
     },
     {
         "type": "Stent Retriever ",

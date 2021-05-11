@@ -160,6 +160,10 @@
 				</div>
 				<div id="info_extra">
 				</div>
+				<b-table small :items="sizes_table" style="font-size: 0.9em; " thead-class="d-none" responsive
+					caption-top head-variant="light" v-show="sizes_table.length != 0">
+					<template #table-caption><b>Devices sizing:<b></template>
+				</b-table>
 			</b-jumbotron>
 		</b-container>
 
@@ -608,7 +612,8 @@
 					table: []
 				},
 
-				info_table: []
+				info_table: [],
+				sizes_table: []
 			},
 
 			methods: {
@@ -670,6 +675,8 @@
 					this.infoModal.device.type = this.infoModal.device.type.toLowerCase();
 
 					this.info_table = [];
+					this.sizes_table = [];
+
 
 					if (deviceInfo.type != "liquid embolic") {
 						this.info_table = [{
@@ -727,6 +734,13 @@
 										"<iframe width=\"100%\" height=\"315\" src=\"" + deviceInfo[prop] +
 										"\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
 									break;
+								case "sizetable":
+									var sizes = JSON.parse(deviceInfo[prop]);
+									//sizes.splice(0, 1);
+									this.sizes_table = sizes;
+
+									break;
+
 
 								default:
 									info_extra += "<p><b>" + toTitleCase(prop) + ": " + "</b>" + deviceInfo[
@@ -934,17 +948,20 @@
 										child_total_od = child_total_od + child_data
 											.recommendedParentId;
 									} else {
-										child_total_od = child_total_od + child_data.maxod;
+										child_total_od = child_total_od + child_data
+											.maxod;
 									}
 									child_list.push(child_data.name);
 
 									// Compare lengths
-									length_txt = length_txt + compare_list_lengths(parent_data
+									length_txt = length_txt + compare_list_lengths(
+										parent_data
 										.length, child_data
 										.length, parent_data.name, child_data.name);
 
 									// Compare compatibility
-									compat_str = compat_str + check_compatibility(parent_data,
+									compat_str = compat_str + check_compatibility(
+										parent_data,
 										child_data);
 								}
 							})
@@ -955,7 +972,8 @@
 										child_str = child_list[0];
 										break;
 									case 2:
-										child_str = "The combination of " + child_str + child_list[0] +
+										child_str = "The combination of " + child_str +
+											child_list[0] +
 											" and " +
 											child_list[
 												1];
@@ -963,9 +981,11 @@
 									default:
 										child_str = child_str + "The combination of ";
 										for (var n = 0; n < child_list.length; n++) {
-											if (n < (child_list.length - 1)) child_str = child_str +
+											if (n < (child_list.length - 1)) child_str =
+												child_str +
 												child_list[n] + ", ";
-											if (n == (child_list.length - 1)) child_str = child_str +
+											if (n == (child_list.length - 1)) child_str =
+												child_str +
 												" and " +
 												child_list[
 													n] + ",";
@@ -993,6 +1013,7 @@
 						}
 
 					}*/
+
 
 
 					return summary;

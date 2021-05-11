@@ -1,7 +1,11 @@
-
 .footer {
 
-	text-align: center; 
+	text-align: center;
 	margin-top: 50px;
 	font-size: small;
+}
+
+caption {
+	color: #000000;
+	font-size: 1rem;
 }
