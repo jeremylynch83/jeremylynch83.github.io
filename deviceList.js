@@ -480,7 +480,7 @@ deviceList =
         "url1": "http://www.1amedical.org/wordpress/wp-content/uploads/2020/03/201808-SONIC.pdf",
         "dmso": "yes",
         "minid": 0.009055118,
-        "maxod": 0.015748,
+        "maxod": 0.035433,
         "length": "167 / 190",
         "comments": "Includes a 0.007\" guidewire"
     },
@@ -491,7 +491,7 @@ deviceList =
         "url1": "http://www.1amedical.org/wordpress/wp-content/uploads/2020/03/201808-SONIC.pdf",
         "dmso": "yes",
         "minid": 0.01181102,
-        "maxod": 0.019685,
+        "maxod": 0.035433,
         "length": 167
     },
     {
