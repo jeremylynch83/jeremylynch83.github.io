@@ -164,6 +164,10 @@
 					caption-top head-variant="light" v-show="sizes_table.length != 0">
 					<template #table-caption><b>Catalogue:<b></template>
 				</b-table>
+				<b-button size="sm" variant="danger" @click="" v-b-modal.feedback_modal>
+					Disagree with this?
+				</b-button>
+
 			</b-jumbotron>
 		</b-container>
 
@@ -268,8 +272,8 @@
 				<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8"
 					action="https://formspree.io/f/xbjqrwnz" method="post">
 					<fieldset id="fs-frm-inputs">
-						<textarea rows="10" name="message" id="message" placeholder="Enter description" required=""
-							style="width:100%"></textarea>
+						<textarea rows="10" name="message" id="message" placeholder="Enter description (optional)"
+							required="" style="width:100%"></textarea>
 
 						<textarea style="display:none;" name="message2" id="message2" required=""></textarea>
 						<textarea style="display:none;" name="message3" id="message3" required=""></textarea>
@@ -299,6 +303,11 @@
 				head-variant="light" v-show="sizes_table.length != 0">
 				<template #table-caption><b>Catalogue:<b></template>
 			</b-table>
+
+			<b-button size="sm" variant="danger" @click="" v-b-modal.feedback_modal>
+				Disagree with this?
+			</b-button>
+
 		</b-modal>
 
 		<b-modal :id="compareModal.id" :title="compareModal.title" ok-only>
