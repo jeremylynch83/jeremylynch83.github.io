@@ -7,7 +7,7 @@
 		* Youtube videos more
 		* Delete running properly
 		* Cross/delete on iphone
-		* Unit convertor
+		* Unit converter
 		* Potential incompatibilities: e.g. Flowgate and ACE/Sofia
 	-->
 
@@ -37,21 +37,14 @@
 
 		<b-navbar toggleable="lg" type="dark" variant="info">
 			<b-navbar-brand href="#">NeuroTool</b-navbar-brand>
-
 			<b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
 			<b-collapse id="nav-collapse" is-nav>
-				<b-navbar-nav>
-				</b-navbar-nav>
 
 				<b-navbar-nav class="ml-auto">
-					<b-nav-item-dropdown right>
+					<b-dropdown-item v-b-modal.help_modal>About</b-dropdown-item>
+					<b-dropdown-item v-b-modal.conversion_modal>Unit converter</b-dropdown-item>
 
-						<template #button-content>
-							Help
-						</template>
-						<b-dropdown-item v-b-modal.help_modal>About</b-dropdown-item>
-					</b-nav-item-dropdown>
 				</b-navbar-nav>
 			</b-collapse>
 		</b-navbar>
@@ -65,6 +58,7 @@
 				<h4>Independent neurointerventional device information.</h4>
 				</p>
 				<b-button variant="primary" v-b-modal.help_modal>Help</b-button>
+				<b-button variant="secondary" v-b-modal.conversion_modal>Unit Converter</b-button>
 				<b-button variant="info" v-b-modal.updates_modal>Updates</b-button>
 
 			</div>
@@ -234,15 +228,35 @@
 
 		</b-modal>
 
-		<b-modal id="updates_modal" title="Updates" ok-only>
-			<h6>13 May 2021</h6>
-			Sonic catheter sizing corrected (thanks for the feedback).
-			<h6>5 May 2021</h6>
-			Precise and Envoy catheter sizing information corrected (thanks for the feedback).
+		<b-modal id="conversion_modal" title="Conversion" ok-only>
+			<b-form-group label="Inches:">
+				<b-form-input v-model="convert_unit.inches" type="number" @input="convertFunction('inches')">
+				</b-form-input>
+			</b-form-group>
+
+			<b-form-group label="French:">
+				<b-form-input v-model="convert_unit.french" type="number" @input="convertFunction('french')">
+				</b-form-input>
+			</b-form-group>
+
+			<b-form-group label="Milimetre:">
+				<b-form-input v-model="convert_unit.mm" type="number" @input="convertFunction('mm')">
+				</b-form-input>
+			</b-form-group>
+
+
 		</b-modal>
 
-
-
+		<b-modal id="updates_modal" title="Updates" ok-only>
+			<p>
+				<p><b>15 May 2021: </b>
+					Added unit converter and improved fitting algorithm. </p>
+				<p><b>13 May 2021: </b>
+					Sonic catheter sizing corrected (thanks for the feedback). </p>
+				<p><b>5 May 2021: </b>
+					Precise and Envoy catheter sizing information corrected (thanks for the feedback).</p>
+			</p>
+		</b-modal>
 
 		<b-modal :id="fitModal.id" :title="fitModal.title" ok-only>
 			<p>The <b>{{fitModal.first_device.name}}</b> will fit inside ({{fitModal.n}} items): </p>
@@ -400,6 +414,8 @@
 			parent_str = format_name(parent.name);
 			child_str = format_name(child.name);
 
+			// Names incompatibilities
+
 			var parent_incompat = [];
 			var child_incompat = [];
 
@@ -420,15 +436,23 @@
 			for (var x = 0; x < parent_incompat.length; x++) {
 				if (child_str.includes(parent_incompat[x])) {
 					comment = comment + "There is a possible incompatibility between the " + parent.name + " and the " +
-						child.name + ".";
+						child.name + ". ";
 				}
 			}
 
 			for (var x = 0; x < child_incompat.length; x++) {
 				if (parent_incompat.includes(child_incompat[x])) {
 					comment = comment + "There is a possible incompatibility between the " + parent.name + " and the " +
-						child.name + ".";
+						child.name + ". ";
 				}
+			}
+
+			// Parent sizes
+
+			if (parent.minid < child.recommendedparentid) {
+				comment += "The manufacturer recommends that " + child.name +
+					" requires a larger innner diameter than that of " + parent.name + ". ";
+
 			}
 
 
@@ -542,6 +566,11 @@
 			},
 			el: '#app',
 			data: {
+				convert_unit: {
+					inches: null,
+					french: null,
+					mm: null
+				},
 				access: 'Access (optional)',
 				devices: deviceList,
 				deviceInputs: deviceInputs,
@@ -632,6 +661,27 @@
 			},
 
 			methods: {
+				convertFunction: function (unit) {
+					console.log(unit);
+
+					if (unit == "inches") {
+						this.convert_unit.french = (this.convert_unit.inches * 76.2).toFixed(1);
+						this.convert_unit.mm = (this.convert_unit.inches * 25.4).toFixed(3);
+					}
+
+					if (unit == "french") {
+						this.convert_unit.inches = (this.convert_unit.french / 76.2).toFixed(3);
+						this.convert_unit.mm = (this.convert_unit.french / 3).toFixed(3);
+					}
+
+					if (unit == "mm") {
+						this.convert_unit.inches = (this.convert_unit.mm / 25.4).toFixed(3);
+						this.convert_unit.french = (this.convert_unit.mm * 3).toFixed(1);
+					}
+
+
+					return unit;
+				},
 				feedbackSubmit: function () {
 					if (document.getElementById("message").value == "") {
 						document.getElementById("message").value = "No comment. ";
