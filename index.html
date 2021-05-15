@@ -244,6 +244,12 @@
 				</b-form-input>
 			</b-form-group>
 
+			<template #modal-footer="{ Submit, close }">
+				<b-button @click=" convert_unit.inches = null; convert_unit.french = null; convert_unit.mm = null; "
+					variant="success">Reset</b-button>
+				<b-button @click="close()" variant="danger">Close</b-button>
+			</template>
+
 
 		</b-modal>
 
