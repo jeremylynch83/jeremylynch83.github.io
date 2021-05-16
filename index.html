@@ -802,6 +802,8 @@
 								case "surfaceCoating":
 									info_extra += "<p><b>Surface Coating: </b>" + deviceInfo[prop] + "</p>";
 									break;
+								case "tablecaption":
+									break;
 
 								case "youtube":
 									info_extra += "<p><b>Preparation: </b></p>";
@@ -811,8 +813,8 @@
 									break;
 								case "sizetable":
 									var sizes = JSON.parse(deviceInfo[prop]);
-									//sizes.splice(0, 1);
 									this.sizes_table = sizes;
+									//if (deviceInfo.tablecaption != null) 
 
 									break;
 
