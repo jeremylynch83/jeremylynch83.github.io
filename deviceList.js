@@ -1,6 +1,5 @@
 deviceList=
 
-
 [
     {
         "type": "Balloon",
@@ -2620,7 +2619,7 @@ deviceList=
         "url1": "https://www.stryker.com/us/en/neurovascular/products/trak-21.html",
         "minid": 0.021,
         "maxod": 0.035433,
-        "length": "150"
+        "length": 162
     },
     {
         "type": "Microcatheter",
