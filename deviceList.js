@@ -1368,7 +1368,8 @@ deviceList=
         "url1": "https://europe.medtronic.com/xd-en/healthcare-professionals/products/neurological/access-delivery-nv/phenom.html",
         "minid": 0.021,
         "maxod": 0.034,
-        "length": "150 / 170"
+        "length": "150 / 160",
+        "sizetable": "[{\"Code\":\"FG13150-0615-S2\",\"Proximal outer diameter\":0.034,\"Distal outer Diameter\":0.03,\"Catheter inner diameter\":0.021,\"Working length\":150,\"Tip shape\":\"Straight\"},{\"Code\":\"FG13160-0615-1S\",\"Proximal outer diameter\":0.034,\"Distal outer Diameter\":0.03,\"Catheter inner diameter\":0.021,\"Working length\":160,\"Tip shape\":\"Straight\"}]"
     },
     {
         "type": "Microcatheter",
@@ -2770,6 +2771,7 @@ deviceList=
         "minid": 0,
         "maxod": 0.016,
         "length": 200,
+        "sizetable": "[{\"Code\":90312,\"Stent diameter\":3,\"Labeled length\":\"32 mm\",\"Stent length\":\"36 mm\",\"Device length\":\"200 cm\",\"Wire diameter\":\"0.015 in\",\"Compatible microcatheter\":\"Trevo Pro 14 and Trevo Trak 21 Microcatheters\"},{\"Code\":90313,\"Stent diameter\":4,\"Labeled length\":\"28 mm\",\"Stent length\":\"32 mm\",\"Device length\":\"200 cm\",\"Wire diameter\":\"0.019 in\",\"Compatible microcatheter\":\"Trevo Trak 21 Microcatheter\"},{\"Code\":90314,\"Stent diameter\":4,\"Labeled length\":\"41 mm\",\"Stent length\":\"44 mm\",\"Device length\":\"200 cm\",\"Wire diameter\":\"0.019 in\",\"Compatible microcatheter\":\"Trevo Trak 21 Microcatheter\"},{\"Code\":90315,\"Stent diameter\":6,\"Labeled length\":\"37 mm\",\"Stent length\":\"40 mm\",\"Device length\":\"200 cm\",\"Wire diameter\":\"0.019 in\",\"Compatible microcatheter\":\"Trevo Trak 21 Microcatheter\"}]",
         "recommended": "Trak 21"
     },
     {
@@ -2972,8 +2974,10 @@ deviceList=
         "name": "Trevo NXT ProVue Retriever 4 to 6 mm ",
         "url1": "https://www.stryker.com/us/en/neurovascular/products/trevo-nxt.html",
         "minid": 0,
-        "maxod": 0.02,
+        "maxod": 0.019,
         "length": 200,
-        "recommended": "Trak 21"
+        "sizetable": "[{\"Code\":90312,\"Stent diameter\":3,\"Labeled length\":\"32 mm\",\"Stent length\":\"36 mm\",\"Device length\":\"200 cm\",\"Wire diameter\":\"0.015 in\",\"Compatible microcatheter\":\"Trevo Pro 14 and Trevo Trak 21 Microcatheters\"},{\"Code\":90313,\"Stent diameter\":4,\"Labeled length\":\"28 mm\",\"Stent length\":\"32 mm\",\"Device length\":\"200 cm\",\"Wire diameter\":\"0.019 in\",\"Compatible microcatheter\":\"Trevo Trak 21 Microcatheter\"},{\"Code\":90314,\"Stent diameter\":4,\"Labeled length\":\"41 mm\",\"Stent length\":\"44 mm\",\"Device length\":\"200 cm\",\"Wire diameter\":\"0.019 in\",\"Compatible microcatheter\":\"Trevo Trak 21 Microcatheter\"},{\"Code\":90315,\"Stent diameter\":6,\"Labeled length\":\"37 mm\",\"Stent length\":\"40 mm\",\"Device length\":\"200 cm\",\"Wire diameter\":\"0.019 in\",\"Compatible microcatheter\":\"Trevo Trak 21 Microcatheter\"}]",
+        "recommended": "Trak 21",
+        "recommendedparentid": 0.021
     }
 ]
