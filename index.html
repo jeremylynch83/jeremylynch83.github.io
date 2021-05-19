@@ -158,6 +158,14 @@
 					head-variant="light" v-show="sizes_table.length != 0">
 					<template #table-caption><b>Catalogue:<b></template>
 				</b-table>
+				<p><b>Similar devices:</b></p>
+				<div>
+					<b-table sticky-header small :items="similarModal.table" :fields="similarModal.fields"
+						style="font-size: 0.8em; font-family:Arial Narrow, sans-serif-condensed" head-variant="light"
+						:sort-by.sync="similarModal.sortBy" :sort-desc.sync="similarModal.sortDesc">
+					</b-table>
+
+				</div>
 				<b-button size="sm" variant="danger" @click="" v-b-modal.feedback_modal>
 					Disagree with this?
 				</b-button>
@@ -322,8 +330,8 @@
 			</div>
 			<div id="info_extra2">
 			</div>
-			<b-table small :items="sizes_table" style="font-size: 0.9em; " thead-class="d-none" responsive caption-top
-				head-variant="light" v-show="sizes_table.length != 0">
+			<b-table small :items="sizes_table" style="font-size: 0.9em; " responsive caption-top head-variant="light"
+				v-show="sizes_table.length != 0">
 				<template #table-caption><b>Catalogue:<b></template>
 			</b-table>
 
@@ -832,10 +840,15 @@
 						}
 					}
 
-					// https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=17284678&retmode=XML&rettype=abstract
-
 					document.getElementById("info_extra").innerHTML = info_extra;
 					document.getElementById("info_extra2").innerHTML = info_extra;
+
+					this.similarModal.first_device = deviceInfo;
+					var first_device = this.similarModal.first_device;
+					this.similarModal.n = 0;
+					this.similarModal.table = [];
+
+					this.similarUpdateTable(first_device);
 
 
 				},
@@ -877,17 +890,12 @@
 					});
 				},
 
-				similarLaunch: function (index) {
-					this.similarModal.first_device = JSON.parse(tree.getElementById(index).getAttribute(
-						"data"));
-					var first_device = this.similarModal.first_device;
-					this.similarModal.n = 0;
-					this.similarModal.table = [];
-
-					//if (first_device.type == "Long Sheath") first_device.type = "Guide Catheter";
+				similarUpdateTable: function (first_device) {
 
 					deviceList.forEach(d => {
 						var required_id = null;
+						console.log(d.type + ": " + first_device.type);
+
 
 						switch (d.type) {
 							case "Microcatheter":
@@ -896,11 +904,12 @@
 							case "Intermediate Catheter":
 							case "Balloon":
 							case "Sheath":
-								//console.log(d.type + ": " + first_device.type);
+
 								if (d.minid < (first_device.minid * 1.05) &&
 									d.minid > (first_device.minid * 0.95) &&
-									d.type == first_device.type
+									d.type.toLowerCase() == first_device.type.toLowerCase()
 								) {
+
 									this.similarModal.table.push({
 										Name: d.name + " (" + d.manufacturer + ")",
 										Type: d.type,
@@ -909,6 +918,7 @@
 										Lengths: d.length + " cm"
 									});
 									this.similarModal.n++;
+
 								}
 								break;
 							case "Stent":
@@ -919,7 +929,7 @@
 							case "Protection Device":
 								if (d.maxod < (first_device.maxod * 1.05) &&
 									d.maxod > (first_device.maxod * 0.95) &&
-									d.type == first_device.type
+									d.type.toLowerCase() == first_device.type.toLowerCase()
 								) {
 									this.similarModal.table.push({
 										Name: d.name + " (" + d.manufacturer + ")",
@@ -933,7 +943,7 @@
 								break;
 							case "Liquid Embolic":
 								if (
-									d.type == first_device.type) {
+									d.type.toLowerCase() == first_device.type.toLowerCase()) {
 
 									this.similarModal.table.push({
 										Name: d.name + " (" + d.manufacturer + ")",
@@ -944,7 +954,7 @@
 								break;
 							case "Intrasaccular Device":
 								if (
-									d.type == first_device.type) {
+									d.type.toLowerCase() == first_device.type.toLowerCase()) {
 
 									this.similarModal.table.push({
 										Name: d.name + " (" + d.manufacturer + ")",
@@ -961,16 +971,22 @@
 						}
 					});
 
-					//console.log(this.fitModal.table);
-
 					this.similarModal.table.sort(function (a, b) {
 						return b[2] - a[2]
 					});
 
+				},
+
+				similarLaunch: function (index) {
+					this.similarModal.first_device = JSON.parse(tree.getElementById(index).getAttribute(
+						"data"));
+					var first_device = this.similarModal.first_device;
+					this.similarModal.n = 0;
+					this.similarModal.table = [];
+
+					this.similarUpdateTable(first_device);
 
 					this.$root.$emit('bv::show::modal', this.similarModal.id);
-
-
 
 				},
 
