@@ -1,5 +1,6 @@
 deviceList=
 
+
 [
     {
         "type": "Balloon",
@@ -1718,8 +1719,19 @@ deviceList=
         "maxod": 0.068,
         "length": "115 / 125",
         "description": "\"The SOFIA Catheter is designed for distal navigation and supports precise delivery of a variety of neurovascular therapies.\"",
-        "comments": "The SOFIA 5F catheter is compatible with guide or balloon guide catheters with an ID of 0.070\" or larger. ",
         "recommendedparentid": 0.07
+    },
+    {
+        "type": "Intermediate Catheter",
+        "name": "Sofia Ex",
+        "manufacturer": "MicroVention",
+        "url1": "https://www.microvention.com/product/sofia-ex",
+        "minid": 0.058,
+        "maxod": 0.071,
+        "length": "96 / 106",
+        "description": "\"The SOFIA™ EX  Intracranial Support Catheter is designed to provide the ideal combination of excellent trackability and extra stability, for precise delivery of treatment devices. It allows for smooth navigation to the desired target location and consistent stability for deploying and resheathing devices with minimal tip movement.\"",
+        "comments": "\"Ex\" = EXcellent trackability and Extra Stability",
+        "recommendedparentid": 0.074
     },
     {
         "type": "Intermediate Catheter",
@@ -1730,7 +1742,6 @@ deviceList=
         "maxod": 0.0825,
         "length": 115,
         "description": "\"The SOFIA Catheter is designed for distal navigation and supports precise delivery of a variety of neurovascular therapies.\"",
-        "comments": "The SOFIA 6F catheter is compatible with guide or balloon guide catheters with an ID of 0.085\" or larger.",
         "recommendedparentid": 0.085
     },
     {
@@ -1742,7 +1753,6 @@ deviceList=
         "maxod": 0.0825,
         "length": "125 / 131",
         "description": "\"The SOFIA Plus catheter is designed to work in a support device to facilitate thrombectomy with a stentriever. Its ideal combination of distal trackability and a large 0.070\" inner diameter enable it to engage with larger clot burdens.\"",
-        "comments": "The SOFIA Plus catheter is compatible with guide or balloon guide catheters with an ID of 0.088\" or larger.",
         "recommendedparentid": 0.088
     },
     {
@@ -1756,9 +1766,57 @@ deviceList=
         "length": "?",
         "description": "\"The WEB™ Embolization System is first-in-class intrasaccular technology offering a single-device treatment alternative to endovascular coils and complex stenting procedures. The intrasaccular embolization system minimizes the need for a dual antiplatelet regimen required for intraluminal therapies.\"",
         "sizetable": "[{\"Name\":\"WEB SL 4x2\",\"Ref. No.\":\"W5-4-2\",\"Diameter\":4,\"Height\":2,\"Min. Catheter ID\":\".017\\\"\",\"Recommended Catheter\":\"VIA 17\"},{\"Name\":\"WEB SL 4x3\",\"Ref. No.\":\"W5-4-3\",\"Diameter\":4,\"Height\":3,\"Min. Catheter ID\":\".017\\\"\",\"Recommended Catheter\":\"VIA 17\"},{\"Name\":\"WEB SLS 4\",\"Ref. No.\":\"W5-4-S\",\"Diameter\":4,\"Height\":2.6,\"Min. Catheter ID\":\".017\\\"\",\"Recommended Catheter\":\"VIA 17\"},{\"Name\":\"WEB SL 4.5x2\",\"Ref. No.\":\"W5-4.5-2\",\"Diameter\":4.5,\"Height\":2,\"Min. Catheter ID\":\".017\\\"\",\"Recommended Catheter\":\"VIA 17\"},{\"Name\":\"WEB SL 4.5x3\",\"Ref. No.\":\"W5-4.5-3\",\"Diameter\":4.5,\"Height\":3,\"Min. Catheter ID\":\".017\\\"\",\"Recommended Catheter\":\"VIA 17\"},{\"Name\":\"WEB SL 5x2\",\"Ref. No.\":\"W5-5-2\",\"Diameter\":5,\"Height\":2,\"Min. Catheter ID\":\".017\\\"\",\"Recommended Catheter\":\"VIA 17\"},{\"Name\":\"WEB SL 5x3\",\"Ref. No.\":\"W5-5-3\",\"Diameter\":5,\"Height\":3,\"Min. Catheter ID\":\".017\\\"\",\"Recommended Catheter\":\"VIA 17\"},{\"Name\":\"WEB SL 5x4\",\"Ref. No.\":\"W5-5-4\",\"Diameter\":5,\"Height\":4,\"Min. Catheter ID\":\".017\\\"\",\"Recommended Catheter\":\"VIA 17\"},{\"Name\":\"WEB SLS 5\",\"Ref. No.\":\"W5-5-S\",\"Diameter\":5,\"Height\":3.6,\"Min. Catheter ID\":\".017\\\"\",\"Recommended Catheter\":\"VIA 17\"},{\"Name\":\"WEB SL 6x3\",\"Ref. No.\":\"W5-6-3\",\"Diameter\":6,\"Height\":3,\"Min. Catheter ID\":\".017\\\"\",\"Recommended Catheter\":\"VIA 17\"},{\"Name\":\"WEB SL 6x4\",\"Ref. No.\":\"W5-6-4\",\"Diameter\":6,\"Height\":4,\"Min. Catheter ID\":\".017\\\"\",\"Recommended Catheter\":\"VIA 17\"},{\"Name\":\"WEB SL 6x5\",\"Ref. No.\":\"W5-6-5\",\"Diameter\":6,\"Height\":5,\"Min. Catheter ID\":\".017\\\"\",\"Recommended Catheter\":\"VIA 17\"},{\"Name\":\"WEB SLS 6\",\"Ref. No.\":\"W5-6-S\",\"Diameter\":6,\"Height\":4.6,\"Min. Catheter ID\":\".017\\\"\",\"Recommended Catheter\":\"VIA 17\"},{\"Name\":\"WEB SL 7x3\",\"Ref. No.\":\"W5-7-3\",\"Diameter\":7,\"Height\":3,\"Min. Catheter ID\":\".017\\\"\",\"Recommended Catheter\":\"VIA 17\"},{\"Name\":\"WEB SL 7x4\",\"Ref. No.\":\"W5-7-4\",\"Diameter\":7,\"Height\":4,\"Min. Catheter ID\":\".017\\\"\",\"Recommended Catheter\":\"VIA 17\"},{\"Name\":\"WEB SL 7x5\",\"Ref. No.\":\"W5-7-5\",\"Diameter\":7,\"Height\":5,\"Min. Catheter ID\":\".017\\\"\",\"Recommended Catheter\":\"VIA 17\"},{\"Name\":\"WEB SL 7x6\",\"Ref. No.\":\"W5-7-6\",\"Diameter\":7,\"Height\":6,\"Min. Catheter ID\":\".017\\\"\",\"Recommended Catheter\":\"VIA 17\"},{\"Name\":\"WEB SLS 7\",\"Ref. No.\":\"W5-7-S\",\"Diameter\":7,\"Height\":5.6,\"Min. Catheter ID\":\".017\\\"\",\"Recommended Catheter\":\"VIA 17\"}]",
-        "detachment": "Electrothermal",
+        "detachment": "Electromechanical",
         "comments": "WEB = Woven EndoBridge. SL = Single Layer (barrel shaped). SLS = Single Layer Sphere. Designed to be placed completely within the aneurysm sac and span the ostium, where it disrupts local flow.",
         "recommended": "Via 17",
+        "material": "Braided nitinol wire that holds a globular shape.",
+        "resheathable": "Completely resheathable."
+    },
+    {
+        "type": "Intrasaccular Device",
+        "name": "WEB SL/SLS 21 system",
+        "manufacturer": "Microvention",
+        "url1": "https://www.microvention.com/product/web-family",
+        "url2": "https://www.microvention.com/product/web-family/instructions-for-use/web-copy",
+        "minid": 0,
+        "maxod": 0.02,
+        "length": "?",
+        "description": "\"The WEB™ Embolization System is first-in-class intrasaccular technology offering a single-device treatment alternative to endovascular coils and complex stenting procedures. The intrasaccular embolization system minimizes the need for a dual antiplatelet regimen required for intraluminal therapies.\"",
+        "detachment": "Electromechanical",
+        "comments": "WEB = Woven EndoBridge. SL = Single Layer (barrel shaped). SLS = Single Layer Sphere. Designed to be placed completely within the aneurysm sac and span the ostium, where it disrupts local flow.",
+        "recommended": "Via 21",
+        "material": "Braided nitinol wire that holds a globular shape.",
+        "resheathable": "Completely resheathable."
+    },
+    {
+        "type": "Intrasaccular Device",
+        "name": "WEB SL/SLS 27 system",
+        "manufacturer": "Microvention",
+        "url1": "https://www.microvention.com/product/web-family",
+        "url2": "https://www.microvention.com/product/web-family/instructions-for-use/web-copy",
+        "minid": 0,
+        "maxod": 0.026,
+        "length": "?",
+        "description": "\"The WEB™ Embolization System is first-in-class intrasaccular technology offering a single-device treatment alternative to endovascular coils and complex stenting procedures. The intrasaccular embolization system minimizes the need for a dual antiplatelet regimen required for intraluminal therapies.\"",
+        "detachment": "Electromechanical",
+        "comments": "WEB = Woven EndoBridge. SL = Single Layer (barrel shaped). SLS = Single Layer Sphere. Designed to be placed completely within the aneurysm sac and span the ostium, where it disrupts local flow.",
+        "recommended": "Via 27",
+        "material": "Braided nitinol wire that holds a globular shape.",
+        "resheathable": "Completely resheathable."
+    },
+    {
+        "type": "Intrasaccular Device",
+        "name": "WEB SL/SLS 33 system",
+        "manufacturer": "Microvention",
+        "url1": "https://www.microvention.com/product/web-family",
+        "url2": "https://www.microvention.com/product/web-family/instructions-for-use/web-copy",
+        "minid": 0,
+        "maxod": 0.02,
+        "length": "?",
+        "description": "\"The WEB™ Embolization System is first-in-class intrasaccular technology offering a single-device treatment alternative to endovascular coils and complex stenting procedures. The intrasaccular embolization system minimizes the need for a dual antiplatelet regimen required for intraluminal therapies.\"",
+        "detachment": "Electromechanical",
+        "comments": "WEB = Woven EndoBridge. SL = Single Layer (barrel shaped). SLS = Single Layer Sphere. Designed to be placed completely within the aneurysm sac and span the ostium, where it disrupts local flow.",
+        "recommended": "Via 33",
         "material": "Braided nitinol wire that holds a globular shape.",
         "resheathable": "Completely resheathable."
     },
@@ -1830,7 +1888,7 @@ deviceList=
         "name": "Via 17",
         "manufacturer": "Microvention",
         "url1": "https://www.microvention.com/product/VIA",
-        "minid": 0.017,
+        "minid": 0.0175,
         "maxod": 0.032,
         "length": 154
     },
@@ -1864,7 +1922,7 @@ deviceList=
     {
         "type": "Microcatheter",
         "name": "Terumo Progreat 2 Fr ",
-        "manufacturer": "Microvention",
+        "manufacturer": "Terumo",
         "url1": "https://www.terumois.com/content/dam/terumo-www/global-shared/terumo-tis/en-us/product-assets/progreat/Progreat-Family-Brochure.pdf",
         "minid": 0.019,
         "maxod": 0.035433,
@@ -1873,7 +1931,7 @@ deviceList=
     {
         "type": "Microcatheter",
         "name": "Terumo Progreat 2.4 Fr ",
-        "manufacturer": "Microvention",
+        "manufacturer": "Terumo",
         "url1": "https://www.terumois.com/content/dam/terumo-www/global-shared/terumo-tis/en-us/product-assets/progreat/Progreat-Family-Brochure.pdf",
         "minid": 0.022,
         "maxod": 0.038058,
@@ -1882,7 +1940,7 @@ deviceList=
     {
         "type": "Microcatheter",
         "name": "Terumo Progreat 2.7 Fr ",
-        "manufacturer": "Microvention",
+        "manufacturer": "Terumo",
         "url1": "https://www.terumois.com/content/dam/terumo-www/global-shared/terumo-tis/en-us/product-assets/progreat/Progreat-Family-Brochure.pdf",
         "minid": 0.025,
         "maxod": 0.038058,
@@ -1891,7 +1949,7 @@ deviceList=
     {
         "type": "Microcatheter",
         "name": "Terumo Progreat 2.8 Fr ",
-        "manufacturer": "Microvention",
+        "manufacturer": "Terumo",
         "url1": "https://www.terumois.com/content/dam/terumo-www/global-shared/terumo-tis/en-us/product-assets/progreat/Progreat-Family-Brochure.pdf",
         "minid": 0.027,
         "maxod": 0.03937,
@@ -1909,7 +1967,7 @@ deviceList=
     {
         "type": "Select Catheter",
         "name": "Terumo Glidecath 4 Fr",
-        "manufacturer": "Microvention",
+        "manufacturer": "Terumo",
         "url1": "https://www.terumois.com/products/catheters/glidecath.html",
         "minid": 0.0405,
         "maxod": 0.052493,
@@ -1918,7 +1976,7 @@ deviceList=
     {
         "type": "Select Catheter",
         "name": "Terumo Glidecath 5 Fr",
-        "manufacturer": "Microvention",
+        "manufacturer": "Terumo",
         "url1": "https://www.terumois.com/products/catheters/glidecath.html",
         "minid": 0.0433,
         "maxod": 0.065617,
@@ -1927,7 +1985,7 @@ deviceList=
     {
         "type": "Sheath",
         "name": "Terumo Pinnacle 5F Introducer Sheath",
-        "manufacturer": "Microvention",
+        "manufacturer": "Terumo",
         "minid": 0.066617,
         "maxod": 0.091864,
         "length": 10
@@ -1935,7 +1993,7 @@ deviceList=
     {
         "type": "Sheath",
         "name": "Terumo Pinnacle 6F Introducer Sheath",
-        "manufacturer": "Microvention",
+        "manufacturer": "Terumo",
         "minid": 0.07974,
         "maxod": 0.104987,
         "length": 10
@@ -1943,7 +2001,7 @@ deviceList=
     {
         "type": "Sheath",
         "name": "Terumo Pinnacle 8F Introducer Sheath",
-        "manufacturer": "Microvention",
+        "manufacturer": "Terumo",
         "minid": 0.114987,
         "maxod": 0.131234,
         "length": 10
@@ -2018,7 +2076,7 @@ deviceList=
     {
         "type": "Wire",
         "name": "Terumo Headliner 012 ",
-        "manufacturer": "Microvention",
+        "manufacturer": "Terumo",
         "url1": "https://www.microvention.com/product/headliner",
         "minid": 0,
         "maxod": 0.012,
@@ -2027,7 +2085,7 @@ deviceList=
     {
         "type": "Wire",
         "name": "Terumo Headliner 014 ",
-        "manufacturer": "Microvention",
+        "manufacturer": "Terumo",
         "url1": "https://www.microvention.com/product/headliner",
         "minid": 0,
         "maxod": 0.014,
@@ -2036,7 +2094,7 @@ deviceList=
     {
         "type": "Wire",
         "name": "Terumo Headliner 016 ",
-        "manufacturer": "Microvention",
+        "manufacturer": "Terumo",
         "url1": "https://www.microvention.com/product/headliner",
         "minid": 0,
         "maxod": 0.016,
@@ -2045,7 +2103,7 @@ deviceList=
     {
         "type": "Wire",
         "name": "Terumo Glidewire 035 ",
-        "manufacturer": "Microvention",
+        "manufacturer": "Terumo",
         "url1": "https://www.terumois.com/products/guidewires/glidewire.html",
         "minid": 0,
         "maxod": 0.035,
@@ -2054,7 +2112,7 @@ deviceList=
     {
         "type": "Wire",
         "name": "Terumo Glidewire Advantage 035 ",
-        "manufacturer": "Microvention",
+        "manufacturer": "Terumo",
         "url1": "https://www.terumois.com/products/guidewires/glidewire-advantage.html",
         "minid": 0,
         "maxod": 0.035,
@@ -2589,7 +2647,6 @@ deviceList=
         "maxod": 0.085,
         "length": "115 / 125 / 132",
         "description": "\"Redefine aspiration. Introducing Stryker’s large-bore aspiration platform to complement our comprehensive portfolio of retrieval, access, and flow control products for treating acute ischemic stroke.\"",
-        "comments": "Recommended 0.088 inches inner diameter",
         "recommendedparentid": 0.088
     },
     {
@@ -2601,7 +2658,6 @@ deviceList=
         "maxod": 0.087,
         "length": "115 / 125 / 132",
         "description": "\"How you perform thrombectomy is as unique as each of your patients. That's why we're introducing the AXS Vecta Intermediate Catheter. Upgraded with Pro Technology, this catheter's extra-large lumen is designed for powerful clot removal through aspiration alone or with a stent retriever. Together, with our customers, we are driven to make healthcare better. \"",
-        "comments": "Recommended 0.091 inches inner diameter",
         "recommendedparentid": 0.091
     },
     {
@@ -2757,7 +2813,7 @@ deviceList=
         "minid": 0,
         "maxod": 0.0265,
         "length": "?",
-        "sizetable": "[{\"Info\":\"Unconstrained diameter\",\"2.5 mm diameter\":2.7,\"3.25 mm diameter\":3.7,\"4.0 mm diameter\":4.2,\"4.5 mm diameter\":4.7,\"5.0 mm diameter\":5.2},{\"Info\":\"Recommended parent vessel diameter\",\"2.5 mm diameter\":\"2.0-2.5mm\",\"3.25 mm diameter\":\"> 2.5-3.25mm\",\"4.0 mm diameter\":\"> 3.25-4.0mm\",\"4.5 mm diameter\":\"> 4.0-4.5mm\",\"5.0 mm diameter\":\"> 4.5-5.0mm\"},{\"Info\":\"# of wires\",\"2.5 mm diameter\":48,\"3.25 mm diameter\":64,\"4.0 mm diameter\":null,\"4.5 mm diameter\":null,\"5.0 mm diameter\":null},{\"Info\":\"12 mm length\",\"2.5 mm diameter\":\"FD25012\",\"3.25 mm diameter\":\"FD32512\",\"4.0 mm diameter\":\"FD40012\",\"4.5 mm diameter\":\"FD45012\",\"5.0 mm diameter\":null},{\"Info\":\"15 mm length\",\"2.5 mm diameter\":\"FD25015\",\"3.25 mm diameter\":\"FD32515\",\"4.0 mm diameter\":\"FD40015\",\"4.5 mm diameter\":\"FD45015\",\"5.0 mm diameter\":\"FD50012\"},{\"Info\":\"17 mm length\",\"2.5 mm diameter\":null,\"3.25 mm diameter\":\"FD32517\",\"4.0 mm diameter\":\"FD40017\",\"4.5 mm diameter\":\"FD45017\",\"5.0 mm diameter\":null},{\"Info\":\"20 mm length\",\"2.5 mm diameter\":\"FD25020\",\"3.25 mm diameter\":\"FD32520\",\"4.0 mm diameter\":\"FD40020\",\"4.5 mm diameter\":\"FD45020\",\"5.0 mm diameter\":\"FD50020\"},{\"Info\":\"25 mm length\",\"2.5 mm diameter\":null,\"3.25 mm diameter\":\"FD32525\",\"4.0 mm diameter\":\"FD40025\",\"4.5 mm diameter\":\"FD45025\",\"5.0 mm diameter\":\"FD50025\"},{\"Info\":\"30 mm length\",\"2.5 mm diameter\":null,\"3.25 mm diameter\":null,\"4.0 mm diameter\":\"FD40030\",\"4.5 mm diameter\":\"FD45030\",\"5.0 mm diameter\":\"FD50030\"},{\"Info\":\"40 mm length\",\"2.5 mm diameter\":null,\"3.25 mm diameter\":null,\"4.0 mm diameter\":null,\"4.5 mm diameter\":\"FD45040\",\"5.0 mm diameter\":\"FD50040\"}]",
+        "sizetable": "[{\"Labelled diameter\":\"Unconstrained diameter\",\"2.5 mm diameter\":2.7,\"3.25 mm diameter\":3.7,\"4.0 mm diameter\":4.2,\"4.5 mm diameter\":4.7,\"5.0 mm diameter\":5.2},{\"Info\":\"Recommended parent vessel diameter\",\"2.5 mm diameter\":\"2.0-2.5mm\",\"3.25 mm diameter\":\"> 2.5-3.25mm\",\"4.0 mm diameter\":\"> 3.25-4.0mm\",\"4.5 mm diameter\":\"> 4.0-4.5mm\",\"5.0 mm diameter\":\"> 4.5-5.0mm\"},{\"Info\":\"# of wires\",\"2.5 mm diameter\":48,\"3.25 mm diameter\":64,\"4.0 mm diameter\":null,\"4.5 mm diameter\":null,\"5.0 mm diameter\":null},{\"Info\":\"12 mm length\",\"2.5 mm diameter\":\"FD25012\",\"3.25 mm diameter\":\"FD32512\",\"4.0 mm diameter\":\"FD40012\",\"4.5 mm diameter\":\"FD45012\",\"5.0 mm diameter\":null},{\"Info\":\"15 mm length\",\"2.5 mm diameter\":\"FD25015\",\"3.25 mm diameter\":\"FD32515\",\"4.0 mm diameter\":\"FD40015\",\"4.5 mm diameter\":\"FD45015\",\"5.0 mm diameter\":\"FD50012\"},{\"Info\":\"17 mm length\",\"2.5 mm diameter\":null,\"3.25 mm diameter\":\"FD32517\",\"4.0 mm diameter\":\"FD40017\",\"4.5 mm diameter\":\"FD45017\",\"5.0 mm diameter\":null},{\"Info\":\"20 mm length\",\"2.5 mm diameter\":\"FD25020\",\"3.25 mm diameter\":\"FD32520\",\"4.0 mm diameter\":\"FD40020\",\"4.5 mm diameter\":\"FD45020\",\"5.0 mm diameter\":\"FD50020\"},{\"Info\":\"25 mm length\",\"2.5 mm diameter\":null,\"3.25 mm diameter\":\"FD32525\",\"4.0 mm diameter\":\"FD40025\",\"4.5 mm diameter\":\"FD45025\",\"5.0 mm diameter\":\"FD50025\"},{\"Info\":\"30 mm length\",\"2.5 mm diameter\":null,\"3.25 mm diameter\":null,\"4.0 mm diameter\":\"FD40030\",\"4.5 mm diameter\":\"FD45030\",\"5.0 mm diameter\":\"FD50030\"},{\"Info\":\"40 mm length\",\"2.5 mm diameter\":null,\"3.25 mm diameter\":null,\"4.0 mm diameter\":null,\"4.5 mm diameter\":\"FD45040\",\"5.0 mm diameter\":\"FD50040\"}]",
         "recommended": "XT-27",
         "research": "[Orru E, Rice H, De Villiers L, et al. First clinical experience with the new Surpass Evolve flow diverter: technical and clinical considerations. J Neurointerv Surg 2020. doi:10.1136/neurintsurg-2019-015734. [Epub ahead of print: 12 Feb 2020].]",
         "material": "Cobalt-chromium alloy; Platinum-tungsten markers",
