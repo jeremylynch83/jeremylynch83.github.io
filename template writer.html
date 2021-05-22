@@ -62,7 +62,7 @@
 
 			<template>
 				<div>
-					<b-form-textarea id="textarea-plaintext" plaintext :value="reportText"></b-form-textarea>
+					<b-form-textarea id="report_input" plaintext :value="reportText" rows="15"></b-form-textarea>
 				</div>
 			</template>
 		</b-container>
@@ -75,18 +75,6 @@
 		<!---------------- MODALS -------------->
 
 		<b-modal id="help_modal" title="NeuroTool: Help" ok-only>
-			<p>A tool to help select the right devices for neurointerventional procedures.</p>
-			<h4>How to use</h4>
-			<p>Start to type the device you are interested in the search box and then select from the list that pops
-				up. You can select catheters, wires, stents, balloons, and other devices. </p>
-			<img src="img/help1.png" class="center" width="75%">
-			<p>Insert a device inside this one by selecting "Add" Then "New device inside". You can also view device
-				information by selecting "Info". </p>
-			<img src="img/help2.png" class="center" width="75%">
-			<p>Further devices can be inserted either inside or beside this device using "New device inside" or "New
-				device beside". Under Results you will see whether the devices are compatible in terms of diameter
-				and length. If there are incompatibilities then a message will appear describing the problem. </p>
-			<img src="img/help3.png" class="center" width="75%">
 		</b-modal>
 
 		<b-container class="footer">
@@ -100,6 +88,33 @@
 	<script>
 		/* GENERIC FUNCTIONS */
 
+		function loadXML() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function () {
+				if (this.readyState == 4 && this.status == 200) {
+					myFunction(this);
+				}
+			};
+			xhttp.open("GET", "http://neurotool.org/templates.xml", true);
+			xhttp.send();
+
+			var temp = [];
+
+			function myFunction(xml) {
+				var xmlDoc = xml.responseXML;
+				var templates = xmlDoc.getElementsByTagName("TEMPLATE");
+				for (var i = 0; i < templates.length; i++) {
+					temp.push({
+						name: xmlDoc.getElementsByTagName("TEMPLATE")[i].getElementsByTagName(
+							"NAME")[0].innerHTML,
+						text: xmlDoc.getElementsByTagName("TEMPLATE")[i].getElementsByTagName(
+							"TEXT")[0].innerHTML
+					});
+				}
+			}
+			return temp;
+
+		}
 
 		/* GLOBAL VARIABLES */
 
@@ -109,32 +124,16 @@
 			},
 			el: '#app',
 			data: {
-				templates: templateList,
-				reportText: "This is some text.\nIt is read only and doesn't look like an input."
+				templates: loadXML(),
+				reportText: ""
 			},
 
 			methods: {
 				selectTemplate: function (event) {
-					console.log(event.name);
+					this.reportText = event.text;
 				},
-				loadXMLDoc: function () {},
 
 				created: function () {
-					var xhttp = new XMLHttpRequest();
-					xhttp.onreadystatechange = function () {
-						if (this.readyState == 4 && this.status == 200) {
-							myFunction(this);
-						}
-					};
-					xhttp.open("GET", "http://neurotool.org/templates.xml", true);
-					xhttp.send();
-
-					function myFunction(xml) {
-						var xmlDoc = xml.responseXML;
-						console.log(xmlDoc.getElementsByTagName("TEMPLATE")[0].getElementsByTagName("NAME")[0].innerHTML);
-					}
-
-
 
 				}
 			}

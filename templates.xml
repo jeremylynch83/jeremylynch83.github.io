@@ -10,10 +10,27 @@
     </TEMPLATE>
     <TEMPLATE>
         <NAME>Aneurysm unruptured</NAME>
-        <TEXT>Bob Dylan
-            Bob Dylan
-            Bob Dylan
-            Bob Dylan
+        <TEXT>
+Endovascular Repair of an Unruptured [location] Aneurysm by [procedure type]
+ 
+Staff:
+Assists:
+Anesthesia:
+ 
+Clinical History: [age] year-old [male/female] ([MRN]) admitted on [admission date] for elective repair of a [location] aneurysm. The patient [has/does not have] a history of previous SAH. [The last treatment was performed in [year] and the current procedure was [planned/unplanned]]. Informed consent for a diagnostic cerebral angiogram and aneurysm repair was obtained in the clinic. The patient was preloaded on [agents] for [days] days prior to the procedure. WFNS [...]. 
+ 
+Technique:
+The patient underwent general anesthesia and endotracheal intubation. Intravenous heparin was administered throughout the procedure after groin puncture. [Right/Left common femoral, Right/Left radial] artery access was obtained with a [size]-French sheath inserted by the Seldinger technique [under ultrasound guidance]. The [target artery] was selectively catheterized with a diagnostic Berenstein tip catheter through a [guiding catheter] and AP/lateral/3D-rotational angiograms acquired. This demonstrated an aneurysm of the [location] with a maximal diameter of [diameter in mm].
+ 
+[Procedural description]
+
+At the end of the procedure all catheters and the balloon were removed. [A 6 Fr | An 8 Fr] Angio-Seal Vascular Closure Device was used to achieve groin haemostasis. The patient woke up with no neurological deficits.
+ 
+[There were no periprocedural complications. / The procedure was complicated by an intraprocedural aneurysmal rupture causing rebleeding which was managed with temporary balloon inflation for proximal control and coil closure of the rupture point. / The procedure was complicated by an intraprocedural thromboembolic event with visualized occlusion of [involved branch]. After awakening from anesthesia, the patient had attributable [weakness/numbness] in the corresponding distribution to the involved artery.]
+ 
+Interpretation:
+[Successful/Unsuccessful] endovascular [procedure type] for treatment of an unruptured [location] aneurysm. Modified Raymond Roy Class [1-3] result achieved. A follow up MRI/MRA in 6 months should be performed. 
+
         </TEXT>
     </TEMPLATE>
 
