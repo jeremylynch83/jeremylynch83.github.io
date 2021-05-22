@@ -276,6 +276,7 @@ deviceList=
         "description": "\"The Eclipse 2L Dual Lumen Balloon Catheter consists of a broad range of super compliant double lumen balloon catheters with a globally recognized design that delivers multiple access solutions and speed in treatment.\"",
         "sizetable": "[{\"REFERENCE\":\"ECL2L6x7SN\",\"MAX INFLATION\":\"6\",\"L\":\"7\",\"INFLATION RANGE\":\"~2mm to 6mm\",\"DISTAL TIP O.D. X LENGTH\":\"2.0F (.027”) x 3mm\",\"I.D. (WORKING LUMEN)\":\"0.41mm/.016″\",\"DOUBLE LUMEN OUTER THICKNESS\":\".9mm/.035″\",\"DOUBLE LUMEN OUTER WIDTH\":\"1.10mm/.043″\"},{\"REFERENCE\":\"ECL2L6x9\",\"MAX INFLATION\":\"6\",\"L\":\"9\",\"INFLATION RANGE\":\"~2mm to 6mm\",\"DISTAL TIP O.D. X LENGTH\":\"2.0F (.027”) x 7mm\",\"I.D. (WORKING LUMEN)\":\"0.41mm/.016″\",\"DOUBLE LUMEN OUTER THICKNESS\":\".9mm/.035″\",\"DOUBLE LUMEN OUTER WIDTH\":\"1.10mm/.043″\"},{\"REFERENCE\":\"ECL2L6x12\",\"MAX INFLATION\":\"6\",\"L\":\"12\",\"INFLATION RANGE\":\"~2mm to 6mm\",\"DISTAL TIP O.D. X LENGTH\":\"2.0F (.027”) x 7mm\",\"I.D. (WORKING LUMEN)\":\"0.41mm/.016″\",\"DOUBLE LUMEN OUTER THICKNESS\":\".9mm/.035″\",\"DOUBLE LUMEN OUTER WIDTH\":\"1.10mm/.043″\"},{\"REFERENCE\":\"ECL2L6x15\",\"MAX INFLATION\":\"6\",\"L\":\"15\",\"INFLATION RANGE\":\"~2mm to 6mm\",\"DISTAL TIP O.D. X LENGTH\":\"2.0F (.027”) x 7mm\",\"I.D. (WORKING LUMEN)\":\"0.41mm/.016″\",\"DOUBLE LUMEN OUTER THICKNESS\":\".9mm/.035″\",\"DOUBLE LUMEN OUTER WIDTH\":\"1.10mm/.043″\"},{\"REFERENCE\":\"ECL2L6x20\",\"MAX INFLATION\":\"6\",\"L\":\"20\",\"INFLATION RANGE\":\"~2mm to 6mm\",\"DISTAL TIP O.D. X LENGTH\":\"2.0F (.027”) x 7mm\",\"I.D. (WORKING LUMEN)\":\"0.41mm/.016″\",\"DOUBLE LUMEN OUTER THICKNESS\":\".9mm/.035″\",\"DOUBLE LUMEN OUTER WIDTH\":\"1.10mm/.043″\"}]",
         "comments": "It is unclear what the effective maximal diameter of the catheter is as it seems smaller than the quoted value of 0.043\" probably as the inner lumen is squashed as it goes through the catheter. We have guessed 0.035\".",
+        "design": "Dual Lumen ",
         "features": "\"Unique parallel lumen design delivers 5 times faster deflation* than other dual lumen balloons. Broad treatment options allow for delivery of DMSO** liquid embolics, coils and stents. Flat catheter design and multipurpose tip optimize navigation. Unique Short Nose configuration with 3cm coiling marker are ideal for delivering coils and liquid embolics. Super compliant balloons enhance vessel occlusion and conformity in complex anatomy (e.g. bifurcations, terminus, etc).\"",
         "youtube": "https://www.youtube.com/embed/x8niYfRweec"
     },
@@ -289,8 +290,7 @@ deviceList=
         "minid": 0.088,
         "maxod": 0.106,
         "length": "80 / 90 / 100 / 105",
-        "description": "\"The Ballast™ 088 Long Sheath is a single lumen, braid-reinforced, variable stiffness catheter with a radiopaque zone on the distal end and a luer hub on the proximal end. The Ballast 088 Long Sheath is compatible with introducer sheaths appropriately sized for the outer diameter of the Ballast088 Long Sheath. The Ballast 088 Long Sheath includes the Ballast 088 Long Sheath, Dilator, Introducer Sheath, 9F Rotating Hemostasis Valve (RHV) and 8F Hemostasis Valve Adapter (HVA). \"",
-        "design": "Dual Lumen "
+        "description": "\"The Ballast™ 088 Long Sheath is a single lumen, braid-reinforced, variable stiffness catheter with a radiopaque zone on the distal end and a luer hub on the proximal end. The Ballast 088 Long Sheath is compatible with introducer sheaths appropriately sized for the outer diameter of the Ballast088 Long Sheath. The Ballast 088 Long Sheath includes the Ballast 088 Long Sheath, Dilator, Introducer Sheath, 9F Rotating Hemostasis Valve (RHV) and 8F Hemostasis Valve Adapter (HVA). \""
     },
     {
         "type": "Intermediate Catheter",
@@ -864,6 +864,7 @@ deviceList=
         "name": "Cerebase DA ",
         "manufacturer": "Cerenovus",
         "url1": "https://www.jnjmedicaldevices.com/en-US/product/cerebase-da-guide-sheath",
+        "url2": "https://www.accessdata.fda.gov/cdrh_docs/pdf19/K192804.pdf",
         "minid": 0.09,
         "maxod": 0.105,
         "length": "70 / 80 / 90 / 95",
