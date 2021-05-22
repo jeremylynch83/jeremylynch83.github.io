@@ -1,225 +1,623 @@
-<?xml version="1.0" encoding="ISO8859-1" ?>
+<?xml version="1.0" encoding="ISO8859-1"?>
 <ALL>
-    <TEMPLATE>
-        <NAME>Aneurysm ruptured</NAME>
-                <TYPE>Angiography</TYPE>
-        <TEXT>
-        Endovascular Repair of a Ruptured [location] Aneurysm by [procedure type]
- 
-Staff:
-Assists:
-Anesthesia:
- 
-Clinical History: [age] year-old [male/female] ([MRN]) admitted on [admission date] for subarachnoid hemorrhage (SAH) secondary to a ruptured [location] as seen on CT angiogram; Modified Fisher grade [0-4], WFNS grade [1-5]. The patient [has/does not have] a history of previous SAH [, with previous treatment [year] and currently undergoing a [planned/emergency] retreatment]. An external ventricular drain was [not required/required and placed] pre-operatively. Informed consent for a diagnostic cerebral angiogram and aneurysm repair was obtained.
- 
-Technique:
-The patient underwent general anesthesia and endotracheal intubation. [Right/Left common femoral, Right/Left radial] artery access was obtained with a [size]-French sheath inserted by the Seldinger technique [under ultrasound guidance]. The [target artery] was selectively catheterized with a diagnostic Berenstein tip catheter through a [guiding catheter] and AP/lateral/3D-rotational angiograms acquired. This demonstrated an aneurysm of the [location] with a maximal diameter of [diameter in mm].
- 
-[Procedural description]
- 
-[There were no periprocedural complications. / The procedure was complicated by an intraprocedural aneurysmal rupture causing rebleeding which was managed with temporary balloon inflation for proximal control and coil closure of the rupture point. / The procedure was complicated by an intraprocedural thromboembolic event with visualized occlusion of [involved branch]. After awakening from anesthesia, the patient had attributable [weakness/numbness] in the corresponding distribution to the involved artery.] 
-
-At the end of the procedure all catheters and the balloon were removed. [A 6 Fr | An 8 Fr] Angio-Seal Vascular Closure Device was used to achieve groin haemostasis. The patient woke up with no neurological deficits.
- 
-Interpretation:
-[Successful/Unsuccessful] endovascular [procedure type] for treatment of a ruptured [location] aneurysm. Modified Raymond Roy Class [1-3] result achieved. The patient will require an MRI/MRA during admission.
-
-        </TEXT>
-    </TEMPLATE>
-    <TEMPLATE>
-        <NAME>Aneurysm unruptured</NAME>
-                <TYPE>Angiography</TYPE>
-
-        <TEXT>
-Endovascular Repair of an Unruptured [location] Aneurysm by [procedure type]
- 
-Staff:
-Assists:
-Anesthesia:
- 
-Clinical History: [age] year-old [male/female] ([MRN]) admitted on [admission date] for elective repair of a [location] aneurysm. The patient [has/does not have] a history of previous SAH. [The last treatment was performed in [year] and the current procedure was [planned/unplanned]]. Informed consent for a diagnostic cerebral angiogram and aneurysm repair was obtained in the clinic. The patient was preloaded on [agents] for [days] days prior to the procedure. WFNS [...]. 
- 
-Technique:
-The patient underwent general anesthesia and endotracheal intubation. Intravenous heparin was administered throughout the procedure after groin puncture. [Right/Left common femoral, Right/Left radial] artery access was obtained with a [size]-French sheath inserted by the Seldinger technique [under ultrasound guidance]. The [target artery] was selectively catheterized with a diagnostic Berenstein tip catheter through a [guiding catheter] and AP/lateral/3D-rotational angiograms acquired. This demonstrated an aneurysm of the [location] with a maximal diameter of [diameter in mm].
- 
-[Procedural description]
-
-At the end of the procedure all catheters and the balloon were removed. [A 6 Fr | An 8 Fr] Angio-Seal Vascular Closure Device was used to achieve groin haemostasis. The patient woke up with no neurological deficits.
- 
-[There were no periprocedural complications. / The procedure was complicated by an intraprocedural aneurysmal rupture causing rebleeding which was managed with temporary balloon inflation for proximal control and coil closure of the rupture point. / The procedure was complicated by an intraprocedural thromboembolic event with visualized occlusion of [involved branch]. After awakening from anesthesia, the patient had attributable [weakness/numbness] in the corresponding distribution to the involved artery.]
- 
-Interpretation:
-[Successful/Unsuccessful] endovascular [procedure type] for treatment of an unruptured [location] aneurysm. Modified Raymond Roy Class [1-3] result achieved. A follow up MRI/MRA in 6 months should be performed. 
-
-        </TEXT>
-    </TEMPLATE>
-
-</ALL>
-
-
-    <TEMPLATE>
-        <NAME>Diagnostic Angiogram</NAME>
-        <TYPE>Angiography</TYPE>
-        <TEXT>
-Staff: Dr 
-
-Assists: Dr J Lynch (performed by)
-
-Anesthesia:
-
-CLINICAL HISTORY:
-
- 
-
-TECHNIQUE:
-
-Informed consent was obtained from the patient (including risk of stroke and groin haemorrhage).10 ml of 1% lidocaine was infiltrated into the puncture site superficial tissues. A right common femoral artery puncture was performed under ultrasound guidance. A 5 Fr sheath was inserted. A 5 Fr Berenstein catheter was used to perform digital subtraction angiography. Injections were performed of the right vertebral artery, right internal carotid artery, right external carotid artery, left internal carotid artery, left external carotid artery, left vertebral artery. [3D flat panel tomographic angiography was performed via the …]. A 6 Fr Angioseal was used to achieve groin haemostasis at the end of the procedure. There were no periprocedural complications. The study was reviewed on table by the attending staff. 
-
- 
-
-FINDINGS:
-
-Comparison is made with the …
-
- 
-
-[Normal cerebral vasculature is demonstrated. No aneurysms or other vascular abnormalities are identified. ]
-
-[A double read of the study will be requested.]
-
-[MDT discussion is recommended.]
-
- 
-
-INTERPRETATION:
-        </TEXT>
-    </TEMPLATE>
-    
-    <TEMPLATE>
-        <NAME></NAME>
-        <TYPE>Angiography</TYPE>
-        <TEXT>
-        </TEXT>
-    </TEMPLATE>
-        
-    <TEMPLATE>
-        <NAME></NAME>
-        <TYPE>Angiography</TYPE>
-        <TEXT>
-        </TEXT>
-    </TEMPLATE>
-            
-    <TEMPLATE>
-        <NAME></NAME>
-        <TYPE>Angiography</TYPE>
-        <TEXT>
-        </TEXT>
-    </TEMPLATE>
-        
-    <TEMPLATE>
-        <NAME></NAME>
-        <TYPE>Angiography</TYPE>
-        <TEXT>
-        </TEXT>
-    </TEMPLATE>
-        
-    <TEMPLATE>
-        <NAME></NAME>
-        <TYPE>Angiography</TYPE>
-        <TEXT>
-        </TEXT>
-    </TEMPLATE>
-        
-    <TEMPLATE>
-        <NAME></NAME>
-        <TYPE>Angiography</TYPE>
-        <TEXT>
-        </TEXT>
-    </TEMPLATE>
-        
-    <TEMPLATE>
-        <NAME></NAME>
-        <TYPE>Angiography</TYPE>
-        <TEXT>
-        </TEXT>
-    </TEMPLATE>
-        
-    <TEMPLATE>
-        <NAME></NAME>
-        <TYPE>Angiography</TYPE>
-        <TEXT>
-        </TEXT>
-    </TEMPLATE>
-        
-    <TEMPLATE>
-        <NAME></NAME>
-        <TYPE>Angiography</TYPE>
-        <TEXT>
-        </TEXT>
-    </TEMPLATE>
-        
-    <TEMPLATE>
-        <NAME></NAME>
-        <TYPE>Angiography</TYPE>
-        <TEXT>
-        </TEXT>
-    </TEMPLATE>
-        
-    <TEMPLATE>
-        <NAME></NAME>
-        <TYPE>Angiography</TYPE>
-        <TEXT>
-        </TEXT>
-    </TEMPLATE>
-        
-    <TEMPLATE>
-        <NAME></NAME>
-        <TYPE>Angiography</TYPE>
-        <TEXT>
-        </TEXT>
-    </TEMPLATE>
-        
-    <TEMPLATE>
-        <NAME></NAME>
-        <TYPE>Angiography</TYPE>
-        <TEXT>
-        </TEXT>
-    </TEMPLATE>
-        
-    <TEMPLATE>
-        <NAME></NAME>
-        <TYPE>Angiography</TYPE>
-        <TEXT>
-        </TEXT>
-    </TEMPLATE>
-        
-    <TEMPLATE>
-        <NAME></NAME>
-        <TYPE>Angiography</TYPE>
-        <TEXT>
-        </TEXT>
-    </TEMPLATE>
-        
-    <TEMPLATE>
-        <NAME></NAME>
-        <TYPE>Angiography</TYPE>
-        <TEXT>
-        </TEXT>
-    </TEMPLATE>
-        
-    <TEMPLATE>
-        <NAME></NAME>
-        <TYPE>Angiography</TYPE>
-        <TEXT>
-        </TEXT>
-    </TEMPLATE>
-        
-    <TEMPLATE>
-        <NAME></NAME>
-        <TYPE>Angiography</TYPE>
-        <TEXT>
-        </TEXT>
-    </TEMPLATE>
-
-
+	<TEMPLATE>
+		<NAME>
+			Aneurysm ruptured
+		</NAME>
+		<TYPE>
+			Angiography
+		</TYPE>
+		<TEXT>
+			Endovascular Repair of a Ruptured [location] Aneurysm by [procedure type]
+			
+			Staff:
+			Assists:
+			Anesthesia:
+			
+			Clinical History: [age] year-old [male/female] ([MRN]) admitted on [admission date] for subarachnoid hemorrhage (SAH) secondary to a ruptured [location] as seen on CT angiogram; Modified Fisher grade [0-4], WFNS grade [1-5]. The patient [has/does not have] a history of previous SAH [, with previous treatment [year] and currently undergoing a [planned/emergency] retreatment]. An external ventricular drain was [not required/required and placed] pre-operatively. Informed consent for a diagnostic cerebral angiogram and aneurysm repair was obtained.
+			
+			Technique:
+			The patient underwent general anesthesia and endotracheal intubation. [Right/Left common femoral, Right/Left radial] artery access was obtained with a [size]-French sheath inserted by the Seldinger technique [under ultrasound guidance]. The [target artery] was selectively catheterized with a diagnostic Berenstein tip catheter through a [guiding catheter] and AP/lateral/3D-rotational angiograms acquired. This demonstrated an aneurysm of the [location] with a maximal diameter of [diameter in mm].
+			
+			[Procedural description]
+			
+			[There were no periprocedural complications. / The procedure was complicated by an intraprocedural aneurysmal rupture causing rebleeding which was managed with temporary balloon inflation for proximal control and coil closure of the rupture point. / The procedure was complicated by an intraprocedural thromboembolic event with visualized occlusion of [involved branch]. After awakening from anesthesia, the patient had attributable [weakness/numbness] in the corresponding distribution to the involved artery.]
+			
+			At the end of the procedure all catheters and the balloon were removed. [A 6 Fr | An 8 Fr] Angio-Seal Vascular Closure Device was used to achieve groin haemostasis. The patient woke up with no neurological deficits.
+			
+			Interpretation:
+			[Successful/Unsuccessful] endovascular [procedure type] for treatment of a ruptured [location] aneurysm. Modified Raymond Roy Class [1-3] result achieved. The patient will require an MRI/MRA during admission.
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			Aneurysm unruptured
+		</NAME>
+		<TYPE>
+			Angiography
+		</TYPE>
+		<TEXT>
+			Endovascular Repair of an Unruptured [location] Aneurysm by [procedure type]
+			
+			Staff:
+			Assists:
+			Anesthesia:
+			
+			Clinical History: [age] year-old [male/female] ([MRN]) admitted on [admission date] for elective repair of a [location] aneurysm. The patient [has/does not have] a history of previous SAH. [The last treatment was performed in [year] and the current procedure was [planned/unplanned]]. Informed consent for a diagnostic cerebral angiogram and aneurysm repair was obtained in the clinic. The patient was preloaded on [agents] for [days] days prior to the procedure. WFNS [...].
+			
+			Technique:
+			The patient underwent general anesthesia and endotracheal intubation. Intravenous heparin was administered throughout the procedure after groin puncture. [Right/Left common femoral, Right/Left radial] artery access was obtained with a [size]-French sheath inserted by the Seldinger technique [under ultrasound guidance]. The [target artery] was selectively catheterized with a diagnostic Berenstein tip catheter through a [guiding catheter] and AP/lateral/3D-rotational angiograms acquired. This demonstrated an aneurysm of the [location] with a maximal diameter of [diameter in mm].
+			
+			[Procedural description]
+			
+			At the end of the procedure all catheters and the balloon were removed. [A 6 Fr | An 8 Fr] Angio-Seal Vascular Closure Device was used to achieve groin haemostasis. The patient woke up with no neurological deficits.
+			
+			[There were no periprocedural complications. / The procedure was complicated by an intraprocedural aneurysmal rupture causing rebleeding which was managed with temporary balloon inflation for proximal control and coil closure of the rupture point. / The procedure was complicated by an intraprocedural thromboembolic event with visualized occlusion of [involved branch]. After awakening from anesthesia, the patient had attributable [weakness/numbness] in the corresponding distribution to the involved artery.]
+			
+			Interpretation:
+			[Successful/Unsuccessful] endovascular [procedure type] for treatment of an unruptured [location] aneurysm. Modified Raymond Roy Class [1-3] result achieved. A follow up MRI/MRA in 6 months should be performed.
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			Diagnostic Angiogram
+		</NAME>
+		<TYPE>
+			Angiography
+		</TYPE>
+		<TEXT>
+			Staff: Dr
+			
+			Assists: Dr J Lynch (performed by)
+			
+			Anesthesia:
+			
+			CLINICAL HISTORY:
+			
+			
+			
+			TECHNIQUE:
+			
+			Informed consent was obtained from the patient (including risk of stroke and groin haemorrhage).10 ml of 1% lidocaine was infiltrated into the puncture site superficial tissues. A right common femoral artery puncture was performed under ultrasound guidance. A 5 Fr sheath was inserted. A 5 Fr Berenstein catheter was used to perform digital subtraction angiography. Injections were performed of the right vertebral artery, right internal carotid artery, right external carotid artery, left internal carotid artery, left external carotid artery, left vertebral artery. [3D flat panel tomographic angiography was performed via the …]. A 6 Fr Angioseal was used to achieve groin haemostasis at the end of the procedure. There were no periprocedural complications. The study was reviewed on table by the attending staff.
+			
+			
+			
+			FINDINGS:
+			
+			Comparison is made with the …
+			
+			
+			
+			[Normal cerebral vasculature is demonstrated. No aneurysms or other vascular abnormalities are identified. ]
+			
+			[A double read of the study will be requested.]
+			
+			[MDT discussion is recommended.]
+			
+			
+			
+			INTERPRETATION:
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			Dural Fistula Embolization
+		</NAME>
+		<TYPE>
+			Angiography
+		</TYPE>
+		<TEXT>
+			Endovascular Repair of Cerebral Dural Arteriovenous Fistula
+			
+			Staff:
+			
+			Assists: Dr J Lynch
+			
+			Anesthesia: General
+			
+			Clinical History: [...] year-old male ([...]) admitted on [...] for elective repair of a dural arteriovenous fistula. The patient does not have a history of previous SAH. Informed consent for a diagnostic cerebral angiogram and fistula repair was obtained in the clinic. WFNS 1.
+			
+			Technique:
+			
+			The patient underwent general anesthesia and endotracheal intubation. Intravenous heparin was administered throughout the procedure after groin puncture. [...] common femoral artery access was obtained with a 6-French sheath inserted by the Seldinger technique under ultrasound guidance. A 5 Fr Berenstein catheter used to perform digital subtraction angiography.  Injections were performed of the right vertebral artery, right internal carotid artery, right external carotid artery, left internal carotid artery, left external carotid artery, left vertebral artery. [3D flat panel tomographic angiography was performed via the …]. This demonstrated a Cognard 3 dural arteriovenous fistula fed by the left middle meningeal, ascending pharyngeal, and occipital arteries. The [...] external carotid artery was selectively catheterized with a diagnostic Berenstein tip catheter through a Benchmark guiding catheter.
+			
+			The petrosquamosal branch of the left middle meningeal was selectively catheterised using an Apollo (5 cm detachable tip) microcatheter, which was brought to the level of the fistula. [The same feeding artery was also catheterised with an SL-10 microcatheter, but it was not possible to bring the catheter distal enough to perform a "pressure cooker" technique.] Nevertheless, the catheter wedged in the vessel which most likely reduced the retrograde reflux of Onyx during injection. Onyx was then injected through through the Apollo microcatheter until the fistula was occluded. Final diagnostic angiography confirmed exclusion of the fistula with no distal thromboembolic complications.
+			
+			At the end of the procedure all catheters and the balloon were removed. A 6 Fr Angio-Seal Vascular Closure Device was used to achieve groin haemostasis. The patient woke up with no neurological deficits. There were no periprocedural complications.
+			
+			Interpretation:
+			
+			Successful endovascular treatment of an unruptured dural arteriovenous fistula aneurysm. A follow up cerebral angiogram MRI should be performed at 3 months.
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			Intracranial Atheroma Disease (ICAD) Treatment
+		</NAME>
+		<TYPE>
+			Angiography
+		</TYPE>
+		<TEXT>
+			Staff:
+			
+			Assists: Dr JO Lynch
+			
+			Anesthesia: General
+			
+			Clinical History: [age] year-old [male/female] ([MRN]) admitted on [admission date] for critical [...] [...] stenosis. [The patient was having ongoing hypoperfusion type strokes in the left hemisphere despite maximal medical therapy.] The patient was preloaded on [Aspirin and Clopidogrel] prior to the procedure.
+			
+			Technique:
+			
+			Consent was obtained from the patient and included risks of stroke (10%), reperfusion haemorrhage, and groin haemorrhage.
+			
+			The patient underwent general anesthesia and endotracheal intubation. Intravenous heparin was administered throughout the procedure after groin puncture. Diagnostic angiography was initially performed of the [...] with a diagnostic Berenstein tip catheter. The [...] ICA was selectively catheterized with a diagnostic Berenstein tip catheter through a [0.088" Neuronmax guiding] catheter and AP/lateral/3D-rotational angiograms acquired of the head and neck. This demonstrated [...].
+			
+			[A 115 cm Navien 0.058" intermediate catheter was advanced through the sheath in to the distal cervical ICA]. An [SL-10] microcatheter was then navigated across the stenotic level using a 300-cm Synchro Support wire. The microcatheter was removed and a [2.5 x 12 mm Trek-mini] balloon was used to angioplasty the stenosis up to a pressure of [4 ATM]. The balloon was then exchanged again for the microcatheter which was used to deploy a [3x21 mm Neuroform Atlas Stent]. Final angiography revealed improved perfusion of the left cerebral hemisphere.
+			
+			At the beginning of the procedure the patient's BP was approximately [190 systolic, and the blood pressure was 140 systolic at the end of the procedure]. [An angiogram was performed at this level which showed no evidence of early venous shunting to suggest hyperperfusion syndrome.]
+			
+			At the end of the procedure all catheters and the balloon were removed. An 8 Fr Angio-Seal Vascular Closure Device was used to achieve groin haemostasis. The patient woke up with no additional neurological deficits. There were no periprocedural complications.
+			
+			Interpretation:
+			
+			Successful endovascular angioplasty and stenting of [...]
+			
+			The case was discussed with the stroke team following the procedure and a maximal BP target of [140 mmHg systolic was recommended].
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			Carotid Stenting
+		</NAME>
+		<TYPE>
+			Angiography
+		</TYPE>
+		<TEXT>
+			Endovascular Carotid Artery Stenting
+			
+			Staff:
+			
+			Assists: Dr J Lynch
+			
+			Anesthesia: [General | Conscious sedation]
+			
+			Clinical History: [...] year-old [male | female] ([...]) with [...]ICA [stenosis | dissection. The patient was preloaded on [...] before the procedure.
+			
+			Technique:
+			
+			Intravenous heparin was administered throughout the procedure after groin puncture. Right common femoral artery access was obtained with an 8-French sheath inserted by the Seldinger technique under ultrasound guidance. Diagnostic angiography was initially performed of the [...] with a diagnostic Berenstein tip catheter. The [...] ICA was selectively catheterized with a diagnostic Berenstein tip catheter through a [8-French Flowgate Balloon | 0.088" Neuronmax guiding] catheter and AP/lateral/3D-rotational angiograms acquired of the head and neck. This demonstrated [...].
+			
+			[The balloon guiding catheter was inflated and under pump aspiration a | A] [0.014in x 300cm Synchro2 Support Guidewire] was used to pass the affected segment. Balloon angioplasty was performed with a [3.0mm x 15mm Trek RX Coronary Dilatation Catheter]. Good dilatation of the vessel was achieved. A [7x40mm Boston Scientific Carotid Wallstent] was then deployed over the affected segment. Final angiography revealed good vessel dilatation and no distal thromboembolic complications.
+			
+			At the end of the procedure all catheters and the balloon were removed. [A 6-French | 8-French] Angio-Seal Vascular Closure Device was used to achieve groin haemostasis. The patient woke up with no neurological deficits.
+			
+			Interpretation:
+			
+			Successful [...] carotid stenting and angioplasty. The patient should stay on dual antiplatelets unless instructed otherwise by the neurointerventional team. A CT/CTA should be performed within 24 hours.
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			Transverse Sinus Stenting
+		</NAME>
+		<TYPE>
+			Angiography
+		</TYPE>
+		<TEXT>
+			Endovascular Stenting of Transverse Sinus
+			
+			Staff: Dr V Pereira
+			
+			Assists: Dr J Lynch
+			
+			Anesthesia: General
+			
+			
+			Clinical History: -year-old female (...) admitted on [...] for elective stenting of a [...] transverse sinus stenosis. The patient has a history of an occluded left transverse sinus secondary to a bony occipital tumour. Informed consent for a diagnostic cerebral angiogram and sinus stenting was obtained. The patient was preloaded on Aspirin and Ticagrelor for 5 days prior to the procedure.
+			
+			
+			
+			Technique:
+			
+			The patient underwent general anesthesia and endotracheal intubation. Right common femoral artery (5-French sheath) and right common femoral vein (6 French sheath) artery access was obtained by the Seldinger technique under ultrasound guidance. The left internal carotid artery was selectively catheterized with a diagnostic Berenstein tip catheter and AP/lateral angiograms acquired. This demonstrated occlusion of the left transverse sinus and stenosis of the right transverse sinus. The catheter was left in position during the rest of the procedure to acquire further angiograms.
+			
+			An 8 Fr Cerebase DA Guide Sheath was exchanged for the venous sheath and inserted in to the right internal jugular vein with a diagnostic Berenstein tip catheter. A 6 Fr Navien catheter was brought in to the transverse sinus over a Phenom 0.027" microcatheter and a series of pressure readings (mmH2O) were taken as follows:
+			
+			Superior sagittal sinus:
+			
+			Pre-stenotic transverse sinus:
+			
+			Post-stenotic transverse sinus:
+			
+			Sigmoid sinus:
+			
+			Internal jugular vein:
+			
+			The Cerebrase Guide was then brought in to the transverse sinus over an Advantage Guidewire and a 9x40mm Carotid Wallstent was deployed across the stenosis over a Synchro2 Support Guidewire.
+			
+			Repeat pressure readings  (mmH2O) were then taken:
+			
+			Superior sagittal sinus:
+			
+			Pre-stenotic transverse sinus:
+			
+			Post-stenotic transverse sinus:
+			
+			Sigmoid sinus:
+			
+			Internal jugular vein:
+			
+			At the end of the procedure all catheters and the balloon were removed. A 6 Fr Angio-Seal Vascular Closure Device and manual pressure was used to achieve groin haemostasis. The patient woke up with no neurological deficits. There were no periprocedural complications.
+			
+			
+			
+			Interpretation:
+			
+			Successful endovascular right transverse sinus stenting for stenosis. The patient should continue on Aspirin and Ticagrelor for 3 months. We will review in clinic in 6 months with a CT Venogram.
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			Epistaxis Treatment
+		</NAME>
+		<TYPE>
+			Angiography
+		</TYPE>
+		<TEXT>
+			DIAGNOSTIC CEREBRAL ANGIOGRAM AND EPISTAXIS EMBOLIZATION
+			
+			Staff: Dr P Nicholson
+			
+			Assists: Dr J Lynch
+			
+			Anesthesia: Conscious sedation
+			
+			Clinical information:  [...]-year-old with a history of epistaxis.
+			
+			Procedure and findings:
+			
+			The risks were discussed with the patient, including stroke, vascular injury, contrast reaction, kidney injury, and groin complications. The patient was agreeable to proceed.
+			
+			The patient underwent conscious sedation. Right common femoral artery access was obtained with a 6-French sheath inserted by the Seldinger technique. Angiography was performed of the bilateral ICAs and ECAs with a 5-French Berenstein catheter.
+			
+			The diagnostic catheter was advanced in to the left ECA. A Prowler Select microcatheter was advanced into sphenopalatine artery distal to possible ECA-ICA anastomosis. This was then embolized under fluoroscopic control using PVA particles (150-250 microns). The control angiogram demonstrated decreased flow in the embolized territory. The same procedure was repeated on the contralateral side. The control angiogram demonstrated decreased flow of the target artery. No thromboembolic complications were observed.
+			
+			Following the procedure the catheters and the sheath were removed and a 6-French Angio-Seal was deployed at the arteriotomy site. Hemostasis was achieved and confirmed. There were no peri-procedural complications. The patient was transferred to the post anesthesia care unit in stable condition.
+			
+			Summary:
+			
+			Bilateral endovascular embolization of sphenopalatine arteries for epistaxis.
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			Middle Meningeal Artery Embolisation
+		</NAME>
+		<TYPE>
+			Angiography
+		</TYPE>
+		<TEXT>
+			DIAGNOSTIC CEREBRAL ANGIOGRAM AND MMA EMBOLIZATION FOR SUBDURAL HAEMATOMA
+			
+			Staff: Dr P Nicholson
+			
+			Assists: Dr J Lynch
+			
+			Anesthesia: Conscious sedation
+			
+			Clinical information: [...]-year-old male with [...] subdural haematoma. Neurosurgery requests for middle meningeal artery embolization.
+			
+			Procedure and findings:
+			
+			The risks of the procedure were discussed with the patient and included that of stroke, vascular injury, contrast reaction, kidney injury, and groin haematoma. They were agreeable to proceed.
+			
+			The patient underwent [general anaesthesia | conscious sedation]. Right common femoral artery access was obtained with a 6-French sheath inserted by the Seldinger technique. Systemic heparinization was achieved. Angiography was performed of the [...] internal and external carotid artery using a 5 Fr Berenstein-tip catheter. A Benchmark guiding catheter was then advanced into the [...] ECA using over this catheter. An SL-10 microcatheter was positioned in the middle meningeal artery distal to the foramen spinosum. Catheterization and embolization was then performed of the [distal anterior and posterior] divisions using 150-250 Micron Contour PVA Embo particles. Care was taken not to introduce particles in to the lacrimal artery. A control angiogram demonstrated decreased flow/occlusion of these middle meningeal artery branches. No thromboembolic complications were observed.
+			
+			Following the procedure the catheters and the sheath were removed and a 6-French Angio-Seal was deployed at the arteriotomy site. Hemostasis was achieved. There were no peri-procedural complications. The patient was transferred to the post anesthesia care unit in a stable condition.
+			
+			Summary:
+			
+			Endovascular embolization of the [...] MMA using particles for treatment of a subdural hematoma.
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			CSF Venous Fistula Embolisation
+		</NAME>
+		<TYPE>
+			Angiography
+		</TYPE>
+		<TEXT>
+			Embolization of Spinal CSF-venous fistula
+			
+			Staff:
+			
+			Assists: Dr J Lynch
+			
+			Anesthesia: General
+			
+			​
+			
+			TECHNIQUE AND FINDINGS: The rationale, risks, benefits and alternatives of endovascular treatment were discussed with the patient. It was also discussed that although this is a new procedure it is technically straightforward with a reasonable chance of success.
+			
+			​
+			
+			A right common femoral vein puncture was performed under ultrasound guidance. A 6-French sheath was inserted. A 5-French Cobra 2 Glidecath used to catheterize the Azygos vein. ​Digital subtraction venography revealed the Azygos system and the origins of the intercostal veins. Initially an Echelon-10 microcatheter was used to try and cannulate the right T10 intercostal vein origin but this was unsuccessful. Subsequently a 5 cm tip Apollo microcatheter was used to catheterise the relevant level which was then embolized with Onyx-18. ​​
+			
+			The vascular sheath was removed. 10 minutes of manual compression of the groin achieved haemostasis. There were no procedural complications.
+			
+			​
+			
+			Conclusion:​
+			
+			Successful endovascular transvenous embolization of a right T20 CSF-venous fistula.​
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			Anerysm description
+		</NAME>
+		<TYPE>
+			Angiography
+		</TYPE>
+		<TEXT>
+			Imaging again demonstrates a [saccular | fusiform] [wide | narrow] necked aneurysm at the […] measuring approximately […].
+			
+			
+			The aneurysm has [smooth walls | bleb | multiloculated] and points […].
+			
+			
+			[No branches arise from the aneurysm sac itself].
+			
+			
+			There is an [Acom | PCOM | dominant vertebral artery]
+			
+			[MDT discussion is advised.]
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			Fistula Description
+		</NAME>
+		<TYPE>
+			Angiography
+		</TYPE>
+		<TEXT>
+			There is a dural arteriovenous fistula centered on the  …
+			
+			The dominant arterial feeders are …
+			
+			Additional supply arises from …
+			
+			Drainage is via … in to the …
+			
+			There [is/ is no] cortical venous reflux.
+			
+			Cognard classification:
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			AVM Description
+		</NAME>
+		<TYPE>
+			Angiography
+		</TYPE>
+		<TEXT>
+			There is arteriovenous malformation centred on the …The nidus measures approximately … in maximal measurement.
+			
+			
+			The dominant arterial feeders are … [en passage vs direct]
+			
+			Additional supply arises from …
+			
+			[Flow aneurysms].
+			
+			
+			[Number of nidal compartments]
+			
+			[Plexiform vs fistulous nidus]
+			
+			[Intra-nidal aneurysms].
+			
+			Drainage is via … in to the …
+			
+			[Venous ectasia or pouches]
+			
+			[Venous stenosis]
+			
+			[Brain parenchyma: venous congestion]
+			
+			Spetzler Martin:
+			
+			Size [] + Eloquence [] + Drainage [] =
+			
+			Supplementary:
+			
+			Age [] + Compactness [] + Bleeding [] =
+			
+			TOTAL =
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			Stroke Thrombectomy
+		</NAME>
+		<TYPE>
+			Angiography
+		</TYPE>
+		<TEXT>
+			STROKE THROMBECTOMY
+			
+			Staff:
+			
+			Assists:
+			
+			Anesthesia protocol:
+			
+			Clinical History:
+			
+			
+			
+			Technique:
+			
+			Consent was obtained from the [relative | patient]. The rationale and risks of the procedure were discussed. The risks of the procedure included failure to recanalize vasculature, worsening of occlusion, intracranial hemorrhage, vascular dissection or tear, access site bleeding/complications, and the possibility of severe brain injury from the procedure.
+			
+			Angio suite arrival time: [...].
+			
+			Procedural start time: [...].
+			
+			Pre-procedural TICI: [...].
+			
+			The procedure was performed under [local anaesthetic with 10 ml 1% lidocaine to the right groin skin and conscious sedation | general anaesthesia]. [Right/Left common femoral, Right/Left radial] artery access was obtained with an [size]-French sheath inserted by the Seldinger technique [under ultrasound guidance]. The [artery] was selectively catheterized with a [Sim 2 | Berenstein tip catheter] through a [Flowgate 2 balloon | 0.088” Neuronmax | AXS INFINITY LS PLUS] guide catheter placed in the high cervical carotid. Digital subtraction angiography confirmed the proximal clot face at the level of [artery]. Extent of target occlusion in to: [...]. [There were no extracranial carotid tandem lesions | There was x% stenosis of the xxx]. [Multiple clots were identified on the baseline angiogram].
+			
+			PASS #1 ([start time] - [end time]): [To treat target occlusion at the level of xxx]. A [CAT 7 | ACE68 | AXS Vecta Aspiration Catheter ] aspiration catheter was brought to the clot face over a [Trevo Trak 21 | Rebar 18 | 3MAX] microcatheter and Synchro 2 guidewire. A [4mm x 41mm  | 6mm x 37mm]  Trevo NXT ProVue stentriever was positioned across the thrombus and deployed for 2-5 minutes. Target placement was achieved. Stent retrieval was performed with inflation and aspiration from the guide catheter and aspiration via the aspiration catheter started after stent retriever deployment. Technique used: [SR + Asp Cath + Pump + BGC]. IA lytics were not used. No device malfunction, distal/new territory embolisation, or adverse events occurred during this pass. eTICI after this pass [...]. [Use of angioplasty balloon, stent, other devices]. [Stenosis was not treated during this pass].
+			
+			8-Fr "Angioseal" to right groin puncture. There were no periprocedural complications.
+			
+			Summary:
+			
+			Endovascular recanalization of [...]. Initial TICI score: […]. Final eTICI score: […]. The procedure was discussed with the Stroke Neurology team. Plain CT is recommended at 24 hours or in the event of neurological deterioration.
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			Spinal Angiogram
+		</NAME>
+		<TYPE>
+			Angiography
+		</TYPE>
+		<TEXT>
+			SPINAL ANGIOGRAM
+			
+			CLINICAL HISTORY:
+			
+			TECHNIQUE:
+			
+			Informed consent was obtained from the patient.10 ml of 1% lidocaine was infiltrated into the puncture site superficial tissues. A right common femoral artery puncture was performed under ultrasound guidance. A 5 Fr sheath was inserted. A 5 Fr Cobra C2 catheter used to perform digital subtraction angiography. Injections were performed of [...]. [3D flat panel tomographic angiography was performed via the …]. A 6 Fr Angioseal was used to achieve groin haemostasis at the end of the procedure. There were no periprocedural complications.
+			
+			
+			FINDINGS:
+			
+			Comparison is made with the …
+			
+			
+			INTERPRETATION:
+			
+			
+			Dr J Lynch
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			Lumbar Puncture
+		</NAME>
+		<TYPE>
+			Angiography
+		</TYPE>
+		<TEXT>
+			Lumbar puncture
+			
+			Clinical information:
+			
+			Technique:
+			
+			Written consent included the risks of infection, bleeding, CSF leak, damage to nerve roots resulting in bladder/bowel incontinence and weakness. 10 ml of 1% lidocaine was infiltrated into the skin and subcutaneous tissues. A 22 Gauge spinal needle inserted into the thecal space at the [...] level.
+			
+			Opening pressure: [...] mmCSF.
+			
+			Closing pressure: [...] mmCSF.
+			
+			Samples taken and sent off to laboratory.
+			
+			No immediate complications.
+			
+			Requires 1-2 hours bed rest flat on back.
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			Nerve Root Injection
+		</NAME>
+		<TYPE>
+			Angiography
+		</TYPE>
+		<TEXT>
+			CLINICAL INDICATION:
+			
+			**Procedure**:
+			
+			Target nerve root:
+			
+			Written consent obtained. Following  local anaesthesia a 25 G fine spinal needle was positioned coaxially adjacent to the [nerve root | Facet joint] under CT guidance. A mixture of 1 ml of 0.25% of Bupivacaine and 1.5 ml (3.3 mg/ml) of Dexamethasone was injected.
+			
+			There were no immediate complications.
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			Dynamic Myelography
+		</NAME>
+		<TYPE>
+			Angiography
+		</TYPE>
+		<TEXT>
+			MYELOGRAM
+			
+			CLINICAL: [...]-year-old female with [...]
+			
+			COMPARISON STUDY:
+			
+			MRI of [...]
+			
+			TECHNICAL: The process of informed consent was completed with the patient. The patient was positioned with a single mattress and no bolsters in a right side down decubitus position markers were applied. With the benefit of local anesthetic a 22-gauge spinal needle was passed by direct posterior approach at the [...] level. Opening pressure was measured at [...] cm of H2O.
+			
+			Approximately 1 mL of Omnipaque 300 was injected to confirm the intradural position of the needle. Approximately 10 mL preservative-free normal saline was injected slowly over 3 minutes. The patient was then positioned in a head down position by approximately 5°, Subtraction myelography was performed with 12 mL of Omnipaque 300 chased with 5mL of normal saline. Imaging during the injection was performed in the AP view profiling the right lateral gutter of the thecal sac from the lower sacrum to the mid cervical region. [A second injection of 3cc of Omnipaque300 was performed with magnification over the lower thoracic region.]
+			
+			Following the myelogram the patient was transferred to CT in the right decubitus position and within 15 minutes of the myelogram CT was performed from C2-L3.
+			
+			FINDINGS:
+			
+			For the purposes of counting vertebral bodies it should be noted that this patient has 7 cervical segments, 12 thoracic segments each with ribs and 5 lumbar segments, the L5-S1 level demonstrates a small somewhat rudimentary disc.
+			
+			[A site of dynamic CSF leakage represent a complex appearing CSF-venous fistula was noted beneath the right T9 pedicle (a type III CSF leak). This was seen on DSM. ]
+			
+			No further areas of leakage were seen on this right decubitus myelogram within the cervical and thoracic region to the level of L3.The fistula was not localized on CT.
+			
+			SUMMARY:
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			CT Myelography
+		</NAME>
+		<TYPE>
+			Angiography
+		</TYPE>
+		<TEXT>
+			CLINICAL INDICATION:
+			
+			PROCEDURE:
+			
+			Written consent obtained. Local anaesthesia infiltration: 10 ml of 1% lidocaine. Under fluoroscopic guidance a spinal needle was inserted in to the CSF space at the L4/5 level. 12 ml of Omnipaque 240 was injected. After patient positioning maneuvers a CT was performed. There were no immediate complications.
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+		</NAME>
+		<TYPE>
+			Angiography
+		</TYPE>
+		<TEXT>
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+		</NAME>
+		<TYPE>
+			Angiography
+		</TYPE>
+		<TEXT>
+		</TEXT>
+	</TEMPLATE>
 </ALL>
