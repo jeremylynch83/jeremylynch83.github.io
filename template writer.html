@@ -88,29 +88,35 @@
 	<script>
 		/* GENERIC FUNCTIONS */
 
+
 		function loadXML() {
 			var xhttp = new XMLHttpRequest();
+			var temp = [];
 			xhttp.onreadystatechange = function () {
 				if (this.readyState == 4 && this.status == 200) {
-					myFunction(this);
+					temp = myFunction(this);
 				}
 			};
 			xhttp.open("GET", "http://neurotool.org/templates.xml", true);
 			xhttp.send();
 
-			var temp = [];
-
 			function myFunction(xml) {
+				var xml_array = [];
 				var xmlDoc = xml.responseXML;
 				var templates = xmlDoc.getElementsByTagName("TEMPLATE");
 				for (var i = 0; i < templates.length; i++) {
+					var t_name = xmlDoc.getElementsByTagName("TEMPLATE")[i].getElementsByTagName(
+						"NAME")[0].innerHTML.replace(/\t/g, '');
+					var t_text = xmlDoc.getElementsByTagName("TEMPLATE")[i].getElementsByTagName(
+						"TEXT")[0].innerHTML.replace(/\t/g, '');
+
 					temp.push({
-						name: xmlDoc.getElementsByTagName("TEMPLATE")[i].getElementsByTagName(
-							"NAME")[0].innerHTML,
-						text: xmlDoc.getElementsByTagName("TEMPLATE")[i].getElementsByTagName(
-							"TEXT")[0].innerHTML
+						name: t_name,
+						text: t_text
 					});
+
 				}
+				return xml_array;
 			}
 			return temp;
 

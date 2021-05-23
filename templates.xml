@@ -78,7 +78,7 @@
 			
 			TECHNIQUE:
 			
-			Informed consent was obtained from the patient (including risk of stroke and groin haemorrhage).10 ml of 1% lidocaine was infiltrated into the puncture site superficial tissues. A right common femoral artery puncture was performed under ultrasound guidance. A 5 Fr sheath was inserted. A 5 Fr Berenstein catheter was used to perform digital subtraction angiography. Injections were performed of the right vertebral artery, right internal carotid artery, right external carotid artery, left internal carotid artery, left external carotid artery, left vertebral artery. [3D flat panel tomographic angiography was performed via the …]. A 6 Fr Angioseal was used to achieve groin haemostasis at the end of the procedure. There were no periprocedural complications. The study was reviewed on table by the attending staff.
+			Informed consent was obtained from the patient (including risk of stroke and groin haemorrhage).10 ml of 1% lidocaine was infiltrated into the puncture site superficial tissues. A right common femoral artery puncture was performed under ultrasound guidance. A 5 Fr sheath was inserted. A 5 Fr Berenstein catheter was used to perform digital subtraction angiography. Injections were performed of the right vertebral artery, right internal carotid artery, right external carotid artery, left internal carotid artery, left external carotid artery, left vertebral artery. [3D flat panel tomographic angiography was performed via the ...]. A 6 Fr Angioseal was used to achieve groin haemostasis at the end of the procedure. There were no periprocedural complications. The study was reviewed on table by the attending staff.
 			
 			
 			
@@ -604,9 +604,1666 @@
 	</TEMPLATE>
 	<TEMPLATE>
 		<NAME>
+			Blank Report
 		</NAME>
 		<TYPE>
-			Angiography
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			CLINICAL INDICATION:
+			
+			FINDINGS:
+			
+			Comparison is made with the ...
+			
+			CONCLUSION:
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			CT Head: Acute
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			CLINICAL INDICATION:
+			
+			FINDINGS:
+			
+			Comparison is made with the ...
+			
+			There is no acute cortical infarct, haemorrhage, or collection. No hyperdense vessel is present.
+			
+			
+			[There is generalised cerebral involution with no lobar predilection. Bilateral hippocampal atrophy is present. There is periventricular and deep white matter hypodensity which is non-specific but may represent a mild burden of small vessel disease.]
+			
+			
+			[Examine in 3 planes]
+			
+			[Blood: Sylvian fissures, prepontine, suprasellar, posterior horns, tentorium]
+			
+			[Cerebral swelling/cortical hypodensity]
+			
+			[Space occupying lesion]
+			
+			[Venous sinuses]
+			
+			[Basilar artery thrombus]
+			
+			[Contusions]
+			
+			[Collections: coronals for falcine (infective)]
+			
+			[Old strokes]
+			
+			[Atrophy | Hippocampi | Small vessel disease]
+			
+			[Clivus | Pituitary | Orbits | Cerebellar tonsils]
+			
+			[Paranasal sinuses | Mastoid air cells]
+			
+			[Extracranial soft tissue]
+			
+			[Shift of midline structures]
+			
+			[Skull: Fractures, lesions, skull base tumours]
+			
+			[There are no fractures or destructive bony lesions.]
+			
+			
+			CONCLUSION:
+			
+			No acute intracranial pathology is identified.
+			
+			[A neurology opinion should be obtained if there are neurological signs as further investigation may be necessary.]
+			
+			[If there is a high suspicion for intracranial haemorrhage lumbar puncture should be considered.]
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			CT Head: Non-Acute
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			CLINICAL INDICATION:
+			
+			
+			FINDINGS:
+			
+			Comparison is made with the ...
+			
+			Look for these first:
+			
+			There is no acute cortical infarct, haemorrhage, or collection.
+			
+			
+			Then mention these
+			
+			[There is generalised cerebral involution with no lobar predilection. There is periventricular and deep white matter hypodensity which is non-specific but may represent a mild burden of small vessel disease.]
+			
+			
+			[Lobar atrophy]
+			
+			[Hippocampal atrophy]
+			
+			[Midbrain | Pons | Cerebellar ]
+			
+			[White matter lesions, microbleeds]
+			
+			[Infarcts]
+			
+			
+			[Blood: Sylvian fissures, prepontine, suprasellar, posterior horns, tentorium]
+			
+			[Cerebral swelling/cortical hypodensity]
+			
+			[Space occupying lesion]
+			
+			[Venous sinuses]
+			
+			[Basilar artery thrombus]
+			
+			[Contusions]
+			
+			[Collections: coronals for falcine (infective)]
+			
+			[Old strokes]
+			
+			[Atrophy | Hippocampi | Small vessel disease]
+			
+			[Clivus | Pituitary | Orbits | Cerebellar tonsils]
+			
+			[Paranasal sinuses | Mastoid air cells]
+			
+			[Extracranial soft tissue]
+			
+			[Shift of midline structures]
+			
+			
+			[Skull: Fractures, lesions, skull base tumours]
+			
+			[There are no fractures or destructive bony lesions.]
+			
+			CONCLUSION:
+			
+			[Normal intracranial appearances.]
+			
+			[A neurology opinion should be obtained if there are neurological signs as further investigation may be necessary.]
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			CT Head and Neck: Angiogram
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			CLINICAL INDICATION:
+			
+			FINDINGS:
+			
+			Comparison is made with ...
+			
+			
+			There is no acute cortical infarct, haemorrhage, or collection. No hyperdense vessel is present.
+			
+			
+			[There is generalised cerebral involution with no lobar predilection. There are foci of hypodensity in the deep white matter in keeping with a mild burden of small vessel disease.]
+			
+			
+			[Examine in 3 planes]
+			
+			[Blood: Sylvian fissures, prepontine, suprasellar, posterior horns, tentorium]
+			
+			[Hyperdense vessel]
+			
+			[Stroke: basal ganglia, insular, frontal cortex]
+			
+			[Cerebral swelling/cortical hypodensity]
+			
+			[Contusions]
+			
+			[Collections: coronals for falcine]
+			
+			[Old strokes]
+			
+			[Atrophy | Hippocampi | Small vessel disease]
+			
+			[Clivus | Pituitary | Orbits | Cerebellar tonsils]
+			
+			[Paranasal sinuses | Mastoid air cells]
+			
+			[Extracranial soft tissue]
+			
+			
+			
+			[Skull: Fractures, lesions]
+			
+			[Skull base]
+			
+			[There are no skull fractures or destructive bony lesions.]
+			
+			
+			There is no proximal intracranial occlusion or stenosis.
+			
+			[Collaterals]
+			
+			[Review aneurysms: Ophthalmic, MCA]
+			
+			[Vascular malformations]
+			
+			
+			Aortic arch and subclavian arteries:
+			
+			R CCA/ICA:
+			
+			L CCA/ICA:
+			
+			R VA:
+			
+			L VA:
+			
+			Basilar:
+			
+			[The extracranial carotid and vertebral arteries exhibit normal appearances.]
+			
+			
+			[CT Perfusion]
+			
+			
+			[Venous sinuses]
+			
+			
+			[Cervical degenerative disease is evident. There is no acute fracture or destructive bony lesion. Dependent atelectasis is present at the imaged lung apices.]
+			
+			[There is no acute fracture or destructive bony lesion. The visualised lung apices are clear. ]
+			
+			[Pulmonary emboli | Orbits | Soft tissues]
+			
+			[Thyroid]
+			
+			
+			CONCLUSION:
+			
+			No acute intracranial pathology is identified.
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			CT Head: Subarachnoid haemorrhage
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			CLINICAL INDICATION:
+			
+			FINDINGS:
+			
+			Comparison is made with the ...
+			
+			
+			There is diffuse subarachnoid haemorrhage. The blood load is centered on *. There is also blood in the [basal cisterns | Sylvian fissures | convexity sulci | ventricles].
+			
+			
+			There is hydrocephalus, with blood in the *.
+			
+			
+			There is no acute cortical infarct.
+			
+			
+			[There is generalised cerebral involution with no lobar predilection. There are multiple foci of hypodensity in the deep white matter in keeping with a mild burden of small vessel disease.]
+			
+			
+			On the CTA, * [Refer to aneurysm description].
+			
+			[Second aneurysms: Ophthalmic, ACOM, PCOM, MCA, Basilar, dissecting, pericallosal]
+			
+			
+			[There is no intracranial occlusion or stenosis.]
+			
+			[Vascular malformations]
+			
+			
+			R CCA/ICA:
+			
+			L CCA/ICA:
+			
+			R VA:
+			
+			L VA:
+			
+			Basilar:
+			
+			[The extracranial carotid and vertebral arteries exhibit normal appearances.]
+			
+			
+			[Contusions]
+			
+			[Old strokes]
+			
+			[Clivus | Pituitary | Orbits | Cerebellar tonsils]
+			
+			
+			[Skull: Fractures, lesions, skull base]
+			
+			[Superficial tissue haematoma]
+			
+			[There are no fractures or destructive bony lesions.]
+			
+			
+			CONCLUSION:
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			CT Head: Postoperative Deep Brain Stimulation (DBS)
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			CLINICAL INDICATION:
+			
+			
+			
+			FINDINGS:
+			
+			Comparison is made with the ...
+			
+			
+			Bilateral transfrontal electrodes are in situ. There is no large postoperative haemorrhage, infarction, peri-electrode oedema, or evidence of other surgical complication.
+			
+			
+			[Examine in 3 planes]
+			
+			[Blood: Sylvian fissures, prepontine, suprasellar, posterior horns, tentorium]
+			
+			[Hyperdense vessel]
+			
+			[Cerebral swelling/cortical hypodensity]
+			
+			[Venous sinuses]
+			
+			[Contusions]
+			
+			[Collections: coronals for falcine (infective)]
+			
+			[Old strokes]
+			
+			[Atrophy | Hippocampi | Small vessel disease]
+			
+			[Clivus | Pituitary | Orbits | Cerebellar tonsils]
+			
+			[Paranasal sinuses | Mastoid air cells]
+			
+			
+			[Skull: Fractures, lesions]
+			
+			[Skull base]
+			
+			[There are no fractures or destructive bony lesions.]
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			CT Postoperative Subdural Evacuation
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			CLINICAL INDICATION:
+			
+			FINDINGS:
+			
+			Comparison is made with the previous CT of ...
+			
+			
+			There has been interval partial evacuation of the subdural haematoma overlying the [...] cerebral hemisphere.  There has been marked reduction of the size of subdural haematoma associated with significant reduction of local mass effect and partial re-expansion of the cerebral sulci and ipsilateral lateral ventricle.  A small collection of blood products and fluid remains. There remains mild contralateral shift of midline structures.
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			CT Head: Haemorrhage
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			CLINICAL INDICATION:
+			
+			
+			FINDINGS:
+			
+			Comparison is made with the CT of ...
+			
+			
+			The large parenchymal haematoma centered on ... is again demonstrated. There is surrounding oedema. There is mass effect, with contralateral shift of midline structures and early transuncal herniation. Dilatation of the ... temporal horn is noted suggestive of early hydrocephalus.
+			
+			
+			[A slender extra-axial haematoma is also noted overlying the left cerebral hemisphere. ]
+			
+			[There is no ventricular spill.]
+			
+			[There has been no rebleed since the earlier study. There is slightly more swelling and mass effect.]
+			
+			[There are no fractures or destructive bony lesions.]
+			
+			[Vein thrombosis]
+			
+			[Fluid levels]
+			
+			[Evidence of tumour]
+			
+			
+			Surgical review is warranted.
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			CT Orbits: Cellulitis
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			There is fat stranding and enhancing tissue surrounding the right orbit. The globe is slightly proptosed. The enhancement extends in to the post-septal, predominently extra-conal, space along the medial wall of the right orbit, pushing the right medial rectus medially. Appearances are suspicious for phlegmon or subperiosteal abscess in this location.
+			
+			There is complete opacification of the right maxillary sinus, and almost complete opacification of the right ethmoid air cells. A small amount of dependent debris is present within the left maxillary and sphenoid sinus. These appearances suggest a sinus origin for the infection.
+			
+			No intracranial collections can be appreciated. The visualised intracranial sinuses opacify normally.
+			
+			Urgent ophthalmological assessment is recommended.
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			CT Brain: Neurodegenerative
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			CLINICAL INDICATION:
+			
+			
+			
+			FINDINGS:
+			
+			Comparison is made with the ...
+			
+			
+			[Lobar atrophy]
+			
+			[Hippocampal atrophy]
+			
+			[Midbrain | Pons | Cerebellar ]
+			
+			[White matter lesions, microbleeds]
+			
+			[Infarcts]
+			
+			
+			[Alzheimers: Early - hippocampus and the medial temporal lobe, Late - widespread atrophy. ]
+			
+			[Vascular dementia: Small vessel disease, lacunes, strategic infarcts. ]
+			
+			[Frontotemporal Lobar Degeneration (FTLD): Frontal and temporal lobes atrophy, may be asymmetric. Behavioural and language subtypes. Small caudate heads tend to be reduced in size in behavioural. ]
+			
+			[Cerebral Amyloid Angiopathy (CAA): Microhaemorrhages]
+			
+			[CADASIL: Confluent white matter hyperintensities in the frontal and especially anterior temporal lobes in combination with (lacunar) infarcts and microbleeds are seen on imaging.]
+			
+			[PSP: Concave upper border of midbrain (hummingbird)]
+			
+			[MSA-C: Cerebellar atrophy. Hot cross bun pontinehyperintensity.]
+			
+			[MSA-P: Low T2 dorsolateral putamen and lateral to putamen.]
+			
+			[Huntingtons: atrophy of caudate. ]
+			
+			
+			[There is generalised cerebral involution with no specific pattern to suggest a specific neurogenerative process. Mild to moderate bilateral hippocampal atrophy is demonstrated. Mild patchy deep white matter hypoattenuation is apparent suggestive of a mild burden of small vessel disease. No large previous infarcts are evident.]
+			
+			[There is generalised cerebral involution with no lobar predilection.]
+			
+			[There is periventricular and deep white matter hypodensity which is non-specific but may represent a mild burden of small vessel disease.]
+			
+			
+			Then a systemic search for these
+			
+			[Examine in 3 planes]
+			
+			[Blood: Sylvian fissures, prepontine, suprasellar, posterior horns, tentorium]
+			
+			[Cerebral swelling/cortical hypodensity]
+			
+			[Venous sinuses]
+			
+			[Basilar artery thrombus]
+			
+			[Contusions]
+			
+			[Collections: coronals for falcine (infective)]
+			
+			[Old strokes]
+			
+			[Atrophy | Hippocampi | Small vessel disease]
+			
+			[Clivus | Pituitary | Orbits | Cerebellar tonsils]
+			
+			[Paranasal sinuses | Mastoid air cells]
+			
+			[Extracranial soft tissue]
+			
+			[Shift of midline structures]
+			
+			
+			[Skull: Fractures, lesions, skull base]
+			
+			[There are no fractures or destructive bony lesions.]
+			
+			
+			CONCLUSION:
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			ASPECT Score
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			1 point is deducted from the initial score of 10 for every region involved:
+			
+			
+			caudate
+			
+			putamen
+			
+			internal capsule
+			
+			insular cortex
+			
+			M1: "anterior MCA cortex," corresponding to frontal operculum
+			
+			M2: "MCA cortex lateral to insular ribbon" corresponding to anterior temporal lobe
+			
+			M3: "posterior MCA cortex" corresponding to posterior temporal lobe
+			
+			M4: "anterior MCA territory immediately superior to M1"
+			
+			M5: "lateral MCA territory immediately superior to M2"
+			
+			M6: "posterior MCA territory immediately superior to M3"
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			CT Cervical Spine
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			CLINICAL INDICATION:
+			
+			
+			FINDINGS:
+			
+			Comparison is made with the ...
+			
+			
+			Note is made of [an anterior cervical discectomy and fusion.]
+			
+			
+			[The cervical spine is kyphotic.]
+			
+			There is ... mm of ... subluxation of ... on ...
+			
+			Disc space narrowing is noted at
+			
+			
+			Neural foraminal narrowing due to uncovertebral osteophytes is noted on the right at ... and on the left at ... .
+			
+			There are marginal anterior vertebral body osteophytes from ...
+			
+			Multilevel facetal degeneration is evident most severe at.
+			
+			
+			Atlantoaxial joint.
+			Fusion
+			Endplate change
+			Uncovertebral osteophytes
+			Marginal anterior vertebral body osteophytes
+			Fractures
+			
+			
+			[Vertebral body and disc height]
+			
+			[Skull base]
+			
+			[Posterior fossa]
+			
+			[Lymph nodes]
+			
+			[Scoliosis]
+			
+			[Thyroid]
+			
+			
+			There are no destructive bony lesions.
+			
+			
+			The imaged lung apices are clear.
+			
+			
+			[Normal cervical spine alignment with preservation of vertebral body height and signal.  No spondylotic disc or facet joint changes.]
+			
+			
+			CONCLUSION:
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			CT Lumbar Spine
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			CLINICAL INDICATION:
+			
+			FINDINGS:
+			
+			Comparison is made with ...
+			
+			[The examination extends from ... To ...]
+			
+			[Note is made of a transitional lumbosacral junction. The lowest level at which ... is designated ...]
+			
+			[There has been previous pedicle screw fixation and TLIF at ... No evidence of loosening or malalignment. There is a metallic cage is in situ.  ]
+			
+			[There is scoliosis which is convex to the ... at the ...]
+			
+			There is ... mm of ... subluxation of ... on ...
+			
+			A reduction in intervertebral disc space and endplate change is evident at ...
+			
+			Neural foraminal narrowing is present at ...
+			
+			Multilevel facetal degeneration is evident at ...
+			
+			]There are no destructive bony lesions. ]
+			
+			[No pars defects are present.]
+			
+			[Paraspinal masses]
+			
+			]The imaged lung bases are clear. ]
+			
+			
+			CONCLUSION:
+			
+			[Pedicle screw fixation/metallic cage in situ with no evidence of loosening or malalignment]
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			CT Thoracic Spine
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			CLINICAL INDICATION:
+			
+			FINDINGS:
+			
+			Comparison is made with ...
+			
+			[There is scoliosis which is convex to the ... at the ...]
+			
+			A reduction in intervertebral disc space and endplate change is evident at ...
+			
+			]There are no destructive bony lesions. ]
+			
+			[Paraspinal masses]
+			
+			]The partially imaged lungs are clear. ]
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			MRI Head
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			MRI Head
+			
+			CLINICAL INDICATION:
+			
+			
+			FINDINGS:
+			
+			Comparison is made with the ...
+			
+			
+			There is no acute infarct, haemorrhage, or collection.
+			
+			
+			[The major intracranial arteries and dural venous sinuses return normal signal flow void.  ]
+			
+			[There is no intracranial mass. The ventricles are not hydrocephalic. ]
+			
+			[Generalised involution is noted with no lobar predilection. There are multiple foci of abnormal signal in the cerebral deep white matter suggestive of a mild burden of small vessel disease.]
+			
+			
+			[Blood: Sylvian fissures, prepontine, suprasellar, posterior horns, tentorium]
+			
+			[Microhaemorrhages]
+			
+			[Contusions]
+			
+			[Hydrocephalus]
+			
+			[Dural thickening | Leptomeningeal enhancement]
+			
+			[Intracranial pressure – optic nerve sheats, pituitary size, dural thickening, brainstem slumping]
+			
+			[Old strokes/lacunar infarcts]
+			
+			[Atrophy | Small vessel disease]
+			
+			[Clivus | Pituitary | Cavernous sinus | Orbits | Hippocampi | Cerebellar tonsils]
+			
+			[Sinuses]
+			
+			[Internal auditory canals for tumours]
+			
+			
+			[Skull base – look at DWI]
+			
+			
+			CONCLUSION:
+			
+			No acute intracranial pathology is identified.
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			MRI Head: Tumour Diagnosis
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			CLINICAL INDICATION:
+			
+			FINDINGS:
+			
+			Comparison is made with the [...]
+			
+			[There has been interval placement of a [...] ventricular catheter.]
+			
+			The [enhancing | non-enhancing] [intra- | extra-axial] lesion centred [...] is again visualised. It measures approximately [...] in diameter.
+			
+			
+			[Ependymal enhancement]
+			
+			[Restricted diffusion]
+			
+			[Susceptibility – bleeding or calcification]
+			
+			[Dural tail]
+			
+			[Bony reaction]
+			
+			[No prominent vessels or flow voids seen within the lesion.]
+			
+			[Bony expansion]
+			
+			[Centrally, the lesion appears necrotic.]
+			
+			[Dural invasion]
+			
+			
+			[Words: Infiltrative | rarefaction
+			
+			
+			The mass causes significant local mass effect with [shift of midline structures | subfalcine herniation].
+			
+			There is a margin of perilesional [vasogenic oedema | abnormal signal].
+			
+			
+			[Evidence of raised intracranial pressure]
+			
+			[No contralateral or other space occupying lesions.]
+			
+			CONCLUSION:
+			
+			[High grade vs low grade]
+			
+			The appearances are most in keeping with [...]. The other differential to consider would be [...].
+			
+			
+			[Referral to neurosurgery and the neuro-oncology MDT is recommended.]
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			MRI Sella: Tumour Diagnosis
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			There is an enhancing sella mass with suprasellar extension, elevating and compressing the optic chiasm. The sella floor has been remodelled and the lesion is most likely a pituitary macroadenoma.  There is no cavernous sinus invasion currently.  The posterior pituitary bright spot is present behind the superior aspect of the tumour.
+			
+			[Signal change and location (interface of the anterior and posterior lobes)]
+			
+			[Cavernous sinus extension]
+			
+			[Optic chiasm extension]
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			MRI Head: Tumour Follow-up
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			CLINICAL INDICATION:
+			
+			
+			FINDINGS:
+			
+			Comparison is made with serial imaging dating back to [...] and most recently [...].
+			
+			There is no interval change in the overall size, morphology, or signal characteristics of the * centered on the * with extension into *.
+			
+			[Size compared to last scan]
+			
+			[Size compared to initial scan]
+			
+			[Signal characteristics]
+			
+			[Other neoplastic lesions]
+			
+			[No other brain parenchymal or extra-axial abnormality.]
+			
+			[There is no associated distortion or mass effect].
+			
+			CONCLUSION:
+			
+			[Stable imaging appearances.]
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			MRI Head: Postoperative Tumour
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			CLINICAL INDICATION:
+			
+			
+			FINDINGS:
+			
+			Comparison is made with the ...
+			
+			
+			Note is made of a ... There has been debulking of the tumour centred on ...Blood products and fluid occupy the resection bed. There is a slender extra-axial collection subjacent to the craniotomy containing gas and blood products. A small collection is also present in the superficial tissues. There is no acute cortical infarct or large haemorrhage. There is a small volume of pneumocephalus.
+			
+			
+			There are residual enhancing margins predominantly at ...
+			
+			
+			[The cavity causes mass effect, with mild contralateral shift of midline structures, which is similar to the preoperative appearances.]
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			MRI/MRA Head: Aneurysm Follow-up
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			CLINICAL INDICATION:
+			
+			
+			FINDINGS:
+			
+			Comparison is made with the previous MRI/MRA from [...].
+			
+			
+			The coiled [...] aneurysm remains excluded from the circulation. No other aneurysms are identified.
+			
+			
+			[No sac enlargement or mass effect. No brain stem odema or hydrocephalus.]
+			
+			
+			[The major intracranial arteries and dural venous sinuses return normal signal flow void.  ]
+			
+			[There is no intracranial mass. Hydrocephalus is not present. ]
+			
+			
+			[Blood: Sylvian fissures, prepontine, suprasellar, posterior horns, tentorium]
+			
+			[Microhaemorrhages]
+			
+			[Contusions]
+			
+			[Hydrocephalus]
+			
+			[Intracranial pressure – optic nerve sheath etc]
+			
+			[Old strokes]
+			
+			[Atrophy | Small vessel disease]
+			
+			[Clivus | Pituitary | Cavernous sinus | Orbits | Hippocampi | Cerebellar tonsils]
+			
+			[Sinuses]
+			
+			
+			[Skull base – look at diffusion]
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			MRI Head: Internal Auditory Meatus (IAM)
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			CLINICAL INDICATION:
+			
+			
+			
+			FINDINGS:
+			
+			
+			Unremarkable appearances of the seventh and eighth nerve complexes bilaterally.
+			
+			The inner ear structures demonstrate normal appearances.
+			
+			No mass lesions are demonstrated within the cerebellopontine angles.
+			
+			No abnormal signal evident in the petrous temporal bones.  No diffusion restriction.
+			
+			Both trigeminal nerves are unremarkable. Meckel's caves appear clear.
+			
+			The brain is normal on the T2-weighted sequence.
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			MRI Brain and Spine: Multiple Sclerosis
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			Spine
+			
+			SETUP: Compare the FLAIR initially.
+			
+			
+			CLINICAL INDICATION:
+			
+			
+			
+			FINDINGS:
+			
+			Comparison is made with the ...
+			
+			
+			[There is no interval change in the size, number or distribution of the white matter plaques seen in both cerebral hemispheres, corpus callosum and posterior fossa structures.
+			
+			[No features of recent or interval demyelination.]
+			
+			[There is a small focus of ...]
+			
+			[There is no pathological contrast enhancement.]
+			
+			[There are no infratentorial brain lesions.]
+			
+			[The optic nerves exhibit normal appearances.]
+			
+			[Optic atrophy – nerves should be same colour as white matter]
+			
+			[No generalised or progressive cerebral white matter volume loss.]
+			
+			[No other intracranial abnormality.]
+			
+			
+			[There is a plaque on the ... side of the spinal cord at ...]
+			
+			[No significant change in the number of white matter plaques throughout the spinal cord.  No significant central canal or exit foraminal narrowing.]
+			
+			
+			[Normal cervical and thoracic spinal alignment with preservation of vertebral body height and signal.  No significant spondylotic disc or facet joint changes. No central canal narrowing.]
+			
+			
+			CONCLUSION:
+			
+			[Stable lesion load.]
+			
+			[There is no evidence of progressive multifocal leukoencephalopathy.]
+			
+			[No progressive cerebral atrophy.]
+			
+			
+			2016 MAGNIMS MRI criteria
+			
+			Dissemination in space (2 of 5)
+			
+			
+			
+			*   periventricular: ≥3 lesions
+			*   cortical-juxtacortical: ≥1 lesions
+			*   infratentorial: ≥1 lesions
+			*   spinal cord: ≥1 lesions
+			*   optic nerve: ≥1 lesions
+			
+			
+			Dissemination in time (1 of 2)
+			
+			
+			
+			*   A new lesion when compared to a previous scan (irrespective of timing): T2 bright lesion and/or gadolinium-enhancing
+			*   Presence of enhancing lesion and a non-enhancing T2 bright lesion on any one scan
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			MRI Brain and Spine
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			CLINICAL INDICATION:
+			
+			
+			
+			FINDINGS:
+			
+			Comparison is made with the ...
+			
+			
+			There is no acute infarct, haemorrhage, or collection.
+			
+			
+			[The major intracranial arteries and dural venous sinuses return normal signal flow void.  ]
+			
+			[There is no intracranial mass. Hydrocephalus is not present. ]
+			
+			[Generalised involution is noted with no lobar predilection. There are multiple foci of abnormal signal in the deep white matter in keeping with a mild burden of small vessel disease.]
+			
+			
+			[Enhancement: leptomeningeal, cranial nerve]
+			
+			[Blood: Sylvian fissures, prepontine, suprasellar, posterior horns, tentorium]
+			
+			[Microhaemorrhages]
+			
+			[Contusions]
+			
+			[Hydrocephalus]
+			
+			[Intracranial pressure – optic nerve sheath etc]
+			
+			[Old strokes]
+			
+			[Atrophy | Small vessel disease]
+			
+			[Clivus | Pituitary | Cavernous sinus | Orbits | Hippocampi | Cerebellar tonsils]
+			
+			[Sinuses]
+			
+			
+			[Skull base – look at DWI]
+			
+			
+			
+			[Normal cervical and thoracic spinal alignment with preservation of vertebral body height and signal.  No significant spondylotic disc or facet joint changes. No central canal narrowing.]
+			
+			
+			CONCLUSION:
+			
+			[Stable lesion load.]
+			
+			[There is no evidence of progessive multifocal leukoencephalopathy.]
+			
+			[No progressive cerebral atrophy.]
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			MRI Spine: Fracture
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			CLINICAL INDICATION:
+			
+			
+			FINDINGS:
+			
+			Comparison is made with ...
+			
+			
+			Note is made of ...
+			
+			
+			There is fracture of [...] involving [...] columns.
+			
+			
+			[Posterior elements]
+			
+			[Retropulsion]
+			
+			[Spinal cord signal]
+			
+			[There is STIR hyperintensity in the [...] in keeping with fractures]
+			
+			[Ligaments]
+			
+			[Paraspinal soft tissue swelling]
+			
+			[Kyphosis]
+			
+			[Collections]
+			
+			[Facet subluxation/perching]
+			
+			
+			CONCLUSION:
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			MRI Spine: Postoperative  Collection
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			CLINICAL INDICATION:
+			
+			
+			FINDINGS:
+			
+			Comparison is made with ...
+			
+			
+			Note is made of [posterior fixation involving ...].
+			
+			[Fractures]
+			
+			There is a subcutaneous collection at ... measuring approximately *. The collection has thick enhancing walls and is of * signal. It extends in to *. Surrounding tissue abnormal signal and enhancement is consistent with oedema.
+			
+			
+			[Compressive spinal collections]
+			
+			[Enhancement of the bone/tissues/dura – this may be postsurgical]
+			
+			[Spinal cord signal]
+			
+			[Epidural collections]
+			
+			
+			CONCLUSION:
+			
+			
+			Neurosurgical review is recommended.
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			MRI Cervical Spine
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			SETUP: 2 panes of vertical, with sag/axials up. Turn localisor on. Spine labelling.
+			
+			
+			CLINICAL INDICATION:
+			
+			
+			FINDINGS:
+			
+			Comparison is made with the ...
+			
+			
+			Note is made of ...
+			
+			
+			[The cervical spine is kyphotic.]
+			
+			
+			C1-C2:a
+			
+			
+			C2-C3:a
+			
+			
+			C3-C4:a
+			
+			
+			C4-C5:a
+			
+			
+			C5-C6:a
+			
+			
+			C6-C7:a
+			
+			
+			C7-T1:a
+			
+			
+			[At * and * there is disc degeneration and narrowing the disc spaces with disc bulging and osteophytes.  There is severe bilateral foraminal narrowing at both levels.  The left-sided foramina are narrower, particularly at *.]
+			
+			[Vertebral body and disc height]
+			
+			[Spondylolisthesis]
+			
+			[Scoliosis]
+			
+			[Red marrow reconversion]
+			
+			[Vertebral arteries]
+			
+			[Collections]
+			
+			[Ligaments]
+			
+			[Chiari]
+			
+			[Spinal cord signal]
+			
+			[Thyroid]
+			
+			[Multilevel facetal degeneration is evident. The bone marrow and imaged spinal cord returns normal signal. Normal appearances of the cervicomedullaryjunction.No abnormalities are demonstrated on the planning sequences.
+			
+			[Normal cervical spine alignment with preservation of vertebral body height and signal.  No spondylotic disc or facet joint changes.  No central canal, lateral recess or exit foraminal narrowing.  No intramedullary signal change seen in the cervical cord.]
+			
+			
+			CONCLUSION:
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			MRI Lumbosacral Spine
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			2 panes of vertical, with sag/axialsup.Turnlocalisor on.Spine labelling.
+			
+			
+			CLINICAL INDICATION:
+			
+			
+			FINDINGS:
+			
+			Comparison is made withthe ...
+			
+			
+			[Scoliosis]
+			
+			
+			[There is normal formation and segmentation of the lumbosacralspine. ]
+			
+			[There is a transitional lumbosacral junction. I have assumed the lowest completely developed disc space is *. ]
+			
+			[Iliolumbar ligament at L5 | Fully formed S1-S2 disc |
+			
+			
+			Note is made of ...
+			
+			
+			[There is degeneration of the discs from * to * which are dehydrated with disc bulging and osteophytes].
+			
+			
+			[Follow all the nerves along their entire course overcalling: foraminal narrowing including flaval | contacting | displacing | impingement ! indentation of the theca ]
+			
+			
+			T12-L1: A ... causes ... There is loss of disc height.
+			
+			
+			L1-L2: ... causes ... There is loss of disc height.
+			
+			
+			L2-L3: A ... causes ... There is loss of disc height.
+			
+			
+			L3-L4: A ... causes ... There is loss of disc height.
+			
+			
+			L4-L5: A ... causes ... There is loss of disc height.
+			
+			
+			L5-S1: A ... causes ... There is loss of disc height.
+			
+			
+			[a broad based disc bulge in addition to flaval thickening narrows the * subarticular zone contacting but not compressing the transiting* root.]
+			
+			
+			[Paraspinal mass]
+			
+			[DAVF]
+			
+			[Fractures]
+			
+			[Spondylolisthesis]
+			
+			[Annular fissure]
+			
+			[Collections]
+			
+			[Pars defects]
+			
+			[Diffuse malignant infiltration – disc to vertebral body signal]
+			
+			[Paraspinalmusclesinc masses]
+			
+			[Bottom of spine]
+			
+			[Vertebral height and alignment are maintained.]
+			
+			
+			[Multilevel facetal degeneration is evident particularly at *.]
+			
+			
+			The bone marrow and imaged lower spinal cord return normal signal. No abnormalities are demonstrated on the localiser sequences.
+			
+			[Heterogeneous bone marrow signal probably represents red marrow reconversion.]
+			
+			
+			[Normal lumbar spine alignment with preservation of vertebral body height and signal.  No spondylotic disc or facet joint changes.  No central canal, lateral recess or exit foraminal narrowing.  No intramedullary signal change seen in the low cord.]
+			
+			
+			CONCLUSION:
+			
+			Foraminal stenosis:
+			
+			[https://www.ajronline.org/doi/full/10.2214/AJR.09.2772](https://www.ajronline.org/doi/full/10.2214/AJR.09.2772)
+			
+			grade 1 (mild) refers to mild foraminal stenosis showing perineural fat obliteration in the two opposing directions, vertical or transverse;
+			
+			grade 2 (mod) refers to moderate foraminal stenosis showing perineural fat obliteration in the four directions without morphologic change, both vertical and transverse directions; and
+			
+			grade 3 (sev) refers to severe foraminal stenosis showing nerve root collapse or morphologic change.
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			Seizure Checklist
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			No mass lesion or hydrocephalus.
+			
+			No significant white matter lesions.
+			
+			No atrophy.
+			
+			No focal cortical abnormality.
+			
+			No malformation cortical development, vascular malformation or old damage.
+			
+			No temporal lobe abnormality hippocampal sclerosis].
+			
+			
+			[The hippocampi are normal. Normal gyral pattern. No neuromigrational abnormalities are detected. ]
+			
+			[No localising or lateralising foci are identified.]
+			
+			
+			[Medial temporal sclerosis: also look for 2ndry changes mammilary bodies, fornix, thalamus]
+			
+			[Rest of the temporal lobe/cerebral volume]
+			
+			[Tumour: DNET, ganglio]
+			
+			[Blood]
+			
+			[Cortical dysplasia: thickening, blurring]
+			
+			[Neuromigrational {polymicrogyria, heterotopic white matter}]
+			
+			[Encephaloceles: Anterior temporal lobe]
+			
+			[Hamartoma of tuber cinereum]
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			Headache Checklist
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			[High IC pressure: Venous sinuses, Pit fossa - arachnoid herniation, Paranasal sinuses, Optic nerve abnormalities]
+			
+			[Low IC pressure: Sudural effusions, Dural enhancement, Midbrain descent]
+			
+			[Aneurysm, dissection]
+			
+			[Pit apoplexy]
+			
+			[SOL]
+			
+			[Colloid cyst]
+			
+			[Chiari]
+			
+			[Blood]
+			
+			[Paranasal sinus]
+			
+			[Children: mention craniocerv junction]
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			Dementia Checklist
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			[Lobar atrophy]
+			
+			[Hippocampal atrophy]
+			
+			[Midbrain | Pons | Cerebellar ]
+			
+			[White matter lesions, microbleeds]
+			
+			[Infarcts]
+			
+			
+			[Alzheimers: Early - hippocampus and the medial temporal lobe, Late - widespread atrophy. ]
+			
+			[Vascular dementia: Small vessel disease, lacunes, strategic infarcts. ]
+			
+			[Frontotemporal Lobar Degeneration (FTLD): Frontal and temporal lobes atrophy, may be asymmetric. Behavioural and language subtypes. Small caudate heads tend to be reduced in size in behavioural. ]
+			
+			[Cerebral Amyloid Angiopathy (CAA): Microhaemorrhages]
+			
+			[CADASIL: Confluent white matter hyperintensities in the frontal and especially anterior temporal lobes in combination with (lacunar) infarcts and microbleeds are seen on imaging.]
+			
+			[PSP: Concave upper border of midbrain (hummingbird)]
+			
+			[MSA-C: Cerebellar atrophy. Hot cross bun pontinehyperintensity.]
+			
+			[MSA-P: Low T2 dorsolateral putamen and lateral to putamen.]
+			
+			[Huntingtons: atrophy of caudate. ]
+			
+			
+			[The dural venous sinuses and major intracranial arteries and veins return normal signal flow void.  ]
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			MRI Brain: Paediatric Developmental Delay
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			CLINICAL INDICATION:
+			
+			
+			
+			FINDINGS:
+			
+			There are no structural abnormalities, mass lesions, or vascular pathology.
+			
+			The gyral appearances are normal.
+			
+			No heterotopic parenchymal tissue is present.
+			
+			The corpus callosum is well formed.
+			
+			Posterior fossa contents are normal. There is no hindbrain herniation.
+			
+			The hippocampal, pituitary and parasellar areas are normal.
+			
+			The white matter is appropriately myelinated.
+			
+			
+			CONCLUSION:
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			Radiograph: Nasogastric Tube
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			RADIOGRAPH FOR THE PURPOSE OF CONFIRMING NG TUBE PLACEMENT
+			
+			Technical note: AP erect film.
+			
+			Does the nasogastric tube bisect the carina (yes/no)? yes
+			
+			Does the tube project over the stomach (yes/no)? yes
+			
+			Approximate tip position:
+			
+			Other FINDINGS:
+			
+			PLEASE NOTE THE FINAL DECISION OF WHETHER IT IS SAFE TO COMMENCE FEEDING LIES WITH THE CLINICAL TEAM.
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			Chest Radiograph
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			CLINICAL INDICATION:
+			
+			
+			FINDINGS:
+			
+			Comparison made with the study dated x. AP erect radiograph. The lungs and pleural spaces are clear. The cardiomediastinal appearances are normal. There is no free subdiaphragmatic gas.
+			
+			
+			The abdominal appearances are normal.
+			
+			
+			There are no destructive bony lesions.
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			Lumbar Spine Radiograph
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			CLINICAL INDICATION:
+			
+			
+			FINDINGS:
+			
+			There is multilevel degenerative disease. Disc space narrowing is evident at [x] with consequent endplate change. There is facet disease, most florid at [x]. The visualised abdominal aorta is calcified.
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			Cervical Spine Radiograph: ACDF
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			CLINICAL INDICATION:
+			
+			
+			FINDINGS:
+			
+			Comparison made with the radiograph of x. Anterior screw fixation and intervertebral cage at x is noted. The implants appear appropriately positioned and intact. No periprosthetic complications are demonstrated. Spinal alignment is maintained. The appearances are stable.
+			
+			
+			Fusion
+			Disc space narrowing
+			Subluxation
+			Endplate change
+			Uncovertebral osteophytes  (posterior)
+			Marginal anterior vertebral body osteophytes
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			Spine Radiograph: Postoperative Rod and Screw
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			CLINICAL INDICATION:
+			
+			
+			FINDINGS:
+			
+			Comparison is made to the previous radiograph dated x. Instrumented posterior fusion surgery is seen involving the x vertebral segments with bilateral transpedicular screws and dorsal stabilisation rods in situ. An x intervertebral disc prosthetic device is present. The metalwork is intact. There is no fracture, periprostheticlucency, or other periprosthetic complication. The vertebral alignment is stable. Mild multilevel degenerative changes are again noted. Stable appearances of the remainder of the examination.
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			Radiograph Series: Ventriculoperitoneal Shunt
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			CLINICAL INDICATION:
+			
+			
+			FINDINGS:
+			
+			Skull: A ventricular catheter is projected over the parietal bone with intact tubing descending vertically over the neck. The appearances of the skull and visualised cervical spine are normal.
+			
+			
+			Chest: Intact tubing passes inferiorly projected over the right hemithorax. The cardiomediastinal contour is normal. It is difficult to follow the tubing as it passes over the level of the diaphragm.
+			
+			
+			Abdomen: Intact tubing is seen with the tip projected over the epigastrium. Normal radiographic abdominal appearances.
+			
+			
+			CONCLUSION: The tubing appears in continuity with the ventricular catheter and there is no kinking throughout its course.
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+		</NAME>
+		<TYPE>
+			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
 		</TEXT>
@@ -615,7 +2272,7 @@
 		<NAME>
 		</NAME>
 		<TYPE>
-			Angiography
+			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
 		</TEXT>
