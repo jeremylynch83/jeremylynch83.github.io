@@ -49,20 +49,33 @@
 
 		<b-container>
 			<p></p>
-			<h2>Search for Report: </h2>
 
-			<vue-bootstrap-typeahead :data="templates" :serializer="item => item.name" @hit="selectTemplate($event)">
-			</vue-bootstrap-typeahead>
-			<p></p>
 
-			<h2>Text: </h2>
-			<b-button variant="success" @click="copyReport()">Copy Text</b-button>
+			<b-form-group label="Search for template:">
+				<vue-bootstrap-typeahead :data="templates" :serializer="item => item.name"
+					@hit="selectTemplate($event)">
+				</vue-bootstrap-typeahead>
+				<p></p>
+			</b-form-group>
 
-			<template>
-				<div>
-					<b-form-textarea id="report_input" plaintext :value="reportText" rows="15"></b-form-textarea>
-				</div>
-			</template>
+
+			<b-form-group>
+				<b-button variant="success" @click="copyReport()">Copy Text</b-button>
+			</b-form-group>
+
+			<!--<b-form-group label="Clinical Indication:">
+				<b-form-input v-model="text" placeholder="Enter text "></b-form-input>
+			</b-form-group>-->
+
+			<b-form-group label="Report text:">
+				<template>
+					<div>
+						<b-form-textarea id="report_input" plaintext :value="reportText" rows="15"></b-form-textarea>
+					</div>
+				</template>
+			</b-form-group>
+
+
 		</b-container>
 
 
