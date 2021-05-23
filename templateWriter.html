@@ -16,12 +16,9 @@
 	<!-- Required scripts -->
 	<script src="js/vue.js"></script>
 	<script src="js/bootstrap-vue.js"></script>
-	<script src="js/bootstrap-vue-icons.min.js"></script>
 	<!-- Type Ahead Library -->
 	<script src="js/VueBootstrapTypeahead.umd.min.js"></script>
-	<!-- Device Library -->
-	<script src="deviceList.js"></script>
-	<script src="templateList.js"></script>
+
 
 
 </head>
@@ -59,6 +56,7 @@
 			<p></p>
 
 			<h2>Report text: </h2>
+			<b-button variant="success" @click="copyReport()">Copy Text</b-button>
 
 			<template>
 				<div>
@@ -140,6 +138,20 @@
 				},
 
 				created: function () {
+
+				},
+
+				copyReport: function () {
+					var copyText = this.reportText;
+
+					console.log(this.reportText);
+					const listener = function (ev) {
+						ev.preventDefault();
+						ev.clipboardData.setData('text/plain', copyText);
+					};
+					document.addEventListener('copy', listener);
+					document.execCommand('copy');
+					document.removeEventListener('copy', listener);
 
 				}
 			}
