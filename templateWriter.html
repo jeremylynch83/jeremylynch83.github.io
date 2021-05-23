@@ -6,7 +6,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-	<title>NeuroTool: Neurointervention Device Sizer</title>
+	<title>NeuroTool: Structured Reports</title>
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
 	<link type="text/css" rel="stylesheet" href="css/bootstrap-vue.css" />
 	<link href="css/VueBootstrapTypeahead.css" rel="stylesheet" />
@@ -49,13 +49,13 @@
 
 		<b-container>
 			<p></p>
-			<h2>Template entry: </h2>
+			<h2>Search for Report: </h2>
 
 			<vue-bootstrap-typeahead :data="templates" :serializer="item => item.name" @hit="selectTemplate($event)">
 			</vue-bootstrap-typeahead>
 			<p></p>
 
-			<h2>Report text: </h2>
+			<h2>Text: </h2>
 			<b-button variant="success" @click="copyReport()">Copy Text</b-button>
 
 			<template>
