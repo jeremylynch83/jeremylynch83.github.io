@@ -2,14 +2,15 @@
 <ALL>
 	<TEMPLATE>
 		<NAME>
-			Aneurysm ruptured
+			Aneurysm: Ruptured
 		</NAME>
 		<TYPE>
 			Angiography
 		</TYPE>
-		<TEXT>
+		<TITLE>
 			Endovascular Repair of a Ruptured [location] Aneurysm by [procedure type]
-			
+		</TITLE>
+		<TEXT>
 			Staff:
 			Assists:
 			Anesthesia:

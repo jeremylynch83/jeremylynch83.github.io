@@ -1,8 +1,16 @@
+<!-- TODO
+
+	* Insert Snippets thing
+	* Associated info display
+	* Probably work on spine first
+	* Copy templates from radReport
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -18,9 +26,6 @@
 	<script src="js/bootstrap-vue.js"></script>
 	<!-- Type Ahead Library -->
 	<script src="js/VueBootstrapTypeahead.umd.min.js"></script>
-
-
-
 </head>
 
 <body>
@@ -120,10 +125,18 @@
 						"NAME")[0].innerHTML.replace(/\t/g, '');
 					var t_text = xmlDoc.getElementsByTagName("TEMPLATE")[i].getElementsByTagName(
 						"TEXT")[0].innerHTML.replace(/\t/g, '');
+					var t_title = xmlDoc.getElementsByTagName("TEMPLATE")[i].getElementsByTagName(
+						"TITLE")[0];
+					if (t_title == null) {
+						t_title = t_name;
+					} else {
+						t_title = t_title.innerHTML.replace(/\t/g, '');
+					}
 
 					temp.push({
 						name: t_name,
-						text: t_text
+						text: t_text,
+						title: t_title
 					});
 
 				}
