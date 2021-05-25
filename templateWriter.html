@@ -68,9 +68,10 @@
 				<b-button variant="success" @click="copyReport()">Copy Text</b-button>
 			</b-form-group>
 
-			<!--<b-form-group label="Clinical Indication:">
-				<b-form-input v-model="text" placeholder="Enter text "></b-form-input>
-			</b-form-group>-->
+			<b-form-group label="Clinical Indication:">
+				<b-form-input v-model="clin_indication" @update="writeTemplate()" placeholder="Enter text ">
+				</b-form-input>
+			</b-form-group>
 
 			<b-form-group label="Report text:">
 				<template>
@@ -127,7 +128,7 @@
 						"TEXT")[0].innerHTML.replace(/\t/g, '');
 					var t_title = xmlDoc.getElementsByTagName("TEMPLATE")[i].getElementsByTagName(
 						"TITLE")[0];
-					if (t_title == null) {
+					if (t_title == null || t_title == "") {
 						t_title = t_name;
 					} else {
 						t_title = t_title.innerHTML.replace(/\t/g, '');
@@ -155,12 +156,24 @@
 			el: '#app',
 			data: {
 				templates: loadXML(),
-				reportText: ""
+				reportText: "",
+				clin_indication: "",
+				template: ""
 			},
 
 			methods: {
 				selectTemplate: function (event) {
-					this.reportText = event.text;
+					this.template = event;
+					this.writeTemplate();
+
+				},
+				writeTemplate: function () {
+					this.reportText = this.template.title;
+					if (this.clin_indication != "") {
+						this.reportText += "\nINDICATION: " + this.clin_indication + "\n";
+					}
+
+					this.reportText += this.template.text;
 				},
 
 				created: function () {

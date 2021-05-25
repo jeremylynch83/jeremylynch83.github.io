@@ -4,6 +4,8 @@
 		<NAME>
 			Aneurysm: Ruptured
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Angiography
 		</TYPE>
@@ -34,12 +36,13 @@
 		<NAME>
 			Aneurysm unruptured
 		</NAME>
+		<TITLE>
+			Endovascular Repair of an Unruptured [location] Aneurysm by [procedure type]
+		</TITLE>
 		<TYPE>
 			Angiography
 		</TYPE>
 		<TEXT>
-			Endovascular Repair of an Unruptured [location] Aneurysm by [procedure type]
-			
 			Staff:
 			Assists:
 			Anesthesia:
@@ -63,6 +66,9 @@
 		<NAME>
 			Diagnostic Angiogram
 		</NAME>
+		<TITLE>
+			Diagnostic Angiogram
+		</TITLE>
 		<TYPE>
 			Angiography
 		</TYPE>
@@ -104,12 +110,13 @@
 		<NAME>
 			Dural Fistula Embolization
 		</NAME>
+		<TITLE>
+			Endovascular Repair of Cerebral Dural Arteriovenous Fistula
+		</TITLE>
 		<TYPE>
 			Angiography
 		</TYPE>
 		<TEXT>
-			Endovascular Repair of Cerebral Dural Arteriovenous Fistula
-			
 			Staff:
 			
 			Assists: Dr J Lynch
@@ -135,6 +142,9 @@
 		<NAME>
 			Intracranial Atheroma Disease (ICAD) Treatment
 		</NAME>
+		<TITLE>
+			Intracranial Atheroma Disease (ICAD) Treatment
+		</TITLE>
 		<TYPE>
 			Angiography
 		</TYPE>
@@ -170,12 +180,13 @@
 		<NAME>
 			Carotid Stenting
 		</NAME>
+		<TITLE>
+			Endovascular Carotid Artery Stenting
+		</TITLE>
 		<TYPE>
 			Angiography
 		</TYPE>
 		<TEXT>
-			Endovascular Carotid Artery Stenting
-			
 			Staff:
 			
 			Assists: Dr J Lynch
@@ -201,12 +212,13 @@
 		<NAME>
 			Transverse Sinus Stenting
 		</NAME>
+		<TITLE>
+			Endovascular Stenting of Transverse Sinus
+		</TITLE>
 		<TYPE>
 			Angiography
 		</TYPE>
 		<TEXT>
-			Endovascular Stenting of Transverse Sinus
-			
 			Staff: Dr V Pereira
 			
 			Assists: Dr J Lynch
@@ -261,12 +273,13 @@
 		<NAME>
 			Epistaxis Treatment
 		</NAME>
+		<TITLE>
+			Cerebral Angiography and Epistaxis Embolisation
+		</TITLE>
 		<TYPE>
 			Angiography
 		</TYPE>
 		<TEXT>
-			DIAGNOSTIC CEREBRAL ANGIOGRAM AND EPISTAXIS EMBOLIZATION
-			
 			Staff: Dr P Nicholson
 			
 			Assists: Dr J Lynch
@@ -294,12 +307,13 @@
 		<NAME>
 			Middle Meningeal Artery Embolisation
 		</NAME>
+		<TITLE>
+			DIAGNOSTIC CEREBRAL ANGIOGRAM AND MMA EMBOLIZATION FOR SUBDURAL HAEMATOMA
+		</TITLE>
 		<TYPE>
 			Angiography
 		</TYPE>
 		<TEXT>
-			DIAGNOSTIC CEREBRAL ANGIOGRAM AND MMA EMBOLIZATION FOR SUBDURAL HAEMATOMA
-			
 			Staff: Dr P Nicholson
 			
 			Assists: Dr J Lynch
@@ -325,12 +339,13 @@
 		<NAME>
 			CSF Venous Fistula Embolisation
 		</NAME>
+		<TITLE>
+			Embolization of Spinal CSF-venous fistula
+		</TITLE>
 		<TYPE>
 			Angiography
 		</TYPE>
 		<TEXT>
-			Embolization of Spinal CSF-venous fistula
-			
 			Staff:
 			
 			Assists: Dr J Lynch
@@ -358,6 +373,8 @@
 		<NAME>
 			Anerysm description
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Angiography
 		</TYPE>
@@ -380,6 +397,8 @@
 		<NAME>
 			Fistula Description
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Angiography
 		</TYPE>
@@ -401,6 +420,8 @@
 		<NAME>
 			AVM Description
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Angiography
 		</TYPE>
@@ -444,12 +465,13 @@
 		<NAME>
 			Stroke Thrombectomy
 		</NAME>
+		<TITLE>
+			Stroke Thrombectomy
+		</TITLE>
 		<TYPE>
 			Angiography
 		</TYPE>
 		<TEXT>
-			STROKE THROMBECTOMY
-			
 			Staff:
 			
 			Assists:
@@ -485,12 +507,13 @@
 		<NAME>
 			Spinal Angiogram
 		</NAME>
+		<TITLE>
+			Spinal Angiogram
+		</TITLE>
 		<TYPE>
 			Angiography
 		</TYPE>
 		<TEXT>
-			SPINAL ANGIOGRAM
-			
 			CLINICAL HISTORY:
 			
 			TECHNIQUE:
@@ -513,12 +536,13 @@
 		<NAME>
 			Lumbar Puncture
 		</NAME>
+		<TITLE>
+			Lumbar puncture
+		</TITLE>
 		<TYPE>
 			Angiography
 		</TYPE>
 		<TEXT>
-			Lumbar puncture
-			
 			Clinical information:
 			
 			Technique:
@@ -540,12 +564,13 @@
 		<NAME>
 			Nerve Root Injection
 		</NAME>
+		<TITLE>
+			Nerve Root Injection
+		</TITLE>
 		<TYPE>
 			Angiography
 		</TYPE>
 		<TEXT>
-			CLINICAL INDICATION:
-			
 			**Procedure**:
 			
 			Target nerve root:
@@ -559,12 +584,13 @@
 		<NAME>
 			Dynamic Myelography
 		</NAME>
+		<TITLE>
+			Dynamic Myelography
+		</TITLE>
 		<TYPE>
 			Angiography
 		</TYPE>
 		<TEXT>
-			MYELOGRAM
-			
 			CLINICAL: [...]-year-old female with [...]
 			
 			COMPARISON STUDY:
@@ -592,12 +618,13 @@
 		<NAME>
 			CT Myelography
 		</NAME>
+		<TITLE>
+			CT Myelography
+		</TITLE>
 		<TYPE>
 			Angiography
 		</TYPE>
 		<TEXT>
-			CLINICAL INDICATION:
-			
 			PROCEDURE:
 			
 			Written consent obtained. Local anaesthesia infiltration: 10 ml of 1% lidocaine. Under fluoroscopic guidance a spinal needle was inserted in to the CSF space at the L4/5 level. 12 ml of Omnipaque 240 was injected. After patient positioning maneuvers a CT was performed. There were no immediate complications.
@@ -607,12 +634,12 @@
 		<NAME>
 			Blank Report
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			CLINICAL INDICATION:
-			
 			FINDINGS:
 			
 			Comparison is made with the ...
@@ -623,6 +650,8 @@
 	<TEMPLATE>
 		<NAME>
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
@@ -633,12 +662,12 @@
 		<NAME>
 			CT Head: Acute
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			CLINICAL INDICATION:
-			
 			FINDINGS:
 			
 			Comparison is made with the ...
@@ -695,13 +724,12 @@
 		<NAME>
 			CT Head: Non-Acute
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			CLINICAL INDICATION:
-			
-			
 			FINDINGS:
 			
 			Comparison is made with the ...
@@ -769,12 +797,12 @@
 		<NAME>
 			CT Head and Neck: Angiogram
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			CLINICAL INDICATION:
-			
 			FINDINGS:
 			
 			Comparison is made with ...
@@ -867,12 +895,12 @@
 		<NAME>
 			CT Head: Subarachnoid haemorrhage
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			CLINICAL INDICATION:
-			
 			FINDINGS:
 			
 			Comparison is made with the ...
@@ -934,14 +962,12 @@
 		<NAME>
 			CT Head: Postoperative Deep Brain Stimulation (DBS)
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			CLINICAL INDICATION:
-			
-			
-			
 			FINDINGS:
 			
 			Comparison is made with the ...
@@ -984,12 +1010,12 @@
 		<NAME>
 			CT Postoperative Subdural Evacuation
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			CLINICAL INDICATION:
-			
 			FINDINGS:
 			
 			Comparison is made with the previous CT of ...
@@ -1002,13 +1028,12 @@
 		<NAME>
 			CT Head: Haemorrhage
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			CLINICAL INDICATION:
-			
-			
 			FINDINGS:
 			
 			Comparison is made with the CT of ...
@@ -1039,6 +1064,8 @@
 		<NAME>
 			CT Orbits: Cellulitis
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
@@ -1056,14 +1083,12 @@
 		<NAME>
 			CT Brain: Neurodegenerative
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			CLINICAL INDICATION:
-			
-			
-			
 			FINDINGS:
 			
 			Comparison is made with the ...
@@ -1147,6 +1172,8 @@
 		<NAME>
 			ASPECT Score
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
@@ -1179,13 +1206,12 @@
 		<NAME>
 			CT Cervical Spine
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			CLINICAL INDICATION:
-			
-			
 			FINDINGS:
 			
 			Comparison is made with the ...
@@ -1245,12 +1271,12 @@
 		<NAME>
 			CT Lumbar Spine
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			CLINICAL INDICATION:
-			
 			FINDINGS:
 			
 			Comparison is made with ...
@@ -1289,12 +1315,12 @@
 		<NAME>
 			CT Thoracic Spine
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			CLINICAL INDICATION:
-			
 			FINDINGS:
 			
 			Comparison is made with ...
@@ -1314,13 +1340,15 @@
 		<NAME>
 			MRI Head
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
 			MRI Head
 			
-			CLINICAL INDICATION:
+			
 			
 			
 			FINDINGS:
@@ -1373,12 +1401,12 @@
 		<NAME>
 			MRI Head: Tumour Diagnosis
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			CLINICAL INDICATION:
-			
 			FINDINGS:
 			
 			Comparison is made with the [...]
@@ -1433,6 +1461,8 @@
 		<NAME>
 			MRI Sella: Tumour Diagnosis
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
@@ -1450,13 +1480,12 @@
 		<NAME>
 			MRI Head: Tumour Follow-up
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			CLINICAL INDICATION:
-			
-			
 			FINDINGS:
 			
 			Comparison is made with serial imaging dating back to [...] and most recently [...].
@@ -1484,13 +1513,12 @@
 		<NAME>
 			MRI Head: Postoperative Tumour
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			CLINICAL INDICATION:
-			
-			
 			FINDINGS:
 			
 			Comparison is made with the ...
@@ -1509,13 +1537,12 @@
 		<NAME>
 			MRI/MRA Head: Aneurysm Follow-up
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			CLINICAL INDICATION:
-			
-			
 			FINDINGS:
 			
 			Comparison is made with the previous MRI/MRA from [...].
@@ -1558,14 +1585,12 @@
 		<NAME>
 			MRI Head: Internal Auditory Meatus (IAM)
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			CLINICAL INDICATION:
-			
-			
-			
 			FINDINGS:
 			
 			
@@ -1586,6 +1611,8 @@
 		<NAME>
 			MRI Brain and Spine: Multiple Sclerosis
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
@@ -1595,7 +1622,7 @@
 			SETUP: Compare the FLAIR initially.
 			
 			
-			CLINICAL INDICATION:
+			
 			
 			
 			
@@ -1665,13 +1692,12 @@
 		<NAME>
 			MRI Brain and Spine
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			CLINICAL INDICATION:
-			
-			
 			FINDINGS:
 			
 			Comparison is made with the ...
@@ -1722,13 +1748,12 @@
 		<NAME>
 			MRI Spine: Fracture
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			CLINICAL INDICATION:
-			
-			
 			FINDINGS:
 			
 			Comparison is made with ...
@@ -1766,13 +1791,12 @@
 		<NAME>
 			MRI Spine: Postoperative  Collection
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			CLINICAL INDICATION:
-			
-			
 			FINDINGS:
 			
 			Comparison is made with ...
@@ -1804,6 +1828,8 @@
 		<NAME>
 			MRI Cervical Spine
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
@@ -1811,7 +1837,7 @@
 			SETUP: 2 panes of vertical, with sag/axials up. Turn localisor on. Spine labelling.
 			
 			
-			CLINICAL INDICATION:
+			
 			
 			
 			FINDINGS:
@@ -1880,6 +1906,8 @@
 		<NAME>
 			MRI Lumbosacral Spine
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
@@ -1887,7 +1915,7 @@
 			2 panes of vertical, with sag/axialsup.Turnlocalisor on.Spine labelling.
 			
 			
-			CLINICAL INDICATION:
+			
 			
 			FINDINGS:
 			
@@ -1968,6 +1996,8 @@
 		<NAME>
 			Seizure Checklist
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
@@ -2011,6 +2041,8 @@
 		<NAME>
 			Headache Checklist
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
@@ -2040,6 +2072,8 @@
 		<NAME>
 			Dementia Checklist
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
@@ -2081,14 +2115,12 @@
 		<NAME>
 			MRI Brain: Paediatric Developmental Delay
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			CLINICAL INDICATION:
-			
-			
-			
 			FINDINGS:
 			
 			There are no structural abnormalities, mass lesions, or vascular pathology.
@@ -2113,6 +2145,8 @@
 		<NAME>
 			Radiograph: Nasogastric Tube
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
@@ -2136,13 +2170,12 @@
 		<NAME>
 			Chest Radiograph
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			CLINICAL INDICATION:
-			
-			
 			FINDINGS:
 			
 			Comparison made with the study dated x. AP erect radiograph. The lungs and pleural spaces are clear. The cardiomediastinal appearances are normal. There is no free subdiaphragmatic gas.
@@ -2158,13 +2191,12 @@
 		<NAME>
 			Lumbar Spine Radiograph
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			CLINICAL INDICATION:
-			
-			
 			FINDINGS:
 			
 			There is multilevel degenerative disease. Disc space narrowing is evident at [x] with consequent endplate change. There is facet disease, most florid at [x]. The visualised abdominal aorta is calcified.
@@ -2174,13 +2206,12 @@
 		<NAME>
 			Cervical Spine Radiograph: ACDF
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			CLINICAL INDICATION:
-			
-			
 			FINDINGS:
 			
 			Comparison made with the radiograph of x. Anterior screw fixation and intervertebral cage at x is noted. The implants appear appropriately positioned and intact. No periprosthetic complications are demonstrated. Spinal alignment is maintained. The appearances are stable.
@@ -2198,13 +2229,12 @@
 		<NAME>
 			Spine Radiograph: Postoperative Rod and Screw
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			CLINICAL INDICATION:
-			
-			
 			FINDINGS:
 			
 			Comparison is made to the previous radiograph dated x. Instrumented posterior fusion surgery is seen involving the x vertebral segments with bilateral transpedicular screws and dorsal stabilisation rods in situ. An x intervertebral disc prosthetic device is present. The metalwork is intact. There is no fracture, periprostheticlucency, or other periprosthetic complication. The vertebral alignment is stable. Mild multilevel degenerative changes are again noted. Stable appearances of the remainder of the examination.
@@ -2214,13 +2244,12 @@
 		<NAME>
 			Radiograph Series: Ventriculoperitoneal Shunt
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			CLINICAL INDICATION:
-			
-			
 			FINDINGS:
 			
 			Skull: A ventricular catheter is projected over the parietal bone with intact tubing descending vertically over the neck. The appearances of the skull and visualised cervical spine are normal.
@@ -2238,6 +2267,8 @@
 	<TEMPLATE>
 		<NAME>
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
@@ -2247,6 +2278,8 @@
 	<TEMPLATE>
 		<NAME>
 		</NAME>
+		<TITLE>
+		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
