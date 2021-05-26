@@ -40,8 +40,6 @@
 		<NAME>
 			Aneurysm: Ruptured
 		</NAME>
-		<TITLE>
-		</TITLE>
 		<TYPE>
 			Angiography
 		</TYPE>
@@ -706,7 +704,7 @@
 	</TEMPLATE>
 	<TEMPLATE>
 		<NAME>
-			CT Head: Non-Acute
+			CT Brain: Non-Acute
 		</NAME>
 		<TITLE>
 		</TITLE>

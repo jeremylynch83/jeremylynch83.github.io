@@ -116,7 +116,7 @@
 			xhttp.open("GET", "http://neurotool.org/templates.xml", true);
 			xhttp.send();
 
-			function myFunction(xml) {
+			function myFunction(xml) { // Load array of report templates
 				var xml_array = [];
 				var xmlDoc = xml.responseXML;
 				var templates = xmlDoc.getElementsByTagName("TEMPLATE");
@@ -139,7 +139,7 @@
 					});
 				}
 
-				var snip_array = [];
+				var snip_array = []; // Load array of sniplets (parts of report templates)
 				var snips = xmlDoc.getElementsByTagName("SNIP");
 				for (var i = 0; i < snips.length; i++) {
 					var t_name = xmlDoc.getElementsByTagName("SNIP")[i].getElementsByTagName(
@@ -152,9 +152,9 @@
 					});
 				}
 
+				// Substitute snips in to the reports
 				var symbol_start = '{{';
 				var symbol_end = '}}';
-
 				temp.forEach(item => {
 					var text = item.text;
 					var n = 0 - symbol_start.length;
@@ -175,6 +175,25 @@
 					}
 					while (n != -1);
 				});
+
+				// Deal with the comments
+				var symbol_start = '/*';
+				var symbol_end = '*/';
+				temp.forEach(item => {
+					var text = item.text;
+					var n = 0 - symbol_start.length;
+					do {
+						n = text.indexOf(symbol_start, n + symbol_start.length);
+						if (n != -1) {
+							end = text.indexOf(symbol_end, n);
+							var comment_text = text.substr(n + 2, end - n - 2);
+							console.log(comment_text);
+
+						}
+					}
+					while (n != -1);
+				});
+
 			}
 
 			return temp;
@@ -226,7 +245,7 @@
 						this.reportText += "\nINDICATION: " + this.clin_indication + "\n";
 					}
 
-					this.reportText += this.template.text;
+					this.reportText += this.template.text.replace(/^\s*[\r\n]/gm, '');;
 				},
 
 				created: function () {
