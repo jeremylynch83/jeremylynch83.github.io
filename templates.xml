@@ -17,18 +17,13 @@
 	</TEMPLATE>
 	<TEMPLATE>
 		<NAME>
-			Test2
+			Angiography technique
 		</NAME>
-		<TITLE>
-		</TITLE>
 		<TYPE>
 			Angiography
 		</TYPE>
-		<TITLE>
-			TEST
-		</TITLE>
 		<TEXT>
-			PASTED TEXT HERE: TEST2
+			Informed consent was obtained from the patient (including risk of stroke and groin haemorrhage).10 ml of 1% lidocaine was infiltrated into the puncture site superficial tissues. A right common femoral artery puncture was performed under ultrasound guidance. A 5 Fr sheath was inserted. A 5 Fr Berenstein catheter was used to perform digital subtraction angiography. Injections were performed of the right vertebral artery, right internal carotid artery, right external carotid artery, left internal carotid artery, left external carotid artery, left vertebral artery. [3D flat panel tomographic angiography was performed via the ...]. A 6 Fr Angioseal was used to achieve groin haemostasis at the end of the procedure. There were no periprocedural complications. The study was reviewed on table by the attending staff.
 		</TEXT>
 	</TEMPLATE>
 	<TEMPLATE>
@@ -47,8 +42,6 @@
 			{{Angio header}}
 			
 			Clinical History: [age] year-old [male/female] ([MRN]) admitted on [admission date] for subarachnoid hemorrhage (SAH) secondary to a ruptured [location] as seen on CT angiogram; Modified Fisher grade [0-4], WFNS grade [1-5]. The patient [has/does not have] a history of previous SAH [, with previous treatment [year] and currently undergoing a [planned/emergency] retreatment]. An external ventricular drain was [not required/required and placed] pre-operatively. Informed consent for a diagnostic cerebral angiogram and aneurysm repair was obtained.
-			
-			{{Test2}}
 			
 			
 			Technique:
@@ -75,9 +68,7 @@
 			Angiography
 		</TYPE>
 		<TEXT>
-			Staff:
-			Assists:
-			Anesthesia:
+			{{Angio header}}
 			
 			Clinical History: [age] year-old [male/female] ([MRN]) admitted on [admission date] for elective repair of a [location] aneurysm. The patient [has/does not have] a history of previous SAH. [The last treatment was performed in [year] and the current procedure was [planned/unplanned]]. Informed consent for a diagnostic cerebral angiogram and aneurysm repair was obtained in the clinic. The patient was preloaded on [agents] for [days] days prior to the procedure. WFNS [...].
 			
@@ -96,7 +87,7 @@
 	</TEMPLATE>
 	<TEMPLATE>
 		<NAME>
-			Diagnostic Angiogram
+			Cerebral Angiogram: Normal
 		</NAME>
 		<TITLE>
 			Diagnostic Angiogram
@@ -105,34 +96,19 @@
 			Angiography
 		</TYPE>
 		<TEXT>
-			Staff: Dr
-			
-			Assists: Dr J Lynch (performed by)
-			
-			Anesthesia:
-			
+			{{Angio header}}
 			
 			TECHNIQUE:
-			
-			Informed consent was obtained from the patient (including risk of stroke and groin haemorrhage).10 ml of 1% lidocaine was infiltrated into the puncture site superficial tissues. A right common femoral artery puncture was performed under ultrasound guidance. A 5 Fr sheath was inserted. A 5 Fr Berenstein catheter was used to perform digital subtraction angiography. Injections were performed of the right vertebral artery, right internal carotid artery, right external carotid artery, left internal carotid artery, left external carotid artery, left vertebral artery. [3D flat panel tomographic angiography was performed via the ...]. A 6 Fr Angioseal was used to achieve groin haemostasis at the end of the procedure. There were no periprocedural complications. The study was reviewed on table by the attending staff.
-			
-			
+			{{Angiography technique}}
 			
 			FINDINGS:
 			
-			Comparison is made with the …
-			
+			Comparison is made with the ...
 			
 			
 			[Normal cerebral vasculature is demonstrated. No aneurysms or other vascular abnormalities are identified. ]
 			
 			[A double read of the study will be requested.]
-			
-			[MDT discussion is recommended.]
-			
-			
-			
-			INTERPRETATION:
 		</TEXT>
 	</TEMPLATE>
 	<TEMPLATE>
@@ -146,11 +122,7 @@
 			Angiography
 		</TYPE>
 		<TEXT>
-			Staff:
-			
-			Assists: Dr J Lynch
-			
-			Anesthesia: General
+			{{Angio header}}
 			
 			Clinical History: [...] year-old male ([...]) admitted on [...] for elective repair of a dural arteriovenous fistula. The patient does not have a history of previous SAH.
 			
@@ -180,11 +152,7 @@
 			Angiography
 		</TYPE>
 		<TEXT>
-			Staff:
-			
-			Assists: Dr JO Lynch
-			
-			Anesthesia: General
+			{{Angio header}}
 			
 			Clinical History: [age] year-old [male/female] ([MRN]) admitted on [admission date] for critical [...] [...] stenosis. [The patient was having ongoing hypoperfusion type strokes in the left hemisphere despite maximal medical therapy.] The patient was preloaded on [Aspirin and Clopidogrel] prior to the procedure.
 			
@@ -218,11 +186,7 @@
 			Angiography
 		</TYPE>
 		<TEXT>
-			Staff:
-			
-			Assists: Dr J Lynch
-			
-			Anesthesia: [General | Conscious sedation]
+			{{Angio header}}
 			
 			Clinical History: [...] year-old [male | female] ([...]) with [...]ICA [stenosis | dissection. The patient was preloaded on [...] before the procedure.
 			
@@ -250,12 +214,7 @@
 			Angiography
 		</TYPE>
 		<TEXT>
-			Staff: Dr V Pereira
-			
-			Assists: Dr J Lynch
-			
-			Anesthesia: General
-			
+			{{Angio header}}
 			
 			Clinical History: -year-old female (...) admitted on [...] for elective stenting of a [...] transverse sinus stenosis. The patient has a history of an occluded left transverse sinus secondary to a bony occipital tumour. Informed consent for a diagnostic cerebral angiogram and sinus stenting was obtained. The patient was preloaded on Aspirin and Ticagrelor for 5 days prior to the procedure.
 			
@@ -311,11 +270,7 @@
 			Angiography
 		</TYPE>
 		<TEXT>
-			Staff: Dr P Nicholson
-			
-			Assists: Dr J Lynch
-			
-			Anesthesia: Conscious sedation
+			{{Angio header}}
 			
 			Procedure and findings:
 			
@@ -343,11 +298,7 @@
 			Angiography
 		</TYPE>
 		<TEXT>
-			Staff: Dr P Nicholson
-			
-			Assists: Dr J Lynch
-			
-			Anesthesia: Conscious sedation
+			{{Angio header}}
 			
 			Procedure and findings:
 			
@@ -373,13 +324,7 @@
 			Angiography
 		</TYPE>
 		<TEXT>
-			Staff:
-			
-			Assists: Dr J Lynch
-			
-			Anesthesia: General
-			
-			​
+			{{Angio header}}			​
 			
 			TECHNIQUE AND FINDINGS: The rationale, risks, benefits and alternatives of endovascular treatment were discussed with the patient. It was also discussed that although this is a new procedure it is technically straightforward with a reasonable chance of success.
 			
@@ -454,7 +399,6 @@
 		</TYPE>
 		<TEXT>
 			There is arteriovenous malformation centred on the …The nidus measures approximately … in maximal measurement.
-			
 			
 			The dominant arterial feeders are … [en passage vs direct]
 			
