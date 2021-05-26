@@ -2,6 +2,38 @@
 <ALL>
 	<TEMPLATE>
 		<NAME>
+			Test1
+		</NAME>
+		<TITLE>
+		</TITLE>
+		<TYPE>
+			Angiography
+		</TYPE>
+		<TITLE>
+			TEST
+		</TITLE>
+		<TEXT>
+			PASTED TEXT HERE: TEST1
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			Test2
+		</NAME>
+		<TITLE>
+		</TITLE>
+		<TYPE>
+			Angiography
+		</TYPE>
+		<TITLE>
+			TEST
+		</TITLE>
+		<TEXT>
+			PASTED TEXT HERE: TEST2
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
 			Aneurysm: Ruptured
 		</NAME>
 		<TITLE>
