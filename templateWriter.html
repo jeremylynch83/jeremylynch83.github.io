@@ -133,13 +133,26 @@
 					} else {
 						t_title = t_title.innerHTML.replace(/\t/g, '');
 					}
-
 					temp.push({
 						name: t_name,
 						text: t_text,
 						title: t_title
 					});
 				}
+
+				var snip_array = [];
+				var snips = xmlDoc.getElementsByTagName("SNIP");
+				for (var i = 0; i < snips.length; i++) {
+					var t_name = xmlDoc.getElementsByTagName("SNIP")[i].getElementsByTagName(
+						"NAME")[0].innerHTML.replace(/\t/g, '');
+					var t_text = xmlDoc.getElementsByTagName("SNIP")[i].getElementsByTagName(
+						"TEXT")[0].innerHTML.replace(/\t/g, '');
+					snip_array.push({
+						name: t_name,
+						text: t_text,
+					});
+				}
+				console.log(snip_array);
 
 				var symbol_start = '{{';
 				var symbol_end = '}}';
@@ -154,7 +167,7 @@
 							end = text.indexOf(symbol_end, n);
 							var replace_name = text.substr(n + 2, end - n - 2);
 
-							var find_obj = temp.find(find_name => {
+							var find_obj = snip_array.find(find_name => {
 
 								return (find_name.name.trim() == replace_name);
 							});

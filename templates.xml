@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO8859-1"?>
 <ALL>
-	<TEMPLATE>
+	<SNIP>
 		<NAME>
 			Angio header
 		</NAME>
@@ -14,8 +14,8 @@
 			Assists:
 			Anesthesia:
 		</TEXT>
-	</TEMPLATE>
-	<TEMPLATE>
+	</SNIP>
+	<SNIP>
 		<NAME>
 			Angiography technique
 		</NAME>
@@ -25,7 +25,7 @@
 		<TEXT>
 			Informed consent was obtained from the patient (including risk of stroke and groin haemorrhage).10 ml of 1% lidocaine was infiltrated into the puncture site superficial tissues. A right common femoral artery puncture was performed under ultrasound guidance. A 5 Fr sheath was inserted. A 5 Fr Berenstein catheter was used to perform digital subtraction angiography. Injections were performed of the right vertebral artery, right internal carotid artery, right external carotid artery, left internal carotid artery, left external carotid artery, left vertebral artery. [3D flat panel tomographic angiography was performed via the ...]. A 6 Fr Angioseal was used to achieve groin haemostasis at the end of the procedure. There were no periprocedural complications. The study was reviewed on table by the attending staff.
 		</TEXT>
-	</TEMPLATE>
+	</SNIP>
 	<TEMPLATE>
 		<NAME>
 			Aneurysm: Ruptured
@@ -90,7 +90,7 @@
 			Cerebral Angiogram: Normal
 		</NAME>
 		<TITLE>
-			Diagnostic Angiogram
+			Cerebral Angiogram
 		</TITLE>
 		<TYPE>
 			Angiography
@@ -105,10 +105,92 @@
 			
 			Comparison is made with the ...
 			
-			
 			[Normal cerebral vasculature is demonstrated. No aneurysms or other vascular abnormalities are identified. ]
 			
 			[A double read of the study will be requested.]
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			Cerebral Angiogram: Dural Arteriovenous Fistula (DAVF)
+		</NAME>
+		<TITLE>
+			Cerebral Angiogram
+		</TITLE>
+		<TYPE>
+			Angiography
+		</TYPE>
+		<TEXT>
+			{{Angio header}}
+			
+			TECHNIQUE:
+			{{Angiography technique}}
+			
+			FINDINGS:
+			
+			Comparison is made with the ...
+			
+			There is a dural arteriovenous fistula centered on the  ...
+			
+			The dominant arterial feeders are ...
+			
+			Additional supply arises from ...
+			
+			Drainage is via ... in to the ...
+			
+			There [is/ is no] cortical venous reflux.
+			
+			Cognard classification:
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			Cerebral Angiogram: Arteriovenous Malformation (AVM)
+		</NAME>
+		<TITLE>
+			Cerebral Angiogram
+		</TITLE>
+		<TYPE>
+			Angiography
+		</TYPE>
+		<TEXT>
+			{{Angio header}}
+			
+			TECHNIQUE:
+			{{Angiography technique}}
+			
+			FINDINGS:
+			There is arteriovenous malformation centred on the ... The nidus measures approximately ... in maximal measurement.
+			
+			The dominant arterial feeders are ... [en passage vs direct]
+			
+			Additional supply arises from ...
+			
+			[Flow aneurysms].
+			
+			[Number of nidal compartments]
+			
+			[Plexiform vs fistulous nidus]
+			
+			[Intra-nidal aneurysms].
+			
+			Drainage is via ... in to the ...
+			
+			[Venous ectasia or pouches]
+			
+			[Venous stenosis]
+			
+			[Brain parenchyma: venous congestion]
+			
+			Spetzler Martin:
+			
+			Size [] + Eloquence [] + Drainage [] =
+			
+			Supplementary:
+			
+			Age [] + Compactness [] + Bleeding [] =
+			
+			TOTAL =
 		</TEXT>
 	</TEMPLATE>
 	<TEMPLATE>
@@ -130,7 +212,7 @@
 			
 			Technique:
 			
-			The patient underwent general anesthesia and endotracheal intubation. Intravenous heparin was administered throughout the procedure after groin puncture. [...] common femoral artery access was obtained with a 6-French sheath inserted by the Seldinger technique under ultrasound guidance. A 5 Fr Berenstein catheter used to perform digital subtraction angiography.  Injections were performed of the right vertebral artery, right internal carotid artery, right external carotid artery, left internal carotid artery, left external carotid artery, left vertebral artery. [3D flat panel tomographic angiography was performed via the …]. This demonstrated a Cognard 3 dural arteriovenous fistula fed by the left middle meningeal, ascending pharyngeal, and occipital arteries. The [...] external carotid artery was selectively catheterized with a diagnostic Berenstein tip catheter through a Benchmark guiding catheter.
+			The patient underwent general anesthesia and endotracheal intubation. Intravenous heparin was administered throughout the procedure after groin puncture. [...] common femoral artery access was obtained with a 6-French sheath inserted by the Seldinger technique under ultrasound guidance. A 5 Fr Berenstein catheter used to perform digital subtraction angiography.  Injections were performed of the right vertebral artery, right internal carotid artery, right external carotid artery, left internal carotid artery, left external carotid artery, left vertebral artery. [3D flat panel tomographic angiography was performed via the ...]. This demonstrated a Cognard 3 dural arteriovenous fistula fed by the left middle meningeal, ascending pharyngeal, and occipital arteries. The [...] external carotid artery was selectively catheterized with a diagnostic Berenstein tip catheter through a Benchmark guiding catheter.
 			
 			The petrosquamosal branch of the left middle meningeal was selectively catheterised using an Apollo (5 cm detachable tip) microcatheter, which was brought to the level of the fistula. [The same feeding artery was also catheterised with an SL-10 microcatheter, but it was not possible to bring the catheter distal enough to perform a "pressure cooker" technique.] Nevertheless, the catheter wedged in the vessel which most likely reduced the retrograde reflux of Onyx during injection. Onyx was then injected through through the Apollo microcatheter until the fistula was occluded. Final diagnostic angiography confirmed exclusion of the fistula with no distal thromboembolic complications.
 			
@@ -351,10 +433,10 @@
 			Angiography
 		</TYPE>
 		<TEXT>
-			Imaging again demonstrates a [saccular | fusiform] [wide | narrow] necked aneurysm at the […] measuring approximately […].
+			Imaging again demonstrates a [saccular | fusiform] [wide | narrow] necked aneurysm at the [...] measuring approximately [...].
 			
 			
-			The aneurysm has [smooth walls | bleb | multiloculated] and points […].
+			The aneurysm has [smooth walls | bleb | multiloculated] and points [...].
 			
 			
 			[No branches arise from the aneurysm sac itself].
@@ -363,73 +445,6 @@
 			There is an [Acom | PCOM | dominant vertebral artery]
 			
 			[MDT discussion is advised.]
-		</TEXT>
-	</TEMPLATE>
-	<TEMPLATE>
-		<NAME>
-			Fistula Description
-		</NAME>
-		<TITLE>
-		</TITLE>
-		<TYPE>
-			Angiography
-		</TYPE>
-		<TEXT>
-			There is a dural arteriovenous fistula centered on the  …
-			
-			The dominant arterial feeders are …
-			
-			Additional supply arises from …
-			
-			Drainage is via … in to the …
-			
-			There [is/ is no] cortical venous reflux.
-			
-			Cognard classification:
-		</TEXT>
-	</TEMPLATE>
-	<TEMPLATE>
-		<NAME>
-			AVM Description
-		</NAME>
-		<TITLE>
-		</TITLE>
-		<TYPE>
-			Angiography
-		</TYPE>
-		<TEXT>
-			There is arteriovenous malformation centred on the …The nidus measures approximately … in maximal measurement.
-			
-			The dominant arterial feeders are … [en passage vs direct]
-			
-			Additional supply arises from …
-			
-			[Flow aneurysms].
-			
-			
-			[Number of nidal compartments]
-			
-			[Plexiform vs fistulous nidus]
-			
-			[Intra-nidal aneurysms].
-			
-			Drainage is via … in to the …
-			
-			[Venous ectasia or pouches]
-			
-			[Venous stenosis]
-			
-			[Brain parenchyma: venous congestion]
-			
-			Spetzler Martin:
-			
-			Size [] + Eloquence [] + Drainage [] =
-			
-			Supplementary:
-			
-			Age [] + Compactness [] + Bleeding [] =
-			
-			TOTAL =
 		</TEXT>
 	</TEMPLATE>
 	<TEMPLATE>
@@ -468,7 +483,7 @@
 			
 			Summary:
 			
-			Endovascular recanalization of [...]. Initial TICI score: […]. Final eTICI score: […]. The procedure was discussed with the Stroke Neurology team. Plain CT is recommended at 24 hours or in the event of neurological deterioration.
+			Endovascular recanalization of [...]. Initial TICI score: [...]. Final eTICI score: [...]. The procedure was discussed with the Stroke Neurology team. Plain CT is recommended at 24 hours or in the event of neurological deterioration.
 		</TEXT>
 	</TEMPLATE>
 	<TEMPLATE>
@@ -484,12 +499,12 @@
 		<TEXT>
 			TECHNIQUE:
 			
-			Informed consent was obtained from the patient.10 ml of 1% lidocaine was infiltrated into the puncture site superficial tissues. A right common femoral artery puncture was performed under ultrasound guidance. A 5 Fr sheath was inserted. A 5 Fr Cobra C2 catheter used to perform digital subtraction angiography. Injections were performed of [...]. [3D flat panel tomographic angiography was performed via the …]. A 6 Fr Angioseal was used to achieve groin haemostasis at the end of the procedure. There were no periprocedural complications.
+			Informed consent was obtained from the patient.10 ml of 1% lidocaine was infiltrated into the puncture site superficial tissues. A right common femoral artery puncture was performed under ultrasound guidance. A 5 Fr sheath was inserted. A 5 Fr Cobra C2 catheter used to perform digital subtraction angiography. Injections were performed of [...]. [3D flat panel tomographic angiography was performed via the ...]. A 6 Fr Angioseal was used to achieve groin haemostasis at the end of the procedure. There were no periprocedural complications.
 			
 			
 			FINDINGS:
 			
-			Comparison is made with the …
+			Comparison is made with the ...
 			
 			
 			INTERPRETATION:
