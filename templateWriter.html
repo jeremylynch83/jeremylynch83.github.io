@@ -153,17 +153,23 @@
 						if (n != -1) {
 							end = text.indexOf(symbol_end, n);
 							var replace_name = text.substr(n + 2, end - n - 2);
-							temp.find(find_name => {
-									console.log(find_name.name, replace_name);
-									return find_name.name == replace_name;
-								}
 
-							)
+							var find_obj = temp.find(find_name => {
+								return (find_name.name.trim() == replace_name);
+							});
+
+							if (find_obj != null) {
+								//console.log(find_obj.text);
+								item.text = item.text.replaceAll(symbol_start + replace_name + symbol_end, find_obj
+									.text);
+							}
+
 							//console.log(replace_name);
 
 						}
 
-					} while (n != -1);
+					}
+					while (n != -1);
 
 				});
 
