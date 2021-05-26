@@ -1,6 +1,5 @@
 <!-- TODO
 
-	* Insert Snippets thing
 	* Associated info display
 	* Probably work on spine first
 	* Copy templates from radReport
@@ -152,42 +151,30 @@
 						text: t_text,
 					});
 				}
-				console.log(snip_array);
 
 				var symbol_start = '{{';
 				var symbol_end = '}}';
 
 				temp.forEach(item => {
 					var text = item.text;
-
 					var n = 0 - symbol_start.length;
 					do {
 						n = text.indexOf(symbol_start, n + symbol_start.length);
 						if (n != -1) {
 							end = text.indexOf(symbol_end, n);
 							var replace_name = text.substr(n + 2, end - n - 2);
-
 							var find_obj = snip_array.find(find_name => {
-
 								return (find_name.name.trim() == replace_name);
 							});
 
 							if (find_obj != null) {
-								//console.log(find_obj.text);
 								item.text = item.text.replaceAll(symbol_start + replace_name + symbol_end, find_obj
 									.text);
 							}
-
-							//console.log(replace_name);
-
 						}
-
 					}
 					while (n != -1);
-
 				});
-
-
 			}
 
 			return temp;

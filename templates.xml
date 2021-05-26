@@ -6,9 +6,6 @@
 		</NAME>
 		<TITLE>
 		</TITLE>
-		<TYPE>
-			Angiography
-		</TYPE>
 		<TEXT>
 			Staff:
 			Assists:
@@ -19,11 +16,24 @@
 		<NAME>
 			Angiography technique
 		</NAME>
-		<TYPE>
-			Angiography
-		</TYPE>
 		<TEXT>
 			Informed consent was obtained from the patient (including risk of stroke and groin haemorrhage).10 ml of 1% lidocaine was infiltrated into the puncture site superficial tissues. A right common femoral artery puncture was performed under ultrasound guidance. A 5 Fr sheath was inserted. A 5 Fr Berenstein catheter was used to perform digital subtraction angiography. Injections were performed of the right vertebral artery, right internal carotid artery, right external carotid artery, left internal carotid artery, left external carotid artery, left vertebral artery. [3D flat panel tomographic angiography was performed via the ...]. A 6 Fr Angioseal was used to achieve groin haemostasis at the end of the procedure. There were no periprocedural complications. The study was reviewed on table by the attending staff.
+		</TEXT>
+	</SNIP>
+	<SNIP>
+		<NAME>
+			Aneurysm description
+		</NAME>
+		<TEXT>
+			Imaging demonstrates a [saccular | fusiform] [wide | narrow] necked aneurysm at the [...] measuring approximately [...].
+			
+			The aneurysm has [smooth walls | bleb | multiloculated] and points [...].
+			
+			[No branches arise from the aneurysm sac itself].
+			
+			There is an [Acom | PCOM | dominant vertebral artery]
+			
+			[MDT discussion is advised.]
 		</TEXT>
 	</SNIP>
 	<TEMPLATE>
@@ -108,6 +118,29 @@
 			[Normal cerebral vasculature is demonstrated. No aneurysms or other vascular abnormalities are identified. ]
 			
 			[A double read of the study will be requested.]
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			Cerebral Angiogram: Aneurysm
+		</NAME>
+		<TITLE>
+			Cerebral Angiogram
+		</TITLE>
+		<TYPE>
+			Angiography
+		</TYPE>
+		<TEXT>
+			{{Angio header}}
+			
+			TECHNIQUE:
+			{{Angiography technique}}
+			
+			FINDINGS:
+			
+			{{Aneurysm description}}
+			
+			INTERPRETATION:
 		</TEXT>
 	</TEMPLATE>
 	<TEMPLATE>
@@ -334,8 +367,6 @@
 			
 			At the end of the procedure all catheters and the balloon were removed. A 6 Fr Angio-Seal Vascular Closure Device and manual pressure was used to achieve groin haemostasis. The patient woke up with no neurological deficits. There were no periprocedural complications.
 			
-			
-			
 			Interpretation:
 			
 			Successful endovascular right transverse sinus stenting for stenosis. The patient should continue on Aspirin and Ticagrelor for 3 months. We will review in clinic in 6 months with a CT Venogram.
@@ -421,30 +452,6 @@
 			Conclusion:​
 			
 			Successful endovascular transvenous embolization of a right T20 CSF-venous fistula.​
-		</TEXT>
-	</TEMPLATE>
-	<TEMPLATE>
-		<NAME>
-			Anerysm description
-		</NAME>
-		<TITLE>
-		</TITLE>
-		<TYPE>
-			Angiography
-		</TYPE>
-		<TEXT>
-			Imaging again demonstrates a [saccular | fusiform] [wide | narrow] necked aneurysm at the [...] measuring approximately [...].
-			
-			
-			The aneurysm has [smooth walls | bleb | multiloculated] and points [...].
-			
-			
-			[No branches arise from the aneurysm sac itself].
-			
-			
-			There is an [Acom | PCOM | dominant vertebral artery]
-			
-			[MDT discussion is advised.]
 		</TEXT>
 	</TEMPLATE>
 	<TEMPLATE>
@@ -628,31 +635,11 @@
 			CONCLUSION:
 		</TEXT>
 	</TEMPLATE>
-	<TEMPLATE>
+	<SNIP>
 		<NAME>
+			CT Head Checklist
 		</NAME>
-		<TITLE>
-		</TITLE>
-		<TYPE>
-			Diagnostic Neuroradiology
-		</TYPE>
 		<TEXT>
-		</TEXT>
-	</TEMPLATE>
-	<TEMPLATE>
-		<NAME>
-			CT Head: Acute
-		</NAME>
-		<TITLE>
-		</TITLE>
-		<TYPE>
-			Diagnostic Neuroradiology
-		</TYPE>
-		<TEXT>
-			FINDINGS:
-			
-			Comparison is made with the ...
-			
 			There is no acute cortical infarct, haemorrhage, or collection. No hyperdense vessel is present.
 			
 			
@@ -690,11 +677,27 @@
 			[Skull: Fractures, lesions, skull base tumours]
 			
 			[There are no fractures or destructive bony lesions.]
+		</TEXT>
+	</SNIP>
+	<TEMPLATE>
+		<NAME>
+			CT Brain: Acute
+		</NAME>
+		<TITLE>
+		</TITLE>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			FINDINGS:
 			
+			Comparison is made with the ...
+			
+			{{CT Head Checklist}}
 			
 			CONCLUSION:
 			
-			No acute intracranial pathology is identified.
+			[No acute intracranial pathology is identified.]
 			
 			[A neurology opinion should be obtained if there are neurological signs as further investigation may be necessary.]
 			
@@ -715,15 +718,6 @@
 			
 			Comparison is made with the ...
 			
-			Look for these first:
-			
-			There is no acute cortical infarct, haemorrhage, or collection.
-			
-			
-			Then mention these
-			
-			[There is generalised cerebral involution with no lobar predilection. There is periventricular and deep white matter hypodensity which is non-specific but may represent a mild burden of small vessel disease.]
-			
 			
 			[Lobar atrophy]
 			
@@ -735,37 +729,7 @@
 			
 			[Infarcts]
 			
-			
-			[Blood: Sylvian fissures, prepontine, suprasellar, posterior horns, tentorium]
-			
-			[Cerebral swelling/cortical hypodensity]
-			
-			[Space occupying lesion]
-			
-			[Venous sinuses]
-			
-			[Basilar artery thrombus]
-			
-			[Contusions]
-			
-			[Collections: coronals for falcine (infective)]
-			
-			[Old strokes]
-			
-			[Atrophy | Hippocampi | Small vessel disease]
-			
-			[Clivus | Pituitary | Orbits | Cerebellar tonsils]
-			
-			[Paranasal sinuses | Mastoid air cells]
-			
-			[Extracranial soft tissue]
-			
-			[Shift of midline structures]
-			
-			
-			[Skull: Fractures, lesions, skull base tumours]
-			
-			[There are no fractures or destructive bony lesions.]
+			{{CT Head Checklist}}
 			
 			CONCLUSION:
 			
@@ -784,49 +748,17 @@
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			FINDINGS:
+			CT HEAD FINDINGS:
 			
 			Comparison is made with ...
 			
-			
 			There is no acute cortical infarct, haemorrhage, or collection. No hyperdense vessel is present.
 			
+			{{CT Head Checklist}}
 			
-			[There is generalised cerebral involution with no lobar predilection. There are foci of hypodensity in the deep white matter in keeping with a mild burden of small vessel disease.]
+			CTA FINDINGS:
 			
-			
-			[Examine in 3 planes]
-			
-			[Blood: Sylvian fissures, prepontine, suprasellar, posterior horns, tentorium]
-			
-			[Hyperdense vessel]
-			
-			[Stroke: basal ganglia, insular, frontal cortex]
-			
-			[Cerebral swelling/cortical hypodensity]
-			
-			[Contusions]
-			
-			[Collections: coronals for falcine]
-			
-			[Old strokes]
-			
-			[Atrophy | Hippocampi | Small vessel disease]
-			
-			[Clivus | Pituitary | Orbits | Cerebellar tonsils]
-			
-			[Paranasal sinuses | Mastoid air cells]
-			
-			[Extracranial soft tissue]
-			
-			
-			
-			[Skull: Fractures, lesions]
-			
-			[Skull base]
-			
-			[There are no skull fractures or destructive bony lesions.]
-			
+			Comparison is made with ...
 			
 			There is no proximal intracranial occlusion or stenosis.
 			
@@ -835,7 +767,6 @@
 			[Review aneurysms: Ophthalmic, MCA]
 			
 			[Vascular malformations]
-			
 			
 			Aortic arch and subclavian arteries:
 			
@@ -851,12 +782,9 @@
 			
 			[The extracranial carotid and vertebral arteries exhibit normal appearances.]
 			
-			
 			[CT Perfusion]
 			
-			
 			[Venous sinuses]
-			
 			
 			[Cervical degenerative disease is evident. There is no acute fracture or destructive bony lesion. Dependent atelectasis is present at the imaged lung apices.]
 			
@@ -865,7 +793,6 @@
 			[Pulmonary emboli | Orbits | Soft tissues]
 			
 			[Thyroid]
-			
 			
 			CONCLUSION:
 			
@@ -921,7 +848,6 @@
 			
 			[The extracranial carotid and vertebral arteries exhibit normal appearances.]
 			
-			
 			[Contusions]
 			
 			[Old strokes]
@@ -956,35 +882,7 @@
 			
 			Bilateral transfrontal electrodes are in situ. There is no large postoperative haemorrhage, infarction, peri-electrode oedema, or evidence of other surgical complication.
 			
-			
-			[Examine in 3 planes]
-			
-			[Blood: Sylvian fissures, prepontine, suprasellar, posterior horns, tentorium]
-			
-			[Hyperdense vessel]
-			
-			[Cerebral swelling/cortical hypodensity]
-			
-			[Venous sinuses]
-			
-			[Contusions]
-			
-			[Collections: coronals for falcine (infective)]
-			
-			[Old strokes]
-			
-			[Atrophy | Hippocampi | Small vessel disease]
-			
-			[Clivus | Pituitary | Orbits | Cerebellar tonsils]
-			
-			[Paranasal sinuses | Mastoid air cells]
-			
-			
-			[Skull: Fractures, lesions]
-			
-			[Skull base]
-			
-			[There are no fractures or destructive bony lesions.]
+			{{CT Head Checklist}}
 		</TEXT>
 	</TEMPLATE>
 	<TEMPLATE>
@@ -1000,7 +898,6 @@
 			FINDINGS:
 			
 			Comparison is made with the previous CT of ...
-			
 			
 			There has been interval partial evacuation of the subdural haematoma overlying the [...] cerebral hemisphere.  There has been marked reduction of the size of subdural haematoma associated with significant reduction of local mass effect and partial re-expansion of the cerebral sulci and ipsilateral lateral ventricle.  A small collection of blood products and fluid remains. There remains mild contralateral shift of midline structures.
 		</TEXT>
@@ -1036,7 +933,6 @@
 			[Fluid levels]
 			
 			[Evidence of tumour]
-			
 			
 			Surgical review is warranted.
 		</TEXT>
@@ -1214,7 +1110,6 @@
 			
 			Multilevel facetal degeneration is evident most severe at.
 			
-			
 			Atlantoaxial joint.
 			Fusion
 			Endplate change
@@ -1330,8 +1225,6 @@
 			MRI Head
 			
 			
-			
-			
 			FINDINGS:
 			
 			Comparison is made with the ...
@@ -1369,7 +1262,6 @@
 			
 			[Internal auditory canals for tumours]
 			
-			
 			[Skull base -  look at DWI]
 			
 			
@@ -1396,7 +1288,6 @@
 			
 			The [enhancing | non-enhancing] [intra- | extra-axial] lesion centred [...] is again visualised. It measures approximately [...] in diameter.
 			
-			
 			[Ependymal enhancement]
 			
 			[Restricted diffusion]
@@ -1415,14 +1306,11 @@
 			
 			[Dural invasion]
 			
-			
 			[Words: Infiltrative | rarefaction
-			
 			
 			The mass causes significant local mass effect with [shift of midline structures | subfalcine herniation].
 			
 			There is a margin of perilesional [vasogenic oedema | abnormal signal].
-			
 			
 			[Evidence of raised intracranial pressure]
 			
@@ -1433,7 +1321,6 @@
 			[High grade vs low grade]
 			
 			The appearances are most in keeping with [...]. The other differential to consider would be [...].
-			
 			
 			[Referral to neurosurgery and the neuro-oncology MDT is recommended.]
 		</TEXT>
@@ -1962,7 +1849,7 @@
 			
 			CONCLUSION:
 			
-			Foraminal stenosis:
+			/* Foraminal stenosis:
 			
 			[https://www.ajronline.org/doi/full/10.2214/AJR.09.2772](https://www.ajronline.org/doi/full/10.2214/AJR.09.2772)
 			
@@ -1970,7 +1857,7 @@
 			
 			grade 2 (mod) refers to moderate foraminal stenosis showing perineural fat obliteration in the four directions without morphologic change, both vertical and transverse directions; and
 			
-			grade 3 (sev) refers to severe foraminal stenosis showing nerve root collapse or morphologic change.
+			grade 3 (sev) refers to severe foraminal stenosis showing nerve root collapse or morphologic change. */
 		</TEXT>
 	</TEMPLATE>
 	<TEMPLATE>
