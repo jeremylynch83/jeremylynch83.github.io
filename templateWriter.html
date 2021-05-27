@@ -239,18 +239,23 @@
 					this.writeTemplate();
 
 				},
+
+				/*
+				KEY: 
+				text -> plain text
+				... -> word
+				comment -> display before but do not include in report
+				[xxx] -> Option this text, or nothing. Include free text.
+				[xxx | yyy | zzz] -> These options, or nothing. Include free text. 
+				*/
+
 				writeTemplate: function () {
 					this.reportText = this.template.title;
 					if (this.clin_indication != "") {
 						this.reportText += "\nINDICATION: " + this.clin_indication + "\n";
 					}
 
-					this.reportText += this.template.text.replace(/^\s*[\r\n]/gm, '');;
-				},
-
-				created: function () {
-					//this.formatTemplates();
-
+					this.reportText += this.template.text;
 				},
 
 				copyReport: function () {
@@ -268,9 +273,6 @@
 				}
 			}
 		});
-
-
-		window.app.created();
 	</script>
 
 
