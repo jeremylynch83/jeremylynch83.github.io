@@ -7,9 +7,9 @@
 		<TITLE>
 		</TITLE>
 		<TEXT>
-			Staff:
-			Assists:
-			Anesthesia:
+			Staff: [...]
+			Assists: [...]
+			Anesthesia: [...]
 		</TEXT>
 	</SNIP>
 	<SNIP>
@@ -1627,25 +1627,19 @@
 			[No progressive cerebral atrophy.]
 			
 			
-			2016 MAGNIMS MRI criteria
+			/*2016 MAGNIMS MRI criteria
 			
 			Dissemination in space (2 of 5)
-			
-			
-			
 			*   periventricular: ≥3 lesions
 			*   cortical-juxtacortical: ≥1 lesions
 			*   infratentorial: ≥1 lesions
 			*   spinal cord: ≥1 lesions
 			*   optic nerve: ≥1 lesions
 			
-			
 			Dissemination in time (1 of 2)
 			
-			
-			
 			*   A new lesion when compared to a previous scan (irrespective of timing): T2 bright lesion and/or gadolinium-enhancing
-			*   Presence of enhancing lesion and a non-enhancing T2 bright lesion on any one scan
+			*   Presence of enhancing lesion and a non-enhancing T2 bright lesion on any one scan*/
 		</TEXT>
 	</TEMPLATE>
 	<TEMPLATE>
@@ -1761,7 +1755,6 @@
 			
 			Comparison is made with ...
 			
-			
 			Note is made of [posterior fixation involving ...].
 			
 			[Fractures]
@@ -1805,6 +1798,18 @@
 			[No abnormalities are demonstrated on the planning sequences.]
 		</TEXT>
 	</SNIP>
+	<SNIP>
+		<NAME>
+			Cervical spine level
+		</NAME>
+		<TEXT>
+			[Normal]
+			[There is disc degeneration. | There is disc degeneration and height loss.]
+			[There is a non-compressive disc bar. | There is a disc bar causing ...]
+			[There is foraminal narrowing causing ...]
+			[There is facetal degeneration.]
+		</TEXT>
+	</SNIP>
 	<TEMPLATE>
 		<NAME>
 			MRI Cervical Spine
@@ -1818,31 +1823,23 @@
 			/*SETUP: 2 panes of vertical, with sag/axials up. Turn localisor on. Spine labelling.*/
 			
 			FINDINGS:
-			
 			Comparison is made with the ...
-			
 			Note is made of ...
 			
 			C1-C2:
-			
+			{{Cervical spine level}}
 			C2-C3:
-			
-			
+			{{Cervical spine level}}
 			C3-C4:
-			
-			
+			{{Cervical spine level}}
 			C4-C5:
-			
-			
+			{{Cervical spine level}}
 			C5-C6:
-			
+			{{Cervical spine level}}
 			C6-C7:
-			
-			
+			{{Cervical spine level}}
 			C7-T1:
-			
-			
-			/* At * and * there is disc degeneration and narrowing the disc spaces with disc bulging and osteophytes.  There is severe bilateral foraminal narrowing at both levels.  The left-sided foramina are narrower, particularly at *. */
+			{{Cervical spine level}}
 			
 			[The cervical spine is kyphotic.]
 			[Chiari]
@@ -1856,6 +1853,20 @@
 			CONCLUSION:
 		</TEXT>
 	</TEMPLATE>
+	<SNIP>
+		<NAME>
+			Lumbar spine level
+		</NAME>
+		<TEXT>
+			[Normal]
+			[There is disc degeneration. | There is disc degeneration and height loss. ]
+			[There is flaval thickening]
+			[There is a disc ... ]
+			[The disc contacts | The disc narrows | The disc displaces | impinges]
+			[There is foraminal narrowing causing ...]
+			[There is facetal degeneration.]
+		</TEXT>
+	</SNIP>
 	<TEMPLATE>
 		<NAME>
 			MRI Lumbosacral Spine
@@ -1871,30 +1882,22 @@
 			FINDINGS:
 			
 			Comparison is made with the ...
-			
-			[There is normal formation and segmentation of the lumbosacral spine. | There is a transitional lumbosacral junction. I have assumed the lowest completely developed disc space is *. ]
-			
-			/* Iliolumbar ligament at L5 | Fully formed S1-S2 disc */
-			
 			[Note is made of ...]
+			[There is normal formation and segmentation of the lumbosacral spine. | There is a transitional lumbosacral junction. I have assumed the lowest completely developed disc space is *. ]
+			[The iliolumbar ligament is at L5. There is a fully formed S1-S2 disc.]
 			
-			[There is degeneration of the discs from * to * which are dehydrated with disc bulging and osteophytes].
-			
-			/* Terms: foraminal narrowing including flaval | contacting | displacing | impingement ! indentation of the theca */
-			
-			T12-L1: A ... causes ... There is loss of disc height.
-			
-			L1-L2: ... causes ... There is loss of disc height.
-			
-			L2-L3: A ... causes ... There is loss of disc height.
-			
-			L3-L4: A ... causes ... There is loss of disc height.
-			
-			L4-L5: A ... causes ... There is loss of disc height.
-			
-			L5-S1: A ... causes ... There is loss of disc height.
-			
-			[a broad based disc bulge in addition to flaval thickening narrows the * subarticular zone contacting but not compressing the transiting* root.]
+			T12-L1:
+			{{Lumbar spine level}}
+			L1-L2:
+			{{Lumbar spine level}}
+			L2-L3:
+			{{Lumbar spine level}}
+			L3-L4:
+			{{Lumbar spine level}}
+			L4-L5:
+			{{Lumbar spine level}}
+			L5-S1:
+			{{Lumbar spine level}}
 			
 			[Annular fissure]
 			[Pars defects]
