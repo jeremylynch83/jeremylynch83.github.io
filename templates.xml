@@ -1212,62 +1212,161 @@
 			]The partially imaged lungs are clear. ]
 		</TEXT>
 	</TEMPLATE>
+	<SNIP>
+		<NAME>
+			MRI Head generic
+		</NAME>
+		<TEXT>
+			[There is no acute infarct, haemorrhage, or collection.]
+			[The major intracranial arteries and dural venous sinuses return normal signal flow void.]
+			[There is no intracranial mass. The ventricles are not hydrocephalic. ]
+			[Generalised involution is noted with no lobar predilection. There are multiple foci of abnormal signal in the cerebral deep white matter suggestive of a mild burden of small vessel disease.]
+			[Blood: Sylvian fissures, prepontine, suprasellar, posterior horns, tentorium]
+			[Microhaemorrhages]
+			[Contusions]
+			[Hydrocephalus]
+			[Dural thickening | Leptomeningeal enhancement]
+			[Intracranial pressure - optic nerve sheats, pituitary size, dural thickening, brainstem slumping]
+			[Old strokes/lacunar infarcts]
+			[Atrophy | Small vessel disease]
+			[Clivus | Pituitary | Cavernous sinus | Orbits | Hippocampi | Cerebellar tonsils]
+			[Sinuses]
+			[Internal auditory canals for tumours]
+			[Skull base -  look at DWI]
+		</TEXT>
+	</SNIP>
 	<TEMPLATE>
 		<NAME>
 			MRI Head
 		</NAME>
 		<TITLE>
+			MRI Head
 		</TITLE>
 		<TYPE>
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			MRI Head
-			
-			
 			FINDINGS:
-			
 			Comparison is made with the ...
-			
-			
-			There is no acute infarct, haemorrhage, or collection.
-			
-			
-			[The major intracranial arteries and dural venous sinuses return normal signal flow void.  ]
-			
-			[There is no intracranial mass. The ventricles are not hydrocephalic. ]
-			
-			[Generalised involution is noted with no lobar predilection. There are multiple foci of abnormal signal in the cerebral deep white matter suggestive of a mild burden of small vessel disease.]
-			
-			
-			[Blood: Sylvian fissures, prepontine, suprasellar, posterior horns, tentorium]
-			
-			[Microhaemorrhages]
-			
-			[Contusions]
-			
-			[Hydrocephalus]
-			
-			[Dural thickening | Leptomeningeal enhancement]
-			
-			[Intracranial pressure - optic nerve sheats, pituitary size, dural thickening, brainstem slumping]
-			
-			[Old strokes/lacunar infarcts]
-			
-			[Atrophy | Small vessel disease]
-			
-			[Clivus | Pituitary | Cavernous sinus | Orbits | Hippocampi | Cerebellar tonsils]
-			
-			[Sinuses]
-			
-			[Internal auditory canals for tumours]
-			
-			[Skull base -  look at DWI]
-			
+			{{MRI Head generic}}
 			
 			CONCLUSION:
+			[No acute intracranial pathology is identified.]
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			MRI Head: Seizure
+		</NAME>
+		<TITLE>
+			MRI Head
+		</TITLE>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			FINDINGS:
+			Comparison is made with the ...
 			
-			No acute intracranial pathology is identified.
+			No mass lesion or hydrocephalus.
+			
+			No significant white matter lesions.
+			
+			No atrophy.
+			
+			No focal cortical abnormality.
+			
+			No malformation cortical development, vascular malformation or old damage.
+			
+			No temporal lobe abnormality hippocampal sclerosis].
+			
+			[The hippocampi are normal. Normal gyral pattern. No neuromigrational abnormalities are detected. ]
+			
+			[No localising or lateralising foci are identified.]
+			
+			[Medial temporal sclerosis: also look for 2ndry changes mammilary bodies, fornix, thalamus]
+			
+			[Rest of the temporal lobe/cerebral volume]
+			
+			[Tumour: DNET, ganglio]
+			
+			[Blood]
+			
+			[Cortical dysplasia: thickening, blurring]
+			
+			[Neuromigrational {polymicrogyria, heterotopic white matter}]
+			
+			[Encephaloceles: Anterior temporal lobe]
+			
+			[Hamartoma of tuber cinereum]
+			
+			{{MRI Head generic}}
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			MRI Head: Headache
+		</NAME>
+		<TITLE>
+			MRI Head
+		</TITLE>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			FINDINGS:
+			Comparison is made with the ...
+			
+			[High IC pressure: Venous sinuses, Pit fossa - arachnoid herniation, Paranasal sinuses, Optic nerve abnormalities]
+			[Low IC pressure: Sudural effusions, Dural enhancement, Midbrain descent]
+			[Aneurysm, dissection]
+			[Pit apoplexy]
+			[SOL]
+			[Colloid cyst]
+			[Chiari]
+			[Blood]
+			[Paranasal sinus]
+			[Craniocervical junction]
+			{{MRI Head generic}}
+		</TEXT>
+	</TEMPLATE>
+	<TEMPLATE>
+		<NAME>
+			MRI Head: Neurodegenerative
+		</NAME>
+		<TITLE>
+			MRI Head
+		</TITLE>
+		<TYPE>
+			Diagnostic Neuroradiology
+		</TYPE>
+		<TEXT>
+			FINDINGS:
+			Comparison is made with the ...
+			
+			[Lobar atrophy]
+			[Hippocampal atrophy]
+			[Midbrain | Pons | Cerebellar ]
+			[White matter lesions, microbleeds]
+			[Infarcts]
+			[Alzheimers: Early - hippocampus and the medial temporal lobe, Late - widespread atrophy. ]
+			[Vascular dementia: Small vessel disease, lacunes, strategic infarcts. ]
+			
+			[Frontotemporal Lobar Degeneration (FTLD): Frontal and temporal lobes atrophy, may be asymmetric. Behavioural and language subtypes. Small caudate heads tend to be reduced in size in behavioural. ]
+			
+			[Cerebral Amyloid Angiopathy (CAA): Microhaemorrhages]
+			
+			[CADASIL: Confluent white matter hyperintensities in the frontal and especially anterior temporal lobes in combination with (lacunar) infarcts and microbleeds are seen on imaging.]
+			
+			[PSP: Concave upper border of midbrain (hummingbird)]
+			
+			[MSA-C: Cerebellar atrophy. Hot cross bun pontinehyperintensity.]
+			
+			[MSA-P: Low T2 dorsolateral putamen and lateral to putamen.]
+			
+			[Huntingtons: atrophy of caudate. ]
+			
+			{{MRI Head generic}}
 		</TEXT>
 	</TEMPLATE>
 	<TEMPLATE>
@@ -1485,14 +1584,7 @@
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			Spine
-			
 			SETUP: Compare the FLAIR initially.
-			
-			
-			
-			
-			
 			
 			FINDINGS:
 			
@@ -1827,125 +1919,6 @@
 	</TEMPLATE>
 	<TEMPLATE>
 		<NAME>
-			Seizure Checklist
-		</NAME>
-		<TITLE>
-		</TITLE>
-		<TYPE>
-			Diagnostic Neuroradiology
-		</TYPE>
-		<TEXT>
-			No mass lesion or hydrocephalus.
-			
-			No significant white matter lesions.
-			
-			No atrophy.
-			
-			No focal cortical abnormality.
-			
-			No malformation cortical development, vascular malformation or old damage.
-			
-			No temporal lobe abnormality hippocampal sclerosis].
-			
-			
-			[The hippocampi are normal. Normal gyral pattern. No neuromigrational abnormalities are detected. ]
-			
-			[No localising or lateralising foci are identified.]
-			
-			
-			[Medial temporal sclerosis: also look for 2ndry changes mammilary bodies, fornix, thalamus]
-			
-			[Rest of the temporal lobe/cerebral volume]
-			
-			[Tumour: DNET, ganglio]
-			
-			[Blood]
-			
-			[Cortical dysplasia: thickening, blurring]
-			
-			[Neuromigrational {polymicrogyria, heterotopic white matter}]
-			
-			[Encephaloceles: Anterior temporal lobe]
-			
-			[Hamartoma of tuber cinereum]
-		</TEXT>
-	</TEMPLATE>
-	<TEMPLATE>
-		<NAME>
-			Headache Checklist
-		</NAME>
-		<TITLE>
-		</TITLE>
-		<TYPE>
-			Diagnostic Neuroradiology
-		</TYPE>
-		<TEXT>
-			[High IC pressure: Venous sinuses, Pit fossa - arachnoid herniation, Paranasal sinuses, Optic nerve abnormalities]
-			
-			[Low IC pressure: Sudural effusions, Dural enhancement, Midbrain descent]
-			
-			[Aneurysm, dissection]
-			
-			[Pit apoplexy]
-			
-			[SOL]
-			
-			[Colloid cyst]
-			
-			[Chiari]
-			
-			[Blood]
-			
-			[Paranasal sinus]
-			
-			[Children: mention craniocerv junction]
-		</TEXT>
-	</TEMPLATE>
-	<TEMPLATE>
-		<NAME>
-			Dementia Checklist
-		</NAME>
-		<TITLE>
-		</TITLE>
-		<TYPE>
-			Diagnostic Neuroradiology
-		</TYPE>
-		<TEXT>
-			[Lobar atrophy]
-			
-			[Hippocampal atrophy]
-			
-			[Midbrain | Pons | Cerebellar ]
-			
-			[White matter lesions, microbleeds]
-			
-			[Infarcts]
-			
-			
-			[Alzheimers: Early - hippocampus and the medial temporal lobe, Late - widespread atrophy. ]
-			
-			[Vascular dementia: Small vessel disease, lacunes, strategic infarcts. ]
-			
-			[Frontotemporal Lobar Degeneration (FTLD): Frontal and temporal lobes atrophy, may be asymmetric. Behavioural and language subtypes. Small caudate heads tend to be reduced in size in behavioural. ]
-			
-			[Cerebral Amyloid Angiopathy (CAA): Microhaemorrhages]
-			
-			[CADASIL: Confluent white matter hyperintensities in the frontal and especially anterior temporal lobes in combination with (lacunar) infarcts and microbleeds are seen on imaging.]
-			
-			[PSP: Concave upper border of midbrain (hummingbird)]
-			
-			[MSA-C: Cerebellar atrophy. Hot cross bun pontinehyperintensity.]
-			
-			[MSA-P: Low T2 dorsolateral putamen and lateral to putamen.]
-			
-			[Huntingtons: atrophy of caudate. ]
-			
-			
-			[The dural venous sinuses and major intracranial arteries and veins return normal signal flow void.  ]
-		</TEXT>
-	</TEMPLATE>
-	<TEMPLATE>
-		<NAME>
 			MRI Brain: Paediatric Developmental Delay
 		</NAME>
 		<TITLE>
@@ -2048,7 +2021,6 @@
 			FINDINGS:
 			
 			Comparison made with the radiograph of x. Anterior screw fixation and intervertebral cage at x is noted. The implants appear appropriately positioned and intact. No periprosthetic complications are demonstrated. Spinal alignment is maintained. The appearances are stable.
-			
 			
 			Fusion
 			Disc space narrowing
