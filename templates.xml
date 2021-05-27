@@ -172,6 +172,8 @@
 			There [is/ is no] cortical venous reflux.
 			
 			Cognard classification:
+			
+			CONCLUSION:
 		</TEXT>
 	</TEMPLATE>
 	<TEMPLATE>
@@ -1690,6 +1692,27 @@
 			Neurosurgical review is recommended.
 		</TEXT>
 	</TEMPLATE>
+	<SNIP>
+		<NAME>
+			Degenerative spine generic
+		</NAME>
+		<TEXT>
+			[Fractures]
+			[Vertebral height and alignment are maintained.]
+			[Spondylolisthesis]
+			[Scoliosis]
+			[Bone marrow / Red marrow reconversion / Malignant infiltration]
+			[Paraspinal muscles]
+			[Vertebral body and disc height]
+			[Collections]
+			[Masses]
+			[Ligaments]
+			[Spinal cord signal]
+			[Facet joints]
+			[DAVF]
+			[No abnormalities are demonstrated on the planning sequences.]
+		</TEXT>
+	</SNIP>
 	<TEMPLATE>
 		<NAME>
 			MRI Cervical Spine
@@ -1700,70 +1723,43 @@
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			SETUP: 2 panes of vertical, with sag/axials up. Turn localisor on. Spine labelling.
-			
-			
-			
-			
+			/*SETUP: 2 panes of vertical, with sag/axials up. Turn localisor on. Spine labelling.*/
 			
 			FINDINGS:
 			
 			Comparison is made with the ...
 			
-			
 			Note is made of ...
 			
+			C1-C2:
+			
+			C2-C3:
+			
+			
+			C3-C4:
+			
+			
+			C4-C5:
+			
+			
+			C5-C6:
+			
+			C6-C7:
+			
+			
+			C7-T1:
+			
+			
+			/* At * and * there is disc degeneration and narrowing the disc spaces with disc bulging and osteophytes.  There is severe bilateral foraminal narrowing at both levels.  The left-sided foramina are narrower, particularly at *. */
 			
 			[The cervical spine is kyphotic.]
-			
-			
-			C1-C2:a
-			
-			
-			C2-C3:a
-			
-			
-			C3-C4:a
-			
-			
-			C4-C5:a
-			
-			
-			C5-C6:a
-			
-			
-			C6-C7:a
-			
-			
-			C7-T1:a
-			
-			
-			[At * and * there is disc degeneration and narrowing the disc spaces with disc bulging and osteophytes.  There is severe bilateral foraminal narrowing at both levels.  The left-sided foramina are narrower, particularly at *.]
-			
-			[Vertebral body and disc height]
-			
-			[Spondylolisthesis]
-			
-			[Scoliosis]
-			
-			[Red marrow reconversion]
-			
-			[Vertebral arteries]
-			
-			[Collections]
-			
-			[Ligaments]
-			
 			[Chiari]
-			
-			[Spinal cord signal]
-			
+			[Vertebral arteries]
 			[Thyroid]
 			
-			[Multilevel facetal degeneration is evident. The bone marrow and imaged spinal cord returns normal signal. Normal appearances of the cervicomedullaryjunction.No abnormalities are demonstrated on the planning sequences.
+			{{Degenerative spine generic}}
 			
 			[Normal cervical spine alignment with preservation of vertebral body height and signal.  No spondylotic disc or facet joint changes.  No central canal, lateral recess or exit foraminal narrowing.  No intramedullary signal change seen in the cervical cord.]
-			
 			
 			CONCLUSION:
 		</TEXT>
@@ -1778,28 +1774,21 @@
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			2 panes of vertical, with sag/axialsup.Turnlocalisor on.Spine labelling.
-			
-			
-			
+			/*2 panes of vertical, with sag/axial/sup.Turnlocalisor on.Spine labelling. */
 			
 			FINDINGS:
 			
-			Comparison is made withthe ...
+			Comparison is made with the ...
 			
-			[Scoliosis]
+			[There is normal formation and segmentation of the lumbosacral spine. | There is a transitional lumbosacral junction. I have assumed the lowest completely developed disc space is *. ]
 			
-			[There is normal formation and segmentation of the lumbosacralspine. ]
+			/* Iliolumbar ligament at L5 | Fully formed S1-S2 disc */
 			
-			[There is a transitional lumbosacral junction. I have assumed the lowest completely developed disc space is *. ]
-			
-			[Iliolumbar ligament at L5 | Fully formed S1-S2 disc |
-			
-			Note is made of ...
+			[Note is made of ...]
 			
 			[There is degeneration of the discs from * to * which are dehydrated with disc bulging and osteophytes].
 			
-			[Follow all the nerves along their entire course overcalling: foraminal narrowing including flaval | contacting | displacing | impingement ! indentation of the theca ]
+			/* Terms: foraminal narrowing including flaval | contacting | displacing | impingement ! indentation of the theca */
 			
 			T12-L1: A ... causes ... There is loss of disc height.
 			
@@ -1815,33 +1804,11 @@
 			
 			[a broad based disc bulge in addition to flaval thickening narrows the * subarticular zone contacting but not compressing the transiting* root.]
 			
-			[Paraspinal mass]
-			
-			[DAVF]
-			
-			[Fractures]
-			
-			[Spondylolisthesis]
-			
 			[Annular fissure]
-			
-			[Collections]
-			
 			[Pars defects]
-			
-			[Diffuse malignant infiltration -  disc to vertebral body signal]
-			
-			[Paraspinalmusclesinc masses]
-			
 			[Bottom of spine]
-			
-			[Vertebral height and alignment are maintained.]
-			
-			[Multilevel facetal degeneration is evident particularly at *.]
-			
-			The bone marrow and imaged lower spinal cord return normal signal. No abnormalities are demonstrated on the localiser sequences.
-			
-			[Heterogeneous bone marrow signal probably represents red marrow reconversion.]
+			[The bone marrow and imaged lower spinal cord return normal signal. No abnormalities are demonstrated on the localiser sequences.]
+			{{Degenerative spine generic}}
 			
 			[Normal lumbar spine alignment with preservation of vertebral body height and signal.  No spondylotic disc or facet joint changes.  No central canal, lateral recess or exit foraminal narrowing.  No intramedullary signal change seen in the low cord.]
 			
@@ -2065,7 +2032,7 @@
 		<TEXT>
 			FINDINGS:
 			
-			There is multilevel degenerative disease. Disc space narrowing is evident at [x] with consequent endplate change. There is facet disease, most florid at [x]. The visualised abdominal aorta is calcified.
+			There is multilevel degenerative disease. Disc space narrowing is evident at [...] with consequent endplate change. There is facet disease, most florid at [...]. The visualised abdominal aorta is calcified.
 		</TEXT>
 	</TEMPLATE>
 	<TEMPLATE>
