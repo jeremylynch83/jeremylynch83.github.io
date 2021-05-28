@@ -69,17 +69,27 @@
 
 			<label><b>{{template.title}}</b></label>
 
+			<label>CLINICAL INDICATION:</label>
 
-			<b-form-group label="Clinical Indication:">
-				<b-form-textarea v-model="clin_indication" @update="writeTemplate()" placeholder="Enter text ">
+			<b-form-group>
+				<b-form-textarea v-model="clin_indication" @update="writeTemplate()" placeholder="Enter text">
 				</b-form-textarea>
 			</b-form-group>
 
+			<label>FINDINGS:</label>
+
+
 			<template v-for="n in templateForm">
-				<b-form-group :key="n.id">
-					<label>{{n.label}}</label>
-					<b-form-textarea :value=" n.text" :key="n.id" v-show="n.type != 'text'"></b-form-textarea>
+				<b-form-group :key="n.id" :label="n.label" label-cols="3" label-size="sm"
+					v-show="n.type == 'free_text'">
+					<b-form-textarea :value=" n.text" :key="n.id"></b-form-textarea>
 				</b-form-group>
+				<b-form-group :key="n.id" :label="n.label" label-cols="3" label-size="sm"
+					v-show="n.type == 'selection'">
+					<b-form-select v-model="n.selected" :options="n.options" size="sm"></b-form-select>
+					<b-form-textarea :key="n.id" placeholder="Details"></b-form-textarea>
+				</b-form-group>
+
 			</template>
 
 
@@ -105,6 +115,18 @@
 
 	<script>
 		/* GENERIC FUNCTIONS */
+
+		function parse_options(str) {
+			var list = str;
+			if (typeof str === 'string' || str instanceof String) {
+				list = str.split("|");
+			} else list = null;
+
+			if (Array.isArray(list)) {
+				if (isNaN(list[0])) list[0] = null;
+			}
+			return list;
+		}
 
 
 		function loadXML() {
@@ -226,7 +248,6 @@
 						n = text.indexOf(symbol_start, n + symbol_start.length);
 						if (n != -1) {
 							end = text.indexOf(symbol_end, n);
-							console.log(text.substr(n + 2, end - n - 2));
 						}
 
 					} while (n != -1);
@@ -263,7 +284,6 @@
 
 					do {
 						new_cursor = text.indexOf(symbol_start, old_cursor);
-						console.log(new_cursor, text.length);
 
 						if (new_cursor != -1) {
 							if (text.substr(new_cursor, 5) == "[...]") {
@@ -278,12 +298,28 @@
 							}
 							if (text.substr(new_cursor, 5) != "[...]") {
 								var string_end = text.indexOf(symbol_end, new_cursor);
-								var input_label = text.slice(new_cursor + symbol_start.length, string_end);
-								this.templateForm.push({
-									type: "free_text",
-									label: text.slice(old_cursor, new_cursor),
-									text: input_label
-								});
+								var inside_text = text.slice(old_cursor, new_cursor);
+								var input_text = text.slice(new_cursor + symbol_start.length, string_end);
+
+
+								if (input_text.includes("|")) {
+									var options = input_text.split("|");
+
+									this.templateForm.push({
+										type: "selection",
+										label: inside_text,
+										text: input_text,
+										options: options
+									});
+
+								} else {
+									this.templateForm.push({
+										type: "free_text",
+										label: inside_text,
+										text: input_text
+									});
+								}
+
 								old_cursor = string_end + symbol_end.length;
 							}
 						}
