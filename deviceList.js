@@ -1,6 +1,5 @@
 deviceList=
 
-
 [
     {
         "type": "Balloon",
@@ -877,7 +876,7 @@ deviceList=
         "name": "5F Envoy ",
         "manufacturer": "Cerenovus",
         "url1": "http://synthes.vo.llnwd.net/o16/LLNWMB8/US%20Mobile/Synthes%20North%20America/Product%20Support%20Materials/Brochures/ENVOY%20FAMILY%20BROCHURE%20pages%20DSUSCOD12140219.pdf",
-        "minid": 0.054,
+        "minid": 0.056,
         "maxod": 0.065,
         "length": "90 / 100"
     },
@@ -886,7 +885,7 @@ deviceList=
         "name": "6F Envoy ",
         "manufacturer": "Cerenovus",
         "url1": "http://synthes.vo.llnwd.net/o16/LLNWMB8/US%20Mobile/Synthes%20North%20America/Product%20Support%20Materials/Brochures/ENVOY%20FAMILY%20BROCHURE%20pages%20DSUSCOD12140219.pdf",
-        "minid": 0.068,
+        "minid": 0.07,
         "maxod": 0.079,
         "length": "90 / 100"
     },
@@ -895,7 +894,7 @@ deviceList=
         "name": "6F Envoy DA / XB ",
         "manufacturer": "Cerenovus",
         "url1": "http://synthes.vo.llnwd.net/o16/LLNWMB8/US%20Mobile/Synthes%20North%20America/Product%20Support%20Materials/Brochures/ENVOY%20FAMILY%20BROCHURE%20pages%20DSUSCOD12140219.pdf",
-        "minid": 0.069,
+        "minid": 0.07,
         "maxod": 0.079,
         "length": "95 / 105",
         "description": "\"ENVOY DA: Distal 8 cm flexible section allows access to more distal anatomy to achieve geometric anchoring in petrocavernous ICA and provide support for a stable procedure. ENVOY XB Catheter has the same end-to-end braided construction as the ENVOY Catheter with an estimated 27% additional back-up support at the bifurcation of the common carotid.\"",
@@ -906,7 +905,7 @@ deviceList=
         "name": "7F Envoy ",
         "manufacturer": "Cerenovus",
         "url1": "http://synthes.vo.llnwd.net/o16/LLNWMB8/US%20Mobile/Synthes%20North%20America/Product%20Support%20Materials/Brochures/ENVOY%20FAMILY%20BROCHURE%20pages%20DSUSCOD12140219.pdf",
-        "minid": 0.076,
+        "minid": 0.078,
         "maxod": 0.09186,
         "length": "90 / 100"
     },
