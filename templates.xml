@@ -1876,8 +1876,6 @@
 			Diagnostic Neuroradiology
 		</TYPE>
 		<TEXT>
-			FINDINGS:
-			
 			Comparison is made with [...]
 			[Note is made of ...]
 			[There is normal formation and segmentation of the lumbosacral spine. | There is a transitional lumbosacral junction. ]
@@ -1903,18 +1901,6 @@
 			{{Degenerative spine generic}}
 			
 			[Normal lumbar spine alignment with preservation of vertebral body height and signal.  No spondylotic disc or facet joint changes.  No central canal, lateral recess or exit foraminal narrowing.  No intramedullary signal change seen in the low cord.]
-			
-			CONCLUSION:
-			
-			/* Foraminal stenosis:
-			
-			[https://www.ajronline.org/doi/full/10.2214/AJR.09.2772](https://www.ajronline.org/doi/full/10.2214/AJR.09.2772)
-			
-			grade 1 (mild) refers to mild foraminal stenosis showing perineural fat obliteration in the two opposing directions, vertical or transverse;
-			
-			grade 2 (mod) refers to moderate foraminal stenosis showing perineural fat obliteration in the four directions without morphologic change, both vertical and transverse directions; and
-			
-			grade 3 (sev) refers to severe foraminal stenosis showing nerve root collapse or morphologic change. */
 		</TEXT>
 	</TEMPLATE>
 	<TEMPLATE>

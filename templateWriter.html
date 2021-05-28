@@ -67,7 +67,7 @@
 				<b-button variant="success" @click="copyReport()">Copy Text</b-button>
 			</b-form-group>
 
-			<label><b>{{template.title}}</b></label>
+			<p><label><b>{{template.title}}</b></label></p>
 
 			<label>CLINICAL INDICATION:</label>
 
@@ -75,6 +75,19 @@
 				<b-form-textarea v-model="clin_indication" @update="writeTemplate()" placeholder="Enter text">
 				</b-form-textarea>
 			</b-form-group>
+
+			<label>TECHNIQUE:</label>
+			<b-form-group>
+				<b-form-textarea placeholder="Enter text">
+				</b-form-textarea>
+			</b-form-group>
+
+			<label>COMPARISON:</label>
+			<b-form-group>
+				<b-form-textarea placeholder="Enter text">
+				</b-form-textarea>
+			</b-form-group>
+
 
 			<label>FINDINGS:</label>
 
@@ -89,8 +102,13 @@
 					<b-form-select v-model="n.selected" :options="n.options" size="sm"></b-form-select>
 					<b-form-textarea :key="n.id" placeholder="Details"></b-form-textarea>
 				</b-form-group>
-
 			</template>
+
+			<label>CONCLUSION:</label>
+			<b-form-group>
+				<b-form-textarea placeholder="Enter text">
+				</b-form-textarea>
+			</b-form-group>
 
 
 		</b-container>
