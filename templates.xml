@@ -49,20 +49,20 @@
 		<TEXT>
 			{{Angio header}}
 			
-			Clinical History: [age] year-old [male/female] ([MRN]) admitted on [admission date] for subarachnoid hemorrhage (SAH) secondary to a ruptured [location] as seen on CT angiogram; Modified Fisher grade [0-4], WFNS grade [1-5]. The patient [has/does not have] a history of previous SAH [, with previous treatment [year] and currently undergoing a [planned/emergency] retreatment]. An external ventricular drain was [not required/required and placed] pre-operatively. Informed consent for a diagnostic cerebral angiogram and aneurysm repair was obtained.
+			Clinical History: [age] year-old [male | female] ([MRN]) admitted on [date] for subarachnoid hemorrhage (SAH) secondary to a ruptured [location] aneurysm as seen on CT angiogram; Modified Fisher grade [0-4], WFNS grade [1-5]. The patient [has | does not have] a history of previous SAH [details]. An external ventricular drain was [not required | required and placed] pre-operatively. Informed consent for a diagnostic cerebral angiogram and aneurysm repair was obtained.
 			
 			
 			Technique:
-			The patient underwent general anesthesia and endotracheal intubation. [Right/Left common femoral, Right/Left radial] artery access was obtained with a [size]-French sheath inserted by the Seldinger technique [under ultrasound guidance]. The [target artery] was selectively catheterized with a diagnostic Berenstein tip catheter through a [guiding catheter] and AP/lateral/3D-rotational angiograms acquired. This demonstrated an aneurysm of the [location] with a maximal diameter of [diameter in mm].
+			The patient underwent general anesthesia and endotracheal intubation. [Right common femoral | Left common femoral | Bilateral groin | Right radial | Left radial ] artery access was obtained with a [size]-French sheath inserted by the Seldinger technique [under ultrasound guidance]. The [target artery] was selectively catheterized with a diagnostic Berenstein tip catheter through a [guiding catheter] and AP/lateral/3D-rotational angiograms acquired. This demonstrated an aneurysm of the [location] with a maximal diameter of [diameter in mm].
 			
 			[Procedural description]
 			
-			[There were no periprocedural complications. / The procedure was complicated by an intraprocedural aneurysmal rupture causing rebleeding which was managed with temporary balloon inflation for proximal control and coil closure of the rupture point. / The procedure was complicated by an intraprocedural thromboembolic event with visualized occlusion of [involved branch]. After awakening from anesthesia, the patient had attributable [weakness/numbness] in the corresponding distribution to the involved artery.]
+			[There were no periprocedural complications. | The procedure was complicated by an intraprocedural aneurysmal rupture causing rebleeding which was managed with temporary balloon inflation for proximal control and coil closure of the rupture point. | The procedure was complicated by an intraprocedural thromboembolic event.] After awakening from anesthesia, the patient had attributable [weakness | numbness] in the corresponding distribution to the involved artery.
 			
-			At the end of the procedure all catheters and the balloon were removed. [A 6 Fr | An 8 Fr] Angio-Seal Vascular Closure Device was used to achieve groin haemostasis. The patient woke up with no neurological deficits.
+			At the end of the procedure all catheters and the balloon were removed. [A 6 French | An 8 French] Angio-Seal Vascular Closure Device was used to achieve groin haemostasis. The patient woke up with no neurological deficits.
 			
 			Interpretation:
-			[Successful/Unsuccessful] endovascular [procedure type] for treatment of a ruptured [location] aneurysm. Modified Raymond Roy Class [1-3] result achieved. The patient will require an MRI/MRA during admission.
+			[Successful| Unsuccessful] endovascular [procedure type] for treatment of a ruptured [location] aneurysm. Modified Raymond Roy Class [1|2|3] result achieved. The patient will require an MRI/MRA during admission.
 		</TEXT>
 	</TEMPLATE>
 	<TEMPLATE>

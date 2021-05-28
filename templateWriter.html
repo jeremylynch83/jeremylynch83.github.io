@@ -67,18 +67,20 @@
 				<b-button variant="success" @click="copyReport()">Copy Text</b-button>
 			</b-form-group>
 
+			<label><b>{{template.title}}</b></label>
+
+
 			<b-form-group label="Clinical Indication:">
-				<b-form-input v-model="clin_indication" @update="writeTemplate()" placeholder="Enter text ">
-				</b-form-input>
+				<b-form-textarea v-model="clin_indication" @update="writeTemplate()" placeholder="Enter text ">
+				</b-form-textarea>
 			</b-form-group>
 
-			<b-form-group label="Report text:">
-				<template>
-					<div>
-						<b-form-textarea id="report_input" plaintext :value="reportText" rows="15"></b-form-textarea>
-					</div>
-				</template>
-			</b-form-group>
+			<template v-for="n in templateForm">
+				<b-form-group :key="n.id">
+					<label>{{n.label}}</label>
+					<b-form-textarea :value=" n.text" :key="n.id" v-show="n.type != 'text'"></b-form-textarea>
+				</b-form-group>
+			</template>
 
 
 		</b-container>
@@ -187,7 +189,7 @@
 						if (n != -1) {
 							end = text.indexOf(symbol_end, n);
 							var comment_text = text.substr(n + 2, end - n - 2);
-							console.log(comment_text);
+							//console.log(comment_text);
 
 						}
 					}
@@ -225,11 +227,9 @@
 						if (n != -1) {
 							end = text.indexOf(symbol_end, n);
 							console.log(text.substr(n + 2, end - n - 2));
-
 						}
 
 					} while (n != -1);
-
 					return text;
 				},
 
@@ -251,12 +251,46 @@
 				*/
 
 				writeTemplate: function () {
-					this.reportText = this.template.title;
-					if (this.clin_indication != "") {
-						this.reportText += "\nINDICATION: " + this.clin_indication + "\n";
-					}
 
-					this.reportText += this.template.text;
+					var text = this.template.text;
+
+					this.templateForm = [];
+					var symbol_start = '[';
+					var symbol_end = ']';
+
+					var old_cursor = 0;
+					var new_cursor = 0;
+
+					do {
+						new_cursor = text.indexOf(symbol_start, old_cursor);
+						console.log(new_cursor, text.length);
+
+						if (new_cursor != -1) {
+							if (text.substr(new_cursor, 5) == "[...]") {
+								var string_end = text.indexOf(symbol_end, new_cursor + symbol_end.length);
+								this.templateForm.push({
+									type: "free_text",
+									label: text.substr(old_cursor, text.indexOf(symbol_start,
+										old_cursor) - old_cursor),
+									text: ""
+								});
+								old_cursor = string_end + symbol_end.length;
+							}
+							if (text.substr(new_cursor, 5) != "[...]") {
+								var string_end = text.indexOf(symbol_end, new_cursor);
+								var input_label = text.slice(new_cursor + symbol_start.length, string_end);
+								this.templateForm.push({
+									type: "free_text",
+									label: text.slice(old_cursor, new_cursor),
+									text: input_label
+								});
+								old_cursor = string_end + symbol_end.length;
+							}
+						}
+					}
+					while (new_cursor != -1 && new_cursor < text.length);
+
+
 				},
 
 				copyReport: function () {
