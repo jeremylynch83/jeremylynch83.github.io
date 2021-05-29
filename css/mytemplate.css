@@ -1,0 +1,18 @@
+.footer {
+
+    text-align: center;
+    margin-top: 50px;
+    font-size: small;
+}
+
+caption {
+    color: #000000;
+    font-size: 1rem;
+}
+
+.element {
+
+    background-color: rgb(215, 255, 255);
+    padding: 10px;
+    margin-bottom: 5px;
+}
