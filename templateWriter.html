@@ -164,23 +164,31 @@
 			xhttp.send();
 
 			function myFunction(xml) { // Load array of report templates
-				var xml_array = [];
 				var xmlDoc = xml.responseXML;
-				var templates = xmlDoc.getElementsByTagName("TEMPLATE");
+				var templates = xmlDoc.getElementsByTagName("template");
 				for (var i = 0; i < templates.length; i++) {
-					var t_name = xmlDoc.getElementsByTagName("TEMPLATE")[i].getElementsByTagName(
-						"NAME")[0].innerHTML.replace(/\t/g, '');
-					var t_type = xmlDoc.getElementsByTagName("TEMPLATE")[i].getElementsByTagName(
-						"TYPE")[0].innerHTML.replace(/\t/g, '').trim();
-					var t_findings = xmlDoc.getElementsByTagName("TEMPLATE")[i].getElementsByTagName(
-						"FINDINGS")[0].innerHTML.replace(/\t/g, '');
-					var t_title = xmlDoc.getElementsByTagName("TEMPLATE")[i].getElementsByTagName(
-						"TITLE")[0];
+					var t_name = xmlDoc.getElementsByTagName("template")[i].getElementsByTagName(
+						"name")[0].innerHTML.replace(/\t/g, '');
+					var t_type = xmlDoc.getElementsByTagName("template")[i].getElementsByTagName(
+						"type")[0].innerHTML.replace(/\t/g, '').trim();
+					var t_title = xmlDoc.getElementsByTagName("template")[i].getElementsByTagName(
+						"title")[0];
 					if (t_title == null || t_title == "") {
 						t_title = t_name;
 					} else {
 						t_title = t_title.innerHTML.replace(/\t/g, '');
 					}
+
+					var findings = xmlDoc.getElementsByTagName("template")[i].getElementsByTagName(
+						"findings")[0];
+
+					var currentNode,
+						ni = document.createNodeIterator(findings, NodeFilter.SHOW_ELEMENT);
+
+					while (currentNode = ni.nextNode()) {
+						console.log(currentNode.nodeName);
+					}
+
 					temp.push({
 						name: t_name,
 						title: t_title,

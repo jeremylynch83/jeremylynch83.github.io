@@ -1,27 +1,34 @@
 <?xml version="1.0" encoding="ISO8859-1"?>
-<ALL>
-	<MODULE>
-		<NAME>
+<all>
+	<module>
+		<name>
 			Spine level
-		</NAME>
-		<TITLE>
-		</TITLE>
-		<FINDINGS>
-		</FINDINGS>
-	</MODULE>
-	<TEMPLATE>
-		<NAME>
+		</name>
+		<title>
+		</title>
+		<findings>
+		</findings>
+	</module>
+	<template>
+		<name>
 			Lumbar spine
-		</NAME>
-		<TYPE>
+		</name>
+		<type>
 			Diagnostic
-		</TYPE>
-		<TITLE>
+		</type>
+		<title>
 			Endovascular Repair of a Ruptured Aneurysm
-		</TITLE>
-		<FINDINGS>
-		</FINDINGS>
-	</TEMPLATE>
-	<ALL>
-	</ALL>
-</ALL>
+		</title>
+		<findings>
+			<h1>
+				Formation and segmentation
+			</h1>
+			<selection>
+				There is normal formation and segmentation of the lumbosacral spine (The iliolumbar ligament is at L5 and there is a fully formed S1-S2 disc). | There is a transitional lumbosacral junction.
+			</selection>
+			<insert>
+				Spine level
+			</insert>
+		</findings>
+	</template>
+</all>
