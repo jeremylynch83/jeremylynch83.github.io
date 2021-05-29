@@ -69,27 +69,28 @@
 
 			<p><label><b>{{template.title}}</b></label></p>
 
-			<label>CLINICAL INDICATION:</label>
 
-			<b-form-group>
+			<b-form-group v-show="template != ''">
+				<label>CLINICAL INDICATION:</label>
+
 				<b-form-textarea v-model="clin_indication" @update="writeTemplate()" placeholder="Enter text">
 				</b-form-textarea>
 			</b-form-group>
 
-			<label>TECHNIQUE:</label>
-			<b-form-group>
+			<b-form-group v-show="template != '' && template.type != 'Angiography'">
+				<label>TECHNIQUE:</label>
+
 				<b-form-textarea placeholder="Enter text">
 				</b-form-textarea>
 			</b-form-group>
 
-			<label>COMPARISON:</label>
-			<b-form-group>
-				<b-form-textarea placeholder="Enter text">
+			<b-form-group v-show="template != '' && template.type != 'Angiography'">
+				<label>COMPARISON:</label>
+				<b-form-textarea placeholder=" Enter text">
 				</b-form-textarea>
 			</b-form-group>
 
-
-			<label>FINDINGS:</label>
+			<label v-show="template != ''">FINDINGS:</label>
 
 
 			<template v-for="n in templateForm">
@@ -104,8 +105,9 @@
 				</b-form-group>
 			</template>
 
-			<label>CONCLUSION:</label>
-			<b-form-group>
+			<b-form-group v-show="template != ''">
+				<label>CONCLUSION:</label>
+
 				<b-form-textarea placeholder="Enter text">
 				</b-form-textarea>
 			</b-form-group>
@@ -165,6 +167,8 @@
 				for (var i = 0; i < templates.length; i++) {
 					var t_name = xmlDoc.getElementsByTagName("TEMPLATE")[i].getElementsByTagName(
 						"NAME")[0].innerHTML.replace(/\t/g, '');
+					var t_type = xmlDoc.getElementsByTagName("TEMPLATE")[i].getElementsByTagName(
+						"TYPE")[0].innerHTML.replace(/\t/g, '').trim();
 					var t_text = xmlDoc.getElementsByTagName("TEMPLATE")[i].getElementsByTagName(
 						"TEXT")[0].innerHTML.replace(/\t/g, '');
 					var t_title = xmlDoc.getElementsByTagName("TEMPLATE")[i].getElementsByTagName(
@@ -177,7 +181,8 @@
 					temp.push({
 						name: t_name,
 						text: t_text,
-						title: t_title
+						title: t_title,
+						type: t_type
 					});
 				}
 
@@ -213,24 +218,6 @@
 								item.text = item.text.replaceAll(symbol_start + replace_name + symbol_end, find_obj
 									.text);
 							}
-						}
-					}
-					while (n != -1);
-				});
-
-				// Deal with the comments
-				var symbol_start = '/*';
-				var symbol_end = '*/';
-				temp.forEach(item => {
-					var text = item.text;
-					var n = 0 - symbol_start.length;
-					do {
-						n = text.indexOf(symbol_start, n + symbol_start.length);
-						if (n != -1) {
-							end = text.indexOf(symbol_end, n);
-							var comment_text = text.substr(n + 2, end - n - 2);
-							//console.log(comment_text);
-
 						}
 					}
 					while (n != -1);
@@ -292,6 +279,7 @@
 				writeTemplate: function () {
 
 					var text = this.template.text;
+					console.log(this.template.type)
 
 					this.templateForm = [];
 					var symbol_start = '[';
