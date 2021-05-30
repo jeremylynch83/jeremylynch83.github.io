@@ -151,6 +151,31 @@
 			return list;
 		}
 
+		function parseFindings(xml) {
+			var elements = [];
+			for (i = 0; i < xml.length; i++) {
+				if (xml[i].nodeName != "#text") {
+					let el = {};
+					el.type = xml[i].nodeName;
+					switch (xml[i].nodeName) {
+						default:
+							break;
+						case "h1":
+							el.label = xml[i].innerHTML.trim();
+							break;
+						case "selection":
+							el.options = xml[i].innerHTML.trim().split("|");
+							break;
+						case "insert":
+							break;
+					}
+					console.log(el);
+					elements.push(el);
+				}
+			}
+			return elements;
+		}
+
 
 		function loadXML() {
 			var xhttp = new XMLHttpRequest();
@@ -165,6 +190,22 @@
 
 			function myFunction(xml) { // Load array of report templates
 				var xmlDoc = xml.responseXML;
+
+				var modules = xmlDoc.getElementsByTagName("module");
+				for (var i = 0; i < modules.length; i++) {
+					var m_name = xmlDoc.getElementsByTagName("module")[i].getElementsByTagName(
+						"name")[0].innerHTML.replace(/\t/g, '');
+					var m_content = xmlDoc.getElementsByTagName("module")[i].getElementsByTagName(
+						"content")[0].innerHTML.replace(/\t/g, '');
+
+					var elements = parseFindings(m_content);
+					modules.push({
+						name: m_name,
+						elements: elements
+					})
+				}
+
+
 				var templates = xmlDoc.getElementsByTagName("template");
 				for (var i = 0; i < templates.length; i++) {
 					var t_name = xmlDoc.getElementsByTagName("template")[i].getElementsByTagName(
@@ -178,21 +219,15 @@
 					} else {
 						t_title = t_title.innerHTML.replace(/\t/g, '');
 					}
-
-					var findings = xmlDoc.getElementsByTagName("template")[i].getElementsByTagName(
-						"findings")[0];
-
-					var currentNode,
-						ni = document.createNodeIterator(findings, NodeFilter.SHOW_ELEMENT);
-
-					while (currentNode = ni.nextNode()) {
-						console.log(currentNode.nodeName);
-					}
+					var t_findings = xmlDoc.getElementsByTagName("template")[i].getElementsByTagName(
+						"findings")[0].childNodes;
+					var elements = parseFindings(t_findings);
 
 					temp.push({
 						name: t_name,
 						title: t_title,
-						type: t_type
+						type: t_type,
+						elements: elements
 					});
 				}
 

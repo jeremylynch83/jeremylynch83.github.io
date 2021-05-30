@@ -4,10 +4,11 @@
 		<name>
 			Spine level
 		</name>
-		<title>
-		</title>
-		<findings>
-		</findings>
+		<content>
+			<h1>
+				Spine level module
+			</h1>
+		</content>
 	</module>
 	<template>
 		<name>
