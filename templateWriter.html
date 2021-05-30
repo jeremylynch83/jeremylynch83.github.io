@@ -112,23 +112,24 @@
 						</b-form-group>
 						<!-- SELECTION TYPE -->
 						<b-form inline :key="n.id" :label="n.label" label-cols="0" label-size="sm"
-							v-show="n.type == 'selection'">
+							v-show="n.type == 'selection'" :disabled="n.state">
 							<b-form-select v-model="n.selected" :options="n.options" size="sm" style="width:50%"
-								class="mb-2 mr-sm-2 mb-sm-0" disabled>
+								class="mb-2 mr-sm-2 mb-sm-0">
 							</b-form-select>
 							<b-button>Details</b-button>
 							<!--<b-form-textarea :key="n.id" placeholder="Details"></b-form-textarea>-->
 						</b-form inline>
 						<!-- MULTISELECTION TYPE -->
 						<template v-for="nn in n.multi" v-show="n.type == 'multi_select'">
-							<label>{{nn.text}}</label>
-							<b-form-select :options="nn.options" size="sm"
-								v-show="nn.options != '' && nn.type == 'multi'">
-							</b-form-select>
-							<b-form-textarea :key="nn.id" placeholder="Details" v-show="nn.type == 'free_text'">
-							</b-form-textarea>
-							</b-form-select>
-
+							<b-form-group :disabled="n.state">
+								<label>{{nn.text}}</label>
+								<b-form-select :options="nn.options" size="sm"
+									v-show="nn.options != '' && nn.type == 'multi'">
+								</b-form-select>
+								<b-form-textarea :key="nn.id" placeholder="Details" v-show="nn.type == 'free_text'">
+								</b-form-textarea>
+								</b-form-select>
+							</b-form-group>
 						</template>
 					</div>
 				</div>
@@ -184,11 +185,12 @@
 				if (xml[i].nodeName != "#text") {
 					let el = {};
 					el.type = xml[i].nodeName.trim();
-					var state = xml[i].getAttribute("state");
-					console.log(state);
-
-
-					el.state = "enabled";
+					var disabled = xml[i].getAttribute("disabled");
+					if (disabled != null && disabled == "true") {
+						el.disabled = true;
+					} else {
+						el.disabled = false;
+					}
 
 					switch (xml[i].nodeName) {
 						default:
@@ -355,6 +357,7 @@
 					for (var n = 0; n < elements.length; n++) {
 						var el = {};
 						el.array_id = n;
+						el.disabled = elements[n].disabled
 
 						switch (elements[n].type) {
 							case "h1":

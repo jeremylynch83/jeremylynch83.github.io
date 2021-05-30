@@ -8,7 +8,7 @@
 			<selection>
 				The disc is normal | There is disc degeneration. | There is disc degeneration and height loss.
 			</selection>
-			<multi_select state="disabled">
+			<multi_select disabled="true">
 				<select text="There is a disc">
 					bulge | prolapse | extrusion | migration | sequestration | intravertebral herniation
 				</select>
