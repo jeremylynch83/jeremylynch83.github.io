@@ -16,7 +16,7 @@
 					central | subarticular | foraminal | extraforaminal
 				</select>
 			</multi_select>
-			<selection>
+			<selection text="Ligamentum flavum">
 				There is no flaval thickening | There is flaval thickening
 			</selection>
 			<multi_select>
