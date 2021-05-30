@@ -54,6 +54,48 @@
 			<insert>
 				Spine level
 			</insert>
+			<h1>
+				L1-L2:
+			</h1>
+			<insert>
+				Spine level
+			</insert>
+			<h1>
+				T12-L1:
+			</h1>
+			<insert>
+				Spine level
+			</insert>
+			<h1>
+				L1-L2:
+			</h1>
+			<insert>
+				Spine level
+			</insert>
+			<h1>
+				L2-L3:
+			</h1>
+			<insert>
+				Spine level
+			</insert>
+			<h1>
+				L3-L4:
+			</h1>
+			<insert>
+				Spine level
+			</insert>
+			<h1>
+				L4-L5:
+			</h1>
+			<insert>
+				Spine level
+			</insert>
+			<h1>
+				L5-S1:
+			</h1>
+			<insert>
+				Spine level
+			</insert>
 		</findings>
 	</template>
 </all>
