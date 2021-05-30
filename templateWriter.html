@@ -156,7 +156,6 @@
 			var elements = [];
 			for (i = 0; i < xml.length; i++) {
 				if (xml[i].nodeName != "#text") {
-					console.log(xml[i].innerHTML.trim());
 					let el = {};
 					el.type = xml[i].nodeName.trim();
 					switch (xml[i].nodeName) {
@@ -172,11 +171,10 @@
 							break;
 						case "insert":
 							el.module = xml[i].innerHTML.trim();
-
 							for (var n = 0; n < modules.length; n++) {
 								if (modules[n].name == el.module) {
+									//console.table(modules[n].elements);
 									elements = elements.concat(modules[n].elements);
-									//console.log(modules[n].elements);
 								}
 							}
 							break;
@@ -187,7 +185,7 @@
 		}
 
 		function parseModules(xml) {
-			parseFindings(xml, null)
+			return parseFindings(xml, null)
 		}
 
 
@@ -211,12 +209,13 @@
 					var m_name = xmlDoc.getElementsByTagName("module")[i].getElementsByTagName(
 						"name")[0].innerHTML.replace(/^\s+|\s+$/g, '');
 					var m_content = xmlDoc.getElementsByTagName("module")[i].getElementsByTagName(
-						"content");
+						"content")[0].childNodes;
 					var elements = parseModules(m_content);
 					modules.push({
 						name: m_name,
 						elements: elements
-					})
+					});
+
 				}
 
 				var templates = xmlDoc.getElementsByTagName("template");
@@ -235,6 +234,8 @@
 					var t_findings = xmlDoc.getElementsByTagName("template")[i].getElementsByTagName(
 						"findings")[0].childNodes;
 					var elements = parseFindings(t_findings, modules);
+					console.table(elements);
+
 
 					temp.push({
 						name: t_name,
