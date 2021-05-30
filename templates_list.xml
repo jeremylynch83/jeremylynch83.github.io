@@ -15,7 +15,11 @@
 				<select text="located in the">
 					central | subarticular | foraminal | extraforaminal
 				</select>
-				<select text="space.">
+				<select text="space. This">
+					causes no neural compression | contacts | impinges
+				</select>
+				<select text="the">
+					nerve root
 				</select>
 			</multi_select>
 			<selection>
