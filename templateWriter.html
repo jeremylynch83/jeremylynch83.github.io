@@ -112,31 +112,24 @@
 						<!-- FREE TEXT TYPE -->
 						<b-form-group :key="n.id" :label="n.label" label-cols="3" label-size="sm"
 							v-show="n.type == 'free_text'" :disabled="n.disabled">
-							<label>{{n.label}}</label>
-
 							<b-form-textarea :value=" n.text" :key="n.id"></b-form-textarea>
 						</b-form-group>
 						<!-- SELECTION TYPE -->
-						<b-form-group :disabled="n.disabled">
-
-							<b-form inline :key="n.id" :label="n.label" label-cols="0" label-size="sm"
-								v-show="n.type == 'selection'">
+						<b-form-group :disabled="n.disabled" v-show="n.type == 'selection'">
+							<b-form inline :key="n.id" :label="n.label" label-cols="0" label-size="sm">
+								<label class="mb-2 mr-sm-2 mb-sm-0">{{n.label}} </label>
 								<b-form-select v-model="n.selected" :options="n.options" size="sm" style="width:50%"
 									class="mb-2 mr-sm-2 mb-sm-0">
 								</b-form-select>
-								<b-button>Details</b-button>
 							</b-form inline>
 						</b-form-group>
 
 						<!-- MULTISELECTION TYPE -->
 						<template v-for="nn in n.multi" v-show="n.type == 'multi_select'">
-							<b-form-group :disabled="n.disabled">
+							<b-form-group :disabled="n.disabled" v-show="nn.options != '' && nn.type == 'multi'">
 								<label>{{nn.text}}</label>
-								<b-form-select :options="nn.options" size="sm"
-									v-show="nn.options != '' && nn.type == 'multi'">
+								<b-form-select :options="nn.options" size="sm">
 								</b-form-select>
-								<b-form-textarea :key="nn.id" placeholder="Details" v-show="nn.type == 'free_text'">
-								</b-form-textarea>
 								</b-form-select>
 							</b-form-group>
 						</template>
@@ -371,6 +364,7 @@
 						var el = {};
 						el.array_id = n;
 						el.disabled = elements[n].disabled
+						el.label = elements[n].label;
 
 						switch (elements[n].type) {
 							case "h1":

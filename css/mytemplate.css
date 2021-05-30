@@ -21,7 +21,7 @@ caption {
 .element {
 
     background-color: rgb(215, 255, 255);
-    padding: 10px;
+    padding: 5px;
     margin-bottom: 5px;
     flex: 90%;
 }

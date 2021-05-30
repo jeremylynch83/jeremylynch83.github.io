@@ -5,7 +5,7 @@
 			Spine level
 		</name>
 		<content>
-			<selection>
+			<selection label="Discs:">
 				The disc is normal | There is disc degeneration. | There is disc degeneration and height loss.
 			</selection>
 			<multi_select disabled="true">
@@ -29,7 +29,7 @@
 				<select text="nerve root at this level.">
 				</select>
 			</multi_select>
-			<selection>
+			<selection label="Facet joints:">
 				There is no facetal degeneration. | There is  facetal degeneration.
 			</selection>
 		</content>
@@ -45,7 +45,7 @@
 			MRI Lumber spine
 		</title>
 		<findings>
-			<selection label="Formation and segmentation">
+			<selection label="Formation and segmentation:">
 				There is normal formation and segmentation of the lumbosacral spine. | There is a transitional lumbosacral junction.
 			</selection>
 			<h1>
