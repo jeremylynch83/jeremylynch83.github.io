@@ -111,8 +111,11 @@
 					<!-- MULTISELECTION TYPE -->
 					<template v-for="nn in n.multi" v-show="n.type == 'multi_select'">
 						<label>{{nn.text}}</label>
-						<b-form-select :options="nn.options" size="sm" v-show="nn.options != ''">
+						<b-form-select :options="nn.options" size="sm" v-show="nn.options != '' && nn.type == 'multi'">
 						</b-form-select>
+						<b-form-textarea :key="n.id" placeholder="Details"></b-form-textarea>
+						</b-form-select>
+
 					</template>
 
 				</div>
@@ -185,14 +188,24 @@
 							el.multi = [];
 							for (var n = 0; n < nodes.length; n++) {
 								if (nodes[n].nodeName == "select") {
-									var options = nodes[n].innerHTML.trim().split("|");
+									var inner_text = nodes[n].innerHTML.trim();
+									var options = [];
+									var type = "";
+									if (inner_text.includes("|")) {
+										options = inner_text.split("|");
+										type = "multi";
+									} else {
+										options[0] = inner_text;
+										type = "free_text";
+									}
 									console.table(options);
 
 									var text = nodes[n].getAttribute("text").trim();
 
 									el.multi.push({
 										text: text,
-										options: options
+										options: options,
+										type: type
 									});
 
 								}
