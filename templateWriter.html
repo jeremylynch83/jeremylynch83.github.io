@@ -113,7 +113,8 @@
 						<label>{{nn.text}}</label>
 						<b-form-select :options="nn.options" size="sm" v-show="nn.options != '' && nn.type == 'multi'">
 						</b-form-select>
-						<b-form-textarea :key="n.id" placeholder="Details"></b-form-textarea>
+						<b-form-textarea :key="nn.id" placeholder="Details" v-show="nn.type == 'free_text'">
+						</b-form-textarea>
 						</b-form-select>
 
 					</template>
@@ -121,10 +122,10 @@
 				</div>
 			</template>
 
-			<b-form-group v-show="template != ''">
+			<b-form-group v-show=" template !=''">
 				<label>CONCLUSION:</label>
 
-				<b-form-textarea placeholder="Enter text">
+				<b-form-textarea placeholder=" Enter text">
 				</b-form-textarea>
 			</b-form-group>
 

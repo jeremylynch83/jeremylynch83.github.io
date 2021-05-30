@@ -15,15 +15,22 @@
 				<select text="located in the">
 					central | subarticular | foraminal | extraforaminal
 				</select>
-				<select text="space. This">
-					causes no neural compression | contacts | impinges
-				</select>
-				<select text="">
-					Details
-				</select>
 			</multi_select>
 			<selection>
 				There is no flaval thickening | There is flaval thickening
+			</selection>
+			<multi_select>
+				<select text="There is">
+					no neural compression | contact | impingement
+				</select>
+				<select text="of the ">
+					right | left
+				</select>
+				<select text="nerve root.">
+				</select>
+			</multi_select>
+			<selection>
+				There is no facetal degeneration. | There is  facetal degeneration.
 			</selection>
 		</content>
 	</module>
