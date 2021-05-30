@@ -109,8 +109,12 @@
 						<b-form-textarea :key="n.id" placeholder="Details"></b-form-textarea>
 					</b-form-group>
 					<!-- MULTISELECTION TYPE -->
-					<template v-for="nn in n.multi" v-show="n.type == 'multi_select'">
-					</template>
+					<b-form-group :key="n.id" v-show="n.type == 'multi_select'">
+						<template v-for="nn in n.multi">
+							<label>hello</label>
+						</template>
+					</b-form-group>
+
 
 				</div>
 			</template>
@@ -165,6 +169,7 @@
 				if (xml[i].nodeName != "#text") {
 					let el = {};
 					el.type = xml[i].nodeName.trim();
+
 					switch (xml[i].nodeName) {
 						default:
 							break;
@@ -178,248 +183,202 @@
 							break;
 						case "multi_select":
 							var nodes = xml[i].childNodes;
+							el.multi = [];
 							for (var n = 0; n < nodes.length; n++) {
-								if (nodes[n].nodeName ==
-								}
-								//el.options = xml[i].innerHTML.trim().split("|");
-								//el.multi = 
-								elements.push(el);
-								break;
-								case "insert":
-								el.module = xml[i].innerHTML.trim();
-								for (var n = 0; n < modules.length; n++) {
-									if (modules[n].name == el.module) {
-										elements = elements.concat(modules[n].elements);
-									}
-								}
-								break;
-							}
-					}
-				}
-				return elements;
-			}
-
-			function parseModules(xml) {
-				return parseFindings(xml, null)
-			}
-
-
-			function loadXML() {
-				var xhttp = new XMLHttpRequest();
-				var temp = [];
-				xhttp.onreadystatechange = function () {
-					if (this.readyState == 4 && this.status == 200) {
-						myFunction(this);
-					}
-				};
-				xhttp.open("GET", "http://neurotool.org/templates_list.xml", true);
-				xhttp.send();
-
-				function myFunction(xml) { // Load array of report templates
-					var xmlDoc = xml.responseXML;
-
-					var modules_xml = xmlDoc.getElementsByTagName("module");
-					var modules = [];
-					for (var i = 0; i < modules_xml.length; i++) {
-						var m_name = xmlDoc.getElementsByTagName("module")[i].getElementsByTagName(
-							"name")[0].innerHTML.replace(/^\s+|\s+$/g, '');
-						var m_content = xmlDoc.getElementsByTagName("module")[i].getElementsByTagName(
-							"content")[0].childNodes;
-						var elements = parseModules(m_content);
-						modules.push({
-							name: m_name,
-							elements: elements
-						});
-
-					}
-
-					var templates = xmlDoc.getElementsByTagName("template");
-					for (var i = 0; i < templates.length; i++) {
-						var t_name = xmlDoc.getElementsByTagName("template")[i].getElementsByTagName(
-							"name")[0].innerHTML.replace(/\t/g, '');
-						var t_type = xmlDoc.getElementsByTagName("template")[i].getElementsByTagName(
-							"type")[0].innerHTML.replace(/\t/g, '').trim();
-						var t_title = xmlDoc.getElementsByTagName("template")[i].getElementsByTagName(
-							"title")[0];
-						if (t_title == null || t_title == "") {
-							t_title = t_name;
-						} else {
-							t_title = t_title.innerHTML.replace(/\t/g, '');
-						}
-						var t_findings = xmlDoc.getElementsByTagName("template")[i].getElementsByTagName(
-							"findings")[0].childNodes;
-						var elements = parseFindings(t_findings, modules);
-
-
-						temp.push({
-							name: t_name,
-							title: t_title,
-							type: t_type,
-							elements: elements
-						});
-					}
-
-
-
-				}
-
-				return temp;
-
-			}
-
-			/* GLOBAL VARIABLES */
-
-			window.app = new Vue({
-				components: {
-					VueBootstrapTypeahead
-				},
-				el: '#app',
-				data: {
-					templates: loadXML(),
-					reportText: "",
-					clin_indication: "",
-					template: "",
-					templateForm: []
-				},
-
-				methods: {
-					// General functions
-					findList: function (text, symbol_start, symbol_end) {
-
-						var n = 0 - symbol_start.length;
-						do {
-							n = text.indexOf(symbol_start, n + symbol_start.length);
-							if (n != -1) {
-								end = text.indexOf(symbol_end, n);
-							}
-
-						} while (n != -1);
-						return text;
-					},
-
-					// Specific
-
-					selectTemplate: function (event) {
-						//console.table(this.templates[0].elements[0].type);
-						this.template = event;
-						this.writeTemplate();
-
-					},
-
-
-
-					writeTemplate: function () {
-						var elements = this.template.elements;
-
-						for (var n = 0; n < elements.length; n++) {
-							switch (elements[n].type) {
-								case "h1":
-									this.templateForm.push({
-										type: "header",
-										text: elements[n].label
-									});
-									break;
-								case "selection":
-									this.templateForm.push({
-										type: "selection",
-										options: elements[n].options
-									});
-									break;
-
-								default:
-									break;
-							}
-						}
-
-
-
-						/*
-
-						var text = this.template.text;
-						console.log(this.template.type)
-
-						this.templateForm = [];
-						var symbol_start = '[';
-						var symbol_end = ']';
-
-						var old_cursor = 0;
-						var new_cursor = 0;
-
-						do {
-							new_cursor = text.indexOf(symbol_start, old_cursor);
-
-							if (new_cursor != -1) {
-								if (text.substr(new_cursor, 5) == "[...]") {
-
-									var string_end = text.indexOf(symbol_end, new_cursor + symbol_end.length);
-									this.templateForm.push({
-										type: "free_text",
-										label: text.substr(old_cursor, text.indexOf(symbol_start,
-											old_cursor) - old_cursor),
-										text: ""
-									});
-									old_cursor = string_end + symbol_end.length;
-								} else {
-
-									var string_end = text.indexOf(symbol_end, new_cursor);
-									var inside_text = text.slice(old_cursor, new_cursor);
-									var input_text = text.slice(new_cursor + symbol_start.length,
-										string_end);
-
-									if (input_text.includes("|")) {
-										var options = input_text.split("|");
-
-										this.templateForm.push({
-											type: "selection",
-											label: inside_text,
-											text: input_text,
-											options: options
-										});
-
-									} else if (text.substr(new_cursor, 2) == "[#") {
-										this.templateForm.push({
-											type: "header",
-											text: input_text.slice(2)
-										});
-
-									} else {
-										this.templateForm.push({
-											type: "free_text",
-											label: inside_text,
-											text: input_text
-										});
+								var text = "";
+								var options = [];
+								if (nodes[n].nodeName != "#text") {
+									switch (nodes[n].nodeName) {
+										case "text":
+											text = nodes[n].innerHTML.trim();
+											break;
+										case "select":
+											options = nodes[n].innerHTML.trim().split("|");
+											break;
 									}
 
-									old_cursor = string_end + symbol_end.length;
-
-
-
+									el.multi.push({
+										text: text,
+										options: options
+									});
 								}
-
 							}
-						}
-						while (new_cursor != -1 && new_cursor < text.length);
-
-						*/
-
-
-					},
-
-					copyReport: function () {
-						var copyText = this.reportText;
-
-						console.log(this.reportText);
-						const listener = function (ev) {
-							ev.preventDefault();
-							ev.clipboardData.setData('text/plain', copyText);
-						};
-						document.addEventListener('copy', listener);
-						document.execCommand('copy');
-						document.removeEventListener('copy', listener);
-
+							elements.push(el);
+							break;
+						case "insert":
+							el.module = xml[i].innerHTML.trim();
+							for (var n = 0; n < modules.length; n++) {
+								if (modules[n].name == el.module) {
+									elements = elements.concat(modules[n].elements);
+								}
+							}
+							break;
 					}
 				}
-			});
+			}
+			return elements;
+		}
+
+		function parseModules(xml) {
+			return parseFindings(xml, null)
+		}
+
+
+		function loadXML() {
+			var xhttp = new XMLHttpRequest();
+			var temp = [];
+			xhttp.onreadystatechange = function () {
+				if (this.readyState == 4 && this.status == 200) {
+					myFunction(this);
+				}
+			};
+			xhttp.open("GET", "http://neurotool.org/templates_list.xml", true);
+			xhttp.send();
+
+			function myFunction(xml) { // Load array of report templates
+				var xmlDoc = xml.responseXML;
+
+				var modules_xml = xmlDoc.getElementsByTagName("module");
+				var modules = [];
+				for (var i = 0; i < modules_xml.length; i++) {
+					var m_name = xmlDoc.getElementsByTagName("module")[i].getElementsByTagName(
+						"name")[0].innerHTML.replace(/^\s+|\s+$/g, '');
+					var m_content = xmlDoc.getElementsByTagName("module")[i].getElementsByTagName(
+						"content")[0].childNodes;
+					var elements = parseModules(m_content);
+					modules.push({
+						name: m_name,
+						elements: elements
+					});
+
+				}
+
+				var templates = xmlDoc.getElementsByTagName("template");
+				for (var i = 0; i < templates.length; i++) {
+					var t_name = xmlDoc.getElementsByTagName("template")[i].getElementsByTagName(
+						"name")[0].innerHTML.replace(/\t/g, '');
+					var t_type = xmlDoc.getElementsByTagName("template")[i].getElementsByTagName(
+						"type")[0].innerHTML.replace(/\t/g, '').trim();
+					var t_title = xmlDoc.getElementsByTagName("template")[i].getElementsByTagName(
+						"title")[0];
+					if (t_title == null || t_title == "") {
+						t_title = t_name;
+					} else {
+						t_title = t_title.innerHTML.replace(/\t/g, '');
+					}
+					var t_findings = xmlDoc.getElementsByTagName("template")[i].getElementsByTagName(
+						"findings")[0].childNodes;
+					var elements = parseFindings(t_findings, modules);
+					console.table(elements)
+
+
+					temp.push({
+						name: t_name,
+						title: t_title,
+						type: t_type,
+						elements: elements
+					});
+				}
+
+
+
+			}
+
+			return temp;
+
+		}
+
+		/* GLOBAL VARIABLES */
+
+		window.app = new Vue({
+			components: {
+				VueBootstrapTypeahead
+			},
+			el: '#app',
+			data: {
+				templates: loadXML(),
+				reportText: "",
+				clin_indication: "",
+				template: "",
+				templateForm: []
+			},
+
+			methods: {
+				// General functions
+				findList: function (text, symbol_start, symbol_end) {
+
+					var n = 0 - symbol_start.length;
+					do {
+						n = text.indexOf(symbol_start, n + symbol_start.length);
+						if (n != -1) {
+							end = text.indexOf(symbol_end, n);
+						}
+
+					} while (n != -1);
+					return text;
+				},
+
+				// Specific
+
+				selectTemplate: function (event) {
+					//console.table(this.templates[0].elements[0].type);
+					this.template = event;
+					this.writeTemplate();
+
+				},
+
+
+
+				writeTemplate: function () {
+					var elements = this.template.elements;
+
+					for (var n = 0; n < elements.length; n++) {
+						switch (elements[n].type) {
+							case "h1":
+								this.templateForm.push({
+									type: "header",
+									text: elements[n].label
+								});
+								break;
+							case "selection":
+								this.templateForm.push({
+									type: "selection",
+									options: elements[n].options
+								});
+							case "multi-select":
+								this.templateForm.push({
+									type: "multi-select",
+									options: elements[n].multi
+								});
+								console.log(elements[n]);
+								break;
+
+							default:
+								break;
+						}
+					}
+
+
+
+
+
+				},
+
+				copyReport: function () {
+					var copyText = this.reportText;
+
+					console.log(this.reportText);
+					const listener = function (ev) {
+						ev.preventDefault();
+						ev.clipboardData.setData('text/plain', copyText);
+					};
+					document.addEventListener('copy', listener);
+					document.execCommand('copy');
+					document.removeEventListener('copy', listener);
+
+				}
+			}
+		});
 	</script>
 
 
