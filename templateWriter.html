@@ -112,6 +112,8 @@
 						<!-- FREE TEXT TYPE -->
 						<b-form-group :key="n.id" :label="n.label" label-cols="3" label-size="sm"
 							v-show="n.type == 'free_text'" :disabled="n.disabled">
+							<label>{{n.label}}</label>
+
 							<b-form-textarea :value=" n.text" :key="n.id"></b-form-textarea>
 						</b-form-group>
 						<!-- SELECTION TYPE -->
