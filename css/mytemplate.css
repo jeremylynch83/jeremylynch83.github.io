@@ -10,9 +10,20 @@ caption {
     font-size: 1rem;
 }
 
+.control {
+    flex: 1%;
+    background-color: rgb(215, 255, 255);
+
+}
+
 .element {
 
     background-color: rgb(215, 255, 255);
     padding: 10px;
     margin-bottom: 5px;
+    flex: 90%;
+}
+
+.row {
+    display: flex;
 }

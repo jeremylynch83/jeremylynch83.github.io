@@ -8,7 +8,7 @@
 			<selection>
 				The disc is normal | There is disc degeneration. | There is disc degeneration and height loss.
 			</selection>
-			<multi_select>
+			<multi_select state="disabled">
 				<select text="There is a disc">
 					bulge | prolapse | extrusion | migration | sequestration | intravertebral herniation
 				</select>
@@ -24,9 +24,9 @@
 					no neural compression | contact | impingement
 				</select>
 				<select text="of the ">
-					right | left
+					right-sided | left-sided
 				</select>
-				<select text="nerve root.">
+				<select text="nerve root at this level.">
 				</select>
 			</multi_select>
 			<selection>

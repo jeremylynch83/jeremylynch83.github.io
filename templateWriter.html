@@ -94,31 +94,43 @@
 
 
 			<template v-for="n in templateForm">
-				<div class="element">
-					<!-- HEADER TYPE -->
-					<label v-show="n.type == 'header'">{{n.text}}</label>
-					<!-- FREE TEXT TYPE -->
-					<b-form-group :key="n.id" :label="n.label" label-cols="3" label-size="sm"
-						v-show="n.type == 'free_text'">
-						<b-form-textarea :value=" n.text" :key="n.id"></b-form-textarea>
-					</b-form-group>
-					<!-- SELECTION TYPE -->
-					<b-form-group :key="n.id" :label="n.label" label-cols="0" label-size="sm"
-						v-show="n.type == 'selection'">
-						<b-form-select v-model="n.selected" :options="n.options" size="sm"></b-form-select>
-						<b-form-textarea :key="n.id" placeholder="Details"></b-form-textarea>
-					</b-form-group>
-					<!-- MULTISELECTION TYPE -->
-					<template v-for="nn in n.multi" v-show="n.type == 'multi_select'">
-						<label>{{nn.text}}</label>
-						<b-form-select :options="nn.options" size="sm" v-show="nn.options != '' && nn.type == 'multi'">
-						</b-form-select>
-						<b-form-textarea :key="nn.id" placeholder="Details" v-show="nn.type == 'free_text'">
-						</b-form-textarea>
-						</b-form-select>
+				<div class="row">
+					<div class="control">
+						<b-button-group vertical>
+							<b-button size="sm" variant="danger" style="font-size: 0.5em; " @click="deleteElement(n)">-
+							</b-button>
+							<b-button size="sm" variant="info" style="font-size: 0.5em; ">Hide</b-button>
+						</b-button-group>
+					</div>
+					<div class="element">
+						<!-- HEADER TYPE -->
+						<label v-show="n.type == 'header'">{{n.text}}</label>
+						<!-- FREE TEXT TYPE -->
+						<b-form-group :key="n.id" :label="n.label" label-cols="3" label-size="sm"
+							v-show="n.type == 'free_text'">
+							<b-form-textarea :value=" n.text" :key="n.id"></b-form-textarea>
+						</b-form-group>
+						<!-- SELECTION TYPE -->
+						<b-form inline :key="n.id" :label="n.label" label-cols="0" label-size="sm"
+							v-show="n.type == 'selection'">
+							<b-form-select v-model="n.selected" :options="n.options" size="sm" style="width:50%"
+								class="mb-2 mr-sm-2 mb-sm-0" disabled>
+							</b-form-select>
+							<b-button>Details</b-button>
+							<!--<b-form-textarea :key="n.id" placeholder="Details"></b-form-textarea>-->
+						</b-form inline>
+						<!-- MULTISELECTION TYPE -->
+						<template v-for="nn in n.multi" v-show="n.type == 'multi_select'">
+							<label>{{nn.text}}</label>
+							<b-form-select :options="nn.options" size="sm"
+								v-show="nn.options != '' && nn.type == 'multi'">
+							</b-form-select>
+							<b-form-textarea :key="nn.id" placeholder="Details" v-show="nn.type == 'free_text'">
+							</b-form-textarea>
+							</b-form-select>
 
-					</template>
-
+						</template>
+					</div>
 				</div>
 			</template>
 
@@ -172,6 +184,11 @@
 				if (xml[i].nodeName != "#text") {
 					let el = {};
 					el.type = xml[i].nodeName.trim();
+					var state = xml[i].getAttribute("state");
+					console.log(state);
+
+
+					el.state = "enabled";
 
 					switch (xml[i].nodeName) {
 						default:
@@ -199,7 +216,6 @@
 										options[0] = inner_text;
 										type = "free_text";
 									}
-									console.table(options);
 
 									var text = nodes[n].getAttribute("text").trim();
 
@@ -330,47 +346,42 @@
 				selectTemplate: function (event) {
 					this.template = event;
 					this.writeTemplate();
-
 				},
 
 
 
 				writeTemplate: function () {
 					var elements = this.template.elements;
-
-
 					for (var n = 0; n < elements.length; n++) {
-
+						var el = {};
+						el.array_id = n;
 
 						switch (elements[n].type) {
 							case "h1":
-								this.templateForm.push({
-									type: "header",
-									text: elements[n].label
-								});
+								el.type = "header";
+								el.text = elements[n].label;
 								break;
 							case "selection":
-								this.templateForm.push({
-									type: "selection",
-									options: elements[n].options
-								});
+								el.type = "selection";
+								el.options = elements[n].options;
 								break;
 							case "multi_select":
-								this.templateForm.push({
-									type: "multi_select",
-									multi: elements[n].multi
-								});
+								el.type = "multi_select";
+								el.multi = elements[n].multi;
 								break;
-
 							default:
 								break;
 						}
+						this.templateForm.push(el);
+
 					}
 
-
-
-
-
+				},
+				deleteElement(element) {
+					var index = this.templateForm.findIndex(function (i) {
+						return i.array_id == element.array_id;
+					})
+					this.templateForm.splice(index, 1);
 				},
 
 				copyReport: function () {
