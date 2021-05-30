@@ -151,29 +151,43 @@
 			return list;
 		}
 
-		function parseFindings(xml) {
+
+		function parseFindings(xml, modules) {
 			var elements = [];
 			for (i = 0; i < xml.length; i++) {
 				if (xml[i].nodeName != "#text") {
+					console.log(xml[i].innerHTML.trim());
 					let el = {};
-					el.type = xml[i].nodeName;
+					el.type = xml[i].nodeName.trim();
 					switch (xml[i].nodeName) {
 						default:
 							break;
 						case "h1":
 							el.label = xml[i].innerHTML.trim();
+							elements.push(el);
 							break;
 						case "selection":
 							el.options = xml[i].innerHTML.trim().split("|");
+							elements.push(el);
 							break;
 						case "insert":
+							el.module = xml[i].innerHTML.trim();
+
+							for (var n = 0; n < modules.length; n++) {
+								if (modules[n].name == el.module) {
+									elements = elements.concat(modules[n].elements);
+									//console.log(modules[n].elements);
+								}
+							}
 							break;
 					}
-					console.log(el);
-					elements.push(el);
 				}
 			}
 			return elements;
+		}
+
+		function parseModules(xml) {
+			parseFindings(xml, null)
 		}
 
 
@@ -191,20 +205,19 @@
 			function myFunction(xml) { // Load array of report templates
 				var xmlDoc = xml.responseXML;
 
-				var modules = xmlDoc.getElementsByTagName("module");
-				for (var i = 0; i < modules.length; i++) {
+				var modules_xml = xmlDoc.getElementsByTagName("module");
+				var modules = [];
+				for (var i = 0; i < modules_xml.length; i++) {
 					var m_name = xmlDoc.getElementsByTagName("module")[i].getElementsByTagName(
-						"name")[0].innerHTML.replace(/\t/g, '');
+						"name")[0].innerHTML.replace(/^\s+|\s+$/g, '');
 					var m_content = xmlDoc.getElementsByTagName("module")[i].getElementsByTagName(
-						"content")[0].innerHTML.replace(/\t/g, '');
-
-					var elements = parseFindings(m_content);
+						"content");
+					var elements = parseModules(m_content);
 					modules.push({
 						name: m_name,
 						elements: elements
 					})
 				}
-
 
 				var templates = xmlDoc.getElementsByTagName("template");
 				for (var i = 0; i < templates.length; i++) {
@@ -221,7 +234,7 @@
 					}
 					var t_findings = xmlDoc.getElementsByTagName("template")[i].getElementsByTagName(
 						"findings")[0].childNodes;
-					var elements = parseFindings(t_findings);
+					var elements = parseFindings(t_findings, modules);
 
 					temp.push({
 						name: t_name,
