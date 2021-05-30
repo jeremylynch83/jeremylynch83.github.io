@@ -67,25 +67,33 @@
 				<b-button variant="success" @click="copyReport()">Copy Text</b-button>
 			</b-form-group>
 
-			<p><label><b>{{template.title}}</b></label></p>
+			<p><label>
+					<h1>{{template.title}}</h1>
+				</label></p>
 
 
 			<b-form-group v-show="template != ''">
-				<label>CLINICAL INDICATION:</label>
+				<label>
+					<h2>CLINICAL INDICATION:</h2>
+				</label>
 
 				<b-form-textarea v-model="clin_indication" @update="writeTemplate()" placeholder="Enter text">
 				</b-form-textarea>
 			</b-form-group>
 
 			<b-form-group v-show="template != '' && template.type != 'Angiography'">
-				<label>TECHNIQUE:</label>
+				<label>
+					<h2>TECHNIQUE:</h2>
+				</label>
 
 				<b-form-textarea placeholder="Enter text">
 				</b-form-textarea>
 			</b-form-group>
 
 			<b-form-group v-show="template != '' && template.type != 'Angiography'">
-				<label>COMPARISON:</label>
+				<label>
+					<h2>COMPARISON:</h2>
+				</label>
 				<b-form-textarea placeholder=" Enter text">
 				</b-form-textarea>
 			</b-form-group>
@@ -108,7 +116,9 @@
 					</div>
 					<div class="element">
 						<!-- HEADER TYPE -->
-						<label v-show="n.type == 'header'">{{n.text}}</label>
+						<label v-show="n.type == 'header'">
+							<h3>{{n.text}}</h3>
+						</label>
 						<!-- FREE TEXT TYPE -->
 						<b-form-group :key="n.id" :label="n.label" label-cols="3" label-size="sm"
 							v-show="n.type == 'free_text'" :disabled="n.disabled">
@@ -138,7 +148,9 @@
 			</template>
 
 			<b-form-group v-show=" template !=''">
-				<label>CONCLUSION:</label>
+				<label>
+					<h2>CONCLUSION:</h2>
+				</label>
 
 				<b-form-textarea placeholder=" Enter text">
 				</b-form-textarea>

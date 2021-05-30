@@ -29,3 +29,18 @@ caption {
 .row {
     display: flex;
 }
+
+h1 {
+    font-size: x-large;
+    margin: 0px;
+}
+
+h2 {
+    font-size: large;
+    margin: 0px;
+}
+
+h3 {
+    font-size: medium;
+    margin: 0px;
+}
