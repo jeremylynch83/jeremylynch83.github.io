@@ -11,52 +11,50 @@
 			<multi_select>
 				<text>
 					There is a disc
-					<text>
-						<select>
-							bulge | prolapse | extrusion | migration | sequestration | intravertebral herniation
-						</select>
-						<text>
-							located in the
-						</text>
-						<select>
-							central | subarticular | foraminal | extraforaminal
-						</select>
-						<text>
-							space.
-						</text>
-						<select>
-						</select>
-					</text>
-					<selection>
-						There is no flaval thickening | There is flaval thickening
-					</selection>
 				</text>
+				<select>
+					bulge | prolapse | extrusion | migration | sequestration | intravertebral herniation
+				</select>
+				<text>
+					located in the
+				</text>
+				<select>
+					central | subarticular | foraminal | extraforaminal
+				</select>
+				<text>
+					space.
+				</text>
+				<select>
+				</select>
 			</multi_select>
-			<template>
-				<name>
-					MRI Lumbar spine
-				</name>
-				<type>
-					Diagnostic
-				</type>
-				<title>
-					MRI Lumber spine
-				</title>
-				<findings>
-					<h1>
-						Formation and segmentation
-					</h1>
-					<selection>
-						There is normal formation and segmentation of the lumbosacral spine. | There is a transitional lumbosacral junction.
-					</selection>
-					<h1>
-						T12-L1:
-					</h1>
-					<insert>
-						Spine level
-					</insert>
-				</findings>
-			</template>
+			<selection>
+				There is no flaval thickening | There is flaval thickening
+			</selection>
 		</content>
 	</module>
+	<template>
+		<name>
+			MRI Lumbar spine
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			MRI Lumber spine
+		</title>
+		<findings>
+			<h1>
+				Formation and segmentation
+			</h1>
+			<selection>
+				There is normal formation and segmentation of the lumbosacral spine. | There is a transitional lumbosacral junction.
+			</selection>
+			<h1>
+				T12-L1:
+			</h1>
+			<insert>
+				Spine level
+			</insert>
+		</findings>
+	</template>
 </all>
