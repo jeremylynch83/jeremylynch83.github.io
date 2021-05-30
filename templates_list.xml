@@ -45,10 +45,7 @@
 			MRI Lumber spine
 		</title>
 		<findings>
-			<h1>
-				Formation and segmentation
-			</h1>
-			<selection>
+			<selection label="Formation & segmentation">
 				There is normal formation and segmentation of the lumbosacral spine. | There is a transitional lumbosacral junction.
 			</selection>
 			<h1>

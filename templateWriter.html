@@ -96,10 +96,14 @@
 			<template v-for="n in templateForm">
 				<div class="row">
 					<div class="control">
-						<b-button-group vertical>
-							<b-button size="sm" variant="danger" style="font-size: 0.5em; " @click="deleteElement(n)">-
+						<b-button-group vertical v-show="n.type != 'header'">
+							<b-form-checkbox :key=" n.id" v-model="n.disabled" :value=false :unchecked-value=true>
+							</b-form-checkbox>
+
+							<b-button pill size="sm" variant="danger" style="font-size: 0.5em; "
+								@click="deleteElement(n)">-
 							</b-button>
-							<b-button size="sm" variant="info" style="font-size: 0.5em; ">Hide</b-button>
+
 						</b-button-group>
 					</div>
 					<div class="element">
@@ -107,21 +111,24 @@
 						<label v-show="n.type == 'header'">{{n.text}}</label>
 						<!-- FREE TEXT TYPE -->
 						<b-form-group :key="n.id" :label="n.label" label-cols="3" label-size="sm"
-							v-show="n.type == 'free_text'">
+							v-show="n.type == 'free_text'" :disabled="n.disabled">
 							<b-form-textarea :value=" n.text" :key="n.id"></b-form-textarea>
 						</b-form-group>
 						<!-- SELECTION TYPE -->
-						<b-form inline :key="n.id" :label="n.label" label-cols="0" label-size="sm"
-							v-show="n.type == 'selection'" :disabled="n.state">
-							<b-form-select v-model="n.selected" :options="n.options" size="sm" style="width:50%"
-								class="mb-2 mr-sm-2 mb-sm-0">
-							</b-form-select>
-							<b-button>Details</b-button>
-							<!--<b-form-textarea :key="n.id" placeholder="Details"></b-form-textarea>-->
-						</b-form inline>
+						<b-form-group :disabled="n.disabled">
+
+							<b-form inline :key="n.id" :label="n.label" label-cols="0" label-size="sm"
+								v-show="n.type == 'selection'">
+								<b-form-select v-model="n.selected" :options="n.options" size="sm" style="width:50%"
+									class="mb-2 mr-sm-2 mb-sm-0">
+								</b-form-select>
+								<b-button>Details</b-button>
+							</b-form inline>
+						</b-form-group>
+
 						<!-- MULTISELECTION TYPE -->
 						<template v-for="nn in n.multi" v-show="n.type == 'multi_select'">
-							<b-form-group :disabled="n.state">
+							<b-form-group :disabled="n.disabled">
 								<label>{{nn.text}}</label>
 								<b-form-select :options="nn.options" size="sm"
 									v-show="nn.options != '' && nn.type == 'multi'">
@@ -190,6 +197,10 @@
 						el.disabled = true;
 					} else {
 						el.disabled = false;
+					}
+					var label = xml[i].getAttribute("label");
+					if (label != null) {
+						el.label = label
 					}
 
 					switch (xml[i].nodeName) {
@@ -386,6 +397,7 @@
 					})
 					this.templateForm.splice(index, 1);
 				},
+
 
 				copyReport: function () {
 					var copyText = this.reportText;
