@@ -9,22 +9,13 @@
 				The disc is normal | There is disc degeneration. | There is disc degeneration and height loss.
 			</selection>
 			<multi_select>
-				<text>
-					There is a disc
-				</text>
-				<select>
+				<select text="There is a disc">
 					bulge | prolapse | extrusion | migration | sequestration | intravertebral herniation
 				</select>
-				<text>
-					located in the
-				</text>
-				<select>
+				<select text="located in the">
 					central | subarticular | foraminal | extraforaminal
 				</select>
-				<text>
-					space.
-				</text>
-				<select>
+				<select text="space.">
 				</select>
 			</multi_select>
 			<selection>

@@ -109,12 +109,11 @@
 						<b-form-textarea :key="n.id" placeholder="Details"></b-form-textarea>
 					</b-form-group>
 					<!-- MULTISELECTION TYPE -->
-					<b-form-group :key="n.id" v-show="n.type == 'multi_select'">
-						<template v-for="nn in n.multi">
-							<label>hello</label>
-						</template>
-					</b-form-group>
+					<template v-for="nn in n.multi" v-show="n.type == 'multi_select'">
+						<label>{{nn.text}}</label>
+						<b-form-select :options="nn.options" size="sm"></b-form-select>
 
+					</template>
 
 				</div>
 			</template>
@@ -185,22 +184,17 @@
 							var nodes = xml[i].childNodes;
 							el.multi = [];
 							for (var n = 0; n < nodes.length; n++) {
-								var text = "";
-								var options = [];
-								if (nodes[n].nodeName != "#text") {
-									switch (nodes[n].nodeName) {
-										case "text":
-											text = nodes[n].innerHTML.trim();
-											break;
-										case "select":
-											options = nodes[n].innerHTML.trim().split("|");
-											break;
-									}
+								getAttribute("text");
+								if (nodes[n].nodeName == "select") {
+									var options = nodes[n].innerHTML.trim().split("|");
+									var text = nodes[n].getAttribute("text").trim();
 
 									el.multi.push({
 										text: text,
 										options: options
 									});
+									console.table(el.multi);
+
 								}
 							}
 							elements.push(el);
@@ -269,7 +263,6 @@
 					var t_findings = xmlDoc.getElementsByTagName("template")[i].getElementsByTagName(
 						"findings")[0].childNodes;
 					var elements = parseFindings(t_findings, modules);
-					console.table(elements)
 
 
 					temp.push({
@@ -321,7 +314,6 @@
 				// Specific
 
 				selectTemplate: function (event) {
-					//console.table(this.templates[0].elements[0].type);
 					this.template = event;
 					this.writeTemplate();
 
@@ -332,7 +324,10 @@
 				writeTemplate: function () {
 					var elements = this.template.elements;
 
+
 					for (var n = 0; n < elements.length; n++) {
+
+
 						switch (elements[n].type) {
 							case "h1":
 								this.templateForm.push({
@@ -345,12 +340,12 @@
 									type: "selection",
 									options: elements[n].options
 								});
-							case "multi-select":
+								break;
+							case "multi_select":
 								this.templateForm.push({
-									type: "multi-select",
-									options: elements[n].multi
+									type: "multi_select",
+									multi: elements[n].multi
 								});
-								console.log(elements[n]);
 								break;
 
 							default:
