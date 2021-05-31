@@ -141,7 +141,7 @@
 								<b-form-group :key="n.id" :disabled="n.disabled" v-show="n.type == 'text_entry'">
 
 									<label>{{n.label}}</label>
-									<b-form-textarea :key="n.id">Details</b-form-textarea>
+									<b-form-textarea :key="n.id" :value="n.text"></b-form-textarea>
 
 								</b-form-group>
 
@@ -268,7 +268,8 @@
 							elements.push(el);
 							break;
 						case "text":
-							el.label = xml[i].innerHTML.trim();
+							el.text = xml[i].innerHTML.trim();
+
 							elements.push(el);
 							break;
 						case "text_entry":
@@ -496,6 +497,7 @@
 								el.text = elements[n].label;
 								break;
 							case "text":
+								el.text = elements[n].text;
 								break;
 							case "text_entry":
 								el.text = elements[n].text;
