@@ -21,6 +21,9 @@
 				<radio label="Facet joints">
 					Normal | Abnormal
 				</radio>
+				<radio label="Annular fissure">
+					Not present | Present
+				</radio>
 				<radio label="Paraspinal muscles">
 					Normal | Abnormal
 				</radio>
@@ -55,16 +58,9 @@
 			<selection label="Ligamentum flavum">
 				There is no flaval thickening | There is flaval thickening
 			</selection>
-			<multi_select label="Neural compression">
-				<select text="There is">
-					no neural compression | contact | impingement
-				</select>
-				<select text="of the ">
-					right-sided | left-sided
-				</select>
-				<select text="nerve root at this level.">
-				</select>
-			</multi_select>
+			<selection label="Neural compression">
+				no neural compression | contact | impingement
+			</selection>
 			<selection label="Facet joints">
 				There is no facetal degeneration. | There is  facetal degeneration.
 			</selection>
@@ -120,14 +116,6 @@
 			<insert>
 				Spine level
 			</insert>
-			<h1>
-				Other details:
-			</h1>
-			<multi_radio>
-				<radio label="Annular fissure">
-					Not present | Present
-				</radio>
-			</multi_radio>
 			<insert>
 				Degenerative spine
 			</insert>

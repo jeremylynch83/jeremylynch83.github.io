@@ -137,12 +137,13 @@
 							<!-- SELECTION TYPE -->
 							<b-form-group :key="n.id" :label="n.label" :disabled="n.disabled"
 								v-show="n.type == 'selection'">
-								<b-form-select v-model="n.selected" :options="n.options">
+								<b-form-select v-model="n.selected" :options="n.options"
+									@input="n.details = Boolean(n.selected)">
 								</b-form-select>
 							</b-form-group>
 
 							<!-- MULTISELECTION TYPE -->
-							<b-form-group v-show="n.type == 'multi_select'" :disabled="n.disabled">
+							<b-form-group v-show=" n.type=='multi_select'" :disabled=" n.disabled">
 								<label>{{n.label}}</label>
 
 								<template v-for="nn in n.multi" v-show="n.type == 'multi_select'">
@@ -175,10 +176,8 @@
 								</template>
 							</b-form-group>
 
-
-
 							<!-- DETAILS BOX -->
-							<b-form-group v-show="n.details == true" :disabled="n.disabled">
+							<b-form-group v-show="n.details" :disabled="n.disabled">
 								<b-form-textarea :key="n.id">Details</b-form-textarea>
 							</b-form-group>
 
@@ -259,7 +258,16 @@
 							elements.push(el);
 							break;
 						case "selection":
-							el.options = xml[i].innerHTML.trim().split("|");
+							op_values = xml[i].innerHTML.trim().split("|");
+							var selected = "";
+							el.options = [];
+							for (var x = 0; x < op_values.length; x++) {
+								el.options.push({
+									text: op_values[x],
+									value: x
+								})
+							}
+
 							elements.push(el);
 							break;
 						case "multi_select":
