@@ -159,6 +159,8 @@
 							<b-form-group v-show="n.type == 'multi_radio'" :disabled="n.disabled">
 								<template v-for="nn in n.multi">
 									<b-form-group v-show="nn.options != '' && nn.type == 'multi'">
+										<label>{{nn.label}}</label>
+
 
 										<b-form-checkbox :label="nn.label" :key=" nn.id"
 											v-show="nn.options != '' && nn.type == 'multi'">
