@@ -149,9 +149,21 @@
 									</b-form-select>
 								</b-form-group>
 							</template>
+
+							<!-- MULTISELECTION TYPE -->
+							<template v-for="nn in n.multi" v-show="n.type == 'multi_checkbox'">
+								<b-form-group :disabled="n.disabled" v-show="nn.options != '' && nn.type == 'multi'">
+									<label>{{nn.text}}</label>
+									<b-form-select :options="nn.options">
+									</b-form-select>
+									</b-form-select>
+								</b-form-group>
+							</template>
+
+
+							<!-- DETAILS BOX -->
 							<b-form-group v-show="n.details == true" :disabled="n.disabled">
 								<b-form-textarea :key="n.id">Details</b-form-textarea>
-
 							</b-form-group>
 
 						</div>
@@ -227,11 +239,9 @@
 							break;
 						case "h1":
 							el.label = xml[i].innerHTML.trim();
-							elements.push(el);
 							break;
 						case "selection":
 							el.options = xml[i].innerHTML.trim().split("|");
-							elements.push(el);
 							break;
 						case "multi_select":
 							var nodes = xml[i].childNodes;
@@ -256,10 +266,34 @@
 										options: options,
 										type: type
 									});
-
 								}
 							}
-							elements.push(el);
+							break;
+						case "multi_checkbox":
+							var nodes = xml[i].childNodes;
+							el.multi = [];
+							for (var n = 0; n < nodes.length; n++) {
+								if (nodes[n].nodeName == "checkbox") {
+									var inner_text = nodes[n].innerHTML.trim();
+									var options = [];
+									var type = "";
+									if (inner_text.includes("|")) {
+										options = inner_text.split("|");
+										type = "multi";
+									} else {
+										options[0] = inner_text;
+										type = "free_text";
+									}
+
+									var text = nodes[n].getAttribute("text").trim();
+
+									el.multi.push({
+										text: text,
+										options: options,
+										type: type
+									});
+								}
+							}
 							break;
 						case "insert":
 							el.module = xml[i].innerHTML.trim();
@@ -270,6 +304,8 @@
 							}
 							break;
 					}
+					if (xml[i].nodeName != "insert") elements.push(el);
+
 				}
 			}
 			return elements;
@@ -390,20 +426,22 @@
 						el.array_id = n;
 						el.disabled = elements[n].disabled
 						el.label = elements[n].label;
+						el.type = elements[n].label;
 
 						switch (elements[n].type) {
 							case "h1":
-								el.type = "header";
 								el.text = elements[n].label;
 								break;
 							case "selection":
-								el.type = "selection";
 								el.options = elements[n].options;
 								break;
 							case "multi_select":
-								el.type = "multi_select";
 								el.multi = elements[n].multi;
 								break;
+							case "multi_checkbox":
+								el.multi = elements[n].multi;
+								break;
+
 							default:
 								break;
 						}

@@ -6,8 +6,8 @@
 		</name>
 		<content>
 			<multi_checkbox>
-				<checkbox>
-					There are no masses or collections.
+				<checkbox text="Masses/collections">
+					Not present | Present
 				</checkbox>
 			</multi_checkbox>
 		</content>
