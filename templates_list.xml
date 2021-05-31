@@ -2,6 +2,84 @@
 <all>
 	<module>
 		<name>
+		</name>
+		<content>
+		</content>
+	</module>
+	<module>
+		<name>
+		</name>
+		<content>
+		</content>
+	</module>
+	<module>
+		<name>
+		</name>
+		<content>
+		</content>
+	</module>
+	<module>
+		<name>
+		</name>
+		<content>
+		</content>
+	</module>
+	<module>
+		<name>
+		</name>
+		<content>
+		</content>
+	</module>
+	<module>
+		<name>
+		</name>
+		<content>
+		</content>
+	</module>
+	<module>
+		<name>
+		</name>
+		<content>
+		</content>
+	</module>
+	<module>
+		<name>
+		</name>
+		<content>
+		</content>
+	</module>
+	<module>
+		<name>
+		</name>
+		<content>
+		</content>
+	</module>
+	<module>
+		<name>
+		</name>
+		<content>
+		</content>
+	</module>
+	<module>
+		<name>
+		</name>
+		<content>
+		</content>
+	</module>
+	<module>
+		<name>
+		</name>
+		<content>
+		</content>
+	</module>
+	<module>
+		<name>
+		</name>
+		<content>
+		</content>
+	</module>
+	<module>
+		<name>
 			Degenerative spine
 		</name>
 		<content>
@@ -38,16 +116,16 @@
 	</module>
 	<module>
 		<name>
-			Spine level
+			Lumbar spine level
 		</name>
 		<content>
 			<selection label="Discs">
 				The disc is normal | There is disc degeneration. | There is disc degeneration and height loss.
 			</selection>
+			<selection label="Ligamentum flavum">
+				There is no flaval thickening | There is flaval thickening
+			</selection>
 			<multi_select disabled="true" label="Disc herniation">
-				<selection label="Ligamentum flavum">
-					There is no flaval thickening | There is flaval thickening
-				</selection>
 				<select label="There is a disc">
 					bulge | prolapse | extrusion | migration | sequestration | intravertebral herniation
 				</select>
@@ -123,7 +201,7 @@
 		</template>
 		<template>
 			<name>
-				MRI Lumbar spine
+				MRI Lumbar Spine
 			</name>
 			<type>
 				Diagnostic
@@ -135,41 +213,44 @@
 				<selection label="Formation and segmentation">
 					There is normal formation and segmentation of the lumbosacral spine. | There is a transitional lumbosacral junction.
 				</selection>
+				<selection label="Vertebral alignment">
+					Vertebral alignment is normal | Vertebral alignment is abnormal
+				</selection>
 				<h1>
 					T12-L1:
 				</h1>
 				<insert>
-					Spine level
+					Lumbar spine level
 				</insert>
 				<h1>
 					L1-L2:
 				</h1>
 				<insert>
-					Spine level
+					Lumbar spine level
 				</insert>
 				<h1>
 					L2-L3:
 				</h1>
 				<insert>
-					Spine level
+					Lumbar spine level
 				</insert>
 				<h1>
 					L3-L4:
 				</h1>
 				<insert>
-					Spine level
+					Lumbar spine level
 				</insert>
 				<h1>
 					L4-L5:
 				</h1>
 				<insert>
-					Spine level
+					Lumbar spine level
 				</insert>
 				<h1>
 					L5-S1:
 				</h1>
 				<insert>
-					Spine level
+					Lumbar spine level
 				</insert>
 				<h1>
 					Other details:
@@ -177,6 +258,114 @@
 				<insert>
 					Degenerative spine
 				</insert>
+			</findings>
+		</template>
+		<module>
+			<name>
+				Cervical spine level
+			</name>
+			<content>
+				<selection label="Discs">
+					The disc is normal | There is disc degeneration. | There is disc degeneration and height loss.
+				</selection>
+				<selection label="Ligamentum flavum">
+					There is no flaval thickening | There is flaval thickening
+				</selection>
+				<selection label="Discs" disabled="true">
+					There is a disc bar causing no neural compression | There is a disc bar compressing
+				</selection>
+				<selection label="Facet joints">
+					There is no facetal degeneration. | There is facetal degeneration.
+				</selection>
+			</content>
+		</module>
+		<template>
+			<name>
+				MRI Cervical Spine
+			</name>
+			<type>
+				Diagnostic
+			</type>
+			<title>
+				MRI Cervical Spine
+			</title>
+			<findings>
+				<selection label="Vertebral alignment">
+					Vertebral alignment is normal | Vertebral alignment is abnormal
+				</selection>
+				<selection label="Posterior fossa">
+					Normal | Abnormal
+				</selection>
+				<h1>
+					C1-C2
+				</h1>
+				<text_entry label="Comment">
+				</text_entry>
+				<h1>
+					C2-C3
+				</h1>
+				<h1>
+					C3-C4
+				</h1>
+				<h1>
+					C4-C5
+				</h1>
+				<h1>
+					C5-C6
+				</h1>
+				<h1>
+					C6-C7
+				</h1>
+				<h1>
+					C7-T1
+				</h1>
+				<insert>
+					Degenerative spine
+				</insert>
+			</findings>
+		</template>
+		<template>
+			<name>
+			</name>
+			<type>
+				Diagnostic
+			</type>
+			<title>
+			</title>
+			<findings>
+			</findings>
+		</template>
+		<template>
+			<name>
+			</name>
+			<type>
+				Diagnostic
+			</type>
+			<title>
+			</title>
+			<findings>
+			</findings>
+		</template>
+		<template>
+			<name>
+			</name>
+			<type>
+				Diagnostic
+			</type>
+			<title>
+			</title>
+			<findings>
+			</findings>
+		</template>
+		<template>
+			<name>
+			</name>
+			<type>
+				Diagnostic
+			</type>
+			<title>
+			</title>
+			<findings>
 			</findings>
 		</template>
 		<template>
