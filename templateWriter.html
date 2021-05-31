@@ -155,17 +155,17 @@
 							</b-form-group>
 
 
-							<!-- MULTICHECK TYPE -->
+							<!-- MULTIRADIO TYPE -->
 							<b-form-group v-show="n.type == 'multi_radio'" :disabled="n.disabled">
 								<template v-for="nn in n.multi">
-									<b-form-group v-show="nn.options != '' && nn.type == 'multi'">
 
-										<b-form-group :label="nn.label" v-slot="">
-											<b-form-radio-group :options="nn.options">
-											</b-form-radio-group>
-										</b-form-group>
+									<b-form-group :label="nn.label" v-show="nn.options != '' && nn.type == 'multi'">
+										<b-form-radio-group :options="nn.options" v-model="nn.selected">
+										</b-form-radio-group>
+									</b-form-group>
 
-
+									<b-form-group v-show="nn.selected > 0">
+										<b-form-textarea>Details</b-form-textarea>
 									</b-form-group>
 
 								</template>
@@ -295,7 +295,13 @@
 									var options = [];
 									var type = "";
 									if (inner_text.includes("|")) {
-										options = inner_text.split("|");
+										op_values = inner_text.split("|");
+										for (var x = 0; x < op_values.length; x++) {
+											options.push({
+												text: op_values[x],
+												value: x
+											})
+										}
 										type = "multi";
 									} else {
 										options[0] = inner_text;
@@ -304,11 +310,13 @@
 
 									var label = nodes[n].getAttribute("label")
 									if (text) text.trim();
+									var selected = "";
 
 									el.multi.push({
 										label: label,
 										options: options,
-										type: type
+										type: type,
+										selected: selected
 									});
 								}
 							}
@@ -459,6 +467,7 @@
 								break;
 							case "multi_radio":
 								el.multi = elements[n].multi;
+
 								break;
 
 							default:

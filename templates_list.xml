@@ -12,6 +12,24 @@
 				<radio label="Fractures">
 					Not present | Present
 				</radio>
+				<radio label="Cord signal">
+					Normal | Abnormal
+				</radio>
+				<radio label="Bone marrow signal">
+					Normal | Abnormal
+				</radio>
+				<radio label="Facet joints">
+					Normal | Abnormal
+				</radio>
+				<radio label="Paraspinal muscles">
+					Normal | Abnormal
+				</radio>
+				<radio label="Evidence of DAVF">
+					Not present | Present
+				</radio>
+				<radio label="Planning sequences">
+					Normal | Abnormal
+				</radio>
 			</multi_radio>
 		</content>
 	</module>
@@ -102,12 +120,14 @@
 			<h1>
 				Other details:
 			</h1>
-			<selection label="Annular fissure">
-				There are no annular fissures
-			</selection>
-			<selection label="Cord signal">
-				The spinal cord signal is normal
-			</selection>
+			<multi_radio>
+				<radio label="Annular fissure">
+					Not present | Present
+				</radio>
+				<radio label="Fractures">
+					Not present | Present
+				</radio>
+			</multi_radio>
 			<insert>
 				Degenerative spine
 			</insert>
