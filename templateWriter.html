@@ -159,13 +159,13 @@
 							<b-form-group v-show="n.type == 'multi_radio'" :disabled="n.disabled">
 								<template v-for="nn in n.multi">
 									<b-form-group v-show="nn.options != '' && nn.type == 'multi'">
-										<label>{{nn.label}}</label>
+
+										<b-form-group :label="nn.label" v-slot="">
+											<b-form-radio-group :options="nn.options">
+											</b-form-radio-group>
+										</b-form-group>
 
 
-										<b-form-checkbox :label="nn.label" :key=" nn.id"
-											v-show="nn.options != '' && nn.type == 'multi'">
-
-										</b-form-checkbox>
 									</b-form-group>
 
 								</template>
@@ -302,11 +302,11 @@
 										type = "free_text";
 									}
 
-									var text = nodes[n].getAttribute("label")
+									var label = nodes[n].getAttribute("label")
 									if (text) text.trim();
 
 									el.multi.push({
-										text: text,
+										label: label,
 										options: options,
 										type: type
 									});

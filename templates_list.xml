@@ -9,6 +9,9 @@
 				<radio label="Masses/collections">
 					Not present | Present
 				</radio>
+				<radio label="Fractures">
+					Not present | Present
+				</radio>
 			</multi_radio>
 		</content>
 	</module>
