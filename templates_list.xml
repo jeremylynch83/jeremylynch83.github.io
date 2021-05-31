@@ -104,6 +104,9 @@
 			<insert>
 				Angio header
 			</insert>
+			<insert>
+				Angio technique
+			</insert>
 		</findings>
 	</template>
 	<template>

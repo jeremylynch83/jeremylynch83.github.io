@@ -138,8 +138,9 @@
 								</b-form-group>
 
 								<!-- TEXT ENTRY TYPE -->
-								<b-form-group :key="n.id" :label="n.label" :disabled="n.disabled"
-									v-show="n.type == 'text_entry'">
+								<b-form-group :key="n.id" :disabled="n.disabled" v-show="n.type == 'text_entry'">
+
+									<label>{{n.label}}</label>
 									<b-form-textarea :key="n.id">Details</b-form-textarea>
 
 								</b-form-group>
