@@ -271,7 +271,7 @@
 				<selection label="Ligamentum flavum">
 					There is no flaval thickening | There is flaval thickening
 				</selection>
-				<selection label="Discs" disabled="true">
+				<selection label="Disc bar" disabled="true">
 					There is a disc bar causing no neural compression | There is a disc bar compressing
 				</selection>
 				<selection label="Facet joints">
@@ -316,6 +316,9 @@
 				<h1>
 					C4-C5
 				</h1>
+				<insert>
+					Cervical spine level
+				</insert>
 				<h1>
 					C5-C6
 				</h1>
