@@ -6,7 +6,7 @@
 		</name>
 		<content>
 			<multi_checkbox>
-				<checkbox text="Masses/collections">
+				<checkbox label="Masses/collections">
 					Not present | Present
 				</checkbox>
 			</multi_checkbox>
