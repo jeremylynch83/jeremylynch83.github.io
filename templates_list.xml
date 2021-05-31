@@ -49,9 +49,7 @@
 					right | left
 				</select>
 				<select text="">
-					central | subarticular | foraminal | extraforaminal
-				</select>
-				<select text="zone">
+					central canal | subarticular zone | foraminal zone | extraforaminal zone
 				</select>
 			</multi_select>
 			<selection label="Ligamentum flavum">

@@ -244,7 +244,7 @@
 						el.disabled = false;
 					}
 					var label = xml[i].getAttribute("label");
-					if (label != null) {
+					if (label) {
 						el.label = label
 					}
 
@@ -276,7 +276,7 @@
 										type = "free_text";
 									}
 
-									var text = nodes[n].getAttribute("text").trim();
+									var text = nodes[n].getAttribute("text");
 									if (text) text.trim();
 
 									el.multi.push({
