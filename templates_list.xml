@@ -71,11 +71,9 @@
 			Angio header
 		</name>
 		<content>
-			<text_entry>
-				Staff
+			<text_entry label="Staff">
 			</text_entry>
-			<text_entry>
-				Assists
+			<text_entry label="Assists">
 			</text_entry>
 			<selection label="Anaesthesia">
 				General | Conscious sedation | Local

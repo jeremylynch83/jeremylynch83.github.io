@@ -271,7 +271,7 @@
 							elements.push(el);
 							break;
 						case "text_entry":
-							el.label = xml[i].innerHTML.trim();
+							el.text = xml[i].innerHTML.trim();
 							elements.push(el);
 							break;
 						case "selection":
@@ -497,6 +497,7 @@
 							case "text":
 								break;
 							case "text_entry":
+								el.text = elements[n].text;
 								break;
 							case "selection":
 								el.options = elements[n].options;
