@@ -80,12 +80,12 @@
 					</b-form-textarea>
 				</b-form-group>
 
-				<b-form-group v-show="template != '' && template.type != 'Angiography'">
+				<b-form-group>
 
 					<h2>TECHNIQUE:</h2>
 
 
-					<b-form-textarea placeholder="Enter text">
+					<b-form-textarea placeholder="Enter text" v-show="template.type != 'Angiography'">
 					</b-form-textarea>
 				</b-form-group>
 
@@ -97,9 +97,9 @@
 					</b-form-textarea>
 				</b-form-group>
 
-
-				<h2>FINDINGS:</h2>
-
+				<b-form-group v-show="template != '' && template.type != 'Angiography'">
+					<h2>FINDINGS:</h2>
+				</b-form-group>
 
 
 				<template v-for="n in templateForm">
@@ -128,9 +128,20 @@
 							<div class="element">
 
 								<!-- FREE TEXT TYPE -->
+								<label v-show="n.type == 'text'">{{n.text}}</label>
+
+
+								<!-- FREE TEXT TYPE -->
 								<b-form-group :key="n.id" :label="n.label" v-show="n.type == 'free_text'"
 									:disabled="n.disabled">
 									<b-form-textarea :value=" n.text" :key="n.id"></b-form-textarea>
+								</b-form-group>
+
+								<!-- TEXT ENTRY TYPE -->
+								<b-form-group :key="n.id" :label="n.label" :disabled="n.disabled"
+									v-show="n.type == 'text_entry'">
+									<b-form-textarea :key="n.id">Details</b-form-textarea>
+
 								</b-form-group>
 
 								<!-- SELECTION TYPE -->
@@ -252,6 +263,10 @@
 						default:
 							break;
 						case "h1":
+							el.label = xml[i].innerHTML.trim();
+							elements.push(el);
+							break;
+						case "text":
 							el.label = xml[i].innerHTML.trim();
 							elements.push(el);
 							break;
@@ -465,7 +480,8 @@
 
 
 				writeTemplate: function () {
-					templateForm = [];
+					this.templateForm = [];
+
 					var elements = this.template.elements;
 					for (var n = 0; n < elements.length; n++) {
 						var el = {};
@@ -478,12 +494,15 @@
 							case "h1":
 								el.text = elements[n].label;
 								break;
+							case "text":
+								break;
+							case "text_entry":
+								break;
 							case "selection":
 								el.options = elements[n].options;
 								break;
 							case "multi_select":
 								el.multi = elements[n].multi;
-
 								break;
 							case "multi_radio":
 								el.multi = elements[n].multi;
@@ -495,7 +514,9 @@
 						}
 						this.templateForm.push(el);
 
+
 					}
+
 
 				},
 				deleteElement(element) {
