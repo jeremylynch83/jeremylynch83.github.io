@@ -104,47 +104,57 @@
 
 
 			<template v-for="n in templateForm">
-				<div class="row">
-					<div class="control">
-						<b-button-group vertical v-show="n.type != 'header'">
-							<b-form-checkbox :key=" n.id" v-model="n.disabled" :value=false :unchecked-value=true>
-							</b-form-checkbox>
+				<!-- HEADER TYPE -->
+				<label v-show="n.type == 'header'">
+					<h3>{{n.text}}</h3>
+				</label>
+				<div class="findings">
 
-							<b-button square size="sm" variant="danger" style="font-size: 0.5em; "
-								@click="deleteElement(n)">-
-							</b-button>
+					<div class="row">
 
-						</b-button-group>
-					</div>
-					<div class="element">
-						<!-- HEADER TYPE -->
-						<label v-show="n.type == 'header'">
-							<h3>{{n.text}}</h3>
-						</label>
-						<!-- FREE TEXT TYPE -->
-						<b-form-group :key="n.id" :label="n.label" label-cols="3" label-size="sm"
-							v-show="n.type == 'free_text'" :disabled="n.disabled">
-							<b-form-textarea :value=" n.text" :key="n.id"></b-form-textarea>
-						</b-form-group>
-						<!-- SELECTION TYPE -->
-						<b-form-group :disabled="n.disabled" v-show="n.type == 'selection'">
-							<b-form inline :key="n.id" :label="n.label" label-cols="0" label-size="sm">
-								<label class="mb-2 mr-sm-2 mb-sm-0">{{n.label}} </label>
-								<b-form-select v-model="n.selected" :options="n.options" size="sm" style="width:50%"
-									class="mb-2 mr-sm-2 mb-sm-0">
-								</b-form-select>
-							</b-form inline>
-						</b-form-group>
+						<div class="control">
+							<b-button-group vertical v-show="n.type != 'header'">
+								<b-form-checkbox :key=" n.id" v-model="n.disabled" :value=false :unchecked-value=true
+									size="sm">
+									Enable
+								</b-form-checkbox>
+								<b-form-checkbox :key=" n.id" v-model="n.details" size="sm">
+									Details
+								</b-form-checkbox>
+								<b-button size="sm" variant="danger" @click="deleteElement(n)">Delete
+								</b-button>
+							</b-button-group>
 
-						<!-- MULTISELECTION TYPE -->
-						<template v-for="nn in n.multi" v-show="n.type == 'multi_select'">
-							<b-form-group :disabled="n.disabled" v-show="nn.options != '' && nn.type == 'multi'">
-								<label>{{nn.text}}</label>
-								<b-form-select :options="nn.options" size="sm">
-								</b-form-select>
+						</div>
+						<div class="element">
+
+							<!-- FREE TEXT TYPE -->
+							<b-form-group :key="n.id" :label="n.label" v-show="n.type == 'free_text'"
+								:disabled="n.disabled">
+								<b-form-textarea :value=" n.text" :key="n.id"></b-form-textarea>
+							</b-form-group>
+							<!-- SELECTION TYPE -->
+							<b-form-group :key="n.id" :label="n.label" :disabled="n.disabled"
+								v-show="n.type == 'selection'">
+								<b-form-select v-model="n.selected" :options="n.options">
 								</b-form-select>
 							</b-form-group>
-						</template>
+
+							<!-- MULTISELECTION TYPE -->
+							<template v-for="nn in n.multi" v-show="n.type == 'multi_select'">
+								<b-form-group :disabled="n.disabled" v-show="nn.options != '' && nn.type == 'multi'">
+									<label>{{nn.text}}</label>
+									<b-form-select :options="nn.options">
+									</b-form-select>
+									</b-form-select>
+								</b-form-group>
+							</template>
+							<b-form-group v-show="n.details == true">
+								<b-form-textarea :key="n.id">Details</b-form-textarea>
+
+							</b-form-group>
+
+						</div>
 					</div>
 				</div>
 			</template>
@@ -373,6 +383,7 @@
 
 
 				writeTemplate: function () {
+					templateForm = [];
 					var elements = this.template.elements;
 					for (var n = 0; n < elements.length; n++) {
 						var el = {};

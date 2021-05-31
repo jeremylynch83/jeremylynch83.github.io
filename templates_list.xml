@@ -61,18 +61,6 @@
 				Spine level
 			</insert>
 			<h1>
-				T12-L1:
-			</h1>
-			<insert>
-				Spine level
-			</insert>
-			<h1>
-				L1-L2:
-			</h1>
-			<insert>
-				Spine level
-			</insert>
-			<h1>
 				L2-L3:
 			</h1>
 			<insert>
@@ -96,6 +84,12 @@
 			<insert>
 				Spine level
 			</insert>
+			<selection label="Annular fissure">
+				There are no annular fissures
+			</selection>
+			<selection label="Cord signal">
+				The spinal cord signal is normal
+			</selection>
 		</findings>
 	</template>
 </all>

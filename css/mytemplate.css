@@ -1,3 +1,7 @@
+* {
+    font-size: small
+}
+
 .footer {
 
     text-align: center;
@@ -10,37 +14,46 @@ caption {
     font-size: 1rem;
 }
 
-.control {
-    flex: 10%;
-    background-color: rgb(248, 255, 215);
+.findings {
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+.row {
+    margin-top: 5px;
+    display: flex;
     margin-bottom: 5px;
 
+    background-color: rgb(248, 248, 248);
+}
+
+.control {
+    flex: 10%;
 
 }
 
 .element {
-
-    background-color: rgb(215, 255, 255);
-    padding: 5px;
-    margin-bottom: 5px;
+    padding-left: 5px;
     flex: 90%;
 }
 
-.row {
-    display: flex;
-}
+
 
 h1 {
     font-size: x-large;
     margin: 0px;
+    color: rgb(89, 83, 184)
 }
 
 h2 {
     font-size: large;
     margin: 0px;
+    color: rgb(89, 83, 184)
 }
 
 h3 {
     font-size: medium;
     margin: 0px;
+    margin-top: 10px;
+    color: rgb(89, 83, 184)
 }
