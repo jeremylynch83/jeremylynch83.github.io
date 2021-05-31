@@ -255,6 +255,10 @@
 							el.label = xml[i].innerHTML.trim();
 							elements.push(el);
 							break;
+						case "text_entry":
+							el.label = xml[i].innerHTML.trim();
+							elements.push(el);
+							break;
 						case "selection":
 							op_values = xml[i].innerHTML.trim().split("|");
 							var selected = "";

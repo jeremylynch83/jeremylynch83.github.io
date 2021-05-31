@@ -66,6 +66,45 @@
 			</selection>
 		</content>
 	</module>
+	<module>
+		<name>
+			Angio header
+		</name>
+		<content>
+			<text_entry>
+				Staff
+			</text_entry>
+			<text_entry>
+				Assists
+			</text_entry>
+			<selection label="Anaesthesia">
+				General | Conscious sedation | Local
+			</selection>
+		</content>
+	</module>
+	<module>
+		<name>
+			Angio technique
+		</name>
+		<content>
+		</content>
+	</module>
+	<template>
+		<name>
+			Cerebral angiogram
+		</name>
+		<type>
+			Angiography
+		</type>
+		<title>
+			Cerebral Angiogram
+		</title>
+		<findings>
+			<insert>
+				Angio header
+			</insert>
+		</findings>
+	</template>
 	<template>
 		<name>
 			MRI Lumbar spine
