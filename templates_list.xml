@@ -5,11 +5,11 @@
 			Degenerative spine
 		</name>
 		<content>
-			<multi_checkbox>
-				<checkbox label="Masses/collections">
+			<multi_radio>
+				<radio label="Masses/collections">
 					Not present | Present
-				</checkbox>
-			</multi_checkbox>
+				</radio>
+			</multi_radio>
 		</content>
 	</module>
 	<module>

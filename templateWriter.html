@@ -156,7 +156,7 @@
 
 
 							<!-- MULTICHECK TYPE -->
-							<b-form-group v-show="n.type == 'multi_checkbox'" :disabled="n.disabled">
+							<b-form-group v-show="n.type == 'multi_radio'" :disabled="n.disabled">
 								<template v-for="nn in n.multi">
 									<b-form-group v-show="nn.options != '' && nn.type == 'multi'">
 
@@ -284,11 +284,11 @@
 							}
 							elements.push(el);
 							break;
-						case "multi_checkbox":
+						case "multi_radio":
 							var nodes = xml[i].childNodes;
 							el.multi = [];
 							for (var n = 0; n < nodes.length; n++) {
-								if (nodes[n].nodeName == "checkbox") {
+								if (nodes[n].nodeName == "radio") {
 									var inner_text = nodes[n].innerHTML.trim();
 									var options = [];
 									var type = "";
@@ -455,7 +455,7 @@
 								el.multi = elements[n].multi;
 
 								break;
-							case "multi_checkbox":
+							case "multi_radio":
 								el.multi = elements[n].multi;
 								break;
 
