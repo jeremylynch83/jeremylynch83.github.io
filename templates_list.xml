@@ -88,83 +88,96 @@
 			<text_entry>
 				Informed consent was obtained from the patient (including risk of stroke and groin haemorrhage).10 ml of 1% lidocaine was infiltrated into the puncture site superficial tissues. A right common femoral artery puncture was performed under ultrasound guidance. A 5 Fr sheath was inserted. A 5 Fr Berenstein catheter was used to perform digital subtraction angiography. Injections were performed of the right vertebral artery, right internal carotid artery, right external carotid artery, left internal carotid artery, left external carotid artery, left vertebral artery. [3D flat panel tomographic angiography was performed via the ...]. A 6 Fr Angioseal was used to achieve groin haemostasis at the end of the procedure. There were no periprocedural complications. The study was reviewed on table by the attending staff.
 			</text_entry>
+			<multi_select label="">
+				<selection label="A">
+					right | left
+				</selection>
+				<select text="">
+					common femoral artery | radial artery
+				</select>
+				<select text="puncture was made under ultrasound guidance and a ">
+					4-French | 5-French | 6-French
+				</select>
+				<select text="was inserted. A ">
+				</select>
+			</multi_select>
 		</content>
+		<template>
+			<name>
+				Cerebral angiogram
+			</name>
+			<type>
+				Angiography
+			</type>
+			<title>
+				Cerebral Angiogram
+			</title>
+			<findings>
+				<insert>
+					Angio header
+				</insert>
+				<insert>
+					Angio technique
+				</insert>
+			</findings>
+		</template>
+		<template>
+			<name>
+				MRI Lumbar spine
+			</name>
+			<type>
+				Diagnostic
+			</type>
+			<title>
+				MRI Lumber spine
+			</title>
+			<findings>
+				<selection label="Formation and segmentation">
+					There is normal formation and segmentation of the lumbosacral spine. | There is a transitional lumbosacral junction.
+				</selection>
+				<h1>
+					T12-L1:
+				</h1>
+				<insert>
+					Spine level
+				</insert>
+				<h1>
+					L1-L2:
+				</h1>
+				<insert>
+					Spine level
+				</insert>
+				<h1>
+					L2-L3:
+				</h1>
+				<insert>
+					Spine level
+				</insert>
+				<h1>
+					L3-L4:
+				</h1>
+				<insert>
+					Spine level
+				</insert>
+				<h1>
+					L4-L5:
+				</h1>
+				<insert>
+					Spine level
+				</insert>
+				<h1>
+					L5-S1:
+				</h1>
+				<insert>
+					Spine level
+				</insert>
+				<h1>
+					Other details:
+				</h1>
+				<insert>
+					Degenerative spine
+				</insert>
+			</findings>
+		</template>
 	</module>
-	<template>
-		<name>
-			Cerebral angiogram
-		</name>
-		<type>
-			Angiography
-		</type>
-		<title>
-			Cerebral Angiogram
-		</title>
-		<findings>
-			<insert>
-				Angio header
-			</insert>
-			<insert>
-				Angio technique
-			</insert>
-		</findings>
-	</template>
-	<template>
-		<name>
-			MRI Lumbar spine
-		</name>
-		<type>
-			Diagnostic
-		</type>
-		<title>
-			MRI Lumber spine
-		</title>
-		<findings>
-			<selection label="Formation and segmentation">
-				There is normal formation and segmentation of the lumbosacral spine. | There is a transitional lumbosacral junction.
-			</selection>
-			<h1>
-				T12-L1:
-			</h1>
-			<insert>
-				Spine level
-			</insert>
-			<h1>
-				L1-L2:
-			</h1>
-			<insert>
-				Spine level
-			</insert>
-			<h1>
-				L2-L3:
-			</h1>
-			<insert>
-				Spine level
-			</insert>
-			<h1>
-				L3-L4:
-			</h1>
-			<insert>
-				Spine level
-			</insert>
-			<h1>
-				L4-L5:
-			</h1>
-			<insert>
-				Spine level
-			</insert>
-			<h1>
-				L5-S1:
-			</h1>
-			<insert>
-				Spine level
-			</insert>
-			<h1>
-				Other details:
-			</h1>
-			<insert>
-				Degenerative spine
-			</insert>
-		</findings>
-	</template>
 </all>
