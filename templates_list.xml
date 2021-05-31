@@ -38,7 +38,7 @@
 			Spine level
 		</name>
 		<content>
-			<selection label="Discs:">
+			<selection label="Discs">
 				The disc is normal | There is disc degeneration. | There is disc degeneration and height loss.
 			</selection>
 			<multi_select disabled="true" label="Disc herniation">

@@ -143,6 +143,8 @@
 
 							<!-- MULTISELECTION TYPE -->
 							<b-form-group v-show="n.type == 'multi_select'" :disabled="n.disabled">
+								<label>{{n.label}}</label>
+
 								<template v-for="nn in n.multi" v-show="n.type == 'multi_select'">
 
 									<b-form-group v-show="nn.options != '' && nn.type == 'multi'">
@@ -245,7 +247,7 @@
 					}
 					var label = xml[i].getAttribute("label");
 					if (label) {
-						el.label = label
+						el.label = label + ": ";
 					}
 
 
@@ -269,7 +271,13 @@
 									var options = [];
 									var type = "";
 									if (inner_text.includes("|")) {
-										options = inner_text.split("|");
+										op_values = inner_text.split("|");
+										for (var x = 0; x < op_values.length; x++) {
+											options.push({
+												text: op_values[x],
+												value: x
+											})
+										}
 										type = "multi";
 									} else {
 										options[0] = inner_text;
