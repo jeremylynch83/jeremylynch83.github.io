@@ -45,8 +45,13 @@
 				<select text="There is a disc">
 					bulge | prolapse | extrusion | migration | sequestration | intravertebral herniation
 				</select>
-				<select text="located in the">
+				<select text="protruding in to the">
+					right | left
+				</select>
+				<select text="">
 					central | subarticular | foraminal | extraforaminal
+				</select>
+				<select text="zone">
 				</select>
 			</multi_select>
 			<selection label="Ligamentum flavum">
