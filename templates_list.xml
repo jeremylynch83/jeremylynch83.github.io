@@ -2,6 +2,18 @@
 <all>
 	<module>
 		<name>
+			Degenerative spine
+		</name>
+		<content>
+			<multi_checkbox>
+				<checkbox>
+					There are no masses or collections.
+				</checkbox>
+			</multi_checkbox>
+		</content>
+	</module>
+	<module>
+		<name>
 			Spine level
 		</name>
 		<content>
@@ -84,12 +96,18 @@
 			<insert>
 				Spine level
 			</insert>
+			<h1>
+				Other details:
+			</h1>
 			<selection label="Annular fissure">
 				There are no annular fissures
 			</selection>
 			<selection label="Cord signal">
 				The spinal cord signal is normal
 			</selection>
+			<insert>
+				Degenerative spine
+			</insert>
 		</findings>
 	</template>
 </all>

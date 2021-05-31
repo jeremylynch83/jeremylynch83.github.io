@@ -77,7 +77,7 @@
 					<h2>CLINICAL INDICATION:</h2>
 				</label>
 
-				<b-form-textarea v-model="clin_indication" @update="writeTemplate()" placeholder="Enter text">
+				<b-form-textarea v-model="clin_indication" @update="writeTemplate()" placeholder="Enter text" rows="0">
 				</b-form-textarea>
 			</b-form-group>
 
@@ -149,7 +149,7 @@
 									</b-form-select>
 								</b-form-group>
 							</template>
-							<b-form-group v-show="n.details == true">
+							<b-form-group v-show="n.details == true" :disabled="n.disabled">
 								<b-form-textarea :key="n.id">Details</b-form-textarea>
 
 							</b-form-group>
