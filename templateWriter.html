@@ -149,7 +149,7 @@
 								<b-form-group :key="n.id" :label="n.label" :disabled="n.disabled"
 									v-show="n.type == 'selection'">
 									<b-form-select v-model="n.selected" :options="n.options"
-										@input="n.details = Boolean(n.selected)">
+										@input="n.details = Boolean(n.selected >= n.showdetailson)">
 									</b-form-select>
 								</b-form-group>
 
@@ -287,8 +287,9 @@
 								})
 							}
 
-							var showdetailson = xml[i].getAttribute("label");
-							console.log(showdetailson);
+							var showdetailson = xml[i].getAttribute("showdetailson");
+							if (showdetailson) el.showdetailson = Number(showdetailson)
+							else el.showdetailson = 1;
 							elements.push(el);
 							break;
 						case "multi_select":
@@ -352,11 +353,17 @@
 									if (text) text.trim();
 									var selected = "";
 
+									var showdetailson = nodes[n].getAttribute("showdetailson");
+									if (showdetailson) showdetailson = Number(showdetailson)
+									else showdetailson = 1;
+
+
 									el.multi.push({
 										label: label,
 										options: options,
 										type: type,
-										selected: selected
+										selected: selected,
+										showdetailson: showdetailson
 									});
 								}
 							}
@@ -506,6 +513,7 @@
 								el.text = elements[n].text;
 								break;
 							case "selection":
+								el.showdetailson = elements[n].showdetailson;
 								el.options = elements[n].options;
 								break;
 							case "multi_select":

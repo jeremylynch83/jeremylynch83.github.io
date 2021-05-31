@@ -48,13 +48,13 @@
 				<selection label="Ligamentum flavum">
 					There is no flaval thickening | There is flaval thickening
 				</selection>
-				<select text="There is a disc">
+				<select label="There is a disc">
 					bulge | prolapse | extrusion | migration | sequestration | intravertebral herniation
 				</select>
-				<select text="protruding in to the">
+				<select label="protruding in to the">
 					right | left
 				</select>
-				<select text="">
+				<select label="">
 					central canal | subarticular zone | foraminal zone | extraforaminal zone
 				</select>
 			</multi_select>
@@ -132,7 +132,7 @@
 				MRI Lumber spine
 			</title>
 			<findings>
-				<selection label="Formation and segmentation" showdetailson="1">
+				<selection label="Formation and segmentation" showdetailson="2">
 					There is normal formation and segmentation of the lumbosacral spine. | There is a transitional lumbosacral junction.
 				</selection>
 				<h1>
