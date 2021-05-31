@@ -14,6 +14,10 @@ caption {
     font-size: 1rem;
 }
 
+#app {
+    width: 100%;
+}
+
 .findings {
     padding-left: 14px;
     padding-right: 14px;
@@ -23,16 +27,12 @@ caption {
     margin-top: 5px;
     display: flex;
     margin-bottom: 5px;
-
-
     background-color: rgb(252, 252, 252);
 
 }
 
 .control {
     flex: 10%;
-
-
 
 
 }
@@ -45,27 +45,34 @@ caption {
 
 
 h1 {
+    border-top-style: solid;
+    border-top-width: 5px;
+    border-top-color: rgb(89, 83, 184);
+
     font-size: x-large;
-    margin: 0px;
+    margin-top: 25px;
     color: rgb(89, 83, 184)
 }
 
 h2 {
+    border-top-style: solid;
+    border-top-width: 3px;
+    border-top-color: rgb(89, 83, 184);
+    margin-top: 15px;
     font-size: large;
-    margin: 0px;
+
     color: rgb(89, 83, 184)
 }
 
 h3 {
     border-top-style: solid;
-    background-color: #e6ecf2;
-    font-weight: bold;
-    border-top-color: #dadada;
-    color: #343434;
+    border-top-width: 1px;
 
-
+    border-top-color: rgb(89, 83, 184);
+    margin-top: 10px;
     font-size: medium;
-    margin: 0px;
-    margin-top: 20px;
-    color: rgb(89, 83, 184)
+
+    color: rgb(89, 83, 184);
+
+
 }

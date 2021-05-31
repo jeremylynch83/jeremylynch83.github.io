@@ -59,142 +59,140 @@
 				<vue-bootstrap-typeahead :data="templates" :serializer="item => item.name"
 					@hit="selectTemplate($event)">
 				</vue-bootstrap-typeahead>
-				<p></p>
+
 			</b-form-group>
-
-
-			<b-form-group>
-				<b-button variant="success" @click="copyReport()">Copy Text</b-button>
-			</b-form-group>
-
-			<p><label>
-					<h1>{{template.title}}</h1>
-				</label></p>
-
 
 			<b-form-group v-show="template != ''">
-				<label>
+				<b-button variant="success" @click="copyReport()">Copy Text</b-button>
+
+				<h1>
+					{{template.title}}
+				</h1>
+
+
+				<b-form-group v-show="template != ''">
+
 					<h2>CLINICAL INDICATION:</h2>
-				</label>
 
-				<b-form-textarea v-model="clin_indication" @update="writeTemplate()" placeholder="Enter text" rows="0">
-				</b-form-textarea>
-			</b-form-group>
 
-			<b-form-group v-show="template != '' && template.type != 'Angiography'">
-				<label>
+					<b-form-textarea v-model="clin_indication" @update="writeTemplate()" placeholder="Enter text"
+						rows="0">
+					</b-form-textarea>
+				</b-form-group>
+
+				<b-form-group v-show="template != '' && template.type != 'Angiography'">
+
 					<h2>TECHNIQUE:</h2>
-				</label>
 
-				<b-form-textarea placeholder="Enter text">
-				</b-form-textarea>
-			</b-form-group>
 
-			<b-form-group v-show="template != '' && template.type != 'Angiography'">
-				<label>
+					<b-form-textarea placeholder="Enter text">
+					</b-form-textarea>
+				</b-form-group>
+
+				<b-form-group v-show="template != '' && template.type != 'Angiography'">
+
 					<h2>COMPARISON:</h2>
-				</label>
-				<b-form-textarea placeholder=" Enter text">
-				</b-form-textarea>
-			</b-form-group>
 
-			<label v-show="template != ''">
+					<b-form-textarea placeholder=" Enter text">
+					</b-form-textarea>
+				</b-form-group>
+
+
 				<h2>FINDINGS:</h2>
-			</label>
 
 
-			<template v-for="n in templateForm">
-				<!-- HEADER TYPE -->
-				<label v-show="n.type == 'h1'">
-					<h3>{{n.text}}</h3>
-				</label>
-				<div class="findings">
 
-					<div class="row">
+				<template v-for="n in templateForm">
+					<!-- HEADER TYPE -->
 
-						<div class="control">
-							<b-button-group vertical v-show="n.type != 'h1'">
-								<b-form-checkbox :key=" n.id" v-model="n.disabled" :value=false :unchecked-value=true
-									size="sm">
-									Enable
-								</b-form-checkbox>
-								<b-form-checkbox :key=" n.id" v-model="n.details" size="sm">
-									Details
-								</b-form-checkbox>
-								<b-button size="sm" variant="danger" @click="deleteElement(n)">Delete
-								</b-button>
-							</b-button-group>
+					<h3 v-show="n.type == 'h1'">{{n.text}}</h3>
 
-						</div>
-						<div class="element">
+					<div class="findings">
 
-							<!-- FREE TEXT TYPE -->
-							<b-form-group :key="n.id" :label="n.label" v-show="n.type == 'free_text'"
-								:disabled="n.disabled">
-								<b-form-textarea :value=" n.text" :key="n.id"></b-form-textarea>
-							</b-form-group>
+						<div class="row">
 
-							<!-- SELECTION TYPE -->
-							<b-form-group :key="n.id" :label="n.label" :disabled="n.disabled"
-								v-show="n.type == 'selection'">
-								<b-form-select v-model="n.selected" :options="n.options"
-									@input="n.details = Boolean(n.selected)">
-								</b-form-select>
-							</b-form-group>
+							<div class="control">
+								<b-button-group vertical v-show="n.type != 'h1'">
+									<b-form-checkbox :key=" n.id" v-model="n.disabled" :value=false
+										:unchecked-value=true size="sm">
+										Enable
+									</b-form-checkbox>
+									<b-form-checkbox :key=" n.id" v-model="n.details" size="sm">
+										Details
+									</b-form-checkbox>
+									<b-button size="sm" variant="danger" @click="deleteElement(n)">Delete
+									</b-button>
+								</b-button-group>
 
-							<!-- MULTISELECTION TYPE -->
-							<b-form-group v-show=" n.type=='multi_select'" :disabled=" n.disabled">
-								<label>{{n.label}}</label>
+							</div>
+							<div class="element">
 
-								<template v-for="nn in n.multi" v-show="n.type == 'multi_select'">
+								<!-- FREE TEXT TYPE -->
+								<b-form-group :key="n.id" :label="n.label" v-show="n.type == 'free_text'"
+									:disabled="n.disabled">
+									<b-form-textarea :value=" n.text" :key="n.id"></b-form-textarea>
+								</b-form-group>
 
-									<b-form-group v-show="nn.options != '' && nn.type == 'multi'">
-										<label>{{nn.text}}</label>
-										<b-form-select :options="nn.options">
-										</b-form-select>
+								<!-- SELECTION TYPE -->
+								<b-form-group :key="n.id" :label="n.label" :disabled="n.disabled"
+									v-show="n.type == 'selection'">
+									<b-form-select v-model="n.selected" :options="n.options"
+										@input="n.details = Boolean(n.selected)">
+									</b-form-select>
+								</b-form-group>
 
-									</b-form-group>
-								</template>
-							</b-form-group>
+								<!-- MULTISELECTION TYPE -->
+								<b-form-group v-show=" n.type=='multi_select'" :disabled=" n.disabled">
+									<label>{{n.label}}</label>
+
+									<template v-for="nn in n.multi" v-show="n.type == 'multi_select'">
+
+										<b-form-group v-show="nn.options != '' && nn.type == 'multi'">
+											<label v-show="nn.text != ''">{{nn.text}}</label>
+											<b-form-select :options="nn.options">
+											</b-form-select>
+
+										</b-form-group>
+									</template>
+								</b-form-group>
 
 
-							<!-- MULTIRADIO TYPE -->
-							<b-form-group v-show="n.type == 'multi_radio'" :disabled="n.disabled">
-								<template v-for="nn in n.multi">
+								<!-- MULTIRADIO TYPE -->
+								<b-form-group v-show="n.type == 'multi_radio'" :disabled="n.disabled">
+									<template v-for="nn in n.multi">
 
-									<b-form inline v-show="nn.options != '' && nn.type == 'multi'">
-										<label class="mb-2 mr-sm-2 mb-sm-0"><b>{{nn.label}}</b></label>
-										<b-form-radio-group :options="nn.options" v-model="nn.selected"
-											class="mb-2 mr-sm-2 mb-sm-0">
-										</b-form-radio-group>
-									</b-form>
+										<b-form inline v-show="nn.options != '' && nn.type == 'multi'">
+											<label class="mb-2 mr-sm-2 mb-sm-0"><b>{{nn.label}}</b></label>
+											<b-form-radio-group :options="nn.options" v-model="nn.selected"
+												class="mb-2 mr-sm-2 mb-sm-0">
+											</b-form-radio-group>
+										</b-form>
 
-									<b-form-group v-show="nn.selected > 0">
-										<b-form-textarea>Details</b-form-textarea>
-									</b-form-group>
+										<b-form-group v-show="nn.selected > 0">
+											<b-form-textarea>Details</b-form-textarea>
+										</b-form-group>
 
-								</template>
-							</b-form-group>
+									</template>
+								</b-form-group>
 
-							<!-- DETAILS BOX -->
-							<b-form-group v-show="n.details" :disabled="n.disabled">
-								<b-form-textarea :key="n.id">Details</b-form-textarea>
-							</b-form-group>
+								<!-- DETAILS BOX -->
+								<b-form-group v-show="n.details" :disabled="n.disabled">
+									<b-form-textarea :key="n.id">Details</b-form-textarea>
+								</b-form-group>
 
+							</div>
 						</div>
 					</div>
-				</div>
-			</template>
+				</template>
 
-			<b-form-group v-show=" template !=''">
-				<label>
+				<b-form-group v-show=" template !=''">
+
 					<h2>CONCLUSION:</h2>
-				</label>
 
-				<b-form-textarea placeholder=" Enter text">
-				</b-form-textarea>
+					<b-form-textarea placeholder=" Enter text">
+					</b-form-textarea>
+				</b-form-group>
 			</b-form-group>
-
 
 		</b-container>
 
