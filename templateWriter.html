@@ -160,7 +160,7 @@
 									<template v-for="nn in n.multi" v-show="n.type == 'multi_select'">
 
 										<b-form-group v-show="nn.options != '' && nn.type == 'multi'">
-											<label v-show="nn.text != ''">{{nn.text}}</label>
+											<label v-show="nn.label != ''">{{nn.label}}</label>
 											<b-form-select :options="nn.options">
 											</b-form-select>
 
@@ -306,16 +306,16 @@
 											})
 										}
 										type = "multi";
-									} else {
-										options[0] = inner_text;
-										type = "free_text";
 									}
 
 									var text = nodes[n].getAttribute("text");
 									if (text) text.trim();
+									var label = nodes[n].getAttribute("label");
+									if (label) label.trim();
 
 									el.multi.push({
 										text: text,
+										label: label,
 										options: options,
 										type: type
 									});

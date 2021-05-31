@@ -92,13 +92,13 @@
 				<selection label="A">
 					right | left
 				</selection>
-				<select text="">
+				<select label="">
 					common femoral artery | radial artery
 				</select>
-				<select text="puncture was made under ultrasound guidance and a ">
+				<select label="puncture was made under ultrasound guidance and a ">
 					4-French | 5-French | 6-French
 				</select>
-				<select text="was inserted. A ">
+				<select label="was inserted. A ">
 				</select>
 			</multi_select>
 		</content>
