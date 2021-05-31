@@ -287,6 +287,8 @@
 								})
 							}
 
+							var showdetailson = xml[i].getAttribute("label");
+							console.log(showdetailson);
 							elements.push(el);
 							break;
 						case "multi_select":
@@ -312,6 +314,7 @@
 									if (text) text.trim();
 									var label = nodes[n].getAttribute("label");
 									if (label) label.trim();
+
 
 									el.multi.push({
 										text: text,
