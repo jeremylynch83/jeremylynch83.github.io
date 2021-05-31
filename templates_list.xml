@@ -45,6 +45,9 @@
 				The disc is normal | There is disc degeneration. | There is disc degeneration and height loss.
 			</selection>
 			<multi_select disabled="true" label="Disc herniation">
+				<selection label="Ligamentum flavum">
+					There is no flaval thickening | There is flaval thickening
+				</selection>
 				<select text="There is a disc">
 					bulge | prolapse | extrusion | migration | sequestration | intravertebral herniation
 				</select>
@@ -55,11 +58,8 @@
 					central canal | subarticular zone | foraminal zone | extraforaminal zone
 				</select>
 			</multi_select>
-			<selection label="Ligamentum flavum">
-				There is no flaval thickening | There is flaval thickening
-			</selection>
 			<selection label="Neural compression">
-				no neural compression | contact | impingement
+				Not present | Present
 			</selection>
 			<selection label="Facet joints">
 				There is no facetal degeneration. | There is  facetal degeneration.
