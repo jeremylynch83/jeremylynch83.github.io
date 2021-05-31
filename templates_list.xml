@@ -124,9 +124,6 @@
 				<radio label="Annular fissure">
 					Not present | Present
 				</radio>
-				<radio label="Fractures">
-					Not present | Present
-				</radio>
 			</multi_radio>
 			<insert>
 				Degenerative spine

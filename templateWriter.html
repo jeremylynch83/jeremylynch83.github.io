@@ -159,10 +159,12 @@
 							<b-form-group v-show="n.type == 'multi_radio'" :disabled="n.disabled">
 								<template v-for="nn in n.multi">
 
-									<b-form-group :label="nn.label" v-show="nn.options != '' && nn.type == 'multi'">
-										<b-form-radio-group :options="nn.options" v-model="nn.selected">
+									<b-form inline v-show="nn.options != '' && nn.type == 'multi'">
+										<label class="mb-2 mr-sm-2 mb-sm-0"><b>{{nn.label}}</b></label>
+										<b-form-radio-group :options="nn.options" v-model="nn.selected"
+											class="mb-2 mr-sm-2 mb-sm-0">
 										</b-form-radio-group>
-									</b-form-group>
+									</b-form>
 
 									<b-form-group v-show="nn.selected > 0">
 										<b-form-textarea>Details</b-form-textarea>
@@ -308,7 +310,7 @@
 										type = "free_text";
 									}
 
-									var label = nodes[n].getAttribute("label")
+									var label = nodes[n].getAttribute("label") + ": ";
 									if (text) text.trim();
 									var selected = "";
 
