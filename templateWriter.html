@@ -51,10 +51,22 @@
 			</b-collapse>
 		</b-navbar>
 
+		<b-modal :id="copyModal.id" :title="copyModal.title" ok-only>
+
+			<p>The report has been copied to the clipboard!</p>
+
+			<b-form-group>
+				<b-form-textarea rows="20" :value="copyModal.text">
+
+				</b-form-textarea>
+			</b-form-group>
+
+
+
+		</b-modal>
+
 		<b-container>
 			<p></p>
-
-
 			<b-form-group label="Search for template:">
 				<vue-bootstrap-typeahead :data="templates" :serializer="item => item.name"
 					@hit="selectTemplate($event)">
@@ -74,9 +86,7 @@
 
 					<h2>CLINICAL INDICATION:</h2>
 
-
-					<b-form-textarea v-model="clin_indication" @update="writeTemplate()" placeholder="Enter text"
-						rows="0">
+					<b-form-textarea id="indication_text" placeholder="Enter text">
 					</b-form-textarea>
 				</b-form-group>
 
@@ -85,7 +95,8 @@
 					<h2>TECHNIQUE:</h2>
 
 
-					<b-form-textarea placeholder="Enter text" v-show="template.type != 'Angiography'">
+					<b-form-textarea id="technique_text" placeholder="Enter text"
+						v-show="template.type != 'Angiography'">
 					</b-form-textarea>
 				</b-form-group>
 
@@ -93,7 +104,7 @@
 
 					<h2>COMPARISON:</h2>
 
-					<b-form-textarea placeholder=" Enter text">
+					<b-form-textarea placeholder=" Enter text" id="comparison_text">
 					</b-form-textarea>
 				</b-form-group>
 
@@ -105,9 +116,9 @@
 				<template v-for="n in templateForm">
 					<!-- HEADER TYPE -->
 
-					<h3 v-show="n.type == 'h1'">{{n.text}}</h3>
+					<h3 v-show="n.type == 'h1'">{{n.label}}</h3>
 
-					<div class="findings">
+					<div class="body">
 
 						<div class="row">
 
@@ -134,14 +145,16 @@
 								<!-- FREE TEXT TYPE -->
 								<b-form-group :key="n.id" :label="n.label" v-show="n.type == 'free_text'"
 									:disabled="n.disabled">
-									<b-form-textarea :value=" n.text" :key="n.id"></b-form-textarea>
+									<b-form-textarea :value="n.text" @change="n.text = $event" :key="n.id">
+									</b-form-textarea>
 								</b-form-group>
 
 								<!-- TEXT ENTRY TYPE -->
 								<b-form-group :key="n.id" :disabled="n.disabled" v-show="n.type == 'text_entry'">
 
 									<label>{{n.label}}</label>
-									<b-form-textarea :key="n.id" :value="n.text"></b-form-textarea>
+									<b-form-textarea :key="n.id" :value="n.text" @change="n.text = $event">
+									</b-form-textarea>
 
 								</b-form-group>
 
@@ -161,7 +174,7 @@
 
 										<b-form-group v-show="nn.options != '' && nn.type == 'multi'">
 											<label v-show="nn.label != ''">{{nn.label}}</label>
-											<b-form-select :options="nn.options">
+											<b-form-select :options="nn.options" v-model="nn.selected">
 											</b-form-select>
 
 										</b-form-group>
@@ -188,8 +201,9 @@
 								</b-form-group>
 
 								<!-- DETAILS BOX -->
-								<b-form-group v-show="n.details" :disabled="n.disabled">
-									<b-form-textarea :key="n.id">Details</b-form-textarea>
+								<b-form-group v-show="n.details" :disabled="n.disabled" :key="n.id">
+									<b-form-textarea :value="n.details_text" @change="n.details_text = $event"
+										:key="n.id">Details</b-form-textarea>
 								</b-form-group>
 
 							</div>
@@ -228,6 +242,14 @@
 
 	<script>
 		/* GENERIC FUNCTIONS */
+		function Clone(obj) {
+			if (null == obj || "object" != typeof obj) return obj;
+			var copy = obj.constructor();
+			for (var attr in obj) {
+				if (obj.hasOwnProperty(attr)) copy[attr] = obj[attr];
+			}
+			return copy;
+		}
 
 		function parse_options(str) {
 			var list = str;
@@ -259,6 +281,11 @@
 						el.label = label + ": ";
 					}
 
+					el.printContents = function () {
+						return "";
+					}
+					el.details_text = ""
+
 
 					switch (xml[i].nodeName) {
 						default:
@@ -266,19 +293,27 @@
 						case "h1":
 							el.label = xml[i].innerHTML.trim();
 							elements.push(el);
+							el.printContents = function () {
+								return el.label;
+							}
 							break;
 						case "text":
 							el.text = xml[i].innerHTML.trim();
-
+							el.printContents = function () {
+								return el.text + el.details_text;
+							}
 							elements.push(el);
 							break;
 						case "text_entry":
 							el.text = xml[i].innerHTML.trim();
+							el.printContents = function () {
+								return el.text + el.details_text;
+							}
 							elements.push(el);
 							break;
 						case "selection":
 							op_values = xml[i].innerHTML.trim().split("|");
-							var selected = "";
+							el.selected = "";
 							el.options = [];
 							for (var x = 0; x < op_values.length; x++) {
 								el.options.push({
@@ -286,9 +321,15 @@
 									value: x
 								})
 							}
+							el.printContents = function () {
+								var print_text = "";
+								if (el.selected != "") print_text = el.options[el.selected].text;
+								print_text += el.details_text;
+								return el.label + print_text;
+							}
 
 							var showdetailson = xml[i].getAttribute("showdetailson");
-							if (showdetailson) el.showdetailson = Number(showdetailson)
+							if (showdetailson) el.showdetailson = Number(showdetailson);
 							else el.showdetailson = 1;
 							elements.push(el);
 							break;
@@ -300,6 +341,7 @@
 									var inner_text = nodes[n].innerHTML.trim();
 									var options = [];
 									var type = "";
+									var selected = "";
 									if (inner_text.includes("|")) {
 										op_values = inner_text.split("|");
 										for (var x = 0; x < op_values.length; x++) {
@@ -311,20 +353,33 @@
 										type = "multi";
 									}
 
-									var text = nodes[n].getAttribute("text");
-									if (text) text.trim();
 									var label = nodes[n].getAttribute("label");
 									if (label) label.trim();
-
+									var multi = {};
+									text = "";
+									label = label.trim();
+									selection = "";
 
 									el.multi.push({
-										text: text,
 										label: label,
 										options: options,
-										type: type
+										type: type,
+										selected: selected,
+										showdetailson: showdetailson,
+										printContents: function () {
+											console.log(type);
+
+											return print_text;
+										}
 									});
+
 								}
 							}
+							var print_text = el.label + ": ";
+							for (var n = 0; n < el.multi.length; n++) {
+								print_text += el.multi[n].printContents();
+							}
+
 							elements.push(el);
 							break;
 						case "multi_radio":
@@ -350,13 +405,12 @@
 									}
 
 									var label = nodes[n].getAttribute("label") + ": ";
-									if (text) text.trim();
+									//if (text) text.trim();
 									var selected = "";
 
 									var showdetailson = nodes[n].getAttribute("showdetailson");
 									if (showdetailson) showdetailson = Number(showdetailson)
 									else showdetailson = 1;
-
 
 									el.multi.push({
 										label: label,
@@ -462,9 +516,13 @@
 			data: {
 				templates: loadXML(),
 				reportText: "",
-				clin_indication: "",
 				template: "",
-				templateForm: []
+				templateForm: [],
+				copyModal: {
+					id: 'copy-modal',
+					text: "",
+					title: "Copy"
+				}
 			},
 
 			methods: {
@@ -494,42 +552,12 @@
 				writeTemplate: function () {
 					this.templateForm = [];
 
-					var elements = this.template.elements;
+					var elements = Clone(this.template.elements);
+
 					for (var n = 0; n < elements.length; n++) {
-						var el = {};
+						var el = this.template.elements[n];
 						el.array_id = n;
-						el.disabled = elements[n].disabled
-						el.label = elements[n].label;
-						el.type = elements[n].type;
-
-						switch (elements[n].type) {
-							case "h1":
-								el.text = elements[n].label;
-								break;
-							case "text":
-								el.text = elements[n].text;
-								break;
-							case "text_entry":
-								el.text = elements[n].text;
-								break;
-							case "selection":
-								el.showdetailson = elements[n].showdetailson;
-								el.options = elements[n].options;
-								break;
-							case "multi_select":
-								el.multi = elements[n].multi;
-								break;
-							case "multi_radio":
-								el.multi = elements[n].multi;
-
-								break;
-
-							default:
-								break;
-						}
 						this.templateForm.push(el);
-
-
 					}
 
 
@@ -543,9 +571,25 @@
 
 
 				copyReport: function () {
-					var copyText = this.reportText;
+					var copyText = "";
+					copyText += this.template.title.trim() + "\n\n";
+					copyText += "CLINICAL INDICATION: \n" + document.getElementById("indication_text").value +
+						"\n\n";
+					copyText += "TECHNIQUE: \n" + document.getElementById("technique_text").value +
+						"\n\n";
+					copyText += "COMPARISON: \n" + document.getElementById("comparison_text").value +
+						"\n\n";
+					copyText += "FINDINGS: \n" + document.getElementById("comparison_text").value +
+						"\n\n";
 
-					console.log(this.reportText);
+					for (var n = 0; n < this.templateForm.length; n++) {
+						copyText += "[" + this.templateForm[n].type + "]" + "\n";
+						copyText += this.templateForm[n].printContents() + "\n";
+						copyText += "\n\n";
+					}
+
+
+					// Put in clipboard
 					const listener = function (ev) {
 						ev.preventDefault();
 						ev.clipboardData.setData('text/plain', copyText);
@@ -553,6 +597,10 @@
 					document.addEventListener('copy', listener);
 					document.execCommand('copy');
 					document.removeEventListener('copy', listener);
+
+					// Display Modal
+					this.copyModal.text = copyText;
+					this.$root.$emit('bv::show::modal', this.copyModal.id);
 
 				}
 			}
