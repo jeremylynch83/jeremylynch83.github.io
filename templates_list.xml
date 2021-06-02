@@ -133,14 +133,14 @@
 					central canal | subarticular zone | foraminal zone | extraforaminal zone
 				</select>
 			</multi_select>
-			<multi_select label="Disc herniation">
+			<multi_select label="Neural compression">
 				<select label="Type" print_text_before="There is">
 					contact | impingement
 				</select>
-				<select label="Type" print_text_before="with the">
+				<select label="Side" print_text_before="with the">
 					right | left
 				</select>
-				<select label="Type" print_text_after="nerve root">
+				<select label="Nerve" print_text_after="nerve root">
 					descending | exiting
 				</select>
 			</multi_select>

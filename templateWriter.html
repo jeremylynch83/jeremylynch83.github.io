@@ -152,7 +152,7 @@
 								<!-- TEXT ENTRY TYPE MEDIUM -->
 
 								<!-- TEXT ENTRY TYPE SMALL/MEDIUM -->
-								<b-form-group :disabled="n.disabled" v-show="n.type == 'text_entry'">
+								<b-form-group :disabled="n.disabled" v-if="n.type == 'text_entry'">
 									<label>{{n.label}}</label>
 									<b-form-textarea :value="n.text" @change="n.text = $event"
 										v-show="n.subtype  == 'medium'">
@@ -162,14 +162,14 @@
 								</b-form-group>
 
 								<!-- SELECTION TYPE -->
-								<b-form-group :label="n.label" :disabled="n.disabled" v-show="n.type == 'selection'">
+								<b-form-group :label="n.label" :disabled="n.disabled" v-if="n.type == 'selection'">
 									<b-form-select v-model="n.selected" :options="n.options"
 										@input="n.details = Boolean(n.selected >= n.showdetailson)">
 									</b-form-select>
 								</b-form-group>
 
 								<!-- MULTISELECTION TYPE -->
-								<b-form-group v-show="n.type=='multi_select'">
+								<b-form-group v-if="n.type=='multi_select'">
 									<label>{{n.label}}</label>
 									<b-form-group>
 										<b-form-radio-group :options="n.present_options" v-model="n.present"
@@ -189,7 +189,7 @@
 								</b-form-group>
 
 								<!-- MULTIRADIO TYPE -->
-								<b-form-group v-show="n.type == 'multi_radio'" :disabled="n.disabled">
+								<b-form-group v-if="n.type == 'multi_radio'" :disabled="n.disabled">
 									<template v-for="nn in n.multi">
 
 										<b-form inline v-show="nn.options != '' && nn.type == 'multi'">
@@ -207,7 +207,7 @@
 								</b-form-group>
 
 								<!-- MULTI CHECKBOX TYPE -->
-								<b-form-group v-show="n.type == 'multi_checkbox'" :disabled="n.disabled">
+								<b-form-group v-if="n.type == 'multi_checkbox'" :disabled="n.disabled">
 									<label>{{n.label}}</label>
 									<template v-for="nn in n.multi">
 										<b-form-checkbox v-model="nn.selected">
