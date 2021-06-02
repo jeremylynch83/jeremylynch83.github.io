@@ -319,7 +319,11 @@
 							else el.subtype = "medium";
 
 							el.printContents = function () {
-								return this.text + this.details_text + "\n";
+								var print_text = "";
+
+								if (this.label) print_text += this.label + ": ";
+								print_text += this.text + this.details_text + "\n";
+								return print_text;
 							}
 							elements.push(el);
 							break;
@@ -451,7 +455,6 @@
 											.options[this.multi[n].selected].text;
 										print_text += " " + this.multi[n].details;
 									}
-
 								}
 								return print_text;
 							}
@@ -475,19 +478,23 @@
 								}
 							}
 							el.printContents = function () {
-								var print_text = this.label + ": ";
+								var print_text = "";
 								var count_elements = 0;
 								for (var n = 0; n < this.multi.length; n++) {
 									if (this.multi[n].selected) count_elements++
 								}
 
-								for (var n = 0; n < this.multi.length; n++) {
-									if (this.multi[n].selected) {
-										print_text += this.multi[n].text.toLowerCase();
-										if (n < (count_elements - 1)) print_text += ", ";
+								if (count_elements) {
+									print_text += this.label + ": ";
+									for (var n = 0; n < this.multi.length; n++) {
+										if (this.multi[n].selected) {
+											print_text += this.multi[n].text.toLowerCase();
+											if (n < (count_elements - 1)) print_text += ", ";
+										}
 									}
+									print_text + "."
 								}
-								return print_text + ".";
+								return print_text;
 							}
 							elements.push(el);
 							break;

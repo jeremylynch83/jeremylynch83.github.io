@@ -197,6 +197,8 @@
 					Left vertebral artery
 				</checkbox>
 			</multi_checkbox>
+			<text_entry label="Procedure details">
+			</text_entry>
 			<selection label="Haemostasis" showdetailson="1000">
 				An angioseal device was used to achieve groin haemostasis. | A pneumatic compression band was used to achieve wrist haemostasis.
 			</selection>
