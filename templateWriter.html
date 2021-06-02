@@ -23,6 +23,7 @@
 	<!-- Required scripts -->
 	<script src="js/vue.js"></script>
 	<script src="js/bootstrap-vue.js"></script>
+	<script src="js/lodash.js"></script>
 	<!-- Type Ahead Library -->
 	<script src="js/VueBootstrapTypeahead.umd.min.js"></script>
 </head>
@@ -124,11 +125,10 @@
 
 							<div class="control">
 								<b-button-group vertical v-show="n.type != 'h1'">
-									<b-form-checkbox :key=" n.id" v-model="n.disabled" :value=false
-										:unchecked-value=true size="sm">
+									<b-form-checkbox v-model="n.disabled" :value=false :unchecked-value=true size="sm">
 										Enable
 									</b-form-checkbox>
-									<b-form-checkbox :key=" n.id" v-model="n.details" size="sm">
+									<b-form-checkbox v-model="n.details" size="sm">
 										Details
 									</b-form-checkbox>
 									<b-button size="sm" variant="danger" @click="deleteElement(n)">Delete
@@ -138,40 +138,38 @@
 							</div>
 							<div class="element">
 
-								<!-- FREE TEXT TYPE -->
+
+								<!--  TEXT TYPE -->
 								<label v-show="n.type == 'text'">{{n.text}}</label>
 
 
 								<!-- FREE TEXT TYPE -->
-								<b-form-group :key="n.id" :label="n.label" v-show="n.type == 'free_text'"
-									:disabled="n.disabled">
-									<b-form-textarea :value="n.text" @change="n.text = $event" :key="n.id">
+								<b-form-group :label="n.label" v-show="n.type == 'free_text'" :disabled="n.disabled">
+									<b-form-textarea :value="n.text" @change="n.text = $event">
 									</b-form-textarea>
 								</b-form-group>
 
 								<!-- TEXT ENTRY TYPE -->
-								<b-form-group :key="n.id" :disabled="n.disabled" v-show="n.type == 'text_entry'">
+								<b-form-group :disabled="n.disabled" v-show="n.type == 'text_entry'">
 
 									<label>{{n.label}}</label>
-									<b-form-textarea :key="n.id" :value="n.text" @change="n.text = $event">
+									<b-form-textarea :value="n.text" @change="n.text = $event">
 									</b-form-textarea>
 
 								</b-form-group>
 
 								<!-- SELECTION TYPE -->
-								<b-form-group :key="n.id" :label="n.label" :disabled="n.disabled"
-									v-show="n.type == 'selection'">
+								<b-form-group :label="n.label" :disabled="n.disabled" v-show="n.type == 'selection'">
 									<b-form-select v-model="n.selected" :options="n.options"
 										@input="n.details = Boolean(n.selected >= n.showdetailson)">
 									</b-form-select>
 								</b-form-group>
 
 								<!-- MULTISELECTION TYPE -->
-								<b-form-group v-show=" n.type=='multi_select'" :disabled=" n.disabled">
+								<b-form-group v-show="n.type=='multi_select'" :disabled=" n.disabled">
 									<label>{{n.label}}</label>
 
 									<template v-for="nn in n.multi" v-show="n.type == 'multi_select'">
-
 										<b-form-group v-show="nn.options != '' && nn.type == 'multi'">
 											<label v-show="nn.label != ''">{{nn.label}}</label>
 											<b-form-select :options="nn.options" v-model="nn.selected">
@@ -192,18 +190,19 @@
 												class="mb-2 mr-sm-2 mb-sm-0">
 											</b-form-radio-group>
 										</b-form>
-
 										<b-form-group v-show="nn.selected >= nn.showdetailson">
-											<b-form-textarea>Details</b-form-textarea>
+											<b-form-textarea :value="nn.details" @change="nn.details = $event">
+											</b-form-textarea>
 										</b-form-group>
 
 									</template>
 								</b-form-group>
 
 								<!-- DETAILS BOX -->
-								<b-form-group v-show="n.details" :disabled="n.disabled" :key="n.id">
-									<b-form-textarea :value="n.details_text" @change="n.details_text = $event"
-										:key="n.id">Details</b-form-textarea>
+								<b-form-group v-show="n.details" :disabled="n.disabled">
+									<b-form-textarea :value="n.details_text" @change="n.details_text = $event">
+										Details
+									</b-form-textarea>
 								</b-form-group>
 
 							</div>
@@ -215,7 +214,7 @@
 
 					<h2>CONCLUSION:</h2>
 
-					<b-form-textarea placeholder=" Enter text">
+					<b-form-textarea placeholder=" Enter text" id="conclusion_text">
 					</b-form-textarea>
 				</b-form-group>
 			</b-form-group>
@@ -242,6 +241,8 @@
 
 	<script>
 		/* GENERIC FUNCTIONS */
+
+
 		function Clone(obj) {
 			if (null == obj || "object" != typeof obj) return obj;
 			var copy = obj.constructor();
@@ -263,12 +264,12 @@
 			return list;
 		}
 
-
 		function parseFindings(xml, modules) {
+
 			var elements = [];
 			for (i = 0; i < xml.length; i++) {
 				if (xml[i].nodeName != "#text") {
-					let el = {};
+					var el = {};
 					el.type = xml[i].nodeName.trim();
 					var disabled = xml[i].getAttribute("disabled");
 					if (disabled != null && disabled == "true") {
@@ -286,7 +287,6 @@
 					}
 					el.details_text = ""
 
-
 					switch (xml[i].nodeName) {
 						default:
 							break;
@@ -294,26 +294,27 @@
 							el.label = xml[i].innerHTML.trim();
 							elements.push(el);
 							el.printContents = function () {
-								return el.label;
+								return "\n\n" + this.label + " ";
 							}
 							break;
 						case "text":
 							el.text = xml[i].innerHTML.trim();
 							el.printContents = function () {
-								return el.text + el.details_text;
+								return this.text + this.details_text;
 							}
 							elements.push(el);
 							break;
 						case "text_entry":
 							el.text = xml[i].innerHTML.trim();
 							el.printContents = function () {
-								return el.text + el.details_text;
+								return this.text + this.details_text;
 							}
 							elements.push(el);
 							break;
 						case "selection":
 							op_values = xml[i].innerHTML.trim().split("|");
 							el.selected = "";
+							el.label = label;
 							el.options = [];
 							for (var x = 0; x < op_values.length; x++) {
 								el.options.push({
@@ -323,16 +324,17 @@
 							}
 							el.printContents = function () {
 								var print_text = "";
-								if (el.selected != "") print_text = el.options[el.selected].text;
-								print_text += el.details_text;
-								return el.label + print_text;
-							}
+								if (Number.isInteger(this.selected)) print_text = this.options[this.selected].text;
+								print_text += this.details_text;
+								return print_text;
 
+							}
 							var showdetailson = xml[i].getAttribute("showdetailson");
 							if (showdetailson) el.showdetailson = Number(showdetailson);
 							else el.showdetailson = 1;
 							elements.push(el);
 							break;
+
 						case "multi_select":
 							var nodes = xml[i].childNodes;
 							el.multi = [];
@@ -341,9 +343,10 @@
 									var inner_text = nodes[n].innerHTML.trim();
 									var options = [];
 									var type = "";
-									var selected = "";
+									var selected = null;
 									if (inner_text.includes("|")) {
 										op_values = inner_text.split("|");
+
 										for (var x = 0; x < op_values.length; x++) {
 											options.push({
 												text: op_values[x],
@@ -351,6 +354,11 @@
 											})
 										}
 										type = "multi";
+									} else {
+										options.push({
+											text: inner_text,
+											value: 0
+										})
 									}
 
 									var label = nodes[n].getAttribute("label");
@@ -365,23 +373,24 @@
 										options: options,
 										type: type,
 										selected: selected,
-										showdetailson: showdetailson,
-										printContents: function () {
-											console.log(type);
-
-											return print_text;
-										}
+										showdetailson: showdetailson
 									});
-
 								}
 							}
-							var print_text = el.label + ": ";
-							for (var n = 0; n < el.multi.length; n++) {
-								print_text += el.multi[n].printContents();
+							el.printContents = function () {
+								var print_text = "";
+								for (var n = 0; n < this.multi.length; n++) {
+									if (Number.isInteger(this.multi[n].selected)) {
+										print_text += this.multi[n].label;
+										print_text += " " + this.multi[n]
+											.options[this.multi[n].selected].text
+									}
+								}
+								return print_text;
 							}
-
 							elements.push(el);
 							break;
+
 						case "multi_radio":
 							var nodes = xml[i].childNodes;
 							el.multi = [];
@@ -394,7 +403,7 @@
 										op_values = inner_text.split("|");
 										for (var x = 0; x < op_values.length; x++) {
 											options.push({
-												text: op_values[x],
+												text: op_values[x].trim(),
 												value: x
 											})
 										}
@@ -405,7 +414,6 @@
 									}
 
 									var label = nodes[n].getAttribute("label") + ": ";
-									//if (text) text.trim();
 									var selected = "";
 
 									var showdetailson = nodes[n].getAttribute("showdetailson");
@@ -417,10 +425,25 @@
 										options: options,
 										type: type,
 										selected: selected,
-										showdetailson: showdetailson
+										showdetailson: showdetailson,
+										details: ""
 									});
 								}
 							}
+							el.printContents = function () {
+								var print_text = "";
+								for (var n = 0; n < this.multi.length; n++) {
+									if (Number.isInteger(this.multi[n].selected)) {
+										print_text += this.multi[n].label;
+										print_text += this.multi[n]
+											.options[this.multi[n].selected].text;
+										print_text += " " + this.multi[n].details;
+									}
+
+								}
+								return print_text;
+							}
+
 							elements.push(el);
 							break;
 						case "insert":
@@ -514,9 +537,11 @@
 			},
 			el: '#app',
 			data: {
+				id_count: 0,
 				templates: loadXML(),
 				reportText: "",
 				template: "",
+				index: "",
 				templateForm: [],
 				copyModal: {
 					id: 'copy-modal',
@@ -527,6 +552,14 @@
 
 			methods: {
 				// General functions
+				generateID: function () {
+					this.id_count++;
+					return this.id_count;
+				},
+				update: function (event) {
+					console.log(event)
+
+				},
 				findList: function (text, symbol_start, symbol_end) {
 
 					var n = 0 - symbol_start.length;
@@ -547,16 +580,22 @@
 					this.writeTemplate();
 				},
 
-
-
 				writeTemplate: function () {
 					this.templateForm = [];
 
-					var elements = Clone(this.template.elements);
+					var elements = this.template.elements;
 
 					for (var n = 0; n < elements.length; n++) {
-						var el = this.template.elements[n];
+						var el = _.cloneDeep(this.template.elements[n]);
+
 						el.array_id = n;
+						el.id = this.generateID();
+
+						if (el.multi) {
+							for (var x = 0; x < el.multi.length; x++) {
+								el.multi[x].id = this.generateID();
+							}
+						}
 						this.templateForm.push(el);
 					}
 
@@ -579,14 +618,14 @@
 						"\n\n";
 					copyText += "COMPARISON: \n" + document.getElementById("comparison_text").value +
 						"\n\n";
-					copyText += "FINDINGS: \n" + document.getElementById("comparison_text").value +
-						"\n\n";
+					copyText += "FINDINGS: \n";
 
 					for (var n = 0; n < this.templateForm.length; n++) {
-						copyText += "[" + this.templateForm[n].type + "]" + "\n";
-						copyText += this.templateForm[n].printContents() + "\n";
-						copyText += "\n\n";
+						copyText += this.templateForm[n].printContents();
 					}
+
+					copyText += "\n\nCONCLUSION: \n" + document.getElementById("conclusion_text").value +
+						"\n\n";
 
 
 					// Put in clipboard
