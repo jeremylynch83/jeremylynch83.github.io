@@ -133,298 +133,306 @@
 					central canal | subarticular zone | foraminal zone | extraforaminal zone
 				</select>
 			</multi_select>
-			<selection label="Neural compression">
-				There is no neural compression | There is neural compression
-			</selection>
+			<multi_select label="Disc herniation">
+				<select label="Type" print_text_before="There is">
+					contact | impingement
+				</select>
+				<select label="Type" print_text_before="with the">
+					right | left
+				</select>
+				<select label="Type" print_text_after="nerve root">
+					descending | exiting
+				</select>
+			</multi_select>
 			<selection label="Facet joints">
 				There is no facetal degeneration | There is facetal degeneration
 			</selection>
 		</content>
-	</module>
-	<module>
-		<name>
-			Angio header
-		</name>
-		<content>
-			<text_entry label="Staff" subtype="small">
-			</text_entry>
-			<text_entry label="Assists" subtype="small">
-			</text_entry>
-			<selection label="Anaesthesia" print_label="true" showdetailson="1000">
-				General | Conscious sedation | Local
-			</selection>
-		</content>
-	</module>
-	<module>
-		<name>
-			Angio technique
-		</name>
-		<content>
-			<text_entry>
-				Informed consent was obtained from the patient (including risk of stroke and groin haemorrhage). 10 ml of 1% lidocaine was infiltrated into the puncture site superficial tissues.
-			</text_entry>
-			<multi_select label="">
-				<select label="Side" print_text_before="A">
-					right | left
-				</select>
-				<select label="Puncture site" print_text_before="">
-					common femoral artery | radial artery
-				</select>
-				<select label="Sheath size" print_text_before="puncture was made under ultrasound guidance and a">
-					4-French | 5-French | 6-French
-				</select>
-				<select label="Catheter used" print_text_before="sheath was inserted. A" print_text_after="was used.">
-					Berenstein catheter | Simmons-2 catheter | Other
-				</select>
-			</multi_select>
-			<multi_checkbox label="Vessels studied">
-				<checkbox>
-					Right internal carotid
-				</checkbox>
-				<checkbox>
-					Right external carotid
-				</checkbox>
-				<checkbox>
-					Left internal carotid
-				</checkbox>
-				<checkbox>
-					Left external carotid
-				</checkbox>
-				<checkbox>
-					Right vertebral artery
-				</checkbox>
-				<checkbox>
-					Left vertebral artery
-				</checkbox>
-			</multi_checkbox>
-			<text_entry label="Procedure details">
-			</text_entry>
-			<selection label="Haemostasis" showdetailson="1000">
-				An angioseal device was used to achieve groin haemostasis. | A pneumatic compression band was used to achieve wrist haemostasis.
-			</selection>
-			<selection label="Complications">
-				There were no periprocedural complications. | There was a complication.
-			</selection>
-		</content>
-		<template>
-			<name>
-				Cerebral angiogram
-			</name>
-			<type>
-				Angiography
-			</type>
-			<title>
-				Cerebral Angiogram
-			</title>
-			<findings>
-				<insert>
-					Angio header
-				</insert>
-				<insert>
-					Angio technique
-				</insert>
-			</findings>
-		</template>
-		<template>
-			<name>
-				MRI Lumbar Spine
-			</name>
-			<type>
-				Diagnostic
-			</type>
-			<title>
-				MRI Lumber spine
-			</title>
-			<findings>
-				<selection label="Formation and segmentation">
-					There is normal formation and segmentation of the lumbosacral spine. | There is a transitional lumbosacral junction.
-				</selection>
-				<selection label="Vertebral alignment">
-					Vertebral alignment is normal | Vertebral alignment is abnormal
-				</selection>
-				<h1>
-					T12-L1:
-				</h1>
-				<insert>
-					Lumbar spine level
-				</insert>
-				<h1>
-					L1-L2:
-				</h1>
-				<insert>
-					Lumbar spine level
-				</insert>
-				<h1>
-					L2-L3:
-				</h1>
-				<insert>
-					Lumbar spine level
-				</insert>
-				<h1>
-					L3-L4:
-				</h1>
-				<insert>
-					Lumbar spine level
-				</insert>
-				<h1>
-					L4-L5:
-				</h1>
-				<insert>
-					Lumbar spine level
-				</insert>
-				<h1>
-					L5-S1:
-				</h1>
-				<insert>
-					Lumbar spine level
-				</insert>
-				<h1>
-					Other details:
-				</h1>
-				<insert>
-					Degenerative spine
-				</insert>
-			</findings>
-		</template>
 		<module>
 			<name>
-				Cervical spine level
+				Angio header
 			</name>
 			<content>
-				<selection label="Discs">
-					The disc is normal | There is disc degeneration. | There is disc degeneration and height loss.
-				</selection>
-				<selection label="Ligamentum flavum">
-					There is no flaval thickening | There is flaval thickening
-				</selection>
-				<selection label="Disc bar">
-					There is a disc bar causing no neural compression | There is a disc bar compressing
-				</selection>
-				<selection label="Facet joints">
-					There is no facetal degeneration. | There is facetal degeneration.
+				<text_entry label="Staff" subtype="small">
+				</text_entry>
+				<text_entry label="Assists" subtype="small">
+				</text_entry>
+				<selection label="Anaesthesia" print_label="true" showdetailson="1000">
+					General | Conscious sedation | Local
 				</selection>
 			</content>
 		</module>
-		<template>
+		<module>
 			<name>
-				MRI Cervical Spine
+				Angio technique
 			</name>
-			<type>
-				Diagnostic
-			</type>
-			<title>
-				MRI Cervical Spine
-			</title>
-			<findings>
-				<selection label="Vertebral alignment">
-					Vertebral alignment is normal | Vertebral alignment is abnormal
-				</selection>
-				<selection label="Posterior fossa">
-					Normal | Abnormal
-				</selection>
-				<h1>
-					C1-C2
-				</h1>
-				<text_entry label="Comment">
+			<content>
+				<text_entry>
+					Informed consent was obtained from the patient (including risk of stroke and groin haemorrhage). 10 ml of 1% lidocaine was infiltrated into the puncture site superficial tissues.
 				</text_entry>
-				<h1>
-					C2-C3
-				</h1>
-				<insert>
+				<multi_select label="">
+					<select label="Side" print_text_before="A">
+						right | left
+					</select>
+					<select label="Puncture site" print_text_before="">
+						common femoral artery | radial artery
+					</select>
+					<select label="Sheath size" print_text_before="puncture was made under ultrasound guidance and a">
+						4-French | 5-French | 6-French
+					</select>
+					<select label="Catheter used" print_text_before="sheath was inserted. A" print_text_after="was used.">
+						Berenstein catheter | Simmons-2 catheter | Other
+					</select>
+				</multi_select>
+				<multi_checkbox label="Vessels studied">
+					<checkbox>
+						Right internal carotid
+					</checkbox>
+					<checkbox>
+						Right external carotid
+					</checkbox>
+					<checkbox>
+						Left internal carotid
+					</checkbox>
+					<checkbox>
+						Left external carotid
+					</checkbox>
+					<checkbox>
+						Right vertebral artery
+					</checkbox>
+					<checkbox>
+						Left vertebral artery
+					</checkbox>
+				</multi_checkbox>
+				<text_entry label="Procedure details">
+				</text_entry>
+				<selection label="Haemostasis" showdetailson="1000">
+					An angioseal device was used to achieve groin haemostasis. | A pneumatic compression band was used to achieve wrist haemostasis.
+				</selection>
+				<selection label="Complications">
+					There were no periprocedural complications. | There was a complication.
+				</selection>
+			</content>
+			<template>
+				<name>
+					Cerebral angiogram
+				</name>
+				<type>
+					Angiography
+				</type>
+				<title>
+					Cerebral Angiogram
+				</title>
+				<findings>
+					<insert>
+						Angio header
+					</insert>
+					<insert>
+						Angio technique
+					</insert>
+				</findings>
+			</template>
+			<template>
+				<name>
+					MRI Lumbar Spine
+				</name>
+				<type>
+					Diagnostic
+				</type>
+				<title>
+					MRI Lumber spine
+				</title>
+				<findings>
+					<selection label="Formation and segmentation">
+						There is normal formation and segmentation of the lumbosacral spine. | There is a transitional lumbosacral junction.
+					</selection>
+					<selection label="Vertebral alignment">
+						Vertebral alignment is normal | Vertebral alignment is abnormal
+					</selection>
+					<h1>
+						T12-L1:
+					</h1>
+					<insert>
+						Lumbar spine level
+					</insert>
+					<h1>
+						L1-L2:
+					</h1>
+					<insert>
+						Lumbar spine level
+					</insert>
+					<h1>
+						L2-L3:
+					</h1>
+					<insert>
+						Lumbar spine level
+					</insert>
+					<h1>
+						L3-L4:
+					</h1>
+					<insert>
+						Lumbar spine level
+					</insert>
+					<h1>
+						L4-L5:
+					</h1>
+					<insert>
+						Lumbar spine level
+					</insert>
+					<h1>
+						L5-S1:
+					</h1>
+					<insert>
+						Lumbar spine level
+					</insert>
+					<h1>
+						Other details:
+					</h1>
+					<insert>
+						Degenerative spine
+					</insert>
+				</findings>
+			</template>
+			<module>
+				<name>
 					Cervical spine level
-				</insert>
-				<h1>
-					C3-C4
-				</h1>
-				<insert>
-					Cervical spine level
-				</insert>
-				<h1>
-					C4-C5
-				</h1>
-				<insert>
-					Cervical spine level
-				</insert>
-				<h1>
-					C5-C6
-				</h1>
-				<insert>
-					Cervical spine level
-				</insert>
-				<h1>
-					C6-C7
-				</h1>
-				<insert>
-					Cervical spine level
-				</insert>
-				<h1>
-					C7-T1
-				</h1>
-				<insert>
-					Cervical spine level
-				</insert>
-				<h1>
-					Other details:
-				</h1>
-				<insert>
-					Degenerative spine
-				</insert>
-			</findings>
-		</template>
-		<template>
-			<name>
-			</name>
-			<type>
-				Diagnostic
-			</type>
-			<title>
-			</title>
-			<findings>
-			</findings>
-		</template>
-		<template>
-			<name>
-			</name>
-			<type>
-				Diagnostic
-			</type>
-			<title>
-			</title>
-			<findings>
-			</findings>
-		</template>
-		<template>
-			<name>
-			</name>
-			<type>
-				Diagnostic
-			</type>
-			<title>
-			</title>
-			<findings>
-			</findings>
-		</template>
-		<template>
-			<name>
-			</name>
-			<type>
-				Diagnostic
-			</type>
-			<title>
-			</title>
-			<findings>
-			</findings>
-		</template>
-		<template>
-			<name>
-			</name>
-			<type>
-				Diagnostic
-			</type>
-			<title>
-			</title>
-			<findings>
-			</findings>
-		</template>
+				</name>
+				<content>
+					<selection label="Discs">
+						The disc is normal | There is disc degeneration. | There is disc degeneration and height loss.
+					</selection>
+					<selection label="Ligamentum flavum">
+						There is no flaval thickening | There is flaval thickening
+					</selection>
+					<selection label="Disc bar">
+						There is a disc bar causing no neural compression | There is a disc bar compressing
+					</selection>
+					<selection label="Facet joints">
+						There is no facetal degeneration. | There is facetal degeneration.
+					</selection>
+				</content>
+			</module>
+			<template>
+				<name>
+					MRI Cervical Spine
+				</name>
+				<type>
+					Diagnostic
+				</type>
+				<title>
+					MRI Cervical Spine
+				</title>
+				<findings>
+					<selection label="Vertebral alignment">
+						Vertebral alignment is normal | Vertebral alignment is abnormal
+					</selection>
+					<selection label="Posterior fossa">
+						Normal | Abnormal
+					</selection>
+					<h1>
+						C1-C2
+					</h1>
+					<text_entry label="Comment">
+					</text_entry>
+					<h1>
+						C2-C3
+					</h1>
+					<insert>
+						Cervical spine level
+					</insert>
+					<h1>
+						C3-C4
+					</h1>
+					<insert>
+						Cervical spine level
+					</insert>
+					<h1>
+						C4-C5
+					</h1>
+					<insert>
+						Cervical spine level
+					</insert>
+					<h1>
+						C5-C6
+					</h1>
+					<insert>
+						Cervical spine level
+					</insert>
+					<h1>
+						C6-C7
+					</h1>
+					<insert>
+						Cervical spine level
+					</insert>
+					<h1>
+						C7-T1
+					</h1>
+					<insert>
+						Cervical spine level
+					</insert>
+					<h1>
+						Other details:
+					</h1>
+					<insert>
+						Degenerative spine
+					</insert>
+				</findings>
+			</template>
+			<template>
+				<name>
+				</name>
+				<type>
+					Diagnostic
+				</type>
+				<title>
+				</title>
+				<findings>
+				</findings>
+			</template>
+			<template>
+				<name>
+				</name>
+				<type>
+					Diagnostic
+				</type>
+				<title>
+				</title>
+				<findings>
+				</findings>
+			</template>
+			<template>
+				<name>
+				</name>
+				<type>
+					Diagnostic
+				</type>
+				<title>
+				</title>
+				<findings>
+				</findings>
+			</template>
+			<template>
+				<name>
+				</name>
+				<type>
+					Diagnostic
+				</type>
+				<title>
+				</title>
+				<findings>
+				</findings>
+			</template>
+			<template>
+				<name>
+				</name>
+				<type>
+					Diagnostic
+				</type>
+				<title>
+				</title>
+				<findings>
+				</findings>
+			</template>
+		</module>
 	</module>
 </all>
