@@ -123,13 +123,13 @@
 				There is no flaval thickening | There is flaval thickening
 			</selection>
 			<multi_select disabled="true" label="Disc herniation">
-				<select label="There is a disc">
+				<select label="Type" print_text_before="There is a disc">
 					bulge | prolapse | extrusion | migration | sequestration | intravertebral herniation
 				</select>
-				<select label="protruding in to the">
+				<select label="Side" print_text_before="protruding in to the">
 					right | left
 				</select>
-				<select label="">
+				<select label="Location">
 					central canal | subarticular zone | foraminal zone | extraforaminal zone
 				</select>
 			</multi_select>
@@ -150,7 +150,7 @@
 			</text_entry>
 			<text_entry label="Assists" subtype="small">
 			</text_entry>
-			<selection label="Anaesthesia" showdetailson="1000">
+			<selection label="Anaesthesia" print_label="true" showdetailson="1000">
 				General | Conscious sedation | Local
 			</selection>
 		</content>
