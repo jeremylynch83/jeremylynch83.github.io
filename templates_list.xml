@@ -122,7 +122,7 @@
 			<selection label="Ligamentum flavum">
 				There is no flaval thickening | There is flaval thickening
 			</selection>
-			<multi_select disabled="true" label="Disc herniation">
+			<multi_select label="Disc herniation">
 				<select label="Type" print_text_before="There is a disc">
 					bulge | prolapse | extrusion | migration | sequestration | intravertebral herniation
 				</select>
@@ -134,10 +134,10 @@
 				</select>
 			</multi_select>
 			<selection label="Neural compression">
-				Not present | Present
+				There is no neural compression | There is neural compression
 			</selection>
 			<selection label="Facet joints">
-				There is no facetal degeneration. | There is  facetal degeneration.
+				There is no facetal degeneration | There is facetal degeneration
 			</selection>
 		</content>
 	</module>
@@ -297,7 +297,7 @@
 				<selection label="Ligamentum flavum">
 					There is no flaval thickening | There is flaval thickening
 				</selection>
-				<selection label="Disc bar" disabled="true">
+				<selection label="Disc bar">
 					There is a disc bar causing no neural compression | There is a disc bar compressing
 				</selection>
 				<selection label="Facet joints">

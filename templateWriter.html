@@ -169,12 +169,18 @@
 								</b-form-group>
 
 								<!-- MULTISELECTION TYPE -->
-								<b-form-group v-show="n.type=='multi_select'" :disabled=" n.disabled">
+								<b-form-group v-show="n.type=='multi_select'">
 									<label>{{n.label}}</label>
+									<b-form-group>
+										<b-form-radio-group :options="n.present_options" v-model="n.present"
+											class="mb-2 mr-sm-2 mb-sm-0">
+										</b-form-radio-group>
+									</b-form-group>
 
-									<template v-for="nn in n.multi" v-show="n.type == 'multi_select'">
-										<b-form-group v-show="nn.options != '' && nn.type == 'multi'">
-											<label v-show="nn.label != ''">{{nn.label}}</label>
+									<template v-for="nn in n.multi">
+										<b-form-group
+											v-show="nn.options != '' && nn.type == 'multi' && n.present == 'yes'"
+											:label="nn.label" label-cols="2">
 											<b-form-select :options="nn.options" v-model="nn.selected">
 											</b-form-select>
 
@@ -276,8 +282,19 @@
 			return list;
 		}
 
-		function parseFindings(xml, modules) {
+		function format_sentence(str) {
+			var sentence = "";
+			if ((typeof str) === "string" && str != "") {
+				str = str.trim();
+				str = str.replace(/ +(?= )/g, '');
+				if (str[str.length - 1] != ".") str = str + ". ";
+				else str = str + " ";
+				sentence = str;
+			}
+			return sentence;
+		}
 
+		function parseFindings(xml, modules) {
 			var elements = [];
 			for (i = 0; i < xml.length; i++) {
 				if (xml[i].nodeName != "#text") {
@@ -340,10 +357,10 @@
 							}
 							el.printContents = function () {
 								var print_text = "";
-								if (Number.isInteger(this.selected)) print_text = this.options[this.selected].text;
-								print_text += this.details_text;
-								return print_text;
-
+								if (Number.isInteger(this.selected)) print_text = format_sentence(this.options[this
+									.selected].text);
+								print_text += format_sentence(this.details_text);
+								return format_sentence(print_text);
 							}
 							var showdetailson = xml[i].getAttribute("showdetailson");
 							if (showdetailson) el.showdetailson = Number(showdetailson);
@@ -354,6 +371,9 @@
 						case "multi_select":
 							var nodes = xml[i].childNodes;
 							el.multi = [];
+							el.present_options = ["yes", "no"];
+							el.present = "";
+
 							for (var n = 0; n < nodes.length; n++) {
 								if (nodes[n].nodeName == "select") {
 									var inner_text = nodes[n].innerHTML.trim();
@@ -397,7 +417,7 @@
 										print_text_before: print_text_before,
 										print_text_after: print_text_after,
 										selected: selected,
-										showdetailson: showdetailson
+										showdetailson: showdetailson,
 									});
 								}
 							}
@@ -412,6 +432,7 @@
 											.print_text_after + " ";
 									}
 								}
+								print_text = format_sentence(print_text) + format_sentence(this.details_text);
 								return print_text;
 							}
 							elements.push(el);
