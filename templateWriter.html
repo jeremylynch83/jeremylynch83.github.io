@@ -149,13 +149,16 @@
 									</b-form-textarea>
 								</b-form-group>
 
-								<!-- TEXT ENTRY TYPE -->
+								<!-- TEXT ENTRY TYPE MEDIUM -->
+
+								<!-- TEXT ENTRY TYPE SMALL/MEDIUM -->
 								<b-form-group :disabled="n.disabled" v-show="n.type == 'text_entry'">
-
 									<label>{{n.label}}</label>
-									<b-form-textarea :value="n.text" @change="n.text = $event">
+									<b-form-textarea :value="n.text" @change="n.text = $event"
+										v-show="n.subtype  == 'medium'">
 									</b-form-textarea>
-
+									<b-form-input :value="n.text" @change="n.text = $event"
+										v-show="n.subtype  == 'small'"></b-form-input>
 								</b-form-group>
 
 								<!-- SELECTION TYPE -->
@@ -311,6 +314,10 @@
 							break;
 						case "text_entry":
 							el.text = xml[i].innerHTML.trim();
+							el.subtype = xml[i].getAttribute("subtype");
+							if (el.subtype) el.subtype = el.subtype.trim();
+							else el.subtype = "medium";
+
 							el.printContents = function () {
 								return this.text + this.details_text + "\n";
 							}
@@ -468,11 +475,16 @@
 								}
 							}
 							el.printContents = function () {
-								console.log("hi")
 								var print_text = this.label + ": ";
+								var count_elements = 0;
+								for (var n = 0; n < this.multi.length; n++) {
+									if (this.multi[n].selected) count_elements++
+								}
+
 								for (var n = 0; n < this.multi.length; n++) {
 									if (this.multi[n].selected) {
-										print_text += this.multi[n].text;
+										print_text += this.multi[n].text.toLowerCase();
+										if (n < (count_elements - 1)) print_text += ", ";
 									}
 								}
 								return print_text + ".";
