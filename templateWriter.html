@@ -179,9 +179,26 @@
 									</template>
 								</b-form-group>
 
-
 								<!-- MULTIRADIO TYPE -->
 								<b-form-group v-show="n.type == 'multi_radio'" :disabled="n.disabled">
+									<template v-for="nn in n.multi">
+
+										<b-form inline v-show="nn.options != '' && nn.type == 'multi'">
+											<label class="mb-2 mr-sm-2 mb-sm-0"><b>{{nn.label}}</b></label>
+											<b-form-radio-group :options="nn.options" v-model="nn.selected"
+												class="mb-2 mr-sm-2 mb-sm-0">
+											</b-form-radio-group>
+										</b-form>
+										<b-form-group v-show="nn.selected >= nn.showdetailson">
+											<b-form-textarea :value="nn.details" @change="nn.details = $event">
+											</b-form-textarea>
+										</b-form-group>
+
+									</template>
+								</b-form-group>
+
+								<!-- MULTI CHECKBOX TYPE -->
+								<b-form-group v-show="n.type == 'multi_checkbox'" :disabled="n.disabled">
 									<template v-for="nn in n.multi">
 
 										<b-form inline v-show="nn.options != '' && nn.type == 'multi'">
@@ -272,15 +289,11 @@
 					var el = {};
 					el.type = xml[i].nodeName.trim();
 					var disabled = xml[i].getAttribute("disabled");
-					if (disabled != null && disabled == "true") {
-						el.disabled = true;
-					} else {
-						el.disabled = false;
-					}
+					if (disabled != null && disabled == "true") el.disabled = true;
+					else el.disabled = false;
+
 					var label = xml[i].getAttribute("label");
-					if (label) {
-						el.label = label + ": ";
-					}
+					if (label) el.label = label;
 
 					el.printContents = function () {
 						return "";
@@ -443,9 +456,57 @@
 								}
 								return print_text;
 							}
-
 							elements.push(el);
 							break;
+
+						case "multi_checkbox":
+							var nodes = xml[i].childNodes;
+							el.multi = [];
+							for (var n = 0; n < nodes.length; n++) {
+								if (nodes[n].nodeName == "checkbox") {
+									var inner_text = nodes[n].innerHTML.trim();
+									var options = [];
+									var type = "";
+									if (inner_text.includes("|")) {
+										op_values = inner_text.split("|");
+										for (var x = 0; x < op_values.length; x++) {
+											options.push({
+												text: op_values[x].trim(),
+												value: x
+											})
+										}
+										type = "multi";
+									} else {
+										options[0] = inner_text;
+										type = "free_text";
+									}
+
+									var label = nodes[n].getAttribute("label") + ":";
+									var selected = "";
+
+									el.multi.push({
+										label: label,
+										options: options,
+										type: type,
+										selected: selected
+									});
+								}
+							}
+							el.printContents = function () {
+								var print_text = "";
+								for (var n = 0; n < this.multi.length; n++) {
+									if (Number.isInteger(this.multi[n].selected)) {
+										print_text += this.multi[n].label;
+										print_text += this.multi[n]
+											.options[this.multi[n].selected].text;
+										print_text += " " + this.multi[n].details;
+									}
+								}
+								return print_text;
+							}
+							elements.push(el);
+							break;
+
 						case "insert":
 							el.module = xml[i].innerHTML.trim();
 							for (var n = 0; n < modules.length; n++) {
@@ -455,7 +516,6 @@
 							}
 							break;
 					}
-
 				}
 			}
 			return elements;
@@ -582,7 +642,6 @@
 
 				writeTemplate: function () {
 					this.templateForm = [];
-
 					var elements = this.template.elements;
 
 					for (var n = 0; n < elements.length; n++) {
@@ -598,7 +657,6 @@
 						}
 						this.templateForm.push(el);
 					}
-
 
 				},
 				deleteElement(element) {

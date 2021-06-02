@@ -174,10 +174,30 @@
 					4-French | 5-French | 6-French
 				</select>
 				<select label="sheath was inserted. A ">
-					Berenstain catheter was used | Simmons-2 catheter was used.
+					Berenstain catheter was used | Simmons-2 catheter was used. | Other
 				</select>
 			</multi_select>
-			<selection label="Haemostasis">
+			<multi_checkbox label="Vessels studied">
+				<checkbox>
+					Right internal carotid
+				</checkbox>
+				<checkbox>
+					Right external carotid
+				</checkbox>
+				<checkbox>
+					Left internal carotid
+				</checkbox>
+				<checkbox>
+					Left external carotid
+				</checkbox>
+				<checkbox>
+					Right vertebral artery
+				</checkbox>
+				<checkbox>
+					Left vertebral artery
+				</checkbox>
+			</multi_checkbox>
+			<selection label="Haemostasis" showdetailson="1000">
 				An angioseal device was used to achieve groin haemostasis. | A pneumatic compression band was used to achieve wrist haemostasis.
 			</selection>
 			<selection label="Complications">
