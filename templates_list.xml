@@ -164,17 +164,17 @@
 				Informed consent was obtained from the patient (including risk of stroke and groin haemorrhage). 10 ml of 1% lidocaine was infiltrated into the puncture site superficial tissues.
 			</text_entry>
 			<multi_select label="">
-				<select label="A">
+				<select label="Side" print_text_before="A">
 					right | left
 				</select>
-				<select label="">
+				<select label="Puncture site" print_text_before="">
 					common femoral artery | radial artery
 				</select>
-				<select label="puncture was made under ultrasound guidance and a ">
+				<select label="Sheath size" print_text_before="puncture was made under ultrasound guidance and a ">
 					4-French | 5-French | 6-French
 				</select>
-				<select label="sheath was inserted. A ">
-					Berenstain catheter was used | Simmons-2 catheter was used. | Other
+				<select label="Catheter used" print_text_before="sheath was inserted. A " print_text_after="was used.">
+					Berenstain catheter | Simmons-2 catheter | Other
 				</select>
 			</multi_select>
 			<multi_checkbox label="Vessels studied">
