@@ -199,19 +199,11 @@
 
 								<!-- MULTI CHECKBOX TYPE -->
 								<b-form-group v-show="n.type == 'multi_checkbox'" :disabled="n.disabled">
+									<label>{{n.label}}</label>
 									<template v-for="nn in n.multi">
-
-										<b-form inline v-show="nn.options != '' && nn.type == 'multi'">
-											<label class="mb-2 mr-sm-2 mb-sm-0"><b>{{nn.label}}</b></label>
-											<b-form-radio-group :options="nn.options" v-model="nn.selected"
-												class="mb-2 mr-sm-2 mb-sm-0">
-											</b-form-radio-group>
-										</b-form>
-										<b-form-group v-show="nn.selected >= nn.showdetailson">
-											<b-form-textarea :value="nn.details" @change="nn.details = $event">
-											</b-form-textarea>
-										</b-form-group>
-
+										<b-form-checkbox v-model="nn.selected">
+											{{nn.text}}
+										</b-form-checkbox>
 									</template>
 								</b-form-group>
 
@@ -320,7 +312,7 @@
 						case "text_entry":
 							el.text = xml[i].innerHTML.trim();
 							el.printContents = function () {
-								return this.text + this.details_text;
+								return this.text + this.details_text + "\n";
 							}
 							elements.push(el);
 							break;
@@ -464,45 +456,26 @@
 							el.multi = [];
 							for (var n = 0; n < nodes.length; n++) {
 								if (nodes[n].nodeName == "checkbox") {
-									var inner_text = nodes[n].innerHTML.trim();
-									var options = [];
-									var type = "";
-									if (inner_text.includes("|")) {
-										op_values = inner_text.split("|");
-										for (var x = 0; x < op_values.length; x++) {
-											options.push({
-												text: op_values[x].trim(),
-												value: x
-											})
-										}
-										type = "multi";
-									} else {
-										options[0] = inner_text;
-										type = "free_text";
-									}
-
+									var text = nodes[n].innerHTML.trim();
 									var label = nodes[n].getAttribute("label") + ":";
 									var selected = "";
 
 									el.multi.push({
 										label: label,
-										options: options,
-										type: type,
+										text: text,
 										selected: selected
 									});
 								}
 							}
 							el.printContents = function () {
-								var print_text = "";
+								console.log("hi")
+								var print_text = this.label + ": ";
 								for (var n = 0; n < this.multi.length; n++) {
-									if (Number.isInteger(this.multi[n].selected)) {
+									if (this.multi[n].selected) {
 										print_text += this.multi[n].label;
-										print_text += this.multi[n]
-											.options[this.multi[n].selected].text;
-										print_text += " " + this.multi[n].details;
 									}
 								}
-								return print_text;
+								return print_text + ".";
 							}
 							elements.push(el);
 							break;
