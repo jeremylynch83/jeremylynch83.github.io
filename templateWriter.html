@@ -365,20 +365,26 @@
 
 										for (var x = 0; x < op_values.length; x++) {
 											options.push({
-												text: op_values[x],
+												text: op_values[x].trim(),
 												value: x
 											})
 										}
 										type = "multi";
 									} else {
 										options.push({
-											text: inner_text,
+											text: inner_text.trim(),
 											value: 0
 										})
 									}
 
 									var label = nodes[n].getAttribute("label");
 									if (label) label.trim();
+									var print_text_before = nodes[n].getAttribute("print_text_before");
+									if (print_text_before) print_text_before.trim();
+									else print_text_before = ""
+									var print_text_after = nodes[n].getAttribute("print_text_after");
+									if (print_text_after) print_text_after.trim();
+									else print_text_after = ""
 									var multi = {};
 									text = "";
 									label = label.trim();
@@ -388,6 +394,8 @@
 										label: label,
 										options: options,
 										type: type,
+										print_text_before: print_text_before,
+										print_text_after: print_text_after,
 										selected: selected,
 										showdetailson: showdetailson
 									});
@@ -397,9 +405,11 @@
 								var print_text = "";
 								for (var n = 0; n < this.multi.length; n++) {
 									if (Number.isInteger(this.multi[n].selected)) {
-										print_text += this.multi[n].label;
-										print_text += " " + this.multi[n]
-											.options[this.multi[n].selected].text
+										if (this.multi[n].print_text_before != "") print_text += this.multi[n]
+											.print_text_before + " ";
+										print_text += this.multi[n].options[this.multi[n].selected].text + " ";
+										if (this.multi[n].print_text_after != "") print_text += this.multi[n]
+											.print_text_after + " ";
 									}
 								}
 								return print_text;
@@ -664,11 +674,12 @@
 					copyText += this.template.title.trim() + "\n\n";
 					copyText += "CLINICAL INDICATION: \n" + document.getElementById("indication_text").value +
 						"\n\n";
-					copyText += "TECHNIQUE: \n" + document.getElementById("technique_text").value +
-						"\n\n";
-					copyText += "COMPARISON: \n" + document.getElementById("comparison_text").value +
-						"\n\n";
-					copyText += "FINDINGS: \n";
+					copyText += "TECHNIQUE: \n" + document.getElementById("technique_text").value
+					if (this.template.type != 'Angiography') {
+						copyText += "\n\nCOMPARISON: \n" + document.getElementById("comparison_text").value +
+							"\n\n";
+						copyText += "FINDINGS: \n";
+					}
 
 					for (var n = 0; n < this.templateForm.length; n++) {
 						copyText += this.templateForm[n].printContents();

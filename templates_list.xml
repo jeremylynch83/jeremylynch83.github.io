@@ -170,11 +170,11 @@
 				<select label="Puncture site" print_text_before="">
 					common femoral artery | radial artery
 				</select>
-				<select label="Sheath size" print_text_before="puncture was made under ultrasound guidance and a ">
+				<select label="Sheath size" print_text_before="puncture was made under ultrasound guidance and a">
 					4-French | 5-French | 6-French
 				</select>
-				<select label="Catheter used" print_text_before="sheath was inserted. A " print_text_after="was used.">
-					Berenstain catheter | Simmons-2 catheter | Other
+				<select label="Catheter used" print_text_before="sheath was inserted. A" print_text_after="was used.">
+					Berenstein catheter | Simmons-2 catheter | Other
 				</select>
 			</multi_select>
 			<multi_checkbox label="Vessels studied">
