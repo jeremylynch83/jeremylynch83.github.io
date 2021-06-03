@@ -31,9 +31,13 @@ caption {
 
 }
 
+
 .control {
     flex: 10%;
+}
 
+.row:hover+.control {
+    background-color: red;
 
 }
 

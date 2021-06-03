@@ -75,7 +75,7 @@
 
 			</b-form-group>
 
-			<b-form-group v-show="template != ''">
+			<b-form-group v-if="template != ''">
 				<b-button variant="success" @click="copyReport()">Copy Text</b-button>
 
 				<h1>
@@ -83,7 +83,7 @@
 				</h1>
 
 
-				<b-form-group v-show="template != ''">
+				<b-form-group v-if="template != ''">
 
 					<h2>CLINICAL INDICATION:</h2>
 
@@ -101,7 +101,7 @@
 					</b-form-textarea>
 				</b-form-group>
 
-				<b-form-group v-show="template != '' && template.type != 'Angiography'">
+				<b-form-group v-if="template != '' && template.type != 'Angiography'">
 
 					<h2>COMPARISON:</h2>
 
@@ -109,7 +109,7 @@
 					</b-form-textarea>
 				</b-form-group>
 
-				<b-form-group v-show="template != '' && template.type != 'Angiography'">
+				<b-form-group v-if="template != '' && template.type != 'Angiography'">
 					<h2>FINDINGS:</h2>
 				</b-form-group>
 
@@ -117,14 +117,14 @@
 				<template v-for="n in templateForm">
 					<!-- HEADER TYPE -->
 
-					<h3 v-show="n.type == 'h1'">{{n.label}}</h3>
+					<h3 v-if="n.type == 'h1'">{{n.label}}</h3>
 
 					<div class="body">
 
 						<div class="row">
 
 							<div class="control">
-								<b-button-group vertical v-show="n.type != 'h1'">
+								<b-button-group vertical v-if="n.type != 'h1'">
 									<b-form-checkbox v-model="n.disabled" :value=false :unchecked-value=true size="sm">
 										Enable
 									</b-form-checkbox>
@@ -140,11 +140,11 @@
 
 
 								<!--  TEXT TYPE -->
-								<label v-show="n.type == 'text'">{{n.text}}</label>
+								<label v-if="n.type == 'text'">{{n.text}}</label>
 
 
 								<!-- FREE TEXT TYPE -->
-								<b-form-group :label="n.label" v-show="n.type == 'free_text'" :disabled="n.disabled">
+								<b-form-group :label="n.label" v-if="n.type == 'free_text'" :disabled="n.disabled">
 									<b-form-textarea :value="n.text" @change="n.text = $event">
 									</b-form-textarea>
 								</b-form-group>
@@ -155,10 +155,10 @@
 								<b-form-group :disabled="n.disabled" v-if="n.type == 'text_entry'">
 									<label>{{n.label}}</label>
 									<b-form-textarea :value="n.text" @change="n.text = $event"
-										v-show="n.subtype  == 'medium'">
+										v-if="n.subtype  == 'medium'">
 									</b-form-textarea>
 									<b-form-input :value="n.text" @change="n.text = $event"
-										v-show="n.subtype  == 'small'"></b-form-input>
+										v-if="n.subtype  == 'small'"></b-form-input>
 								</b-form-group>
 
 								<!-- SELECTION TYPE -->
@@ -179,7 +179,7 @@
 
 									<template v-for="nn in n.multi">
 										<b-form-group
-											v-show="nn.options != '' && nn.type == 'multi' && n.present == 'yes'"
+											v-if="nn.options != '' && nn.type == 'multi' && n.present == 'yes'"
 											:label="nn.label" label-cols="2">
 											<b-form-select :options="nn.options" v-model="nn.selected">
 											</b-form-select>
@@ -192,7 +192,7 @@
 								<b-form-group v-if="n.type == 'multi_radio'" :disabled="n.disabled">
 									<template v-for="nn in n.multi">
 
-										<b-form inline v-show="nn.options != '' && nn.type == 'multi'">
+										<b-form inline v-if="nn.options != '' && nn.type == 'multi'">
 											<label class="mb-2 mr-sm-2 mb-sm-0"><b>{{nn.label}}</b></label>
 											<b-form-radio-group :options="nn.options" v-model="nn.selected"
 												class="mb-2 mr-sm-2 mb-sm-0">
@@ -228,7 +228,7 @@
 					</div>
 				</template>
 
-				<b-form-group v-show=" template !=''">
+				<b-form-group v-if=" template !=''">
 
 					<h2>CONCLUSION:</h2>
 

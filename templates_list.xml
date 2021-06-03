@@ -145,7 +145,7 @@
 				</select>
 			</multi_select>
 			<selection label="Facet joints">
-				There is no facetal degeneration | There is facetal degeneration
+				There is no facetal degeneration | There is mild facetal degeneration | There is moderate facetal degeneration | There is severe facetal degeneration
 			</selection>
 		</content>
 		<module>
@@ -170,7 +170,7 @@
 				<text_entry>
 					Informed consent was obtained from the patient (including risk of stroke and groin haemorrhage). 10 ml of 1% lidocaine was infiltrated into the puncture site superficial tissues.
 				</text_entry>
-				<multi_select label="">
+				<multi_select label="Technique">
 					<select label="Side" print_text_before="A">
 						right | left
 					</select>
@@ -204,7 +204,7 @@
 						Left vertebral artery
 					</checkbox>
 				</multi_checkbox>
-				<text_entry label="Procedure details">
+				<text_entry label="Findings" subtype="large">
 				</text_entry>
 				<selection label="Haemostasis" showdetailson="1000">
 					An angioseal device was used to achieve groin haemostasis. | A pneumatic compression band was used to achieve wrist haemostasis.
