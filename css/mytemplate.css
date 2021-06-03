@@ -33,17 +33,17 @@ caption {
 
 
 .control {
-    flex: 10%;
+
+    visibility: hidden;
 }
 
-.row:hover+.control {
-    background-color: red;
-
+.row:hover>.control {
+    visibility: visible;
 }
 
 .element {
     padding-left: 5px;
-    flex: 90%;
+
 }
 
 
