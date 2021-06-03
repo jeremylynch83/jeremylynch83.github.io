@@ -160,7 +160,7 @@
 									<b-form-textarea :value="n.text" @change="n.text = $event"
 										v-if="n.subtype  == 'medium'">
 									</b-form-textarea>
-									<b-form-textarea :value="n.text" @change="n.text = $event" rows="6"
+									<b-form-textarea :value="n.text" @change="n.text = $event" rows="8"
 										v-if="n.subtype  == 'large'">
 									</b-form-textarea>
 								</b-form-group>
@@ -348,7 +348,8 @@
 								var print_text = "";
 								if (this.label) print_text += this.label + ": ";
 								print_text += this.text + this.details_text;
-								return format_sentence(print_text);
+								if ((this.text + this.details_text) != "") print_text = format_sentence(print_text);
+								return print_text;
 							}
 							elements.push(el);
 							break;
@@ -713,8 +714,10 @@
 					copyText += this.template.title.trim() + "\n\n";
 					copyText += "CLINICAL INDICATION: \n" + document.getElementById("indication_text").value +
 						"\n\n";
-					copyText += "TECHNIQUE: \n" + document.getElementById("technique_text").value
+					copyText += "TECHNIQUE:";
+
 					if (this.template.type != 'Angiography') {
+						copyText += "\n" + document.getElementById("technique_text").value;
 						copyText += "\n\nCOMPARISON: \n" + document.getElementById("comparison_text").value +
 							"\n\n";
 						copyText += "FINDINGS: \n";
