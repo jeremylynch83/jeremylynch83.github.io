@@ -213,7 +213,7 @@
 				<h1>
 					FINDINGS
 				</h1>
-				<text_entry label="Findings" subtype="medium">
+				<text_entry label="" subtype="large">
 				</text_entry>
 			</content>
 			<template>

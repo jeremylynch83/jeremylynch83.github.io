@@ -153,12 +153,16 @@
 
 								<!-- TEXT ENTRY TYPE SMALL/MEDIUM -->
 								<b-form-group :disabled="n.disabled" v-if="n.type == 'text_entry'">
-									<label>{{n.label}}</label>
-									<b-form-textarea :value="n.text" @change="n.text = $event"
-										v-if="n.subtype  == 'medium'">
-									</b-form-textarea>
+									<label v-if="n.label == ''">{{n.label}}</label>
+
 									<b-form-input :value="n.text" @change="n.text = $event"
 										v-if="n.subtype  == 'small'"></b-form-input>
+									<b-form-textarea :value="n.text" @change="n.text = $event"
+										v-if="n.subtype  == 'medium'">
+										<b-form-textarea :value="n.text" @change="n.text = $event" rows="6"
+											v-if="n.subtype  == 'large'">
+										</b-form-textarea>
+									</b-form-textarea>
 								</b-form-group>
 
 								<!-- SELECTION TYPE -->
@@ -321,9 +325,9 @@
 							el.label = xml[i].innerHTML.trim();
 							elements.push(el);
 							el.printContents = function () {
-								if (this.label[this.label.length - 1] != ":") this.label += ". ";
+								if (this.label[this.label.length - 1] != ":") this.label += ": ";
 								else this.label += " ";
-								return "\n\n" + this.label;
+								return "\n\n\n" + this.label;
 							}
 							break;
 						case "text":
