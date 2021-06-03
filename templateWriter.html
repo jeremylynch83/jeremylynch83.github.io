@@ -175,6 +175,10 @@
 								<!-- MULTISELECTION TYPE -->
 								<b-form-group v-if="n.type=='multi_select'">
 									<label>{{n.label}}</label>
+									<label>{{n.askfurtherdetails}}</label>
+									<label>{{n.present}}</label>
+
+
 
 									<b-form-group>
 										<b-form-radio-group v-if="n.askfurtherdetails =='true'"
@@ -325,7 +329,6 @@
 							el.label = xml[i].innerHTML.trim();
 							elements.push(el);
 							el.printContents = function () {
-								console.log(this.label);
 								this.label = this.label.trim();
 								if (this.label[this.label.length - 1] != ":") this.label += ": ";
 								else this.label += " ";
@@ -438,13 +441,15 @@
 							}
 							el.printContents = function () {
 								var print_text = "";
-								for (var n = 0; n < this.multi.length; n++) {
-									if (Number.isInteger(this.multi[n].selected) && this.multi[n].selected > 0) {
-										if (this.multi[n].print_text_before != "") print_text += this.multi[n]
-											.print_text_before + " ";
-										print_text += this.multi[n].options[this.multi[n].selected].text + " ";
-										if (this.multi[n].print_text_after != "") print_text += this.multi[n]
-											.print_text_after + " ";
+								if (this.present == "yes" || this.askfurtherdetails != "true") {
+									for (var n = 0; n < this.multi.length; n++) {
+										if (Number.isInteger(this.multi[n].selected) && this.multi[n].selected > 0) {
+											if (this.multi[n].print_text_before != "") print_text += this.multi[n]
+												.print_text_before + " ";
+											print_text += this.multi[n].options[this.multi[n].selected].text + " ";
+											if (this.multi[n].print_text_after != "") print_text += this.multi[n]
+												.print_text_after + " ";
+										}
 									}
 								}
 								print_text = format_sentence(print_text) + format_sentence(this.details_text);
@@ -658,7 +663,6 @@
 					return this.id_count;
 				},
 				update: function (event) {
-					console.log(event)
 
 				},
 				findList: function (text, symbol_start, symbol_end) {
