@@ -153,15 +153,15 @@
 
 								<!-- TEXT ENTRY TYPE SMALL/MEDIUM -->
 								<b-form-group :disabled="n.disabled" v-if="n.type == 'text_entry'">
-									<label v-if="n.label == ''">{{n.label}}</label>
+									<label v-if="n.label != ''">{{n.label}}</label>
 
 									<b-form-input :value="n.text" @change="n.text = $event"
 										v-if="n.subtype  == 'small'"></b-form-input>
 									<b-form-textarea :value="n.text" @change="n.text = $event"
 										v-if="n.subtype  == 'medium'">
-										<b-form-textarea :value="n.text" @change="n.text = $event" rows="6"
-											v-if="n.subtype  == 'large'">
-										</b-form-textarea>
+									</b-form-textarea>
+									<b-form-textarea :value="n.text" @change="n.text = $event" rows="6"
+										v-if="n.subtype  == 'large'">
 									</b-form-textarea>
 								</b-form-group>
 

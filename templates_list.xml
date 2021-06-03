@@ -167,7 +167,7 @@
 				Angio technique
 			</name>
 			<content>
-				<text_entry label="Technique">
+				<text_entry label="">
 					Informed consent was obtained from the patient (including risk of stroke and groin haemorrhage). 10 ml of 1% lidocaine was infiltrated into the puncture site superficial tissues.
 				</text_entry>
 				<multi_select label="Technique">
