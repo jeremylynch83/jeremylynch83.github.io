@@ -171,7 +171,6 @@
 								<!-- MULTISELECTION TYPE -->
 								<b-form-group v-if="n.type=='multi_select'">
 									<label>{{n.label}}</label>
-									<label>{{n.askfurtherdetails}}</label>
 
 									<b-form-group>
 										<b-form-radio-group v-if="n.askfurtherdetails =='true'"
@@ -322,7 +321,9 @@
 							el.label = xml[i].innerHTML.trim();
 							elements.push(el);
 							el.printContents = function () {
-								return "\n\n" + this.label + " ";
+								if (this.label[this.label.length - 1] != ":") this.label += ". ";
+								else this.label += " ";
+								return "\n\n" + this.label;
 							}
 							break;
 						case "text":
@@ -377,7 +378,6 @@
 							el.present_options = ["yes", "no"];
 							el.present = "";
 							el.askfurtherdetails = xml[i].getAttribute("askfurtherdetails");
-							console.log(el.askfurtherdetails)
 							if (label) label.trim();
 
 
@@ -389,11 +389,14 @@
 									var selected = null;
 									if (inner_text.includes("|")) {
 										op_values = inner_text.split("|");
-
+										options.push({ // Add a non-selection first
+											text: "",
+											value: 0
+										});
 										for (var x = 0; x < op_values.length; x++) {
 											options.push({
 												text: op_values[x].trim(),
-												value: x
+												value: x + 1 // Therefore value needs to start at 1
 											})
 										}
 										type = "multi";
@@ -431,7 +434,7 @@
 							el.printContents = function () {
 								var print_text = "";
 								for (var n = 0; n < this.multi.length; n++) {
-									if (Number.isInteger(this.multi[n].selected)) {
+									if (Number.isInteger(this.multi[n].selected) && this.multi[n].selected > 0) {
 										if (this.multi[n].print_text_before != "") print_text += this.multi[n]
 											.print_text_before + " ";
 										print_text += this.multi[n].options[this.multi[n].selected].text + " ";
@@ -455,6 +458,7 @@
 									var type = "";
 									if (inner_text.includes("|")) {
 										op_values = inner_text.split("|");
+
 										for (var x = 0; x < op_values.length; x++) {
 											options.push({
 												text: op_values[x].trim(),
