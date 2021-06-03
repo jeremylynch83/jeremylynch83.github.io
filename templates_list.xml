@@ -153,10 +153,16 @@
 				Angio header
 			</name>
 			<content>
-				<text_entry label="Staff" subtype="small">
+				<h1>
+					Operators
+				</h1>
+				<text_entry label="Main operator" subtype="small">
 				</text_entry>
-				<text_entry label="Assists" subtype="small">
+				<text_entry label="Assistant" subtype="small">
 				</text_entry>
+				<h1>
+					Technical Details
+				</h1>
 				<selection label="Anaesthesia" print_label="true" showdetailson="1000">
 					General | Conscious sedation | Local
 				</selection>

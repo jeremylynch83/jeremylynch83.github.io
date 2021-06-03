@@ -325,6 +325,8 @@
 							el.label = xml[i].innerHTML.trim();
 							elements.push(el);
 							el.printContents = function () {
+								console.log(this.label);
+								this.label = this.label.trim();
 								if (this.label[this.label.length - 1] != ":") this.label += ": ";
 								else this.label += " ";
 								return "\n\n\n" + this.label;
@@ -345,9 +347,9 @@
 
 							el.printContents = function () {
 								var print_text = "";
-
 								if (this.label) print_text += this.label + ": ";
-								print_text += this.text + this.details_text + "\n";
+								print_text += this.text + this.details_text;
+								if (print_text[print_text.length - 1] != " ") print_text += " ";
 								return print_text;
 							}
 							elements.push(el);
@@ -525,22 +527,24 @@
 							}
 							el.printContents = function () {
 								var print_text = "";
-								var count_elements = 0;
+								var total_selected = 0;
+								var count_selected = 0;
 								for (var n = 0; n < this.multi.length; n++) {
-									if (this.multi[n].selected) count_elements++
+									if (this.multi[n].selected) total_selected++
 								}
 
-								if (count_elements) {
+								if (total_selected) {
 									print_text += this.label + ": ";
 									for (var n = 0; n < this.multi.length; n++) {
 										if (this.multi[n].selected) {
 											print_text += this.multi[n].text.toLowerCase();
-											if (n < (count_elements - 1)) print_text += ", ";
+											if (count_selected < (total_selected - 1)) print_text += ", ";
+											count_selected++;
 										}
 									}
-									print_text + "."
+
 								}
-								return print_text;
+								return format_sentence(print_text);
 							}
 							elements.push(el);
 							break;
