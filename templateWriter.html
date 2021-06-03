@@ -496,13 +496,23 @@
 								}
 							}
 							el.printContents = function () {
+								var print_multi = _.cloneDeep(this.multi);
+								print_multi.sort((a, b) => {
+									return b.selected - a.selected;
+								});
+								console.table(print_multi);
+
 								var print_text = "";
-								for (var n = 0; n < this.multi.length; n++) {
-									if (Number.isInteger(this.multi[n].selected)) {
-										print_text += this.multi[n].label;
-										print_text += this.multi[n]
-											.options[this.multi[n].selected].text;
-										print_text += " " + this.multi[n].details;
+								for (var n = 0; n < print_multi.length; n++) {
+									if (Number.isInteger(print_multi[n].selected)) {
+										if (print_multi[n].details == "") {
+											print_text += print_multi[n].label;
+											print_text += print_multi[n]
+												.options[print_multi[n].selected].text;
+										} else {
+											print_text += print_multi[n].details;
+										}
+										print_text = format_sentence(print_text);
 									}
 								}
 								return print_text;
