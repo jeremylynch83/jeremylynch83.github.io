@@ -171,15 +171,18 @@
 								<!-- MULTISELECTION TYPE -->
 								<b-form-group v-if="n.type=='multi_select'">
 									<label>{{n.label}}</label>
+									<label>{{n.askfurtherdetails}}</label>
+
 									<b-form-group>
-										<b-form-radio-group :options="n.present_options" v-model="n.present"
+										<b-form-radio-group v-if="n.askfurtherdetails =='true'"
+											:options="n.present_options" v-model="n.present"
 											class="mb-2 mr-sm-2 mb-sm-0">
 										</b-form-radio-group>
 									</b-form-group>
 
 									<template v-for="nn in n.multi">
 										<b-form-group
-											v-if="nn.options != '' && nn.type == 'multi' && n.present == 'yes'"
+											v-if="nn.options != '' && nn.type == 'multi' && n.present == 'yes' || n.askfurtherdetails !='true'"
 											:label="nn.label" label-cols="2">
 											<b-form-select :options="nn.options" v-model="nn.selected">
 											</b-form-select>
@@ -373,6 +376,10 @@
 							el.multi = [];
 							el.present_options = ["yes", "no"];
 							el.present = "";
+							el.askfurtherdetails = xml[i].getAttribute("askfurtherdetails");
+							console.log(el.askfurtherdetails)
+							if (label) label.trim();
+
 
 							for (var n = 0; n < nodes.length; n++) {
 								if (nodes[n].nodeName == "select") {

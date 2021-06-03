@@ -122,7 +122,7 @@
 			<selection label="Ligamentum flavum">
 				There is no flaval thickening | There is flaval thickening
 			</selection>
-			<multi_select label="Disc herniation">
+			<multi_select label="Disc herniation" askfurtherdetails="true">
 				<select label="Type" print_text_before="There is a disc">
 					bulge | prolapse | extrusion | migration | sequestration | intravertebral herniation
 				</select>
@@ -133,7 +133,7 @@
 					central canal | subarticular zone | foraminal zone | extraforaminal zone
 				</select>
 			</multi_select>
-			<multi_select label="Neural compression">
+			<multi_select label="Neural compression" askfurtherdetails="true">
 				<select label="Type" print_text_before="There is">
 					contact | impingement
 				</select>
@@ -167,7 +167,7 @@
 				Angio technique
 			</name>
 			<content>
-				<text_entry>
+				<text_entry label="Technique">
 					Informed consent was obtained from the patient (including risk of stroke and groin haemorrhage). 10 ml of 1% lidocaine was infiltrated into the puncture site superficial tissues.
 				</text_entry>
 				<multi_select label="Technique">
