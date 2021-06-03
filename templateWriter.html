@@ -329,7 +329,7 @@
 								this.label = this.label.trim();
 								if (this.label[this.label.length - 1] != ":") this.label += ": ";
 								else this.label += " ";
-								return "\n\n\n" + this.label;
+								return "\n\n" + this.label;
 							}
 							break;
 						case "text":
@@ -349,8 +349,7 @@
 								var print_text = "";
 								if (this.label) print_text += this.label + ": ";
 								print_text += this.text + this.details_text;
-								if (print_text[print_text.length - 1] != " ") print_text += " ";
-								return print_text;
+								return format_sentence(print_text);
 							}
 							elements.push(el);
 							break;
