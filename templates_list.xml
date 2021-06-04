@@ -421,7 +421,10 @@
 						</select>
 					</multi_select>
 					<multi_select label="Cerebral atrophy" askfurtherdetails="true">
-						<select label="Severity" print_text_before="There is" print_text_after="cerebral atrophy">
+						<select label="Location" print_text_before="There is" print_text_after="cerebral atrophy">
+							supratentorial | infratentorial | generalised
+						</select>
+						<select label="Location" print_text_before="There is" print_text_after="cerebral atrophy">
 							supratentorial | infratentorial | generalised
 						</select>
 						<select label="Hippocampi" print_text_before="and" print_text_after="hippocampal atrophy">
