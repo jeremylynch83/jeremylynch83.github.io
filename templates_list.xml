@@ -402,6 +402,9 @@
 			CT Head Checklist
 		</name>
 		<content>
+			<h1>
+				Non-contrast head
+			</h1>
 			<selection label="Infact">
 				There is no acute cortical infarct
 			</selection>
@@ -533,11 +536,14 @@
 			<selection label="Left vertebral artery">
 				The left vertebral artery is normal
 			</selection>
-			<selection label="Left vertebral artery">
+			<selection label="Basilar artery">
 				The basilar artery is normal
 			</selection>
 			<selection label="Bones">
 				There is no acute fracture or destructive bony lesion | Cervical degenerative disease is evident
+			</selection>
+			<selection label="Bones">
+				Cervical degenerative disease is evident
 			</selection>
 			<selection label="Lung apices">
 				Normal appearances of the visualised lung apice | Mild dependent atelectasis is present at the imaged lung apices
