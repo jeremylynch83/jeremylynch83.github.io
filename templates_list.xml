@@ -68,12 +68,6 @@
 	</module>
 	<module>
 		<name>
-		</name>
-		<content>
-		</content>
-	</module>
-	<module>
-		<name>
 			Degenerative spine
 		</name>
 		<content>
@@ -488,15 +482,118 @@
 			</insert>
 		</findings>
 	</template>
+	<module>
+		<name>
+			CT Angiogram Intracranial
+		</name>
+		<content>
+			<h1>
+				Intracranial Vessels
+			</h1>
+			<selection label="Occlusion">
+				There is no proximal intracranial occlusion
+			</selection>
+			<multi_select label="Collaterals" askfurtherdetails="true">
+				<select label="Presence" print_text_before="There is" print_text_after="collateral vessels supplying this territory">
+					good | poor
+				</select>
+			</multi_select>
+			<selection label="Aneurysm/Vascular malformation">
+				No aneurysms or other intracranial vascular abnormalities are identified
+			</selection>
+			<text_entry label="CT Perfusion" subtype="medium">
+			</text_entry>
+			<multi_radio>
+				<radio label="Venous sinuses">
+					Normal | Abnormal
+				</radio>
+			</multi_radio>
+		</content>
+	</module>
+	<module>
+		<name>
+			CT Angiogram Neck
+		</name>
+		<content>
+			<h1>
+				Neck
+			</h1>
+			<selection label="Subclavian/Arch">
+				Normal appearances of the aortic arch and subclavian arteries
+			</selection>
+			<selection label="Right carotid artery">
+				The right common and internal carotid arteries are normal
+			</selection>
+			<selection label="Left carotid artery">
+				The left common and internal carotid arteries are normal
+			</selection>
+			<selection label="Right vertebral artery">
+				The right vertebral artery is normal
+			</selection>
+			<selection label="Left vertebral artery">
+				The left vertebral artery is normal
+			</selection>
+			<selection label="Left vertebral artery">
+				The basilar artery is normal
+			</selection>
+			<selection label="Bones">
+				There is no acute fracture or destructive bony lesion | Cervical degenerative disease is evident
+			</selection>
+			<selection label="Lung apices">
+				Normal appearances of the visualised lung apice | Mild dependent atelectasis is present at the imaged lung apices
+			</selection>
+			<multi_radio>
+				<radio label="Imaged pulmonary vasculature">
+					Normal | Abnormal
+				</radio>
+				<radio label="Thyroid gland">
+					Normal | Abnormal
+				</radio>
+			</multi_radio>
+		</content>
+	</module>
 	<template>
 		<name>
+			CT Angiogram Intracranial
 		</name>
 		<type>
 			Diagnostic
 		</type>
 		<title>
+			CT Angiogram Intracranial
 		</title>
 		<findings>
+			<insert>
+				CT Head Checklist
+			</insert>
+			<insert>
+				CT Angiogram Intracranial
+			</insert>
+			<insert>
+				CT Angiogram Neck
+			</insert>
+		</findings>
+	</template>
+	<template>
+		<name>
+			CT Angiogram: Head and Neck Vessels
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			CT Angiogram of the Head and Neck
+		</title>
+		<findings>
+			<insert>
+				CT Head Checklist
+			</insert>
+			<insert>
+				CT Head Checklist
+			</insert>
+			<insert>
+				CT Head Checklist
+			</insert>
 		</findings>
 	</template>
 	<template>
