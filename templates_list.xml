@@ -415,71 +415,81 @@
 					<selection label="Collection">
 						No intracranial collection is present
 					</selection>
-					<selection label="White matter">
-						Cerebral white matter appearances are normal | There is periventricular and deep white matter hypodensity which is non-specific but may represent a mild burden of small vessel disease | There is periventricular and deep white matter hypodensity which is non-specific but may represent a moderate burden of small vessel disease | There is periventricular and deep white matter hypodensity which is non-specific but may represent a severe burden of small vessel disease
+					<multi_select label="White matter changes">
+						<select label="Side" print_text_before="A">
+							right | left
+						</select>
+						<select label="Side" print_text_before="A">
+							right | left
+						</select>
+					</multi_select>
+					<selection label="White matter disease" print_text_before="There is periventricular and deep white matter hypodensity which is non-specific but may represent a" print_text_after="burden of small vessel disease">
+						mild | moderate | severe
+					</selection>
+					<selection label="Cerebral atrophy">
 					</selection>
 				</content>
+				<template>
+					<name>
+						CT Head
+					</name>
+					<type>
+						Diagnostic
+					</type>
+					<title>
+						CT Head
+					</title>
+					<findings>
+						<insert>
+							CT Head Checklist
+						</insert>
+					</findings>
+				</template>
+				<template>
+					<name>
+					</name>
+					<type>
+						Diagnostic
+					</type>
+					<title>
+					</title>
+					<findings>
+					</findings>
+				</template>
+				<template>
+					<name>
+					</name>
+					<type>
+						Diagnostic
+					</type>
+					<title>
+					</title>
+					<findings>
+					</findings>
+				</template>
+				<template>
+					<name>
+					</name>
+					<type>
+						Diagnostic
+					</type>
+					<title>
+					</title>
+					<findings>
+					</findings>
+				</template>
+				<template>
+					<name>
+					</name>
+					<type>
+						Diagnostic
+					</type>
+					<title>
+					</title>
+					<findings>
+					</findings>
+				</template>
 			</module>
-			<template>
-				<name>
-					CT Head
-				</name>
-				<type>
-					Diagnostic
-				</type>
-				<title>
-					CT Head
-				</title>
-				<findings>
-					<insert>
-						CT Head Checklist
-					</insert>
-				</findings>
-			</template>
-			<template>
-				<name>
-				</name>
-				<type>
-					Diagnostic
-				</type>
-				<title>
-				</title>
-				<findings>
-				</findings>
-			</template>
-			<template>
-				<name>
-				</name>
-				<type>
-					Diagnostic
-				</type>
-				<title>
-				</title>
-				<findings>
-				</findings>
-			</template>
-			<template>
-				<name>
-				</name>
-				<type>
-					Diagnostic
-				</type>
-				<title>
-				</title>
-				<findings>
-				</findings>
-			</template>
-			<template>
-				<name>
-				</name>
-				<type>
-					Diagnostic
-				</type>
-				<title>
-				</title>
-				<findings>
-				</findings>
-			</template>
 		</module>
 	</module>
 </all>
