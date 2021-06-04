@@ -441,7 +441,7 @@
 				There are no skull fractures or destructive bony lesions
 			</selection>
 			<multi_radio>
-				<radio label="Venous sinus hyperdensity" negativetext="The venous sinuses are not hyperdense.">
+				<radio label="Venous sinus hyperdensity" negativetext="">
 					Normal | Abnormal
 				</radio>
 				<radio label="Basilar hyperdensity">

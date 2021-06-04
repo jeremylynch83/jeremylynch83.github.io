@@ -529,7 +529,7 @@
 											.negativetext) {
 											print_text += print_multi[n].negativetext;
 										}
-										// Normal and no supplied negative test 
+										// Normal and no supplied text 
 										else if (print_multi[n].selected == 0 && !print_multi[n]
 											.negativetext) {
 											print_text += print_multi[n].label;
@@ -544,7 +544,7 @@
 										else if (print_multi[n].selected != 0 && print_multi[n].details == "") {
 											print_text += print_multi[n].label;
 											print_text += print_multi[n]
-												.options[print_multi[n].selected].text;
+												.options[print_multi[n].selected].text.toLowerCase();
 										}
 										print_text = format_sentence(print_text);
 									}
