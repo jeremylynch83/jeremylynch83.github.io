@@ -409,7 +409,7 @@
 					<selection label="Infact">
 						There is no acute cortical infarct
 					</selection>
-					<selection label="Haemorrhage">
+					<selection label="Haemorrhage (check sylvian fissures, prepontine, suprasellar, posterior horns, tentorium.">
 						There is no acute intracranial haemorrhage
 					</selection>
 					<selection label="Collection">
@@ -425,8 +425,6 @@
 							supratentorial | infratentorial | generalised
 						</select>
 					</multi_select>
-					<selection label="Cerebral atrophy">
-					</selection>
 				</content>
 				<template>
 					<name>
