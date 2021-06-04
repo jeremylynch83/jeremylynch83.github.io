@@ -496,11 +496,9 @@
 			<selection label="Occlusion">
 				There is no proximal intracranial occlusion
 			</selection>
-			<multi_select label="Collaterals" askfurtherdetails="true">
-				<select label="Presence" print_text_before="There is" print_text_after="collateral vessels supplying this territory">
-					good | poor
-				</select>
-			</multi_select>
+			<selection label="Collaterals">
+				There are good collateral vessels | There are poor collateral vessels
+			</selection>
 			<selection label="Aneurysm/Vascular malformation">
 				No aneurysms or other intracranial vascular abnormalities are identified
 			</selection>
@@ -595,7 +593,7 @@
 				CT Head Checklist
 			</insert>
 			<insert>
-				CT Head Checklist
+				CT Angiogram Neck
 			</insert>
 		</findings>
 	</template>
