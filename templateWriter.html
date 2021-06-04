@@ -204,7 +204,8 @@
 												class="mb-2 mr-sm-2 mb-sm-0">
 											</b-form-radio-group>
 										</b-form>
-										selected: {{nn.selected}}, showdetailson {{nn.showdetailson}}
+										selected: {{nn.selected}}, showdetailson {{nn.showdetailson}}, negativetext
+										{{nn.negativetext}}
 										<b-form-group v-show="nn.selected >= nn.showdetailson">
 											<b-form-textarea :value="nn.details" @change="nn.details = $event">
 											</b-form-textarea>
