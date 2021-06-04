@@ -74,12 +74,6 @@
 	</module>
 	<module>
 		<name>
-		</name>
-		<content>
-		</content>
-	</module>
-	<module>
-		<name>
 			Degenerative spine
 		</name>
 		<content>
@@ -156,9 +150,9 @@
 				<h1>
 					Operators
 				</h1>
-				<text_entry label="Main operator" subtype="small">
+				<text_entry label="Main operator/s" subtype="small">
 				</text_entry>
-				<text_entry label="Assistant" subtype="small">
+				<text_entry label="Assistant/s" subtype="small">
 				</text_entry>
 				<h1>
 					Technical Details
@@ -183,14 +177,34 @@
 					<select label="Puncture site" print_text_before="">
 						common femoral artery | radial artery
 					</select>
-					<select label="Sheath size" print_text_before="puncture was made under ultrasound guidance and a">
+					<select label="Sheath size" print_text_before="puncture was performed and a">
 						4-French | 5-French | 6-French
 					</select>
 					<select label="Catheter used" print_text_before="sheath was inserted. A" print_text_after="was used.">
 						Berenstein catheter | Simmons-2 catheter | Other
 					</select>
 				</multi_select>
-				<multi_checkbox label="Vessels studied">
+				<multi_checkbox label="Digital subtraction angiography was performed via:">
+					<checkbox>
+						Right internal carotid
+					</checkbox>
+					<checkbox>
+						Right external carotid
+					</checkbox>
+					<checkbox>
+						Left internal carotid
+					</checkbox>
+					<checkbox>
+						Left external carotid
+					</checkbox>
+					<checkbox>
+						Right vertebral artery
+					</checkbox>
+					<checkbox>
+						Left vertebral artery
+					</checkbox>
+				</multi_checkbox>
+				<multi_checkbox label="3D flat-panel rotational tomographic angiography was performed via:">
 					<checkbox>
 						Right internal carotid
 					</checkbox>
@@ -387,15 +401,36 @@
 					</insert>
 				</findings>
 			</template>
+			<module>
+				<name>
+					CT Head Checklist
+				</name>
+				<content>
+					<selection label="">
+						There is no acute cortical infarct
+					</selection>
+					<selection label="">
+						There is no acute intracranial haemorrhage
+					</selection>
+					<selection label="">
+						No intracranial collections is present
+					</selection>
+				</content>
+			</module>
 			<template>
 				<name>
+					CT Head
 				</name>
 				<type>
 					Diagnostic
 				</type>
 				<title>
+					CT Head
 				</title>
 				<findings>
+					<insert>
+						CT Head Checklist
+					</insert>
 				</findings>
 			</template>
 			<template>

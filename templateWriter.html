@@ -364,6 +364,13 @@
 									value: x
 								})
 							}
+							if (el.options.length <= 1) {
+								el.options.push({
+									text: "Other",
+									value: el.options.length + 1
+								})
+							}
+
 							el.printContents = function () {
 								var print_text = "";
 								if (Number.isInteger(this.selected)) print_text = format_sentence(this.options[this
