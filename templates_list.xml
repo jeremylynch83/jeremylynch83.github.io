@@ -575,9 +575,6 @@
 			<insert>
 				CT Angiogram Intracranial
 			</insert>
-			<insert>
-				CT Angiogram Neck
-			</insert>
 		</findings>
 	</template>
 	<template>
