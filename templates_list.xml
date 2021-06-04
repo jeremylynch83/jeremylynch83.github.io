@@ -415,7 +415,7 @@
 					<selection label="Collection">
 						No intracranial collection is present
 					</selection>
-					<multi_select label="White matter changes">
+					<multi_select label="White matter changes" askfurtherdetails="true">
 						<select label="Severity" print_text_before="There is periventricular and deep white matter hypodensity which is non-specific but may represent a" print_text_after="burden of small vessel disease">
 							mild | moderate | severe
 						</select>
