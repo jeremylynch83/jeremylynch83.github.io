@@ -420,6 +420,11 @@
 							mild | moderate | severe
 						</select>
 					</multi_select>
+					<multi_select label="Cerebral atrophy" askfurtherdetails="true">
+						<select label="Severity" print_text_before="There is" print_text_after="burden of small vessel disease">
+							supratentorial | infratentorial | generalised
+						</select>
+					</multi_select>
 					<selection label="Cerebral atrophy">
 					</selection>
 				</content>
