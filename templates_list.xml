@@ -428,6 +428,9 @@
 				</select>
 			</multi_select>
 			<multi_select label="Hippocampal atrophy" askfurtherdetails="true">
+				<select label="Location">
+					bilateral | right | left
+				</select>
 				<select label="Severity" print_text_before="There is" print_text_after="hippocampal atrophy">
 					mild | moderate | severe
 				</select>
@@ -538,13 +541,13 @@
 				The basilar artery is normal
 			</selection>
 			<selection label="Bones">
-				There is no acute fracture or destructive bony lesion | Cervical degenerative disease is evident
+				There is no acute fracture or destructive bony lesion
 			</selection>
-			<selection label="Bones">
+			<selection label="Degenerative disease">
 				Cervical degenerative disease is evident
 			</selection>
 			<selection label="Lung apices">
-				Normal appearances of the visualised lung apice | Mild dependent atelectasis is present at the imaged lung apices
+				Normal appearances of the visualised lung apices | Mild dependent atelectasis is present at the imaged lung apices
 			</selection>
 			<multi_radio>
 				<radio label="Imaged pulmonary vasculature">
@@ -587,7 +590,7 @@
 		</title>
 		<findings>
 			<insert>
-				CT Head Checklist
+				CT Angiogram Intracranial
 			</insert>
 			<insert>
 				CT Head Checklist
