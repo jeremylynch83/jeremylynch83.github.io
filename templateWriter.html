@@ -521,18 +521,27 @@
 								for (var n = 0; n < print_multi.length; n++) {
 
 									if (Number.isInteger(print_multi[n].selected)) {
+										// Normal and supplied negative text
 										if (print_multi[n].selected == 0 && print_multi[n]
-											.negativetext) { // Normal and supplied negative text
+											.negativetext) {
 											print_text += print_multi[n].negativetext;
-										} else if (print_multi[n].details == "" || print_multi[n].selected <= print_multi[
-												n]
-											.showdetailson
-										) {
+										}
+										// Normal and no supplied negative test 
+										else if (print_multi[n].selected == 0 && !print_multi[n]
+											.negativetext) {
 											print_text += print_multi[n].label;
 											print_text += print_multi[n]
 												.options[print_multi[n].selected].text;
-										} else {
+										}
+										// Abnormal and details given
+										else if (print_multi[n].selected != 0 && print_multi[n].details != "") {
 											print_text += print_multi[n].details;
+										}
+										// Abnormal and no details given
+										else if (print_multi[n].selected != 0 && print_multi[n].details == "") {
+											print_text += print_multi[n].label;
+											print_text += print_multi[n]
+												.options[print_multi[n].selected].text;
 										}
 										print_text = format_sentence(print_text);
 									}

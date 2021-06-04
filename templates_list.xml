@@ -405,15 +405,20 @@
 			<h1>
 				Non-contrast head
 			</h1>
-			<selection label="Infact">
-				There is no acute cortical infarct
-			</selection>
-			<selection label="Haemorrhage (check sylvian fissures, prepontine, suprasellar, posterior horns, tentorium.">
-				There is no acute intracranial haemorrhage
-			</selection>
-			<selection label="Collection">
-				No intracranial collection is present
-			</selection>
+			<multi_radio>
+				<radio label="Acute infact" negativetext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Acute haemorrhage" negativetext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" negativetext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" negativetext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
 			<multi_select label="White matter changes" askfurtherdetails="true">
 				<select label="Severity" print_text_before="There is periventricular and deep white matter hypodensity which is non-specific but may represent a" print_text_after="burden of small vessel disease">
 					mild | moderate | severe
