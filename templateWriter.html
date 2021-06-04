@@ -204,6 +204,7 @@
 												class="mb-2 mr-sm-2 mb-sm-0">
 											</b-form-radio-group>
 										</b-form>
+										selected: {{nn.selected}}, showdetailson {{nn.showdetailson}}
 										<b-form-group v-show="nn.selected >= nn.showdetailson">
 											<b-form-textarea :value="nn.details" @change="nn.details = $event">
 											</b-form-textarea>
@@ -489,6 +490,8 @@
 									}
 
 									var label = nodes[n].getAttribute("label") + ": ";
+									var negativetext = nodes[n].getAttribute("negativetext");
+
 									var selected = "";
 
 									var showdetailson = nodes[n].getAttribute("showdetailson");
@@ -501,7 +504,8 @@
 										type: type,
 										selected: selected,
 										showdetailson: showdetailson,
-										details: ""
+										details: "",
+										negativetext: negativetext
 									});
 								}
 							}
@@ -514,8 +518,15 @@
 
 								var print_text = "";
 								for (var n = 0; n < print_multi.length; n++) {
+
 									if (Number.isInteger(print_multi[n].selected)) {
-										if (print_multi[n].details == "") {
+										if (print_multi[n].selected == 0 && print_multi[n]
+											.negativetext) { // Normal and supplied negative text
+											print_text += print_multi[n].negativetext;
+										} else if (print_multi[n].details == "" || print_multi[n].selected <= print_multi[
+												n]
+											.showdetailson
+										) {
 											print_text += print_multi[n].label;
 											print_text += print_multi[n]
 												.options[print_multi[n].selected].text;
