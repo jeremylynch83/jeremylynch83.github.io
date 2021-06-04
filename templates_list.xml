@@ -421,13 +421,15 @@
 						</select>
 					</multi_select>
 					<multi_select label="Cerebral atrophy" askfurtherdetails="true">
-						<select label="Location" print_text_before="There is" print_text_after="cerebral atrophy">
+						<select label="Cerebral atrophy severity" print_text_before="There is">
+							mild | moderate | severe
+						</select>
+						<select label="Location" print_text_after="cerebral atrophy">
 							supratentorial | infratentorial | generalised
 						</select>
-						<select label="Location" print_text_before="There is" print_text_after="cerebral atrophy">
-							supratentorial | infratentorial | generalised
-						</select>
-						<select label="Hippocampi" print_text_before="and" print_text_after="hippocampal atrophy">
+					</multi_select>
+					<multi_select label="Hippocampi" askfurtherdetails="true">
+						<select label="Hippocampi" print_text_before="There is" print_text_after="hippocampal atrophy">
 							mild | moderate | severe
 						</select>
 					</multi_select>
