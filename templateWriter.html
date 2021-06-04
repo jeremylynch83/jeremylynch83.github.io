@@ -199,13 +199,11 @@
 									<template v-for="nn in n.multi">
 
 										<b-form inline v-if="nn.options != '' && nn.type == 'multi'">
-											<label class="mb-2 mr-sm-2 mb-sm-0"><b>{{nn.label}}</b></label>
+											<label class="mb-2 mr-sm-2 mb-sm-0">{{nn.label}}</label>
 											<b-form-radio-group :options="nn.options" v-model="nn.selected"
 												class="mb-2 mr-sm-2 mb-sm-0">
 											</b-form-radio-group>
 										</b-form>
-										selected: {{nn.selected}}, showdetailson {{nn.showdetailson}}, negativetext
-										{{nn.negativetext}}
 										<b-form-group v-show="nn.selected >= nn.showdetailson">
 											<b-form-textarea :value="nn.details" @change="nn.details = $event">
 											</b-form-textarea>

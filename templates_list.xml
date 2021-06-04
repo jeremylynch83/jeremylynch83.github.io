@@ -402,9 +402,6 @@
 			CT Head Checklist
 		</name>
 		<content>
-			<h1>
-				Non-contrast head
-			</h1>
 			<multi_radio>
 				<radio label="Acute infact" negativetext="There is no acute cortical infarct.">
 					Not present | Present
