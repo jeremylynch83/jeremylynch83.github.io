@@ -223,8 +223,9 @@
 								</b-form-group>
 
 								<!-- DETAILS BOX -->
-								<b-form-group v-show="n.details" :disabled="n.disabled">
-									<b-form-textarea :value="n.details_text" @change="n.details_text = $event">
+								<b-form-group v-show="n.details || n.present == 'yes'" :disabled="n.disabled">
+									<b-form-textarea :value="n.details_text" @change="n.details_text = $event"
+										placeholder="Enter free text">
 										Details
 									</b-form-textarea>
 								</b-form-group>
@@ -459,7 +460,11 @@
 										}
 									}
 								}
-								print_text = format_sentence(print_text) + format_sentence(this.details_text);
+								if (this.present == "yes") {
+									print_text = format_sentence(print_text) + format_sentence(this.details_text);
+								} else {
+									print_text = format_sentence(print_text);
+								}
 								return print_text;
 							}
 							elements.push(el);
