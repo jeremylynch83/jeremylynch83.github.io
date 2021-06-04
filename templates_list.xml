@@ -424,7 +424,45 @@
 						<select label="Severity" print_text_before="There is" print_text_after="cerebral atrophy">
 							supratentorial | infratentorial | generalised
 						</select>
+						<select label="Hippocampi" print_text_before="and" print_text_after="hippocampal atrophy">
+							mild | moderate | severe
+						</select>
 					</multi_select>
+					<selection label="Bones">
+						There are no fractures or destructive bony lesions
+					</selection>
+					<multi_radio>
+						<radio label="Venous sinuses">
+							Not present | Present
+						</radio>
+						<radio label="Basilar hyperdensity">
+							Not present | Present
+						</radio>
+						<radio label="Trauma/contusions">
+							Normal | Abnormal
+						</radio>
+						<radio label="Old infarcts">
+							Normal | Abnormal
+						</radio>
+						<radio label="Clivus">
+							Not present | Present
+						</radio>
+						<radio label="Pituitary">
+							Normal | Abnormal
+						</radio>
+						<radio label="Orbits">
+							Not present | Present
+						</radio>
+						<radio label="Cerebellar tonsils">
+							Normal | Abnormal
+						</radio>
+						<radio label="Paranasal sinuses and mastoid air cells">
+							Normal | Abnormal
+						</radio>
+						<radio label="Extracranial soft tissue">
+							Normal | Abnormal
+						</radio>
+					</multi_radio>
 				</content>
 				<template>
 					<name>
