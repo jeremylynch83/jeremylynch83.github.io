@@ -406,14 +406,17 @@
 					CT Head Checklist
 				</name>
 				<content>
-					<selection label="">
+					<selection label="Infact">
 						There is no acute cortical infarct
 					</selection>
-					<selection label="">
+					<selection label="Haemorrhage">
 						There is no acute intracranial haemorrhage
 					</selection>
-					<selection label="">
-						No intracranial collections is present
+					<selection label="Collection">
+						No intracranial collection is present
+					</selection>
+					<selection label="White matter">
+						Cerebral white matter appearances are normal | There is periventricular and deep white matter hypodensity which is non-specific but may represent a mild burden of small vessel disease | There is periventricular and deep white matter hypodensity which is non-specific but may represent a moderate burden of small vessel disease | There is periventricular and deep white matter hypodensity which is non-specific but may represent a severe burden of small vessel disease
 					</selection>
 				</content>
 			</module>

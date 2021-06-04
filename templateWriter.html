@@ -293,7 +293,8 @@
 			if ((typeof str) === "string" && str != "") {
 				str = str.trim();
 				str = str.replace(/ +(?= )/g, '');
-				if (str[str.length - 1] != ".") str = str + ". ";
+				var last_char = str[str.length - 1];
+				if (last_char != "." && last_char != "!") str = str + ". ";
 				else str = str + " ";
 				sentence = str;
 			}
@@ -364,18 +365,20 @@
 									value: x
 								})
 							}
-							if (el.options.length <= 1) {
-								el.options.push({
-									text: "Other",
-									value: el.options.length + 1
-								})
-							}
+
+							el.options.push({
+								text: "Other",
+								value: el.options.length
+							})
+
 
 							el.printContents = function () {
 								var print_text = "";
-								if (Number.isInteger(this.selected)) print_text = format_sentence(this.options[this
+
+								if (Number.isInteger(this.selected) && this.options[this
+										.selected].text != "Other") print_text = format_sentence(this.options[this
 									.selected].text);
-								print_text += format_sentence(this.details_text);
+								if (this.details) print_text += format_sentence(this.details_text);
 								return format_sentence(print_text);
 							}
 							var showdetailson = xml[i].getAttribute("showdetailson");
