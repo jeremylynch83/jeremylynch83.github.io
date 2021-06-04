@@ -142,394 +142,394 @@
 				There is no facetal degeneration | There is mild facetal degeneration | There is moderate facetal degeneration | There is severe facetal degeneration
 			</selection>
 		</content>
-		<module>
-			<name>
-				Angio header
-			</name>
-			<content>
-				<h1>
-					Operators
-				</h1>
-				<text_entry label="Main operator/s" subtype="small">
-				</text_entry>
-				<text_entry label="Assistant/s" subtype="small">
-				</text_entry>
-				<h1>
-					Technical Details
-				</h1>
-				<selection label="Anaesthesia" print_label="true" showdetailson="1000">
-					General | Conscious sedation | Local
-				</selection>
-			</content>
-		</module>
-		<module>
-			<name>
-				Angio technique
-			</name>
-			<content>
-				<text_entry label="">
-					Informed consent was obtained from the patient (including risk of stroke and groin haemorrhage). 10 ml of 1% lidocaine was infiltrated into the puncture site superficial tissues.
-				</text_entry>
-				<multi_select label="Technique">
-					<select label="Side" print_text_before="A">
-						right | left
-					</select>
-					<select label="Puncture site" print_text_before="">
-						common femoral artery | radial artery
-					</select>
-					<select label="Sheath size" print_text_before="puncture was performed and a">
-						4-French | 5-French | 6-French
-					</select>
-					<select label="Catheter used" print_text_before="sheath was inserted. A" print_text_after="was used.">
-						Berenstein catheter | Simmons-2 catheter | Other
-					</select>
-				</multi_select>
-				<multi_checkbox label="Digital subtraction angiography was performed via:">
-					<checkbox>
-						Right internal carotid
-					</checkbox>
-					<checkbox>
-						Right external carotid
-					</checkbox>
-					<checkbox>
-						Left internal carotid
-					</checkbox>
-					<checkbox>
-						Left external carotid
-					</checkbox>
-					<checkbox>
-						Right vertebral artery
-					</checkbox>
-					<checkbox>
-						Left vertebral artery
-					</checkbox>
-				</multi_checkbox>
-				<multi_checkbox label="3D flat-panel rotational tomographic angiography was performed via:">
-					<checkbox>
-						Right internal carotid
-					</checkbox>
-					<checkbox>
-						Right external carotid
-					</checkbox>
-					<checkbox>
-						Left internal carotid
-					</checkbox>
-					<checkbox>
-						Left external carotid
-					</checkbox>
-					<checkbox>
-						Right vertebral artery
-					</checkbox>
-					<checkbox>
-						Left vertebral artery
-					</checkbox>
-				</multi_checkbox>
-				<selection label="Haemostasis" showdetailson="1000">
-					An angioseal device was used to achieve groin haemostasis. | A pneumatic compression band was used to achieve wrist haemostasis.
-				</selection>
-				<selection label="Complications">
-					There were no periprocedural complications. | There was a complication.
-				</selection>
-				<h1>
-					FINDINGS
-				</h1>
-				<text_entry label="" subtype="large">
-				</text_entry>
-			</content>
-			<template>
-				<name>
-					Cerebral angiogram
-				</name>
-				<type>
-					Angiography
-				</type>
-				<title>
-					Cerebral Angiogram
-				</title>
-				<findings>
-					<insert>
-						Angio header
-					</insert>
-					<insert>
-						Angio technique
-					</insert>
-				</findings>
-			</template>
-			<template>
-				<name>
-					MRI Lumbar Spine
-				</name>
-				<type>
-					Diagnostic
-				</type>
-				<title>
-					MRI Lumber spine
-				</title>
-				<findings>
-					<selection label="Formation and segmentation">
-						There is normal formation and segmentation of the lumbosacral spine. | There is a transitional lumbosacral junction.
-					</selection>
-					<selection label="Vertebral alignment">
-						Vertebral alignment is normal | Vertebral alignment is abnormal
-					</selection>
-					<h1>
-						T12-L1:
-					</h1>
-					<insert>
-						Lumbar spine level
-					</insert>
-					<h1>
-						L1-L2:
-					</h1>
-					<insert>
-						Lumbar spine level
-					</insert>
-					<h1>
-						L2-L3:
-					</h1>
-					<insert>
-						Lumbar spine level
-					</insert>
-					<h1>
-						L3-L4:
-					</h1>
-					<insert>
-						Lumbar spine level
-					</insert>
-					<h1>
-						L4-L5:
-					</h1>
-					<insert>
-						Lumbar spine level
-					</insert>
-					<h1>
-						L5-S1:
-					</h1>
-					<insert>
-						Lumbar spine level
-					</insert>
-					<h1>
-						Other details:
-					</h1>
-					<insert>
-						Degenerative spine
-					</insert>
-				</findings>
-			</template>
-			<module>
-				<name>
-					Cervical spine level
-				</name>
-				<content>
-					<selection label="Discs">
-						The disc is normal | There is disc degeneration. | There is disc degeneration and height loss.
-					</selection>
-					<selection label="Ligamentum flavum">
-						There is no flaval thickening | There is flaval thickening
-					</selection>
-					<selection label="Disc bar">
-						There is a disc bar causing no neural compression | There is a disc bar compressing
-					</selection>
-					<selection label="Facet joints">
-						There is no facetal degeneration. | There is facetal degeneration.
-					</selection>
-				</content>
-			</module>
-			<template>
-				<name>
-					MRI Cervical Spine
-				</name>
-				<type>
-					Diagnostic
-				</type>
-				<title>
-					MRI Cervical Spine
-				</title>
-				<findings>
-					<selection label="Vertebral alignment">
-						Vertebral alignment is normal | Vertebral alignment is abnormal
-					</selection>
-					<selection label="Posterior fossa">
-						Normal | Abnormal
-					</selection>
-					<h1>
-						C1-C2
-					</h1>
-					<text_entry label="Comment">
-					</text_entry>
-					<h1>
-						C2-C3
-					</h1>
-					<insert>
-						Cervical spine level
-					</insert>
-					<h1>
-						C3-C4
-					</h1>
-					<insert>
-						Cervical spine level
-					</insert>
-					<h1>
-						C4-C5
-					</h1>
-					<insert>
-						Cervical spine level
-					</insert>
-					<h1>
-						C5-C6
-					</h1>
-					<insert>
-						Cervical spine level
-					</insert>
-					<h1>
-						C6-C7
-					</h1>
-					<insert>
-						Cervical spine level
-					</insert>
-					<h1>
-						C7-T1
-					</h1>
-					<insert>
-						Cervical spine level
-					</insert>
-					<h1>
-						Other details:
-					</h1>
-					<insert>
-						Degenerative spine
-					</insert>
-				</findings>
-			</template>
-			<module>
-				<name>
-					CT Head Checklist
-				</name>
-				<content>
-					<selection label="Infact">
-						There is no acute cortical infarct
-					</selection>
-					<selection label="Haemorrhage (check sylvian fissures, prepontine, suprasellar, posterior horns, tentorium.">
-						There is no acute intracranial haemorrhage
-					</selection>
-					<selection label="Collection">
-						No intracranial collection is present
-					</selection>
-					<multi_select label="White matter changes" askfurtherdetails="true">
-						<select label="Severity" print_text_before="There is periventricular and deep white matter hypodensity which is non-specific but may represent a" print_text_after="burden of small vessel disease">
-							mild | moderate | severe
-						</select>
-					</multi_select>
-					<multi_select label="Cerebral atrophy" askfurtherdetails="true">
-						<select label="Cerebral atrophy severity" print_text_before="There is">
-							mild | moderate | severe
-						</select>
-						<select label="Location" print_text_after="cerebral atrophy">
-							supratentorial | infratentorial | generalised
-						</select>
-					</multi_select>
-					<multi_select label="Hippocampi" askfurtherdetails="true">
-						<select label="Hippocampal atrophy" print_text_before="There is" print_text_after="hippocampal atrophy">
-							mild | moderate | severe
-						</select>
-					</multi_select>
-					<selection label="Bones">
-						There are no fractures or destructive bony lesions
-					</selection>
-					<multi_radio>
-						<radio label="Venous sinuses">
-							Normal | Abnormal
-						</radio>
-						<radio label="Basilar hyperdensity">
-							Not present | Present
-						</radio>
-						<radio label="Trauma/contusions">
-							Not present | Present
-						</radio>
-						<radio label="Orbits">
-							Normal | Abnormal
-						</radio>
-						<radio label="Old infarcts">
-							Not present | Present
-						</radio>
-						<radio label="Paranasal sinuses and mastoid air cells">
-							Normal | Abnormal
-						</radio>
-						<radio label="Clivus">
-							Normal | Abnormal
-						</radio>
-						<radio label="Pituitary">
-							Normal | Abnormal
-						</radio>
-						<radio label="Cerebellar tonsils">
-							Normal | Abnormal
-						</radio>
-						<radio label="Extracranial soft tissue">
-							Normal | Abnormal
-						</radio>
-					</multi_radio>
-				</content>
-				<template>
-					<name>
-						CT Head
-					</name>
-					<type>
-						Diagnostic
-					</type>
-					<title>
-						CT Head
-					</title>
-					<findings>
-						<insert>
-							CT Head Checklist
-						</insert>
-					</findings>
-				</template>
-				<template>
-					<name>
-					</name>
-					<type>
-						Diagnostic
-					</type>
-					<title>
-					</title>
-					<findings>
-					</findings>
-				</template>
-				<template>
-					<name>
-					</name>
-					<type>
-						Diagnostic
-					</type>
-					<title>
-					</title>
-					<findings>
-					</findings>
-				</template>
-				<template>
-					<name>
-					</name>
-					<type>
-						Diagnostic
-					</type>
-					<title>
-					</title>
-					<findings>
-					</findings>
-				</template>
-				<template>
-					<name>
-					</name>
-					<type>
-						Diagnostic
-					</type>
-					<title>
-					</title>
-					<findings>
-					</findings>
-				</template>
-			</module>
-		</module>
 	</module>
+	<module>
+		<name>
+			Angio header
+		</name>
+		<content>
+			<h1>
+				Operators
+			</h1>
+			<text_entry label="Main operator/s" subtype="small">
+			</text_entry>
+			<text_entry label="Assistant/s" subtype="small">
+			</text_entry>
+			<h1>
+				Technical Details
+			</h1>
+			<selection label="Anaesthesia" print_label="true" showdetailson="1000">
+				General | Conscious sedation | Local
+			</selection>
+		</content>
+	</module>
+	<module>
+		<name>
+			Angio technique
+		</name>
+		<content>
+			<text_entry label="">
+				Informed consent was obtained from the patient (including risk of stroke and groin haemorrhage). 10 ml of 1% lidocaine was infiltrated into the puncture site superficial tissues.
+			</text_entry>
+			<multi_select label="Technique">
+				<select label="Side" print_text_before="A">
+					right | left
+				</select>
+				<select label="Puncture site" print_text_before="">
+					common femoral artery | radial artery
+				</select>
+				<select label="Sheath size" print_text_before="puncture was performed and a">
+					4-French | 5-French | 6-French
+				</select>
+				<select label="Catheter used" print_text_before="sheath was inserted. A" print_text_after="was used.">
+					Berenstein catheter | Simmons-2 catheter | Other
+				</select>
+			</multi_select>
+			<multi_checkbox label="Digital subtraction angiography was performed via:">
+				<checkbox>
+					Right internal carotid
+				</checkbox>
+				<checkbox>
+					Right external carotid
+				</checkbox>
+				<checkbox>
+					Left internal carotid
+				</checkbox>
+				<checkbox>
+					Left external carotid
+				</checkbox>
+				<checkbox>
+					Right vertebral artery
+				</checkbox>
+				<checkbox>
+					Left vertebral artery
+				</checkbox>
+			</multi_checkbox>
+			<multi_checkbox label="3D flat-panel rotational tomographic angiography was performed via:">
+				<checkbox>
+					Right internal carotid
+				</checkbox>
+				<checkbox>
+					Right external carotid
+				</checkbox>
+				<checkbox>
+					Left internal carotid
+				</checkbox>
+				<checkbox>
+					Left external carotid
+				</checkbox>
+				<checkbox>
+					Right vertebral artery
+				</checkbox>
+				<checkbox>
+					Left vertebral artery
+				</checkbox>
+			</multi_checkbox>
+			<selection label="Haemostasis" showdetailson="1000">
+				An angioseal device was used to achieve groin haemostasis. | A pneumatic compression band was used to achieve wrist haemostasis.
+			</selection>
+			<selection label="Complications">
+				There were no periprocedural complications. | There was a complication.
+			</selection>
+			<h1>
+				FINDINGS
+			</h1>
+			<text_entry label="" subtype="large">
+			</text_entry>
+		</content>
+	</module>
+	<template>
+		<name>
+			Cerebral angiogram
+		</name>
+		<type>
+			Angiography
+		</type>
+		<title>
+			Cerebral Angiogram
+		</title>
+		<findings>
+			<insert>
+				Angio header
+			</insert>
+			<insert>
+				Angio technique
+			</insert>
+		</findings>
+	</template>
+	<template>
+		<name>
+			MRI Lumbar Spine
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			MRI Lumber spine
+		</title>
+		<findings>
+			<selection label="Formation and segmentation">
+				There is normal formation and segmentation of the lumbosacral spine. | There is a transitional lumbosacral junction.
+			</selection>
+			<selection label="Vertebral alignment">
+				Vertebral alignment is normal | Vertebral alignment is abnormal
+			</selection>
+			<h1>
+				T12-L1:
+			</h1>
+			<insert>
+				Lumbar spine level
+			</insert>
+			<h1>
+				L1-L2:
+			</h1>
+			<insert>
+				Lumbar spine level
+			</insert>
+			<h1>
+				L2-L3:
+			</h1>
+			<insert>
+				Lumbar spine level
+			</insert>
+			<h1>
+				L3-L4:
+			</h1>
+			<insert>
+				Lumbar spine level
+			</insert>
+			<h1>
+				L4-L5:
+			</h1>
+			<insert>
+				Lumbar spine level
+			</insert>
+			<h1>
+				L5-S1:
+			</h1>
+			<insert>
+				Lumbar spine level
+			</insert>
+			<h1>
+				Other details:
+			</h1>
+			<insert>
+				Degenerative spine
+			</insert>
+		</findings>
+	</template>
+	<module>
+		<name>
+			Cervical spine level
+		</name>
+		<content>
+			<selection label="Discs">
+				The disc is normal | There is disc degeneration. | There is disc degeneration and height loss.
+			</selection>
+			<selection label="Ligamentum flavum">
+				There is no flaval thickening | There is flaval thickening
+			</selection>
+			<selection label="Disc bar">
+				There is a disc bar causing no neural compression | There is a disc bar compressing
+			</selection>
+			<selection label="Facet joints">
+				There is no facetal degeneration. | There is facetal degeneration.
+			</selection>
+		</content>
+	</module>
+	<template>
+		<name>
+			MRI Cervical Spine
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			MRI Cervical Spine
+		</title>
+		<findings>
+			<selection label="Vertebral alignment">
+				Vertebral alignment is normal | Vertebral alignment is abnormal
+			</selection>
+			<selection label="Posterior fossa">
+				Normal | Abnormal
+			</selection>
+			<h1>
+				C1-C2
+			</h1>
+			<text_entry label="Comment">
+			</text_entry>
+			<h1>
+				C2-C3
+			</h1>
+			<insert>
+				Cervical spine level
+			</insert>
+			<h1>
+				C3-C4
+			</h1>
+			<insert>
+				Cervical spine level
+			</insert>
+			<h1>
+				C4-C5
+			</h1>
+			<insert>
+				Cervical spine level
+			</insert>
+			<h1>
+				C5-C6
+			</h1>
+			<insert>
+				Cervical spine level
+			</insert>
+			<h1>
+				C6-C7
+			</h1>
+			<insert>
+				Cervical spine level
+			</insert>
+			<h1>
+				C7-T1
+			</h1>
+			<insert>
+				Cervical spine level
+			</insert>
+			<h1>
+				Other details:
+			</h1>
+			<insert>
+				Degenerative spine
+			</insert>
+		</findings>
+	</template>
+	<module>
+		<name>
+			CT Head Checklist
+		</name>
+		<content>
+			<selection label="Infact">
+				There is no acute cortical infarct
+			</selection>
+			<selection label="Haemorrhage (check sylvian fissures, prepontine, suprasellar, posterior horns, tentorium.">
+				There is no acute intracranial haemorrhage
+			</selection>
+			<selection label="Collection">
+				No intracranial collection is present
+			</selection>
+			<multi_select label="White matter changes" askfurtherdetails="true">
+				<select label="Severity" print_text_before="There is periventricular and deep white matter hypodensity which is non-specific but may represent a" print_text_after="burden of small vessel disease">
+					mild | moderate | severe
+				</select>
+			</multi_select>
+			<multi_select label="Cerebral atrophy" askfurtherdetails="true">
+				<select label="Cerebral atrophy severity" print_text_before="There is">
+					mild | moderate | severe
+				</select>
+				<select label="Location" print_text_after="cerebral atrophy">
+					supratentorial | infratentorial | generalised
+				</select>
+			</multi_select>
+			<multi_select label="Hippocampi" askfurtherdetails="true">
+				<select label="Hippocampal atrophy" print_text_before="There is" print_text_after="hippocampal atrophy">
+					mild | moderate | severe
+				</select>
+			</multi_select>
+			<selection label="Bones">
+				There are no fractures or destructive bony lesions
+			</selection>
+			<multi_radio>
+				<radio label="Venous sinuses">
+					Normal | Abnormal
+				</radio>
+				<radio label="Basilar hyperdensity">
+					Not present | Present
+				</radio>
+				<radio label="Trauma/contusions">
+					Not present | Present
+				</radio>
+				<radio label="Orbits">
+					Normal | Abnormal
+				</radio>
+				<radio label="Old infarcts">
+					Not present | Present
+				</radio>
+				<radio label="Paranasal sinuses and mastoid air cells">
+					Normal | Abnormal
+				</radio>
+				<radio label="Clivus">
+					Normal | Abnormal
+				</radio>
+				<radio label="Pituitary">
+					Normal | Abnormal
+				</radio>
+				<radio label="Cerebellar tonsils">
+					Normal | Abnormal
+				</radio>
+				<radio label="Extracranial soft tissue">
+					Normal | Abnormal
+				</radio>
+			</multi_radio>
+		</content>
+	</module>
+	<template>
+		<name>
+			CT Head
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			CT Head
+		</title>
+		<findings>
+			<insert>
+				CT Head Checklist
+			</insert>
+		</findings>
+	</template>
+	<template>
+		<name>
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+		</title>
+		<findings>
+		</findings>
+	</template>
+	<template>
+		<name>
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+		</title>
+		<findings>
+		</findings>
+	</template>
+	<template>
+		<name>
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+		</title>
+		<findings>
+		</findings>
+	</template>
+	<template>
+		<name>
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+		</title>
+		<findings>
+		</findings>
+	</template>
 </all>
