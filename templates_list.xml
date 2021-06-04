@@ -428,10 +428,10 @@
 				</select>
 			</multi_select>
 			<multi_select label="Hippocampal atrophy" askfurtherdetails="true">
-				<select label="Location">
+				<select label="Location" print_text_before="There is">
 					bilateral | right | left
 				</select>
-				<select label="Severity" print_text_before="There is" print_text_after="hippocampal atrophy">
+				<select label="Severity" print_text_after="hippocampal atrophy">
 					mild | moderate | severe
 				</select>
 			</multi_select>
