@@ -1,8 +1,9 @@
 <!-- TODO
 
+	* Fix normaltext thing
+	* Text substitutions to shorten text
 	* Associated info display
-	* Probably work on spine first
-	* Copy templates from radReport
+	* Copy templates from radReport?
 
 -->
 
@@ -494,7 +495,7 @@
 									}
 
 									var label = nodes[n].getAttribute("label") + ": ";
-									var negativetext = nodes[n].getAttribute("negativetext");
+									var normaltext = nodes[n].getAttribute("normaltext");
 
 									var selected = "";
 
@@ -509,7 +510,7 @@
 										selected: selected,
 										showdetailson: showdetailson,
 										details: "",
-										negativetext: negativetext
+										normaltext: normaltext
 									});
 								}
 							}
@@ -526,12 +527,12 @@
 									if (Number.isInteger(print_multi[n].selected)) {
 										// Normal and supplied negative text
 										if (print_multi[n].selected == 0 && print_multi[n]
-											.negativetext) {
-											print_text += print_multi[n].negativetext;
+											.normaltext) {
+											print_text += print_multi[n].normaltext;
 										}
 										// Normal and no supplied text 
 										else if (print_multi[n].selected == 0 && !print_multi[n]
-											.negativetext) {
+											.normaltext) {
 											print_text += print_multi[n].label;
 											print_text += print_multi[n]
 												.options[print_multi[n].selected].text;

@@ -403,16 +403,16 @@
 		</name>
 		<content>
 			<multi_radio>
-				<radio label="Acute infact" negativetext="There is no acute cortical infarct.">
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
 					Not present | Present
 				</radio>
-				<radio label="Acute haemorrhage" negativetext="There is no acute intracranial haemorrhage.">
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
 					Not present | Present
 				</radio>
-				<radio label="Collection" negativetext="No intracranial collection is present.">
+				<radio label="Collection" normaltext="No intracranial collection is present.">
 					Not present | Present
 				</radio>
-				<radio label="Space occupying lesion" negativetext="There are no space occupying lesions.">
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
 					Not present | Present
 				</radio>
 			</multi_radio>
@@ -441,7 +441,7 @@
 				There are no skull fractures or destructive bony lesions
 			</selection>
 			<multi_radio>
-				<radio label="Venous sinus hyperdensity" negativetext="">
+				<radio label="Venous sinus hyperdensity" normaltext="">
 					Normal | Abnormal
 				</radio>
 				<radio label="Basilar hyperdensity">
