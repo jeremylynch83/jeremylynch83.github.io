@@ -421,7 +421,7 @@
 						</select>
 					</multi_select>
 					<multi_select label="Cerebral atrophy" askfurtherdetails="true">
-						<select label="Severity" print_text_before="There is" print_text_after="burden of small vessel disease">
+						<select label="Severity" print_text_before="There is" print_text_after="cerebral atrophy">
 							supratentorial | infratentorial | generalised
 						</select>
 					</multi_select>
