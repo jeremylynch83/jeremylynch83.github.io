@@ -186,16 +186,16 @@ Not present | Present
 			Angio header
 		</name>
 		<content>
-			<h1>
+			<h2>
 				Operators
-			</h1>
+			</h2>
 			<text_entry label="Main operator/s" subtype="small">
 			</text_entry>
 			<text_entry label="Assistant/s" subtype="small">
 			</text_entry>
-			<h1>
+			<h2>
 				Technical Details
-			</h1>
+			</h2>
 			<selection label="Anaesthesia" print_label="true" showdetailson="1000">
 				General | Conscious sedation | Local
 			</selection>
@@ -269,9 +269,9 @@ Not present | Present
 			<selection label="Complications">
 				There were no periprocedural complications. | There was a complication.
 			</selection>
-			<h1>
+			<h2>
 				FINDINGS
-			</h1>
+			</h2>
 			<text_entry label="" subtype="large">
 			</text_entry>
 		</content>
@@ -312,45 +312,45 @@ Not present | Present
 			<selection label="Vertebral alignment">
 				Vertebral alignment is normal | Vertebral alignment is abnormal
 			</selection>
-			<h1>
+			<h2>
 				T12-L1:
-			</h1>
+			</h2>
 			<insert>
 				Lumbar spine level
 			</insert>
-			<h1>
+			<h2>
 				L1-L2:
-			</h1>
+			</h2>
 			<insert>
 				Lumbar spine level
 			</insert>
-			<h1>
+			<h2>
 				L2-L3:
-			</h1>
+			</h2>
 			<insert>
 				Lumbar spine level
 			</insert>
-			<h1>
+			<h2>
 				L3-L4:
-			</h1>
+			</h2>
 			<insert>
 				Lumbar spine level
 			</insert>
-			<h1>
+			<h2>
 				L4-L5:
-			</h1>
+			</h2>
 			<insert>
 				Lumbar spine level
 			</insert>
-			<h1>
+			<h2>
 				L5-S1:
-			</h1>
+			</h2>
 			<insert>
 				Lumbar spine level
 			</insert>
-			<h1>
+			<h2>
 				Other details:
-			</h1>
+			</h2>
 			<insert>
 				Degenerative spine
 			</insert>
@@ -392,50 +392,50 @@ Not present | Present
 			<selection label="Posterior fossa">
 				Normal | Abnormal
 			</selection>
-			<h1>
+			<h2>
 				C1-C2
-			</h1>
+			</h2>
 			<text_entry label="Comment">
 			</text_entry>
-			<h1>
+			<h2>
 				C2-C3
-			</h1>
+			</h2>
 			<insert>
 				Cervical spine level
 			</insert>
-			<h1>
+			<h2>
 				C3-C4
-			</h1>
+			</h2>
 			<insert>
 				Cervical spine level
 			</insert>
-			<h1>
+			<h2>
 				C4-C5
-			</h1>
+			</h2>
 			<insert>
 				Cervical spine level
 			</insert>
-			<h1>
+			<h2>
 				C5-C6
-			</h1>
+			</h2>
 			<insert>
 				Cervical spine level
 			</insert>
-			<h1>
+			<h2>
 				C6-C7
-			</h1>
+			</h2>
 			<insert>
 				Cervical spine level
 			</insert>
-			<h1>
+			<h2>
 				C7-T1
-			</h1>
+			</h2>
 			<insert>
 				Cervical spine level
 			</insert>
-			<h1>
+			<h2>
 				Other details:
-			</h1>
+			</h2>
 			<insert>
 				Degenerative spine
 			</insert>
@@ -539,9 +539,9 @@ Not present | Present
 			CT Angiogram Intracranial
 		</name>
 		<content>
-			<h1>
+			<h2>
 				CT Angiogram
-			</h1>
+			</h2>
 			<selection label="Occlusion">
 				There is no proximal intracranial occlusion
 			</selection>
