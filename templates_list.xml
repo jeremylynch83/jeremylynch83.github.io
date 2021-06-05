@@ -496,7 +496,7 @@
 		</name>
 		<content>
 			<h1>
-				Intracranial Vessels
+				CT Angiogram
 			</h1>
 			<selection label="Occlusion">
 				There is no proximal intracranial occlusion
@@ -521,9 +521,6 @@
 			CT Angiogram Neck
 		</name>
 		<content>
-			<h1>
-				Neck
-			</h1>
 			<selection label="Subclavian/Arch">
 				Normal appearances of the aortic arch and subclavian arteries
 			</selection>
@@ -588,14 +585,36 @@
 			Diagnostic
 		</type>
 		<title>
-			CT Angiogram of the Head and Neck
+			CT Head and Angiogram of the Head and Neck
 		</title>
 		<findings>
+			<insert>
+				CT Head Checklist
+			</insert>
 			<insert>
 				CT Angiogram Intracranial
 			</insert>
 			<insert>
+				CT Angiogram Neck
+			</insert>
+		</findings>
+	</template>
+	<template>
+		<name>
+			CT Angiogram: Subarachnoid Haemorrhage
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			CT Head and Angiogram of the Head and Neck
+		</title>
+		<findings>
+			<insert>
 				CT Head Checklist
+			</insert>
+			<insert>
+				CT Angiogram Intracranial
 			</insert>
 			<insert>
 				CT Angiogram Neck
