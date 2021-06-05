@@ -15,8 +15,8 @@ Diagnostic
 </type>
 <title>
 </title>
-<findings>
-</findings>
+<content>
+</content>
 </template>
 
 <multi_radio>
@@ -286,14 +286,14 @@ Not present | Present
 		<title>
 			Cerebral Angiogram
 		</title>
-		<findings>
+		<content>
 			<insert>
 				Angio header
 			</insert>
 			<insert>
 				Angio technique
 			</insert>
-		</findings>
+		</content>
 	</template>
 	<template>
 		<name>
@@ -305,7 +305,7 @@ Not present | Present
 		<title>
 			MRI Lumber spine
 		</title>
-		<findings>
+		<content>
 			<selection label="Formation and segmentation">
 				There is normal formation and segmentation of the lumbosacral spine. | There is a transitional lumbosacral junction.
 			</selection>
@@ -354,7 +354,7 @@ Not present | Present
 			<insert>
 				Degenerative spine
 			</insert>
-		</findings>
+		</content>
 	</template>
 	<module>
 		<name>
@@ -385,7 +385,7 @@ Not present | Present
 		<title>
 			MRI Cervical Spine
 		</title>
-		<findings>
+		<content>
 			<selection label="Vertebral alignment">
 				Vertebral alignment is normal | Vertebral alignment is abnormal
 			</selection>
@@ -439,7 +439,7 @@ Not present | Present
 			<insert>
 				Degenerative spine
 			</insert>
-		</findings>
+		</content>
 	</template>
 	<module>
 		<name>
@@ -528,11 +528,11 @@ Not present | Present
 		<title>
 			CT Head
 		</title>
-		<findings>
+		<content>
 			<insert>
 				CT Head Checklist
 			</insert>
-		</findings>
+		</content>
 	</template>
 	<module>
 		<name>
@@ -612,14 +612,14 @@ Not present | Present
 		<title>
 			CT Angiogram Intracranial
 		</title>
-		<findings>
+		<content>
 			<insert>
 				CT Head Checklist
 			</insert>
 			<insert>
 				CT Angiogram Intracranial
 			</insert>
-		</findings>
+		</content>
 	</template>
 	<template>
 		<name>
@@ -631,7 +631,7 @@ Not present | Present
 		<title>
 			CT Head and Angiogram of the Head and Neck
 		</title>
-		<findings>
+		<content>
 			<insert>
 				CT Head Checklist
 			</insert>
@@ -641,7 +641,7 @@ Not present | Present
 			<insert>
 				CT Angiogram Neck
 			</insert>
-		</findings>
+		</content>
 	</template>
 	<template>
 		<name>
@@ -653,7 +653,7 @@ Not present | Present
 		<title>
 			CT Head and Angiogram of the Head and Neck
 		</title>
-		<findings>
+		<content>
 			<text_entry label="There is subarachnoid haemorrhage centered on" subtype="small" sentencecontinues="true">
 			</text_entry>
 			<text_entry label="There is hydrocephalus, with blood layering in the" subtype="small" sentencecontinues="true">
@@ -667,7 +667,7 @@ Not present | Present
 			<insert>
 				CT Angiogram Neck
 			</insert>
-		</findings>
+		</content>
 	</template>
 	<template>
 		<name>
@@ -679,7 +679,7 @@ Not present | Present
 		<title>
 			CT Head
 		</title>
-		<findings>
+		<content>
 			<selection label="Placement">
 				Bilateral transfrontal electrodes are in situ
 			</selection>
@@ -689,7 +689,7 @@ Not present | Present
 			<insert>
 				CT Head Checklist
 			</insert>
-		</findings>
+		</content>
 	</template>
 	<template>
 		<name>
@@ -701,19 +701,19 @@ Not present | Present
 		<title>
 			CT Head
 		</title>
-		<findings>
+		<content>
 			<multi_select label="" askfurtherdetails="false">
 				<select label="Location" print_text_before="There has been interval partial evacuation of the subdural haematoma overlying the">
 					right cerebral hemisphere | left cerebral hemisphere
 				</select>
 			</multi_select>
 			<text_entry label="" subtype="large">
-				There has been marked reduction of the size of subdural haematoma associated with significant reduction of local mass effect and partial re-expansion of the cerebral sulci and ipsilateral lateral ventricle.  A small collection of blood products and fluid remains. There remains mild contralateral shift of midline structures.
+				There has been marked reduction of the size of subdural haematoma associated with significant reduction of local mass effect and partial re-expansion of the cerebral sulci and ipsilateral lateral ventricle. A small collection of blood products and fluid remains. There remains mild contralateral shift of midline structures.
 			</text_entry>
 			<insert>
 				CT Head Checklist
 			</insert>
-		</findings>
+		</content>
 	</template>
 	<template>
 		<name>
@@ -723,8 +723,8 @@ Not present | Present
 		</type>
 		<title>
 		</title>
-		<findings>
-		</findings>
+		<content>
+		</content>
 	</template>
 	<template>
 		<name>
@@ -734,8 +734,8 @@ Not present | Present
 		</type>
 		<title>
 		</title>
-		<findings>
-		</findings>
+		<content>
+		</content>
 	</template>
 	<template>
 		<name>
@@ -745,7 +745,7 @@ Not present | Present
 		</type>
 		<title>
 		</title>
-		<findings>
-		</findings>
+		<content>
+		</content>
 	</template>
 </all>

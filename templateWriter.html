@@ -352,7 +352,8 @@
 								if (this.text != "") {
 									if (this.label) print_text += this.label;
 									if (this.sentencecontinues) print_text += " " + this.text.toLowerCase();
-									else print_text += ": " + this.text;
+									else if (this.label) print_text += ": " + this.text;
+									else print_text += this.text
 									print_text += this.details_text;
 									if ((this.text + this.details_text) != "") print_text = format_sentence(print_text);
 								}
@@ -660,7 +661,7 @@
 						t_title = t_title.innerHTML.replace(/\t/g, '');
 					}
 					var t_findings = xmlDoc.getElementsByTagName("template")[i].getElementsByTagName(
-						"findings")[0].childNodes;
+						"content")[0].childNodes;
 					var elements = parseFindings(t_findings, modules);
 
 
