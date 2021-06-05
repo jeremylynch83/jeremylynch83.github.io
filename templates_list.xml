@@ -1,4 +1,42 @@
 <?xml version="1.0" encoding="ISO8859-1"?>
+<!--
+<module>
+<name>
+</name>
+<content>
+</content>
+</module>
+
+<template>
+<name>
+</name>
+<type>
+Diagnostic
+</type>
+<title>
+</title>
+<findings>
+</findings>
+</template>
+
+<multi_radio>
+<radio label="">
+Not present | Present
+</radio>
+</multi_radio>
+
+<selection label="">
+|
+</selection>
+
+<multi_checkbox label="">
+<checkbox>
+</checkbox>
+</selection>
+
+<text_entry label="" subtype="small">
+</text_entry>
+-->
 <all>
 	<module>
 		<name>
@@ -610,6 +648,10 @@
 			CT Head and Angiogram of the Head and Neck
 		</title>
 		<findings>
+			<text_entry label="There is subarachnoid haemorrhage centered on" subtype="small">
+			</text_entry>
+			<text_entry label="There is hydrocephalus, with blood layering in the" subtype="small">
+			</text_entry>
 			<insert>
 				CT Head Checklist
 			</insert>
