@@ -36,6 +36,12 @@ Not present | Present
 
 <text_entry label="" subtype="small">
 </text_entry>
+
+<multi_select label="" askfurtherdetails="true">
+<select label="" print_text_before="">
+|
+</select>
+</multi_select>
 -->
 <all>
 	<module>
@@ -665,7 +671,7 @@ Not present | Present
 	</template>
 	<template>
 		<name>
-			CT Head: Post Deep Brain Stimulation Electrode Placement
+			CT Head: Post-Operative Deep Brain Stimulation Electrode Placement
 		</name>
 		<type>
 			Diagnostic
@@ -680,6 +686,30 @@ Not present | Present
 			<selection label="Oedema">
 				No evidence of peri-electrode oedema | Peri-electrode oedema is noted
 			</selection>
+			<insert>
+				CT Head Checklist
+			</insert>
+		</findings>
+	</template>
+	<template>
+		<name>
+			CT Head: Post-Operative Subdural Evacuation
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			CT Head
+		</title>
+		<findings>
+			<multi_select label="" askfurtherdetails="false">
+				<select label="Location" print_text_before="There has been interval partial evacuation of the subdural haematoma overlying the">
+					right cerebral hemisphere | left cerebral hemisphere
+				</select>
+			</multi_select>
+			<text_entry label="" subtype="medium">
+				There has been marked reduction of the size of subdural haematoma associated with significant reduction of local mass effect and partial re-expansion of the cerebral sulci and ipsilateral lateral ventricle.  A small collection of blood products and fluid remains. There remains mild contralateral shift of midline structures.
+			</text_entry>
 			<insert>
 				CT Head Checklist
 			</insert>
