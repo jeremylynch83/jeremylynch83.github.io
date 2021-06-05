@@ -117,7 +117,6 @@
 
 				<template v-for="n in templateForm">
 					<!-- HEADER TYPE -->
-
 					<h2 v-if="n.type == 'h1'">{{n.label}}</h2>
 					<h3 v-if="n.type == 'h2'">{{n.label}}</h3>
 
@@ -325,7 +324,8 @@
 					switch (xml[i].nodeName) {
 						default:
 							break;
-						case "h1" || "h2":
+						case "h1":
+						case "h2":
 							el.label = xml[i].innerHTML.trim();
 							elements.push(el);
 							el.printContents = function () {
