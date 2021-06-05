@@ -16,6 +16,25 @@ Diagnostic
 <title>
 </title>
 <content>
+<h1>
+Technique
+</h1>
+<text_entry label="" subtype="medium">
+</text_entry>
+<h1>
+Comparison
+</h1>
+<text_entry label="" subtype="medium">
+</text_entry>
+<h1>
+Findings
+</h1>
+
+<h1>
+Conclusion
+</h1>
+<text_entry label="" subtype="medium">
+</text_entry>
 </content>
 </template>
 
@@ -287,12 +306,30 @@ Not present | Present
 			Cerebral Angiogram
 		</title>
 		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
 			<insert>
 				Angio header
 			</insert>
 			<insert>
 				Angio technique
 			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
 		</content>
 	</template>
 	<template>
@@ -306,6 +343,19 @@ Not present | Present
 			MRI Lumber spine
 		</title>
 		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
 			<selection label="Formation and segmentation">
 				There is normal formation and segmentation of the lumbosacral spine. | There is a transitional lumbosacral junction.
 			</selection>
@@ -354,6 +404,11 @@ Not present | Present
 			<insert>
 				Degenerative spine
 			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
 		</content>
 	</template>
 	<module>
@@ -386,6 +441,19 @@ Not present | Present
 			MRI Cervical Spine
 		</title>
 		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
 			<selection label="Vertebral alignment">
 				Vertebral alignment is normal | Vertebral alignment is abnormal
 			</selection>
@@ -439,6 +507,11 @@ Not present | Present
 			<insert>
 				Degenerative spine
 			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
 		</content>
 	</template>
 	<module>
@@ -529,9 +602,27 @@ Not present | Present
 			CT Head
 		</title>
 		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
 			<insert>
 				CT Head Checklist
 			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
 		</content>
 	</template>
 	<module>
@@ -650,6 +741,19 @@ Not present | Present
 			CT Head and Angiogram of the Head and Neck
 		</title>
 		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
 			<insert>
 				CT Head Checklist
 			</insert>
@@ -659,6 +763,11 @@ Not present | Present
 			<insert>
 				CT Angiogram Neck
 			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
 		</content>
 	</template>
 	<template>
@@ -672,6 +781,19 @@ Not present | Present
 			CT Head and Angiogram of the Head and Neck
 		</title>
 		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
 			<text_entry label="There is subarachnoid haemorrhage centered on" subtype="small" sentencecontinues="true">
 			</text_entry>
 			<text_entry label="There is hydrocephalus, with blood layering in the" subtype="small" sentencecontinues="true">
@@ -685,6 +807,11 @@ Not present | Present
 			<insert>
 				CT Angiogram Neck
 			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
 		</content>
 	</template>
 	<template>
@@ -698,6 +825,19 @@ Not present | Present
 			CT Head
 		</title>
 		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
 			<selection label="Placement">
 				Bilateral transfrontal electrodes are in situ
 			</selection>
@@ -707,6 +847,11 @@ Not present | Present
 			<insert>
 				CT Head Checklist
 			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
 		</content>
 	</template>
 	<template>
@@ -720,6 +865,19 @@ Not present | Present
 			CT Head
 		</title>
 		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
 			<multi_select label="" askfurtherdetails="false">
 				<select label="Location" print_text_before="There has been interval partial evacuation of the subdural haematoma overlying the">
 					right cerebral hemisphere | left cerebral hemisphere

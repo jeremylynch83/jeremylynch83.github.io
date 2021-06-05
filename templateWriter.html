@@ -290,18 +290,21 @@
 					}
 					el.details_text = ""
 
-					switch (xml[i].nodeName) {
+					switch (el.type) {
 						default:
 							break;
 						case "h1":
 						case "h2":
 							el.label = xml[i].innerHTML.trim();
+							if (el.type == "h1") el.label = el.label.toUpperCase();
+							if (el.label[el.label.length - 1] != ":") el.label += ": ";
+							else el.label += " ";
 							elements.push(el);
 							el.printContents = function () {
-								this.label = this.label.trim();
-								if (this.label[this.label.length - 1] != ":") this.label += ": ";
-								else this.label += " ";
-								return "\n\n" + this.label;
+								var print_text = "";
+								if (this.type == "h1") print_text = "\n\n" + this.label + "\n";
+								if (this.type == "h2") print_text = "\n\n" + this.label;
+								return print_text;
 							}
 							break;
 						case "text":
@@ -730,7 +733,7 @@
 
 				copyReport: function () {
 					var copyText = "";
-					copyText += this.template.title.trim() + "\n\n";
+					copyText += this.template.title.trim();
 
 					for (var n = 0; n < this.templateForm.length; n++) {
 						copyText += this.templateForm[n].printContents();
