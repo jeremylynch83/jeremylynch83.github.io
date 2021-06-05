@@ -648,7 +648,7 @@ Not present | Present
 			CT Head and Angiogram of the Head and Neck
 		</title>
 		<findings>
-			<text_entry label="There is subarachnoid haemorrhage centered on" subtype="small">
+			<text_entry label="There is subarachnoid haemorrhage centered on" subtype="small" sentencecontinues="true">
 			</text_entry>
 			<text_entry label="There is hydrocephalus, with blood layering in the" subtype="small">
 			</text_entry>

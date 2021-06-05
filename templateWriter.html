@@ -312,6 +312,8 @@
 					var disabled = xml[i].getAttribute("disabled");
 					if (disabled != null && disabled == "true") el.disabled = true;
 					else el.disabled = false;
+					el.sentencecontinues = xml[i].getAttribute("sentencecontinues");
+					console.log(el.sentencecontinues)
 
 					var label = xml[i].getAttribute("label");
 					if (label) el.label = label;
@@ -349,8 +351,10 @@
 
 							el.printContents = function () {
 								var print_text = "";
-								if (this.label) print_text += this.label + ": ";
-								print_text += this.text + this.details_text;
+								if (this.label) print_text += this.label;
+								if (this.sentencecontinues) print_text += " " + this.text.toLowerCase();
+								else print_text += ": " + this.text;
+								//print_text += +this.details_text;
 								if ((this.text + this.details_text) != "") print_text = format_sentence(print_text);
 								return print_text;
 							}
@@ -519,7 +523,6 @@
 								print_multi.sort((a, b) => {
 									return b.selected - a.selected;
 								});
-								console.table(print_multi);
 
 								var print_text = "";
 								for (var n = 0; n < print_multi.length; n++) {
