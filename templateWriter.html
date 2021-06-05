@@ -92,29 +92,6 @@
 					</b-form-textarea>
 				</b-form-group>
 
-				<b-form-group>
-
-					<h2>TECHNIQUE:</h2>
-
-
-					<b-form-textarea id="technique_text" placeholder="Enter text"
-						v-show="template.type != 'Angiography'">
-					</b-form-textarea>
-				</b-form-group>
-
-				<b-form-group v-if="template != '' && template.type != 'Angiography'">
-
-					<h2>COMPARISON:</h2>
-
-					<b-form-textarea placeholder=" Enter text" id="comparison_text">
-					</b-form-textarea>
-				</b-form-group>
-
-				<b-form-group v-if="template != '' && template.type != 'Angiography'">
-					<h2>FINDINGS:</h2>
-				</b-form-group>
-
-
 				<template v-for="n in templateForm">
 					<!-- HEADER TYPE -->
 					<h2 v-if="n.type == 'h1'">{{n.label}}</h2>
@@ -236,15 +213,7 @@
 					</div>
 				</template>
 
-				<b-form-group v-if=" template !=''">
-
-					<h2>CONCLUSION:</h2>
-
-					<b-form-textarea placeholder=" Enter text" id="conclusion_text">
-					</b-form-textarea>
-				</b-form-group>
 			</b-form-group>
-
 		</b-container>
 
 
@@ -762,24 +731,10 @@
 				copyReport: function () {
 					var copyText = "";
 					copyText += this.template.title.trim() + "\n\n";
-					copyText += "CLINICAL INDICATION: \n" + document.getElementById("indication_text").value +
-						"\n\n";
-					copyText += "TECHNIQUE:";
-
-					if (this.template.type != 'Angiography') {
-						copyText += "\n" + document.getElementById("technique_text").value;
-						copyText += "\n\nCOMPARISON: \n" + document.getElementById("comparison_text").value +
-							"\n\n";
-						copyText += "FINDINGS: \n";
-					}
 
 					for (var n = 0; n < this.templateForm.length; n++) {
 						copyText += this.templateForm[n].printContents();
 					}
-
-					copyText += "\n\nCONCLUSION: \n" + document.getElementById("conclusion_text").value +
-						"\n\n";
-
 
 					// Put in clipboard
 					const listener = function (ev) {

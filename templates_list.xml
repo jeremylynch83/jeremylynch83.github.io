@@ -632,6 +632,11 @@ Not present | Present
 			<insert>
 				CT Angiogram Intracranial
 			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
 		</content>
 	</template>
 	<template>

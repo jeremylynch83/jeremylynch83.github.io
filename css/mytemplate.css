@@ -64,6 +64,7 @@ h2 {
     border-top-color: rgb(89, 83, 184);
     margin-top: 15px;
     font-size: large;
+    text-transform: uppercase;
 
     color: rgb(89, 83, 184)
 }
