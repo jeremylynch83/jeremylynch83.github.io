@@ -118,14 +118,14 @@
 				<template v-for="n in templateForm">
 					<!-- HEADER TYPE -->
 
-					<h3 v-if="n.type == 'h1'">{{n.label}}</h3>
+					<h3 v-if="n.type == 'h2'">{{n.label}}</h3>
 
 					<div class="body">
 
 						<div class="row">
 
 							<div class="control">
-								<b-button-group vertical v-if="n.type != 'h1'">
+								<b-button-group vertical v-if="n.type != 'h2'">
 									<b-form-checkbox v-model="n.disabled" :value=false :unchecked-value=true size="sm">
 										Enable
 									</b-form-checkbox>
@@ -324,7 +324,7 @@
 					switch (xml[i].nodeName) {
 						default:
 							break;
-						case "h1":
+						case "h2":
 							el.label = xml[i].innerHTML.trim();
 							elements.push(el);
 							el.printContents = function () {
