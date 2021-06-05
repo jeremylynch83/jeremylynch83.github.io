@@ -650,7 +650,7 @@ Not present | Present
 		<findings>
 			<text_entry label="There is subarachnoid haemorrhage centered on" subtype="small" sentencecontinues="true">
 			</text_entry>
-			<text_entry label="There is hydrocephalus, with blood layering in the" subtype="small">
+			<text_entry label="There is hydrocephalus, with blood layering in the" subtype="small" sentencecontinues="true">
 			</text_entry>
 			<insert>
 				CT Head Checklist
@@ -660,6 +660,28 @@ Not present | Present
 			</insert>
 			<insert>
 				CT Angiogram Neck
+			</insert>
+		</findings>
+	</template>
+	<template>
+		<name>
+			CT Head: Post Deep Brain Stimulation Electrode Placement
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			CT Head
+		</title>
+		<findings>
+			<selection label="Placement">
+				Bilateral transfrontal electrodes are in situ
+			</selection>
+			<selection label="Oedema">
+				No evidence of peri-electrode oedema | Peri-electrode oedema is noted
+			</selection>
+			<insert>
+				CT Head Checklist
 			</insert>
 		</findings>
 	</template>
