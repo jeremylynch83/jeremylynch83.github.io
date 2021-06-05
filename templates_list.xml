@@ -613,6 +613,19 @@ Not present | Present
 			CT Angiogram Intracranial
 		</title>
 		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
 			<insert>
 				CT Head Checklist
 			</insert>
