@@ -228,7 +228,7 @@ Not present | Present
 			<text_entry label="">
 				Informed consent was obtained from the patient (including risk of stroke and groin haemorrhage). 10 ml of 1% lidocaine was infiltrated into the puncture site superficial tissues.
 			</text_entry>
-			<multi_select label="Technique">
+			<multi_select label="Puncture">
 				<select label="Side" print_text_before="A">
 					right | left
 				</select>
@@ -309,22 +309,17 @@ Not present | Present
 			<h1>
 				Technique
 			</h1>
-			<text_entry label="" subtype="medium">
-			</text_entry>
-			<h1>
-				Comparison
-			</h1>
-			<text_entry label="" subtype="medium">
-			</text_entry>
-			<h1>
-				Findings
-			</h1>
 			<insert>
 				Angio header
 			</insert>
 			<insert>
 				Angio technique
 			</insert>
+			<h1>
+				Findings
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
 			<h1>
 				Conclusion
 			</h1>
