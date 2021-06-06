@@ -249,6 +249,9 @@ Not present | Present
 			<h1>
 				Conclusion
 			</h1>
+			<selection label="Normal">
+				Normal cerebral angiogram
+			</selection>
 			<text_entry label="" subtype="medium">
 			</text_entry>
 		</content>
