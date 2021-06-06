@@ -286,11 +286,8 @@ Not present | Present
 				An angioseal device was used to achieve groin haemostasis. | A pneumatic compression band was used to achieve wrist haemostasis.
 			</selection>
 			<selection label="Complications">
-				There were no periprocedural complications. | There was a complication.
+				There were no periprocedural complications.
 			</selection>
-			<h2>
-				FINDINGS
-			</h2>
 			<text_entry label="" subtype="large">
 			</text_entry>
 		</content>
