@@ -730,16 +730,8 @@ Not present | Present
 				<select label="Presence">
 					There is mass effect
 				</select>
-				<select label="Midline shift">
-					with contralateral shift of midline structures
-				</select>
-			</multi_select>
-			<multi_select label="Mass effect" askfurtherdetails="true">
-				<select label="Presence">
-					There is mass effect
-				</select>
-				<select label="Midline shift" print_text_before="with" print_text_after="contralateral shift of midline structures">
-					mild | moderate | severe
+				<select label="Midline shift" print_text_before="with" print_text_after="of midline structures">
+					mild contralateral shift | moderate contralateral shift | severe contralateral shift
 				</select>
 			</multi_select>
 			<selection label="Oedema">
