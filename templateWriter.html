@@ -396,6 +396,10 @@
 										}
 										type = "multi";
 									} else {
+										options.push({ // Add a non-selection first
+											text: "",
+											value: 0
+										});
 										options.push({
 											text: inner_text.trim(),
 											value: 0
