@@ -400,7 +400,14 @@
 											text: inner_text.trim(),
 											value: 0
 										})
+										options.push({
+											text: "Other",
+											value: 1
+										})
 									}
+
+
+
 
 									var label = nodes[n].getAttribute("label");
 									if (label) label.trim();
@@ -636,7 +643,6 @@
 					var t_findings = xmlDoc.getElementsByTagName("template")[i].getElementsByTagName(
 						"content")[0].childNodes;
 					var elements = parseFindings(t_findings, modules);
-
 
 					temp.push({
 						name: t_name,

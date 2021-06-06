@@ -727,16 +727,16 @@ Not present | Present
 				The large parenchymal haematoma centered on ... is again demonstrated.
 			</text_entry>
 			<multi_select label="Mass effect" askfurtherdetails="true">
-				<select label="Presence" print_text_before="There is">
+				<select label="Presence">
 					There is mass effect
 				</select>
-				<select label="Midline shift" print_text_before="There is">
+				<select label="Midline shift">
 					with contralateral shift of midline structures
 				</select>
 			</multi_select>
-			<multi_select label="Hippocampal atrophy" askfurtherdetails="true">
-				<select label="Location" print_text_before="There is">
-					bilateral | right | left
+			<multi_select label="Mass effect" askfurtherdetails="true">
+				<select label="Presence">
+					There is mass effect
 				</select>
 				<select label="Severity" print_text_after="hippocampal atrophy">
 					mild | moderate | severe
