@@ -736,7 +736,7 @@ Not present | Present
 			</multi_select>
 			<multi_select label="Mass effect" askfurtherdetails="true">
 				<select label="Presence">
-					There is mass effect
+					There is mass effect | hi
 				</select>
 				<select label="Severity" print_text_after="hippocampal atrophy">
 					mild | moderate | severe
