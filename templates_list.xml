@@ -205,9 +205,6 @@ Not present | Present
 			Angio header
 		</name>
 		<content>
-			<h2>
-				Operators
-			</h2>
 			<text_entry label="Main operator/s" subtype="small">
 			</text_entry>
 			<text_entry label="Assistant/s" subtype="small">
