@@ -460,20 +460,6 @@ Not present | Present
 			CT Head Checklist
 		</name>
 		<content>
-			<multi_radio>
-				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
-					Not present | Present
-				</radio>
-				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
-					Not present | Present
-				</radio>
-				<radio label="Collection" normaltext="No intracranial collection is present.">
-					Not present | Present
-				</radio>
-				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
-					Not present | Present
-				</radio>
-			</multi_radio>
 			<multi_select label="White matter changes" askfurtherdetails="true">
 				<select label="Severity" print_text_before="There is periventricular and deep white matter hypodensity which is non-specific but may represent a" print_text_after="burden of small vessel disease">
 					mild | moderate | severe
@@ -546,6 +532,20 @@ Not present | Present
 			<insert>
 				Plain CT Start
 			</insert>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
 			<insert>
 				CT Head Checklist
 			</insert>
@@ -648,6 +648,20 @@ Not present | Present
 			<h1>
 				Findings
 			</h1>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
 			<insert>
 				CT Head Checklist
 			</insert>
@@ -685,24 +699,32 @@ Not present | Present
 			<h1>
 				Findings
 			</h1>
-			<selection label="The parenchymal haematoma centered on">
-				|
-			</selection>
 			<text_entry label="" subtype="large">
-				The large parenchymal haematoma centered on ... is again demonstrated. There is surrounding oedema. There is mass effect, with contralateral shift of midline structures and early transuncal herniation. Dilatation of the ... temporal horn is noted suggestive of early hydrocephalus.
-				
-				[A slender extra-axial haematoma is also noted overlying the left cerebral hemisphere. ]
-				
-				[There is no ventricular spill.]
-				
-				[There has been no rebleed since the earlier study. There is slightly more swelling and mass effect.]
-				
-				[Vein thrombosis]
-				
-				[Fluid levels]
-				
-				[Evidence of tumour]
+				The large parenchymal haematoma centered on ... is again demonstrated. There is mass effect, with contralateral shift of midline structures and early transuncal herniation. Dilatation of the ... temporal horn is noted suggestive of early hydrocephalus.
 			</text_entry>
+			<multi_select label="Mass effect" askfurtherdetails="true">
+				<select label="Presence">
+					There is mass effect
+				</select>
+				<select label="Midline shift">
+					with contralateral shift of midline structures
+				</select>
+			</multi_select>
+			<selection label="Oedema">
+				There is surrounding parenchymal oedema
+			</selection>
+			<selection label="Fluid levels">
+				A fluid level is noted within the haematoma
+			</selection>
+			<selection label="Fluid levels">
+				A fluid level is noted within the haematoma
+			</selection>
+			<selection label="Ventricular spill">
+				There is no ventricular spill | There is spill in to the lateral ventricles
+			</selection>
+			<selection label="Hydrocephalus">
+				The ventricles are hydrocephalic
+			</selection>
 			<insert>
 				CT Head Checklist
 			</insert>
@@ -867,7 +889,7 @@ Not present | Present
 			<h1>
 				Findings
 			</h1>
-			<multi_select label="" askfurtherdetails="false">
+			<multi_select label="Description" askfurtherdetails="false">
 				<select label="Location" print_text_before="There has been interval partial evacuation of the subdural haematoma overlying the">
 					right cerebral hemisphere | left cerebral hemisphere
 				</select>
