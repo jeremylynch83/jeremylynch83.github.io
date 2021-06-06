@@ -556,6 +556,30 @@ Not present | Present
 			</text_entry>
 		</content>
 	</template>
+	<template>
+		<name>
+			CT Orbits: Cellulitis
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			CT Orbits
+		</title>
+		<content>
+			<insert>
+				Plain CT Start
+			</insert>
+			<insert>
+				CT Head Checklist
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
 	<module>
 		<name>
 			CT Angiogram Intracranial
@@ -699,8 +723,8 @@ Not present | Present
 			<h1>
 				Findings
 			</h1>
-			<text_entry label="" subtype="large">
-				The large parenchymal haematoma centered on ... is again demonstrated. There is mass effect, with contralateral shift of midline structures and early transuncal herniation. Dilatation of the ... temporal horn is noted suggestive of early hydrocephalus.
+			<text_entry label="" subtype="medium">
+				The large parenchymal haematoma centered on ... is again demonstrated.
 			</text_entry>
 			<multi_select label="Mass effect" askfurtherdetails="true">
 				<select label="Presence">
@@ -712,9 +736,6 @@ Not present | Present
 			</multi_select>
 			<selection label="Oedema">
 				There is surrounding parenchymal oedema
-			</selection>
-			<selection label="Fluid levels">
-				A fluid level is noted within the haematoma
 			</selection>
 			<selection label="Fluid levels">
 				A fluid level is noted within the haematoma
