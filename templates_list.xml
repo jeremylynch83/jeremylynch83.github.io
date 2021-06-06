@@ -65,72 +65,6 @@ Not present | Present
 <all>
 	<module>
 		<name>
-		</name>
-		<content>
-		</content>
-	</module>
-	<module>
-		<name>
-		</name>
-		<content>
-		</content>
-	</module>
-	<module>
-		<name>
-		</name>
-		<content>
-		</content>
-	</module>
-	<module>
-		<name>
-		</name>
-		<content>
-		</content>
-	</module>
-	<module>
-		<name>
-		</name>
-		<content>
-		</content>
-	</module>
-	<module>
-		<name>
-		</name>
-		<content>
-		</content>
-	</module>
-	<module>
-		<name>
-		</name>
-		<content>
-		</content>
-	</module>
-	<module>
-		<name>
-		</name>
-		<content>
-		</content>
-	</module>
-	<module>
-		<name>
-		</name>
-		<content>
-		</content>
-	</module>
-	<module>
-		<name>
-		</name>
-		<content>
-		</content>
-	</module>
-	<module>
-		<name>
-		</name>
-		<content>
-		</content>
-	</module>
-	<module>
-		<name>
 			Degenerative spine
 		</name>
 		<content>
@@ -503,6 +437,26 @@ Not present | Present
 	</template>
 	<module>
 		<name>
+			Plain CT Start
+		</name>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+		</content>
+	</module>
+	<module>
+		<name>
 			CT Head Checklist
 		</name>
 		<content>
@@ -589,19 +543,9 @@ Not present | Present
 			CT Head
 		</title>
 		<content>
-			<h1>
-				Technique
-			</h1>
-			<text_entry label="" subtype="medium">
-			</text_entry>
-			<h1>
-				Comparison
-			</h1>
-			<text_entry label="" subtype="medium">
-			</text_entry>
-			<h1>
-				Findings
-			</h1>
+			<insert>
+				Plain CT Start
+			</insert>
 			<insert>
 				CT Head Checklist
 			</insert>
