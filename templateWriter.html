@@ -375,7 +375,6 @@
 							el.askfurtherdetails = xml[i].getAttribute("askfurtherdetails");
 							if (label) label.trim();
 
-
 							for (var n = 0; n < nodes.length; n++) {
 								if (nodes[n].nodeName == "select") {
 									var inner_text = nodes[n].innerHTML.trim();
@@ -408,9 +407,6 @@
 
 									}
 
-
-
-
 									var label = nodes[n].getAttribute("label");
 									if (label) label.trim();
 									var print_text_before = nodes[n].getAttribute("print_text_before");
@@ -440,8 +436,10 @@
 								if (this.present == "yes" || this.askfurtherdetails != "true") {
 									for (var n = 0; n < this.multi.length; n++) {
 										if (Number.isInteger(this.multi[n].selected) && this.multi[n].selected > 0) {
-											if (this.multi[n].print_text_before != "") print_text += this.multi[n]
-												.print_text_before + " ";
+											if (this.multi[n].print_text_before != "") {
+												print_text += this.multi[n].print_text_before + " ";
+											}
+											console.log(this.multi[n].selected);
 											print_text += this.multi[n].options[this.multi[n].selected].text + " ";
 											if (this.multi[n].print_text_after != "") print_text += this.multi[n]
 												.print_text_after + " ";

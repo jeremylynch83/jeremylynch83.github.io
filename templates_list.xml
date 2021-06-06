@@ -157,7 +157,7 @@ Not present | Present
 		</name>
 		<content>
 			<text_entry label="">
-				Informed consent was obtained from the patient (including risk of stroke and groin haemorrhage). 1
+				Informed consent was obtained from the patient (including risk of stroke and groin haemorrhage).
 			</text_entry>
 			<multi_select label="Puncture">
 				<select label="Local anaesthetic?">
