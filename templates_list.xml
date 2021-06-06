@@ -226,7 +226,7 @@ Not present | Present
 		</name>
 		<content>
 			<text_entry label="">
-				Informed consent was obtained from the patient (including risk of stroke and groin haemorrhage). 10 ml of 1% lidocaine was infiltrated into the puncture site superficial tissues.
+				Informed consent was obtained from the patient (including risk of stroke and groin haemorrhage). 1% lidocaine was infiltrated into the puncture site superficial tissues.
 			</text_entry>
 			<multi_select label="Puncture">
 				<select label="Side" print_text_before="A">
@@ -288,8 +288,6 @@ Not present | Present
 			<selection label="Complications">
 				There were no periprocedural complications.
 			</selection>
-			<text_entry label="" subtype="large">
-			</text_entry>
 		</content>
 	</module>
 	<template>
@@ -315,7 +313,7 @@ Not present | Present
 			<h1>
 				Findings
 			</h1>
-			<text_entry label="" subtype="medium">
+			<text_entry label="" subtype="large">
 			</text_entry>
 			<h1>
 				Conclusion
