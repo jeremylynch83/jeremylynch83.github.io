@@ -157,9 +157,12 @@ Not present | Present
 		</name>
 		<content>
 			<text_entry label="">
-				Informed consent was obtained from the patient (including risk of stroke and groin haemorrhage). 1% lidocaine was infiltrated into the puncture site superficial tissues.
+				Informed consent was obtained from the patient (including risk of stroke and groin haemorrhage). 1
 			</text_entry>
 			<multi_select label="Puncture">
+				<select label="Local anaesthetic?">
+					1% lidocaine was infiltrated into the puncture site superficial tissues.
+				</select>
 				<select label="Side" print_text_before="A">
 					right | left
 				</select>
