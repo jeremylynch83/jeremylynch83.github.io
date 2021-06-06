@@ -51,7 +51,7 @@ Not present | Present
 <multi_checkbox label="">
 <checkbox>
 </checkbox>
-</selection>
+</multi_checkbox>
 
 <text_entry label="" subtype="small">
 </text_entry>
@@ -659,6 +659,64 @@ Not present | Present
 			</h1>
 			<text_entry label="" subtype="medium">
 			</text_entry>
+		</content>
+	</template>
+	<template>
+		<name>
+			CT Head: Parenchymal Haematoma
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			CT Angiogram Intracranial
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+			<selection label="The parenchymal haematoma centered on">
+				|
+			</selection>
+			<text_entry label="" subtype="large">
+				The large parenchymal haematoma centered on ... is again demonstrated. There is surrounding oedema. There is mass effect, with contralateral shift of midline structures and early transuncal herniation. Dilatation of the ... temporal horn is noted suggestive of early hydrocephalus.
+				
+				[A slender extra-axial haematoma is also noted overlying the left cerebral hemisphere. ]
+				
+				[There is no ventricular spill.]
+				
+				[There has been no rebleed since the earlier study. There is slightly more swelling and mass effect.]
+				
+				[Vein thrombosis]
+				
+				[Fluid levels]
+				
+				[Evidence of tumour]
+			</text_entry>
+			<insert>
+				CT Head Checklist
+			</insert>
+			<insert>
+				CT Angiogram Intracranial
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<selection label="">
+				Surgical review is warranted
+			</selection>
 		</content>
 	</template>
 	<template>
