@@ -401,7 +401,7 @@
 										});
 										options.push({
 											text: inner_text.trim(),
-											value: 0
+											value: 1
 										})
 										type = "multi";
 
@@ -435,11 +435,11 @@
 								var print_text = "";
 								if (this.present == "yes" || this.askfurtherdetails != "true") {
 									for (var n = 0; n < this.multi.length; n++) {
+
 										if (Number.isInteger(this.multi[n].selected) && this.multi[n].selected > 0) {
 											if (this.multi[n].print_text_before != "") {
 												print_text += this.multi[n].print_text_before + " ";
 											}
-											console.log(this.multi[n].selected);
 											print_text += this.multi[n].options[this.multi[n].selected].text + " ";
 											if (this.multi[n].print_text_after != "") print_text += this.multi[n]
 												.print_text_after + " ";

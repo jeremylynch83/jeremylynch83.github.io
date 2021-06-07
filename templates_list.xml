@@ -156,8 +156,8 @@ Not present | Present
 			Angio technique
 		</name>
 		<content>
-			<text_entry label="">
-				Informed consent was obtained from the patient (including risk of stroke and groin haemorrhage).
+			<text_entry label="Consent">
+				Informed consent was obtained from the patient including the risk of stroke, puncture site haemorrhage and numbness, and peripheral vascular occlusion.
 			</text_entry>
 			<multi_select label="Puncture">
 				<select label="Local anaesthetic?">
