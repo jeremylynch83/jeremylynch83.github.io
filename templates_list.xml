@@ -143,8 +143,8 @@ Not present | Present
 			</text_entry>
 			<text_entry label="Assistant/s" subtype="small">
 			</text_entry>
-			<selection label="Anaesthesia" print_label="true" showdetailson="1000">
-				General | Conscious sedation | Local
+			<selection label="Anaesthesia" print_label="true" showdetailson="0">
+				General anaesthesia | Conscious sedation | Local anaesthesia
 			</selection>
 		</content>
 	</module>
