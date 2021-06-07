@@ -254,14 +254,14 @@ Not present | Present
 				Angio technique
 			</insert>
 			<h1>
-				Findings
-			</h1>
-			<text_entry label="" subtype="large">
-			</text_entry>
-			<h1>
 				Comparison
 			</h1>
 			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+			<text_entry label="" subtype="large">
 			</text_entry>
 			<h1>
 				Conclusion
