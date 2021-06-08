@@ -564,6 +564,9 @@ Not present | Present
 			<insert>
 				Plain CT Start
 			</insert>
+			<h2>
+				Acute pathology
+			</h2>
 			<multi_radio>
 				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
 					Not present | Present
@@ -578,6 +581,11 @@ Not present | Present
 					Not present | Present
 				</radio>
 			</multi_radio>
+			<text_entry label="Other pathology" subtype="medium">
+			</text_entry>
+			<h2>
+				Checklist
+			</h2>
 			<insert>
 				CT Head Checklist
 			</insert>

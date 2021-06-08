@@ -21,12 +21,17 @@ caption {
 .body {
     padding-left: 16px;
     padding-right: 14px;
+
+}
+
+.form-group {
+    margin-bottom: 5px;
+
 }
 
 .row {
     display: flex;
     background-color: rgb(250, 250, 250);
-    margin-bottom: 5px;
 }
 
 
@@ -42,7 +47,6 @@ caption {
 
 .element {
     flex: 100%;
-    padding-bottom: 0px;
 
 }
 
@@ -52,35 +56,28 @@ caption {
     background-color: transparent
 }
 
+h1,
+h2,
+h3 {
+    color: rgb(45, 117, 211);
+    border-top-style: solid;
+}
 
 h1 {
-    border-top-style: solid;
     border-top-width: 5px;
-    border-top-color: rgb(89, 83, 184);
-
     font-size: x-large;
     margin-top: 25px;
-    color: rgb(89, 83, 184)
 }
 
 h2 {
-    border-top-style: solid;
     border-top-width: 3px;
-    border-top-color: rgb(89, 83, 184);
     margin-top: 15px;
     font-size: large;
     text-transform: uppercase;
-
-    color: rgb(89, 83, 184)
 }
 
 h3 {
-    border-top-style: solid;
     border-top-width: 1px;
-
-    border-top-color: rgb(89, 83, 184);
     margin-top: 10px;
     font-size: medium;
-
-    color: rgb(89, 83, 184);
 }

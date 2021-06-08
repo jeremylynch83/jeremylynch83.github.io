@@ -77,8 +77,6 @@
 			</b-form-group>
 
 			<b-form-group v-if="template != ''">
-
-
 				<b-card bg-variant="light">
 					<b-button variant="success" @click="copyReport()">Copy Text</b-button>
 
@@ -119,10 +117,10 @@
 								<div class="element">
 
 									<!--  TEXT TYPE -->
-									<label v-if="n.type == 'text'">{{n.text}}</label>
+									<label v-if=" n.type=='text'">{{n.text}}</label>
 
 									<!-- FREE TEXT TYPE -->
-									<b-form-group :label="n.label" v-if="n.type == 'free_text'" :disabled="n.disabled">
+									<b-form-group :label=" n.label" v-if="n.type == 'free_text'" :disabled="n.disabled">
 										<b-form-textarea :value="n.text" @change="n.text = $event">
 										</b-form-textarea>
 									</b-form-group>
@@ -165,7 +163,7 @@
 									</b-form-group>
 
 									<!-- MULTISELECTION TYPE -->
-									<b-form-group v-if="n.type=='multi_select'" class="indent_bug" class="p-0 m-0">
+									<b-form-group v-if="n.type=='multi_select'" class="indent_bug">
 										<b-row>
 											<b-col cols=" 1">
 												<label>{{n.label}}</label>
