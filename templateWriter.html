@@ -131,8 +131,8 @@
 
 									<!-- TEXT ENTRY TYPE SMALL/MEDIUM -->
 									<b-form-group :disabled="n.disabled" v-if="n.type == 'text_entry'">
-										<b-row align-v="center" v-if="n.no_label != true">
-											<b-col md="auto">
+										<b-row align-v="center">
+											<b-col md="auto" v-if="n.no_label != true">
 												<label>{{n.label}}</label>
 											</b-col>
 											<b-col>
