@@ -765,7 +765,9 @@
 
 				copyReport: function () {
 					var copyText = "";
-					copyText += this.template.title.trim();
+					copyText += this.template.title.trim() + "\n\n";
+					copyText += "CLINICAL INDICATION:\n" + document.getElementById("indication_text").value;
+
 
 					for (var n = 0; n < this.templateForm.length; n++) {
 						copyText += this.templateForm[n].printContents();
