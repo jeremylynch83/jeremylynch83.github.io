@@ -496,11 +496,11 @@ Not present | Present
 				Chronic pathology
 			</h2>
 			<multi_select label="White matter changes" askfurtherdetails="true">
-				<select label="Severity" print_text_before="which is non-specific but may represent a" print_text_after="burden of small vessel disease">
-					mild | moderate | severe
-				</select>
 				<select label="Location" print_text_before="There is" print_text_after="white matter hypodensity">
 					periventricular | deep white matter | pontine | periventricular and deep white matter | generalised
+				</select>
+				<select label="Severity" print_text_before="which is non-specific but may represent a" print_text_after="burden of small vessel disease">
+					mild | moderate | severe
 				</select>
 			</multi_select>
 			<multi_select label="Cerebral atrophy" askfurtherdetails="true">
