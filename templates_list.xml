@@ -286,7 +286,7 @@ Not present | Present
 	</template>
 	<template>
 		<name>
-			MRI Lumbar Spine
+			MRI Lumbar Spine Non-Contrast: Back Pain
 		</name>
 		<type>
 			Diagnostic
@@ -299,6 +299,7 @@ Not present | Present
 				Technique
 			</h1>
 			<text_entry label="" subtype="small">
+				MR images were acquired of the spine without intravenous contrast.
 			</text_entry>
 			<h1>
 				Comparison
