@@ -477,6 +477,8 @@ Not present | Present
 			</h1>
 			<text_entry label="" subtype="small">
 			</text_entry>
+			<text_entry label="Main operators" subtype="small">
+			</text_entry>
 			<h1>
 				Comparison
 			</h1>
@@ -932,7 +934,7 @@ Not present | Present
 			<h1>
 				Technique
 			</h1>
-			<text_entry label="jj" subtype="small">
+			<text_entry label="" subtype="small">
 			</text_entry>
 			<h1>
 				Comparison
