@@ -492,7 +492,7 @@ Not present | Present
 			CT Head Checklist
 		</name>
 		<content>
-			<h2>
+			<h2 options="dont_print">
 				Chronic pathology
 			</h2>
 			<multi_select label="White matter changes" askfurtherdetails="true">
