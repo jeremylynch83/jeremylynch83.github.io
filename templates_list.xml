@@ -139,9 +139,9 @@ Not present | Present
 			Angio header
 		</name>
 		<content>
-			<text_entry label="Main operator/s" subtype="small">
+			<text_entry label="Main operators" subtype="small">
 			</text_entry>
-			<text_entry label="Assistant/s" subtype="small">
+			<text_entry label="Assistants" subtype="small">
 			</text_entry>
 			<selection label="Anaesthesia" print_label="true" showdetailson="0">
 				General anaesthesia | Conscious sedation | Local anaesthesia
@@ -173,6 +173,17 @@ Not present | Present
 					Berenstein catheter | Simmons-2 catheter | Other
 				</select>
 			</multi_select>
+			<multi_checkbox label="An intra-arterial cocktail was infused via the sheath consisting of:">
+				<checkbox>
+					Heparin
+				</checkbox>
+				<checkbox>
+					Verapamil
+				</checkbox>
+				<checkbox>
+					Nitroglycerin
+				</checkbox>
+			</multi_checkbox>
 			<multi_checkbox label="Digital subtraction angiography was performed via:">
 				<checkbox>
 					Right common carotid

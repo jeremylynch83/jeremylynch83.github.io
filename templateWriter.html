@@ -77,31 +77,34 @@
 			</b-form-group>
 
 			<b-form-group v-if="template != ''">
-				<b-button variant="success" @click="copyReport()">Copy Text</b-button>
-
-				<h1>
-					{{template.title}}
-				</h1>
 
 
-				<b-form-group v-if="template != ''">
+				<b-card bg-variant="light">
+					<b-button variant="success" @click="copyReport()">Copy Text</b-button>
 
-					<h2>CLINICAL INDICATION:</h2>
+					<h1>
+						{{template.title}}
+					</h1>
 
-					<b-form-textarea id="indication_text" placeholder="Enter text">
-					</b-form-textarea>
-				</b-form-group>
 
-				<template v-for="n in templateForm">
-					<!-- HEADER TYPE -->
-					<h2 v-if="n.type == 'h1'">{{n.label}}</h2>
-					<h3 v-if="n.type == 'h2'">{{n.label}}</h3>
+					<b-form-group v-if="template != ''">
 
-					<div class="body">
+						<h2>CLINICAL INDICATION:</h2>
 
-						<div class="row">
+						<b-form-textarea id="indication_text" placeholder="Enter text">
+						</b-form-textarea>
+					</b-form-group>
 
-							<div class="control">
+					<template v-for=" n in templateForm">
+
+						<!-- HEADER TYPE -->
+						<h2 v-if="n.type == 'h1'">{{n.label}}</h2>
+						<h3 v-if="n.type == 'h2'">{{n.label}}</h3>
+
+						<div class="body">
+							<div class="row">
+
+								<!--<div class="control">
 								<b-button-group vertical v-if="n.type != 'h2' && n.type != 'h1'">
 									<b-form-checkbox v-model="n.disabled" :value=false :unchecked-value=true size="sm">
 										Enable
@@ -112,106 +115,126 @@
 									<b-button size="sm" variant="danger" @click="deleteElement(n)">Delete
 									</b-button>
 								</b-button-group>
+						</div>--->
+								<div class="element">
 
-							</div>
-							<div class="element">
+									<!--  TEXT TYPE -->
+									<label v-if="n.type == 'text'">{{n.text}}</label>
 
-
-								<!--  TEXT TYPE -->
-								<label v-if="n.type == 'text'">{{n.text}}</label>
-
-
-								<!-- FREE TEXT TYPE -->
-								<b-form-group :label="n.label" v-if="n.type == 'free_text'" :disabled="n.disabled">
-									<b-form-textarea :value="n.text" @change="n.text = $event">
-									</b-form-textarea>
-								</b-form-group>
-
-								<!-- TEXT ENTRY TYPE MEDIUM -->
-
-								<!-- TEXT ENTRY TYPE SMALL/MEDIUM -->
-								<b-form-group :disabled="n.disabled" v-if="n.type == 'text_entry'">
-									<label v-if="n.label != ''">{{n.label}}</label>
-
-									<b-form-input :value="n.text" @change="n.text = $event"
-										v-if="n.subtype  == 'small'"></b-form-input>
-									<b-form-textarea :value="n.text" @change="n.text = $event"
-										v-if="n.subtype  == 'medium'">
-									</b-form-textarea>
-									<b-form-textarea :value="n.text" @change="n.text = $event" rows="8"
-										v-if="n.subtype  == 'large'">
-									</b-form-textarea>
-								</b-form-group>
-
-								<!-- SELECTION TYPE -->
-								<b-form-group :label="n.label" :disabled="n.disabled" v-if="n.type == 'selection'">
-									<b-form-select v-model="n.selected" :options="n.options"
-										@input="n.details = Boolean(n.selected >= n.showdetailson)">
-									</b-form-select>
-								</b-form-group>
-
-								<!-- MULTISELECTION TYPE -->
-								<b-form-group v-if="n.type=='multi_select'">
-									<label>{{n.label}}</label>
-
-									<b-form-group>
-										<b-form-radio-group v-if="n.askfurtherdetails =='true'"
-											:options="n.present_options" v-model="n.present"
-											class="mb-2 mr-sm-2 mb-sm-0">
-										</b-form-radio-group>
+									<!-- FREE TEXT TYPE -->
+									<b-form-group :label="n.label" v-if="n.type == 'free_text'" :disabled="n.disabled">
+										<b-form-textarea :value="n.text" @change="n.text = $event">
+										</b-form-textarea>
 									</b-form-group>
 
-									<template v-for="nn in n.multi">
-										<b-form-group
-											v-if="nn.options != '' && nn.type == 'multi' && n.present == 'yes' || n.askfurtherdetails !='true'"
-											:label="nn.label" label-cols="2">
-											<b-form-select :options="nn.options" v-model="nn.selected">
-											</b-form-select>
+									<!-- TEXT ENTRY TYPE MEDIUM -->
 
-										</b-form-group>
-									</template>
-								</b-form-group>
+									<!-- TEXT ENTRY TYPE SMALL/MEDIUM -->
+									<b-form-group :disabled="n.disabled" v-if="n.type == 'text_entry'">
+										<b-row align-v="center" v-if="n.no_label != true">
+											<b-col md="auto">
+												<label>{{n.label}}</label>
+											</b-col>
+											<b-col>
+												<b-form-input :value="n.text" @change="n.text = $event"
+													v-if="n.subtype  == 'small'">
+												</b-form-input>
+											</b-col>
+										</b-row>
+										<b-form-textarea :value="n.text" @change="n.text = $event"
+											v-if="n.subtype  == 'medium'">
+										</b-form-textarea>
+										<b-form-textarea :value="n.text" @change="n.text = $event" rows="8"
+											v-if="n.subtype  == 'large'">
+										</b-form-textarea>
+									</b-form-group>
 
-								<!-- MULTIRADIO TYPE -->
-								<b-form-group v-if="n.type == 'multi_radio'" :disabled="n.disabled">
-									<template v-for="nn in n.multi">
+									<!-- SELECTION TYPE -->
+									<b-form-group :disabled="n.disabled" v-if="n.type == 'selection'">
+										<b-row align-v="center">
+											<b-col md="auto">
+												<label> {{n.label}}
+												</label>
+											</b-col>
+											<b-col>
+												<b-form-select v-model="n.selected" :options="n.options"
+													@input="n.details = Boolean(n.selected >= n.showdetailson)">
+												</b-form-select>
+											</b-col>
+										</b-row>
+									</b-form-group>
 
-										<b-form inline v-if="nn.options != '' && nn.type == 'multi'">
-											<label class="mb-2 mr-sm-2 mb-sm-0">{{nn.label}}</label>
-											<b-form-radio-group :options="nn.options" v-model="nn.selected"
-												class="mb-2 mr-sm-2 mb-sm-0">
-											</b-form-radio-group>
-										</b-form>
-										<b-form-group v-show="nn.selected >= nn.showdetailson">
-											<b-form-textarea :value="nn.details" @change="nn.details = $event">
-											</b-form-textarea>
-										</b-form-group>
+									<!-- MULTISELECTION TYPE -->
+									<b-form-group v-if="n.type=='multi_select'" class="indent_bug">
+										<b-row>
+											<b-col cols=" 1">
+												<label>{{n.label}}</label>
+											</b-col>
+											<b-col>
 
-									</template>
-								</b-form-group>
+												<b-form-group>
+													<b-form-radio-group v-if="n.askfurtherdetails =='true'"
+														:options="n.present_options" v-model="n.present"
+														class="mb-2 mr-sm-2 mb-sm-0">
+													</b-form-radio-group>
+												</b-form-group>
+											</b-col>
+										</b-row>
 
-								<!-- MULTI CHECKBOX TYPE -->
-								<b-form-group v-if="n.type == 'multi_checkbox'" :disabled="n.disabled">
-									<label>{{n.label}}</label>
-									<template v-for="nn in n.multi">
-										<b-form-checkbox v-model="nn.selected">
-											{{nn.text}}
-										</b-form-checkbox>
-									</template>
-								</b-form-group>
+										<template v-for="nn in n.multi">
+											<b-form-group
+												v-if="nn.options != '' && nn.type == 'multi' && n.present == 'yes' || n.askfurtherdetails !='true'"
+												:label="nn.label" label-cols="2">
+												<b-form-select :options="nn.options" v-model="nn.selected">
+												</b-form-select>
 
-								<!-- DETAILS BOX -->
-								<b-form-group v-show="n.details || n.present == 'yes'" :disabled="n.disabled">
-									<b-form-textarea :value="n.details_text" @change="n.details_text = $event"
-										placeholder="Enter free text">
-										Details
-									</b-form-textarea>
-								</b-form-group>
+											</b-form-group>
+										</template>
+									</b-form-group>
 
+									<!-- MULTIRADIO TYPE -->
+									<b-form-group v-if="n.type == 'multi_radio'" :disabled="n.disabled">
+										<template v-for="nn in n.multi">
+
+											<b-form inline v-if="nn.options != '' && nn.type == 'multi'">
+												<label class="mb-2 mr-sm-2 mb-sm-0">{{nn.label}}</label>
+												<b-form-radio-group :options="nn.options" v-model="nn.selected"
+													class="mb-2 mr-sm-2 mb-sm-0">
+												</b-form-radio-group>
+											</b-form>
+											<b-form-group v-show="nn.selected >= nn.showdetailson">
+												<b-form-textarea :value="nn.details" @change="nn.details = $event">
+												</b-form-textarea>
+											</b-form-group>
+
+										</template>
+									</b-form-group>
+
+									<!-- MULTI CHECKBOX TYPE -->
+									<b-form-group v-if="n.type == 'multi_checkbox'" :disabled="n.disabled">
+										<label>{{n.label}}</label>
+										<template v-for="nn in n.multi">
+											<b-form-checkbox v-model="nn.selected">
+												{{nn.text}}
+											</b-form-checkbox>
+										</template>
+									</b-form-group>
+
+									<!-- DETAILS BOX -->
+									<b-form-group v-show="n.details || n.present == 'yes'" :disabled="n.disabled">
+										<b-form-textarea :value="n.details_text" @change="n.details_text = $event"
+											placeholder="Enter free text">
+											Details
+										</b-form-textarea>
+									</b-form-group>
+
+								</div>
 							</div>
 						</div>
-					</div>
-				</template>
+
+					</template>
+
+				</b-card>
 
 			</b-form-group>
 		</b-container>
@@ -284,6 +307,9 @@
 					el.sentencecontinues = xml[i].getAttribute("sentencecontinues");
 					var label = xml[i].getAttribute("label");
 					if (label) el.label = label;
+					else el.no_label = true;
+
+
 
 					el.printContents = function () {
 						return "";
