@@ -298,12 +298,12 @@ Not present | Present
 			<h1>
 				Technique
 			</h1>
-			<text_entry label="" subtype="medium">
+			<text_entry label="" subtype="small">
 			</text_entry>
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="medium">
+			<text_entry label="" subtype="small">
 			</text_entry>
 			<h1>
 				Findings
@@ -396,12 +396,12 @@ Not present | Present
 			<h1>
 				Technique
 			</h1>
-			<text_entry label="" subtype="medium">
+			<text_entry label="" subtype="small">
 			</text_entry>
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="medium">
+			<text_entry label="" subtype="small">
 			</text_entry>
 			<h1>
 				Findings
@@ -474,12 +474,12 @@ Not present | Present
 			<h1>
 				Technique
 			</h1>
-			<text_entry label="" subtype="medium">
+			<text_entry label="" subtype="small">
 			</text_entry>
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="medium">
+			<text_entry label="" subtype="small">
 			</text_entry>
 			<h1>
 				Findings
@@ -693,12 +693,12 @@ Not present | Present
 			<h1>
 				Technique
 			</h1>
-			<text_entry label="" subtype="medium">
+			<text_entry label="" subtype="small">
 			</text_entry>
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="medium">
+			<text_entry label="" subtype="small">
 			</text_entry>
 			<h1>
 				Findings
@@ -744,12 +744,12 @@ Not present | Present
 			<h1>
 				Technique
 			</h1>
-			<text_entry label="" subtype="medium">
+			<text_entry label="" subtype="small">
 			</text_entry>
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="medium">
+			<text_entry label="" subtype="small">
 			</text_entry>
 			<h1>
 				Findings
@@ -807,12 +807,12 @@ Not present | Present
 			<h1>
 				Technique
 			</h1>
-			<text_entry label="" subtype="medium">
+			<text_entry label="" subtype="small">
 			</text_entry>
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="medium">
+			<text_entry label="" subtype="small">
 			</text_entry>
 			<h1>
 				Findings
@@ -847,12 +847,12 @@ Not present | Present
 			<h1>
 				Technique
 			</h1>
-			<text_entry label="" subtype="medium">
+			<text_entry label="" subtype="small">
 			</text_entry>
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="medium">
+			<text_entry label="" subtype="small">
 			</text_entry>
 			<h1>
 				Findings
@@ -891,12 +891,12 @@ Not present | Present
 			<h1>
 				Technique
 			</h1>
-			<text_entry label="" subtype="medium">
+			<text_entry label="" subtype="small">
 			</text_entry>
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="medium">
+			<text_entry label="" subtype="small">
 			</text_entry>
 			<h1>
 				Findings
@@ -931,12 +931,12 @@ Not present | Present
 			<h1>
 				Technique
 			</h1>
-			<text_entry label="" subtype="medium">
+			<text_entry label="" subtype="small">
 			</text_entry>
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="medium">
+			<text_entry label="" subtype="small">
 			</text_entry>
 			<h1>
 				Findings
