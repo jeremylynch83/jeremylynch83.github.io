@@ -492,6 +492,9 @@ Not present | Present
 			CT Head Checklist
 		</name>
 		<content>
+			<h2>
+				Chronic pathology
+			</h2>
 			<multi_select label="White matter changes" askfurtherdetails="true">
 				<select label="Severity" print_text_before="There is periventricular and deep white matter hypodensity which is non-specific but may represent a" print_text_after="burden of small vessel disease">
 					mild | moderate | severe
@@ -516,6 +519,9 @@ Not present | Present
 			<selection label="Bones">
 				There are no skull fractures or destructive bony lesions
 			</selection>
+			<h2>
+				Checklist
+			</h2>
 			<multi_radio>
 				<radio label="Venous sinus hyperdensity" normaltext="">
 					Normal | Abnormal
@@ -581,11 +587,8 @@ Not present | Present
 					Not present | Present
 				</radio>
 			</multi_radio>
-			<text_entry label="Other pathology" subtype="medium">
+			<text_entry subtype="medium">
 			</text_entry>
-			<h2>
-				Checklist
-			</h2>
 			<insert>
 				CT Head Checklist
 			</insert>
