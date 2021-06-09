@@ -573,7 +573,7 @@ Not present | Present
 			<insert>
 				Plain CT Start
 			</insert>
-			<h2>
+			<h2 flags="dont_print">
 				Acute pathology
 			</h2>
 			<multi_radio>

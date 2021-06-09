@@ -1,6 +1,9 @@
 <!-- TODO
 
-	* Fix normaltext thing
+	* Implement options properly
+	* Hide element in print
+	* Add free text to multi_select
+	* More templates
 	* Text substitutions to shorten text
 	* Associated info display
 	* Copy templates from radReport?
@@ -211,11 +214,17 @@
 									<!-- MULTI CHECKBOX TYPE -->
 									<b-form-group v-if="n.type == 'multi_checkbox'" :disabled="n.disabled">
 										<label>{{n.label}}</label>
-										<template v-for="nn in n.multi">
-											<b-form-checkbox v-model="nn.selected">
-												{{nn.text}}
-											</b-form-checkbox>
-										</template>
+										<b-container class="bv-example-row">
+											<b-row cols="1" cols-sm="2" cols-md="3">
+												<template v-for="nn in n.multi">
+													<b-col>
+														<b-form-checkbox v-model="nn.selected">
+															{{nn.text}}
+														</b-form-checkbox>
+													</b-col>
+												</template>
+											</b-row>
+										</b-container>
 									</b-form-group>
 
 									<!-- DETAILS BOX -->
@@ -299,6 +308,10 @@
 				if (xml[i].nodeName != "#text") {
 					var el = {};
 					el.type = xml[i].nodeName.trim();
+					var flags = xml[i].getAttribute("flags");
+					if (flags) el.flags = flags;
+					else el.flags = "";
+
 					var disabled = xml[i].getAttribute("disabled");
 					if (disabled != null && disabled == "true") el.disabled = true;
 					else el.disabled = false;
@@ -326,8 +339,10 @@
 							elements.push(el);
 							el.printContents = function () {
 								var print_text = "";
-								if (this.type == "h1") print_text = "\n\n" + this.label + "\n";
-								if (this.type == "h2") print_text = "\n\n" + this.label;
+								if (!this.flags.includes("dont_print")) {
+									if (this.type == "h1") print_text = "\n\n" + this.label + "\n";
+									if (this.type == "h2") print_text = "\n\n" + this.label;
+								}
 								return print_text;
 							}
 							break;
@@ -352,7 +367,8 @@
 									else if (this.label) print_text += ": " + this.text;
 									else print_text += this.text
 									print_text += this.details_text;
-									if ((this.text + this.details_text) != "") print_text = format_sentence(print_text);
+									if ((this.text + this.details_text) != "") print_text = format_sentence(
+										print_text);
 								}
 								return print_text;
 							}
@@ -460,11 +476,13 @@
 								if (this.present == "yes" || this.askfurtherdetails != "true") {
 									for (var n = 0; n < this.multi.length; n++) {
 
-										if (Number.isInteger(this.multi[n].selected) && this.multi[n].selected > 0) {
+										if (Number.isInteger(this.multi[n].selected) && this.multi[n].selected >
+											0) {
 											if (this.multi[n].print_text_before != "") {
 												print_text += this.multi[n].print_text_before + " ";
 											}
-											print_text += this.multi[n].options[this.multi[n].selected].text + " ";
+											print_text += this.multi[n].options[this.multi[n].selected].text +
+												" ";
 											if (this.multi[n].print_text_after != "") print_text += this.multi[n]
 												.print_text_after + " ";
 										}
