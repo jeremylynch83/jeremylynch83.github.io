@@ -301,7 +301,7 @@ Not present | Present
 			<text_entry label="Consent">
 				Written consent included the risks of infection, bleeding, CSF leak, damage to nerve roots resulting in bladder/bowel incontinence and weakness.
 			</text_entry>
-			<multi_select label="Puncture">
+			<multi_select>
 				<dropdown label="Local anaesthetic?">
 					1% lidocaine was infiltrated into the puncture site superficial tissues.
 				</dropdown>
@@ -320,7 +320,7 @@ Not present | Present
 				Conclusion
 			</h1>
 			<selection label="Normal">
-				Normal cerebral angiogram
+				Uncomplicated lumbar puncture.
 			</selection>
 			<text_entry label="" subtype="medium">
 			</text_entry>
