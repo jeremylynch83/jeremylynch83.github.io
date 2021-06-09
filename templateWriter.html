@@ -180,20 +180,28 @@
 											</b-col>
 										</b-row>
 
-										<template v-for="nn in n.multi">
-											<b-form-group
-												v-if="nn.options != '' && nn.type == 'dropdown' && n.present == 'yes' || n.askfurtherdetails !='true'"
-												:label="nn.label" label-cols="2">
-												<b-form-select :options="nn.options" v-model="nn.selected">
-												</b-form-select>
-											</b-form-group>
+										<b-container class="bv-example-row">
+											<b-row cols="1" cols-sm="2">
 
-											<b-form-group v-if="nn.type == 'free_text' " :label="nn.label"
-												label-cols="2">
-												<b-form-input :value="nn.text" @change="nn.text = $event">
-												</b-form-input>
-											</b-form-group>
-										</template>
+												<template v-for="nn in n.multi">
+													<b-col>
+
+														<b-form-group
+															v-if="nn.type == 'dropdown' && (nn.options != '' && n.present == 'yes' || n.askfurtherdetails !='true')"
+															:label="nn.label" label-cols="3">
+															<b-form-select :options="nn.options" v-model="nn.selected">
+															</b-form-select>
+														</b-form-group>
+
+														<b-form-group v-if="nn.type == 'free_text' " :label="nn.label"
+															label-cols="3">
+															<b-form-input :value="nn.text" @change="nn.text = $event">
+															</b-form-input>
+														</b-form-group>
+													</b-col>
+												</template>
+											</b-row>
+										</b-container>
 									</b-form-group>
 
 									<!-- MULTIRADIO TYPE -->
@@ -419,65 +427,13 @@
 
 
 							for (var n = 0; n < nodes.length; n++) {
-								var type = nodes[n].nodeName.trim();
-								var inner_text = nodes[n].innerHTML;
-								if (inner_text) inner_text = inner_text.trim();
-								if (label) label.trim();
-								var multi = {};
-								text = "";
-								selection = "";
+								if (nodes[n].nodeName != "#text") {
 
-								if (type == "free_text") {
-									printContents = function () {
-										var print_text = "";
-
-										return print_text;
-									}
-
-									el.multi.push({
-										label: label,
-										type: type,
-										print_text_before: print_text_before,
-										print_text_after: print_text_after,
-										showdetailson: showdetailson,
-										printContents: printContents
-									});
-								}
-								if (type == "dropdown") {
-									var print_text_before = nodes[n].getAttribute("print_text_before");
-									if (print_text_before) print_text_before.trim();
-									else print_text_before = ""
-									var print_text_after = nodes[n].getAttribute("print_text_after");
-									if (print_text_after) print_text_after.trim();
-									else print_text_after = ""
-
-									var options = [];
-									var selected = null;
-									if (inner_text.includes("|")) {
-										op_values = inner_text.split("|");
-										options.push({ // Add a non-selection first
-											text: "",
-											value: 0
-										});
-										for (var x = 0; x < op_values.length; x++) {
-											options.push({
-												text: op_values[x].trim(),
-												value: x + 1 // Therefore value needs to start at 1
-											})
-										}
-									} else {
-										options.push({ // Add a non-selection first
-											text: "",
-											value: 0
-										});
-										options.push({
-											text: inner_text.trim(),
-											value: 1
-										})
-									}
-
+									var type = nodes[n].nodeName.trim();
 									var label = nodes[n].getAttribute("label");
 									if (label) label.trim();
+									var inner_text = nodes[n].innerHTML;
+									if (inner_text) inner_text = inner_text.trim();
 									var print_text_before = nodes[n].getAttribute("print_text_before");
 									if (print_text_before) print_text_before.trim();
 									else print_text_before = ""
@@ -486,34 +442,99 @@
 									else print_text_after = ""
 									var multi = {};
 									text = "";
-									label = label.trim();
 									selection = "";
 
-									printContents = function () {
-										var print_text = "";
-
-										if (Number.isInteger(this.selected) && this.selected >
-											0) {
+									if (type == "free_text") {
+										printContents = function () {
+											var print_text = "";
 											if (this.print_text_before != "") {
-												print_text += this.print_text_before + " ";
+												print_text += this.print_text_before + " " + this.text;
+											} else {
+												print_text += this.label + ": " + this.text;
 											}
-											print_text += this.options[this.selected].text +
-												" ";
-											if (this.print_text_after != "") print_text += this.print_text_after + " ";
-										}
-										return print_text;
-									}
+											if (this.print_text_after != "") {
+												print_text += " " + this.print_text_after;
+											}
 
-									el.multi.push({
-										label: label,
-										options: options,
-										type: type,
-										print_text_before: print_text_before,
-										print_text_after: print_text_after,
-										selected: selected,
-										showdetailson: showdetailson,
-										printContents: printContents
-									});
+											return format_sentence(print_text);
+										}
+
+										el.multi.push({
+											text: inner_text,
+											label: label,
+											type: type,
+											print_text_before: print_text_before,
+											print_text_after: print_text_after,
+											showdetailson: showdetailson,
+											printContents: printContents
+										});
+									}
+									if (type == "dropdown") {
+
+										var options = [];
+										var selected = null;
+										if (inner_text.includes("|")) {
+											op_values = inner_text.split("|");
+											options.push({ // Add a non-selection first
+												text: "",
+												value: 0
+											});
+											for (var x = 0; x < op_values.length; x++) {
+												options.push({
+													text: op_values[x].trim(),
+													value: x + 1 // Therefore value needs to start at 1
+												})
+											}
+										} else {
+											options.push({ // Add a non-selection first
+												text: "",
+												value: 0
+											});
+											options.push({
+												text: inner_text.trim(),
+												value: 1
+											})
+										}
+
+
+										var print_text_before = nodes[n].getAttribute("print_text_before");
+										if (print_text_before) print_text_before.trim();
+										else print_text_before = ""
+										var print_text_after = nodes[n].getAttribute("print_text_after");
+										if (print_text_after) print_text_after.trim();
+										else print_text_after = ""
+										var multi = {};
+										text = "";
+										label = label.trim();
+										selection = "";
+
+										printContents = function () {
+											var print_text = "";
+
+											if (Number.isInteger(this.selected) && this.selected >
+												0) {
+												if (this.print_text_before != "") {
+													print_text += this.print_text_before + " ";
+												}
+												print_text += this.options[this.selected].text +
+													" ";
+												if (this.print_text_after != "") print_text += this.print_text_after +
+													" ";
+											}
+											return print_text;
+										}
+
+										el.multi.push({
+											label: label,
+											options: options,
+											type: type,
+											print_text_before: print_text_before,
+											print_text_after: print_text_after,
+											selected: selected,
+											showdetailson: showdetailson,
+											printContents: printContents
+										});
+									}
 								}
 							}
 							el.printContents = function () {

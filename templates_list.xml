@@ -157,8 +157,6 @@ Not present | Present
 				Informed consent was obtained from the patient including the risk of stroke, puncture site haemorrhage and numbness, and peripheral vascular occlusion.
 			</text_entry>
 			<multi_select label="Puncture">
-				<free_text label="test">
-				</free_text>
 				<dropdown label="Local anaesthetic?">
 					1% lidocaine was infiltrated into the puncture site superficial tissues.
 				</dropdown>
@@ -276,6 +274,48 @@ Not present | Present
 			</h1>
 			<text_entry label="" subtype="large">
 			</text_entry>
+			<h1>
+				Conclusion
+			</h1>
+			<selection label="Normal">
+				Normal cerebral angiogram
+			</selection>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+	<template>
+		<name>
+			Lumbar Puncture
+		</name>
+		<type>
+			Angiography
+		</type>
+		<title>
+			Lumbar Puncture
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="Consent">
+				Written consent included the risks of infection, bleeding, CSF leak, damage to nerve roots resulting in bladder/bowel incontinence and weakness.
+			</text_entry>
+			<multi_select label="Puncture">
+				<dropdown label="Local anaesthetic?">
+					1% lidocaine was infiltrated into the puncture site superficial tissues.
+				</dropdown>
+				<free_text label="Opening pressure" print_text_after="mmCSF">
+				</free_text>
+				<free_text label="Closing pressure" print_text_after="mmCSF">
+				</free_text>
+			</multi_select>
+			<selection label="Complications">
+				There were no periprocedural complications.
+			</selection>
+			<selection label="Post-procedure">
+				Requires 1-2 hours bed rest flat on back.
+			</selection>
 			<h1>
 				Conclusion
 			</h1>
