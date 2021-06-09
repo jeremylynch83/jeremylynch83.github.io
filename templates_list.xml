@@ -157,6 +157,8 @@ Not present | Present
 				Informed consent was obtained from the patient including the risk of stroke, puncture site haemorrhage and numbness, and peripheral vascular occlusion.
 			</text_entry>
 			<multi_select label="Puncture">
+				<free_text>
+				</free_text>
 				<dropdown label="Local anaesthetic?">
 					1% lidocaine was infiltrated into the puncture site superficial tissues.
 				</dropdown>

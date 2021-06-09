@@ -419,10 +419,10 @@
 							if (label) label.trim();
 
 							for (var n = 0; n < nodes.length; n++) {
-								if (nodes[n].nodeName == "dropdown") {
+								var type = nodes[n].nodeName.trim();
+								if (type == "dropdown") {
 									var inner_text = nodes[n].innerHTML.trim();
 									var options = [];
-									var type = "";
 									var selected = null;
 									if (inner_text.includes("|")) {
 										op_values = inner_text.split("|");
@@ -436,7 +436,6 @@
 												value: x + 1 // Therefore value needs to start at 1
 											})
 										}
-										type = "dropdown";
 									} else {
 										options.push({ // Add a non-selection first
 											text: "",
@@ -446,7 +445,6 @@
 											text: inner_text.trim(),
 											value: 1
 										})
-										type = "dropdown";
 									}
 
 									var label = nodes[n].getAttribute("label");
@@ -462,6 +460,21 @@
 									label = label.trim();
 									selection = "";
 
+									printContents = function () {
+										var print_text = "";
+
+										if (Number.isInteger(this.selected) && this.selected >
+											0) {
+											if (this.print_text_before != "") {
+												print_text += this.print_text_before + " ";
+											}
+											print_text += this.options[this.selected].text +
+												" ";
+											if (this.print_text_after != "") print_text += this.print_text_after + " ";
+										}
+										return print_text;
+									}
+
 									el.multi.push({
 										label: label,
 										options: options,
@@ -470,6 +483,7 @@
 										print_text_after: print_text_after,
 										selected: selected,
 										showdetailson: showdetailson,
+										printContents: printContents
 									});
 								}
 							}
@@ -477,17 +491,7 @@
 								var print_text = "";
 								if (this.present == "yes" || this.askfurtherdetails != "true") {
 									for (var n = 0; n < this.multi.length; n++) {
-
-										if (Number.isInteger(this.multi[n].selected) && this.multi[n].selected >
-											0) {
-											if (this.multi[n].print_text_before != "") {
-												print_text += this.multi[n].print_text_before + " ";
-											}
-											print_text += this.multi[n].options[this.multi[n].selected].text +
-												" ";
-											if (this.multi[n].print_text_after != "") print_text += this.multi[n]
-												.print_text_after + " ";
-										}
+										print_text += this.multi[n].printContents();
 									}
 								}
 								if (this.present == "yes") {
