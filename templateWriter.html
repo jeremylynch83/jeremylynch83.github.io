@@ -1,6 +1,5 @@
 <!-- TODO
 
-	* Add free text to multi_select
 	* More templates
 	* Text substitutions to shorten text
 	* Associated info display
@@ -191,6 +190,13 @@
 															:label="nn.label" label-cols="3">
 															<b-form-select :options="nn.options" v-model="nn.selected">
 															</b-form-select>
+														</b-form-group>
+														<b-form-group
+															v-show="nn.selected == (nn.options.length-1) && (nn.type == 'dropdown' && (nn.options != '' && n.present == 'yes' || n.askfurtherdetails !='true'))"
+															label-cols="3">
+															<b-form-input :value="nn.text" @change="nn.text = $event"
+																placeholder="Other">
+															</b-form-input>
 														</b-form-group>
 
 														<b-form-group v-if="nn.type == 'free_text' " :label="nn.label"
@@ -486,6 +492,7 @@
 													value: x + 1 // Therefore value needs to start at 1
 												})
 											}
+
 										} else {
 											options.push({ // Add a non-selection first
 												text: "",
@@ -496,6 +503,12 @@
 												value: 1
 											})
 										}
+
+										options.push({
+											text: "Other",
+											value: options.length
+
+										});
 
 
 										var print_text_before = nodes[n].getAttribute("print_text_before");
@@ -517,7 +530,9 @@
 												if (this.print_text_before != "") {
 													print_text += this.print_text_before + " ";
 												}
-												print_text += this.options[this.selected].text +
+												var value = this.options[this.selected].text;
+												if (value == "Other") value = this.text;
+												print_text += value +
 													" ";
 												if (this.print_text_after != "") print_text += this.print_text_after +
 													" ";
@@ -527,6 +542,8 @@
 
 										el.multi.push({
 											label: label,
+											other: true,
+											text: "",
 											options: options,
 											type: type,
 											print_text_before: print_text_before,
