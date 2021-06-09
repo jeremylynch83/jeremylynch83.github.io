@@ -447,15 +447,16 @@
 									if (type == "free_text") {
 										printContents = function () {
 											var print_text = "";
-											if (this.print_text_before != "") {
-												print_text += this.print_text_before + " " + this.text;
-											} else {
-												print_text += this.label + ": " + this.text;
+											if (this.text != "") {
+												if (this.print_text_before != "") {
+													print_text += this.print_text_before + " " + this.text;
+												} else {
+													print_text += this.label + ": " + this.text;
+												}
+												if (this.print_text_after != "") {
+													print_text += " " + this.print_text_after;
+												}
 											}
-											if (this.print_text_after != "") {
-												print_text += " " + this.print_text_after;
-											}
-
 											return format_sentence(print_text);
 										}
 

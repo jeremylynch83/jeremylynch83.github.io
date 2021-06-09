@@ -157,7 +157,7 @@ Not present | Present
 				Informed consent was obtained from the patient including the risk of stroke, puncture site haemorrhage and numbness, and peripheral vascular occlusion.
 			</text_entry>
 			<multi_select label="Puncture">
-				<dropdown label="Local anaesthetic?">
+				<dropdown label="Local">
 					1% lidocaine was infiltrated into the puncture site superficial tissues.
 				</dropdown>
 				<dropdown label="Side" print_text_before="A">
@@ -302,7 +302,7 @@ Not present | Present
 				Written consent included the risks of infection, bleeding, CSF leak, damage to nerve roots resulting in bladder/bowel incontinence and weakness.
 			</text_entry>
 			<multi_select>
-				<dropdown label="Local anaesthetic?">
+				<dropdown label="Local">
 					1% lidocaine was infiltrated into the puncture site superficial tissues.
 				</dropdown>
 				<free_text label="Opening pressure" print_text_after="mmCSF">
@@ -319,7 +319,7 @@ Not present | Present
 			<h1>
 				Conclusion
 			</h1>
-			<selection label="Normal">
+			<selection label="Summary">
 				Uncomplicated lumbar puncture.
 			</selection>
 			<text_entry label="" subtype="medium">
