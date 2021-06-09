@@ -305,6 +305,11 @@ Not present | Present
 				<dropdown label="Local">
 					1% lidocaine was infiltrated into the puncture site superficial tissues.
 				</dropdown>
+				<dropdown label="Needle" print_text_before="A" print_text_after="Gauge needle was inserted in to the thecal space">
+					19 | 20 | 21 | 22
+				</dropdown>
+				<free_text label="Level" print_text_before="At the" print_text_after="level.">
+				</free_text>
 				<free_text label="Opening pressure" print_text_after="mmCSF">
 				</free_text>
 				<free_text label="Closing pressure" print_text_after="mmCSF">
@@ -313,14 +318,14 @@ Not present | Present
 			<selection label="Complications">
 				There were no periprocedural complications.
 			</selection>
-			<selection label="Post-procedure">
-				Requires 1-2 hours bed rest flat on back.
-			</selection>
 			<h1>
 				Conclusion
 			</h1>
 			<selection label="Summary">
 				Uncomplicated lumbar puncture.
+			</selection>
+			<selection label="Post-procedure">
+				Requires 1-2 hours bed rest flat on back.
 			</selection>
 			<text_entry label="" subtype="medium">
 			</text_entry>
