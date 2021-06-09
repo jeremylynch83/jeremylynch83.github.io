@@ -416,12 +416,41 @@
 							el.present_options = ["yes", "no"];
 							el.present = "";
 							el.askfurtherdetails = xml[i].getAttribute("askfurtherdetails");
-							if (label) label.trim();
+
 
 							for (var n = 0; n < nodes.length; n++) {
 								var type = nodes[n].nodeName.trim();
+								var inner_text = nodes[n].innerHTML;
+								if (inner_text) inner_text = inner_text.trim();
+								if (label) label.trim();
+								var multi = {};
+								text = "";
+								selection = "";
+
+								if (type == "free_text") {
+									printContents = function () {
+										var print_text = "";
+
+										return print_text;
+									}
+
+									el.multi.push({
+										label: label,
+										type: type,
+										print_text_before: print_text_before,
+										print_text_after: print_text_after,
+										showdetailson: showdetailson,
+										printContents: printContents
+									});
+								}
 								if (type == "dropdown") {
-									var inner_text = nodes[n].innerHTML.trim();
+									var print_text_before = nodes[n].getAttribute("print_text_before");
+									if (print_text_before) print_text_before.trim();
+									else print_text_before = ""
+									var print_text_after = nodes[n].getAttribute("print_text_after");
+									if (print_text_after) print_text_after.trim();
+									else print_text_after = ""
+
 									var options = [];
 									var selected = null;
 									if (inner_text.includes("|")) {
