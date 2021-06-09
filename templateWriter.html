@@ -192,7 +192,7 @@
 															</b-form-select>
 														</b-form-group>
 														<b-form-group
-															v-show="nn.selected == (nn.options.length-1) && (nn.type == 'dropdown' && (nn.options != '' && n.present == 'yes' || n.askfurtherdetails !='true'))"
+															v-show="(nn.type == 'dropdown' && (n.present == 'yes' || n.askfurtherdetails !='true')) && nn.selected == (nn.options.length-1)"
 															label-cols="3">
 															<b-form-input :value="nn.text" @change="nn.text = $event"
 																placeholder="Other">
