@@ -1,7 +1,5 @@
 <!-- TODO
 
-	* Implement options properly
-	* Hide element in print
 	* Add free text to multi_select
 	* More templates
 	* Text substitutions to shorten text
@@ -184,11 +182,16 @@
 
 										<template v-for="nn in n.multi">
 											<b-form-group
-												v-if="nn.options != '' && nn.type == 'multi' && n.present == 'yes' || n.askfurtherdetails !='true'"
+												v-if="nn.options != '' && nn.type == 'dropdown' && n.present == 'yes' || n.askfurtherdetails !='true'"
 												:label="nn.label" label-cols="2">
 												<b-form-select :options="nn.options" v-model="nn.selected">
 												</b-form-select>
+											</b-form-group>
 
+											<b-form-group v-if="nn.type == 'free_text' " :label="nn.label"
+												label-cols="2">
+												<b-form-input :value="nn.text" @change="nn.text = $event">
+												</b-form-input>
 											</b-form-group>
 										</template>
 									</b-form-group>
@@ -215,7 +218,7 @@
 									<b-form-group v-if="n.type == 'multi_checkbox'" :disabled="n.disabled">
 										<label>{{n.label}}</label>
 										<b-container class="bv-example-row">
-											<b-row cols="1" cols-sm="2" cols-md="3">
+											<b-row cols="1" cols-sm="2">
 												<template v-for="nn in n.multi">
 													<b-col>
 														<b-form-checkbox v-model="nn.selected">
@@ -416,7 +419,7 @@
 							if (label) label.trim();
 
 							for (var n = 0; n < nodes.length; n++) {
-								if (nodes[n].nodeName == "select") {
+								if (nodes[n].nodeName == "dropdown") {
 									var inner_text = nodes[n].innerHTML.trim();
 									var options = [];
 									var type = "";
@@ -433,7 +436,7 @@
 												value: x + 1 // Therefore value needs to start at 1
 											})
 										}
-										type = "multi";
+										type = "dropdown";
 									} else {
 										options.push({ // Add a non-selection first
 											text: "",
@@ -443,8 +446,7 @@
 											text: inner_text.trim(),
 											value: 1
 										})
-										type = "multi";
-
+										type = "dropdown";
 									}
 
 									var label = nodes[n].getAttribute("label");

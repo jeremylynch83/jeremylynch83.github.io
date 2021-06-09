@@ -57,9 +57,9 @@ Not present | Present
 </text_entry>
 
 <multi_select label="" askfurtherdetails="true">
-<select label="" print_text_before="">
+<dropdown> label="" print_text_before="">
 |
-</select>
+</dropdown>
 </multi_select>
 -->
 <all>
@@ -108,26 +108,26 @@ Not present | Present
 				There is no flaval thickening | There is flaval thickening
 			</selection>
 			<multi_select label="Disc herniation" askfurtherdetails="true">
-				<select label="Type" print_text_before="There is a disc">
+				<dropdown label="Type" print_text_before="There is a disc">
 					bulge | prolapse | extrusion | migration | sequestration | intravertebral herniation
-				</select>
-				<select label="Side" print_text_before="protruding in to the">
+				</dropdown>
+				<dropdown label="Side" print_text_before="protruding in to the">
 					right | left
-				</select>
-				<select label="Location">
+				</dropdown>
+				<dropdown label="Location">
 					central canal | subarticular zone | foraminal zone | extraforaminal zone
-				</select>
+				</dropdown>
 			</multi_select>
 			<multi_select label="Neural compression" askfurtherdetails="true">
-				<select label="Type" print_text_before="There is">
+				<dropdown label="Type" print_text_before="There is">
 					contact | impingement
-				</select>
-				<select label="Side" print_text_before="with the">
+				</dropdown>
+				<dropdown label="Side" print_text_before="with the">
 					right | left
-				</select>
-				<select label="Nerve" print_text_after="nerve root">
+				</dropdown>
+				<dropdown label="Nerve" print_text_after="nerve root">
 					descending | exiting
-				</select>
+				</dropdown>
 			</multi_select>
 			<selection label="Facet joints">
 				There is no facetal degeneration | There is mild facetal degeneration | There is moderate facetal degeneration | There is severe facetal degeneration
@@ -157,21 +157,21 @@ Not present | Present
 				Informed consent was obtained from the patient including the risk of stroke, puncture site haemorrhage and numbness, and peripheral vascular occlusion.
 			</text_entry>
 			<multi_select label="Puncture">
-				<select label="Local anaesthetic?">
+				<dropdown label="Local anaesthetic?">
 					1% lidocaine was infiltrated into the puncture site superficial tissues.
-				</select>
-				<select label="Side" print_text_before="A">
+				</dropdown>
+				<dropdown label="Side" print_text_before="A">
 					right | left
-				</select>
-				<select label="Puncture site" print_text_before="">
+				</dropdown>
+				<dropdown label="Puncture site" print_text_before="">
 					common femoral artery | radial artery
-				</select>
-				<select label="Sheath size" print_text_before="puncture was performed and a">
+				</dropdown>
+				<dropdown label="Sheath size" print_text_before="puncture was performed and a">
 					4-French | 5-French | 6-French
-				</select>
-				<select label="Catheter used" print_text_before="sheath was inserted. A" print_text_after="was used.">
+				</dropdown>
+				<dropdown label="Catheter used" print_text_before="sheath was inserted. A" print_text_after="was used.">
 					Berenstein catheter | Simmons-2 catheter | Other
-				</select>
+				</dropdown>
 			</multi_select>
 			<multi_checkbox label="An intra-arterial cocktail was infused via the sheath consisting of:">
 				<checkbox>
@@ -351,7 +351,7 @@ Not present | Present
 			<insert>
 				Lumbar spine level
 			</insert>
-			<h2>
+			<h2 flags="dont_print">
 				Other details:
 			</h2>
 			<insert>
@@ -496,28 +496,28 @@ Not present | Present
 				Chronic pathology
 			</h2>
 			<multi_select label="White matter changes" askfurtherdetails="true">
-				<select label="Location" print_text_before="There is" print_text_after="white matter hypodensity">
+				<dropdown label="Location" print_text_before="There is" print_text_after="white matter hypodensity">
 					periventricular | deep white matter | pontine | periventricular and deep white matter | generalised
-				</select>
-				<select label="Severity" print_text_before="which is non-specific but may represent a" print_text_after="burden of small vessel disease">
+				</dropdown>
+				<dropdown label="Severity" print_text_before="which is non-specific but may represent a" print_text_after="burden of small vessel disease">
 					mild | moderate | severe
-				</select>
+				</dropdown>
 			</multi_select>
 			<multi_select label="Cerebral atrophy" askfurtherdetails="true">
-				<select label="Severity" print_text_before="There is">
+				<dropdown label="Severity" print_text_before="There is">
 					mild | moderate | severe
-				</select>
-				<select label="Location" print_text_after="cerebral atrophy">
+				</dropdown>
+				<dropdown label="Location" print_text_after="cerebral atrophy">
 					supratentorial | infratentorial | generalised
-				</select>
+				</dropdown>
 			</multi_select>
 			<multi_select label="Hippocampal atrophy" askfurtherdetails="true">
-				<select label="Location" print_text_before="There is">
+				<dropdown label="Location" print_text_before="There is">
 					bilateral | right | left
-				</select>
-				<select label="Severity" print_text_after="hippocampal atrophy">
+				</dropdown>
+				<dropdown label="Severity" print_text_after="hippocampal atrophy">
 					mild | moderate | severe
-				</select>
+				</dropdown>
 			</multi_select>
 			<selection label="Bones">
 				There are no skull fractures or destructive bony lesions
@@ -773,12 +773,12 @@ Not present | Present
 				The large parenchymal haematoma centered on ... is again demonstrated.
 			</text_entry>
 			<multi_select label="Mass effect" askfurtherdetails="true">
-				<select label="Presence">
+				<dropdown label="Presence">
 					There is mass effect
-				</select>
-				<select label="Midline shift" print_text_before="with" print_text_after="of midline structures">
+				</dropdown>
+				<dropdown label="Midline shift" print_text_before="with" print_text_after="of midline structures">
 					mild contralateral shift | moderate contralateral shift | severe contralateral shift
-				</select>
+				</dropdown>
 			</multi_select>
 			<selection label="Oedema">
 				There is surrounding parenchymal oedema
@@ -957,9 +957,9 @@ Not present | Present
 				Findings
 			</h1>
 			<multi_select label="Description" askfurtherdetails="false">
-				<select label="Location" print_text_before="There has been interval partial evacuation of the subdural haematoma overlying the">
+				<dropdown label="Location" print_text_before="There has been interval partial evacuation of the subdural haematoma overlying the">
 					right cerebral hemisphere | left cerebral hemisphere
-				</select>
+				</dropdown>
 			</multi_select>
 			<text_entry label="" subtype="large">
 				There has been marked reduction of the size of subdural haematoma associated with significant reduction of local mass effect and partial re-expansion of the cerebral sulci and ipsilateral lateral ventricle. A small collection of blood products and fluid remains. There remains mild contralateral shift of midline structures.
