@@ -1200,22 +1200,34 @@ Not present | Present
 			<selection label="Note is made">
 				Note is made of placement of an ventricular catheter.
 			</selection>
-			<multi_select label="Atrophy" askfurtherdetails="true">
-				<dropdown label="Enhancement" print_text_before="There is an" print_text_after="mass">
+			<multi_select label="Description" askfurtherdetails="true" present_options="no">
+				<dropdown label="Enhancement" print_text_before="There is an">
 					enhancing | non-enhancing
 				</dropdown>
 				<dropdown label="Intra/extra-axial">
 					intra-axial | extra-axial
 				</dropdown>
-				<free_text label="Location" print_text_before="centered on the">
+				<free_text label="Location" print_text_before="mass centered on" print_text_after="region">
 				</free_text>
 				<free_text label="Size" print_text_before="It measures">
 				</free_text>
 				<dropdown label="Restricted diffusion" print_text_before="The lesion">
-					exhibits restricted diffusion | does not exhibit restricted diffusion
+					exhibits restricted diffusion. | does not exhibit restricted diffusion.
+				</dropdown>
+				<dropdown label="Necrosis">
+					There is central necrosis.
 				</dropdown>
 				<dropdown label="Internal susceptibility">
-					There is internal susceptibility | There is no internal susceptibility
+					There is internal susceptibility. | There is no internal susceptibility.
+				</dropdown>
+				<dropdown label="Flow voids">
+					There are prominent flow voids within the lesion. | There are no prominent flow voids within the lesion.
+				</dropdown>
+				<dropdown label="Dural thickening">
+					There is adjacent dural thickening. | There is no adjacent dural thickening.
+				</dropdown>
+				<dropdown label="Bony reaction">
+					There is adjacent bony hyperostosis. | There is adjacent bony expansion | There is adjacent bony thinning | There is adjacent bony invasion
 				</dropdown>
 			</multi_select>
 			<h2 flags="dont_print">
