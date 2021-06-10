@@ -1048,7 +1048,7 @@ Not present | Present
 				Chronic pathology
 			</h2>
 			<multi_select label="White matter changes" askfurtherdetails="true">
-				<dropdown label="Location" print_text_before="There is" print_text_after="white matter abnormal signal">
+				<dropdown label="Location" print_text_before="There are multiple foci of" print_text_after="white matter abnormal signal">
 					periventricular | deep white matter | pontine | periventricular and deep white matter | generalised
 				</dropdown>
 				<dropdown label="Severity" print_text_before="which is non-specific but may represent a" print_text_after="burden of small vessel disease">
@@ -1074,12 +1074,21 @@ Not present | Present
 			<selection label="Bones">
 				There are no skull fractures or destructive bony lesions
 			</selection>
-			<h2>
+			<h2 options="dont_print">
 				Checklist
 			</h2>
 			<multi_radio>
-				<radio label="Venous sinuses" normaltext="">
-					Normal | Abnormal
+				<radio label="Hydrocephalus" normaltext="The ventricles are not hydrocephalic">
+					Not present | Present
+				</radio>
+				<radio label="Dural thickening or leptomeningeal enhancement" normaltext="">
+					Not present | Present
+				</radio>
+				<radio label="Raised intracranial pressure" normaltext="">
+					Not present | Present
+				</radio>
+				<radio label="Low intracranial pressure" normaltext="">
+					Not present | Present
 				</radio>
 				<radio label="Basilar flow void">
 					Not present | Present
@@ -1087,13 +1096,13 @@ Not present | Present
 				<radio label="Trauma/contusions">
 					Not present | Present
 				</radio>
-				<radio label="Orbits">
-					Normal | Abnormal
-				</radio>
 				<radio label="Old infarcts">
 					Not present | Present
 				</radio>
 				<radio label="Paranasal sinuses and mastoid air cells">
+					Normal | Abnormal
+				</radio>
+				<radio label="Orbits">
 					Normal | Abnormal
 				</radio>
 				<radio label="Clivus">
@@ -1102,7 +1111,16 @@ Not present | Present
 				<radio label="Pituitary">
 					Normal | Abnormal
 				</radio>
+				<radio label="Cavernous sinus">
+					Normal | Abnormal
+				</radio>
 				<radio label="Cerebellar tonsils">
+					Normal | Abnormal
+				</radio>
+				<radio label="Internal auditory canals">
+					Normal | Abnormal
+				</radio>
+				<radio label="Skull base">
 					Normal | Abnormal
 				</radio>
 				<radio label="Extracranial soft tissue">
@@ -1131,6 +1149,9 @@ Not present | Present
 			<multi_radio>
 				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
 					Not present | Present
+				</radio>
+				<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
+					Normal | Abnormal
 				</radio>
 				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
 					Not present | Present
