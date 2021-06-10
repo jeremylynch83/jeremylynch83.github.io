@@ -272,6 +272,9 @@ Not present | Present
 			<h1>
 				Findings
 			</h1>
+			<selection label="Normal">
+				Normal cerebral vasculature is demonstrated. No aneurysms or other vascular abnormalities are identified.
+			</selection>
 			<text_entry label="" subtype="large">
 			</text_entry>
 			<h1>
@@ -308,7 +311,7 @@ Not present | Present
 				<dropdown label="Needle" print_text_before="A" print_text_after="Gauge needle was inserted in to the thecal space">
 					19 | 20 | 21 | 22
 				</dropdown>
-				<free_text label="Level" print_text_before="At the" print_text_after="level.">
+				<free_text label="Level" print_text_before="at the" print_text_after="level.">
 				</free_text>
 				<free_text label="Opening pressure" print_text_after="mmCSF">
 				</free_text>
@@ -550,7 +553,7 @@ Not present | Present
 					mild | moderate | severe
 				</dropdown>
 			</multi_select>
-			<multi_select label="Cerebral atrophy" askfurtherdetails="true">
+			<multi_select label="Atrophy" askfurtherdetails="true">
 				<dropdown label="Severity" print_text_before="There is">
 					mild | moderate | severe
 				</dropdown>
@@ -1014,6 +1017,141 @@ Not present | Present
 			<insert>
 				CT Head Checklist
 			</insert>
+		</content>
+	</template>
+	<module>
+		<name>
+			MRI Head Start
+		</name>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry subtype="small">
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+		</content>
+	</module>
+	<module>
+		<name>
+			MRI Head Checklist
+		</name>
+		<content>
+			<h2 options="dont_print">
+				Chronic pathology
+			</h2>
+			<multi_select label="White matter changes" askfurtherdetails="true">
+				<dropdown label="Location" print_text_before="There is" print_text_after="white matter abnormal signal">
+					periventricular | deep white matter | pontine | periventricular and deep white matter | generalised
+				</dropdown>
+				<dropdown label="Severity" print_text_before="which is non-specific but may represent a" print_text_after="burden of small vessel disease">
+					mild | moderate | severe
+				</dropdown>
+			</multi_select>
+			<multi_select label="Atrophy" askfurtherdetails="true">
+				<dropdown label="Severity" print_text_before="There is">
+					mild | moderate | severe
+				</dropdown>
+				<dropdown label="Location" print_text_after="cerebral atrophy">
+					supratentorial | infratentorial | generalised
+				</dropdown>
+			</multi_select>
+			<multi_select label="Hippocampal atrophy" askfurtherdetails="true">
+				<dropdown label="Location" print_text_before="There is">
+					bilateral | right | left
+				</dropdown>
+				<dropdown label="Severity" print_text_after="hippocampal atrophy">
+					mild | moderate | severe
+				</dropdown>
+			</multi_select>
+			<selection label="Bones">
+				There are no skull fractures or destructive bony lesions
+			</selection>
+			<h2>
+				Checklist
+			</h2>
+			<multi_radio>
+				<radio label="Venous sinuses" normaltext="">
+					Normal | Abnormal
+				</radio>
+				<radio label="Basilar flow void">
+					Not present | Present
+				</radio>
+				<radio label="Trauma/contusions">
+					Not present | Present
+				</radio>
+				<radio label="Orbits">
+					Normal | Abnormal
+				</radio>
+				<radio label="Old infarcts">
+					Not present | Present
+				</radio>
+				<radio label="Paranasal sinuses and mastoid air cells">
+					Normal | Abnormal
+				</radio>
+				<radio label="Clivus">
+					Normal | Abnormal
+				</radio>
+				<radio label="Pituitary">
+					Normal | Abnormal
+				</radio>
+				<radio label="Cerebellar tonsils">
+					Normal | Abnormal
+				</radio>
+				<radio label="Extracranial soft tissue">
+					Normal | Abnormal
+				</radio>
+			</multi_radio>
+		</content>
+	</module>
+	<template>
+		<name>
+			MRI Head
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			MRI Head
+		</title>
+		<content>
+			<insert>
+				MRI Head Start
+			</insert>
+			<h2 flags="dont_print">
+				Acute pathology
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<text_entry subtype="medium">
+			</text_entry>
+			<insert>
+				MRI Head Checklist
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
 		</content>
 	</template>
 	<template>
