@@ -1217,22 +1217,39 @@ Not present | Present
 				<dropdown label="Necrosis">
 					There is central necrosis.
 				</dropdown>
+				<dropdown label="Haemorrhage" print_text_before="There is evidence of">
+					intralesional haemorrhage.
+				</dropdown>
 				<dropdown label="Internal susceptibility" print_text_before="There is">
 					internal susceptibility. | no internal susceptibility.
 				</dropdown>
-				<dropdown label="Flow voids" print_text_before="There is">
-					There are prominent flow voids within the lesion. | There are no prominent flow voids within the lesion.
+				<dropdown label="Flow voids" print_text_before="There are">
+					prominent flow voids within the lesion. |  no prominent flow voids within the lesion.
 				</dropdown>
-				<dropdown label="Oedema">
-					There are prominent flow voids within the lesion. | There are no prominent flow voids within the lesion.
+				<dropdown label="Oedema" print_text_before="There is" print_text_after="perilesional abnormal signal">
+					no | mild | a wide zone of
 				</dropdown>
 				<dropdown label="Dural thickening">
-					There is adjacent dural thickening. | There is no adjacent dural thickening.
+					There is adjacent dural thickening.
 				</dropdown>
 				<dropdown label="Bony reaction">
 					There is adjacent bony hyperostosis. | There is adjacent bony expansion | There is adjacent bony thinning | There is adjacent bony invasion
 				</dropdown>
+				<dropdown label="Mass effect" print_text_before="The lesion causes" print_text_after="mass effect">
+					no | mild | significant
+				</dropdown>
 			</multi_select>
+			<multi_radio>
+				<radio label="Other lesions" normaltext="There are no contralateral or other space occupying lesions.">
+					Not present | Present
+				</radio>
+				<radio label="Raised intracranial pressure" normaltext="There is no evidence of raised intracranial pressure.">
+					Not present | Present
+				</radio>
+				<radio label="Raised intracranial pressure" normaltext="The ventricles are not hydrocephalic.">
+					Not present | Present
+				</radio>
+			</multi_radio>
 			<h2 flags="dont_print">
 				Acute pathology
 			</h2>
@@ -1244,12 +1261,6 @@ Not present | Present
 					Normal | Abnormal
 				</radio>
 				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
-					Not present | Present
-				</radio>
-				<radio label="Collection" normaltext="No intracranial collection is present.">
-					Not present | Present
-				</radio>
-				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
 					Not present | Present
 				</radio>
 			</multi_radio>
