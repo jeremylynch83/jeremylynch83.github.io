@@ -542,7 +542,7 @@ Not present | Present
 			CT Head Checklist
 		</name>
 		<content>
-			<h2 options="dont_print">
+			<h2 flags="dont_print">
 				Chronic pathology
 			</h2>
 			<multi_select label="White matter changes" askfurtherdetails="true">
@@ -1044,7 +1044,7 @@ Not present | Present
 			MRI Head Checklist
 		</name>
 		<content>
-			<h2 options="dont_print">
+			<h2 flags="dont_print">
 				Chronic pathology
 			</h2>
 			<multi_select label="White matter changes" askfurtherdetails="true">
@@ -1074,7 +1074,7 @@ Not present | Present
 			<selection label="Bones">
 				There are no skull fractures or destructive bony lesions
 			</selection>
-			<h2 options="dont_print">
+			<h2 flags="dont_print">
 				Checklist Diseases
 			</h2>
 			<multi_radio>
@@ -1100,7 +1100,7 @@ Not present | Present
 					Not present | Present
 				</radio>
 			</multi_radio>
-			<h2 options="dont_print">
+			<h2 flags="dont_print">
 				Checklist Regions
 			</h2>
 			<multi_radio>
@@ -1198,9 +1198,9 @@ Not present | Present
 				MRI Head Start
 			</insert>
 			<selection label="Note is made">
-				Note is made of placement of an ventricular catheter.
+				Note is made of placement of a ventricular catheter.
 			</selection>
-			<multi_select label="Description">
+			<multi_select label="Description of mass">
 				<dropdown label="Enhancement" print_text_before="There is an">
 					enhancing | non-enhancing
 				</dropdown>
@@ -1226,14 +1226,14 @@ Not present | Present
 				<dropdown label="Flow voids" print_text_before="There are">
 					prominent flow voids within the lesion. |  no prominent flow voids within the lesion.
 				</dropdown>
-				<dropdown label="Oedema" print_text_before="There is" print_text_after="perilesional abnormal signal">
+				<dropdown label="Oedema" print_text_before="There is" print_text_after="perilesional abnormal signal.">
 					no | mild | a wide zone of
 				</dropdown>
 				<dropdown label="Dural thickening">
 					There is adjacent dural thickening.
 				</dropdown>
 				<dropdown label="Bony reaction">
-					There is adjacent bony hyperostosis. | There is adjacent bony expansion | There is adjacent bony thinning | There is adjacent bony invasion
+					There is adjacent bony hyperostosis. | There is adjacent bony expansion. | There is adjacent bony thinning. | There is adjacent bony invasion.
 				</dropdown>
 				<dropdown label="Mass effect" print_text_before="The lesion causes" print_text_after="mass effect">
 					no | mild | significant
@@ -1272,8 +1272,16 @@ Not present | Present
 			<h1>
 				Conclusion
 			</h1>
-			<text_entry label="" subtype="medium">
+			<selection label="Grade">
+				Appearances favour a low-grade tumour | Appearances favour a high-grade lesion
+			</selection>
+			<text_entry label="Primary differential diagnosis" subtype="small">
 			</text_entry>
+			<text_entry subtype="medium">
+			</text_entry>
+			<selection label="Referral">
+				Neurosurgical referral is recommended
+			</selection>
 		</content>
 	</template>
 	<template>
