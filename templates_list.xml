@@ -1200,7 +1200,7 @@ Not present | Present
 			<selection label="Note is made">
 				Note is made of placement of an ventricular catheter.
 			</selection>
-			<multi_select label="Description" askfurtherdetails="true" present_options="no">
+			<multi_select label="Description">
 				<dropdown label="Enhancement" print_text_before="There is an">
 					enhancing | non-enhancing
 				</dropdown>
@@ -1217,10 +1217,13 @@ Not present | Present
 				<dropdown label="Necrosis">
 					There is central necrosis.
 				</dropdown>
-				<dropdown label="Internal susceptibility">
-					There is internal susceptibility. | There is no internal susceptibility.
+				<dropdown label="Internal susceptibility" print_text_before="There is">
+					internal susceptibility. | no internal susceptibility.
 				</dropdown>
-				<dropdown label="Flow voids">
+				<dropdown label="Flow voids" print_text_before="There is">
+					There are prominent flow voids within the lesion. | There are no prominent flow voids within the lesion.
+				</dropdown>
+				<dropdown label="Oedema">
 					There are prominent flow voids within the lesion. | There are no prominent flow voids within the lesion.
 				</dropdown>
 				<dropdown label="Dural thickening">
