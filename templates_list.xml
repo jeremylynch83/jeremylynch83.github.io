@@ -1474,11 +1474,23 @@ Not present | Present
 				<free_text label="Size" print_text_before="The lesion now measures approximately">
 				</free_text>
 				<dropdown label="Comparison">
-					and is stable in size | and has  increased in size from the previous study
+					It is stable in size | It has  increased in size from the previous study
 				</dropdown>
 				<free_text label="Previous study" print_text_before="where it measured">
 				</free_text>
 			</multi_select>
+			<selection label="Signal">
+				There is no change in the internal signal characteristics
+			</selection>
+			<selection label="Signal">
+				There is no change in the perilesional signal change
+			</selection>
+			<selection label="Signal">
+				There is no change in the mass effect caused by the lesion
+			</selection>
+			<selection label="Signal">
+				There is no change in the mass effect caused by the lesion
+			</selection>
 			<h2 flags="dont_print">
 				Acute pathology
 			</h2>
