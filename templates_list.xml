@@ -1307,20 +1307,20 @@ Not present | Present
 				<dropdown label="Suprasellar" print_text_before="with">
 					suprasellar extension.
 				</dropdown>
-				<dropdown label="Optic Chiasm" print_text_before="The mass" print_text_after="The optic chiasm.">
+				<free_text label="Size" print_text_before="It measures approximately">
+				</free_text>
+				<dropdown label="Optic Chiasm" print_text_before="The mass" print_text_after="the optic chiasm.">
 					elevates and compresses
 				</dropdown>
 				<dropdown label="Sellar floor" print_text_before="The mass causes" print_text_after="of the sellar floor.">
 					remodelling
 				</dropdown>
-				<dropdown label="Cavernous sinus" print_text_before="There is" print_text_after="of the sellar floor.">
+				<dropdown label="Cavernous sinus" print_text_before="There is">
 					no cavernous sinus extension. | right cavernous sinus extension. | left cavernous sinus extension.
 				</dropdown>
 				<dropdown label="Posterior pituitary" print_text_before="The posterior pituitary bright spot is">
 					absent. | present.
 				</dropdown>
-				<free_text label="Size" print_text_before="It measures">
-				</free_text>
 				<dropdown label="Restricted diffusion" print_text_before="The lesion">
 					exhibits restricted diffusion. | does not exhibit restricted diffusion.
 				</dropdown>
@@ -1424,6 +1424,61 @@ Not present | Present
 					Normal | Abnormal
 				</radio>
 			</multi_radio>
+			<h2 flags="dont_print">
+				Acute pathology
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
+					Normal | Abnormal
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<text_entry subtype="large">
+			</text_entry>
+			<insert>
+				MRI Head Checklist
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+	<template>
+		<name>
+			MRI Head: Tumour Follow-Up
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			MRI Head
+		</title>
+		<content>
+			<insert>
+				MRI Head Start
+			</insert>
+			<multi_select label="Size">
+				<free_text label="Size" print_text_before="The lesion now measures approximately">
+				</free_text>
+				<free_text label="Previous study" print_text_before="On the previous study the lesion measured">
+				</free_text>
+				<dropdown label="Comparison">
+					it is stable in size. | it has increased in size.
+				</dropdown>
+			</multi_select>
 			<h2 flags="dont_print">
 				Acute pathology
 			</h2>
