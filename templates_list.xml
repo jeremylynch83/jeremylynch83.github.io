@@ -1473,11 +1473,11 @@ Not present | Present
 			<multi_select label="Size">
 				<free_text label="Size" print_text_before="The lesion now measures approximately">
 				</free_text>
-				<free_text label="Previous study" print_text_before="On the previous study the lesion measured">
-				</free_text>
 				<dropdown label="Comparison">
-					it is stable in size. | it has increased in size.
+					and is stable in size | and has  increased in size from the previous study
 				</dropdown>
+				<free_text label="Previous study" print_text_before="where it measured">
+				</free_text>
 			</multi_select>
 			<h2 flags="dont_print">
 				Acute pathology
