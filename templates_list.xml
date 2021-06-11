@@ -1204,10 +1204,10 @@ Not present | Present
 				<dropdown label="Enhancement" print_text_before="There is an">
 					enhancing | non-enhancing
 				</dropdown>
-				<dropdown label="Intra/extra-axial">
+				<dropdown label="Intra/extra-axial" print_text_after="mass">
 					intra-axial | extra-axial
 				</dropdown>
-				<free_text label="Location" print_text_before="mass centered on" print_text_after="region">
+				<free_text label="Location" print_text_before="centered on" print_text_after="region">
 				</free_text>
 				<free_text label="Size" print_text_before="It measures">
 				</free_text>
@@ -1246,9 +1246,11 @@ Not present | Present
 				<radio label="Raised intracranial pressure" normaltext="There is no evidence of raised intracranial pressure.">
 					Not present | Present
 				</radio>
-				<radio label="Raised intracranial pressure" normaltext="The ventricles are not hydrocephalic.">
+				<radio label="Hydrocephalus" normaltext="The ventricles are not hydrocephalic.">
 					Not present | Present
 				</radio>
+				<text_entry subtype="large">
+				</text_entry>
 			</multi_radio>
 			<h2 flags="dont_print">
 				Acute pathology
@@ -1264,8 +1266,6 @@ Not present | Present
 					Not present | Present
 				</radio>
 			</multi_radio>
-			<text_entry subtype="large">
-			</text_entry>
 			<insert>
 				MRI Head Checklist
 			</insert>
@@ -1276,6 +1276,109 @@ Not present | Present
 				Appearances favour a low-grade tumour | Appearances favour a high-grade lesion
 			</selection>
 			<text_entry label="Primary differential diagnosis" subtype="small">
+			</text_entry>
+			<text_entry label="Secondary differential diagnosis" subtype="small">
+			</text_entry>
+			<text_entry subtype="medium">
+			</text_entry>
+			<selection label="Referral">
+				Neurosurgical referral is recommended
+			</selection>
+		</content>
+	</template>
+	<template>
+		<name>
+			MRI Head: Tumour diagnosis
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			MRI Head
+		</title>
+		<content>
+			<insert>
+				MRI Head Start
+			</insert>
+			<multi_select label="Description of mass">
+				<dropdown label="Enhancement" print_text_before="There is an" print_text_after="sella mass">
+					enhancing | non-enhancing
+				</dropdown>
+				<dropdown label="Suprasellar" print_text_before="with">
+					suprasellar extension.
+				</dropdown>
+				<dropdown label="Optic Chiasm" print_text_before="The mass" print_text_after="The optic chiasm.">
+					elevates and compresses
+				</dropdown>
+				<dropdown label="Sellar floor" print_text_before="The mass causes" print_text_after="of the sellar floor.">
+					remodelling
+				</dropdown>
+				<dropdown label="Cavernous sinus" print_text_before="There is" print_text_after="of the sellar floor.">
+					no cavernous sinus extension. | right cavernous sinus extension. | left cavernous sinus extension.
+				</dropdown>
+				<dropdown label="Posterior pituitary" print_text_before="The posterior pituitary bright spot is">
+					absent. | present.
+				</dropdown>
+				<free_text label="Size" print_text_before="It measures">
+				</free_text>
+				<dropdown label="Restricted diffusion" print_text_before="The lesion">
+					exhibits restricted diffusion. | does not exhibit restricted diffusion.
+				</dropdown>
+				<dropdown label="Necrosis">
+					There is central necrosis.
+				</dropdown>
+				<dropdown label="Haemorrhage" print_text_before="There is evidence of">
+					intralesional haemorrhage.
+				</dropdown>
+				<dropdown label="Internal susceptibility" print_text_before="There is">
+					internal susceptibility. | no internal susceptibility.
+				</dropdown>
+				<dropdown label="Flow voids" print_text_before="There are">
+					prominent flow voids within the lesion. |  no prominent flow voids within the lesion.
+				</dropdown>
+				<dropdown label="Bony reaction">
+					There is adjacent bony hyperostosis. | There is adjacent bony expansion. | There is adjacent bony thinning. | There is adjacent bony invasion.
+				</dropdown>
+				<dropdown label="Mass effect" print_text_before="The lesion causes" print_text_after="mass effect">
+					no | mild | significant
+				</dropdown>
+			</multi_select>
+			<multi_radio>
+				<radio label="Other lesions" normaltext="There are no contralateral or other space occupying lesions.">
+					Not present | Present
+				</radio>
+				<radio label="Raised intracranial pressure" normaltext="There is no evidence of raised intracranial pressure.">
+					Not present | Present
+				</radio>
+				<radio label="Hydrocephalus" normaltext="The ventricles are not hydrocephalic.">
+					Not present | Present
+				</radio>
+				<text_entry subtype="large">
+				</text_entry>
+			</multi_radio>
+			<h2 flags="dont_print">
+				Acute pathology
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
+					Normal | Abnormal
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<insert>
+				MRI Head Checklist
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="Primary differential diagnosis" subtype="small">
+			</text_entry>
+			<text_entry label="Secondary differential diagnosis" subtype="small">
 			</text_entry>
 			<text_entry subtype="medium">
 			</text_entry>
