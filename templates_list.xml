@@ -1470,18 +1470,19 @@ Not present | Present
 			<insert>
 				MRI Head Start
 			</insert>
+			<multi_select>
+				<free_text label="Location" print_text_before="Note is again made of the lesion located in the">
+				</free_text>
+			</multi_select>
 			<multi_select label="Size">
 				<free_text label="Size" print_text_before="The lesion now measures approximately">
 				</free_text>
 				<dropdown label="Comparison">
-					It is stable in size | It has  increased in size from the previous study
+					It is stable in size | It has  increased in size from the previous study | It has decreased in size from the previous study
 				</dropdown>
 				<free_text label="Previous study" print_text_before="where it measured">
 				</free_text>
 			</multi_select>
-			<selection label="Other lesions">
-				No new lesions are identified
-			</selection>
 			<selection label="Signal">
 				There is no change in the internal signal characteristics
 			</selection>
@@ -1490,6 +1491,9 @@ Not present | Present
 			</selection>
 			<selection label="Mass effect">
 				There is no change in the mass effect caused by the lesion
+			</selection>
+			<selection label="Other lesions">
+				No new lesions are identified
 			</selection>
 			<text_entry subtype="large">
 			</text_entry>
