@@ -1491,6 +1491,8 @@ Not present | Present
 			<selection label="Signal">
 				There is no change in the mass effect caused by the lesion
 			</selection>
+			<text_entry subtype="large">
+			</text_entry>
 			<h2 flags="dont_print">
 				Acute pathology
 			</h2>
@@ -1511,8 +1513,6 @@ Not present | Present
 					Not present | Present
 				</radio>
 			</multi_radio>
-			<text_entry subtype="large">
-			</text_entry>
 			<insert>
 				MRI Head Checklist
 			</insert>
