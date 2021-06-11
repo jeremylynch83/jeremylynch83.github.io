@@ -1470,11 +1470,9 @@ Not present | Present
 			<insert>
 				MRI Head Start
 			</insert>
-			<multi_select>
+			<multi_select label="Description">
 				<free_text label="Location" print_text_before="Note is again made of the lesion located in the">
 				</free_text>
-			</multi_select>
-			<multi_select label="Size">
 				<free_text label="Size" print_text_before="The lesion now measures approximately">
 				</free_text>
 				<dropdown label="Comparison">
