@@ -519,7 +519,7 @@ Not present | Present
 	</template>
 	<template>
 		<name>
-			MRI Spine: Multiple Sclerosis
+			MRI Spine: Multiple Sclerosis Initial Diagnosis
 		</name>
 		<type>
 			Diagnostic
@@ -573,6 +573,67 @@ Not present | Present
 		</content>
 	</template>
 
+	<template>
+		<name>
+			MRI Spine: Multiple Sclerosis Follow-Up
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			MRI Spine
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="" subtype="small">
+				MR images were acquired of the spine with and without intravenous contrast.
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+			<multi_select label="Plaques">
+				<free_text label="Locations" print_text_before="Existing plaques are identified at">
+				</free_text>
+				<free_text label="New lesions" print_text_before="New plaques are identified at">
+				</free_text>
+				<free_text label="Enhancing lesions" print_text_before="The plaques enhance at">
+				</free_text>
+				<dropdown label="Atrophy">
+					The spinal cord is atrophic | There is no spinal cord atrophy
+				</dropdown>
+
+			</multi_select>
+			<selection label="Posterior fossa">The visualised posterior fossa structures are normal.
+			</selection>
+			<selection label="Marrow signal">Marrow signal is normal.
+			</selection>
+			<selection label="Stenosis">No spinal canal or foraminal stenosis is demonstrated.
+			</selection>
+			<selection label="Vertebral body height and alignment">
+				Vertebral body height and alignment is normal.
+			</selection>
+			<h2 flags="dont_print">
+				Other details:
+			</h2>
+			<insert>
+				Degenerative spine
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<selection label="Changes">No new lesions are identified.
+			</selection>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
 
 	<module>
 		<name>
@@ -1813,7 +1874,91 @@ Not present | Present
 			</text_entry>
 		</content>
 	</template>
+	<template>
+		<name>MRI Head: Multiple Sclerosis Diagnosis
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>MRI Head
+		</title>
+		<content>
+			<insert>
+				MRI Head Start
+			</insert>
+			<multi_checkbox label="Multiple foci of abnormal signal are identified in the">
+				<checkbox>
+					juxtacortical
+				</checkbox>
+				<checkbox>
+					cortical
+				</checkbox>
+				<checkbox>
+					corpus callosum
+				</checkbox>
+				<checkbox>
+					periventricular
+				</checkbox>
+				<checkbox>
+					posterior fossa
+				</checkbox>
+				<checkbox>
+					imaged cord
+				</checkbox>
+			</multi_checkbox>
 
+			<multi_select label="Lesion Characteristics">
+				<free_text print_text_before="Approximately" print_text_after="lesions are identifed" label="Number">
+				</free_text>
+				<free_text print_text_before="Enhancing lesions are demonstrated at" label="Enhancing">
+				</free_text>
+				<free_text print_text_before="Lesions exhibiting restricted diffusion are demonstrated at" label="Restricted diffusion">
+				</free_text>
+				<dropdown label="Recent">There are no features of recent or interval demyelination.</dropdown>
+			</multi_select>
+			<selection label="T1 hypointense">
+				No T1 hypointense lesions are identified
+			</selection>
+			<selection label="Cerebral atrophy">
+				The cerebral white matter volume is normal. 
+			</selection>
+			<selection label="Optic nerves">
+				The optic nerves exhibit normal appearances. There is no abnormal signal, atrophy, or contrast enhancement. 	
+			</selection>
+
+			<h2 flags="dont_print">
+				Acute pathology
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
+					Normal | Abnormal
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<insert>
+				MRI Head Checklist
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<selection label="Signal">
+				Stable imaging appearances
+			</selection>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
 
 	<template>
 		<name>
