@@ -65,7 +65,7 @@ Not present | Present
 <all>
 	<module>
 		<name>
-			Degenerative spine
+			Generic spine
 		</name>
 		<content>
 			<multi_radio>
@@ -405,7 +405,7 @@ Not present | Present
 				Other details:
 			</h2>
 			<insert>
-				Degenerative spine
+				Generic spine
 			</insert>
 			<h1>
 				Conclusion
@@ -507,7 +507,7 @@ Not present | Present
 				Other details:
 				</h2>
 				<insert>
-				Degenerative spine
+				Generic spine
 				</insert>
 				<h1>
 				Conclusion
@@ -563,7 +563,7 @@ Not present | Present
 				Other details:
 			</h2>
 			<insert>
-				Degenerative spine
+				Generic spine
 			</insert>
 			<h1>
 				Conclusion
@@ -623,7 +623,7 @@ Not present | Present
 				Other details:
 			</h2>
 			<insert>
-				Degenerative spine
+				Generic spine
 			</insert>
 			<h1>
 				Conclusion
@@ -1257,7 +1257,7 @@ Not present | Present
 	</module>
 	<template>
 		<name>
-			MRI Head: Acute
+			MRI Head: Generic
 		</name>
 		<type>
 			Diagnostic
@@ -1293,6 +1293,59 @@ Not present | Present
 			</text_entry>
 			<insert>
 				MRI Head Checklist
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+	<template>
+		<name>
+			MRI Head and Spine: Generic
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			MRI Head and Spine
+		</title>
+		<content>
+			<insert>
+				MRI Head Start
+			</insert>
+			<h2 flags="dont_print">
+				Acute pathology: head
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
+					Normal | Abnormal
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<text_entry subtype="large">
+			</text_entry>
+			<insert>
+				MRI Head Checklist
+			</insert>
+			<h2>Spine</h2>
+			<selection label="Alignment and height">Normal cervical and thoracic spinal alignment with preservation of vertebral body height and signal.</selection>
+			<selection label="Spondylosis">No significant spondylotic disc or facet joint changes.</selection>
+			<selection label="Stenosis">No central canal narrowing</selection>
+			<insert>
+				Generic Spine
 			</insert>
 			<h1>
 				Conclusion
