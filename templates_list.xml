@@ -542,7 +542,7 @@ Not present | Present
 			<h1>
 				Findings
 			</h1>
-			<multi_select label="Plaques" askfurtherdetails="true">
+			<multi_select label="Plaques">
 				<free_text label="Locations" print_text_before="Abnormal cord signal is located at">
 				</free_text>
 				<dropdown label="Atrophy">
