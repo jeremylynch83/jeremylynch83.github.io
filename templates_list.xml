@@ -1708,21 +1708,6 @@ Not present | Present
 				MRI Head Start
 			</insert>
 
-			<multi_select label="Description">
-				<free_text label="Location" print_text_before="The treated" print_text_after="is noted."></free_text>
-
-				<select label="Residual">
-				The aneurysm is excluded from the circulation | There is a small neck remnant | There is filling of the aneurysm sac.
-				</select>
-				<select label="Change">
-				There has been no change since the previous study. | There has been a decrease in size since the previous study. | There has been an increase in size since the previous study.
-				</select>
-				<free_text label="Size" print_text_before="The aneurysm now measures approximately">
-				</free_text>
-				<select label="Other">
-				No other aneurysms are identified.
-				</select>
-			</multi_select>
 			<h2 flags="dont_print">
 				Acute pathology
 			</h2>
