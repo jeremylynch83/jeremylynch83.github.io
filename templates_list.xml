@@ -1659,6 +1659,8 @@ Not present | Present
 				<dropdown label="Other">
 				No other aneurysms are identified.
 				</dropdown>
+				<text_entry label="" subtype="medium">
+				</text_entry>
 			</multi_select>
 			<h2 flags="dont_print">
 				Acute pathology
@@ -1707,7 +1709,23 @@ Not present | Present
 				MRI Head Start
 			</insert>
 			<selection label="CN 7 and 8">
-						Unremarkable appearances of the seventh and eighth nerve complexes bilaterally.
+				Unremarkable appearances of the seventh and eighth nerve complexes bilaterally.
+			</selection>
+			<selection label="Inner ear">
+				The inner ear structures demonstrate normal appearances.
+			</selection>
+			<selection label="CN 7 and 8">
+				No mass lesions are demonstrated within the cerebellopontine angles.
+			</selection>
+			<selection label="CN 7 and 8">
+						No abnormal signal evident in the petrous temporal bones.  No diffusion restriction.
+
+			</selection>
+			<selection label="CN 7 and 8">
+			</selection>
+			<selection label="CN 7 and 8">
+			</selection>
+			<selection label="CN 7 and 8">
 			</selection>
 
 			<h2 flags="dont_print">
