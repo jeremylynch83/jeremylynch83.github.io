@@ -1632,25 +1632,20 @@ Not present | Present
 			</text_entry>
 		</content>
 	</template>
+
 	<template>
-		<name>
-			MRI Head: Tumour Follow-Up
+		<name>MRI Head: Aneurysm Follow-Up
 		</name>
 		<type>
 			Diagnostic
 		</type>
-		<title>
-			MRI Head: Aneurysm Follow-Up
+		<title>MRI Head
 		</title>
 		<content>
-			<insert>
-				MRI Head Start
-			</insert>
 			<multi_select label="Description">
-				<free_text label="Location" print_text_before="The treated" print_text_after="is noted."
-				</free_text>
+				<free_text label="Location" print_text_before="The treated" print_text_after="is noted."></free_text>
 
-<select label="Residual">
+				<select label="Residual">
 				The aneurysm is excluded from the circulation | There is a small neck remnant | There is filling of the aneurysm sac.
 				</select>
 				<select label="Change">
@@ -1695,17 +1690,8 @@ Not present | Present
 			</text_entry>
 		</content>
 	</template>
-	<template>
-		<name>
-		</name>
-		<type>
-			Diagnostic
-		</type>
-		<title>
-		</title>
-		<content>
-		</content>
-	</template>
+
+
 	<template>
 		<name>
 		</name>
