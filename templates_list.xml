@@ -336,7 +336,7 @@ Not present | Present
 	</template>
 	<template>
 		<name>
-			MRI Lumbar Spine Non-Contrast: Back Pain
+			MRI Lumbar Spine: Degenerative
 		</name>
 		<type>
 			Diagnostic
@@ -413,41 +413,126 @@ Not present | Present
 			<text_entry label="" subtype="medium">
 			</text_entry>
 		</content>
-	</template>
-	<module>
-		<name>
+		<module>
+			<name>
 			Cervical spine level
-		</name>
-		<content>
-			<selection label="Discs">
+			</name>
+			<content>
+				<selection label="Discs">
 				The disc is normal | There is disc degeneration. | There is disc degeneration and height loss.
-			</selection>
-			<selection label="Ligamentum flavum">
+				</selection>
+				<selection label="Ligamentum flavum">
 				There is no flaval thickening | There is flaval thickening
-			</selection>
-			<selection label="Disc bar">
+				</selection>
+				<selection label="Disc bar">
 				There is a disc bar causing no neural compression | There is a disc bar compressing
-			</selection>
-			<selection label="Facet joints">
+				</selection>
+				<selection label="Facet joints">
 				There is no facetal degeneration. | There is facetal degeneration.
-			</selection>
-		</content>
-	</module>
+				</selection>
+			</content>
+		</module>
+		<template>
+			<name>
+			MRI Cervical Spine
+			</name>
+			<type>
+			Diagnostic
+			</type>
+			<title>
+			MRI Cervical Spine
+			</title>
+			<content>
+				<h1>
+				Technique
+				</h1>
+				<text_entry label="" subtype="small">
+				</text_entry>
+				<h1>
+				Comparison
+				</h1>
+				<text_entry label="" subtype="small">
+				</text_entry>
+				<h1>
+				Findings
+				</h1>
+				<selection label="Vertebral alignment">
+				Vertebral alignment is normal | Vertebral alignment is abnormal
+				</selection>
+				<selection label="Posterior fossa">
+				Normal | Abnormal
+				</selection>
+				<h2>
+				C1-C2
+				</h2>
+				<text_entry label="Comment">
+				</text_entry>
+				<h2>
+				C2-C3
+				</h2>
+				<insert>
+				Cervical spine level
+				</insert>
+				<h2>
+				C3-C4
+				</h2>
+				<insert>
+				Cervical spine level
+				</insert>
+				<h2>
+				C4-C5
+				</h2>
+				<insert>
+				Cervical spine level
+				</insert>
+				<h2>
+				C5-C6
+				</h2>
+				<insert>
+				Cervical spine level
+				</insert>
+				<h2>
+				C6-C7
+				</h2>
+				<insert>
+				Cervical spine level
+				</insert>
+				<h2>
+				C7-T1
+				</h2>
+				<insert>
+				Cervical spine level
+				</insert>
+				<h2>
+				Other details:
+				</h2>
+				<insert>
+				Degenerative spine
+				</insert>
+				<h1>
+				Conclusion
+				</h1>
+				<text_entry label="" subtype="medium">
+				</text_entry>
+			</content>
+		</template>
+	</template>
 	<template>
 		<name>
-			MRI Cervical Spine
+			MRI Spine: Multiple Sclerosis
 		</name>
 		<type>
 			Diagnostic
 		</type>
 		<title>
-			MRI Cervical Spine
+			MRI Spine
 		</title>
 		<content>
 			<h1>
 				Technique
 			</h1>
 			<text_entry label="" subtype="small">
+				MR images were acquired of the spine with and without intravenous contrast.
 			</text_entry>
 			<h1>
 				Comparison
@@ -457,54 +542,24 @@ Not present | Present
 			<h1>
 				Findings
 			</h1>
-			<selection label="Vertebral alignment">
-				Vertebral alignment is normal | Vertebral alignment is abnormal
+			<multi_select label="Plaques" askfurtherdetails="true">
+				<free_text label="Locations" print_text_before="Abnormal cord signal is located at">
+				</free_text>
+				<dropdown label="Atrophy">
+					The spinal cord is atrophic | There is no spinal cord atrophy
+				</dropdown>
+
+			</multi_select>
+			<selection label="Posterior fossa">The visualised posterior fossa structures are normal.
 			</selection>
-			<selection label="Posterior fossa">
-				Normal | Abnormal
+			<selection label="Marrow signal">Marrow signal is normal.
 			</selection>
-			<h2>
-				C1-C2
-			</h2>
-			<text_entry label="Comment">
-			</text_entry>
-			<h2>
-				C2-C3
-			</h2>
-			<insert>
-				Cervical spine level
-			</insert>
-			<h2>
-				C3-C4
-			</h2>
-			<insert>
-				Cervical spine level
-			</insert>
-			<h2>
-				C4-C5
-			</h2>
-			<insert>
-				Cervical spine level
-			</insert>
-			<h2>
-				C5-C6
-			</h2>
-			<insert>
-				Cervical spine level
-			</insert>
-			<h2>
-				C6-C7
-			</h2>
-			<insert>
-				Cervical spine level
-			</insert>
-			<h2>
-				C7-T1
-			</h2>
-			<insert>
-				Cervical spine level
-			</insert>
-			<h2>
+			<selection label="Stenosis">No spinal canal or foraminal stenosis is demonstrated.
+			</selection>
+			<selection label="Vertebral body height and alignment">
+				Vertebral body height and alignment is normal.
+			</selection>
+			<h2 flags="dont_print">
 				Other details:
 			</h2>
 			<insert>
@@ -517,6 +572,8 @@ Not present | Present
 			</text_entry>
 		</content>
 	</template>
+
+
 	<module>
 		<name>
 			Plain CT Start
@@ -1714,20 +1771,15 @@ Not present | Present
 			<selection label="Inner ear">
 				The inner ear structures demonstrate normal appearances.
 			</selection>
-			<selection label="CN 7 and 8">
+			<selection label="CP angle">
 				No mass lesions are demonstrated within the cerebellopontine angles.
 			</selection>
-			<selection label="CN 7 and 8">
-						No abnormal signal evident in the petrous temporal bones.  No diffusion restriction.
-
+			<selection label="Petrous temporal">
+				No abnormal signal evident in the petrous temporal bones.  No diffusion restriction.
 			</selection>
-			<selection label="CN 7 and 8">
+			<selection label="Trigeminal">
+				Both trigeminal nerves are unremarkable. Meckel's caves appear clear.
 			</selection>
-			<selection label="CN 7 and 8">
-			</selection>
-			<selection label="CN 7 and 8">
-			</selection>
-
 			<h2 flags="dont_print">
 				Acute pathology
 			</h2>
