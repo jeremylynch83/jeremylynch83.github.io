@@ -1646,34 +1646,22 @@ Not present | Present
 			<insert>
 				MRI Head Start
 			</insert>
-
 			<multi_select label="Description">
 				<free_text label="Location" print_text_before="The treated" print_text_after="is noted."
 				</free_text>
-				<select label="Location" >
+
+<select label="Residual">
+				The aneurysm is excluded from the circulation | There is a small neck remnant | There is filling of the aneurysm sac.
 				</select>
-				<free_text label="Size" print_text_before="The lesion now measures approximately">
+				<select label="Change">
+				There has been no change since the previous study. | There has been a decrease in size since the previous study. | There has been an increase in size since the previous study.
+				</select>
+				<free_text label="Size" print_text_before="The aneurysm now measures approximately">
 				</free_text>
-				<dropdown label="Comparison">
-					It is stable in size | It has  increased in size from the previous study | It has decreased in size from the previous study
-				</dropdown>
-				<free_text label="Previous study" print_text_before="where it measured">
-				</free_text>
+				<select label="Other">
+				No other aneurysms are identified.
+				</select>
 			</multi_select>
-			<selection label="Signal">
-				There is no change in the internal signal characteristics
-			</selection>
-			<selection label="Perilesional signal">
-				There is no change in the perilesional signal change
-			</selection>
-			<selection label="Mass effect">
-				There is no change in the mass effect caused by the lesion
-			</selection>
-			<selection label="Other lesions">
-				No new lesions are identified
-			</selection>
-			<text_entry subtype="large">
-			</text_entry>
 			<h2 flags="dont_print">
 				Acute pathology
 			</h2>
