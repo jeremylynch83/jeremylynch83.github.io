@@ -1642,6 +1642,72 @@ Not present | Present
 		<title>MRI Head
 		</title>
 		<content>
+			<insert>
+				MRI Head Start
+			</insert>
+
+			<multi_select label="Description">
+				<free_text label="Location" print_text_before="The treated" print_text_after="is noted."></free_text>
+
+				<select label="Residual">
+				The aneurysm is excluded from the circulation | There is a small neck remnant | There is filling of the aneurysm sac.
+				</select>
+				<select label="Change">
+				There has been no change since the previous study. | There has been a decrease in size since the previous study. | There has been an increase in size since the previous study.
+				</select>
+				<free_text label="Size" print_text_before="The aneurysm now measures approximately">
+				</free_text>
+				<select label="Other">
+				No other aneurysms are identified.
+				</select>
+			</multi_select>
+			<h2 flags="dont_print">
+				Acute pathology
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
+					Normal | Abnormal
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<insert>
+				MRI Head Checklist
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<selection label="Signal">
+				Stable imaging appearances
+			</selection>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+
+	<template>
+		<name>MRI Head: Internal Auditory Meatus (IAM)
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>MRI Head
+		</title>
+		<content>
+			<insert>
+				MRI Head Start
+			</insert>
+
 			<multi_select label="Description">
 				<free_text label="Location" print_text_before="The treated" print_text_after="is noted."></free_text>
 
@@ -1692,17 +1758,6 @@ Not present | Present
 	</template>
 
 
-	<template>
-		<name>
-		</name>
-		<type>
-			Diagnostic
-		</type>
-		<title>
-		</title>
-		<content>
-		</content>
-	</template>
 	<template>
 		<name>
 		</name>
