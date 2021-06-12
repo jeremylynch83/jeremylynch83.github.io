@@ -1648,18 +1648,17 @@ Not present | Present
 
 			<multi_select label="Description">
 				<free_text label="Location" print_text_before="The treated" print_text_after="is noted."></free_text>
-
-				<select label="Residual">
+				<dropdown label="Residual">
 				The aneurysm is excluded from the circulation | There is a small neck remnant | There is filling of the aneurysm sac.
-				</select>
-				<select label="Change">
+				</dropdown>
+				<dropdown label="Change">
 				There has been no change since the previous study. | There has been a decrease in size since the previous study. | There has been an increase in size since the previous study.
-				</select>
+				</dropdown>
 				<free_text label="Size" print_text_before="The aneurysm now measures approximately">
 				</free_text>
-				<select label="Other">
+				<dropdown label="Other">
 				No other aneurysms are identified.
-				</select>
+				</dropdown>
 			</multi_select>
 			<h2 flags="dont_print">
 				Acute pathology
@@ -1707,6 +1706,9 @@ Not present | Present
 			<insert>
 				MRI Head Start
 			</insert>
+			<selection label="CN 7 and 8">
+						Unremarkable appearances of the seventh and eighth nerve complexes bilaterally.
+			</selection>
 
 			<h2 flags="dont_print">
 				Acute pathology
