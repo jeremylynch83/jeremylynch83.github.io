@@ -413,110 +413,111 @@ Not present | Present
 			<text_entry label="" subtype="medium">
 			</text_entry>
 		</content>
-		<module>
-			<name>
-			Cervical spine level
-			</name>
-			<content>
-				<selection label="Discs">
-				The disc is normal | There is disc degeneration. | There is disc degeneration and height loss.
-				</selection>
-				<selection label="Ligamentum flavum">
-				There is no flaval thickening | There is flaval thickening
-				</selection>
-				<selection label="Disc bar">
-				There is a disc bar causing no neural compression | There is a disc bar compressing
-				</selection>
-				<selection label="Facet joints">
-				There is no facetal degeneration. | There is facetal degeneration.
-				</selection>
-			</content>
-		</module>
-		<template>
-			<name>
-			MRI Cervical Spine
-			</name>
-			<type>
-			Diagnostic
-			</type>
-			<title>
-			MRI Cervical Spine
-			</title>
-			<content>
-				<h1>
-				Technique
-				</h1>
-				<text_entry label="" subtype="small">
-				</text_entry>
-				<h1>
-				Comparison
-				</h1>
-				<text_entry label="" subtype="small">
-				</text_entry>
-				<h1>
-				Findings
-				</h1>
-				<selection label="Vertebral alignment">
-				Vertebral alignment is normal | Vertebral alignment is abnormal
-				</selection>
-				<selection label="Posterior fossa">
-				Normal | Abnormal
-				</selection>
-				<h2>
-				C1-C2
-				</h2>
-				<text_entry label="Comment">
-				</text_entry>
-				<h2>
-				C2-C3
-				</h2>
-				<insert>
-				Cervical spine level
-				</insert>
-				<h2>
-				C3-C4
-				</h2>
-				<insert>
-				Cervical spine level
-				</insert>
-				<h2>
-				C4-C5
-				</h2>
-				<insert>
-				Cervical spine level
-				</insert>
-				<h2>
-				C5-C6
-				</h2>
-				<insert>
-				Cervical spine level
-				</insert>
-				<h2>
-				C6-C7
-				</h2>
-				<insert>
-				Cervical spine level
-				</insert>
-				<h2>
-				C7-T1
-				</h2>
-				<insert>
-				Cervical spine level
-				</insert>
-				<h2>
-				Other details:
-				</h2>
-				<insert>
-				Generic spine
-				</insert>
-				<h1>
-				Conclusion
-				</h1>
-				<text_entry label="" subtype="medium">
-				</text_entry>
-			</content>
-		</template>
 	</template>
+	<module>
+		<name>
+			Cervical spine level
+		</name>
+		<content>
+			<selection label="Discs">
+				The disc is normal | There is disc degeneration. | There is disc degeneration and height loss.
+			</selection>
+			<selection label="Ligamentum flavum">
+				There is no flaval thickening | There is flaval thickening
+			</selection>
+			<selection label="Disc bar">
+				There is a disc bar causing no neural compression | There is a disc bar compressing
+			</selection>
+			<selection label="Facet joints">
+				There is no facetal degeneration. | There is facetal degeneration.
+			</selection>
+		</content>
+	</module>
+	<template>
+		<name>
+			MRI Cervical Spine
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			MRI Cervical Spine
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+			<selection label="Vertebral alignment">
+				Vertebral alignment is normal | Vertebral alignment is abnormal
+			</selection>
+			<selection label="Posterior fossa">
+				Normal | Abnormal
+			</selection>
+			<h2>
+				C1-C2
+			</h2>
+			<text_entry label="Comment">
+			</text_entry>
+			<h2>
+				C2-C3
+			</h2>
+			<insert>
+				Cervical spine level
+			</insert>
+			<h2>
+				C3-C4
+			</h2>
+			<insert>
+				Cervical spine level
+			</insert>
+			<h2>
+				C4-C5
+			</h2>
+			<insert>
+				Cervical spine level
+			</insert>
+			<h2>
+				C5-C6
+			</h2>
+			<insert>
+				Cervical spine level
+			</insert>
+			<h2>
+				C6-C7
+			</h2>
+			<insert>
+				Cervical spine level
+			</insert>
+			<h2>
+				C7-T1
+			</h2>
+			<insert>
+				Cervical spine level
+			</insert>
+			<h2>
+				Other details:
+			</h2>
+			<insert>
+				Generic spine
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+
 	<template>
 		<name>
 			MRI Spine: Multiple Sclerosis Initial Diagnosis
