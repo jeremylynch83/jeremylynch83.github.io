@@ -1292,19 +1292,17 @@ Not present | Present
 				</dropdown>
 			</multi_select>
 			<multi_select label="Atrophy" askfurtherdetails="true">
-				<dropdown label="Severity" print_text_before="There is">
+				<dropdown label="Cerebral severity" print_text_before="There is">
 					mild | moderate | severe
 				</dropdown>
-				<dropdown label="Location" print_text_after="cerebral atrophy">
+				<dropdown label="Cerebral location" print_text_after="cerebral atrophy.">
 					supratentorial | infratentorial | generalised
 				</dropdown>
-			</multi_select>
-			<multi_select label="Hippocampal atrophy" askfurtherdetails="true">
-				<dropdown label="Location" print_text_before="There is">
-					bilateral | right | left
-				</dropdown>
-				<dropdown label="Severity" print_text_after="hippocampal atrophy">
+				<dropdown label="Hippocampal severity" print_text_before="There is">
 					mild | moderate | severe
+				</dropdown>
+				<dropdown label="Hippocampal location" print_text_after="hippocampal atrophy.">
+					bilateral | right | left
 				</dropdown>
 			</multi_select>
 			<selection label="Bones">
