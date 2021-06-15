@@ -366,6 +366,9 @@ Not present | Present
 				<dropdown label="Cortical reflux" print_text_before="There is" print_text_after="."> cortical venous reflux | no cortical venous reflux
 				</dropdown>
 			</multi_select>
+			<selection label="Cognard grade">
+				Cognard classification 1 (confined to sinus, antegrade flow, no cortical venous flux). | Cognard classification 2a (confined to sinus, retrograde flow, no cortical venous flux). | Cognard classification 2b (drains to sinus with cortical venous flux). | Cognard classification 3 (drains directly into non-ectatic cortical veins). | Cognard classification 4 (drains directly into ectatic cortical veins). | Cognard classification 5 (spinal perimedullary venous drainage). 
+			</selection>
 		</content>
 	</module>
 
@@ -408,14 +411,92 @@ Not present | Present
 			</h1>
 			<text_entry label="" subtype="medium">
 			</text_entry>
-			<selection label="Cognard grade">
-				Cognard classification 1 (confined to sinus, antegrade flow, no cortical venous flux). | Cognard classification 2a (confined to sinus, retrograde flow, no cortical venous flux). | Cognard classification 2b (drains to sinus with cortical venous flux). | Cognard classification 3 (drains directly into non-ectatic cortical veins). | Cognard classification 4 (drains directly into ectatic cortical veins). | Cognard classification 5 (spinal perimedullary venous drainage). 
-			</selection>
 			<selection label="Referral">
 				Neurovascular team referral is recommended.  
 			</selection>
 		</content>
 	</template>
+
+
+	<module>
+		<name>AVM description
+		</name>
+		<content>
+			<text_entry label="There is an arteriovenous malformation located in" subtype="medium">
+			</text_entry>
+			<text_entry label="The approximate size is" subtype="small">
+			</text_entry>
+			<text_entry label="The arterial feeders are the" subtype="medium">
+			</text_entry>
+			<text_entry label="The venous drainage is to the" subtype="medium">
+			</text_entry>
+			<multi_select label="Features">
+				<dropdown label="Flow aneurysms">
+					There are no associated flow aneurysms.
+				</dropdown>
+				<dropdown label="Venous stenosis">
+					There is no venous stenosis.
+				</dropdown>
+				<dropdown label="Venous stenosis">
+					There is no venous stenosis.
+				</dropdown>
+				<dropdown label="Venous stenosis">
+					There is no venous ectasia or pouches.
+				</dropdown>
+			</multi_select>
+			<text_entry label="Spetzler-Martin" subtype="large">
+			Size [] + Eloquence [] + Drainage [] =
+			Supplementary: Age [] + Compactness [] + Haemorrhage [] =
+			
+			TOTAL = 
+			</text_entry>
+		</content>
+	</module>
+
+	<template>
+		<name>
+			Cerebral Angiogram: Arteriovenous Malformation (AVM)
+		</name>
+		<type>
+			Angiography
+		</type>
+		<title>
+			Cerebral Angiogram
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<insert>
+				Angio header
+			</insert>
+			<insert>
+				Angio technique
+			</insert>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+			<insert>
+				AVM description
+			</insert>
+			<text_entry label="" subtype="large">
+			</text_entry>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<selection label="Referral">
+				Neurovascular team referral is recommended.  
+			</selection>
+		</content>
+	</template>
+
 
 	<template>
 		<name>
