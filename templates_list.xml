@@ -2209,11 +2209,25 @@ Not present | Present
 			<h1>
 				Findings
 			</h1>
-			<selection label="Lungs">The lungs are clear.</selection>
-			<selection label="Pleura">The pleural spaces are normal. </selection>
-			<selection label="Cardiomediastinal">The cardiomediastinal contour is normal.  </selection>
-			<selection label="Free gas">No free subdiaphragmatic gas is present.  </selection>
-			<selection label="Bones">There are no destructive bony lesions.  </selection>
+			<multi_radio>
+				<radio label="Lungs" normaltext="The lungs are clear.">
+				Clear | Not clear
+				</radio>
+				<radio label="Pleura" normaltext="The pleural spaces are normal.">
+					Normal | Abnormal
+				</radio>
+				<radio label="Cardiomediastinal contour" normaltext="The cardiomediastinal contour is normal.">
+					Normal | Abnormal
+
+				</radio>
+				<radio label="Free subdiaphragmatic gas" normaltext="No free subdiaphragmatic gas is present.">
+					Normal | Abnormal
+				</radio>
+				<radio label="Bones" normaltext="There are no acute fractures or destructive bony lesions.">
+					Normal | Abnormal
+				</radio>
+			</multi_radio>
+
 			<text_entry subtype="medium">
 			</text_entry>
 
@@ -2358,7 +2372,6 @@ Not present | Present
 				</checkbox>
 				<checkbox>Lumbar
 				</checkbox>
-
 			</multi_checkbox>
 			<text_entry subtype="small">Anteroposterior and lateral projections obtained. 
 			</text_entry>
