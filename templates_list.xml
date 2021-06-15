@@ -2331,6 +2331,8 @@ Not present | Present
 			<selection label="Marginal anterior osteophytes">No marginal anterior osteophytes. </selection>
 			<selection label="Disc spaces">The disc spaces are normal. | Disc space narrowing is noted. </selection>
 			<selection label="Facet joints">The facet joints are noted. | There is facet joint degenerative disease. </selection>
+			<text_entry subtype="medium">
+			</text_entry>
 			<h1>
 				Conclusion
 			</h1>
@@ -2349,7 +2351,7 @@ Not present | Present
 			<h1>
 				Technique
 			</h1>
-			<multi_checkbox label="Radiograph level">
+			<multi_checkbox label="Radiograph level:">
 				<checkbox>Cervical
 				</checkbox>
 				<checkbox>Thoracic
@@ -2390,18 +2392,18 @@ Not present | Present
 		</content>
 	</template>
 	<template>
-		<name>
+		<name>Radiograph: Ventriculoperitoneal Shunt Series
 		</name>
 		<type>
 			Diagnostic
 		</type>
-		<title>
+		<title>Ventriculoperitoneal Shunt Series
 		</title>
 		<content>
 			<h1>
 				Technique
 			</h1>
-			<text_entry subtype="small">
+			<text_entry subtype="small">Radiographs of the skull, upper cervical spine, chest, and abdomen have been obtained. 
 			</text_entry>
 			<h1>
 				Comparison
@@ -2411,11 +2413,33 @@ Not present | Present
 			<h1>
 				Findings
 			</h1>
+			<h2>Skull</h2>
+			<selection label="Continuity">The tubing appears in continuity with the ventricular catheter.</selection>
+			<selection label="Other">Normal appearances of the cranium. </selection>
+
+			<h2>Imaged upper cervical spine</h2>
+			<selection label="">Tubing appears in continuity and there is no kinking.</selection>
+			<selection label="Other">Normal appearances of the imaged neck. </selection>
+
+			<h2>Chest</h2>
+			<selection label="Tubing">Intact, unkinked, tubing passes inferiorly projected over the thorax.</selection>
+			<selection label="Lungs">The lungs are clear.</selection>
+			<selection label="Pleura">The pleural spaces are normal. </selection>
+			<selection label="Cardiomediastinal">The cardiomediastinal contour is normal.  </selection>
+			<selection label="Free gas">No free subdiaphragmatic gas is present.  </selection>
+			<selection label="Bones">There are no destructive bony lesions.  </selection>
+
+
+			<h2>Abdomen</h2>
+			<selection label=""></selection>
+			<selection label="Other">Normal radiographic appearances of the abdomen. </selection>
 
 			<h1>
 				Conclusion
 			</h1>
-			<selection>Normal study</selection>
+			<selection label="Continuity">The tubing appears in continuity with the ventricular catheter throughout it's course.</selection>
+			<selection label="Kinking">There is no kinking.</selection>
+
 		</content>
 	</template>
 	<template>
