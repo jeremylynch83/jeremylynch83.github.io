@@ -2431,7 +2431,6 @@ Not present | Present
 
 
 			<h2>Abdomen</h2>
-			<selection label=""></selection>
 			<selection label="Other">Normal radiographic appearances of the abdomen. </selection>
 			<selection label="Bones">There are no destructive bony lesions.  </selection>
 
