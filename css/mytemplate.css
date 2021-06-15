@@ -44,12 +44,13 @@ caption {
 }*/
 
 
+/*
 .control {
     width: 1em;
     flex: 5%;
     visibility: hidden;
     background-color: none;
-}
+}*/
 
 .row:hover>.control {
     visibility: visible;

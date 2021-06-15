@@ -237,7 +237,7 @@ Not present | Present
 				</checkbox>
 			</multi_checkbox>
 			<selection label="Haemostasis" showdetailson="1000">
-				An angioseal device was used to achieve groin haemostasis. | A pneumatic compression band was used to achieve wrist haemostasis.
+				Manual compression was used to achieve haemostasis. | An angioseal device was used to achieve groin haemostasis. | A pneumatic compression band was used to achieve wrist haemostasis.
 			</selection>
 			<selection label="Complications">
 				There were no periprocedural complications.
@@ -308,9 +308,28 @@ Not present | Present
 		</content>
 	</module>
 
+
+	<module>
+		<name>DAVF description
+		</name>
+		<content>
+			<multi_select label="Description">
+				<free_text label="Location" print_text_before="There is a dural arteriovenous fistula located at" print_text_after="."></free_text>
+
+				<free_text label="Primary arteries" print_text_before="The dominant arterial feeders are" print_text_after="."></free_text>
+				<free_text label="Secondary arteries" print_text_before="The supply arises from" print_text_after="."></free_text>
+				<free_text label="Venous drainage" print_text_before="Drainage is in to" print_text_after="."></free_text>
+
+				<dropdown label="Cortical reflux" print_text_before="There is" print_text_after="."> cortical venous reflux | no cortical venous reflux
+				</dropdown>
+			</multi_select>
+		</content>
+	</module>
+
+
 	<template>
 		<name>
-			Cerebral Angiogram: Aneurysm
+			Cerebral Angiogram: Dural Arteriovenous Fistula
 		</name>
 		<type>
 			Angiography
@@ -337,7 +356,7 @@ Not present | Present
 				Findings
 			</h1>
 			<insert>
-				Aneurysm description
+				DAVF description
 			</insert>
 			<text_entry label="" subtype="large">
 			</text_entry>
@@ -346,7 +365,10 @@ Not present | Present
 			</h1>
 			<text_entry label="" subtype="medium">
 			</text_entry>
-			<selection label="Normal">
+			<selection label="Cognard grade">
+				Cognard classification 1 (confined to sinus, antegrade flow, no cortical venous flux). | Cognard classification 2a (confined to sinus, retrograde flow, no cortical venous flux). | Cognard classification 2b (drains to sinus with cortical venous flux). | Cognard classification 3 (drains directly into non-ectatic cortical veins). | Cognard classification 4 (drains directly into ectatic cortical veins). | Cognard classification 5 (spinal perimedullary venous drainage). 
+			</selection>
+			<selection label="Referral">
 				Neurovascular team referral is recommended.  
 			</selection>
 		</content>
