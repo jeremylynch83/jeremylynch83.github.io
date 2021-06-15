@@ -2197,8 +2197,16 @@ Not present | Present
 			<h1>
 				Technique
 			</h1>
-			<selection label="Position">Erect. | Supine. </selection>
-			<selection label="Detector">Anteroposterior study. | Posteroanterior study. </selection>
+
+			<multi_select label="Details">
+				<dropdown label="Position">
+					Erect | Supine
+				</dropdown>
+				<dropdown label="Detector" print_text_after="study.">
+					Anteroposterior | Posteroanterior
+				</dropdown>
+			</multi_select>
+
 			<selection label="Quality">The technical quality of the study is good. | The technical quality of the study is poor.</selection>
 
 			<h1>
