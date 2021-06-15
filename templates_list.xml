@@ -2199,6 +2199,8 @@ Not present | Present
 			</h1>
 			<selection label="Position">Erect. | Supine. </selection>
 			<selection label="Detector">Anteroposterior study. | Posteroanterior study. </selection>
+			<selection label="quality">The technical quality of the study is good. | The technical quality of the study is poor.</selection>
+
 			<h1>
 				Comparison
 			</h1>
@@ -2235,6 +2237,8 @@ Not present | Present
 			</h1>
 			<selection label="Position">Erect. | Supine. </selection>
 			<selection label="Detector">Anteroposterior study. | Posteroanterior study. </selection>
+			<selection label="quality">The technical quality of the study is good. | The technical quality of the study is poor.</selection>
+
 			<h1>
 				Comparison
 			</h1>
@@ -2263,19 +2267,20 @@ Not present | Present
 		</content>
 	</template>
 	<template>
-		<name>
+		<name>Lumbar spine radiograph
 		</name>
 		<type>
 			Diagnostic
 		</type>
-		<title>
+		<title>Lumbar Spine Radiograph
 		</title>
 		<content>
 			<h1>
 				Technique
 			</h1>
-			<text_entry subtype="small">
+			<text_entry subtype="small">Anteroposterior and lateral projections obtained. 
 			</text_entry>
+			<selection label="Quality">The technical quality of the study is good. | The technical quality of the study is poor.</selection>
 			<h1>
 				Comparison
 			</h1>
@@ -2284,7 +2289,46 @@ Not present | Present
 			<h1>
 				Findings
 			</h1>
-
+			<selection label="Alignment">Normal alignment is maintained. </selection>
+			<selection label="Fractures">No acute fractures are noted. </selection>
+			<selection label="Degeneration">There is no significant degenerative disease | There is multilevel degenerative disease.</selection>
+			<selection label="Disc spaces">The disc spaces are normal. | Disc space narrowing is noted. </selection>
+			<selection label="Endplates">No endplate degeneration is demonstratd. </selection>
+			<selection label="Facet joints">The facet joints are noted. | There is facet joint degenerative disease. </selection>
+			<h1>
+				Conclusion
+			</h1>
+			<selection>Normal study</selection>
+		</content>
+	</template>
+	<template>
+		<name>Cervical spine radiograph
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>Cervical Spine Radiograph
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry subtype="small">Anteroposterior and lateral projections obtained. 
+			</text_entry>
+			<selection label="Quality">The technical quality of the study is good. | The technical quality of the study is poor.</selection>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+			<selection label="Alignment">Normal alignment is maintained. </selection>
+			<selection label="Fractures">No acute fractures are noted. </selection>
+			<selection label="Degeneration">There is no significant degenerative disease | There is multilevel degenerative disease.</selection>
+			<selection label="Disc spaces">The disc spaces are normal. | Disc space narrowing is noted. </selection>
+			<selection label="Facet joints">The facet joints are noted. | There is facet joint degenerative disease. </selection>
 			<h1>
 				Conclusion
 			</h1>
