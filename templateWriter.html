@@ -314,10 +314,9 @@
 				var last_char = str[str.length - 1];
 				if (last_char != "." && last_char != "!") str = str + ". ";
 				else str = str + " ";
-
-				console.log("\"" + str.substr(str[str.length - 1], 2) + "\"");
-				console.log(str);
-
+				if (str.substr(str.length - 3, 2) == " .") {
+					str = str.substr(0, str.length - 3) + ". ";
+				}
 				sentence = str;
 			}
 			return sentence;
@@ -540,6 +539,9 @@
 													" ";
 												if (this.print_text_after != "") print_text += this.print_text_after +
 													" ";
+												if (print_text.substr(print_text.length - 3, 2) == " .") {
+													print_text = print_text.substr(0, print_text.length - 3) + ". ";
+												}
 											}
 											return print_text;
 										}
