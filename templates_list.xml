@@ -361,8 +361,8 @@ Not present | Present
 			</h1>
 			<multi_select>
 				<dropdown label="Columns" print_text_before="There is a">1-column | 2-column | 3-column </dropdown>
-				<dropdown label="Vertebral level" print_text_before="fracture at the level of" print_text_after="."></dropdown>
-				<dropdown label="Posterior element fracture location" print_text_before="A fracture extends in to the" print_text_after="aspect of the posterior vertebral body.">upper | middle | lower</dropdown>
+				<free_text label="Vertebral level" print_text_before="fracture at the level of" print_text_after="."></free_text>
+				<dropdown label="Posterior elements">The posterior elements are not involved.</dropdown>
 				<dropdown label="Retropulsion" print_text_before="There is" print_text_after="posterior retropulsion. ">mild | moderate | severe</dropdown>
 				<dropdown label="Cord signal" print_text_before="The spinal cord signal at the level of the fracture is" print_text_after=".">normal | abnormal and suggestive of acute injury</dropdown>
 				<dropdown label="Ligaments" print_text_before="" print_text_after=".">The paraspinal ligaments at this level are intact | There is disruption of the posterior spinal ligament</dropdown>

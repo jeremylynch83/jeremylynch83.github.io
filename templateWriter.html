@@ -78,7 +78,7 @@
 
 			<b-form-group v-if="template != ''">
 				<b-card bg-variant="light">
-					<b-button variant="success" @click="copyReport()">Copy Text</b-button>
+					<b-button variant="success" @click="copyReport()">Generate report</b-button>
 
 					<h1>
 						{{template.title}}
@@ -314,6 +314,10 @@
 				var last_char = str[str.length - 1];
 				if (last_char != "." && last_char != "!") str = str + ". ";
 				else str = str + " ";
+
+				console.log("\"" + str.substr(str[str.length - 1], 2) + "\"");
+				console.log(str);
+
 				sentence = str;
 			}
 			return sentence;
