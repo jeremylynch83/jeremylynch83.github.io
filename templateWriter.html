@@ -84,37 +84,58 @@
 						{{template.title}}
 					</h1>
 
-
 					<b-form-group v-if="template != ''">
+						<div class="padding:1000px;">
+							<h2>CLINICAL INDICATION:</h2>
 
-						<h2>CLINICAL INDICATION:</h2>
+							<b-form-textarea id="indication_text" placeholder="Enter text">
+							</b-form-textarea>
+						</div>
 
-						<b-form-textarea id="indication_text" placeholder="Enter text">
-						</b-form-textarea>
 					</b-form-group>
 
 					<template v-for=" n in templateForm">
 
 						<!-- HEADER TYPE -->
-						<h2 v-if="n.type == 'h1'">{{n.label}}</h2>
-						<h3 v-if="n.type == 'h2'">{{n.label}}</h3>
 
 						<div class="body">
 							<div class="row">
 
-								<!--<div class="control">
-								<b-button-group vertical v-if="n.type != 'h2' && n.type != 'h1'">
-									<b-form-checkbox v-model="n.disabled" :value=false :unchecked-value=true size="sm">
-										Enable
-									</b-form-checkbox>
-									<b-form-checkbox v-model="n.details" size="sm">
-										Details
-									</b-form-checkbox>
-									<b-button size="sm" variant="danger" @click="deleteElement(n)">Delete
-									</b-button>
-								</b-button-group>
-						</div>--->
+								<div class="control">
+									<div class="op_icon">
+										<b-dropdown>
+											<b-form-group>
+												<b-dropdown-form>
+													<b-dropdown-form>
+														<b-form-checkbox v-model="n.details" size="sm">
+															Details
+														</b-form-checkbox>
+														<b-button size="sm" variant="danger" @click="deleteElement(n)">
+															Delete
+														</b-button>
+											</b-form-group>
+											</b-dropdown-form>
+
+										</b-dropdown>
+									</div>
+									<!--
+									<b-form-group >
+										<b-form-checkbox v-model="n.disabled" :value=false :unchecked-value=true
+											size="sm">
+											Enable
+										</b-form-checkbox>
+										<b-form-checkbox v-model="n.details" size="sm">
+											Details
+										</b-form-checkbox>
+										<b-button size="sm" variant="danger" @click="deleteElement(n)">Delete
+										</b-button>
+									</b-form-group>
+								-->
+
+								</div>
 								<div class="element">
+									<h2 v-if="n.type == 'h1'">{{n.label}}</h2>
+									<h3 v-if="n.type == 'h2'">{{n.label}}</h3>
 
 									<!--  TEXT TYPE -->
 									<label v-if=" n.type=='text'">{{n.text}}</label>

@@ -41,22 +41,48 @@ caption {
 
 .row:hover {
     background-color: rgb(230, 230, 230);
-}*/ 
+}*/
 
 
 .control {
-    flex: 10%;
+    width: 1em;
+    flex: 5%;
     visibility: hidden;
     background-color: none;
 }
 
 .row:hover>.control {
     visibility: visible;
-    background-color: rgb(230, 230, 230);
+    z-index: 1000;
+
 }
 
+.op_icon {
+    transform: translate(-10px);
+
+}
+
+.op_icon:after {
+    z-index: -1;
+}
+
+
+/*
+.op_icon:after {
+    content: "Options";
+    font-size: x-small;
+
+
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+ 
+    line-height: 1;
+    text-align: center;
+}*/
+
 .element {
-    flex: 100%;
+    flex: 95%;
 
 }
 
