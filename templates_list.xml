@@ -2199,7 +2199,7 @@ Not present | Present
 			</h1>
 			<selection label="Position">Erect. | Supine. </selection>
 			<selection label="Detector">Anteroposterior study. | Posteroanterior study. </selection>
-			<selection label="quality">The technical quality of the study is good. | The technical quality of the study is poor.</selection>
+			<selection label="Quality">The technical quality of the study is good. | The technical quality of the study is poor.</selection>
 
 			<h1>
 				Comparison
@@ -2237,7 +2237,7 @@ Not present | Present
 			</h1>
 			<selection label="Position">Erect. | Supine. </selection>
 			<selection label="Detector">Anteroposterior study. | Posteroanterior study. </selection>
-			<selection label="quality">The technical quality of the study is good. | The technical quality of the study is poor.</selection>
+			<selection label="Quality">The technical quality of the study is good. | The technical quality of the study is poor.</selection>
 
 			<h1>
 				Comparison
@@ -2249,8 +2249,8 @@ Not present | Present
 			</h1>
 			<h2 flags="dont_print">Nasogastric tube</h2>
 			<selection label="Carina">The nasogastric tube bisects the carina. | The nasogastric tube does not bisects the carina.</selection>
-			<selection label="">The tip of the tube projects over the stomach. | The tip of the tube projects over the stomach.</selection>
-			<text_entry subtype="medium">
+			<selection label="Tip">The tip of the tube projects over the stomach. | The tip of the tube projects over the stomach.</selection>
+			<text_entry label="Other" subtype="medium">
 			</text_entry>
 			<h2 flags="dont_print">Chest</h2>
 			<selection label="Lungs">The lungs are clear.</selection>
@@ -2258,7 +2258,7 @@ Not present | Present
 			<selection label="Cardiomediastinal">The cardiomediastinal contour is normal.  </selection>
 			<selection label="Free gas">No free subdiaphragmatic gas is present.  </selection>
 			<selection label="Bones">There are no destructive bony lesions.  </selection>
-			<text_entry subtype="medium">
+			<text_entry subtype="medium" label="Other pathology">
 			</text_entry>
 			<h1>
 				Conclusion
@@ -2327,12 +2327,66 @@ Not present | Present
 			<selection label="Alignment">Normal alignment is maintained. </selection>
 			<selection label="Fractures">No acute fractures are noted. </selection>
 			<selection label="Degeneration">There is no significant degenerative disease | There is multilevel degenerative disease.</selection>
+			<selection label="Uncovertebral osteophytes">No uncovertebral osteophytes. </selection>
+			<selection label="Marginal anterior osteophytes">No marginal anterior osteophytes. </selection>
 			<selection label="Disc spaces">The disc spaces are normal. | Disc space narrowing is noted. </selection>
 			<selection label="Facet joints">The facet joints are noted. | There is facet joint degenerative disease. </selection>
 			<h1>
 				Conclusion
 			</h1>
 			<selection>Normal study</selection>
+		</content>
+	</template>
+	<template>
+		<name>Spine radiograph: Surgical Fixation
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>Spine Radiograph
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<multi_checkbox label="Radiograph level">
+				<checkbox>Cervical
+				</checkbox>
+				<checkbox>Thoracic
+				</checkbox>
+				<checkbox>Lumbar
+				</checkbox>
+
+			</multi_checkbox>
+			<text_entry subtype="small">Anteroposterior and lateral projections obtained. 
+			</text_entry>
+			<selection label="Quality">The technical quality of the study is good. | The technical quality of the study is poor.</selection>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+			<text_entry label="Instrumented posterior fusion surgery is evident at" subtype="small">
+			</text_entry>
+			<text_entry label="There is a intervertebral disc prosthetic device at" subtype="small">
+			</text_entry>
+			<selection label="Fractures">No acute fractures are identified. </selection>
+			<selection label="Intactness">The metalwork is intact. There is no periprosthetic lucency or other periprosthetic complication.</selection>
+			<selection label="Alignment">The vertebral alignment is normal.</selection>
+
+
+			<h2 flags="dont_print">Other</h2>
+			<selection label="Degeneration">There is no significant degenerative disease | There is mild multilevel degenerative disease. | There is moderate multilevel degenerative disease. | There is severe multilevel degenerative disease. </selection>
+			<selection label="Disc spaces">The disc spaces are normal. | Disc space narrowing is noted. </selection>
+			<selection label="Endplates">No endplate degeneration is demonstratd. </selection>
+			<selection label="Facet joints">The facet joints are noted. | There is facet joint degenerative disease. </selection>
+			<h1>
+				Conclusion
+			</h1>
+			<selection>Stable appearances. </selection>
 		</content>
 	</template>
 	<template>
