@@ -173,7 +173,7 @@ Not present | Present
 					Berenstein catheter | Simmons-2 catheter 
 				</dropdown>
 			</multi_select>
-			<multi_checkbox label="An intra-arterial cocktail was infused via the sheath consisting of:">
+			<multi_checkbox label="An intra-arterial cocktail was infused via the sheath consisting of">
 				<checkbox>
 					Heparin
 				</checkbox>
@@ -184,7 +184,7 @@ Not present | Present
 					Nitroglycerin
 				</checkbox>
 			</multi_checkbox>
-			<multi_checkbox label="Digital subtraction angiography was performed via:">
+			<multi_checkbox label="Digital subtraction angiography was performed via">
 				<checkbox>
 					Right common carotid
 				</checkbox>
@@ -210,7 +210,7 @@ Not present | Present
 					Left vertebral
 				</checkbox>
 			</multi_checkbox>
-			<multi_checkbox label="3D flat-panel rotational tomographic angiography was performed via:">
+			<multi_checkbox label="3D flat-panel rotational tomographic angiography was performed via">
 				<checkbox>
 					Right common carotid
 				</checkbox>

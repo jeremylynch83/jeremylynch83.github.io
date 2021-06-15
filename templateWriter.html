@@ -712,7 +712,9 @@
 									for (var n = 0; n < this.multi.length; n++) {
 										if (this.multi[n].selected) {
 											print_text += this.multi[n].text.toLowerCase();
-											if (count_selected < (total_selected - 1)) print_text += ", ";
+											if ((count_selected < (total_selected - 1)) && total_selected != 2)
+												print_text += ", ";
+											if (count_selected == (total_selected - 2)) print_text += " and ";
 											count_selected++;
 										}
 									}
