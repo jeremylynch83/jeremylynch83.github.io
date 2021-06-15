@@ -2388,11 +2388,11 @@ Not present | Present
 			<h1>
 				Conclusion
 			</h1>
-			<selection>Stable appearances. </selection>
+			<selection label="Summary">Stable appearances. </selection>
 		</content>
 	</template>
 	<template>
-		<name>Radiograph: Ventriculoperitoneal Shunt Series
+		<name>Radiograph: Ventriculoperitoneal (VP) Shunt Series
 		</name>
 		<type>
 			Diagnostic
