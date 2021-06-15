@@ -170,7 +170,7 @@ Not present | Present
 					4-French | 5-French | 6-French
 				</dropdown>
 				<dropdown label="Catheter used" print_text_before="sheath was inserted. A" print_text_after="was used.">
-					Berenstein catheter | Simmons-2 catheter | Other
+					Berenstein catheter | Simmons-2 catheter 
 				</dropdown>
 			</multi_select>
 			<multi_checkbox label="An intra-arterial cocktail was infused via the sheath consisting of:">
@@ -2203,7 +2203,7 @@ Not present | Present
 					Erect | Supine
 				</dropdown>
 				<dropdown label="Detector" print_text_after="study.">
-					Anteroposterior | Posteroanterior
+					anteroposterior | posteroanterior
 				</dropdown>
 			</multi_select>
 
@@ -2257,9 +2257,17 @@ Not present | Present
 			<h1>
 				Technique
 			</h1>
-			<selection label="Position">Erect. | Supine. </selection>
-			<selection label="Detector">Anteroposterior study. | Posteroanterior study. </selection>
+			<multi_select label="Details">
+				<dropdown label="Position">
+					Erect | Supine
+				</dropdown>
+				<dropdown label="Detector" print_text_after="study.">
+					anteroposterior | posteroanterior
+				</dropdown>
+			</multi_select>
+
 			<selection label="Quality">The technical quality of the study is good. | The technical quality of the study is poor.</selection>
+
 
 			<h1>
 				Comparison
@@ -2274,12 +2282,27 @@ Not present | Present
 			<selection label="Tip">The tip of the tube projects over the stomach. | The tip of the tube projects over the stomach.</selection>
 			<text_entry label="Other" subtype="medium">
 			</text_entry>
+
 			<h2 flags="dont_print">Chest</h2>
-			<selection label="Lungs">The lungs are clear.</selection>
-			<selection label="Pleura">The pleural spaces are normal. </selection>
-			<selection label="Cardiomediastinal">The cardiomediastinal contour is normal.  </selection>
-			<selection label="Free gas">No free subdiaphragmatic gas is present.  </selection>
-			<selection label="Bones">There are no destructive bony lesions.  </selection>
+			<multi_radio>
+				<radio label="Lungs" normaltext="The lungs are clear.">
+				Clear | Not clear
+				</radio>
+				<radio label="Pleura" normaltext="The pleural spaces are normal.">
+					Normal | Abnormal
+				</radio>
+				<radio label="Cardiomediastinal contour" normaltext="The cardiomediastinal contour is normal.">
+					Normal | Abnormal
+
+				</radio>
+				<radio label="Free subdiaphragmatic gas" normaltext="No free subdiaphragmatic gas is present.">
+					Normal | Abnormal
+				</radio>
+				<radio label="Bones" normaltext="There are no acute fractures or destructive bony lesions.">
+					Normal | Abnormal
+				</radio>
+			</multi_radio>
+
 			<text_entry subtype="medium" label="Other pathology">
 			</text_entry>
 			<h1>
