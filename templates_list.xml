@@ -336,6 +336,61 @@ Not present | Present
 	</template>
 	<template>
 		<name>
+			MRI Spine: Fracture
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			MRI Lumber spine
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="" subtype="small">
+				MR images were acquired of the spine without intravenous contrast.
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+			<multi_select>
+				<dropdown label="Columns" print_text_before="There is a">1-column | 2-column | 3-column </dropdown>
+				<dropdown label="Vertebral level" print_text_before="fracture at the level of" print_text_after="."></dropdown>
+				<dropdown label="Posterior element fracture location" print_text_before="A fracture extends in to the" print_text_after="aspect of the posterior vertebral body.">upper | middle | lower</dropdown>
+				<dropdown label="Retropulsion" print_text_before="There is" print_text_after="posterior retropulsion. ">mild | moderate | severe</dropdown>
+				<dropdown label="Cord signal" print_text_before="The spinal cord signal at the level of the fracture is" print_text_after=".">normal | abnormal and suggestive of acute injury</dropdown>
+				<dropdown label="Ligaments" print_text_before="" print_text_after=".">The paraspinal ligaments at this level are intact | There is disruption of the posterior spinal ligament</dropdown>
+				<dropdown label="Vertebral alignment" print_text_after=".">Vertebral alignment remains intact </dropdown>
+				<dropdown label="Haematoma">No compressive intraspinal or paraspinal haematoma is identified. </dropdown>
+				<dropdown label="Facet joints" print_text_after=".">The facet joints remain aligned | There is subluxation of the facet joints | There is dislocation of the facet joints</dropdown>
+			</multi_select>
+
+			<selection label="Formation and segmentation">
+				There is normal formation and segmentation of the imaged spine. | There is a transitional lumbosacral junction.
+			</selection>
+
+			<h2 flags="dont_print">
+				Other details:
+			</h2>
+			<insert>
+				Generic spine
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+
+	<template>
+		<name>
 			MRI Lumbar Spine: Degenerative
 		</name>
 		<type>
@@ -673,16 +728,16 @@ Not present | Present
 				</dropdown>
 			</multi_select>
 			<multi_select label="Atrophy" askfurtherdetails="true">
-				<dropdown label="Cerebral atrophy" print_text_before="There is">
+				<dropdown label="Cerebral severity" print_text_before="There is">
 					mild | moderate | severe
 				</dropdown>
-				<dropdown label="Cerebral atrophy" print_text_after="cerebral atrophy.">
+				<dropdown label="Cerebral location" print_text_after="cerebral atrophy.">
 					supratentorial | infratentorial | generalised
 				</dropdown>
-				<dropdown label="Hippocampal atrophy" print_text_before="There is">
+				<dropdown label="Hippocampal severity" print_text_before="There is">
 					mild | moderate | severe
 				</dropdown>
-				<dropdown label="Hippocampal atrophy" print_text_after="hippocampal atrophy.">
+				<dropdown label="Hippocampal location" print_text_after="hippocampal atrophy.">
 					bilateral | right | left
 				</dropdown>
 			</multi_select>
@@ -1733,16 +1788,16 @@ Not present | Present
 				</dropdown>
 			</multi_select>
 			<multi_select label="Atrophy" askfurtherdetails="true">
-				<dropdown label="Cerebral atrophy" print_text_before="There is">
+				<dropdown label="Cerebral severity" print_text_before="There is">
 					mild | moderate | severe
 				</dropdown>
-				<dropdown label="Cerebral atrophy" print_text_after="cerebral atrophy.">
+				<dropdown label="Cerebral location" print_text_after="cerebral atrophy.">
 					supratentorial | infratentorial | generalised
 				</dropdown>
-				<dropdown label="Hippocampal atrophy" print_text_before="There is">
+				<dropdown label="Hippocampal severity" print_text_before="There is">
 					mild | moderate | severe
 				</dropdown>
-				<dropdown label="Hippocampal atrophy" print_text_after="hippocampal atrophy.">
+				<dropdown label="Hippocampal location" print_text_after="hippocampal atrophy.">
 					bilateral | right | left
 				</dropdown>
 			</multi_select>
