@@ -1309,7 +1309,7 @@ Not present | Present
 				There are no skull fractures or destructive bony lesions
 			</selection>
 			<h2 flags="dont_print">
-				Checklist Diseases
+				Diseases
 			</h2>
 			<multi_radio>
 				<radio label="Hydrocephalus" normaltext="The ventricles are not hydrocephalic">
@@ -1335,7 +1335,7 @@ Not present | Present
 				</radio>
 			</multi_radio>
 			<h2 flags="dont_print">
-				Checklist Regions
+				Regions
 			</h2>
 			<multi_radio>
 				<radio label="Paranasal sinuses and mastoid air cells">
@@ -2186,6 +2186,40 @@ Not present | Present
 	</template>
 
 	<template>
+		<name>Chest radiograph
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>Chest radiograph
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<selection label="Position">Erect. | Supine. </selection>
+			<selection label="Detector">Anteroposterior study. | Posteroanterior study. </selection>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+			<selection label="Lungs">The lungs are clear.</selection>
+			<selection label="Pleura">The pleural spaces are normal. </selection>
+			<selection label="Cardiomediastinal">The cardiomediastinal contour is normal.  </selection>
+			<selection label="Free gas">No free subdiaphragmatic gas is present.  </selection>
+			<selection label="Bones">There are no destructive bony lesions.  </selection>
+
+			<h1>
+				Conclusion
+			</h1>
+			<selection>Normal study.</selection>
+		</content>
+	</template>
+	<template>
 		<name>
 		</name>
 		<type>
@@ -2194,6 +2228,140 @@ Not present | Present
 		<title>
 		</title>
 		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry subtype="small">
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+
+			<h1>
+				Conclusion
+			</h1>
+			<selection>Normal study</selection>
+		</content>
+	</template>
+	<template>
+		<name>
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry subtype="small">
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+
+			<h1>
+				Conclusion
+			</h1>
+			<selection>Normal study</selection>
+		</content>
+	</template>
+	<template>
+		<name>
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry subtype="small">
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+
+			<h1>
+				Conclusion
+			</h1>
+			<selection>Normal study</selection>
+		</content>
+	</template>
+	<template>
+		<name>
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry subtype="small">
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+
+			<h1>
+				Conclusion
+			</h1>
+			<selection>Normal study</selection>
+		</content>
+	</template>
+	<template>
+		<name>
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry subtype="small">
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+
+			<h1>
+				Conclusion
+			</h1>
+			<selection>Normal study</selection>
 		</content>
 	</template>
 </all>
