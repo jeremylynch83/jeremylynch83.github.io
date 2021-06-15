@@ -673,21 +673,20 @@ Not present | Present
 				</dropdown>
 			</multi_select>
 			<multi_select label="Atrophy" askfurtherdetails="true">
-				<dropdown label="Severity" print_text_before="There is">
+				<dropdown label="Cerebral atrophy" print_text_before="There is">
 					mild | moderate | severe
 				</dropdown>
-				<dropdown label="Location" print_text_after="cerebral atrophy">
+				<dropdown label="Cerebral atrophy" print_text_after="cerebral atrophy.">
 					supratentorial | infratentorial | generalised
 				</dropdown>
-			</multi_select>
-			<multi_select label="Hippocampal atrophy" askfurtherdetails="true">
-				<dropdown label="Location" print_text_before="There is">
-					bilateral | right | left
-				</dropdown>
-				<dropdown label="Severity" print_text_after="hippocampal atrophy">
+				<dropdown label="Hippocampal atrophy" print_text_before="There is">
 					mild | moderate | severe
 				</dropdown>
+				<dropdown label="Hippocampal atrophy" print_text_after="hippocampal atrophy.">
+					bilateral | right | left
+				</dropdown>
 			</multi_select>
+
 			<selection label="Bones">
 				There are no skull fractures or destructive bony lesions
 			</selection>
@@ -1962,11 +1961,11 @@ Not present | Present
 			</multi_checkbox>
 
 			<multi_select label="Lesion Characteristics">
-				<free_text print_text_before="Approximately" print_text_after="lesions are identifed" label="Number">
+				<free_text print_text_before="Approximately" print_text_after="lesions in total are identifed" label="Approximate number">
 				</free_text>
-				<free_text print_text_before="Enhancing lesions are demonstrated at" label="Enhancing">
+				<free_text print_text_before="Enhancing lesions are demonstrated in the" label="Enhancing lesion location">
 				</free_text>
-				<free_text print_text_before="Lesions exhibiting restricted diffusion are demonstrated at" label="Restricted diffusion">
+				<free_text print_text_before="Lesions exhibiting restricted diffusion are demonstrated at" label="Restricted diffusion location">
 				</free_text>
 				<dropdown label="Recent">There are no features of recent or interval demyelination.</dropdown>
 			</multi_select>
@@ -1974,10 +1973,10 @@ Not present | Present
 				No T1 hypointense lesions are identified
 			</selection>
 			<selection label="Cerebral atrophy">
-				The cerebral white matter volume is normal. 
+				The cerebral white matter volume is normal. | Mild cerebral white matter volume loss is noted. | Moderate cerebral white matter volume loss is noted. | Severe cerebral white matter volume loss is noted.  
 			</selection>
 			<selection label="Optic nerves">
-				The optic nerves exhibit normal appearances. There is no abnormal signal, atrophy, or contrast enhancement. 	
+				The optic nerves exhibit normal appearances with no abnormal signal, atrophy, or contrast enhancement. 	
 			</selection>
 
 			<h2 flags="dont_print">
@@ -2006,7 +2005,7 @@ Not present | Present
 			<h1>
 				Conclusion
 			</h1>
-			<selection label="Signal">
+			<selection label="Stable">
 				Stable imaging appearances
 			</selection>
 			<text_entry label="" subtype="medium">
