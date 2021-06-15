@@ -2214,8 +2214,7 @@ Not present | Present
 			<selection label="Bones">There are no destructive bony lesions.  </selection>
 			<text_entry subtype="medium">
 			</text_entry>
-			<text_entry label="" subtype="medium">
-			</text_entry>
+
 			<h1>
 				Conclusion
 			</h1>
@@ -2245,12 +2244,10 @@ Not present | Present
 				Findings
 			</h1>
 			<h2 flags="dont_print">Nasogastric tube</h2>
-			<selection label="Carina">The nasogastric tube bisect the carina. | </selection>
-			<selection label="The tip of the tube projects over the stomach"></selection>
-			<selection label=""></selection>
-			<selection label=""></selection>
-
-
+			<selection label="Carina">The nasogastric tube bisects the carina. | The nasogastric tube does not bisects the carina.</selection>
+			<selection label="">The tip of the tube projects over the stomach. | The tip of the tube projects over the stomach.</selection>
+			<text_entry subtype="medium">
+			</text_entry>
 			<h2 flags="dont_print">Chest</h2>
 			<selection label="Lungs">The lungs are clear.</selection>
 			<selection label="Pleura">The pleural spaces are normal. </selection>
@@ -2262,7 +2259,7 @@ Not present | Present
 			<h1>
 				Conclusion
 			</h1>
-			<selection>Normal study.</selection>
+			<selection>The nasogastric tube appears appropriately sited on the basis of this radiograph. Please note, the final decision to commence feeding lies with the clinical team. </selection>
 		</content>
 	</template>
 	<template>
