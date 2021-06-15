@@ -1421,6 +1421,64 @@ Not present | Present
 	</template>
 	<template>
 		<name>
+			MRI Paediatric Head
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			MRI  Head
+		</title>
+		<content>
+			<insert>
+				MRI Head Start
+			</insert>
+			<selection label="Generic">There are no structural abnormalities, mass lesions, or vascular pathology.
+			</selection>
+			<selection label="Gyri">The gyral appearances are normal. | Polymicrogyria is noted. | </selection>
+			<selection label="Heterotopia">No heterotopic parenchymal tissue is present.</selection>
+			<selection label="Corpus callosum">The corpus callosum is well formed.</selection>
+			<selection label="Posterior fossa">Posterior fossa contents are normal.</selection>
+			<selection label="Hindbrain herniation">There is no hindbrain herniation.</selection>
+			<selection label="Myelination">The white matter is appropriately myelinated.</selection>
+
+			<text_entry subtype="large">
+			</text_entry>
+			<h2 flags="dont_print">
+				Acute pathology
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
+					Normal | Abnormal
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<text_entry subtype="large">
+			</text_entry>
+			<insert>
+				MRI Head Checklist
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+
+	<template>
+		<name>
 			MRI Head and Spine: Generic
 		</name>
 		<type>
