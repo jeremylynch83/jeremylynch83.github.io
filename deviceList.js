@@ -965,7 +965,7 @@ deviceList=
         "url1": "http://synthes.vo.llnwd.net/o16/LLNWMB8/US%20Mobile/Synthes%20North%20America/Product%20Support%20Materials/Brochures/4418%20COPY%20APPROVAL%20PROELER%20and%20PROWLER%20SELECT%20Microcatheter%20Brochure%20CNV-02-000.pdf",
         "minid": 0.021,
         "maxod": 0.037,
-        "length": "110 / 135 / 150 / 160"
+        "length": "110 / 135 / 150"
     },
     {
         "type": "Microcatheter",
@@ -974,7 +974,7 @@ deviceList=
         "url1": "http://synthes.vo.llnwd.net/o16/LLNWMB8/US%20Mobile/Synthes%20North%20America/Product%20Support%20Materials/Brochures/4418%20COPY%20APPROVAL%20PROELER%20and%20PROWLER%20SELECT%20Microcatheter%20Brochure%20CNV-02-000.pdf",
         "minid": 0.021,
         "maxod": 0.037,
-        "length": "150"
+        "length": "150 / 160"
     },
     {
         "type": "Microcatheter",
