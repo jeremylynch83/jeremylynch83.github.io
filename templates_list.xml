@@ -2242,7 +2242,7 @@ Not present | Present
 			<h1>
 				Conclusion
 			</h1>
-			<selection>Normal study.</selection>
+			<selection label="Summary">Normal study.</selection>
 		</content>
 	</template>
 	<template>
