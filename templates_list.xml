@@ -297,12 +297,12 @@ Not present | Present
 				<dropdown label="Morphology" print_text_before="There is a" print_text_after="aneurysm">saccular | fusiform
 				</dropdown>
 				<free_text label="Location" print_text_before="located at" print_text_after="."></free_text>
-				<free_text label="Size" print_text_before="It measures approximately" print_text_after="."></free_text>
+				<free_text label="Size" print_text_before="and measuring approximately" print_text_after="."></free_text>
 				<dropdown label="Neck" print_text_before="It is" print_text_after="."> narrow necked | wide necked
 				</dropdown>
 				<dropdown label="Walls" print_text_before="The aneurysm has" print_text_after="."> smooth walls | irregular walls | multiple loculations | a prominent bleb
 				</dropdown>
-				<dropdown label="Branches">No branches arise from the aneurysm sac itself.
+				<dropdown label="Branches">No branches arise from the aneurysm sac itself. | A branch arises from the neck of the aneurysm. | A branch arises from the dome of the aneurysm. 
 				</dropdown>
 			</multi_select>
 		</content>
@@ -344,11 +344,11 @@ Not present | Present
 			<h1>
 				Conclusion
 			</h1>
-			<selection label="Normal">
-				Normal cerebral angiogram
-			</selection>
 			<text_entry label="" subtype="medium">
 			</text_entry>
+			<selection label="Normal">
+				Neurovascular team referral is recommended.  
+			</selection>
 		</content>
 	</template>
 
