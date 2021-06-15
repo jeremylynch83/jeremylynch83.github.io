@@ -308,6 +308,49 @@ Not present | Present
 		</content>
 	</module>
 
+	<template>
+		<name>
+			Cerebral Angiogram: Aneurysm
+		</name>
+		<type>
+			Angiography
+		</type>
+		<title>
+			Cerebral Angiogram
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<insert>
+				Angio header
+			</insert>
+			<insert>
+				Angio technique
+			</insert>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+			<insert>
+				Aneurysm description
+			</insert>
+			<text_entry label="" subtype="large">
+			</text_entry>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<selection label="Referral">
+				Neurovascular team referral is recommended.  
+			</selection>
+		</content>
+	</template>
 
 	<module>
 		<name>DAVF description
