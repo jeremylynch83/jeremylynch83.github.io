@@ -244,9 +244,10 @@ Not present | Present
 			</selection>
 		</content>
 	</module>
+
 	<template>
 		<name>
-			Cerebral angiogram
+			Cerebral Angiogram
 		</name>
 		<type>
 			Angiography
@@ -287,6 +288,70 @@ Not present | Present
 			</text_entry>
 		</content>
 	</template>
+
+	<module>
+		<name>Aneurysm description
+		</name>
+		<content>
+			<multi_select label="Description">
+				<dropdown label="Morphology" print_text_before="There is a" print_text_after="aneurysm">saccular | fusiform
+				</dropdown>
+				<free_text label="Location" print_text_before="located at" print_text_after="."></free_text>
+				<free_text label="Size" print_text_before="It measures approximately" print_text_after="."></free_text>
+				<dropdown label="Neck" print_text_before="It is" print_text_after="."> narrow necked | wide necked
+				</dropdown>
+				<dropdown label="Walls" print_text_before="The aneurysm has" print_text_after="."> smooth walls | irregular walls | multiple loculations | a prominent bleb
+				</dropdown>
+				<dropdown label="Branches">No branches arise from the aneurysm sac itself.
+				</dropdown>
+			</multi_select>
+		</content>
+	</module>
+
+	<template>
+		<name>
+			Cerebral Angiogram: Aneurysm
+		</name>
+		<type>
+			Angiography
+		</type>
+		<title>
+			Cerebral Angiogram
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<insert>
+				Angio header
+			</insert>
+			<insert>
+				Angio technique
+			</insert>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+			<insert>
+				Aneurysm description
+			</insert>
+			<text_entry label="" subtype="large">
+			</text_entry>
+			<h1>
+				Conclusion
+			</h1>
+			<selection label="Normal">
+				Normal cerebral angiogram
+			</selection>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+
 	<template>
 		<name>
 			Lumbar Puncture
