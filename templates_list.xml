@@ -1435,7 +1435,7 @@ Not present | Present
 			</insert>
 			<selection label="Generic">There are no structural abnormalities, mass lesions, or vascular pathology.
 			</selection>
-			<selection label="Gyri">The gyral appearances are normal. | Polymicrogyria is noted. | </selection>
+			<selection label="Gyri">The gyral appearances are normal. | Polymicrogyria is noted. </selection>
 			<selection label="Heterotopia">No heterotopic parenchymal tissue is present.</selection>
 			<selection label="Corpus callosum">The corpus callosum is well formed.</selection>
 			<selection label="Posterior fossa">Posterior fossa contents are normal.</selection>
