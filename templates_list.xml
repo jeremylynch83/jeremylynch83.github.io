@@ -422,7 +422,7 @@ Not present | Present
 		<name>AVM description
 		</name>
 		<content>
-			<text_entry label="There is an arteriovenous malformation located in" subtype="medium">
+			<text_entry label="There is an arteriovenous malformation located in" subtype="small">
 			</text_entry>
 			<text_entry label="The approximate size is" subtype="small">
 			</text_entry>
