@@ -356,2454 +356,2452 @@ Not present | Present
 		<name>DAVF description
 		</name>
 		<content>
-			<text_entry label="There is a dural arteriovenous fistula located at" subtype="small">
-			</text_entry>
-		</text_entry>
-		<text_entry label="The arterial feeders are the" subtype="medium">
-		</text_entry>
-		<text_entry label="The venous drainage is to the" subtype="medium">
-		</text_entry>
 
-		<multi_select label="Description">
+			<multi_select label="Description">
+				<free_text label="Location" print_text_before="There is a dural arteriovenous fistula located at" print_text_after="."></free_text>
 
-			<dropdown label="Cortical reflux" print_text_before="There is" print_text_after="."> cortical venous reflux | no cortical venous reflux
-			</dropdown>
-		</multi_select>
-		<selection label="Cognard grade">
+				<free_text label="Primary arteries" print_text_before="The dominant arterial feeders are" print_text_after="."></free_text>
+				<free_text label="Secondary arteries" print_text_before="The supply arises from" print_text_after="."></free_text>
+				<free_text label="Venous drainage" print_text_before="Drainage is in to" print_text_after="."></free_text>
+
+				<dropdown label="Cortical reflux" print_text_before="There is" print_text_after="."> cortical venous reflux | no cortical venous reflux
+				</dropdown>
+			</multi_select>
+			<selection label="Cognard grade">
 				Cognard classification 1 (confined to sinus, antegrade flow, no cortical venous flux). | Cognard classification 2a (confined to sinus, retrograde flow, no cortical venous flux). | Cognard classification 2b (drains to sinus with cortical venous flux). | Cognard classification 3 (drains directly into non-ectatic cortical veins). | Cognard classification 4 (drains directly into ectatic cortical veins). | Cognard classification 5 (spinal perimedullary venous drainage). 
-		</selection>
-	</content>
-</module>
+			</selection>
+		</content>
+	</module>
 
 
-<template>
-	<name>
+	<template>
+		<name>
 			Cerebral Angiogram: Dural Arteriovenous Fistula (DAVF)
-	</name>
-	<type>
+		</name>
+		<type>
 			Angiography
-	</type>
-	<title>
+		</type>
+		<title>
 			Cerebral Angiogram
-	</title>
-	<content>
-		<h1>
+		</title>
+		<content>
+			<h1>
 				Technique
-		</h1>
-		<insert>
+			</h1>
+			<insert>
 				Angio header
-		</insert>
-		<insert>
+			</insert>
+			<insert>
 				Angio technique
-		</insert>
-		<h1>
+			</insert>
+			<h1>
 				Comparison
-		</h1>
-		<text_entry label="" subtype="medium">
-		</text_entry>
-		<h1>
-				Findings
-		</h1>
-		<insert>
-				DAVF description
-		</insert>
-		<text_entry label="" subtype="large">
-		</text_entry>
-		<h1>
-				Conclusion
-		</h1>
-		<text_entry label="" subtype="medium">
-		</text_entry>
-		<selection label="Referral">
-				Neurovascular team referral is recommended.  
-		</selection>
-	</content>
-</template>
-
-
-<module>
-	<name>AVM description
-	</name>
-	<content>
-		<text_entry label="There is an arteriovenous malformation located in" subtype="small">
-		</text_entry>
-		<text_entry label="The approximate size is" subtype="small">
-		</text_entry>
-		<text_entry label="The arterial feeders are the" subtype="medium">
-		</text_entry>
-		<text_entry label="The venous drainage is to the" subtype="medium">
-		</text_entry>
-		<multi_select label="Features">
-			<dropdown label="Flow aneurysms">
-					There are no associated flow aneurysms.
-			</dropdown>
-			<dropdown label="Venous stenosis">
-					There is no venous stenosis.
-			</dropdown>
-			<dropdown label="Venous ectasia">
-					There is no venous ectasia or pouches.
-			</dropdown>
-		</multi_select>
-		<h2>Spetzler-Martin Classification</h2>
-		<multi_select label="Core">
-			<dropdown label="Size" print_text_before="Size: " print_text_after=".">
-					1-3 cm (+1) | 3-6 cm (+2) | Over 6 cm (+3)
-			</dropdown>
-			<dropdown label="Eloquence" print_text_before="Eloquence: " print_text_after=".">
-					Non-eloquent area (+0) | Eloquent area (+1)
-			</dropdown>
-			<dropdown label="Venous drainage" print_text_before="Venous drainage: " print_text_after=".">
-					Superficial (+0)| Deep (+1)
-			</dropdown>
-		</multi_select>
-		<h2>Spetzler-Martin Supplementary</h2>
-
-		<multi_select label="Supplementary">
-			<dropdown label="Age in years" print_text_before="Age in years: " print_text_after=".">
-					Under 20 (+1) | 20-40 (+2) | Over 40 (+3)
-			</dropdown>
-			<dropdown label="Haemorrhage" print_text_before="Haemorrhage: " print_text_after=".">
-					Previous haemorrhage (+0) | No previous haemorrhage (+1)
-			</dropdown>
-			<dropdown label="Morphology" print_text_before="Morphology: " print_text_after=".">
-					Compact (+0)| Non-compact (+1)
-			</dropdown>
-		</multi_select>
-	</content>
-</module>
-
-<template>
-	<name>
-			Cerebral Angiogram: Arteriovenous Malformation (AVM)
-	</name>
-	<type>
-			Angiography
-	</type>
-	<title>
-			Cerebral Angiogram
-	</title>
-	<content>
-		<h1>
-				Technique
-		</h1>
-		<insert>
-				Angio header
-		</insert>
-		<insert>
-				Angio technique
-		</insert>
-		<h1>
-				Comparison
-		</h1>
-		<text_entry label="" subtype="medium">
-		</text_entry>
-		<h1>
-				Findings
-		</h1>
-		<insert>
-				AVM description
-		</insert>
-		<text_entry label="" subtype="large">
-		</text_entry>
-		<h1>
-				Conclusion
-		</h1>
-		<text_entry label="" subtype="medium">
-		</text_entry>
-		<selection label="Referral">
-				Neurovascular team referral is recommended.  
-		</selection>
-	</content>
-</template>
-
-
-<template>
-	<name>
-			Lumbar Puncture
-	</name>
-	<type>
-			Angiography
-	</type>
-	<title>
-			Lumbar Puncture
-	</title>
-	<content>
-		<h1>
-				Technique
-		</h1>
-		<text_entry label="Consent">
-				Written consent included the risks of infection, bleeding, CSF leak, damage to nerve roots resulting in bladder/bowel incontinence and weakness.
-		</text_entry>
-		<multi_select>
-			<dropdown label="Local">
-					1% lidocaine was infiltrated into the puncture site superficial tissues.
-			</dropdown>
-			<dropdown label="Needle" print_text_before="A" print_text_after="needle was inserted in to the thecal space">
-					19 | 20 | 21 | 22 gauge
-			</dropdown>
-			<free_text label="Level" print_text_before="at the" print_text_after="level.">
-			</free_text>
-			<free_text label="Opening pressure" print_text_after="mmCSF">
-			</free_text>
-			<free_text label="Closing pressure" print_text_after="mmCSF">
-			</free_text>
-		</multi_select>
-		<selection label="Complications">
-				There were no periprocedural complications.
-		</selection>
-		<h1>
-				Conclusion
-		</h1>
-		<selection label="Summary">
-				Uncomplicated lumbar puncture.
-		</selection>
-		<selection label="Post-procedure">
-				Requires 1-2 hours bed rest flat on back.
-		</selection>
-		<text_entry label="" subtype="medium">
-		</text_entry>
-	</content>
-</template>
-<template>
-	<name>
-			MRI Spine: Fracture
-	</name>
-	<type>
-			Diagnostic
-	</type>
-	<title>
-			MRI Spine
-	</title>
-	<content>
-		<h1>
-				Technique
-		</h1>
-		<text_entry label="" subtype="small">
-				MR images were acquired of the spine without intravenous contrast.
-		</text_entry>
-		<h1>
-				Comparison
-		</h1>
-		<text_entry label="" subtype="small">
-		</text_entry>
-		<h1>
-				Findings
-		</h1>
-		<selection label="Formation and segmentation">
-				There is normal formation and segmentation of the imaged spine. | There is a transitional lumbosacral junction.
-		</selection>
-		<multi_select label="Description">
-			<dropdown label="Columns" print_text_before="There is a">1-column | 2-column | 3-column </dropdown>
-			<free_text label="Vertebral level" print_text_before="fracture at the level of" print_text_after="."></free_text>
-			<dropdown label="Posterior elements">The posterior elements are not involved.</dropdown>
-			<dropdown label="Retropulsion" print_text_before="There is" print_text_after="posterior retropulsion. ">mild | moderate | severe</dropdown>
-			<dropdown label="Cord signal" print_text_before="The spinal cord signal at the level of the fracture is" print_text_after=".">normal | abnormal and suggestive of acute injury</dropdown>
-			<dropdown label="Ligaments" print_text_before="" print_text_after=".">The paraspinal ligaments at this level are intact | There is disruption of the posterior spinal ligament | There is disruption of the anterior spinal ligament | There is disruption of the posterior and anterior spinal ligaments </dropdown>
-			<dropdown label="Vertebral alignment" print_text_after=".">Vertebral alignment remains intact </dropdown>
-			<dropdown label="Haematoma">No compressive intraspinal or paraspinal haematoma is identified. </dropdown>
-			<dropdown label="Facet joints" print_text_after=".">The facet joints remain aligned | There is subluxation of the facet joints | There is dislocation of the facet joints</dropdown>
-		</multi_select>
-		<text_entry label="" subtype="medium">
-		</text_entry>
-
-		<h2 flags="dont_print">
-				Other details:
-		</h2>
-		<insert>
-				Generic spine
-		</insert>
-		<h1>
-				Conclusion
-		</h1>
-		<text_entry label="" subtype="medium">
-		</text_entry>
-	</content>
-</template>
-
-<template>
-	<name>
-			MRI Spine: Postoperative collection
-	</name>
-	<type>
-			Diagnostic
-	</type>
-	<title>
-			MRI Spine
-	</title>
-	<content>
-		<h1>
-				Technique
-		</h1>
-		<text_entry label="" subtype="small">
-				MR images were acquired of the spine with and without intravenous contrast.
-		</text_entry>
-		<h1>
-				Comparison
-		</h1>
-		<text_entry label="" subtype="small">
-		</text_entry>
-		<h1>
-				Findings
-		</h1>
-		<selection label="Formation and segmentation">
-				There is normal formation and segmentation of the imaged spine. | There is a transitional lumbosacral junction.
-		</selection>
-		<text_entry label="Note is made of" subtype="medium">
-		</text_entry>
-		<multi_select label="Description">
-			<free_text label="Location" print_text_before="There is a collection located at"></free_text>
-			<dropdown label="Size" print_text_before="and measuring" print_text_after="."></dropdown>
-			<dropdown label="Extension" print_text_before="The collection extends in to"></dropdown>
-			<free_text label="Signal"></free_text>
-			<dropdown label="Compression">The collection indents the thecal sac. | The collection effaces the cerebrospinal fluid. | The collection causes spinal cord compression. | </dropdown>
-			<dropdown label="Spinal cord">Abnormal signal is noted within the spinal cord suggestive of acute injury.  </dropdown>
-
-			<dropdown label="Walls">The collection has thick enhancing walls.</dropdown>
-			<dropdown label="Oedema">Surrounding tissue abnormal signal and enhancement is consistent with oedema.</dropdown>
-		</multi_select>
-		<text_entry label="" subtype="medium">
-		</text_entry>
-
-		<h2 flags="dont_print">
-				Other details:
-		</h2>
-		<insert>
-				Generic spine
-		</insert>
-		<h1>
-				Conclusion
-		</h1>
-		<text_entry label="" subtype="medium">
-		</text_entry>
-		<selection label="Referral">
-				Neurosurgical referral is recommended
-		</selection>
-
-	</content>
-</template>
-
-<template>
-	<name>
-			MRI Lumbar Spine: Degenerative
-	</name>
-	<type>
-			Diagnostic
-	</type>
-	<title>
-			MRI Lumber spine
-	</title>
-	<content>
-		<h1>
-				Technique
-		</h1>
-		<text_entry label="" subtype="small">
-				MR images were acquired of the spine without intravenous contrast.
-		</text_entry>
-		<h1>
-				Comparison
-		</h1>
-		<text_entry label="" subtype="small">
-		</text_entry>
-		<h1>
-				Findings
-		</h1>
-		<selection label="Formation and segmentation">
-				There is normal formation and segmentation of the lumbosacral spine. | There is a transitional lumbosacral junction.
-		</selection>
-		<selection label="Vertebral alignment">
-				Vertebral alignment is normal | Vertebral alignment is abnormal
-		</selection>
-		<h2>
-				T12-L1:
-		</h2>
-		<insert>
-				Lumbar spine level
-		</insert>
-		<h2>
-				L1-L2:
-		</h2>
-		<insert>
-				Lumbar spine level
-		</insert>
-		<h2>
-				L2-L3:
-		</h2>
-		<insert>
-				Lumbar spine level
-		</insert>
-		<h2>
-				L3-L4:
-		</h2>
-		<insert>
-				Lumbar spine level
-		</insert>
-		<h2>
-				L4-L5:
-		</h2>
-		<insert>
-				Lumbar spine level
-		</insert>
-		<h2>
-				L5-S1:
-		</h2>
-		<insert>
-				Lumbar spine level
-		</insert>
-		<h2 flags="dont_print">
-				Other details:
-		</h2>
-		<insert>
-				Generic spine
-		</insert>
-		<h1>
-				Conclusion
-		</h1>
-		<text_entry label="" subtype="medium">
-		</text_entry>
-	</content>
-</template>
-<module>
-	<name>
-			Cervical spine level
-	</name>
-	<content>
-		<selection label="Discs">
-				The disc is normal | There is disc degeneration. | There is disc degeneration and height loss.
-		</selection>
-		<selection label="Ligamentum flavum">
-				There is no flaval thickening | There is flaval thickening
-		</selection>
-		<selection label="Disc bar">
-				There is a disc bar causing no neural compression | There is a disc bar compressing
-		</selection>
-		<selection label="Facet joints">
-				There is no facetal degeneration. | There is facetal degeneration.
-		</selection>
-	</content>
-</module>
-<template>
-	<name>
-			MRI Cervical Spine
-	</name>
-	<type>
-			Diagnostic
-	</type>
-	<title>
-			MRI Cervical Spine
-	</title>
-	<content>
-		<h1>
-				Technique
-		</h1>
-		<text_entry label="" subtype="small">
-		</text_entry>
-		<h1>
-				Comparison
-		</h1>
-		<text_entry label="" subtype="small">
-		</text_entry>
-		<h1>
-				Findings
-		</h1>
-		<selection label="Vertebral alignment">
-				Vertebral alignment is normal | Vertebral alignment is abnormal
-		</selection>
-		<selection label="Posterior fossa">
-				Normal | Abnormal
-		</selection>
-		<h2>
-				C1-C2
-		</h2>
-		<text_entry label="Comment">
-		</text_entry>
-		<h2>
-				C2-C3
-		</h2>
-		<insert>
-				Cervical spine level
-		</insert>
-		<h2>
-				C3-C4
-		</h2>
-		<insert>
-				Cervical spine level
-		</insert>
-		<h2>
-				C4-C5
-		</h2>
-		<insert>
-				Cervical spine level
-		</insert>
-		<h2>
-				C5-C6
-		</h2>
-		<insert>
-				Cervical spine level
-		</insert>
-		<h2>
-				C6-C7
-		</h2>
-		<insert>
-				Cervical spine level
-		</insert>
-		<h2>
-				C7-T1
-		</h2>
-		<insert>
-				Cervical spine level
-		</insert>
-		<h2>
-				Other details:
-		</h2>
-		<insert>
-				Generic spine
-		</insert>
-		<h1>
-				Conclusion
-		</h1>
-		<text_entry label="" subtype="medium">
-		</text_entry>
-	</content>
-</template>
-
-<template>
-	<name>
-			MRI Spine: Multiple Sclerosis Initial Diagnosis
-	</name>
-	<type>
-			Diagnostic
-	</type>
-	<title>
-			MRI Spine
-	</title>
-	<content>
-		<h1>
-				Technique
-		</h1>
-		<text_entry label="" subtype="small">
-				MR images were acquired of the spine with and without intravenous contrast.
-		</text_entry>
-		<h1>
-				Comparison
-		</h1>
-		<text_entry label="" subtype="small">
-		</text_entry>
-		<h1>
-				Findings
-		</h1>
-		<multi_select label="Plaques">
-			<free_text label="Locations" print_text_before="Abnormal cord signal is located at">
-			</free_text>
-			<dropdown label="Atrophy">
-					The spinal cord is atrophic | There is no spinal cord atrophy
-			</dropdown>
-
-		</multi_select>
-		<selection label="Posterior fossa">The visualised posterior fossa structures are normal.
-		</selection>
-		<selection label="Marrow signal">Marrow signal is normal.
-		</selection>
-		<selection label="Stenosis">No spinal canal or foraminal stenosis is demonstrated.
-		</selection>
-		<selection label="Vertebral body height and alignment">
-				Vertebral body height and alignment is normal.
-		</selection>
-		<h2 flags="dont_print">
-				Other details:
-		</h2>
-		<insert>
-				Generic spine
-		</insert>
-		<h1>
-				Conclusion
-		</h1>
-		<text_entry label="" subtype="medium">
-		</text_entry>
-	</content>
-</template>
-
-<template>
-	<name>
-			MRI Spine: Multiple Sclerosis Follow-Up
-	</name>
-	<type>
-			Diagnostic
-	</type>
-	<title>
-			MRI Spine
-	</title>
-	<content>
-		<h1>
-				Technique
-		</h1>
-		<text_entry label="" subtype="small">
-				MR images were acquired of the spine with and without intravenous contrast.
-		</text_entry>
-		<h1>
-				Comparison
-		</h1>
-		<text_entry label="" subtype="small">
-		</text_entry>
-		<h1>
-				Findings
-		</h1>
-		<multi_select label="Plaques">
-			<free_text label="Locations" print_text_before="Existing plaques are identified at">
-			</free_text>
-			<free_text label="New lesions" print_text_before="New plaques are identified at">
-			</free_text>
-			<free_text label="Enhancing lesions" print_text_before="The plaques enhance at">
-			</free_text>
-			<dropdown label="Atrophy">
-					The spinal cord is atrophic | There is no spinal cord atrophy
-			</dropdown>
-
-		</multi_select>
-		<selection label="Posterior fossa">The visualised posterior fossa structures are normal.
-		</selection>
-		<selection label="Marrow signal">Marrow signal is normal.
-		</selection>
-		<selection label="Stenosis">No spinal canal or foraminal stenosis is demonstrated.
-		</selection>
-		<selection label="Vertebral body height and alignment">
-				Vertebral body height and alignment is normal.
-		</selection>
-		<h2 flags="dont_print">
-				Other details:
-		</h2>
-		<insert>
-				Generic spine
-		</insert>
-		<h1>
-				Conclusion
-		</h1>
-		<selection label="Changes">No new lesions are identified.
-		</selection>
-		<text_entry label="" subtype="medium">
-		</text_entry>
-	</content>
-</template>
-
-<module>
-	<name>
-			Plain CT Start
-	</name>
-	<content>
-		<h1>
-				Technique
-		</h1>
-		<text_entry subtype="small">
-		</text_entry>
-		<h1>
-				Comparison
-		</h1>
-		<text_entry label="" subtype="small">
-		</text_entry>
-		<h1>
-				Findings
-		</h1>
-	</content>
-</module>
-<module>
-	<name>
-			CT Head Checklist
-	</name>
-	<content>
-		<h2 flags="dont_print">
-				Chronic pathology
-		</h2>
-		<multi_select label="White matter changes" askfurtherdetails="true">
-			<dropdown label="Location" print_text_before="There is" print_text_after="white matter hypodensity">
-					periventricular | deep white matter | pontine | periventricular and deep white matter | generalised
-			</dropdown>
-			<dropdown label="Severity" print_text_before="which is non-specific but may represent a" print_text_after="burden of small vessel disease">
-					mild | moderate | severe
-			</dropdown>
-		</multi_select>
-		<multi_select label="Atrophy" askfurtherdetails="true">
-			<dropdown label="Cerebral severity" print_text_before="There is">
-					mild | moderate | severe
-			</dropdown>
-			<dropdown label="Cerebral location" print_text_after="cerebral atrophy.">
-					supratentorial | infratentorial | generalised
-			</dropdown>
-			<dropdown label="Hippocampal severity" print_text_before="There is">
-					mild | moderate | severe
-			</dropdown>
-			<dropdown label="Hippocampal location" print_text_after="hippocampal atrophy.">
-					bilateral | right | left
-			</dropdown>
-		</multi_select>
-
-		<selection label="Bones">
-				There are no skull fractures or destructive bony lesions
-		</selection>
-		<h2>
-				Checklist
-		</h2>
-		<multi_radio>
-			<radio label="Venous sinus hyperdensity" normaltext="">
-					Normal | Abnormal
-			</radio>
-			<radio label="Basilar hyperdensity">
-					Not present | Present
-			</radio>
-			<radio label="Trauma/contusions">
-					Not present | Present
-			</radio>
-			<radio label="Orbits">
-					Normal | Abnormal
-			</radio>
-			<radio label="Old infarcts">
-					Not present | Present
-			</radio>
-			<radio label="Paranasal sinuses and mastoid air cells">
-					Normal | Abnormal
-			</radio>
-			<radio label="Clivus">
-					Normal | Abnormal
-			</radio>
-			<radio label="Pituitary">
-					Normal | Abnormal
-			</radio>
-			<radio label="Cerebellar tonsils">
-					Normal | Abnormal
-			</radio>
-			<radio label="Extracranial soft tissue">
-					Normal | Abnormal
-			</radio>
-		</multi_radio>
-	</content>
-</module>
-<template>
-	<name>
-			CT Head
-	</name>
-	<type>
-			Diagnostic
-	</type>
-	<title>
-			CT Head
-	</title>
-	<content>
-		<insert>
-				Plain CT Start
-		</insert>
-		<h2 flags="dont_print">
-				Acute pathology
-		</h2>
-		<multi_radio>
-			<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
-					Not present | Present
-			</radio>
-			<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
-					Not present | Present
-			</radio>
-			<radio label="Collection" normaltext="No intracranial collection is present.">
-					Not present | Present
-			</radio>
-			<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
-					Not present | Present
-			</radio>
-		</multi_radio>
-		<text_entry subtype="medium">
-		</text_entry>
-		<insert>
-				CT Head Checklist
-		</insert>
-		<h1>
-				Conclusion
-		</h1>
-		<text_entry label="" subtype="medium">
-		</text_entry>
-	</content>
-</template>
-<template>
-	<name>
-			CT Orbits: Cellulitis
-	</name>
-	<type>
-			Diagnostic
-	</type>
-	<title>
-			CT Orbits
-	</title>
-	<content>
-		<insert>
-				Plain CT Start
-		</insert>
-		<insert>
-				CT Head Checklist
-		</insert>
-		<h1>
-				Conclusion
-		</h1>
-		<text_entry label="" subtype="medium">
-		</text_entry>
-	</content>
-</template>
-<module>
-	<name>
-			CT Angiogram Intracranial
-	</name>
-	<content>
-		<h2>
-				CT Angiogram
-		</h2>
-		<selection label="Occlusion">
-				There is no proximal intracranial occlusion
-		</selection>
-		<selection label="Collaterals">
-				There are good collateral vessels | There are poor collateral vessels
-		</selection>
-		<selection label="Aneurysm/Vascular malformation">
-				No aneurysms or other intracranial vascular abnormalities are identified
-		</selection>
-		<text_entry label="CT Perfusion" subtype="medium">
-		</text_entry>
-		<multi_radio>
-			<radio label="Venous sinuses">
-					Normal | Abnormal
-			</radio>
-		</multi_radio>
-	</content>
-</module>
-<module>
-	<name>
-			CT Angiogram Neck
-	</name>
-	<content>
-		<selection label="Subclavian/Arch">
-				Normal appearances of the aortic arch and subclavian arteries
-		</selection>
-		<selection label="Right carotid artery">
-				The right common and internal carotid arteries are normal
-		</selection>
-		<selection label="Left carotid artery">
-				The left common and internal carotid arteries are normal
-		</selection>
-		<selection label="Right vertebral artery">
-				The right vertebral artery is normal
-		</selection>
-		<selection label="Left vertebral artery">
-				The left vertebral artery is normal
-		</selection>
-		<selection label="Basilar artery">
-				The basilar artery is normal
-		</selection>
-		<selection label="Bones">
-				There is no acute fracture or destructive bony lesion
-		</selection>
-		<selection label="Degenerative disease">
-				Cervical degenerative disease is evident
-		</selection>
-		<selection label="Lung apices">
-				Normal appearances of the visualised lung apices | Mild dependent atelectasis is present at the imaged lung apices
-		</selection>
-		<multi_radio>
-			<radio label="Imaged pulmonary vasculature">
-					Normal | Abnormal
-			</radio>
-			<radio label="Thyroid gland">
-					Normal | Abnormal
-			</radio>
-		</multi_radio>
-	</content>
-</module>
-<template>
-	<name>
-			CT Angiogram Intracranial
-	</name>
-	<type>
-			Diagnostic
-	</type>
-	<title>
-			CT Angiogram Intracranial
-	</title>
-	<content>
-		<h1>
-				Technique
-		</h1>
-		<text_entry label="" subtype="small">
-		</text_entry>
-		<h1>
-				Comparison
-		</h1>
-		<text_entry label="" subtype="small">
-		</text_entry>
-		<h1>
-				Findings
-		</h1>
-		<multi_radio>
-			<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
-					Not present | Present
-			</radio>
-			<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
-					Not present | Present
-			</radio>
-			<radio label="Collection" normaltext="No intracranial collection is present.">
-					Not present | Present
-			</radio>
-			<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
-					Not present | Present
-			</radio>
-		</multi_radio>
-		<insert>
-				CT Head Checklist
-		</insert>
-		<insert>
-				CT Angiogram Intracranial
-		</insert>
-		<h1>
-				Conclusion
-		</h1>
-		<text_entry label="" subtype="medium">
-		</text_entry>
-	</content>
-</template>
-<template>
-	<name>
-			CT Head: Parenchymal Haematoma
-	</name>
-	<type>
-			Diagnostic
-	</type>
-	<title>
-			CT Angiogram Intracranial
-	</title>
-	<content>
-		<h1>
-				Technique
-		</h1>
-		<text_entry label="" subtype="small">
-		</text_entry>
-		<h1>
-				Comparison
-		</h1>
-		<text_entry label="" subtype="small">
-		</text_entry>
-		<h1>
-				Findings
-		</h1>
-		<text_entry label="" subtype="medium">
-				The large parenchymal haematoma centered on ... is again demonstrated.
-		</text_entry>
-		<multi_select label="Mass effect" askfurtherdetails="true">
-			<dropdown label="Presence">
-					There is mass effect
-			</dropdown>
-			<dropdown label="Midline shift" print_text_before="with" print_text_after="of midline structures">
-					mild contralateral shift | moderate contralateral shift | severe contralateral shift
-			</dropdown>
-		</multi_select>
-		<selection label="Oedema">
-				There is surrounding parenchymal oedema
-		</selection>
-		<selection label="Fluid levels">
-				A fluid level is noted within the haematoma
-		</selection>
-		<selection label="Ventricular spill">
-				There is no ventricular spill | There is spill in to the lateral ventricles
-		</selection>
-		<selection label="Hydrocephalus">
-				The ventricles are hydrocephalic
-		</selection>
-		<insert>
-				CT Head Checklist
-		</insert>
-		<insert>
-				CT Angiogram Intracranial
-		</insert>
-		<h1>
-				Conclusion
-		</h1>
-		<text_entry label="" subtype="medium">
-		</text_entry>
-		<selection label="">
-				Surgical review is warranted
-		</selection>
-	</content>
-</template>
-<template>
-	<name>
-			CT Angiogram: Head and Neck Vessels
-	</name>
-	<type>
-			Diagnostic
-	</type>
-	<title>
-			CT Head and Angiogram of the Head and Neck
-	</title>
-	<content>
-		<h1>
-				Technique
-		</h1>
-		<text_entry label="" subtype="small">
-		</text_entry>
-		<h1>
-				Comparison
-		</h1>
-		<text_entry label="" subtype="small">
-		</text_entry>
-		<h1>
-				Findings
-		</h1>
-		<insert>
-				CT Head Checklist
-		</insert>
-		<insert>
-				CT Angiogram Intracranial
-		</insert>
-		<insert>
-				CT Angiogram Neck
-		</insert>
-		<h1>
-				Conclusion
-		</h1>
-		<text_entry label="" subtype="medium">
-		</text_entry>
-	</content>
-</template>
-<template>
-	<name>
-			CT Angiogram: Subarachnoid Haemorrhage
-	</name>
-	<type>
-			Diagnostic
-	</type>
-	<title>
-			CT Head and Angiogram of the Head and Neck
-	</title>
-	<content>
-		<h1>
-				Technique
-		</h1>
-		<text_entry label="" subtype="small">
-		</text_entry>
-		<h1>
-				Comparison
-		</h1>
-		<text_entry label="" subtype="small">
-		</text_entry>
-		<h1>
-				Findings
-		</h1>
-		<text_entry label="There is subarachnoid haemorrhage centered on" subtype="small" sentencecontinues="true">
-		</text_entry>
-		<text_entry label="There is hydrocephalus, with blood layering in the" subtype="small" sentencecontinues="true">
-		</text_entry>
-		<insert>
-				CT Head Checklist
-		</insert>
-		<insert>
-				CT Angiogram Intracranial
-		</insert>
-		<insert>
-				CT Angiogram Neck
-		</insert>
-		<h1>
-				Conclusion
-		</h1>
-		<text_entry label="" subtype="medium">
-		</text_entry>
-	</content>
-</template>
-<template>
-	<name>
-			CT Head: Post-Operative Deep Brain Stimulation Electrode Placement
-	</name>
-	<type>
-			Diagnostic
-	</type>
-	<title>
-			CT Head
-	</title>
-	<content>
-		<h1>
-				Technique
-		</h1>
-		<text_entry label="" subtype="small">
-		</text_entry>
-		<h1>
-				Comparison
-		</h1>
-		<text_entry label="" subtype="small">
-		</text_entry>
-		<h1>
-				Findings
-		</h1>
-		<selection label="Placement">
-				Bilateral transfrontal electrodes are in situ
-		</selection>
-		<selection label="Oedema">
-				No evidence of peri-electrode oedema | Peri-electrode oedema is noted
-		</selection>
-		<insert>
-				CT Head Checklist
-		</insert>
-		<h1>
-				Conclusion
-		</h1>
-		<text_entry label="" subtype="medium">
-		</text_entry>
-	</content>
-</template>
-<template>
-	<name>
-			CT Head: Post-Operative Subdural Evacuation
-	</name>
-	<type>
-			Diagnostic
-	</type>
-	<title>
-			CT Head
-	</title>
-	<content>
-		<h1>
-				Technique
-		</h1>
-		<text_entry label="" subtype="small">
-		</text_entry>
-		<h1>
-				Comparison
-		</h1>
-		<text_entry label="" subtype="small">
-		</text_entry>
-		<h1>
-				Findings
-		</h1>
-		<multi_select label="Description" askfurtherdetails="false">
-			<dropdown label="Location" print_text_before="There has been interval partial evacuation of the subdural haematoma overlying the">
-					right cerebral hemisphere | left cerebral hemisphere
-			</dropdown>
-		</multi_select>
-		<text_entry label="" subtype="large">
-				There has been marked reduction of the size of subdural haematoma associated with significant reduction of local mass effect and partial re-expansion of the cerebral sulci and ipsilateral lateral ventricle. A small collection of blood products and fluid remains. There remains mild contralateral shift of midline structures.
-		</text_entry>
-		<insert>
-				CT Head Checklist
-		</insert>
-	</content>
-</template>
-<module>
-	<name>
-			MRI Head Start
-	</name>
-	<content>
-		<h1>
-				Technique
-		</h1>
-		<text_entry subtype="small">
-		</text_entry>
-		<h1>
-				Comparison
-		</h1>
-		<text_entry label="" subtype="small">
-		</text_entry>
-		<h1>
-				Findings
-		</h1>
-	</content>
-</module>
-<module>
-	<name>
-			MRI Head Checklist
-	</name>
-	<content>
-		<h2 flags="dont_print">
-				Chronic pathology
-		</h2>
-		<multi_select label="White matter changes" askfurtherdetails="true">
-			<dropdown label="Location" print_text_before="There are multiple foci of" print_text_after="white matter abnormal signal">
-					periventricular | deep white matter | pontine | periventricular and deep white matter | generalised
-			</dropdown>
-			<dropdown label="Severity" print_text_before="which is non-specific but may represent a" print_text_after="burden of small vessel disease">
-					mild | moderate | severe
-			</dropdown>
-		</multi_select>
-		<multi_select label="Atrophy" askfurtherdetails="true">
-			<dropdown label="Cerebral severity" print_text_before="There is">
-					mild | moderate | severe
-			</dropdown>
-			<dropdown label="Cerebral location" print_text_after="cerebral atrophy.">
-					supratentorial | infratentorial | generalised
-			</dropdown>
-			<dropdown label="Hippocampal severity" print_text_before="There is">
-					mild | moderate | severe
-			</dropdown>
-			<dropdown label="Hippocampal location" print_text_after="hippocampal atrophy.">
-					bilateral | right | left
-			</dropdown>
-		</multi_select>
-		<selection label="Bones">
-				There are no skull fractures or destructive bony lesions
-		</selection>
-		<h2 flags="dont_print">
-				Diseases
-		</h2>
-		<multi_radio>
-			<radio label="Hydrocephalus" normaltext="The ventricles are not hydrocephalic">
-					Not present | Present
-			</radio>
-			<radio label="Dural thickening or leptomeningeal enhancement" normaltext="">
-					Not present | Present
-			</radio>
-			<radio label="Raised intracranial pressure" normaltext="">
-					Not present | Present
-			</radio>
-			<radio label="Low intracranial pressure" normaltext="">
-					Not present | Present
-			</radio>
-			<radio label="Basilar flow void">
-					Not present | Present
-			</radio>
-			<radio label="Trauma/contusions">
-					Not present | Present
-			</radio>
-			<radio label="Old infarcts">
-					Not present | Present
-			</radio>
-		</multi_radio>
-		<h2 flags="dont_print">
-				Regions
-		</h2>
-		<multi_radio>
-			<radio label="Paranasal sinuses and mastoid air cells">
-					Normal | Abnormal
-			</radio>
-			<radio label="Orbits">
-					Normal | Abnormal
-			</radio>
-			<radio label="Clivus">
-					Normal | Abnormal
-			</radio>
-			<radio label="Pituitary">
-					Normal | Abnormal
-			</radio>
-			<radio label="Cavernous sinus">
-					Normal | Abnormal
-			</radio>
-			<radio label="Cerebellar tonsils">
-					Normal | Abnormal
-			</radio>
-			<radio label="Internal auditory canals">
-					Normal | Abnormal
-			</radio>
-			<radio label="Skull base">
-					Normal | Abnormal
-			</radio>
-			<radio label="Extracranial soft tissue">
-					Normal | Abnormal
-			</radio>
-			<radio label="Craniocervical junction">
-					Normal | Abnormal
-			</radio>
-		</multi_radio>
-	</content>
-</module>
-<template>
-	<name>
-			MRI Head: Generic
-	</name>
-	<type>
-			Diagnostic
-	</type>
-	<title>
-			MRI Head
-	</title>
-	<content>
-		<insert>
-				MRI Head Start
-		</insert>
-		<h2 flags="dont_print">
-				Acute pathology
-		</h2>
-		<multi_radio>
-			<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
-					Not present | Present
-			</radio>
-			<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
-					Normal | Abnormal
-			</radio>
-			<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
-					Not present | Present
-			</radio>
-			<radio label="Collection" normaltext="No intracranial collection is present.">
-					Not present | Present
-			</radio>
-			<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
-					Not present | Present
-			</radio>
-		</multi_radio>
-		<text_entry subtype="large">
-		</text_entry>
-		<insert>
-				MRI Head Checklist
-		</insert>
-		<h1>
-				Conclusion
-		</h1>
-		<text_entry label="" subtype="medium">
-		</text_entry>
-	</content>
-</template>
-<template>
-	<name>
-			MRI Paediatric Head
-	</name>
-	<type>
-			Diagnostic
-	</type>
-	<title>
-			MRI  Head
-	</title>
-	<content>
-		<insert>
-				MRI Head Start
-		</insert>
-		<selection label="Generic">There are no structural abnormalities, mass lesions, or vascular pathology.
-		</selection>
-		<selection label="Gyri">The gyral appearances are normal. | Polymicrogyria is noted. </selection>
-		<selection label="Heterotopia">No heterotopic parenchymal tissue is present.</selection>
-		<selection label="Corpus callosum">The corpus callosum is well formed.</selection>
-		<selection label="Posterior fossa">Posterior fossa contents are normal.</selection>
-		<selection label="Hindbrain herniation">There is no hindbrain herniation.</selection>
-		<selection label="Myelination">The white matter is appropriately myelinated.</selection>
-
-		<text_entry subtype="large">
-		</text_entry>
-		<h2 flags="dont_print">
-				Acute pathology
-		</h2>
-		<multi_radio>
-			<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
-					Not present | Present
-			</radio>
-			<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
-					Normal | Abnormal
-			</radio>
-			<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
-					Not present | Present
-			</radio>
-			<radio label="Collection" normaltext="No intracranial collection is present.">
-					Not present | Present
-			</radio>
-			<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
-					Not present | Present
-			</radio>
-		</multi_radio>
-		<text_entry subtype="large">
-		</text_entry>
-		<insert>
-				MRI Head Checklist
-		</insert>
-		<h1>
-				Conclusion
-		</h1>
-		<text_entry label="" subtype="medium">
-		</text_entry>
-	</content>
-</template>
-
-<template>
-	<name>
-			MRI Head and Spine: Generic
-	</name>
-	<type>
-			Diagnostic
-	</type>
-	<title>
-			MRI Head and Spine
-	</title>
-	<content>
-		<insert>
-				MRI Head Start
-		</insert>
-		<h2 flags="dont_print">
-				Acute pathology: head
-		</h2>
-		<multi_radio>
-			<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
-					Not present | Present
-			</radio>
-			<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
-					Normal | Abnormal
-			</radio>
-			<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
-					Not present | Present
-			</radio>
-			<radio label="Collection" normaltext="No intracranial collection is present.">
-					Not present | Present
-			</radio>
-			<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
-					Not present | Present
-			</radio>
-		</multi_radio>
-		<text_entry subtype="large">
-		</text_entry>
-		<insert>
-				MRI Head Checklist
-		</insert>
-		<h2>Spine</h2>
-		<selection label="Alignment and height">Normal cervical and thoracic spinal alignment with preservation of vertebral body height and signal.</selection>
-		<selection label="Spondylosis">No significant spondylotic disc or facet joint changes.</selection>
-		<selection label="Stenosis">No central canal narrowing</selection>
-		<insert>
-				Generic spine
-		</insert>
-		<h1>
-				Conclusion
-		</h1>
-		<text_entry label="" subtype="medium">
-		</text_entry>
-	</content>
-</template>
-<template>
-	<name>
-			MRI Head: Tumour diagnosis
-	</name>
-	<type>
-			Diagnostic
-	</type>
-	<title>
-			MRI Head
-	</title>
-	<content>
-		<insert>
-				MRI Head Start
-		</insert>
-		<selection label="Note is made">
-				Note is made of placement of a ventricular catheter.
-		</selection>
-		<multi_select label="Description of mass">
-			<dropdown label="Enhancement" print_text_before="There is an">
-					enhancing | non-enhancing
-			</dropdown>
-			<dropdown label="Intra/extra-axial" print_text_after="mass">
-					intra-axial | extra-axial
-			</dropdown>
-			<free_text label="Location" print_text_before="centered on" print_text_after="region">
-			</free_text>
-			<free_text label="Size" print_text_before="It measures">
-			</free_text>
-			<dropdown label="Restricted diffusion" print_text_before="The lesion">
-					exhibits restricted diffusion. | does not exhibit restricted diffusion.
-			</dropdown>
-			<dropdown label="Necrosis">
-					There is central necrosis.
-			</dropdown>
-			<dropdown label="Haemorrhage" print_text_before="There is evidence of">
-					intralesional haemorrhage.
-			</dropdown>
-			<dropdown label="Internal susceptibility" print_text_before="There is">
-					internal susceptibility. | no internal susceptibility.
-			</dropdown>
-			<dropdown label="Flow voids" print_text_before="There are">
-					prominent flow voids within the lesion. |  no prominent flow voids within the lesion.
-			</dropdown>
-			<dropdown label="Oedema" print_text_before="There is" print_text_after="perilesional abnormal signal.">
-					no | mild | a wide zone of
-			</dropdown>
-			<dropdown label="Dural thickening">
-					There is adjacent dural thickening.
-			</dropdown>
-			<dropdown label="Bony reaction">
-					There is adjacent bony hyperostosis. | There is adjacent bony expansion. | There is adjacent bony thinning. | There is adjacent bony invasion.
-			</dropdown>
-			<dropdown label="Mass effect" print_text_before="The lesion causes" print_text_after="mass effect">
-					no | mild | significant
-			</dropdown>
-		</multi_select>
-		<multi_radio>
-			<radio label="Other lesions" normaltext="There are no contralateral or other space occupying lesions.">
-					Not present | Present
-			</radio>
-			<radio label="Raised intracranial pressure" normaltext="There is no evidence of raised intracranial pressure.">
-					Not present | Present
-			</radio>
-			<radio label="Hydrocephalus" normaltext="The ventricles are not hydrocephalic.">
-					Not present | Present
-			</radio>
-			<text_entry subtype="large">
-			</text_entry>
-		</multi_radio>
-		<h2 flags="dont_print">
-				Acute pathology
-		</h2>
-		<multi_radio>
-			<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
-					Not present | Present
-			</radio>
-			<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
-					Normal | Abnormal
-			</radio>
-			<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
-					Not present | Present
-			</radio>
-		</multi_radio>
-		<insert>
-				MRI Head Checklist
-		</insert>
-		<h1>
-				Conclusion
-		</h1>
-		<selection label="Grade">
-				Appearances favour a low-grade tumour | Appearances favour a high-grade lesion
-		</selection>
-		<text_entry label="Primary differential diagnosis" subtype="small">
-		</text_entry>
-		<text_entry label="Secondary differential diagnosis" subtype="small">
-		</text_entry>
-		<text_entry subtype="medium">
-		</text_entry>
-		<selection label="Referral">
-				Neurosurgical referral is recommended
-		</selection>
-	</content>
-</template>
-<template>
-	<name>
-			MRI Head: Sella mass
-	</name>
-	<type>
-			Diagnostic
-	</type>
-	<title>
-			MRI Head
-	</title>
-	<content>
-		<insert>
-				MRI Head Start
-		</insert>
-		<multi_select label="Description of mass">
-			<dropdown label="Enhancement" print_text_before="There is an" print_text_after="sella mass">
-					enhancing | non-enhancing
-			</dropdown>
-			<dropdown label="Suprasellar" print_text_before="with">
-					suprasellar extension.
-			</dropdown>
-			<free_text label="Size" print_text_before="It measures approximately">
-			</free_text>
-			<dropdown label="Optic Chiasm" print_text_before="The mass" print_text_after="the optic chiasm.">
-					elevates and compresses
-			</dropdown>
-			<dropdown label="Sellar floor" print_text_before="The mass causes" print_text_after="of the sellar floor.">
-					remodelling
-			</dropdown>
-			<dropdown label="Cavernous sinus" print_text_before="There is">
-					no cavernous sinus extension. | right cavernous sinus extension. | left cavernous sinus extension.
-			</dropdown>
-			<dropdown label="Posterior pituitary" print_text_before="The posterior pituitary bright spot is">
-					absent. | present.
-			</dropdown>
-			<dropdown label="Restricted diffusion" print_text_before="The lesion">
-					exhibits restricted diffusion. | does not exhibit restricted diffusion.
-			</dropdown>
-			<dropdown label="Necrosis">
-					There is central necrosis.
-			</dropdown>
-			<dropdown label="Haemorrhage" print_text_before="There is evidence of">
-					intralesional haemorrhage.
-			</dropdown>
-			<dropdown label="Internal susceptibility" print_text_before="There is">
-					internal susceptibility. | no internal susceptibility.
-			</dropdown>
-			<dropdown label="Flow voids" print_text_before="There are">
-					prominent flow voids within the lesion. |  no prominent flow voids within the lesion.
-			</dropdown>
-			<dropdown label="Bony reaction">
-					There is adjacent bony hyperostosis. | There is adjacent bony expansion. | There is adjacent bony thinning. | There is adjacent bony invasion.
-			</dropdown>
-			<dropdown label="Mass effect" print_text_before="The lesion causes" print_text_after="mass effect">
-					no | mild | significant
-			</dropdown>
-		</multi_select>
-		<multi_radio>
-			<radio label="Other lesions" normaltext="There are no contralateral or other space occupying lesions.">
-					Not present | Present
-			</radio>
-			<radio label="Raised intracranial pressure" normaltext="There is no evidence of raised intracranial pressure.">
-					Not present | Present
-			</radio>
-			<radio label="Hydrocephalus" normaltext="The ventricles are not hydrocephalic.">
-					Not present | Present
-			</radio>
-			<text_entry subtype="large">
-			</text_entry>
-		</multi_radio>
-		<h2 flags="dont_print">
-				Acute pathology
-		</h2>
-		<multi_radio>
-			<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
-					Not present | Present
-			</radio>
-			<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
-					Normal | Abnormal
-			</radio>
-			<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
-					Not present | Present
-			</radio>
-		</multi_radio>
-		<insert>
-				MRI Head Checklist
-		</insert>
-		<h1>
-				Conclusion
-		</h1>
-		<text_entry label="Primary differential diagnosis" subtype="small">
-		</text_entry>
-		<text_entry label="Secondary differential diagnosis" subtype="small">
-		</text_entry>
-		<text_entry subtype="medium">
-		</text_entry>
-		<selection label="Referral">
-				Neurosurgical referral is recommended
-		</selection>
-	</content>
-</template>
-<template>
-	<name>
-			MRI Head: Headache
-	</name>
-	<type>
-			Diagnostic
-	</type>
-	<title>
-			MRI Head
-	</title>
-	<content>
-		<insert>
-				MRI Head Start
-		</insert>
-		<h2 flags="dont_print">
-				Headache causes
-		</h2>
-		<multi_radio>
-			<radio label="High intracranial pressure" normaltext="There is no evidence of raised intracranial pressure.">
-					Not present | Present
-			</radio>
-			<radio label="Low intracranial pressure" normaltext="There is no evidence of low intracranial pressure.">
-					Not present | Present
-			</radio>
-			<radio label="Aneurysms" normaltext="">
-					Not present | Present
-			</radio>
-			<radio label="Colloid cyst" normaltext="">
-					Not present | Present
-			</radio>
-			<radio label="Chiari" normaltext="">
-					Not present | Present
-			</radio>
-			<radio label="Paranasal sinuses" normaltext="">
-					Normal | Abnormal
-			</radio>
-		</multi_radio>
-		<h2 flags="dont_print">
-				Acute pathology
-		</h2>
-		<multi_radio>
-			<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
-					Not present | Present
-			</radio>
-			<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
-					Normal | Abnormal
-			</radio>
-			<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
-					Not present | Present
-			</radio>
-			<radio label="Collection" normaltext="No intracranial collection is present.">
-					Not present | Present
-			</radio>
-			<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
-					Not present | Present
-			</radio>
-		</multi_radio>
-		<text_entry subtype="large">
-		</text_entry>
-		<insert>
-				MRI Head Checklist
-		</insert>
-		<h1>
-				Conclusion
-		</h1>
-		<text_entry label="" subtype="medium">
-		</text_entry>
-	</content>
-</template>
-<template>
-	<name>
-			MRI Head: Tumour Follow-Up
-	</name>
-	<type>
-			Diagnostic
-	</type>
-	<title>
-			MRI Head
-	</title>
-	<content>
-		<insert>
-				MRI Head Start
-		</insert>
-		<multi_select label="Description">
-			<free_text label="Location" print_text_before="Note is again made of the lesion located in the">
-			</free_text>
-			<free_text label="Size" print_text_before="The lesion now measures approximately">
-			</free_text>
-			<dropdown label="Comparison">
-					It is stable in size | It has  increased in size from the previous study | It has decreased in size from the previous study
-			</dropdown>
-			<free_text label="Previous study" print_text_before="where it measured">
-			</free_text>
-		</multi_select>
-		<selection label="Signal">
-				There is no change in the internal signal characteristics
-		</selection>
-		<selection label="Perilesional signal">
-				There is no change in the perilesional signal change
-		</selection>
-		<selection label="Mass effect">
-				There is no change in the mass effect caused by the lesion
-		</selection>
-		<selection label="Other lesions">
-				No new lesions are identified
-		</selection>
-		<text_entry subtype="large">
-		</text_entry>
-		<h2 flags="dont_print">
-				Acute pathology
-		</h2>
-		<multi_radio>
-			<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
-					Not present | Present
-			</radio>
-			<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
-					Normal | Abnormal
-			</radio>
-			<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
-					Not present | Present
-			</radio>
-			<radio label="Collection" normaltext="No intracranial collection is present.">
-					Not present | Present
-			</radio>
-			<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
-					Not present | Present
-			</radio>
-		</multi_radio>
-		<insert>
-				MRI Head Checklist
-		</insert>
-		<h1>
-				Conclusion
-		</h1>
-		<selection label="Signal">
-				Stable imaging appearances
-		</selection>
-		<text_entry label="" subtype="medium">
-		</text_entry>
-	</content>
-</template>
-<template>
-	<name>
-			MRI Head: Neurodegenerative
-	</name>
-	<type>
-			Diagnostic
-	</type>
-	<title>
-			MRI Head
-	</title>
-	<content>
-		<insert>
-				MRI Head Start
-		</insert>
-		<h2 flags="dont_print">
-				Neurodegerative
-		</h2>
-		<multi_select label="White matter changes" askfurtherdetails="true">
-			<dropdown label="Location" print_text_before="There are multiple foci of" print_text_after="white matter abnormal signal">
-					periventricular | deep white matter | pontine | periventricular and deep white matter | generalised
-			</dropdown>
-			<dropdown label="Severity" print_text_before="which is non-specific but may represent a" print_text_after="burden of small vessel disease">
-					mild | moderate | severe
-			</dropdown>
-		</multi_select>
-		<multi_select label="Microhaemorrhages" askfurtherdetails="true">
-			<dropdown label="Location" print_text_before="There are multiple foci of" print_text_after="susceptibility drop">
-					periventricular | deep white matter | pontine | periventricular and deep white matter | generalised
-			</dropdown>
-			<dropdown label="Severity" print_text_before="in keeping with a" print_text_after="burden of microhaemorrhages">
-					mild | moderate | severe
-			</dropdown>
-		</multi_select>
-		<multi_select label="Atrophy" askfurtherdetails="true">
-			<dropdown label="Cerebral severity" print_text_before="There is">
-					mild | moderate | severe
-			</dropdown>
-			<dropdown label="Cerebral location" print_text_after="cerebral atrophy.">
-					supratentorial | infratentorial | generalised
-			</dropdown>
-			<dropdown label="Hippocampal severity" print_text_before="There is">
-					mild | moderate | severe
-			</dropdown>
-			<dropdown label="Hippocampal location" print_text_after="hippocampal atrophy.">
-					bilateral | right | left
-			</dropdown>
-		</multi_select>
-		<multi_radio>
-			<radio label="Huntingtons" flags="dont_print_negative">
-					Not present | Present
-			</radio>
-			<radio label="Frontotemporal dementia" flags="dont_print_negative">
-					Not present | Present
-			</radio>
-			<radio label="Cerebral amyloid angiopathy" flags="dont_print_negative">
-					Not present | Present
-			</radio>
-			<radio label="CADASIL" flags="dont_print_negative">
-					Not present | Present
-			</radio>
-			<radio label="PSP" flags="dont_print_negative">
-					Not present | Present
-			</radio>
-			<radio label="MSA-P" flags="dont_print_negative">
-					Not present | Present
-			</radio>
-			<radio label="MSA-C" flags="dont_print_negative">
-					Not present | Present
-			</radio>
-		</multi_radio>
-		<h2 flags="dont_print">
-				Acute pathology
-		</h2>
-		<multi_radio>
-			<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
-					Not present | Present
-			</radio>
-			<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
-					Normal | Abnormal
-			</radio>
-			<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
-					Not present | Present
-			</radio>
-			<radio label="Collection" normaltext="No intracranial collection is present.">
-					Not present | Present
-			</radio>
-			<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
-					Not present | Present
-			</radio>
-		</multi_radio>
-		<text_entry subtype="large">
-		</text_entry>
-		<insert>
-				MRI Head Checklist
-		</insert>
-		<h1>
-				Conclusion
-		</h1>
-		<text_entry label="" subtype="medium">
-		</text_entry>
-	</content>
-</template>
-
-<template>
-	<name>MRI Head: Aneurysm Follow-Up
-	</name>
-	<type>
-			Diagnostic
-	</type>
-	<title>MRI Head
-	</title>
-	<content>
-		<insert>
-				MRI Head Start
-		</insert>
-
-		<multi_select label="Description">
-			<free_text label="Location" print_text_before="The treated" print_text_after="is noted."></free_text>
-			<dropdown label="Residual">
-				The aneurysm is excluded from the circulation | There is a small neck remnant | There is filling of the aneurysm sac.
-			</dropdown>
-			<dropdown label="Change">
-				There has been no change since the previous study. | There has been a decrease in size since the previous study. | There has been an increase in size since the previous study.
-			</dropdown>
-			<free_text label="Size" print_text_before="The aneurysm now measures approximately">
-			</free_text>
-			<dropdown label="Other">
-				No other aneurysms are identified.
-			</dropdown>
+			</h1>
 			<text_entry label="" subtype="medium">
 			</text_entry>
-		</multi_select>
-		<h2 flags="dont_print">
-				Acute pathology
-		</h2>
-		<multi_radio>
-			<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
-					Not present | Present
-			</radio>
-			<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
-					Normal | Abnormal
-			</radio>
-			<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
-					Not present | Present
-			</radio>
-			<radio label="Collection" normaltext="No intracranial collection is present.">
-					Not present | Present
-			</radio>
-			<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
-					Not present | Present
-			</radio>
-		</multi_radio>
-		<insert>
-				MRI Head Checklist
-		</insert>
-		<h1>
+			<h1>
+				Findings
+			</h1>
+			<insert>
+				DAVF description
+			</insert>
+			<text_entry label="" subtype="large">
+			</text_entry>
+			<h1>
 				Conclusion
-		</h1>
-		<selection label="Signal">
-				Stable imaging appearances
-		</selection>
-		<text_entry label="" subtype="medium">
-		</text_entry>
-	</content>
-</template>
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<selection label="Referral">
+				Neurovascular team referral is recommended.  
+			</selection>
+		</content>
+	</template>
 
-<template>
-	<name>MRI Head: Internal Auditory Meatus (IAM)
-	</name>
-	<type>
+
+	<module>
+		<name>AVM description
+		</name>
+		<content>
+			<text_entry label="There is an arteriovenous malformation located in" subtype="small">
+			</text_entry>
+			<text_entry label="The approximate size is" subtype="small">
+			</text_entry>
+			<text_entry label="The arterial feeders are the" subtype="medium">
+			</text_entry>
+			<text_entry label="The venous drainage is to the" subtype="medium">
+			</text_entry>
+			<multi_select label="Features">
+				<dropdown label="Flow aneurysms">
+					There are no associated flow aneurysms.
+				</dropdown>
+				<dropdown label="Venous stenosis">
+					There is no venous stenosis.
+				</dropdown>
+				<dropdown label="Venous ectasia">
+					There is no venous ectasia or pouches.
+				</dropdown>
+			</multi_select>
+			<h2>Spetzler-Martin Classification</h2>
+			<multi_select label="Core">
+				<dropdown label="Size" print_text_before="Size: " print_text_after=".">
+					1-3 cm (+1) | 3-6 cm (+2) | Over 6 cm (+3)
+				</dropdown>
+				<dropdown label="Eloquence" print_text_before="Eloquence: " print_text_after=".">
+					Non-eloquent area (+0) | Eloquent area (+1)
+				</dropdown>
+				<dropdown label="Venous drainage" print_text_before="Venous drainage: " print_text_after=".">
+					Superficial (+0)| Deep (+1)
+				</dropdown>
+			</multi_select>
+			<h2>Spetzler-Martin Supplementary</h2>
+
+			<multi_select label="Supplementary">
+				<dropdown label="Age in years" print_text_before="Age in years: " print_text_after=".">
+					Under 20 (+1) | 20-40 (+2) | Over 40 (+3)
+				</dropdown>
+				<dropdown label="Haemorrhage" print_text_before="Haemorrhage: " print_text_after=".">
+					Previous haemorrhage (+0) | No previous haemorrhage (+1)
+				</dropdown>
+				<dropdown label="Morphology" print_text_before="Morphology: " print_text_after=".">
+					Compact (+0)| Non-compact (+1)
+				</dropdown>
+			</multi_select>
+		</content>
+	</module>
+
+	<template>
+		<name>
+			Cerebral Angiogram: Arteriovenous Malformation (AVM)
+		</name>
+		<type>
+			Angiography
+		</type>
+		<title>
+			Cerebral Angiogram
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<insert>
+				Angio header
+			</insert>
+			<insert>
+				Angio technique
+			</insert>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+			<insert>
+				AVM description
+			</insert>
+			<text_entry label="" subtype="large">
+			</text_entry>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<selection label="Referral">
+				Neurovascular team referral is recommended.  
+			</selection>
+		</content>
+	</template>
+
+
+	<template>
+		<name>
+			Lumbar Puncture
+		</name>
+		<type>
+			Angiography
+		</type>
+		<title>
+			Lumbar Puncture
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="Consent">
+				Written consent included the risks of infection, bleeding, CSF leak, damage to nerve roots resulting in bladder/bowel incontinence and weakness.
+			</text_entry>
+			<multi_select>
+				<dropdown label="Local">
+					1% lidocaine was infiltrated into the puncture site superficial tissues.
+				</dropdown>
+				<dropdown label="Needle" print_text_before="A" print_text_after="needle was inserted in to the thecal space">
+					19 | 20 | 21 | 22 gauge
+				</dropdown>
+				<free_text label="Level" print_text_before="at the" print_text_after="level.">
+				</free_text>
+				<free_text label="Opening pressure" print_text_after="mmCSF">
+				</free_text>
+				<free_text label="Closing pressure" print_text_after="mmCSF">
+				</free_text>
+			</multi_select>
+			<selection label="Complications">
+				There were no periprocedural complications.
+			</selection>
+			<h1>
+				Conclusion
+			</h1>
+			<selection label="Summary">
+				Uncomplicated lumbar puncture.
+			</selection>
+			<selection label="Post-procedure">
+				Requires 1-2 hours bed rest flat on back.
+			</selection>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+	<template>
+		<name>
+			MRI Spine: Fracture
+		</name>
+		<type>
 			Diagnostic
-	</type>
-	<title>MRI Head
-	</title>
-	<content>
-		<insert>
+		</type>
+		<title>
+			MRI Spine
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="" subtype="small">
+				MR images were acquired of the spine without intravenous contrast.
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+			<selection label="Formation and segmentation">
+				There is normal formation and segmentation of the imaged spine. | There is a transitional lumbosacral junction.
+			</selection>
+			<multi_select label="Description">
+				<dropdown label="Columns" print_text_before="There is a">1-column | 2-column | 3-column </dropdown>
+				<free_text label="Vertebral level" print_text_before="fracture at the level of" print_text_after="."></free_text>
+				<dropdown label="Posterior elements">The posterior elements are not involved.</dropdown>
+				<dropdown label="Retropulsion" print_text_before="There is" print_text_after="posterior retropulsion. ">mild | moderate | severe</dropdown>
+				<dropdown label="Cord signal" print_text_before="The spinal cord signal at the level of the fracture is" print_text_after=".">normal | abnormal and suggestive of acute injury</dropdown>
+				<dropdown label="Ligaments" print_text_before="" print_text_after=".">The paraspinal ligaments at this level are intact | There is disruption of the posterior spinal ligament | There is disruption of the anterior spinal ligament | There is disruption of the posterior and anterior spinal ligaments </dropdown>
+				<dropdown label="Vertebral alignment" print_text_after=".">Vertebral alignment remains intact </dropdown>
+				<dropdown label="Haematoma">No compressive intraspinal or paraspinal haematoma is identified. </dropdown>
+				<dropdown label="Facet joints" print_text_after=".">The facet joints remain aligned | There is subluxation of the facet joints | There is dislocation of the facet joints</dropdown>
+			</multi_select>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+
+			<h2 flags="dont_print">
+				Other details:
+			</h2>
+			<insert>
+				Generic spine
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+
+	<template>
+		<name>
+			MRI Spine: Postoperative collection
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			MRI Spine
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="" subtype="small">
+				MR images were acquired of the spine with and without intravenous contrast.
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+			<selection label="Formation and segmentation">
+				There is normal formation and segmentation of the imaged spine. | There is a transitional lumbosacral junction.
+			</selection>
+			<text_entry label="Note is made of" subtype="medium">
+			</text_entry>
+			<multi_select label="Description">
+				<free_text label="Location" print_text_before="There is a collection located at"></free_text>
+				<dropdown label="Size" print_text_before="and measuring" print_text_after="."></dropdown>
+				<dropdown label="Extension" print_text_before="The collection extends in to"></dropdown>
+				<free_text label="Signal"></free_text>
+				<dropdown label="Compression">The collection indents the thecal sac. | The collection effaces the cerebrospinal fluid. | The collection causes spinal cord compression. | </dropdown>
+				<dropdown label="Spinal cord">Abnormal signal is noted within the spinal cord suggestive of acute injury.  </dropdown>
+
+				<dropdown label="Walls">The collection has thick enhancing walls.</dropdown>
+				<dropdown label="Oedema">Surrounding tissue abnormal signal and enhancement is consistent with oedema.</dropdown>
+			</multi_select>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+
+			<h2 flags="dont_print">
+				Other details:
+			</h2>
+			<insert>
+				Generic spine
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<selection label="Referral">
+				Neurosurgical referral is recommended
+			</selection>
+
+		</content>
+	</template>
+
+	<template>
+		<name>
+			MRI Lumbar Spine: Degenerative
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			MRI Lumber spine
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="" subtype="small">
+				MR images were acquired of the spine without intravenous contrast.
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+			<selection label="Formation and segmentation">
+				There is normal formation and segmentation of the lumbosacral spine. | There is a transitional lumbosacral junction.
+			</selection>
+			<selection label="Vertebral alignment">
+				Vertebral alignment is normal | Vertebral alignment is abnormal
+			</selection>
+			<h2>
+				T12-L1:
+			</h2>
+			<insert>
+				Lumbar spine level
+			</insert>
+			<h2>
+				L1-L2:
+			</h2>
+			<insert>
+				Lumbar spine level
+			</insert>
+			<h2>
+				L2-L3:
+			</h2>
+			<insert>
+				Lumbar spine level
+			</insert>
+			<h2>
+				L3-L4:
+			</h2>
+			<insert>
+				Lumbar spine level
+			</insert>
+			<h2>
+				L4-L5:
+			</h2>
+			<insert>
+				Lumbar spine level
+			</insert>
+			<h2>
+				L5-S1:
+			</h2>
+			<insert>
+				Lumbar spine level
+			</insert>
+			<h2 flags="dont_print">
+				Other details:
+			</h2>
+			<insert>
+				Generic spine
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+	<module>
+		<name>
+			Cervical spine level
+		</name>
+		<content>
+			<selection label="Discs">
+				The disc is normal | There is disc degeneration. | There is disc degeneration and height loss.
+			</selection>
+			<selection label="Ligamentum flavum">
+				There is no flaval thickening | There is flaval thickening
+			</selection>
+			<selection label="Disc bar">
+				There is a disc bar causing no neural compression | There is a disc bar compressing
+			</selection>
+			<selection label="Facet joints">
+				There is no facetal degeneration. | There is facetal degeneration.
+			</selection>
+		</content>
+	</module>
+	<template>
+		<name>
+			MRI Cervical Spine
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			MRI Cervical Spine
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+			<selection label="Vertebral alignment">
+				Vertebral alignment is normal | Vertebral alignment is abnormal
+			</selection>
+			<selection label="Posterior fossa">
+				Normal | Abnormal
+			</selection>
+			<h2>
+				C1-C2
+			</h2>
+			<text_entry label="Comment">
+			</text_entry>
+			<h2>
+				C2-C3
+			</h2>
+			<insert>
+				Cervical spine level
+			</insert>
+			<h2>
+				C3-C4
+			</h2>
+			<insert>
+				Cervical spine level
+			</insert>
+			<h2>
+				C4-C5
+			</h2>
+			<insert>
+				Cervical spine level
+			</insert>
+			<h2>
+				C5-C6
+			</h2>
+			<insert>
+				Cervical spine level
+			</insert>
+			<h2>
+				C6-C7
+			</h2>
+			<insert>
+				Cervical spine level
+			</insert>
+			<h2>
+				C7-T1
+			</h2>
+			<insert>
+				Cervical spine level
+			</insert>
+			<h2>
+				Other details:
+			</h2>
+			<insert>
+				Generic spine
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+
+	<template>
+		<name>
+			MRI Spine: Multiple Sclerosis Initial Diagnosis
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			MRI Spine
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="" subtype="small">
+				MR images were acquired of the spine with and without intravenous contrast.
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+			<multi_select label="Plaques">
+				<free_text label="Locations" print_text_before="Abnormal cord signal is located at">
+				</free_text>
+				<dropdown label="Atrophy">
+					The spinal cord is atrophic | There is no spinal cord atrophy
+				</dropdown>
+
+			</multi_select>
+			<selection label="Posterior fossa">The visualised posterior fossa structures are normal.
+			</selection>
+			<selection label="Marrow signal">Marrow signal is normal.
+			</selection>
+			<selection label="Stenosis">No spinal canal or foraminal stenosis is demonstrated.
+			</selection>
+			<selection label="Vertebral body height and alignment">
+				Vertebral body height and alignment is normal.
+			</selection>
+			<h2 flags="dont_print">
+				Other details:
+			</h2>
+			<insert>
+				Generic spine
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+
+	<template>
+		<name>
+			MRI Spine: Multiple Sclerosis Follow-Up
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			MRI Spine
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="" subtype="small">
+				MR images were acquired of the spine with and without intravenous contrast.
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+			<multi_select label="Plaques">
+				<free_text label="Locations" print_text_before="Existing plaques are identified at">
+				</free_text>
+				<free_text label="New lesions" print_text_before="New plaques are identified at">
+				</free_text>
+				<free_text label="Enhancing lesions" print_text_before="The plaques enhance at">
+				</free_text>
+				<dropdown label="Atrophy">
+					The spinal cord is atrophic | There is no spinal cord atrophy
+				</dropdown>
+
+			</multi_select>
+			<selection label="Posterior fossa">The visualised posterior fossa structures are normal.
+			</selection>
+			<selection label="Marrow signal">Marrow signal is normal.
+			</selection>
+			<selection label="Stenosis">No spinal canal or foraminal stenosis is demonstrated.
+			</selection>
+			<selection label="Vertebral body height and alignment">
+				Vertebral body height and alignment is normal.
+			</selection>
+			<h2 flags="dont_print">
+				Other details:
+			</h2>
+			<insert>
+				Generic spine
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<selection label="Changes">No new lesions are identified.
+			</selection>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+
+	<module>
+		<name>
+			Plain CT Start
+		</name>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry subtype="small">
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+		</content>
+	</module>
+	<module>
+		<name>
+			CT Head Checklist
+		</name>
+		<content>
+			<h2 flags="dont_print">
+				Chronic pathology
+			</h2>
+			<multi_select label="White matter changes" askfurtherdetails="true">
+				<dropdown label="Location" print_text_before="There is" print_text_after="white matter hypodensity">
+					periventricular | deep white matter | pontine | periventricular and deep white matter | generalised
+				</dropdown>
+				<dropdown label="Severity" print_text_before="which is non-specific but may represent a" print_text_after="burden of small vessel disease">
+					mild | moderate | severe
+				</dropdown>
+			</multi_select>
+			<multi_select label="Atrophy" askfurtherdetails="true">
+				<dropdown label="Cerebral severity" print_text_before="There is">
+					mild | moderate | severe
+				</dropdown>
+				<dropdown label="Cerebral location" print_text_after="cerebral atrophy.">
+					supratentorial | infratentorial | generalised
+				</dropdown>
+				<dropdown label="Hippocampal severity" print_text_before="There is">
+					mild | moderate | severe
+				</dropdown>
+				<dropdown label="Hippocampal location" print_text_after="hippocampal atrophy.">
+					bilateral | right | left
+				</dropdown>
+			</multi_select>
+
+			<selection label="Bones">
+				There are no skull fractures or destructive bony lesions
+			</selection>
+			<h2>
+				Checklist
+			</h2>
+			<multi_radio>
+				<radio label="Venous sinus hyperdensity" normaltext="">
+					Normal | Abnormal
+				</radio>
+				<radio label="Basilar hyperdensity">
+					Not present | Present
+				</radio>
+				<radio label="Trauma/contusions">
+					Not present | Present
+				</radio>
+				<radio label="Orbits">
+					Normal | Abnormal
+				</radio>
+				<radio label="Old infarcts">
+					Not present | Present
+				</radio>
+				<radio label="Paranasal sinuses and mastoid air cells">
+					Normal | Abnormal
+				</radio>
+				<radio label="Clivus">
+					Normal | Abnormal
+				</radio>
+				<radio label="Pituitary">
+					Normal | Abnormal
+				</radio>
+				<radio label="Cerebellar tonsils">
+					Normal | Abnormal
+				</radio>
+				<radio label="Extracranial soft tissue">
+					Normal | Abnormal
+				</radio>
+			</multi_radio>
+		</content>
+	</module>
+	<template>
+		<name>
+			CT Head
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			CT Head
+		</title>
+		<content>
+			<insert>
+				Plain CT Start
+			</insert>
+			<h2 flags="dont_print">
+				Acute pathology
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<text_entry subtype="medium">
+			</text_entry>
+			<insert>
+				CT Head Checklist
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+	<template>
+		<name>
+			CT Orbits: Cellulitis
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			CT Orbits
+		</title>
+		<content>
+			<insert>
+				Plain CT Start
+			</insert>
+			<insert>
+				CT Head Checklist
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+	<module>
+		<name>
+			CT Angiogram Intracranial
+		</name>
+		<content>
+			<h2>
+				CT Angiogram
+			</h2>
+			<selection label="Occlusion">
+				There is no proximal intracranial occlusion
+			</selection>
+			<selection label="Collaterals">
+				There are good collateral vessels | There are poor collateral vessels
+			</selection>
+			<selection label="Aneurysm/Vascular malformation">
+				No aneurysms or other intracranial vascular abnormalities are identified
+			</selection>
+			<text_entry label="CT Perfusion" subtype="medium">
+			</text_entry>
+			<multi_radio>
+				<radio label="Venous sinuses">
+					Normal | Abnormal
+				</radio>
+			</multi_radio>
+		</content>
+	</module>
+	<module>
+		<name>
+			CT Angiogram Neck
+		</name>
+		<content>
+			<selection label="Subclavian/Arch">
+				Normal appearances of the aortic arch and subclavian arteries
+			</selection>
+			<selection label="Right carotid artery">
+				The right common and internal carotid arteries are normal
+			</selection>
+			<selection label="Left carotid artery">
+				The left common and internal carotid arteries are normal
+			</selection>
+			<selection label="Right vertebral artery">
+				The right vertebral artery is normal
+			</selection>
+			<selection label="Left vertebral artery">
+				The left vertebral artery is normal
+			</selection>
+			<selection label="Basilar artery">
+				The basilar artery is normal
+			</selection>
+			<selection label="Bones">
+				There is no acute fracture or destructive bony lesion
+			</selection>
+			<selection label="Degenerative disease">
+				Cervical degenerative disease is evident
+			</selection>
+			<selection label="Lung apices">
+				Normal appearances of the visualised lung apices | Mild dependent atelectasis is present at the imaged lung apices
+			</selection>
+			<multi_radio>
+				<radio label="Imaged pulmonary vasculature">
+					Normal | Abnormal
+				</radio>
+				<radio label="Thyroid gland">
+					Normal | Abnormal
+				</radio>
+			</multi_radio>
+		</content>
+	</module>
+	<template>
+		<name>
+			CT Angiogram Intracranial
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			CT Angiogram Intracranial
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<insert>
+				CT Head Checklist
+			</insert>
+			<insert>
+				CT Angiogram Intracranial
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+	<template>
+		<name>
+			CT Head: Parenchymal Haematoma
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			CT Angiogram Intracranial
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+			<text_entry label="" subtype="medium">
+				The large parenchymal haematoma centered on ... is again demonstrated.
+			</text_entry>
+			<multi_select label="Mass effect" askfurtherdetails="true">
+				<dropdown label="Presence">
+					There is mass effect
+				</dropdown>
+				<dropdown label="Midline shift" print_text_before="with" print_text_after="of midline structures">
+					mild contralateral shift | moderate contralateral shift | severe contralateral shift
+				</dropdown>
+			</multi_select>
+			<selection label="Oedema">
+				There is surrounding parenchymal oedema
+			</selection>
+			<selection label="Fluid levels">
+				A fluid level is noted within the haematoma
+			</selection>
+			<selection label="Ventricular spill">
+				There is no ventricular spill | There is spill in to the lateral ventricles
+			</selection>
+			<selection label="Hydrocephalus">
+				The ventricles are hydrocephalic
+			</selection>
+			<insert>
+				CT Head Checklist
+			</insert>
+			<insert>
+				CT Angiogram Intracranial
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<selection label="">
+				Surgical review is warranted
+			</selection>
+		</content>
+	</template>
+	<template>
+		<name>
+			CT Angiogram: Head and Neck Vessels
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			CT Head and Angiogram of the Head and Neck
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+			<insert>
+				CT Head Checklist
+			</insert>
+			<insert>
+				CT Angiogram Intracranial
+			</insert>
+			<insert>
+				CT Angiogram Neck
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+	<template>
+		<name>
+			CT Angiogram: Subarachnoid Haemorrhage
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			CT Head and Angiogram of the Head and Neck
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+			<text_entry label="There is subarachnoid haemorrhage centered on" subtype="small" sentencecontinues="true">
+			</text_entry>
+			<text_entry label="There is hydrocephalus, with blood layering in the" subtype="small" sentencecontinues="true">
+			</text_entry>
+			<insert>
+				CT Head Checklist
+			</insert>
+			<insert>
+				CT Angiogram Intracranial
+			</insert>
+			<insert>
+				CT Angiogram Neck
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+	<template>
+		<name>
+			CT Head: Post-Operative Deep Brain Stimulation Electrode Placement
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			CT Head
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+			<selection label="Placement">
+				Bilateral transfrontal electrodes are in situ
+			</selection>
+			<selection label="Oedema">
+				No evidence of peri-electrode oedema | Peri-electrode oedema is noted
+			</selection>
+			<insert>
+				CT Head Checklist
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+	<template>
+		<name>
+			CT Head: Post-Operative Subdural Evacuation
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			CT Head
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+			<multi_select label="Description" askfurtherdetails="false">
+				<dropdown label="Location" print_text_before="There has been interval partial evacuation of the subdural haematoma overlying the">
+					right cerebral hemisphere | left cerebral hemisphere
+				</dropdown>
+			</multi_select>
+			<text_entry label="" subtype="large">
+				There has been marked reduction of the size of subdural haematoma associated with significant reduction of local mass effect and partial re-expansion of the cerebral sulci and ipsilateral lateral ventricle. A small collection of blood products and fluid remains. There remains mild contralateral shift of midline structures.
+			</text_entry>
+			<insert>
+				CT Head Checklist
+			</insert>
+		</content>
+	</template>
+	<module>
+		<name>
+			MRI Head Start
+		</name>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry subtype="small">
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+		</content>
+	</module>
+	<module>
+		<name>
+			MRI Head Checklist
+		</name>
+		<content>
+			<h2 flags="dont_print">
+				Chronic pathology
+			</h2>
+			<multi_select label="White matter changes" askfurtherdetails="true">
+				<dropdown label="Location" print_text_before="There are multiple foci of" print_text_after="white matter abnormal signal">
+					periventricular | deep white matter | pontine | periventricular and deep white matter | generalised
+				</dropdown>
+				<dropdown label="Severity" print_text_before="which is non-specific but may represent a" print_text_after="burden of small vessel disease">
+					mild | moderate | severe
+				</dropdown>
+			</multi_select>
+			<multi_select label="Atrophy" askfurtherdetails="true">
+				<dropdown label="Cerebral severity" print_text_before="There is">
+					mild | moderate | severe
+				</dropdown>
+				<dropdown label="Cerebral location" print_text_after="cerebral atrophy.">
+					supratentorial | infratentorial | generalised
+				</dropdown>
+				<dropdown label="Hippocampal severity" print_text_before="There is">
+					mild | moderate | severe
+				</dropdown>
+				<dropdown label="Hippocampal location" print_text_after="hippocampal atrophy.">
+					bilateral | right | left
+				</dropdown>
+			</multi_select>
+			<selection label="Bones">
+				There are no skull fractures or destructive bony lesions
+			</selection>
+			<h2 flags="dont_print">
+				Diseases
+			</h2>
+			<multi_radio>
+				<radio label="Hydrocephalus" normaltext="The ventricles are not hydrocephalic">
+					Not present | Present
+				</radio>
+				<radio label="Dural thickening or leptomeningeal enhancement" normaltext="">
+					Not present | Present
+				</radio>
+				<radio label="Raised intracranial pressure" normaltext="">
+					Not present | Present
+				</radio>
+				<radio label="Low intracranial pressure" normaltext="">
+					Not present | Present
+				</radio>
+				<radio label="Basilar flow void">
+					Not present | Present
+				</radio>
+				<radio label="Trauma/contusions">
+					Not present | Present
+				</radio>
+				<radio label="Old infarcts">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<h2 flags="dont_print">
+				Regions
+			</h2>
+			<multi_radio>
+				<radio label="Paranasal sinuses and mastoid air cells">
+					Normal | Abnormal
+				</radio>
+				<radio label="Orbits">
+					Normal | Abnormal
+				</radio>
+				<radio label="Clivus">
+					Normal | Abnormal
+				</radio>
+				<radio label="Pituitary">
+					Normal | Abnormal
+				</radio>
+				<radio label="Cavernous sinus">
+					Normal | Abnormal
+				</radio>
+				<radio label="Cerebellar tonsils">
+					Normal | Abnormal
+				</radio>
+				<radio label="Internal auditory canals">
+					Normal | Abnormal
+				</radio>
+				<radio label="Skull base">
+					Normal | Abnormal
+				</radio>
+				<radio label="Extracranial soft tissue">
+					Normal | Abnormal
+				</radio>
+				<radio label="Craniocervical junction">
+					Normal | Abnormal
+				</radio>
+			</multi_radio>
+		</content>
+	</module>
+	<template>
+		<name>
+			MRI Head: Generic
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			MRI Head
+		</title>
+		<content>
+			<insert>
 				MRI Head Start
-		</insert>
-		<selection label="CN 7 and 8">
+			</insert>
+			<h2 flags="dont_print">
+				Acute pathology
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
+					Normal | Abnormal
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<text_entry subtype="large">
+			</text_entry>
+			<insert>
+				MRI Head Checklist
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+	<template>
+		<name>
+			MRI Paediatric Head
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			MRI  Head
+		</title>
+		<content>
+			<insert>
+				MRI Head Start
+			</insert>
+			<selection label="Generic">There are no structural abnormalities, mass lesions, or vascular pathology.
+			</selection>
+			<selection label="Gyri">The gyral appearances are normal. | Polymicrogyria is noted. </selection>
+			<selection label="Heterotopia">No heterotopic parenchymal tissue is present.</selection>
+			<selection label="Corpus callosum">The corpus callosum is well formed.</selection>
+			<selection label="Posterior fossa">Posterior fossa contents are normal.</selection>
+			<selection label="Hindbrain herniation">There is no hindbrain herniation.</selection>
+			<selection label="Myelination">The white matter is appropriately myelinated.</selection>
+
+			<text_entry subtype="large">
+			</text_entry>
+			<h2 flags="dont_print">
+				Acute pathology
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
+					Normal | Abnormal
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<text_entry subtype="large">
+			</text_entry>
+			<insert>
+				MRI Head Checklist
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+
+	<template>
+		<name>
+			MRI Head and Spine: Generic
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			MRI Head and Spine
+		</title>
+		<content>
+			<insert>
+				MRI Head Start
+			</insert>
+			<h2 flags="dont_print">
+				Acute pathology: head
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
+					Normal | Abnormal
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<text_entry subtype="large">
+			</text_entry>
+			<insert>
+				MRI Head Checklist
+			</insert>
+			<h2>Spine</h2>
+			<selection label="Alignment and height">Normal cervical and thoracic spinal alignment with preservation of vertebral body height and signal.</selection>
+			<selection label="Spondylosis">No significant spondylotic disc or facet joint changes.</selection>
+			<selection label="Stenosis">No central canal narrowing</selection>
+			<insert>
+				Generic spine
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+	<template>
+		<name>
+			MRI Head: Tumour diagnosis
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			MRI Head
+		</title>
+		<content>
+			<insert>
+				MRI Head Start
+			</insert>
+			<selection label="Note is made">
+				Note is made of placement of a ventricular catheter.
+			</selection>
+			<multi_select label="Description of mass">
+				<dropdown label="Enhancement" print_text_before="There is an">
+					enhancing | non-enhancing
+				</dropdown>
+				<dropdown label="Intra/extra-axial" print_text_after="mass">
+					intra-axial | extra-axial
+				</dropdown>
+				<free_text label="Location" print_text_before="centered on" print_text_after="region">
+				</free_text>
+				<free_text label="Size" print_text_before="It measures">
+				</free_text>
+				<dropdown label="Restricted diffusion" print_text_before="The lesion">
+					exhibits restricted diffusion. | does not exhibit restricted diffusion.
+				</dropdown>
+				<dropdown label="Necrosis">
+					There is central necrosis.
+				</dropdown>
+				<dropdown label="Haemorrhage" print_text_before="There is evidence of">
+					intralesional haemorrhage.
+				</dropdown>
+				<dropdown label="Internal susceptibility" print_text_before="There is">
+					internal susceptibility. | no internal susceptibility.
+				</dropdown>
+				<dropdown label="Flow voids" print_text_before="There are">
+					prominent flow voids within the lesion. |  no prominent flow voids within the lesion.
+				</dropdown>
+				<dropdown label="Oedema" print_text_before="There is" print_text_after="perilesional abnormal signal.">
+					no | mild | a wide zone of
+				</dropdown>
+				<dropdown label="Dural thickening">
+					There is adjacent dural thickening.
+				</dropdown>
+				<dropdown label="Bony reaction">
+					There is adjacent bony hyperostosis. | There is adjacent bony expansion. | There is adjacent bony thinning. | There is adjacent bony invasion.
+				</dropdown>
+				<dropdown label="Mass effect" print_text_before="The lesion causes" print_text_after="mass effect">
+					no | mild | significant
+				</dropdown>
+			</multi_select>
+			<multi_radio>
+				<radio label="Other lesions" normaltext="There are no contralateral or other space occupying lesions.">
+					Not present | Present
+				</radio>
+				<radio label="Raised intracranial pressure" normaltext="There is no evidence of raised intracranial pressure.">
+					Not present | Present
+				</radio>
+				<radio label="Hydrocephalus" normaltext="The ventricles are not hydrocephalic.">
+					Not present | Present
+				</radio>
+				<text_entry subtype="large">
+				</text_entry>
+			</multi_radio>
+			<h2 flags="dont_print">
+				Acute pathology
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
+					Normal | Abnormal
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<insert>
+				MRI Head Checklist
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<selection label="Grade">
+				Appearances favour a low-grade tumour | Appearances favour a high-grade lesion
+			</selection>
+			<text_entry label="Primary differential diagnosis" subtype="small">
+			</text_entry>
+			<text_entry label="Secondary differential diagnosis" subtype="small">
+			</text_entry>
+			<text_entry subtype="medium">
+			</text_entry>
+			<selection label="Referral">
+				Neurosurgical referral is recommended
+			</selection>
+		</content>
+	</template>
+	<template>
+		<name>
+			MRI Head: Sella mass
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			MRI Head
+		</title>
+		<content>
+			<insert>
+				MRI Head Start
+			</insert>
+			<multi_select label="Description of mass">
+				<dropdown label="Enhancement" print_text_before="There is an" print_text_after="sella mass">
+					enhancing | non-enhancing
+				</dropdown>
+				<dropdown label="Suprasellar" print_text_before="with">
+					suprasellar extension.
+				</dropdown>
+				<free_text label="Size" print_text_before="It measures approximately">
+				</free_text>
+				<dropdown label="Optic Chiasm" print_text_before="The mass" print_text_after="the optic chiasm.">
+					elevates and compresses
+				</dropdown>
+				<dropdown label="Sellar floor" print_text_before="The mass causes" print_text_after="of the sellar floor.">
+					remodelling
+				</dropdown>
+				<dropdown label="Cavernous sinus" print_text_before="There is">
+					no cavernous sinus extension. | right cavernous sinus extension. | left cavernous sinus extension.
+				</dropdown>
+				<dropdown label="Posterior pituitary" print_text_before="The posterior pituitary bright spot is">
+					absent. | present.
+				</dropdown>
+				<dropdown label="Restricted diffusion" print_text_before="The lesion">
+					exhibits restricted diffusion. | does not exhibit restricted diffusion.
+				</dropdown>
+				<dropdown label="Necrosis">
+					There is central necrosis.
+				</dropdown>
+				<dropdown label="Haemorrhage" print_text_before="There is evidence of">
+					intralesional haemorrhage.
+				</dropdown>
+				<dropdown label="Internal susceptibility" print_text_before="There is">
+					internal susceptibility. | no internal susceptibility.
+				</dropdown>
+				<dropdown label="Flow voids" print_text_before="There are">
+					prominent flow voids within the lesion. |  no prominent flow voids within the lesion.
+				</dropdown>
+				<dropdown label="Bony reaction">
+					There is adjacent bony hyperostosis. | There is adjacent bony expansion. | There is adjacent bony thinning. | There is adjacent bony invasion.
+				</dropdown>
+				<dropdown label="Mass effect" print_text_before="The lesion causes" print_text_after="mass effect">
+					no | mild | significant
+				</dropdown>
+			</multi_select>
+			<multi_radio>
+				<radio label="Other lesions" normaltext="There are no contralateral or other space occupying lesions.">
+					Not present | Present
+				</radio>
+				<radio label="Raised intracranial pressure" normaltext="There is no evidence of raised intracranial pressure.">
+					Not present | Present
+				</radio>
+				<radio label="Hydrocephalus" normaltext="The ventricles are not hydrocephalic.">
+					Not present | Present
+				</radio>
+				<text_entry subtype="large">
+				</text_entry>
+			</multi_radio>
+			<h2 flags="dont_print">
+				Acute pathology
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
+					Normal | Abnormal
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<insert>
+				MRI Head Checklist
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="Primary differential diagnosis" subtype="small">
+			</text_entry>
+			<text_entry label="Secondary differential diagnosis" subtype="small">
+			</text_entry>
+			<text_entry subtype="medium">
+			</text_entry>
+			<selection label="Referral">
+				Neurosurgical referral is recommended
+			</selection>
+		</content>
+	</template>
+	<template>
+		<name>
+			MRI Head: Headache
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			MRI Head
+		</title>
+		<content>
+			<insert>
+				MRI Head Start
+			</insert>
+			<h2 flags="dont_print">
+				Headache causes
+			</h2>
+			<multi_radio>
+				<radio label="High intracranial pressure" normaltext="There is no evidence of raised intracranial pressure.">
+					Not present | Present
+				</radio>
+				<radio label="Low intracranial pressure" normaltext="There is no evidence of low intracranial pressure.">
+					Not present | Present
+				</radio>
+				<radio label="Aneurysms" normaltext="">
+					Not present | Present
+				</radio>
+				<radio label="Colloid cyst" normaltext="">
+					Not present | Present
+				</radio>
+				<radio label="Chiari" normaltext="">
+					Not present | Present
+				</radio>
+				<radio label="Paranasal sinuses" normaltext="">
+					Normal | Abnormal
+				</radio>
+			</multi_radio>
+			<h2 flags="dont_print">
+				Acute pathology
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
+					Normal | Abnormal
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<text_entry subtype="large">
+			</text_entry>
+			<insert>
+				MRI Head Checklist
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+	<template>
+		<name>
+			MRI Head: Tumour Follow-Up
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			MRI Head
+		</title>
+		<content>
+			<insert>
+				MRI Head Start
+			</insert>
+			<multi_select label="Description">
+				<free_text label="Location" print_text_before="Note is again made of the lesion located in the">
+				</free_text>
+				<free_text label="Size" print_text_before="The lesion now measures approximately">
+				</free_text>
+				<dropdown label="Comparison">
+					It is stable in size | It has  increased in size from the previous study | It has decreased in size from the previous study
+				</dropdown>
+				<free_text label="Previous study" print_text_before="where it measured">
+				</free_text>
+			</multi_select>
+			<selection label="Signal">
+				There is no change in the internal signal characteristics
+			</selection>
+			<selection label="Perilesional signal">
+				There is no change in the perilesional signal change
+			</selection>
+			<selection label="Mass effect">
+				There is no change in the mass effect caused by the lesion
+			</selection>
+			<selection label="Other lesions">
+				No new lesions are identified
+			</selection>
+			<text_entry subtype="large">
+			</text_entry>
+			<h2 flags="dont_print">
+				Acute pathology
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
+					Normal | Abnormal
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<insert>
+				MRI Head Checklist
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<selection label="Signal">
+				Stable imaging appearances
+			</selection>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+	<template>
+		<name>
+			MRI Head: Neurodegenerative
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			MRI Head
+		</title>
+		<content>
+			<insert>
+				MRI Head Start
+			</insert>
+			<h2 flags="dont_print">
+				Neurodegerative
+			</h2>
+			<multi_select label="White matter changes" askfurtherdetails="true">
+				<dropdown label="Location" print_text_before="There are multiple foci of" print_text_after="white matter abnormal signal">
+					periventricular | deep white matter | pontine | periventricular and deep white matter | generalised
+				</dropdown>
+				<dropdown label="Severity" print_text_before="which is non-specific but may represent a" print_text_after="burden of small vessel disease">
+					mild | moderate | severe
+				</dropdown>
+			</multi_select>
+			<multi_select label="Microhaemorrhages" askfurtherdetails="true">
+				<dropdown label="Location" print_text_before="There are multiple foci of" print_text_after="susceptibility drop">
+					periventricular | deep white matter | pontine | periventricular and deep white matter | generalised
+				</dropdown>
+				<dropdown label="Severity" print_text_before="in keeping with a" print_text_after="burden of microhaemorrhages">
+					mild | moderate | severe
+				</dropdown>
+			</multi_select>
+			<multi_select label="Atrophy" askfurtherdetails="true">
+				<dropdown label="Cerebral severity" print_text_before="There is">
+					mild | moderate | severe
+				</dropdown>
+				<dropdown label="Cerebral location" print_text_after="cerebral atrophy.">
+					supratentorial | infratentorial | generalised
+				</dropdown>
+				<dropdown label="Hippocampal severity" print_text_before="There is">
+					mild | moderate | severe
+				</dropdown>
+				<dropdown label="Hippocampal location" print_text_after="hippocampal atrophy.">
+					bilateral | right | left
+				</dropdown>
+			</multi_select>
+			<multi_radio>
+				<radio label="Huntingtons" flags="dont_print_negative">
+					Not present | Present
+				</radio>
+				<radio label="Frontotemporal dementia" flags="dont_print_negative">
+					Not present | Present
+				</radio>
+				<radio label="Cerebral amyloid angiopathy" flags="dont_print_negative">
+					Not present | Present
+				</radio>
+				<radio label="CADASIL" flags="dont_print_negative">
+					Not present | Present
+				</radio>
+				<radio label="PSP" flags="dont_print_negative">
+					Not present | Present
+				</radio>
+				<radio label="MSA-P" flags="dont_print_negative">
+					Not present | Present
+				</radio>
+				<radio label="MSA-C" flags="dont_print_negative">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<h2 flags="dont_print">
+				Acute pathology
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
+					Normal | Abnormal
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<text_entry subtype="large">
+			</text_entry>
+			<insert>
+				MRI Head Checklist
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+
+	<template>
+		<name>MRI Head: Aneurysm Follow-Up
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>MRI Head
+		</title>
+		<content>
+			<insert>
+				MRI Head Start
+			</insert>
+
+			<multi_select label="Description">
+				<free_text label="Location" print_text_before="The treated" print_text_after="is noted."></free_text>
+				<dropdown label="Residual">
+				The aneurysm is excluded from the circulation | There is a small neck remnant | There is filling of the aneurysm sac.
+				</dropdown>
+				<dropdown label="Change">
+				There has been no change since the previous study. | There has been a decrease in size since the previous study. | There has been an increase in size since the previous study.
+				</dropdown>
+				<free_text label="Size" print_text_before="The aneurysm now measures approximately">
+				</free_text>
+				<dropdown label="Other">
+				No other aneurysms are identified.
+				</dropdown>
+				<text_entry label="" subtype="medium">
+				</text_entry>
+			</multi_select>
+			<h2 flags="dont_print">
+				Acute pathology
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
+					Normal | Abnormal
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<insert>
+				MRI Head Checklist
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<selection label="Signal">
+				Stable imaging appearances
+			</selection>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+
+	<template>
+		<name>MRI Head: Internal Auditory Meatus (IAM)
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>MRI Head
+		</title>
+		<content>
+			<insert>
+				MRI Head Start
+			</insert>
+			<selection label="CN 7 and 8">
 				Unremarkable appearances of the seventh and eighth nerve complexes bilaterally.
-		</selection>
-		<selection label="Inner ear">
+			</selection>
+			<selection label="Inner ear">
 				The inner ear structures demonstrate normal appearances.
-		</selection>
-		<selection label="CP angle">
+			</selection>
+			<selection label="CP angle">
 				No mass lesions are demonstrated within the cerebellopontine angles.
-		</selection>
-		<selection label="Petrous temporal">
+			</selection>
+			<selection label="Petrous temporal">
 				No abnormal signal evident in the petrous temporal bones.  No diffusion restriction.
-		</selection>
-		<selection label="Trigeminal">
+			</selection>
+			<selection label="Trigeminal">
 				Both trigeminal nerves are unremarkable. Meckel's caves appear clear.
-		</selection>
-		<h2 flags="dont_print">
+			</selection>
+			<h2 flags="dont_print">
 				Acute pathology
-		</h2>
-		<multi_radio>
-			<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
 					Not present | Present
-			</radio>
-			<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
+				</radio>
+				<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
 					Normal | Abnormal
-			</radio>
-			<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
 					Not present | Present
-			</radio>
-			<radio label="Collection" normaltext="No intracranial collection is present.">
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
 					Not present | Present
-			</radio>
-			<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
 					Not present | Present
-			</radio>
-		</multi_radio>
-		<insert>
+				</radio>
+			</multi_radio>
+			<insert>
 				MRI Head Checklist
-		</insert>
-		<h1>
+			</insert>
+			<h1>
 				Conclusion
-		</h1>
-		<selection label="Signal">
+			</h1>
+			<selection label="Signal">
 				Stable imaging appearances
-		</selection>
-		<text_entry label="" subtype="medium">
-		</text_entry>
-	</content>
-</template>
-<template>
-	<name>MRI Head: Multiple Sclerosis Diagnosis
-	</name>
-	<type>
+			</selection>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+	<template>
+		<name>MRI Head: Multiple Sclerosis Diagnosis
+		</name>
+		<type>
 			Diagnostic
-	</type>
-	<title>MRI Head
-	</title>
-	<content>
-		<insert>
+		</type>
+		<title>MRI Head
+		</title>
+		<content>
+			<insert>
 				MRI Head Start
-		</insert>
-		<multi_checkbox label="Multiple foci of abnormal signal are identified in the">
-			<checkbox>
+			</insert>
+			<multi_checkbox label="Multiple foci of abnormal signal are identified in the">
+				<checkbox>
 					juxtacortical
-			</checkbox>
-			<checkbox>
+				</checkbox>
+				<checkbox>
 					cortical
-			</checkbox>
-			<checkbox>
+				</checkbox>
+				<checkbox>
 					corpus callosum
-			</checkbox>
-			<checkbox>
+				</checkbox>
+				<checkbox>
 					periventricular
-			</checkbox>
-			<checkbox>
+				</checkbox>
+				<checkbox>
 					posterior fossa
-			</checkbox>
-			<checkbox>
+				</checkbox>
+				<checkbox>
 					imaged cord
-			</checkbox>
-		</multi_checkbox>
+				</checkbox>
+			</multi_checkbox>
 
-		<multi_select label="Lesion Characteristics">
-			<free_text print_text_before="Approximately" print_text_after="lesions in total are identifed" label="Approximate number">
-			</free_text>
-			<free_text print_text_before="Enhancing lesions are demonstrated in the" label="Enhancing lesion location">
-			</free_text>
-			<free_text print_text_before="Lesions exhibiting restricted diffusion are demonstrated at" label="Restricted diffusion location">
-			</free_text>
-			<dropdown label="Recent">There are no features of recent or interval demyelination.</dropdown>
-		</multi_select>
-		<selection label="T1 hypointense">
+			<multi_select label="Lesion Characteristics">
+				<free_text print_text_before="Approximately" print_text_after="lesions in total are identifed" label="Approximate number">
+				</free_text>
+				<free_text print_text_before="Enhancing lesions are demonstrated in the" label="Enhancing lesion location">
+				</free_text>
+				<free_text print_text_before="Lesions exhibiting restricted diffusion are demonstrated at" label="Restricted diffusion location">
+				</free_text>
+				<dropdown label="Recent">There are no features of recent or interval demyelination.</dropdown>
+			</multi_select>
+			<selection label="T1 hypointense">
 				No T1 hypointense lesions are identified
-		</selection>
-		<selection label="Cerebral atrophy">
+			</selection>
+			<selection label="Cerebral atrophy">
 				The cerebral white matter volume is normal. | Mild cerebral white matter volume loss is noted. | Moderate cerebral white matter volume loss is noted. | Severe cerebral white matter volume loss is noted.  
-		</selection>
-		<selection label="Optic nerves">
+			</selection>
+			<selection label="Optic nerves">
 				The optic nerves exhibit normal appearances with no abnormal signal, atrophy, or contrast enhancement. 	
-		</selection>
+			</selection>
 
-		<h2 flags="dont_print">
+			<h2 flags="dont_print">
 				Acute pathology
-		</h2>
-		<multi_radio>
-			<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
 					Not present | Present
-			</radio>
-			<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
+				</radio>
+				<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
 					Normal | Abnormal
-			</radio>
-			<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
 					Not present | Present
-			</radio>
-			<radio label="Collection" normaltext="No intracranial collection is present.">
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
 					Not present | Present
-			</radio>
-			<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
 					Not present | Present
-			</radio>
-		</multi_radio>
-		<insert>
+				</radio>
+			</multi_radio>
+			<insert>
 				MRI Head Checklist
-		</insert>
-		<h1>
+			</insert>
+			<h1>
 				Conclusion
-		</h1>
-		<selection label="Stable">
+			</h1>
+			<selection label="Stable">
 				Stable imaging appearances
-		</selection>
-		<text_entry label="" subtype="medium">
-		</text_entry>
-	</content>
-</template>
+			</selection>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
 
-<template>
-	<name>Chest Radiograph
-	</name>
-	<type>
+	<template>
+		<name>Chest Radiograph
+		</name>
+		<type>
 			Diagnostic
-	</type>
-	<title>Chest Radiograph
-	</title>
-	<content>
-		<h1>
+		</type>
+		<title>Chest Radiograph
+		</title>
+		<content>
+			<h1>
 				Technique
-		</h1>
+			</h1>
 
-		<multi_select label="Details">
-			<dropdown label="Position">
+			<multi_select label="Details">
+				<dropdown label="Position">
 					Erect | Supine
-			</dropdown>
-			<dropdown label="Detector" print_text_after="study.">
+				</dropdown>
+				<dropdown label="Detector" print_text_after="study.">
 					anteroposterior | posteroanterior
-			</dropdown>
-		</multi_select>
+				</dropdown>
+			</multi_select>
 
-		<selection label="Quality">The technical quality of the study is good. | The technical quality of the study is poor.</selection>
+			<selection label="Quality">The technical quality of the study is good. | The technical quality of the study is poor.</selection>
 
-		<h1>
+			<h1>
 				Comparison
-		</h1>
-		<text_entry label="" subtype="small">
-		</text_entry>
-		<h1>
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
 				Findings
-		</h1>
-		<multi_radio>
-			<radio label="Lungs" normaltext="The lungs are clear.">
+			</h1>
+			<multi_radio>
+				<radio label="Lungs" normaltext="The lungs are clear.">
 				Clear | Not clear
-			</radio>
-			<radio label="Pleura" normaltext="The pleural spaces are normal.">
+				</radio>
+				<radio label="Pleura" normaltext="The pleural spaces are normal.">
 					Normal | Abnormal
-			</radio>
-			<radio label="Cardiomediastinal contour" normaltext="The cardiomediastinal contour is normal.">
+				</radio>
+				<radio label="Cardiomediastinal contour" normaltext="The cardiomediastinal contour is normal.">
 					Normal | Abnormal
 
-			</radio>
-			<radio label="Free subdiaphragmatic gas" normaltext="No free subdiaphragmatic gas is present.">
+				</radio>
+				<radio label="Free subdiaphragmatic gas" normaltext="No free subdiaphragmatic gas is present.">
 					Normal | Abnormal
-			</radio>
-			<radio label="Bones" normaltext="There are no acute fractures or destructive bony lesions.">
+				</radio>
+				<radio label="Bones" normaltext="There are no acute fractures or destructive bony lesions.">
 					Normal | Abnormal
-			</radio>
-		</multi_radio>
+				</radio>
+			</multi_radio>
 
-		<text_entry subtype="medium">
-		</text_entry>
+			<text_entry subtype="medium">
+			</text_entry>
 
-		<h1>
+			<h1>
 				Conclusion
-		</h1>
-		<selection label="Summary">Normal study.</selection>
-	</content>
-</template>
-<template>
-	<name>Chest radiograph: Nasogastric tube (NGT)
-	</name>
-	<type>
+			</h1>
+			<selection label="Summary">Normal study.</selection>
+		</content>
+	</template>
+	<template>
+		<name>Chest radiograph: Nasogastric tube (NGT)
+		</name>
+		<type>
 			Diagnostic
-	</type>
-	<title>Chest radiograph 
-	</title>
-	<content>
-		<h1>
+		</type>
+		<title>Chest radiograph 
+		</title>
+		<content>
+			<h1>
 				Technique
-		</h1>
-		<multi_select label="Details">
-			<dropdown label="Position">
+			</h1>
+			<multi_select label="Details">
+				<dropdown label="Position">
 					Erect | Supine
-			</dropdown>
-			<dropdown label="Detector" print_text_after="study.">
+				</dropdown>
+				<dropdown label="Detector" print_text_after="study.">
 					anteroposterior | posteroanterior
-			</dropdown>
-		</multi_select>
+				</dropdown>
+			</multi_select>
 
-		<selection label="Quality">The technical quality of the study is good. | The technical quality of the study is poor.</selection>
+			<selection label="Quality">The technical quality of the study is good. | The technical quality of the study is poor.</selection>
 
 
-		<h1>
+			<h1>
 				Comparison
-		</h1>
-		<text_entry label="" subtype="small">
-		</text_entry>
-		<h1>
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
 				Findings
-		</h1>
-		<h2 flags="dont_print">Nasogastric tube</h2>
-		<selection label="Carina">The nasogastric tube bisects the carina. | The nasogastric tube does not bisects the carina.</selection>
-		<selection label="Tip">The tip of the tube projects over the stomach. | The tip of the tube projects over the stomach.</selection>
-		<text_entry label="Other" subtype="medium">
-		</text_entry>
+			</h1>
+			<h2 flags="dont_print">Nasogastric tube</h2>
+			<selection label="Carina">The nasogastric tube bisects the carina. | The nasogastric tube does not bisects the carina.</selection>
+			<selection label="Tip">The tip of the tube projects over the stomach. | The tip of the tube projects over the stomach.</selection>
+			<text_entry label="Other" subtype="medium">
+			</text_entry>
 
-		<h2 flags="dont_print">Chest</h2>
-		<multi_radio>
-			<radio label="Lungs" normaltext="The lungs are clear.">
+			<h2 flags="dont_print">Chest</h2>
+			<multi_radio>
+				<radio label="Lungs" normaltext="The lungs are clear.">
 				Clear | Not clear
-			</radio>
-			<radio label="Pleura" normaltext="The pleural spaces are normal.">
+				</radio>
+				<radio label="Pleura" normaltext="The pleural spaces are normal.">
 					Normal | Abnormal
-			</radio>
-			<radio label="Cardiomediastinal contour" normaltext="The cardiomediastinal contour is normal.">
+				</radio>
+				<radio label="Cardiomediastinal contour" normaltext="The cardiomediastinal contour is normal.">
 					Normal | Abnormal
 
-			</radio>
-			<radio label="Free subdiaphragmatic gas" normaltext="No free subdiaphragmatic gas is present.">
+				</radio>
+				<radio label="Free subdiaphragmatic gas" normaltext="No free subdiaphragmatic gas is present.">
 					Normal | Abnormal
-			</radio>
-			<radio label="Bones" normaltext="There are no acute fractures or destructive bony lesions.">
+				</radio>
+				<radio label="Bones" normaltext="There are no acute fractures or destructive bony lesions.">
 					Normal | Abnormal
-			</radio>
-		</multi_radio>
+				</radio>
+			</multi_radio>
 
-		<text_entry subtype="medium" label="Other pathology">
-		</text_entry>
-		<h1>
+			<text_entry subtype="medium" label="Other pathology">
+			</text_entry>
+			<h1>
 				Conclusion
-		</h1>
-		<selection>The nasogastric tube appears appropriately sited on the basis of this radiograph. Please note, the final decision to commence feeding lies with the clinical team. </selection>
-	</content>
-</template>
-<template>
-	<name>Lumbar spine radiograph
-	</name>
-	<type>
+			</h1>
+			<selection>The nasogastric tube appears appropriately sited on the basis of this radiograph. Please note, the final decision to commence feeding lies with the clinical team. </selection>
+		</content>
+	</template>
+	<template>
+		<name>Lumbar spine radiograph
+		</name>
+		<type>
 			Diagnostic
-	</type>
-	<title>Lumbar Spine Radiograph
-	</title>
-	<content>
-		<h1>
+		</type>
+		<title>Lumbar Spine Radiograph
+		</title>
+		<content>
+			<h1>
 				Technique
-		</h1>
-		<text_entry subtype="small">Anteroposterior and lateral projections obtained. 
-		</text_entry>
-		<selection label="Quality">The technical quality of the study is good. | The technical quality of the study is poor.</selection>
-		<h1>
+			</h1>
+			<text_entry subtype="small">Anteroposterior and lateral projections obtained. 
+			</text_entry>
+			<selection label="Quality">The technical quality of the study is good. | The technical quality of the study is poor.</selection>
+			<h1>
 				Comparison
-		</h1>
-		<text_entry label="" subtype="small">
-		</text_entry>
-		<h1>
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
 				Findings
-		</h1>
-		<selection label="Alignment">Normal alignment is maintained. </selection>
-		<selection label="Fractures">No acute fractures are noted. </selection>
-		<selection label="Degeneration">There is no significant degenerative disease | There is multilevel degenerative disease.</selection>
-		<selection label="Disc spaces">The disc spaces are normal. | Disc space narrowing is noted. </selection>
-		<selection label="Endplates">No endplate degeneration is demonstratd. </selection>
-		<selection label="Facet joints">The facet joints are noted. | There is facet joint degenerative disease. </selection>
-		<h1>
+			</h1>
+			<selection label="Alignment">Normal alignment is maintained. </selection>
+			<selection label="Fractures">No acute fractures are noted. </selection>
+			<selection label="Degeneration">There is no significant degenerative disease | There is multilevel degenerative disease.</selection>
+			<selection label="Disc spaces">The disc spaces are normal. | Disc space narrowing is noted. </selection>
+			<selection label="Endplates">No endplate degeneration is demonstratd. </selection>
+			<selection label="Facet joints">The facet joints are noted. | There is facet joint degenerative disease. </selection>
+			<h1>
 				Conclusion
-		</h1>
-		<selection>Normal study</selection>
-	</content>
-</template>
-<template>
-	<name>Cervical spine radiograph
-	</name>
-	<type>
+			</h1>
+			<selection>Normal study</selection>
+		</content>
+	</template>
+	<template>
+		<name>Cervical spine radiograph
+		</name>
+		<type>
 			Diagnostic
-	</type>
-	<title>Cervical Spine Radiograph
-	</title>
-	<content>
-		<h1>
+		</type>
+		<title>Cervical Spine Radiograph
+		</title>
+		<content>
+			<h1>
 				Technique
-		</h1>
-		<text_entry subtype="small">Anteroposterior and lateral projections obtained. 
-		</text_entry>
-		<selection label="Quality">The technical quality of the study is good. | The technical quality of the study is poor.</selection>
-		<h1>
+			</h1>
+			<text_entry subtype="small">Anteroposterior and lateral projections obtained. 
+			</text_entry>
+			<selection label="Quality">The technical quality of the study is good. | The technical quality of the study is poor.</selection>
+			<h1>
 				Comparison
-		</h1>
-		<text_entry label="" subtype="small">
-		</text_entry>
-		<h1>
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
 				Findings
-		</h1>
-		<selection label="Alignment">Normal alignment is maintained. </selection>
-		<selection label="Fractures">No acute fractures are noted. </selection>
-		<selection label="Degeneration">There is no significant degenerative disease | There is multilevel degenerative disease.</selection>
-		<selection label="Uncovertebral osteophytes">No uncovertebral osteophytes. </selection>
-		<selection label="Marginal anterior osteophytes">No marginal anterior osteophytes. </selection>
-		<selection label="Disc spaces">The disc spaces are normal. | Disc space narrowing is noted. </selection>
-		<selection label="Facet joints">The facet joints are noted. | There is facet joint degenerative disease. </selection>
-		<text_entry subtype="medium">
-		</text_entry>
-		<h1>
+			</h1>
+			<selection label="Alignment">Normal alignment is maintained. </selection>
+			<selection label="Fractures">No acute fractures are noted. </selection>
+			<selection label="Degeneration">There is no significant degenerative disease | There is multilevel degenerative disease.</selection>
+			<selection label="Uncovertebral osteophytes">No uncovertebral osteophytes. </selection>
+			<selection label="Marginal anterior osteophytes">No marginal anterior osteophytes. </selection>
+			<selection label="Disc spaces">The disc spaces are normal. | Disc space narrowing is noted. </selection>
+			<selection label="Facet joints">The facet joints are noted. | There is facet joint degenerative disease. </selection>
+			<text_entry subtype="medium">
+			</text_entry>
+			<h1>
 				Conclusion
-		</h1>
-		<selection>Normal study</selection>
-	</content>
-</template>
-<template>
-	<name>Spine radiograph: Surgical Fixation
-	</name>
-	<type>
+			</h1>
+			<selection>Normal study</selection>
+		</content>
+	</template>
+	<template>
+		<name>Spine radiograph: Surgical Fixation
+		</name>
+		<type>
 			Diagnostic
-	</type>
-	<title>Spine Radiograph
-	</title>
-	<content>
-		<h1>
+		</type>
+		<title>Spine Radiograph
+		</title>
+		<content>
+			<h1>
 				Technique
-		</h1>
-		<multi_checkbox label="Radiograph level:">
-			<checkbox>Cervical
-			</checkbox>
-			<checkbox>Thoracic
-			</checkbox>
-			<checkbox>Lumbar
-			</checkbox>
-		</multi_checkbox>
-		<text_entry subtype="small">Anteroposterior and lateral projections obtained. 
-		</text_entry>
-		<selection label="Quality">The technical quality of the study is good. | The technical quality of the study is poor.</selection>
-		<h1>
+			</h1>
+			<multi_checkbox label="Radiograph level:">
+				<checkbox>Cervical
+				</checkbox>
+				<checkbox>Thoracic
+				</checkbox>
+				<checkbox>Lumbar
+				</checkbox>
+			</multi_checkbox>
+			<text_entry subtype="small">Anteroposterior and lateral projections obtained. 
+			</text_entry>
+			<selection label="Quality">The technical quality of the study is good. | The technical quality of the study is poor.</selection>
+			<h1>
 				Comparison
-		</h1>
-		<text_entry label="" subtype="small">
-		</text_entry>
-		<h1>
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
 				Findings
-		</h1>
-		<text_entry label="Instrumented posterior fusion surgery is evident at" subtype="small">
-		</text_entry>
-		<text_entry label="There is a intervertebral disc prosthetic device at" subtype="small">
-		</text_entry>
-		<selection label="Fractures">No acute fractures are identified. </selection>
-		<selection label="Intactness">The metalwork is intact. There is no periprosthetic lucency or other periprosthetic complication.</selection>
-		<selection label="Alignment">The vertebral alignment is normal.</selection>
+			</h1>
+			<text_entry label="Instrumented posterior fusion surgery is evident at" subtype="small">
+			</text_entry>
+			<text_entry label="There is a intervertebral disc prosthetic device at" subtype="small">
+			</text_entry>
+			<selection label="Fractures">No acute fractures are identified. </selection>
+			<selection label="Intactness">The metalwork is intact. There is no periprosthetic lucency or other periprosthetic complication.</selection>
+			<selection label="Alignment">The vertebral alignment is normal.</selection>
 
 
-		<h2 flags="dont_print">Other</h2>
-		<selection label="Degeneration">There is no significant degenerative disease | There is mild multilevel degenerative disease. | There is moderate multilevel degenerative disease. | There is severe multilevel degenerative disease. </selection>
-		<selection label="Disc spaces">The disc spaces are normal. | Disc space narrowing is noted. </selection>
-		<selection label="Endplates">No endplate degeneration is demonstratd. </selection>
-		<selection label="Facet joints">The facet joints are noted. | There is facet joint degenerative disease. </selection>
-		<h1>
+			<h2 flags="dont_print">Other</h2>
+			<selection label="Degeneration">There is no significant degenerative disease | There is mild multilevel degenerative disease. | There is moderate multilevel degenerative disease. | There is severe multilevel degenerative disease. </selection>
+			<selection label="Disc spaces">The disc spaces are normal. | Disc space narrowing is noted. </selection>
+			<selection label="Endplates">No endplate degeneration is demonstratd. </selection>
+			<selection label="Facet joints">The facet joints are noted. | There is facet joint degenerative disease. </selection>
+			<h1>
 				Conclusion
-		</h1>
-		<selection label="Summary">Stable appearances. </selection>
-	</content>
-</template>
-<template>
-	<name>Radiograph: Ventriculoperitoneal (VP) Shunt Series
-	</name>
-	<type>
+			</h1>
+			<selection label="Summary">Stable appearances. </selection>
+		</content>
+	</template>
+	<template>
+		<name>Radiograph: Ventriculoperitoneal (VP) Shunt Series
+		</name>
+		<type>
 			Diagnostic
-	</type>
-	<title>Ventriculoperitoneal Shunt Series
-	</title>
-	<content>
-		<h1>
+		</type>
+		<title>Ventriculoperitoneal Shunt Series
+		</title>
+		<content>
+			<h1>
 				Technique
-		</h1>
-		<text_entry subtype="small">Radiographs of the skull, upper cervical spine, chest, and abdomen have been obtained. 
-		</text_entry>
-		<h1>
+			</h1>
+			<text_entry subtype="small">Radiographs of the skull, upper cervical spine, chest, and abdomen have been obtained. 
+			</text_entry>
+			<h1>
 				Comparison
-		</h1>
-		<text_entry label="" subtype="small">
-		</text_entry>
-		<h1>
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
 				Findings
-		</h1>
-		<h2>Skull</h2>
-		<selection label="Tubing">The tubing appears in continuity with the ventricular catheter.</selection>
-		<selection label="Other">Normal appearances of the cranium. </selection>
+			</h1>
+			<h2>Skull</h2>
+			<selection label="Tubing">The tubing appears in continuity with the ventricular catheter.</selection>
+			<selection label="Other">Normal appearances of the cranium. </selection>
 
-		<h2>Imaged upper cervical spine</h2>
-		<selection label="Tubing">Tubing appears in continuity and there is no kinking.</selection>
-		<selection label="Other">Normal appearances of the imaged neck. </selection>
+			<h2>Imaged upper cervical spine</h2>
+			<selection label="Tubing">Tubing appears in continuity and there is no kinking.</selection>
+			<selection label="Other">Normal appearances of the imaged neck. </selection>
 
-		<h2>Chest</h2>
-		<selection label="Tubing">Intact, unkinked, tubing passes inferiorly projected over the thorax.</selection>
-		<selection label="Lungs">The lungs are clear.</selection>
-		<selection label="Pleura">The pleural spaces are normal. </selection>
-		<selection label="Cardiomediastinal">The cardiomediastinal contour is normal.  </selection>
-		<selection label="Free gas">No free subdiaphragmatic gas is present.  </selection>
-		<selection label="Bones">There are no destructive bony lesions.  </selection>
+			<h2>Chest</h2>
+			<selection label="Tubing">Intact, unkinked, tubing passes inferiorly projected over the thorax.</selection>
+			<selection label="Lungs">The lungs are clear.</selection>
+			<selection label="Pleura">The pleural spaces are normal. </selection>
+			<selection label="Cardiomediastinal">The cardiomediastinal contour is normal.  </selection>
+			<selection label="Free gas">No free subdiaphragmatic gas is present.  </selection>
+			<selection label="Bones">There are no destructive bony lesions.  </selection>
 
 
-		<h2>Abdomen</h2>
-		<selection label="Tubing">Intact, unkinked, tubing passes inferiorly projected over the abdomen.</selection>
-		<text_entry label="The tip of the tubing appears projected over" subtype="small">
-		</text_entry>
-		<selection label="Other">Normal radiographic appearances of the abdomen. </selection>
-		<selection label="Bones">There are no destructive bony lesions.  </selection>
+			<h2>Abdomen</h2>
+			<selection label="Tubing">Intact, unkinked, tubing passes inferiorly projected over the abdomen.</selection>
+			<text_entry label="The tip of the tubing appears projected over" subtype="small">
+			</text_entry>
+			<selection label="Other">Normal radiographic appearances of the abdomen. </selection>
+			<selection label="Bones">There are no destructive bony lesions.  </selection>
 
-		<h1>
+			<h1>
 				Conclusion
-		</h1>
-		<selection label="Continuity">The tubing appears in continuity with the ventricular catheter throughout it's course.</selection>
-		<selection label="Kinking">There is no kinking.</selection>
+			</h1>
+			<selection label="Continuity">The tubing appears in continuity with the ventricular catheter throughout it's course.</selection>
+			<selection label="Kinking">There is no kinking.</selection>
 
-	</content>
-</template>
-<template>
-	<name>
-	</name>
-	<type>
+		</content>
+	</template>
+	<template>
+		<name>
+		</name>
+		<type>
 			Diagnostic
-	</type>
-	<title>
-	</title>
-	<content>
-		<h1>
+		</type>
+		<title>
+		</title>
+		<content>
+			<h1>
 				Technique
-		</h1>
-		<text_entry subtype="small">
-		</text_entry>
-		<h1>
+			</h1>
+			<text_entry subtype="small">
+			</text_entry>
+			<h1>
 				Comparison
-		</h1>
-		<text_entry label="" subtype="small">
-		</text_entry>
-		<h1>
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
 				Findings
-		</h1>
+			</h1>
 
-		<h1>
+			<h1>
 				Conclusion
-		</h1>
-		<selection>Normal study</selection>
-	</content>
-</template>
-<template>
-	<name>
-	</name>
-	<type>
+			</h1>
+			<selection>Normal study</selection>
+		</content>
+	</template>
+	<template>
+		<name>
+		</name>
+		<type>
 			Diagnostic
-	</type>
-	<title>
-	</title>
-	<content>
-		<h1>
+		</type>
+		<title>
+		</title>
+		<content>
+			<h1>
 				Technique
-		</h1>
-		<text_entry subtype="small">
-		</text_entry>
-		<h1>
+			</h1>
+			<text_entry subtype="small">
+			</text_entry>
+			<h1>
 				Comparison
-		</h1>
-		<text_entry label="" subtype="small">
-		</text_entry>
-		<h1>
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
 				Findings
-		</h1>
+			</h1>
 
-		<h1>
+			<h1>
 				Conclusion
-		</h1>
-		<selection>Normal study</selection>
-	</content>
-</template>
-<template>
-	<name>
-	</name>
-	<type>
+			</h1>
+			<selection>Normal study</selection>
+		</content>
+	</template>
+	<template>
+		<name>
+		</name>
+		<type>
 			Diagnostic
-	</type>
-	<title>
-	</title>
-	<content>
-		<h1>
+		</type>
+		<title>
+		</title>
+		<content>
+			<h1>
 				Technique
-		</h1>
-		<text_entry subtype="small">
-		</text_entry>
-		<h1>
+			</h1>
+			<text_entry subtype="small">
+			</text_entry>
+			<h1>
 				Comparison
-		</h1>
-		<text_entry label="" subtype="small">
-		</text_entry>
-		<h1>
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
 				Findings
-		</h1>
+			</h1>
 
-		<h1>
+			<h1>
 				Conclusion
-		</h1>
-		<selection>Normal study</selection>
-	</content>
-</template>
+			</h1>
+			<selection>Normal study</selection>
+		</content>
+	</template>
 </all>
