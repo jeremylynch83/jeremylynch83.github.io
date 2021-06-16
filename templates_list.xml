@@ -442,24 +442,24 @@ Not present | Present
 				</dropdown>
 			</multi_select>
 			<multi_select label="Spetzler-Martin Classification">
-				<dropdown label="Size">
+				<dropdown label="Size" print_text_before="Spetzler-Martin Classification. Size: " print_text_after=".">
 					1-3 cm (+1) | 3-6 cm (+2) | Over 6 cm (+3)
 				</dropdown>
-				<dropdown label="Eloquence">
+				<dropdown label="Eloquence" print_text_before="Eloquence: " print_text_after=".">
 					Non-eloquent area (+0) | Eloquent area (+1)
 				</dropdown>
-				<dropdown label="Venous drainage">
+				<dropdown label="Venous drainage" print_text_before="Venous drainage: " print_text_after=".">
 					Superficial (+0)| Deep (+1)
 				</dropdown>
 			</multi_select>
 			<multi_select label="Spetzler-Martin Supplementary">
-				<dropdown label="Age in years">
+				<dropdown label="Age in years" print_text_before="Spetzler-Martin Supplementary. Age in years: " print_text_after=".">
 					Under 20 (+1) | 20-40 (+2) | Over 40 (+3)
 				</dropdown>
-				<dropdown label="Haemorrhage">
+				<dropdown label="Haemorrhage" print_text_before="Haemorrhage: " print_text_after=".">
 					Previous haemorrhage (+0) | No previous haemorrhage (+1)
 				</dropdown>
-				<dropdown label="Morphology">
+				<dropdown label="Morphology" print_text_before="Morphology: " print_text_after=".">
 					Compact (+0)| Non-compact (+1)
 				</dropdown>
 			</multi_select>
