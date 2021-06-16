@@ -357,13 +357,14 @@ Not present | Present
 		</name>
 		<content>
 
+			<text_entry label="There is a dural arteriovenous fistula located at" subtype="small">
+			</text_entry>
+			<text_entry label="The arterial feeders are the" subtype="medium">
+			</text_entry>
+			<text_entry label="The venous drainage is to the" subtype="medium">
+			</text_entry>
+
 			<multi_select label="Description">
-				<free_text label="Location" print_text_before="There is a dural arteriovenous fistula located at" print_text_after="."></free_text>
-
-				<free_text label="Primary arteries" print_text_before="The dominant arterial feeders are" print_text_after="."></free_text>
-				<free_text label="Secondary arteries" print_text_before="The supply arises from" print_text_after="."></free_text>
-				<free_text label="Venous drainage" print_text_before="Drainage is in to" print_text_after="."></free_text>
-
 				<dropdown label="Cortical reflux" print_text_before="There is" print_text_after="."> cortical venous reflux | no cortical venous reflux
 				</dropdown>
 			</multi_select>
