@@ -63,77 +63,9 @@ Not present | Present
 </multi_select>
 -->
 <all>
-	<module>
-		<name>
-			Generic spine
-		</name>
-		<content>
-			<multi_radio>
-				<radio label="Masses/collections">
-					Not present | Present
-				</radio>
-				<radio label="Fractures">
-					Not present | Present
-				</radio>
-				<radio label="Cord signal">
-					Normal | Abnormal
-				</radio>
-				<radio label="Bone marrow signal">
-					Normal | Abnormal
-				</radio>
-				<radio label="Annular fissure">
-					Not present | Present
-				</radio>
-				<radio label="Paraspinal muscles">
-					Normal | Abnormal
-				</radio>
-				<radio label="Evidence of DAVF">
-					Not present | Present
-				</radio>
-				<radio label="Planning sequences">
-					Normal | Abnormal
-				</radio>
-			</multi_radio>
-		</content>
-	</module>
-	<module>
-		<name>
-			Lumbar spine level
-		</name>
-		<content>
-			<selection label="Discs">
-				The disc is normal | There is disc degeneration. | There is disc degeneration and height loss.
-			</selection>
-			<selection label="Ligamentum flavum">
-				There is no flaval thickening | There is flaval thickening
-			</selection>
-			<multi_select label="Disc herniation" askfurtherdetails="true">
-				<dropdown label="Type" print_text_before="There is a disc">
-					bulge | prolapse | extrusion | migration | sequestration | intravertebral herniation
-				</dropdown>
-				<dropdown label="Side" print_text_before="protruding in to the">
-					right | left
-				</dropdown>
-				<dropdown label="Location">
-					central canal | subarticular zone | foraminal zone | extraforaminal zone
-				</dropdown>
-			</multi_select>
-			<multi_select label="Neural compression" askfurtherdetails="true">
-				<dropdown label="Type" print_text_before="There is">
-					contact | impingement
-				</dropdown>
-				<dropdown label="Side" print_text_before="with the">
-					right | left
-				</dropdown>
-				<dropdown label="Nerve" print_text_after="nerve root">
-					descending | exiting
-				</dropdown>
-			</multi_select>
-			<selection label="Facet joints">
-				There is no facetal degeneration | There is mild facetal degeneration | There is moderate facetal degeneration | There is severe facetal degeneration
-			</selection>
-		</content>
-	</module>
+
+	<!--*********************** ANGIO ***********************-->
+
 	<module>
 		<name>
 			Angio header
@@ -369,7 +301,7 @@ Not present | Present
 				</dropdown>
 			</multi_select>
 			<selection label="Cognard grade">
-				Cognard classification 1 (confined to sinus, antegrade flow, no cortical venous flux). | Cognard classification 2a (confined to sinus, retrograde flow, no cortical venous flux). | Cognard classification 2b (drains to sinus with cortical venous flux). | Cognard classification 3 (drains directly into non-ectatic cortical veins). | Cognard classification 4 (drains directly into ectatic cortical veins). | Cognard classification 5 (spinal perimedullary venous drainage). 
+				Cognard 1 (confined to sinus, antegrade flow, no cortical venous flux). | Cognard 2a (confined to sinus, retrograde flow, no cortical venous flux). | Cognard 2b (drains to sinus with cortical venous flux). | Cognard 3 (drains directly into non-ectatic cortical veins). | Cognard 4 (drains directly into ectatic cortical veins). | Cognard 5 (spinal perimedullary venous drainage). 
 			</selection>
 		</content>
 	</module>
@@ -563,6 +495,80 @@ Not present | Present
 			</text_entry>
 		</content>
 	</template>
+
+	<!--*********************** MRI ***********************-->
+	<module>
+		<name>
+			Generic spine
+		</name>
+		<content>
+			<multi_radio>
+				<radio label="Masses/collections">
+					Not present | Present
+				</radio>
+				<radio label="Fractures">
+					Not present | Present
+				</radio>
+				<radio label="Cord signal">
+					Normal | Abnormal
+				</radio>
+				<radio label="Bone marrow signal">
+					Normal | Abnormal
+				</radio>
+				<radio label="Annular fissure">
+					Not present | Present
+				</radio>
+				<radio label="Paraspinal muscles">
+					Normal | Abnormal
+				</radio>
+				<radio label="Evidence of DAVF">
+					Not present | Present
+				</radio>
+				<radio label="Planning sequences">
+					Normal | Abnormal
+				</radio>
+			</multi_radio>
+		</content>
+	</module>
+	<module>
+		<name>
+			Lumbar spine level
+		</name>
+		<content>
+			<selection label="Discs">
+				The disc is normal | There is disc degeneration. | There is disc degeneration and height loss.
+			</selection>
+			<selection label="Ligamentum flavum">
+				There is no flaval thickening | There is flaval thickening
+			</selection>
+			<multi_select label="Disc herniation" askfurtherdetails="true">
+				<dropdown label="Type" print_text_before="There is a disc">
+					bulge | prolapse | extrusion | migration | sequestration | intravertebral herniation
+				</dropdown>
+				<dropdown label="Side" print_text_before="protruding in to the">
+					right | left
+				</dropdown>
+				<dropdown label="Location">
+					central canal | subarticular zone | foraminal zone | extraforaminal zone
+				</dropdown>
+			</multi_select>
+			<multi_select label="Neural compression" askfurtherdetails="true">
+				<dropdown label="Type" print_text_before="There is">
+					contact | impingement
+				</dropdown>
+				<dropdown label="Side" print_text_before="with the">
+					right | left
+				</dropdown>
+				<dropdown label="Nerve" print_text_after="nerve root">
+					descending | exiting
+				</dropdown>
+			</multi_select>
+			<selection label="Facet joints">
+				There is no facetal degeneration | There is mild facetal degeneration | There is moderate facetal degeneration | There is severe facetal degeneration
+			</selection>
+		</content>
+	</module>
+
 	<template>
 		<name>
 			MRI Spine: Fracture
@@ -983,6 +989,8 @@ Not present | Present
 		</content>
 	</template>
 
+	<!--*********************** CT ***********************-->
+
 	<module>
 		<name>
 			Plain CT Start
@@ -1131,6 +1139,23 @@ Not present | Present
 			<insert>
 				Plain CT Start
 			</insert>
+			<multi_select label="Description">
+				<dropdown label="Side" print_text_before="There is fat stranding and enhancement surrounding the" print_text_after="orbit.">
+					right | left | both
+				</dropdown>
+			</multi_select>
+			<selection label="Proptosis">Proptosis is evident. | Proptosis is not evident. 
+			</selection>
+			<selection label="Post-septal involvement">Stranding extends in to the post-septal space. | Stranding does not extend in to the post-septal space.
+			</selection>
+			<selection label="Abscess">There is no evidence of subperiosteal abscess.
+			</selection>
+			<selection label="Air cells">The mastoid air cells are clear.
+			</selection>
+			<selection label="Intracranial extension">No intracranial extension is evident. 
+			</selection>
+			<text_entry subtype="medium">
+			</text_entry>
 			<insert>
 				CT Head Checklist
 			</insert>
@@ -1139,6 +1164,7 @@ Not present | Present
 			</h1>
 			<text_entry label="" subtype="medium">
 			</text_entry>
+			<selection label="Referral">Urgent ophthalmological assessment is recommended.</selection>
 		</content>
 	</template>
 	<module>
@@ -1147,7 +1173,7 @@ Not present | Present
 		</name>
 		<content>
 			<h2>
-				CT Angiogram
+				CT Angiogram Intracranial
 			</h2>
 			<selection label="Occlusion">
 				There is no proximal intracranial occlusion
@@ -2413,6 +2439,9 @@ Not present | Present
 			</text_entry>
 		</content>
 	</template>
+
+	<!--*********************** X-RAY ***********************-->
+
 
 	<template>
 		<name>Chest Radiograph
