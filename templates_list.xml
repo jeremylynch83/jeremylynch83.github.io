@@ -1161,7 +1161,8 @@ Not present | Present
 				</radio>
 			</multi_radio>
 
-			<multi_select label="ASPECT Score">
+			<h2>ASPECT Score</h2>
+			<multi_select label="Components">
 				<dropdown label="Caudate nucleus" print_text_before="Caudate nucleus" print_text_after=".">
 					involved (-1) | not involved (0)
 				</dropdown>
