@@ -1084,7 +1084,7 @@ Not present | Present
 	</module>
 	<template>
 		<name>
-			CT Head
+			CT Head: Generic
 		</name>
 		<type>
 			Diagnostic
@@ -1125,6 +1125,89 @@ Not present | Present
 			</text_entry>
 		</content>
 	</template>
+
+	<template>
+		<name>
+			CT Head: Stroke
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			CT Head
+		</title>
+		<content>
+			<insert>
+				Plain CT Start
+			</insert>
+			<h2 flags="dont_print">
+				Acute pathology
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Hyperdense vessel" normaltext="No hyperdense vessel is apparent.">
+					Not present | Present
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+
+			<multi_select label="ASPECT Score">
+				<dropdown label="Caudate nucleus" print_text_before="Caudate nucleus" print_text_after=".">
+					involved (-1) | not involved (0)
+				</dropdown>
+				<dropdown label="Putamen" print_text_before="Putamen" print_text_after=".">
+					involved (-1) | not involved (0)
+				</dropdown>
+				<dropdown label="Internal capsule" print_text_before="Internal capsule" print_text_after=".">
+					involved (-1) | not involved (0)
+				</dropdown>
+				<dropdown label="Insular cortex" print_text_before="Insular cortex" print_text_after=".">
+					involved (-1) | not involved (0)
+				</dropdown>
+				<dropdown label="M1 (frontal operculum)" print_text_before="M1 (frontal operculum)" print_text_after=".">
+					involved (-1) | not involved (0)
+				</dropdown>
+				<dropdown label="M2 (anterior temporal lobe)" print_text_before="M2 (anterior temporal lobe)" print_text_after=".">
+					involved (-1) | not involved (0)
+				</dropdown>
+				<dropdown label="M3 (posterior temporal lobe)" print_text_before="M3 (posterior temporal lobe)" print_text_after=".">
+					involved (-1) | not involved (0)
+				</dropdown>
+				<dropdown label="M4 (immediately superior to M1)" print_text_before="M4 (immediately superior to M1" print_text_after=".">
+					involved (-1) | not involved (0)
+				</dropdown>
+				<dropdown label="M5 (immediately superior to M2)" print_text_before="M5 (immediately superior to M2)" print_text_after=".">
+					involved (-1) | not involved (0)
+				</dropdown>
+				<dropdown label="M6 (immediately superior to M3)" print_text_before="M6 (immediately superior to M3)" print_text_after=".">
+					involved (-1) | not involved (0)
+				</dropdown>
+			</multi_select>
+
+			<text_entry subtype="medium">
+			</text_entry>
+			<insert>
+				CT Head Checklist
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+
+
 	<template>
 		<name>
 			CT Orbits: Cellulitis
@@ -1144,9 +1227,9 @@ Not present | Present
 					right | left | both
 				</dropdown>
 			</multi_select>
-			<selection label="Proptosis">Proptosis is evident. | Proptosis is not evident. 
+			<selection label="Proptosis"> Proptosis is not evident. 
 			</selection>
-			<selection label="Post-septal involvement">Stranding extends in to the post-septal space. | Stranding does not extend in to the post-septal space.
+			<selection label="Post-septal involvement">Stranding does not extend in to the post-septal space.
 			</selection>
 			<selection label="Abscess">There is no evidence of subperiosteal abscess.
 			</selection>
@@ -1167,6 +1250,112 @@ Not present | Present
 			<selection label="Referral">Urgent ophthalmological assessment is recommended.</selection>
 		</content>
 	</template>
+
+	<template>
+		<name>
+			CT Head: Neurodegenerative
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			CT Head
+		</title>
+		<content>
+			<insert>
+				Plain CT Start
+			</insert>
+			<h2 flags="dont_print">
+				Neurodegerative
+			</h2>
+			<multi_select label="White matter changes" askfurtherdetails="true">
+				<dropdown label="Location" print_text_before="There are multiple foci of" print_text_after="white matter abnormal signal">
+					periventricular | deep white matter | pontine | periventricular and deep white matter | generalised
+				</dropdown>
+				<dropdown label="Severity" print_text_before="which is non-specific but may represent a" print_text_after="burden of small vessel disease">
+					mild | moderate | severe
+				</dropdown>
+			</multi_select>
+			<multi_select label="Microhaemorrhages" askfurtherdetails="true">
+				<dropdown label="Location" print_text_before="There are multiple foci of" print_text_after="susceptibility drop">
+					periventricular | deep white matter | pontine | periventricular and deep white matter | generalised
+				</dropdown>
+				<dropdown label="Severity" print_text_before="in keeping with a" print_text_after="burden of microhaemorrhages">
+					mild | moderate | severe
+				</dropdown>
+			</multi_select>
+			<multi_select label="Atrophy" askfurtherdetails="true">
+				<dropdown label="Cerebral severity" print_text_before="There is">
+					mild | moderate | severe
+				</dropdown>
+				<dropdown label="Cerebral location" print_text_after="cerebral atrophy.">
+					supratentorial | infratentorial | generalised
+				</dropdown>
+				<dropdown label="Hippocampal severity" print_text_before="There is">
+					mild | moderate | severe
+				</dropdown>
+				<dropdown label="Hippocampal location" print_text_after="hippocampal atrophy.">
+					bilateral | right | left
+				</dropdown>
+			</multi_select>
+			<multi_radio>
+				<radio label="Huntingtons" flags="dont_print_negative">
+					Not present | Present
+				</radio>
+				<radio label="Frontotemporal dementia" flags="dont_print_negative">
+					Not present | Present
+				</radio>
+				<radio label="Cerebral amyloid angiopathy" flags="dont_print_negative">
+					Not present | Present
+				</radio>
+				<radio label="CADASIL" flags="dont_print_negative">
+					Not present | Present
+				</radio>
+				<radio label="PSP" flags="dont_print_negative">
+					Not present | Present
+				</radio>
+				<radio label="MSA-P" flags="dont_print_negative">
+					Not present | Present
+				</radio>
+				<radio label="MSA-C" flags="dont_print_negative">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<h2 flags="dont_print">
+				Acute pathology
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
+					Normal | Abnormal
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<text_entry subtype="large">
+			</text_entry>
+			<insert>
+				CT Head Checklist
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+
+
+
 	<module>
 		<name>
 			CT Angiogram Intracranial
