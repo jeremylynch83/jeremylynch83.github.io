@@ -222,8 +222,9 @@
 															</b-form-input>
 														</b-form-group>
 
-														<b-form-group v-if="nn.type == 'free_text' " :label="nn.label"
-															label-cols="3">
+														<b-form-group
+															v-if="nn.type == 'free_text' && (nn.options != '' && n.present == 'yes' || n.askfurtherdetails !='true')"
+															:label="nn.label" label-cols="3">
 															<b-form-input :value="nn.text" @change="nn.text = $event">
 															</b-form-input>
 														</b-form-group>
