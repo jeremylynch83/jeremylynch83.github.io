@@ -1807,12 +1807,12 @@ Not present | Present
 			</selection>
 
 			<multi_select label="Metalwork" askfurtherdetails="true">
-				<dropdown label="Location" print_text_before="There is">
+				<dropdown label="Type" print_text_before="There is">
 					pedicle screw fixation
 				</dropdown>
 				<free_text label="Location" print_text_before="at"></free_text>
-				<dropdown label="Complications" print_text_before="There is">
-					No evidence of loosening or malalignment. 
+				<dropdown label="Complications" print_text_before="">
+					No evidence of loosening or malalignment is evident. 
 				</dropdown>
 			</multi_select>
 
