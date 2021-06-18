@@ -1789,7 +1789,7 @@ Not present | Present
 			<h1>
 				Technique
 			</h1>
-			<text_entry label="" subtype="small">
+			<text_entry label="" subtype="small">Non-contrast study. 
 			</text_entry>
 			<h1>
 				Comparison
@@ -1803,10 +1803,10 @@ Not present | Present
 			</text_entry>
 
 			<selection label="Formation and segmentation">
-				There is normal formation and segmentation of the lumbosacral spine. | There is a transitional lumbosacral junction.
+				There is normal formation and segmentation of the lumbosacral spine. The last fully formed disc space is designated L5-S1. | There is a transitional lumbosacral junction.
 			</selection>
 
-			<multi_select label="Metalword" askfurtherdetails="true">
+			<multi_select label="Metalwork" askfurtherdetails="true">
 				<dropdown label="Location" print_text_before="There is">
 					pedicle screw fixation
 				</dropdown>
@@ -1835,10 +1835,6 @@ Not present | Present
 				There is reversal of Cervical Lordosis 
 			</selection>
 
-			<text_entry label="There are uncovertebral osteophytes  at" subtype="small">
-			</text_entry>
-			<text_entry label="There are marginal anterior vertebral body osteophytes at" subtype="small">
-			</text_entry>
 			<text_entry label="Vertebral body narrowing is noted at" subtype="small">
 			</text_entry>
 			<text_entry label="There is disc space narrowing at" subtype="small">
@@ -1877,9 +1873,6 @@ Not present | Present
 				Normal appearances of the visualised lung bases | Mild dependent atelectasis is present at the imaged lung bases
 			</selection>
 			<multi_radio>
-				<radio label="Pars defects">
-					Not present | Present
-				</radio>
 				<radio label="Masses">
 					Not present | Present
 				</radio>
