@@ -71,9 +71,9 @@ Not present | Present
 			Angio header
 		</name>
 		<content>
-			<text_entry label="Main operators" subtype="small">
+			<text_entry label="Main operators:" subtype="small">
 			</text_entry>
-			<text_entry label="Assistants" subtype="small">
+			<text_entry label="Assistants:" subtype="small">
 			</text_entry>
 			<selection label="Anaesthesia" print_label="true" showdetailson="0">
 				General anaesthesia | Conscious sedation | Local anaesthesia
@@ -1618,6 +1618,13 @@ Not present | Present
 				There is reversal of Cervical Lordosis 
 			</selection>
 
+			<multi_select label="Scoliosis" askfurtherdetails="true">
+				<dropdown label="Convex to the" print_text_before="There is scoliosis which is convex to the">
+					right | left
+				</dropdown>
+				<free_text label="Centered at level" print_text_before="and centered at"></free_text>
+			</multi_select>
+
 			<text_entry label="There are uncovertebral osteophytes  at" subtype="small">
 			</text_entry>
 			<text_entry label="There are marginal anterior vertebral body osteophytes at" subtype="small">
@@ -1652,9 +1659,6 @@ Not present | Present
 			<multi_radio>
 				<radio label="Atlantoaxial joint">
 					Normal | Abnormal
-				</radio>
-				<radio label="Scoliosis">
-					Not present | Present
 				</radio>
 			</multi_radio>
 
@@ -1717,8 +1721,15 @@ Not present | Present
 			</selection>
 
 			<selection label="Curvature">
-				There is reversal of cervical lordosis 
+				There is normal vertebral alignment 
 			</selection>
+
+			<multi_select label="Scoliosis" askfurtherdetails="true">
+				<dropdown label="Convex to the" print_text_before="There is scoliosis which is convex to the">
+					right | left
+				</dropdown>
+				<free_text label="Centered at level" print_text_before="and centered at"></free_text>
+			</multi_select>
 
 			<text_entry label="Vertebral body narrowing is noted at" subtype="small">
 			</text_entry>
@@ -1739,9 +1750,6 @@ Not present | Present
 			</text_entry>
 
 			<multi_radio>
-				<radio label="Scoliosis">
-					Not present | Present
-				</radio>
 				<radio label="Subluxation">
 					Not present | Present
 				</radio>
@@ -1809,8 +1817,15 @@ Not present | Present
 			</multi_select>
 
 			<selection label="Vertebral alignment">
-				Vertebral alignment is normal | Vertebral alignment is abnormal
+				Vertebral alignment is normal. | There is straightening of the lumbar lordosis. 
 			</selection>
+
+			<multi_select label="Scoliosis" askfurtherdetails="true">
+				<dropdown label="Convex to the" print_text_before="There is scoliosis which is convex to the">
+					right | left
+				</dropdown>
+				<free_text label="Centered at level" print_text_before="and centered at"></free_text>
+			</multi_select>
 
 			<selection label="Bones">
 				There is no acute fracture or destructive bony lesion.
@@ -1853,9 +1868,6 @@ Not present | Present
 
 			<multi_radio>
 				<radio label="Pars defects">
-					Not present | Present
-				</radio>
-				<radio label="Scoliosis">
 					Not present | Present
 				</radio>
 			</multi_radio>
