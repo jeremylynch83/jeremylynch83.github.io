@@ -1798,9 +1798,15 @@ Not present | Present
 				There is normal formation and segmentation of the lumbosacral spine. | There is a transitional lumbosacral junction.
 			</selection>
 
-			<selection label="Vertebral alignment">
-				Vertebral alignment is normal | Vertebral alignment is abnormal
-			</selection>
+			<multi_select label="Metalword" askfurtherdetails="true">
+				<dropdown label="Location" print_text_before="There is">
+					pedicle screw fixation
+				</dropdown>
+				<free_text label="Location" print_text_before="at"></free_text>
+				<dropdown label="Complications" print_text_before="There is">
+					No evidence of loosening or malalignment. 
+				</dropdown>
+			</multi_select>
 
 			<selection label="Vertebral alignment">
 				Vertebral alignment is normal | Vertebral alignment is abnormal
@@ -1829,7 +1835,7 @@ Not present | Present
 					anterior subluxation | posterior subluxation
 				</dropdown>
 				<dropdown label="Location" print_text_before="of">
-					C1 on C2 | C2 on C3 | C3 on C4 | C4 on C5 | C5 on C6 | C6 on C7 | C7 on T1 | T1 on T2
+					T12 on L1 | L1 on L2 | L2 on L3 | L3 on L4 | L4 on L5 | L5 on S2 
 				</dropdown>
 			</multi_select>
 
@@ -1846,8 +1852,8 @@ Not present | Present
 			</text_entry>
 
 			<multi_radio>
-				<radio label="Atlantoaxial joint">
-					Normal | Abnormal
+				<radio label="Pars defects">
+					Not present | Present
 				</radio>
 				<radio label="Scoliosis">
 					Not present | Present
@@ -1855,22 +1861,17 @@ Not present | Present
 			</multi_radio>
 
 			<h2>Other</h2>
-			<selection label="Lung apices">
-				Normal appearances of the visualised lung apices | Mild dependent atelectasis is present at the imaged lung apices
+			<selection label="Lung bases">
+				Normal appearances of the visualised lung bases | Mild dependent atelectasis is present at the imaged lung bases
 			</selection>
 			<multi_radio>
-				<radio label="Posterior fossa">
-					Normal | Abnormal
+				<radio label="Pars defects">
+					Not present | Present
 				</radio>
-				<radio label="Imaged pulmonary vasculature">
-					Normal | Abnormal
+				<radio label="Masses">
+					Not present | Present
 				</radio>
-				<radio label="Lymph nodes">
-					Normal | Abnormal
-				</radio>
-				<radio label="Thyroid gland">
-					Normal | Abnormal
-				</radio>
+
 			</multi_radio>
 			<h1>
 				Conclusion
