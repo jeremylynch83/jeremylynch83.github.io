@@ -1195,6 +1195,8 @@ Not present | Present
 				</dropdown>
 			</multi_select>
 
+			<h2></h2>
+
 			<text_entry subtype="medium">
 			</text_entry>
 			<insert>
