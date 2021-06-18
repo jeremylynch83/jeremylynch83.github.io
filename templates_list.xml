@@ -1160,6 +1160,8 @@ Not present | Present
 					Not present | Present
 				</radio>
 			</multi_radio>
+			<text_entry subtype="medium">
+			</text_entry>
 
 			<h2>ASPECT Score</h2>
 			<multi_select label="Components">
@@ -1195,10 +1197,9 @@ Not present | Present
 				</dropdown>
 			</multi_select>
 
-			<h2></h2>
+			<h2>Other</h2>
 
-			<text_entry subtype="medium">
-			</text_entry>
+
 			<insert>
 				CT Head Checklist
 			</insert>
@@ -1581,6 +1582,109 @@ Not present | Present
 			</text_entry>
 		</content>
 	</template>
+
+	<template>
+		<name>
+			CT Cervical Spine
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			CT Head and Angiogram of the Head and Neck
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+			<text_entry label="Note is made of" subtype="small">
+			</text_entry>
+
+			<selection label="Bones">
+				There is no acute fracture or destructive bony lesion.
+			</selection>
+
+			<selection label="Curvature">
+				There is reversal of Cervical Lordosis 
+			</selection>
+
+			<text_entry label="There are uncovertebral osteophytes  at" subtype="small">
+			</text_entry>
+			<text_entry label="There are marginal anterior vertebral body osteophytes at" subtype="small">
+			</text_entry>
+			<text_entry label="Vertebral body narrowing is noted at" subtype="small">
+			</text_entry>
+			<text_entry label="There is disc space narrowing at" subtype="small">
+			</text_entry>
+
+			<multi_select label="Subluxation" askfurtherdetails="true">
+				<free_text label="Distance" print_text_before="There is"></free_text>
+				<dropdown label="Direction" print_text_before="of">
+					anterior subluxation | posterior subluxation
+				</dropdown>
+				<dropdown label="Location" print_text_before="of">
+					C1 on C2 | C2 on C3 | C3 on C4 | C4 on C5 | C5 on C6 | C6 on C7 | C7 on T1 | T1 on T2
+				</dropdown>
+			</multi_select>
+
+			<multi_select label="Neural foraminal narrowing" askfurtherdetails="true">
+				<free_text label="Right-sided" print_text_before="There is right-sided neural foraminal narrowing at"></free_text>
+				<free_text label="Left-sided" print_text_before="There is left-sided neural foraminal narrowing at"></free_text>
+			</multi_select>
+
+			<text_entry label="Multilevel facetal degeneration is evident most severe at" subtype="small">
+			</text_entry>
+			<text_entry label="There is fusion of" subtype="small">
+			</text_entry>
+			<text_entry label="There is endplate change at" subtype="small">
+			</text_entry>
+
+			<multi_radio>
+				<radio label="Atlantoaxial joint">
+					Normal | Abnormal
+				</radio>
+				<radio label="Scoliosis">
+					Not present | Present
+				</radio>
+			</multi_radio>
+
+			<h2>Other</h2>
+			<selection label="Lung apices">
+				Normal appearances of the visualised lung apices | Mild dependent atelectasis is present at the imaged lung apices
+			</selection>
+			<multi_radio>
+				<radio label="Posterior fossa">
+					Normal | Abnormal
+				</radio>
+				<radio label="Imaged pulmonary vasculature">
+					Normal | Abnormal
+				</radio>
+				<radio label="Lymph nodes">
+					Normal | Abnormal
+				</radio>
+				<radio label="Thyroid gland">
+					Normal | Abnormal
+				</radio>
+			</multi_radio>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+
+
 	<template>
 		<name>
 			CT Angiogram: Subarachnoid Haemorrhage
