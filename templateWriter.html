@@ -70,7 +70,7 @@
 		<b-container>
 			<p></p>
 			<b-form-group label="Search for template:">
-				<vue-bootstrap-typeahead :data="templates" :serializer="item => item.name"
+				<vue-bootstrap-typeahead :data="templates" :serializer="item => item.name" placeholder="E.g. CT Head"
 					@hit="selectTemplate($event)">
 				</vue-bootstrap-typeahead>
 
