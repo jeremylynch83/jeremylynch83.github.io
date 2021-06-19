@@ -296,9 +296,6 @@ Not present | Present
 				</dropdown>
 			</multi_select>
 
-			<selection label="There is a dural arteriovenous fistula located at"> the transverse
-			</seelction>
-
 			<text_entry label="The arterial feeders are the" subtype="medium">
 			</text_entry>
 			<text_entry label="The venous drainage is to the" subtype="medium">
