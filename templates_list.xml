@@ -1045,7 +1045,7 @@ Not present | Present
 			<selection label="Bones">
 				There are no skull fractures or destructive bony lesions
 			</selection>
-			<h2>
+			<h2 flags="dont_print">
 				Checklist
 			</h2>
 			<multi_radio>
@@ -1817,7 +1817,7 @@ Not present | Present
 			</multi_select>
 
 			<selection label="Vertebral alignment">
-				Vertebral alignment is normal. | There is straightening of the lumbar lordosis. 
+				Vertebral alignment is normal. | Straightening of the lumbar lordosis is noted. 
 			</selection>
 
 			<multi_select label="Scoliosis" askfurtherdetails="true">
