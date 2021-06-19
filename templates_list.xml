@@ -289,8 +289,16 @@ Not present | Present
 		</name>
 		<content>
 
-			<text_entry label="There is a dural arteriovenous fistula located at" subtype="small">
-			</text_entry>
+			<multi_select label="Description">
+				<dropdown label="Location" print_text_before="There is a dural arteriovenous fistula located of the">transverse sinus | sigmoid sinus | cavernous sinus | tentorium | superior sagittal sinus |  anterior cranial fossa
+				</dropdown>
+				<dropdown label="Side" print_text_before="on the" print_text_after="." print_text_after="."> right | left 
+				</dropdown>
+			</multi_select>
+
+			<selection label="There is a dural arteriovenous fistula located at"> the transverse
+			</seelction>
+
 			<text_entry label="The arterial feeders are the" subtype="medium">
 			</text_entry>
 			<text_entry label="The venous drainage is to the" subtype="medium">
