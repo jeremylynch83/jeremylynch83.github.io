@@ -2573,28 +2573,13 @@ Not present | Present
 				Malformations of cortical development
 			</h2>
 			<multi_radio>
-				<radio label="Space occupying lesion: tumours, cavernoma" normaltext="There are no space occupying lesions.">
-					Not present | Present
-				</radio>
 				<radio label="Focal cortical dysplasia" normaltext="Focal cortical dysplasia is not present.">
-					Not present | Present
-				</radio>
-				<radio label="Cortical damage and haemosiderosis" normaltext="No foci of cortical damage is present.">
-					Not present | Present
-				</radio>
-				<radio label="Hippocampal sclerosis, mamillary bodies, fornix." normaltext="The hippocampi are normal bilaterally in terms of signal and morpohology. ">
 					Not present | Present
 				</radio>
 				<radio label="Grey matter heterotopia" normaltext="No grey matter heterotopia is identified.">
 					Not present | Present
 				</radio>
 				<radio label="Gyral folding: Polymicrogyria, pachygyria." normaltext="Gyral development is normal. ">
-					Not present | Present
-				</radio>
-				<radio label="Encephaloceles" normaltext="">
-					Not present | Present
-				</radio>
-				<radio label="White matter" normaltext="No focal white matter lesions are present.">
 					Not present | Present
 				</radio>
 				<radio label="Schizencephaly" normaltext="Schizencephaly is not present.">
@@ -2606,9 +2591,62 @@ Not present | Present
 				<radio label="Lissencephaly" normaltext="Lissencephaly is not present.">
 					Not present | Present
 				</radio>
+			</multi_radio>
+			<h2 flags="dont_print">
+				Mass
+			</h2>
+			<multi_radio>
+				<radio label="Space occupying lesion: tumours" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+
+			<h2 flags="dont_print">
+				Injury
+			</h2>
+			<multi_radio>
+				<radio label="Cortical damage and haemosiderosis" normaltext="No foci of cortical damage is present.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<h2 flags="dont_print">
+				Vascular
+			</h2>
+			<multi_radio>
 				<radio label="Arteriovenous malformation" normaltext="No vascular abnormalities are detected. ">
 					Not present | Present
 				</radio>
+				<radio label="Cavernoma" normaltext="There are no cavernomas. ">
+					Not present | Present
+				</radio>
+			</multi_radio>
+
+			<h2 flags="dont_print">
+				Hippocampi
+			</h2>
+
+			<radio label="Hippocampal sclerosis, mamillary bodies, fornix." normaltext="The hippocampi are normal bilaterally in terms of signal and morpohology. ">
+					Not present | Present
+			</radio>
+
+			<h2 flags="dont_print">
+				Myelination
+			</h2>
+			<multi_radio>
+			</multi_radio>
+
+			<h2 flags="dont_print">
+				Extra-axial
+			</h2>
+			<multi_radio>
+				<radio label="Encephaloceles" normaltext="">
+					Not present | Present
+				</radio>
+
+				<radio label="White matter" normaltext="No focal white matter lesions are present.">
+					Not present | Present
+				</radio>
+
 			</multi_radio>
 			<h2 flags="dont_print">
 				Acute pathology
