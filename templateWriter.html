@@ -607,6 +607,9 @@
 							el.multi = [];
 							for (var n = 0; n < nodes.length; n++) {
 								if (nodes[n].nodeName == "radio") {
+									var r_flags = nodes[n].getAttribute("flags");
+									if (!r_flags) r_flags = "";
+
 									var inner_text = nodes[n].innerHTML.trim();
 									var options = [];
 									var type = "";
@@ -641,7 +644,8 @@
 										selected: selected,
 										showdetailson: showdetailson,
 										details: "",
-										normaltext: normaltext
+										normaltext: normaltext,
+										flags: r_flags
 									});
 								}
 							}

@@ -2582,7 +2582,7 @@ Not present | Present
 				<radio label="Gyral folding: Polymicrogyria, pachygyria." normaltext="Gyral development is normal. ">
 					Not present | Present
 				</radio>
-				<radio label="Schizencephaly" normaltext="Schizencephaly is not present.">
+				<radio label="Schizencephaly" flags="dont_print_negative">
 					Not present | Present
 				</radio>
 				<radio label="Micro/macrocephaly" normaltext="No micro- or macrocephaly.">
