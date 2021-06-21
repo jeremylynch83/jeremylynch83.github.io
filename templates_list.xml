@@ -2619,6 +2619,9 @@ Not present | Present
 				<radio label="Cavernoma" normaltext="There are no cavernomas. ">
 					Not present | Present
 				</radio>
+				<radio label="Sturge Weber" normaltext="No pial angiomatosis. ">
+					Not present | Present
+				</radio>
 			</multi_radio>
 
 			<h2 flags="dont_print">
@@ -2633,6 +2636,9 @@ Not present | Present
 				Myelination
 			</h2>
 			<multi_radio>
+				<radio label="Myelination" normaltext="Myelination is normal for age. ">
+					Not present | Present
+				</radio>
 			</multi_radio>
 
 			<h2 flags="dont_print">
@@ -2664,9 +2670,6 @@ Not present | Present
 				<radio label="Collection" normaltext="No intracranial collection is present.">
 					Not present | Present
 				</radio>
-				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
-					Not present | Present
-				</radio>
 			</multi_radio>
 			<text_entry subtype="large">
 			</text_entry>
@@ -2676,6 +2679,7 @@ Not present | Present
 			<h1>
 				Conclusion
 			</h1>
+			<selection label="Summary">Normal study.</selection>
 			<text_entry label="" subtype="medium">
 			</text_entry>
 		</content>
