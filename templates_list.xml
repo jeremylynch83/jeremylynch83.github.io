@@ -1004,7 +1004,7 @@ Not present | Present
 			<h1>
 				Technique
 			</h1>
-			<text_entry subtype="small">
+			<text_entry subtype="small">CT images of the head were acquired without intravenous contrast. 
 			</text_entry>
 			<h1>
 				Comparison
@@ -2596,7 +2596,7 @@ Not present | Present
 				Mass
 			</h2>
 			<multi_radio>
-				<radio label="Space occupying lesion: tumours" normaltext="There are no space occupying lesions.">
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
 					Not present | Present
 				</radio>
 			</multi_radio>
@@ -2639,7 +2639,7 @@ Not present | Present
 			</h2>
 			<multi_radio>
 				<radio label="Myelination" normaltext="Myelination is normal for age. ">
-					Not present | Present
+					Normal | Abnormal
 				</radio>
 			</multi_radio>
 
@@ -2654,8 +2654,11 @@ Not present | Present
 				<radio label="White matter" normaltext="No focal white matter lesions are present.">
 					Not present | Present
 				</radio>
-
 			</multi_radio>
+
+			<text_entry subtype="medium">
+			</text_entry>
+
 			<h2 flags="dont_print">
 				Acute pathology
 			</h2>
@@ -2673,8 +2676,7 @@ Not present | Present
 					Not present | Present
 				</radio>
 			</multi_radio>
-			<text_entry subtype="large">
-			</text_entry>
+
 			<insert>
 				MRI Head Checklist
 			</insert>
