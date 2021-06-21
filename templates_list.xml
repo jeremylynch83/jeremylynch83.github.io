@@ -2627,10 +2627,12 @@ Not present | Present
 			<h2 flags="dont_print">
 				Hippocampi
 			</h2>
-
-			<radio label="Hippocampal sclerosis, mamillary bodies, fornix." normaltext="The hippocampi are normal bilaterally in terms of signal and morpohology. ">
+			<multi_radio>
+				<radio label="Hippocampal sclerosis, mamillary bodies, fornix." normaltext="The hippocampi are normal bilaterally in terms of signal and morpohology. ">
 					Not present | Present
-			</radio>
+				</radio>
+			</multi_radio>
+
 
 			<h2 flags="dont_print">
 				Myelination
