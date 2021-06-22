@@ -523,10 +523,10 @@ Not present | Present
 				<dropdown label="Morphology" print_text_before="revealed a" print_text_after="aneurysm">saccular | fusiform | dissecting | blister | mycotic
 				</dropdown>
 				<free_text label="Location" print_text_before="located at"></free_text>
-				<free_text label="Size" print_text_before="and measuring approximately"></free_text>
-				<dropdown label="Neck" print_text_before="The aneurysm was"> narrow necked | wide necked
+				<free_text label="Size" print_text_before="The aneurysm measured approximately"></free_text>
+				<dropdown label="Neck" print_text_before="and was"> narrow necked | wide necked
 				</dropdown>
-				<dropdown label="Walls" print_text_before="and had" print_text_after="."> smooth walls | irregular walls | multiple loculations | a prominent bleb
+				<dropdown label="Walls" print_text_before="with" print_text_after="."> smooth walls | irregular walls | multiple loculations | a prominent bleb
 				</dropdown>
 				<dropdown label="Branches">No branches arose from the aneurysm sac itself. | A branch arose from the neck of the aneurysm. | A branch arose arises from the dome of the aneurysm. 
 				</dropdown>
