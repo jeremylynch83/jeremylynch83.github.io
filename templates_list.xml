@@ -471,90 +471,44 @@ Not present | Present
 			<text_entry flags="dont_print" label="Consent">
 				Informed consent was obtained from the patient including the risk of catastrophic brain injury, stroke, puncture site haemorrhage and numbness, and peripheral vascular occlusion.
 			</text_entry>
-
-			<multi_select label="Puncture">
-				<dropdown label="Local">
-					1% lidocaine was infiltrated into the puncture site superficial tissues.
-				</dropdown>
-				<dropdown label="Access side #1" print_text_before="A">
+			<selection label="Anaesthesia" print_label="true" showdetailson="0">
+				General anaesthesia | Conscious sedation | Local anaesthesia
+			</selection>
+			<multi_select label="Puncture site 1">
+				<dropdown label="Side" print_text_before="A">
 					right | left 
 				</dropdown>
-				<dropdown label="Access site #1" print_text_before="">
+				<dropdown label="Site #1" print_text_before="">
 					common femoral artery | radial artery
 				</dropdown>
 				<dropdown label="Sheath size #1" print_text_before="puncture was performed and a">
 					4-French | 5-French | 6-French | 8-French
 				</dropdown>
-				<dropdown label="Guide gatheter #1" print_text_before="sheath was inserted. A" print_text_after=" guide catheter was inserted">
+				<dropdown label="Guide gatheter" print_text_before="sheath was inserted. A" print_text_after=" guide catheter was inserted">
 					Neuron max | Infinity | Cerebase 
 				</dropdown>
-				<dropdown label="Vessel #1" print_text_before="in to the" print_text_after="artery.">
+				<dropdown label="Vessel" print_text_before="in to the" print_text_after="artery.">
 					right carotid | left carotid | right vertebral | left vertebral 
 				</dropdown>
 			</multi_select>
-			<multi_checkbox label="An intra-arterial cocktail was infused via the sheath consisting of">
-				<checkbox>
-					Heparin
-				</checkbox>
-				<checkbox>
-					Verapamil
-				</checkbox>
-				<checkbox>
-					Nitroglycerin
-				</checkbox>
-			</multi_checkbox>
-			<multi_checkbox label="Digital subtraction angiography was performed via the">
-				<checkbox>
-					Right common carotid artery
-				</checkbox>
-				<checkbox>
-					Right internal carotid artery
-				</checkbox>
-				<checkbox>
-					Right external carotid artery
-				</checkbox>
-				<checkbox>
-					Left common carotid artery
-				</checkbox>
-				<checkbox>
-					Left internal carotid
-				</checkbox>
-				<checkbox>
-					Left external carotid artery
-				</checkbox>
-				<checkbox>
-					Right vertebral artery
-				</checkbox>
-				<checkbox>
-					Left vertebral artery
-				</checkbox>
-			</multi_checkbox>
-			<multi_checkbox label="3D flat-panel rotational tomographic angiography was performed via the">
-				<checkbox>
-					Right common carotid artery
-				</checkbox>
-				<checkbox>
-					Right internal carotid artery
-				</checkbox>
-				<checkbox>
-					Right external carotid artery
-				</checkbox>
-				<checkbox>
-					Left common carotid artery
-				</checkbox>
-				<checkbox>
-					Left internal carotid artery
-				</checkbox>
-				<checkbox>
-					Left external carotid artery
-				</checkbox>
-				<checkbox>
-					Right vertebral artery
-				</checkbox>
-				<checkbox>
-					Left vertebral artery
-				</checkbox>
-			</multi_checkbox>
+			<multi_select label="Puncture site 2" askfurtherdetails="true">
+				<dropdown label="Side" print_text_before="A">
+					right | left 
+				</dropdown>
+				<dropdown label="Site #1" print_text_before="">
+					common femoral artery | radial artery
+				</dropdown>
+				<dropdown label="Sheath size #1" print_text_before="puncture was performed and a">
+					4-French | 5-French | 6-French | 8-French
+				</dropdown>
+				<dropdown label="Guide gatheter" print_text_before="sheath was inserted. A" print_text_after=" guide catheter was inserted">
+					Neuron max | Infinity | Cerebase 
+				</dropdown>
+				<dropdown label="Vessel" print_text_before="in to the" print_text_after="artery.">
+					right carotid | left carotid | right vertebral | left vertebral 
+				</dropdown>
+			</multi_select>
+
 			<selection label="Haemostasis" showdetailson="1000">
 				Manual compression was used to achieve haemostasis. | An angioseal device was used to achieve groin haemostasis. | A pneumatic compression band was used to achieve wrist haemostasis.
 			</selection>
