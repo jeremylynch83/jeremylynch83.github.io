@@ -474,7 +474,7 @@ Not present | Present
 			<selection label="Anaesthesia" print_label="true" showdetailson="0">
 				General anaesthesia | Conscious sedation | Local anaesthesia
 			</selection>
-			<h2 flags="dont_print">Access</h2>
+			<h2 flags="dont_print|print_space">Access</h2>
 			<multi_select label="Puncture site 1">
 				<dropdown label="Side" print_text_before="A">
 					right | left 
@@ -515,10 +515,10 @@ Not present | Present
 					Berenstein | Simmons
 				</dropdown>
 			</multi_select>
-			<h2 flags="dont_print">Aneurysm description</h2>
+			<h2 flags="dont_print|print_space">Aneurysm description</h2>
 
 			<multi_select label="Aneurysm description">
-				<dropdown label="Angiography" print_text_after="angiography"> Anteroposterior/lateral/3D flat panel tomographic angiography | Anteroposterior/lateral angiography
+				<dropdown label="Angiography" print_text_after="angiography"> Anteroposterior/lateral/3D flat panel tomographic | Anteroposterior/lateral
 				</dropdown>
 				<dropdown label="Morphology" print_text_before="revealed a" print_text_after="aneurysm">saccular | fusiform | dissecting | blister | mycotic
 				</dropdown>
@@ -535,7 +535,7 @@ Not present | Present
 				</dropdown>
 			</multi_select>
 
-			<h2 flags="dont_print">Treatment</h2>
+			<h2 flags="dont_print|print_space">Treatment</h2>
 
 			<selection label="Heparinisation">
 				Intravenous heparin was administered throughout the procedure after groin puncture. | Intravenous heparin was administered throughout the procedure after placement of the first coil. 
