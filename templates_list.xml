@@ -523,8 +523,8 @@ Not present | Present
 				<dropdown label="Morphology" print_text_before="revealed a" print_text_after="aneurysm">saccular | fusiform | dissecting | blister | mycotic
 				</dropdown>
 				<free_text label="Location" print_text_before="located at"></free_text>
-				<free_text label="Size" print_text_before="and measuring approximately" print_text_after="."></free_text>
-				<dropdown label="Neck" print_text_before="The aneurysm was" print_text_after="."> narrow necked | wide necked
+				<free_text label="Size" print_text_before="and measuring approximately"></free_text>
+				<dropdown label="Neck" print_text_before="The aneurysm was"> narrow necked | wide necked
 				</dropdown>
 				<dropdown label="Walls" print_text_before="and had" print_text_after="."> smooth walls | irregular walls | multiple loculations | a prominent bleb
 				</dropdown>
@@ -541,6 +541,20 @@ Not present | Present
 				</dropdown>
 			</multi_select>
 
+			<multi_select label="Stent usage">
+				<dropdown label="Type" print_text_before="A" print_text_after="stent was deployed across the neck of the aneurysm ">Atlas | Baby Leo | Leo   
+				</dropdown>
+			</multi_select>
+
+			<multi_select label="Aneurysm catheterisation">
+				<dropdown label="Type" print_text_before="A" print_text_after="microcatheter was inserted in to the aneurysm sac and used to deploy multiple coils. ">SL-10 | Echelon-10 | Headway-17  
+				</dropdown>
+			</multi_select>
+
+			<selection label="Aneurysm filling" showdetailson="4">
+				The aneurysm was completely excluded at the end of the procedure. | There was a small amount of aneurysm filling at the end of the procedure.
+			</selection>
+
 			<selection label="Haemostasis" showdetailson="1000">
 				Manual compression was used to achieve haemostasis. | An angioseal device was used to achieve groin haemostasis. | A pneumatic compression band was used to achieve wrist haemostasis.
 			</selection>
@@ -556,13 +570,13 @@ Not present | Present
 			</h1>
 			<text_entry label="" subtype="medium">
 			</text_entry>
-			<selection label="Referral">
+			<selection label="Summary">
 				Successful endovascular treatment of ruptured aneurysm.   
 			</selection>
-			<selection label="Referral">
+			<selection label="Raymond Roy">
 				Modified Raymond Roy Class 1 |   Modified Raymond Roy Class 2 | Modified Raymond Roy Class 3  
 			</selection>
-			<selection label="Referral">
+			<selection label="Imaging">
 				It is recommended that the patient undergo an MRI during this admission.   
 			</selection>
 		</content>
