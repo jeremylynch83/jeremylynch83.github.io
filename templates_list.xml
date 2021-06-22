@@ -468,7 +468,7 @@ Not present | Present
 			<h1>
 				Technique
 			</h1>
-			<text_entry label="Consent">
+			<text_entry flags="dont_print" label="Consent">
 				Informed consent was obtained from the patient including the risk of catastrophic brain injury, stroke, puncture site haemorrhage and numbness, and peripheral vascular occlusion.
 			</text_entry>
 
@@ -479,7 +479,7 @@ Not present | Present
 				<dropdown label="Access side #1" print_text_before="A">
 					right | left 
 				</dropdown>
-				<dropdown label="Puncture site #1" print_text_before="">
+				<dropdown label="Access site #1" print_text_before="">
 					common femoral artery | radial artery
 				</dropdown>
 				<dropdown label="Sheath size #1" print_text_before="puncture was performed and a">
