@@ -487,8 +487,11 @@ Not present | Present
 				<dropdown label="Guide gatheter" print_text_before="sheath was inserted. A" print_text_after=" guide catheter was inserted">
 					Neuron max | Infinity | Cerebase 
 				</dropdown>
-				<dropdown label="Vessel" print_text_before="in to the" print_text_after="artery.">
+				<dropdown label="Vessel" print_text_before="in to the" print_text_after="artery">
 					right carotid | left carotid | right vertebral | left vertebral 
+				</dropdown>
+				<dropdown label="Select catheter" print_text_before="with the usage of a" print_text_after="select catheter.">
+					Berenstein | Simmons
 				</dropdown>
 			</multi_select>
 			<multi_select label="Puncture site 2" askfurtherdetails="true">
@@ -506,6 +509,9 @@ Not present | Present
 				</dropdown>
 				<dropdown label="Vessel" print_text_before="in to the" print_text_after="artery.">
 					right carotid | left carotid | right vertebral | left vertebral 
+				</dropdown>
+				<dropdown label="Select catheter" print_text_before="with the usage of a" print_text_after="select catheter.">
+					Berenstein | Simmons
 				</dropdown>
 			</multi_select>
 
