@@ -515,20 +515,11 @@ Not present | Present
 			<selection label="Complications">
 				There were no periprocedural complications.
 			</selection>
-			<insert>
-				Angio technique
-			</insert>
-			<h1>
-				Comparison
-			</h1>
+
 			<text_entry label="" subtype="medium">
 			</text_entry>
-			<h1>
-				Findings
-			</h1>
-			<insert>
-				DAVF description
-			</insert>
+
+
 			<text_entry label="" subtype="large">
 			</text_entry>
 			<h1>
