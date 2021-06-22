@@ -518,7 +518,7 @@ Not present | Present
 			<h2 flags="dont_print">Aneurysm description</h2>
 
 			<multi_select label="Aneurysm description">
-				<dropdown label="Angiography" print_text_after="angiography">Anteroposterior/lateral | Anteroposterior/lateral/3D flat panel tomographic angiography
+				<dropdown label="Angiography" print_text_after="angiography"> Anteroposterior/lateral/3D flat panel tomographic angiography | Anteroposterior/lateral angiography
 				</dropdown>
 				<dropdown label="Morphology" print_text_before="revealed a" print_text_after="aneurysm">saccular | fusiform | dissecting | blister | mycotic
 				</dropdown>
@@ -527,13 +527,15 @@ Not present | Present
 				<dropdown label="Site" print_text_after=".">ICA | MCA bifurcation 
 				</dropdown>
 				<free_text label="Size" print_text_before="The aneurysm measured approximately"></free_text>
-				<dropdown label="Neck" print_text_before="and was"> narrow necked | wide necked
+				<dropdown label="Neck" print_text_before="It was"> narrow necked | wide necked
 				</dropdown>
 				<dropdown label="Walls" print_text_before="with" print_text_after="."> smooth walls | irregular walls | multiple loculations | a prominent bleb
 				</dropdown>
 				<dropdown label="Branches">No branches arose from the aneurysm sac itself. | A branch arose from the neck of the aneurysm. | A branch arose arises from the dome of the aneurysm. 
 				</dropdown>
 			</multi_select>
+
+			<h2 flags="dont_print">Treatment</h2>
 
 			<selection label="Heparinisation">
 				Intravenous heparin was administered throughout the procedure after groin puncture. | Intravenous heparin was administered throughout the procedure after placement of the first coil. 
