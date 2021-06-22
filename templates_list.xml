@@ -524,7 +524,7 @@ Not present | Present
 				</dropdown>
 				<dropdown label="Side" print_text_before="located at the">right | left
 				</dropdown>
-				<dropdown label="Site" print_text_before="located at" print_text_after=".">ICA | MCA bifurcation 
+				<dropdown label="Site" print_text_after=".">ICA | MCA bifurcation 
 				</dropdown>
 				<free_text label="Size" print_text_before="The aneurysm measured approximately"></free_text>
 				<dropdown label="Neck" print_text_before="and was"> narrow necked | wide necked
