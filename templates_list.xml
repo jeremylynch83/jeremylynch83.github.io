@@ -528,7 +528,16 @@ Not present | Present
 				</dropdown>
 				<dropdown label="Walls" print_text_before="and had" print_text_after="."> smooth walls | irregular walls | multiple loculations | a prominent bleb
 				</dropdown>
-				<dropdown label="Branches">No branches arose from the aneurysm sac itself. | A branch arose from the neck of the aneurysm. | A arose arises from the dome of the aneurysm. 
+				<dropdown label="Branches">No branches arose from the aneurysm sac itself. | A branch arose from the neck of the aneurysm. | A branch arose arises from the dome of the aneurysm. 
+				</dropdown>
+			</multi_select>
+
+			<selection label="Heparinisation">
+				Intravenous heparin was administered throughout the procedure after groin puncture. | Intravenous heparin was administered throughout the procedure after placement of the first coil. 
+			</selection>
+
+			<multi_select label="Balloon usage">
+				<dropdown label="Type" print_text_before="A" print_text_after="balloon was placed across the neck of the aneurysm and intermittently inflated. ">Scepter C | Scepter XC | Eclipse | Hyperform 
 				</dropdown>
 			</multi_select>
 
