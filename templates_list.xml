@@ -474,6 +474,7 @@ Not present | Present
 			<selection label="Anaesthesia" print_label="true" showdetailson="0">
 				General anaesthesia | Conscious sedation | Local anaesthesia
 			</selection>
+			<h2>Access</h2>
 			<multi_select label="Puncture site 1">
 				<dropdown label="Side" print_text_before="A">
 					right | left 
@@ -514,6 +515,22 @@ Not present | Present
 					Berenstein | Simmons
 				</dropdown>
 			</multi_select>
+			<h2>Aneurysm description</h2>
+
+			<multi_select label="Aneurysm description">
+				<dropdown label="Angiography" print_text_after="angiography">Anteroposterior/lateral | Anteroposterior/lateral/3D flat panel tomographic angiography
+				</dropdown>
+				<dropdown label="Morphology" print_text_before="revealed a" print_text_after="aneurysm">saccular | fusiform | dissecting | blister | mycotic
+				</dropdown>
+				<free_text label="Location" print_text_before="located at"></free_text>
+				<free_text label="Size" print_text_before="and measuring approximately" print_text_after="."></free_text>
+				<dropdown label="Neck" print_text_before="The aneurysm was" print_text_after="."> narrow necked | wide necked
+				</dropdown>
+				<dropdown label="Walls" print_text_before="and had" print_text_after="."> smooth walls | irregular walls | multiple loculations | a prominent bleb
+				</dropdown>
+				<dropdown label="Branches">No branches arose from the aneurysm sac itself. | A branch arose from the neck of the aneurysm. | A arose arises from the dome of the aneurysm. 
+				</dropdown>
+			</multi_select>
 
 			<selection label="Haemostasis" showdetailson="1000">
 				Manual compression was used to achieve haemostasis. | An angioseal device was used to achieve groin haemostasis. | A pneumatic compression band was used to achieve wrist haemostasis.
@@ -525,16 +542,19 @@ Not present | Present
 			<text_entry label="" subtype="medium">
 			</text_entry>
 
-
-			<text_entry label="" subtype="large">
-			</text_entry>
 			<h1>
 				Conclusion
 			</h1>
 			<text_entry label="" subtype="medium">
 			</text_entry>
 			<selection label="Referral">
-				Neurovascular team referral is recommended.  
+				Successful endovascular treatment of ruptured aneurysm.   
+			</selection>
+			<selection label="Referral">
+				Modified Raymond Roy Class 1 |   Modified Raymond Roy Class 2 | Modified Raymond Roy Class 3  
+			</selection>
+			<selection label="Referral">
+				It is recommended that the patient undergo an MRI during this admission.   
 			</selection>
 		</content>
 	</template>
