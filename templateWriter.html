@@ -67,9 +67,9 @@
 
 		</b-modal>
 
-		<b-container>
+		<b-container fluid="sm">
 			<p></p>
-			<b-form-group label="Search for template:">
+			<b-form-group label=" Search for template:">
 				<vue-bootstrap-typeahead :data="templates" :serializer="item => item.name" placeholder="E.g. CT Head"
 					@hit="selectTemplate($event)">
 				</vue-bootstrap-typeahead>
@@ -101,23 +101,26 @@
 						<div class="body">
 							<div class="row">
 
-								<!-- <div class="control">
+								<div class="control">
 									<div class="op_icon">
-										<b-dropdown>&#8801;
-											<b-form-group>
-												<b-dropdown-form>
-													<b-dropdown-form>
-														<b-form-checkbox v-model="n.details" size="sm">
-															Details
-														</b-form-checkbox>
-														<b-button size="sm" variant="danger" @click="deleteElement(n)">
-															Delete
-														</b-button>
-											</b-form-group>
-											</b-dropdown-form>
 
-										</b-dropdown>
-									</div>-->
+										<button>&#8801;</button>
+										<nav class="op_menu">
+											<ul>
+												<li>
+													<button onclick="alert('Hello there!')">
+														Display Greeting
+													</button>
+												</li>
+												<li>
+													<button onclick="print()">
+														Print This Page
+													</button>
+												</li>
+											</ul>
+										</nav>
+									</div>
+								</div>
 
 								<!--
 									<b-form-group >
@@ -659,8 +662,13 @@
 								for (var n = 0; n < print_multi.length; n++) {
 
 									if (Number.isInteger(print_multi[n].selected)) {
+										// Normal and don't print if normal flag
+										if (print_multi[n].selected == 0 && print_multi[n].flags.includes(
+												"dont_print_normal")) {
+
+										}
 										// Normal and supplied negative text
-										if (print_multi[n].selected == 0 && print_multi[n]
+										else if (print_multi[n].selected == 0 && print_multi[n]
 											.normaltext) {
 											print_text += print_multi[n].normaltext;
 										}
@@ -780,6 +788,7 @@
 				}
 
 				var templates = xmlDoc.getElementsByTagName("template");
+
 				for (var i = 0; i < templates.length; i++) {
 					var t_name = xmlDoc.getElementsByTagName("template")[i].getElementsByTagName(
 						"name")[0].innerHTML.replace(/\t/g, '');
@@ -867,14 +876,15 @@
 					for (var n = 0; n < elements.length; n++) {
 						var el = _.cloneDeep(this.template.elements[n]);
 
-						el.array_id = n;
+						/*el.array_id = n;
 						el.id = this.generateID();
 
 						if (el.multi) {
 							for (var x = 0; x < el.multi.length; x++) {
 								el.multi[x].id = this.generateID();
 							}
-						}
+						}*/
+
 						this.templateForm.push(el);
 					}
 

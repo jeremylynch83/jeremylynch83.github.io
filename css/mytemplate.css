@@ -44,46 +44,18 @@ caption {
 }*/
 
 
-/*
+
 .control {
-    width: 1em;
-    flex: 5%;
+    width: 30em;
+
     visibility: hidden;
     background-color: none;
-}*/
-
-.row:hover>.control {
-    visibility: visible;
-    z-index: 1000;
+    position: absolute;
 
 }
-
-.op_icon {
-    transform: translate(-10px);
-
-}
-
-.op_icon:after {
-    z-index: -1;
-}
-
-
-/*
-.op_icon:after {
-    content: "Options";
-    font-size: x-small;
-
-
-    display: inline-block;
-    width: 100%;
-    height: 100%;
- 
-    line-height: 1;
-    text-align: center;
-}*/
 
 .element {
-    flex: 95%;
+    flex: 100%;
 
 }
 
