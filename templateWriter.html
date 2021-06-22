@@ -409,7 +409,7 @@
 							el.printContents = function () {
 								var print_text = "";
 								if (this.text != "") {
-									if (this.label) print_text += this.label;
+									if (this.label && !this.flags.includes("dont_print_label")) print_text += this.label;
 									if (this.sentencecontinues) print_text += " " + this.text.toLowerCase();
 									else if (this.label) print_text += " " + this.text;
 									else print_text += this.text

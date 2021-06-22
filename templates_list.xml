@@ -468,7 +468,7 @@ Not present | Present
 			<h1>
 				Technique
 			</h1>
-			<text_entry print_label="false" label="Consent">
+			<text_entry flags="dont_print_label" label="Consent">
 				Informed consent was obtained from the patient including the risk of catastrophic brain injury, stroke, puncture site haemorrhage and numbness, and peripheral vascular occlusion.
 			</text_entry>
 			<selection label="Anaesthesia" print_label="true" showdetailson="0">
