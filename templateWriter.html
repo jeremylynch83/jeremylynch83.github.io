@@ -385,10 +385,10 @@
 							else el.label += " ";
 							elements.push(el);
 							el.printContents = function () {
-								var print_text = "";
+								var print_text = "\n\n";
 								if (!this.flags.includes("dont_print")) {
-									if (this.type == "h1") print_text = "\n\n" + this.label + "\n";
-									if (this.type == "h2") print_text = "\n\n" + this.label;
+									if (this.type == "h1") print_text = this.label + "\n";
+									if (this.type == "h2") print_text = this.label;
 								}
 								return print_text;
 							}

@@ -474,7 +474,7 @@ Not present | Present
 			<selection label="Anaesthesia" print_label="true" showdetailson="0">
 				General anaesthesia | Conscious sedation | Local anaesthesia
 			</selection>
-			<h2>Access</h2>
+			<h2 flags="dont_print">Access</h2>
 			<multi_select label="Puncture site 1">
 				<dropdown label="Side" print_text_before="A">
 					right | left 
@@ -515,14 +515,17 @@ Not present | Present
 					Berenstein | Simmons
 				</dropdown>
 			</multi_select>
-			<h2>Aneurysm description</h2>
+			<h2 flags="dont_print">Aneurysm description</h2>
 
 			<multi_select label="Aneurysm description">
 				<dropdown label="Angiography" print_text_after="angiography">Anteroposterior/lateral | Anteroposterior/lateral/3D flat panel tomographic angiography
 				</dropdown>
 				<dropdown label="Morphology" print_text_before="revealed a" print_text_after="aneurysm">saccular | fusiform | dissecting | blister | mycotic
 				</dropdown>
-				<free_text label="Location" print_text_before="located at"></free_text>
+				<dropdown label="Side" print_text_before="located at the">right | left
+				</dropdown>
+				<dropdown label="Site" print_text_before="located at" print_text_after=".">ICA | MCA bifurcation 
+				</dropdown>
 				<free_text label="Size" print_text_before="The aneurysm measured approximately"></free_text>
 				<dropdown label="Neck" print_text_before="and was"> narrow necked | wide necked
 				</dropdown>
