@@ -2415,8 +2415,6 @@ Not present | Present
 				</radio>
 			</multi_radio>
 
-
-
 			<h2 flags="dont_print">
 				Acute pathology
 			</h2>
@@ -2445,6 +2443,8 @@ Not present | Present
 			<h1>
 				Conclusion
 			</h1>
+			<selection label="Normal">No MRI aetiology for pulsatile tinnitus. 
+			</selection>
 			<text_entry label="" subtype="medium">
 			</text_entry>
 		</content>
