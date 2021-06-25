@@ -2956,9 +2956,9 @@ Not present | Present
 				MRI Head Start
 			</insert>
 			<h2 flags="dont_print">
-				Neurodegerative
+				General
 			</h2>
-			<multi_select label="White matter changes" askfurtherdetails="true">
+			<multi_select label="White matter signal" askfurtherdetails="true">
 				<dropdown label="Location" print_text_before="There are multiple foci of" print_text_after="white matter abnormal signal">
 					periventricular | deep white matter | pontine | periventricular and deep white matter | generalised
 				</dropdown>
@@ -2966,6 +2966,9 @@ Not present | Present
 					mild | moderate | severe
 				</dropdown>
 			</multi_select>
+			<selection label="Microhaemorrhages">
+				No microhaemorrhages are identified. | There are multiple microhaemorrhages with a central distribution. | There are multiple microhaemorrhages with a peripheral distribution and sparing the basal ganglia. 
+			</selection>
 
 			<multi_select label="Atrophy" askfurtherdetails="true">
 				<dropdown label="Cerebral severity" print_text_before="There is">
@@ -2981,12 +2984,31 @@ Not present | Present
 					bilateral | right | left
 				</dropdown>
 			</multi_select>
-			<selection label="Microhaemorrhages">
-				No microhaemorrhages are identified | There are multiple microhaemorrhages with a central distribution | There are multiple microhaemorrhages with a peripheral distribution
-			</selection>
+
+			<h2 flags="dont_print">
+				Brainstem/cerebellum
+			</h2>
+
 			<selection label="Brainstem/cerebellum">
-				Normal volume and signal intensity of the brainstem and cerebellum.
+				Normal volume and signal intensity of the brainstem and cerebellum. 
 			</selection>
+
+			<multi_radio>
+				<radio label="PSP" flags="dont_print_negative">
+					Not present | Present
+				</radio>
+				<radio label="MSA-P" flags="dont_print_negative">
+					Not present | Present
+				</radio>
+				<radio label="MSA-C" flags="dont_print_negative">
+					Not present | Present
+				</radio>
+			</multi_radio>
+
+			<h2 flags="dont_print">
+				Cortex/Basal ganglia
+			</h2>
+
 			<multi_radio>
 				<radio label="Huntingtons" flags="dont_print_negative">
 					Not present | Present
@@ -3000,15 +3022,7 @@ Not present | Present
 				<radio label="CADASIL" flags="dont_print_negative">
 					Not present | Present
 				</radio>
-				<radio label="PSP" flags="dont_print_negative">
-					Not present | Present
-				</radio>
-				<radio label="MSA-P" flags="dont_print_negative">
-					Not present | Present
-				</radio>
-				<radio label="MSA-C" flags="dont_print_negative">
-					Not present | Present
-				</radio>
+
 			</multi_radio>
 			<h2 flags="dont_print">
 				Acute pathology
