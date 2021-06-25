@@ -1492,6 +1492,9 @@ Not present | Present
 			<h1>
 				Conclusion
 			</h1>
+			<selection label="Normal">
+				No MRI evidence of a neurodegenerative process.  
+			</selection>
 			<text_entry label="" subtype="medium">
 			</text_entry>
 		</content>
@@ -2958,7 +2961,7 @@ Not present | Present
 			<h2 flags="dont_print">
 				General
 			</h2>
-			<multi_select label="White matter signal" askfurtherdetails="true">
+			<multi_select label="White matter changes" askfurtherdetails="true">
 				<dropdown label="Location" print_text_before="There are multiple foci of" print_text_after="white matter abnormal signal">
 					periventricular | deep white matter | pontine | periventricular and deep white matter | generalised
 				</dropdown>
@@ -3023,6 +3026,7 @@ Not present | Present
 			<selection label="Cortex/Basal ganglia">
 				No evidence of prior insult to the cortex or basal ganglia. 
 			</selection>
+
 			<multi_radio>
 				<radio label="Prion disease" flags="dont_print_negative">
 					Not present | Present
