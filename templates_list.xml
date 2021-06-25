@@ -905,6 +905,9 @@ Not present | Present
 			<h1>
 				Conclusion
 			</h1>
+			<selection label="Discs">
+				No canal or foraminal stenosis. 
+			</selection>
 			<text_entry label="" subtype="medium">
 			</text_entry>
 		</content>
@@ -1699,6 +1702,7 @@ Not present | Present
 				Technique
 			</h1>
 			<text_entry label="" subtype="small">
+			Non-contrast CT of the head. CT arteriogram from aortic arch to vertex of the head. 
 			</text_entry>
 			<h1>
 				Comparison
@@ -2328,9 +2332,10 @@ Not present | Present
 			</multi_radio>
 		</content>
 	</module>
+
 	<template>
 		<name>
-			MRI Head: Generic
+			MRI Head/Brain: Routine
 		</name>
 		<type>
 			Diagnostic
@@ -2370,6 +2375,64 @@ Not present | Present
 			<h1>
 				Conclusion
 			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+
+	<template>
+		<name>
+			MRI and MRA Head/Brain: Stroke
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			MRI Head
+		</title>
+		<content>
+			<insert>
+				MRI Head Start
+			</insert>
+			<h2 flags="dont_print">
+				Acute pathology
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
+					Normal | Abnormal
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<text_entry subtype="medium">
+			</text_entry>
+			<h2 flags="dont_print">
+				Intracranial MRA
+			</h2>
+			<selection label="Occlusion/dissection,or stenosis">No occlusive, dissection, or stenosis on the intracranial or visualised extracranial MR angiogram sequences. 
+			</selection>
+			<selection label="Aneurysm/vascular malformation">No aneurysm or vascular malformation is demonstrated.  
+			</selection>
+			<insert>
+				MRI Head Checklist
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<selection label="Normal Intracranial MRI">Normal intracranial appearances.  
+			</selection>
+			<selection label="Normal MRA">No abnormalities on the MR angiogram.  
+			</selection>
 			<text_entry label="" subtype="medium">
 			</text_entry>
 		</content>
