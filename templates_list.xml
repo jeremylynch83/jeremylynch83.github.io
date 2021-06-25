@@ -2587,7 +2587,7 @@ Not present | Present
 				<dropdown label="Sphenoid sinus pneumatization" print_text_before="Sphenoid sinus pneumatization is" print_text_after=".">
 					present anterior and inferior to the sella | decreased (solely anterior) | absent (conchal)
 				</dropdown>
-				<dropdown label="Intersphenoid septum" print_text_before="There is an intersphenois septum located">
+				<dropdown label="Intersphenoid septum" print_text_before="There is an intersphenoid septum located">
 					midline | rightward | leftward
 				</dropdown>
 				<dropdown label="Septum insertion" print_text_before="which" print_text_after="onto the carotid canal.">
@@ -2943,7 +2943,7 @@ Not present | Present
 	</template>
 	<template>
 		<name>
-			MRI Head: Neurodegenerative
+			MRI Head: Neurodegenerative/Dementia
 		</name>
 		<type>
 			Diagnostic
@@ -2966,14 +2966,7 @@ Not present | Present
 					mild | moderate | severe
 				</dropdown>
 			</multi_select>
-			<multi_select label="Microhaemorrhages" askfurtherdetails="true">
-				<dropdown label="Location" print_text_before="There are multiple foci of" print_text_after="susceptibility drop">
-					periventricular | deep white matter | pontine | periventricular and deep white matter | generalised
-				</dropdown>
-				<dropdown label="Severity" print_text_before="in keeping with a" print_text_after="burden of microhaemorrhages">
-					mild | moderate | severe
-				</dropdown>
-			</multi_select>
+
 			<multi_select label="Atrophy" askfurtherdetails="true">
 				<dropdown label="Cerebral severity" print_text_before="There is">
 					mild | moderate | severe
@@ -2988,6 +2981,12 @@ Not present | Present
 					bilateral | right | left
 				</dropdown>
 			</multi_select>
+			<selection label="Microhaemorrhages">
+				No microhaemorrhages are identified | There are multiple microhaemorrhages with a central distribution | There are multiple microhaemorrhages with a peripheral distribution
+			</selection>
+			<selection label="Brainstem/cerebellum">
+				Normal volume and signal intensity of the brainstem and cerebellum.
+			</selection>
 			<multi_radio>
 				<radio label="Huntingtons" flags="dont_print_negative">
 					Not present | Present
