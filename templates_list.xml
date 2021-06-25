@@ -1493,7 +1493,7 @@ Not present | Present
 				Conclusion
 			</h1>
 			<selection label="Normal">
-				No MRI evidence of a neurodegenerative process.  
+				No CT evidence of a neurodegenerative process.  
 			</selection>
 			<text_entry label="" subtype="medium">
 			</text_entry>
@@ -3068,6 +3068,9 @@ Not present | Present
 			<h1>
 				Conclusion
 			</h1>
+			<selection label="Normal">
+				No MRI evidence of a neurodegenerative process.  
+			</selection>
 			<text_entry label="" subtype="medium">
 			</text_entry>
 		</content>
