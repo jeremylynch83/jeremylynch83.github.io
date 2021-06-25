@@ -1270,7 +1270,7 @@ Not present | Present
 
 	<template>
 		<name>
-			CT Head: Stroke
+			CT Non-Contrast Head: Stroke
 		</name>
 		<type>
 			Diagnostic
@@ -1533,6 +1533,9 @@ Not present | Present
 			CT Angiogram Neck
 		</name>
 		<content>
+			<h2>
+				CT Angiogram Neck vessels
+			</h2>
 			<selection label="Subclavian/Arch">
 				Normal appearances of the aortic arch and subclavian arteries
 			</selection>
@@ -1686,7 +1689,7 @@ Not present | Present
 	</template>
 	<template>
 		<name>
-			CT Angiogram: Head and Neck Vessels
+			CT Non-Contrast Head, Intracranial Angiogram, and Angiogram Head and Neck Vessels: Stroke
 		</name>
 		<type>
 			Diagnostic
@@ -1708,12 +1711,72 @@ Not present | Present
 			<h1>
 				Findings
 			</h1>
+
+			<h2 flags="dont_print">
+				CT Non-Contrast Head
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Hyperdense vessel" normaltext="No hyperdense vessel is apparent.">
+					Not present | Present
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<text_entry subtype="medium">
+			</text_entry>
+
+			<h2>ASPECT Score</h2>
+			<multi_select label="Components">
+				<dropdown label="Caudate nucleus" print_text_before="Caudate nucleus" print_text_after=".">
+					involved (-1) | not involved (0)
+				</dropdown>
+				<dropdown label="Putamen" print_text_before="Putamen" print_text_after=".">
+					involved (-1) | not involved (0)
+				</dropdown>
+				<dropdown label="Internal capsule" print_text_before="Internal capsule" print_text_after=".">
+					involved (-1) | not involved (0)
+				</dropdown>
+				<dropdown label="Insular cortex" print_text_before="Insular cortex" print_text_after=".">
+					involved (-1) | not involved (0)
+				</dropdown>
+				<dropdown label="M1 (frontal operculum)" print_text_before="M1 (frontal operculum)" print_text_after=".">
+					involved (-1) | not involved (0)
+				</dropdown>
+				<dropdown label="M2 (anterior temporal lobe)" print_text_before="M2 (anterior temporal lobe)" print_text_after=".">
+					involved (-1) | not involved (0)
+				</dropdown>
+				<dropdown label="M3 (posterior temporal lobe)" print_text_before="M3 (posterior temporal lobe)" print_text_after=".">
+					involved (-1) | not involved (0)
+				</dropdown>
+				<dropdown label="M4 (immediately superior to M1)" print_text_before="M4 (immediately superior to M1" print_text_after=".">
+					involved (-1) | not involved (0)
+				</dropdown>
+				<dropdown label="M5 (immediately superior to M2)" print_text_before="M5 (immediately superior to M2)" print_text_after=".">
+					involved (-1) | not involved (0)
+				</dropdown>
+				<dropdown label="M6 (immediately superior to M3)" print_text_before="M6 (immediately superior to M3)" print_text_after=".">
+					involved (-1) | not involved (0)
+				</dropdown>
+			</multi_select>
+
 			<insert>
 				CT Head Checklist
 			</insert>
+
 			<insert>
 				CT Angiogram Intracranial
 			</insert>
+
 			<insert>
 				CT Angiogram Neck
 			</insert>
