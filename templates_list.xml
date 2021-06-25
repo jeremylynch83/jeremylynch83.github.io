@@ -1134,6 +1134,65 @@ Not present | Present
 		</content>
 	</template>
 
+	<template>
+		<name>
+			MRI Brachial Plexus
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			MRI Spine
+		</title>
+		<content>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="" subtype="small">
+				MR images of the brachial plexus were acquired without intravenous contrast. 
+			</text_entry>
+			<h1>
+				Comparison
+			</h1>
+			<text_entry label="" subtype="small">
+			</text_entry>
+			<h1>
+				Findings
+			</h1>
+			<selection label="Cervical nerve roots">Cervical nerve roots are intact. 
+			</selection>
+			<selection label="Brachial plexus"> The imaged brachial plexus has a normal course and signal intensity. 
+			</selection>
+			<selection label="Soft tissues"> Muscle bulk is symmetric without denervation or atrophy.  
+			</selection>
+			<selection label="Cervical rib">There is no cervical rib or enlarged C7 transverse process. 
+			</selection>
+
+			<selection label="Posterior fossa">The visualised posterior fossa structures are normal.
+			</selection>
+			<selection label="Marrow signal">Marrow signal is normal.
+			</selection>
+			<selection label="Stenosis">No spinal canal or foraminal stenosis is demonstrated.
+			</selection>
+			<selection label="Vertebral body height and alignment">
+				Vertebral body height and alignment is normal.
+			</selection>
+			<h2 flags="dont_print">
+				Other details:
+			</h2>
+			<insert>
+				Generic spine
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<selection label="Changes">No new lesions are identified.
+			</selection>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+
 	<!--*********************** CT ***********************-->
 
 	<module>
@@ -2603,7 +2662,7 @@ Not present | Present
 			Diagnostic
 		</type>
 		<title>
-			MRI Head
+			MRI Head and Orbits
 		</title>
 		<content>
 			<insert>
@@ -2619,7 +2678,7 @@ Not present | Present
 				<radio label="Extraocular muscles" normaltext="Normal appearances of the extraocular muscles. ">
 					Normal | Abnormal
 				</radio>
-				<radio label="Optic pathway including radiation, occipital lobes. " normaltext="The optic nerves, chiasm, and tracts are normal. No abnormalities involving the optic radiations or occipital lobes. ">
+				<radio label="Optic pathway including radiation, occipital lobes" normaltext="The optic nerves, chiasm, and tracts are normal. No abnormalities involving the optic radiations or occipital lobes. ">
 					Normal | Abnormal
 				</radio>
 				<radio label="Cavernous sinuses" normaltext="Normal appearances of the cavernous sinuses. ">
@@ -2667,6 +2726,70 @@ Not present | Present
 
 	<template>
 		<name>
+			MRI Head/Brain: Hearing loss
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			MRI Head
+		</title>
+		<content>
+			<insert>
+				MRI Head Start
+			</insert>
+			<multi_radio>
+				<radio label="Internal auditory canals" normaltext="Normal appearances of the internal auditory canals. ">
+					Normal | Abnormal
+				</radio>
+				<radio label="Cerebellopontine angles" normaltext="The cerebellopontine angles are normal.">
+					Normal | Abnormal
+				</radio>
+				<radio label="Cochlea, vestibule, semicircular canals" normaltext="Normal appearances of the cochlea, vestibule, semicircular canals. ">
+					Normal | Abnormal
+				</radio>
+				<radio label="Brainstem and cerebellum" normaltext="The brainstem and cerebellum are normal. ">
+					Normal | Abnormal
+				</radio>
+			</multi_radio>
+
+			<h2 flags="dont_print">
+				Acute Intracranial pathology
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
+					Normal | Abnormal
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<text_entry subtype="large">
+			</text_entry>
+			<insert>
+				MRI Head Checklist
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<selection label="Normal">No abnormalities are identified.   
+			</selection>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+
+	<template>
+		<name>
 			MRI Head/Brain: Facial Palsy
 		</name>
 		<type>
@@ -2680,22 +2803,19 @@ Not present | Present
 				MRI Head Start
 			</insert>
 			<multi_radio>
-				<radio label="Globes" normaltext="Normal appearances of the ocular globes. ">
+				<radio label="Facial nerve perineural enhancement" normaltext="No abnormal enhancement of the seventh cranial nerves in the internal auditory canal or temporal bone. ">
+					Not present | Present
+				</radio>
+				<radio label="Posterior fossa mass" normaltext="No posterior fossa mass.">
+					Not present | Present
+				</radio>
+				<radio label="Vascular loop" normaltext="No vascular loop compresses the seventh cranial nerves at or near the nerve root exit zone. ">
+					Not present | Present
+				</radio>
+				<radio label="Brainstem" normaltext="Normal appearances of the brainstem. ">
 					Normal | Abnormal
 				</radio>
-				<radio label="Retrobulbar fat" normaltext="The retrobulbar fat is normal. ">
-					Normal | Abnormal
-				</radio>
-				<radio label="Extraocular muscles" normaltext="Normal appearances of the extraocular muscles. ">
-					Normal | Abnormal
-				</radio>
-				<radio label="Optic pathway including radiation, occipital lobes. " normaltext="The optic nerves, chiasm, and tracts are normal. No abnormalities involving the optic radiations or occipital lobes. ">
-					Normal | Abnormal
-				</radio>
-				<radio label="Cavernous sinuses" normaltext="Normal appearances of the cavernous sinuses. ">
-					Normal | Abnormal
-				</radio>
-				<radio label="Cranial nerves and brainstem" normaltext="Normal appearances of the cranial nerves and brainstem. ">
+				<radio label="Parotid gland" normaltext="Normal appearances of the parotid glands. ">
 					Normal | Abnormal
 				</radio>
 			</multi_radio>
