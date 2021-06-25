@@ -2538,7 +2538,7 @@ Not present | Present
 			<insert>
 				MRI Head Start
 			</insert>
-			<multi_select label="Description of mass">
+			<multi_select label="Sella mass specific">
 				<dropdown label="Enhancement" print_text_before="There is an" print_text_after="sella mass">
 					enhancing | non-enhancing
 				</dropdown>
@@ -2548,13 +2548,16 @@ Not present | Present
 				<dropdown label="Sphenoid extension" print_text_before="There is">
 					sphenoid sinus extension.
 				</dropdown>
-				<free_text label="Size" print_text_before="It measures approximately">
+				<free_text label="Size of mass" print_text_before="It measures approximately">
 				</free_text>
-				<dropdown label="Optic Chiasm" print_text_before="The mass" print_text_after="the optic chiasm.">
-					elevates and compresses
+				<dropdown label="Optic Chiasm deviation" print_text_before="The mass" print_text_after="the optic chiasm.">
+					does not contact | contacts without deviation | elevates and compresses
+				</dropdown>
+				<dropdown label="Optic Chiasm signal" print_text_before="The mass" print_text_after="the optic chiasm.">
+					does not contact | contacts without deviation | elevates and compresses
 				</dropdown>
 				<dropdown label="Sellar floor" print_text_before="The mass causes" print_text_after="of the sellar floor.">
-					remodelling
+					remodelling | invasion
 				</dropdown>
 				<dropdown label="Cavernous sinus" print_text_before="The lesion">
 					has no cavernous sinus extension. | abuts the cavernous sinus | extends in to the cavernous sinus
@@ -2565,9 +2568,27 @@ Not present | Present
 				<dropdown label="Internal carotid involvement" print_text_after=".">
 					The lesion does not encase the internal carotid artery
 				</dropdown>
-				<dropdown label="Posterior pituitary" print_text_before="The posterior pituitary bright spot is">
-					absent. | present.
+				<dropdown label="Native gland" print_text_before="The native gland is" print_text_after=".">
+					normal | Not identified
 				</dropdown>
+				<dropdown label="Posterior pituitary" print_text_before="The posterior pituitary bright spot is" print_text_after=".">
+					absent | present
+				</dropdown>
+				<dropdown label="Infundibulum deviation" print_text_before="The infundibulum is" print_text_after=".">
+					rightward deviated | leftward deviated 
+				</dropdown>
+				<dropdown label="Infundibulum thickness" print_text_before="The infundibulum is" print_text_after=".">
+					thickened 
+				</dropdown>
+				<dropdown label="Vasculature" print_text_before="The vasculature is" print_text_after=".">
+					normal caliber with no aberrant vasculature 
+				</dropdown>
+				<free_text label="Intercarotid distance" print_text_before="The intercarotid distance is" print_text_after="."></free_text>
+
+			</multi_select>
+
+			<multi_select label="Mass description">
+
 				<dropdown label="Restricted diffusion" print_text_before="The lesion">
 					exhibits restricted diffusion. | does not exhibit restricted diffusion.
 				</dropdown>
