@@ -2338,11 +2338,37 @@ Not present | Present
 				</radio>
 			</multi_radio>
 
+
+			<h2 flags="dont_print">
+				Intracranial hypertension
+			</h2>
+
+			<selection label="Normal">No evidence of  intracranial hypertension. 
+			</selection>
+
+			<multi_radio>
+				<radio label="Optic nerve sheath dilatation or tortuosity" flags="dont_print_normal">
+					Not present | Present
+				</radio>
+				<radio label="Papilloedema" flags="dont_print_normal">
+					Not present | Present
+				</radio>
+				<radio label="Sella arachnoid herniation" flags="dont_print_normal">
+					Not present | Present
+				</radio>
+				<radio label="Small venous sinuses" flags="dont_print_normal">
+					Not present | Present
+				</radio>
+				<radio label="Tonsillar ectopia" flags="dont_print_normal">
+					Not present | Present
+				</radio>
+			</multi_radio>
+
 			<h2 flags="dont_print">
 				Arterial
 			</h2>
 
-			<selection label="Normal">No vascular abnormalities are present. 
+			<selection label="Normal">No arterial abnormalities are present. 
 			</selection>
 
 			<multi_radio>
@@ -2358,6 +2384,9 @@ Not present | Present
 				<radio label="Stenosis or dissection" flags="dont_print_normal">
 					Not present | Present
 				</radio>
+				<radio label="Variant vessel within the temporal bone e.g. ICA" flags="dont_print_normal">
+					Not present | Present
+				</radio>
 			</multi_radio>
 
 
@@ -2365,9 +2394,28 @@ Not present | Present
 				Venous
 			</h2>
 
-			<h2 flags="dont_print">
-				Intracranial hypertension
-			</h2>
+			<selection label="Normal">No venous abnormalities are present. 
+			</selection>
+
+			<multi_radio>
+				<radio label="High riding jugular bulb or diverticulum or dehiscence" flags="dont_print_normal">
+					Not present | Present
+				</radio>
+				<radio label="Laterally placed sigmoid sinus or diverticulum, or dehiscence" flags="dont_print_normal">
+					Not present | Present
+				</radio>
+				<radio label="Transverse sinus stenosis" flags="dont_print_normal">
+					Not present | Present
+				</radio>
+				<radio label="Abnormal mastoid emissary veins" flags="dont_print_normal">
+					Not present | Present
+				</radio>
+				<radio label="Stenosis or dissection" flags="dont_print_normal">
+					Not present | Present
+				</radio>
+			</multi_radio>
+
+
 
 			<h2 flags="dont_print">
 				Acute pathology
