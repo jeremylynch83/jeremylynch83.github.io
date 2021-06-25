@@ -2969,13 +2969,25 @@ Not present | Present
 			<selection label="Microhaemorrhages">
 				No microhaemorrhages are identified. | There are multiple microhaemorrhages with a central distribution. | There are multiple microhaemorrhages with a peripheral distribution and sparing the basal ganglia. 
 			</selection>
+			<multi_radio>
+				<radio label="Cerebral amyloid angiopathy" flags="dont_print_negative">
+					Not present | Present
+				</radio>
+				<radio label="CADASIL" flags="dont_print_negative">
+					Not present | Present
+				</radio>
+			</multi_radio>
+
+			<h2 flags="dont_print">
+				Atrophy
+			</h2>
 
 			<multi_select label="Atrophy" askfurtherdetails="true">
 				<dropdown label="Cerebral severity" print_text_before="There is">
 					mild | moderate | severe
 				</dropdown>
 				<dropdown label="Cerebral location" print_text_after="cerebral atrophy.">
-					supratentorial | infratentorial | generalised
+					supratentorial | infratentorial | generalised | frontal | frontal and parietal | frontal and temporal 
 				</dropdown>
 				<dropdown label="Hippocampal severity" print_text_before="There is">
 					mild | moderate | severe
@@ -3008,22 +3020,22 @@ Not present | Present
 			<h2 flags="dont_print">
 				Cortex/Basal ganglia
 			</h2>
-
+			<selection label="Cortex/Basal ganglia">
+				No evidence of prior insult to the cortex or basal ganglia. 
+			</selection>
 			<multi_radio>
+				<radio label="Prion disease" flags="dont_print_negative">
+					Not present | Present
+				</radio>
+				<radio label="Autoimmune encephalitis" flags="dont_print_negative">
+					Not present | Present
+				</radio>
 				<radio label="Huntingtons" flags="dont_print_negative">
 					Not present | Present
 				</radio>
-				<radio label="Frontotemporal dementia" flags="dont_print_negative">
-					Not present | Present
-				</radio>
-				<radio label="Cerebral amyloid angiopathy" flags="dont_print_negative">
-					Not present | Present
-				</radio>
-				<radio label="CADASIL" flags="dont_print_negative">
-					Not present | Present
-				</radio>
-
 			</multi_radio>
+
+
 			<h2 flags="dont_print">
 				Acute pathology
 			</h2>
