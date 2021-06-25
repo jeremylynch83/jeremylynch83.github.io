@@ -1229,7 +1229,7 @@ Not present | Present
 	</module>
 	<template>
 		<name>
-			CT Head: Generic
+			CT Head: Routine
 		</name>
 		<type>
 			Diagnostic
@@ -2388,12 +2388,25 @@ Not present | Present
 			Diagnostic
 		</type>
 		<title>
-			MRI Head
+			MRI Head and MRA
 		</title>
 		<content>
-			<insert>
-				MRI Head Start
-			</insert>
+			<content>
+				<h1>
+				Technique
+				</h1>
+				<text_entry subtype="small">
+				Non-contrast MR images of the brain and MR angiogram. 
+				</text_entry>
+				<h1>
+				Comparison
+				</h1>
+				<text_entry label="" subtype="small">
+				</text_entry>
+				<h1>
+				Findings
+				</h1>
+			</content>
 			<h2 flags="dont_print">
 				Acute pathology
 			</h2>
@@ -2419,10 +2432,16 @@ Not present | Present
 			<h2 flags="dont_print">
 				Intracranial MRA
 			</h2>
-			<selection label="Occlusion/dissection,or stenosis">No occlusive, dissection, or stenosis on the intracranial or visualised extracranial MR angiogram sequences. 
-			</selection>
-			<selection label="Aneurysm/vascular malformation">No aneurysm or vascular malformation is demonstrated.  
-			</selection>
+
+			<multi_radio>
+				<radio label="Occlusion/dissection" normaltext="No occlusive, dissection, or stenosis on the intracranial or visualised extracranial MR angiogram sequences.">
+					Not present | Present
+				</radio>
+				<radio label="Aneurysm/vascular malformation" normaltext="No aneurysm or vascular malformation is demonstrated.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+
 			<insert>
 				MRI Head Checklist
 			</insert>
@@ -2576,7 +2595,145 @@ Not present | Present
 		</content>
 	</template>
 
+	<template>
+		<name>
+			MRI Orbits and Head
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			MRI Head
+		</title>
+		<content>
+			<insert>
+				MRI Head Start
+			</insert>
+			<multi_radio>
+				<radio label="Globes" normaltext="Normal appearances of the ocular globes. ">
+					Normal | Abnormal
+				</radio>
+				<radio label="Retrobulbar fat" normaltext="The retrobulbar fat is normal. ">
+					Normal | Abnormal
+				</radio>
+				<radio label="Extraocular muscles" normaltext="Normal appearances of the extraocular muscles. ">
+					Normal | Abnormal
+				</radio>
+				<radio label="Optic pathway including radiation, occipital lobes. " normaltext="The optic nerves, chiasm, and tracts are normal. No abnormalities involving the optic radiations or occipital lobes. ">
+					Normal | Abnormal
+				</radio>
+				<radio label="Cavernous sinuses" normaltext="Normal appearances of the cavernous sinuses. ">
+					Normal | Abnormal
+				</radio>
+				<radio label="Cranial nerves and brainstem" normaltext="Normal appearances of the cranial nerves and brainstem. ">
+					Normal | Abnormal
+				</radio>
+			</multi_radio>
 
+			<h2 flags="dont_print">
+				Acute Intracranial pathology
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
+					Normal | Abnormal
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<text_entry subtype="large">
+			</text_entry>
+			<insert>
+				MRI Head Checklist
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<selection label="Normal">Normal MRI of the orbits and brain. 
+			</selection>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+
+	<template>
+		<name>
+			MRI Head/Brain: Facial Palsy
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			MRI Head
+		</title>
+		<content>
+			<insert>
+				MRI Head Start
+			</insert>
+			<multi_radio>
+				<radio label="Globes" normaltext="Normal appearances of the ocular globes. ">
+					Normal | Abnormal
+				</radio>
+				<radio label="Retrobulbar fat" normaltext="The retrobulbar fat is normal. ">
+					Normal | Abnormal
+				</radio>
+				<radio label="Extraocular muscles" normaltext="Normal appearances of the extraocular muscles. ">
+					Normal | Abnormal
+				</radio>
+				<radio label="Optic pathway including radiation, occipital lobes. " normaltext="The optic nerves, chiasm, and tracts are normal. No abnormalities involving the optic radiations or occipital lobes. ">
+					Normal | Abnormal
+				</radio>
+				<radio label="Cavernous sinuses" normaltext="Normal appearances of the cavernous sinuses. ">
+					Normal | Abnormal
+				</radio>
+				<radio label="Cranial nerves and brainstem" normaltext="Normal appearances of the cranial nerves and brainstem. ">
+					Normal | Abnormal
+				</radio>
+			</multi_radio>
+
+			<h2 flags="dont_print">
+				Acute Intracranial pathology
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
+					Normal | Abnormal
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<text_entry subtype="large">
+			</text_entry>
+			<insert>
+				MRI Head Checklist
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<selection label="Normal">Normal MRI of the orbits and brain. 
+			</selection>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
 
 	<template>
 		<name>
@@ -2638,7 +2795,7 @@ Not present | Present
 
 	<template>
 		<name>
-			MRI Head and Spine: Generic
+			MRI Head and Spine: Routine
 		</name>
 		<type>
 			Diagnostic
@@ -2952,7 +3109,7 @@ Not present | Present
 				Headache causes
 			</h2>
 			<multi_radio>
-				<radio label="High intracranial pressure" normaltext="There is no evidence of raised intracranial pressure.">
+				<radio label="Raised intracranial pressure" normaltext="There is no evidence of raised intracranial pressure.">
 					Not present | Present
 				</radio>
 				<radio label="Low intracranial pressure" normaltext="There is no evidence of low intracranial pressure.">
@@ -2964,7 +3121,7 @@ Not present | Present
 				<radio label="Colloid cyst" normaltext="">
 					Not present | Present
 				</radio>
-				<radio label="Chiari" normaltext="">
+				<radio label="Cerebellar tonsillar herniation" normaltext="">
 					Not present | Present
 				</radio>
 				<radio label="Paranasal sinuses" normaltext="">
@@ -2999,6 +3156,7 @@ Not present | Present
 			<h1>
 				Conclusion
 			</h1>
+			<selection label="Summary">Normal study. No findings to account for headaches. </selection>
 			<text_entry label="" subtype="medium">
 			</text_entry>
 		</content>
