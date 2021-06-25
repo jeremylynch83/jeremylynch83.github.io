@@ -2329,12 +2329,36 @@ Not present | Present
 			<h2 flags="dont_print">
 				Skull base
 			</h2>
-			<selection label="Mass">No evidence of mass within the skull base, temporal bone, posterior fossa, or internal auditory canal. 
+			<selection label="Normal">No evidence of mass within the skull base, temporal bone, posterior fossa, or internal auditory canal. 
 			</selection>
 
+			<multi_radio>
+				<radio label="Glomus jugulare paraganglioma" flags="dont_print_normal">
+					Not present | Present
+				</radio>
+			</multi_radio>
+
 			<h2 flags="dont_print">
-				Vascular
+				Arterial
 			</h2>
+
+			<selection label="Normal">No vascular abnormalities are present. 
+			</selection>
+
+			<multi_radio>
+				<radio label="Dural arteriovenous fistula" flags="dont_print_normal">
+					Not present | Present
+				</radio>
+				<radio label="Arteriovenous malformation" flags="dont_print_normal">
+					Not present | Present
+				</radio>
+				<radio label="Aneurysm" flags="dont_print_normal">
+					Not present | Present
+				</radio>
+				<radio label="Stenosis or dissection" flags="dont_print_normal">
+					Not present | Present
+				</radio>
+			</multi_radio>
 
 
 			<h2 flags="dont_print">
