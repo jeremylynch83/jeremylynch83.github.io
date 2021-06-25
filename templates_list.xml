@@ -2590,7 +2590,7 @@ Not present | Present
 				<dropdown label="Intersphenoid septum" print_text_before="There is an intersphenois septum located">
 					midline | rightward | leftward
 				</dropdown>
-				<dropdown label="Intersphenoid septum carotid canal" print_text_before="which" print_text_after="onto the carotid canal.">
+				<dropdown label="Septum insertion" print_text_before="which" print_text_after="onto the carotid canal.">
 					does not insert | inserts
 				</dropdown>
 			</multi_select>
