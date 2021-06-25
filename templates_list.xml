@@ -2584,7 +2584,15 @@ Not present | Present
 					normal caliber with no aberrant vasculature 
 				</dropdown>
 				<free_text label="Intercarotid distance" print_text_before="The intercarotid distance is" print_text_after="."></free_text>
-
+				<dropdown label="Sphenoid sinus pneumatization" print_text_before="Sphenoid sinus pneumatization is" print_text_after=".">
+					present anterior and inferior to the sella | decreased (solely anterior) | absent (conchal)
+				</dropdown>
+				<dropdown label="Intersphenoid septum" print_text_before="There is an intersphenois septum located">
+					midline | rightward | leftward
+				</dropdown>
+				<dropdown label="Intersphenoid septum" print_text_before="There is an intersphenois septum located">
+					midline | rightward | leftward
+				</dropdown>
 			</multi_select>
 
 			<multi_select label="Mass description">
