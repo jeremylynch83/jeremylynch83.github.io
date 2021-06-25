@@ -2308,6 +2308,8 @@ Not present | Present
 			</text_entry>
 		</content>
 	</template>
+
+
 	<template>
 		<name>
 			MRI Paediatric Head
@@ -2540,8 +2542,11 @@ Not present | Present
 				<dropdown label="Enhancement" print_text_before="There is an" print_text_after="sella mass">
 					enhancing | non-enhancing
 				</dropdown>
-				<dropdown label="Suprasellar" print_text_before="with">
+				<dropdown label="Suprasellar extension" print_text_before="with">
 					suprasellar extension.
+				</dropdown>
+				<dropdown label="Sphenoid extension" print_text_before="There is">
+					sphenoid sinus extension.
 				</dropdown>
 				<free_text label="Size" print_text_before="It measures approximately">
 				</free_text>
@@ -2551,8 +2556,14 @@ Not present | Present
 				<dropdown label="Sellar floor" print_text_before="The mass causes" print_text_after="of the sellar floor.">
 					remodelling
 				</dropdown>
-				<dropdown label="Cavernous sinus" print_text_before="There is">
-					no cavernous sinus extension. | right cavernous sinus extension. | left cavernous sinus extension.
+				<dropdown label="Cavernous sinus" print_text_before="The lesion">
+					has no cavernous sinus extension. | abuts the cavernous sinus | extends in to the cavernous sinus
+				</dropdown>
+				<dropdown label="Cavernous sinus invasion side" print_text_after=".">
+					on the right | on the left | bilaterally
+				</dropdown>
+				<dropdown label="Internal carotid involvement" print_text_after=".">
+					The lesion does not encase the internal carotid artery
 				</dropdown>
 				<dropdown label="Posterior pituitary" print_text_before="The posterior pituitary bright spot is">
 					absent. | present.
