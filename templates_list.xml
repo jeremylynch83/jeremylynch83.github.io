@@ -941,7 +941,7 @@ Not present | Present
 			<insert>
 				Lumbar spine level
 			</insert>
-			<h2 flags="dont_print">
+			<h2 flags="dont_print|print_space">
 				Other details:
 			</h2>
 			<insert>
