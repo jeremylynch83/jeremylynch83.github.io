@@ -484,6 +484,11 @@ Not present | Present
 			Endovascular Repair of a Ruptured Aneurysm
 		</title>
 		<content>
+			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
 			<insert>Angio header</insert>
 			<h1>
 				Technique
@@ -621,6 +626,11 @@ Not present | Present
 		</title>
 		<content>
 			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
 				Technique
 			</h1>
 			<text_entry label="Consent">
@@ -743,6 +753,11 @@ Not present | Present
 		</title>
 		<content>
 			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
 				Technique
 			</h1>
 			<text_entry label="" subtype="small">
@@ -798,6 +813,11 @@ Not present | Present
 			MRI Spine
 		</title>
 		<content>
+			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
 			<h1>
 				Technique
 			</h1>
@@ -860,6 +880,11 @@ Not present | Present
 			MRI Lumber spine
 		</title>
 		<content>
+			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
 			<h1>
 				Technique
 			</h1>
@@ -963,6 +988,11 @@ Not present | Present
 		</title>
 		<content>
 			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
 				Technique
 			</h1>
 			<text_entry label="" subtype="small">
@@ -1048,6 +1078,11 @@ Not present | Present
 		</title>
 		<content>
 			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
 				Technique
 			</h1>
 			<text_entry label="" subtype="small">
@@ -1103,6 +1138,11 @@ Not present | Present
 			MRI Spine
 		</title>
 		<content>
+			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
 			<h1>
 				Technique
 			</h1>
@@ -1166,6 +1206,11 @@ Not present | Present
 		</title>
 		<content>
 			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
 				Technique
 			</h1>
 			<text_entry label="" subtype="small">
@@ -1220,6 +1265,11 @@ Not present | Present
 			Plain CT Start
 		</name>
 		<content>
+			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
 			<h1>
 				Technique
 			</h1>
@@ -1721,6 +1771,11 @@ Not present | Present
 		</title>
 		<content>
 			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
 				Technique
 			</h1>
 			<text_entry label="" subtype="small">
@@ -1771,6 +1826,11 @@ Not present | Present
 			CT Angiogram Intracranial
 		</title>
 		<content>
+			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
 			<h1>
 				Technique
 			</h1>
@@ -1834,6 +1894,11 @@ Not present | Present
 			CT Head and Angiogram of the Head and Neck
 		</title>
 		<content>
+			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
 			<h1>
 				Technique
 			</h1>
@@ -1939,6 +2004,11 @@ Not present | Present
 			CT Cervical Spine
 		</title>
 		<content>
+			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
 			<h1>
 				Technique
 			</h1>
@@ -2046,6 +2116,11 @@ Not present | Present
 		</title>
 		<content>
 			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
 				Technique
 			</h1>
 			<text_entry label="" subtype="small">
@@ -2131,6 +2206,11 @@ Not present | Present
 			CT Lumbar Spine
 		</title>
 		<content>
+			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
 			<h1>
 				Technique
 			</h1>
@@ -2243,6 +2323,11 @@ Not present | Present
 		</title>
 		<content>
 			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
 				Technique
 			</h1>
 			<text_entry label="" subtype="small">
@@ -2287,6 +2372,11 @@ Not present | Present
 		</title>
 		<content>
 			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
 				Technique
 			</h1>
 			<text_entry label="" subtype="small">
@@ -2327,6 +2417,11 @@ Not present | Present
 		</title>
 		<content>
 			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
 				Technique
 			</h1>
 			<text_entry label="" subtype="small">
@@ -2357,6 +2452,11 @@ Not present | Present
 			MRI Head Start
 		</name>
 		<content>
+			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
 			<h1>
 				Technique
 			</h1>
@@ -2528,6 +2628,11 @@ Not present | Present
 		</title>
 		<content>
 			<content>
+				<h1>
+				Clinical Indication
+				</h1>
+				<text_entry label="" subtype="medium">
+				</text_entry>
 				<h1>
 				Technique
 				</h1>
@@ -3918,6 +4023,11 @@ Not present | Present
 		</title>
 		<content>
 			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
 				Technique
 			</h1>
 
@@ -3977,6 +4087,11 @@ Not present | Present
 		<title>Chest radiograph 
 		</title>
 		<content>
+			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
 			<h1>
 				Technique
 			</h1>
@@ -4044,6 +4159,11 @@ Not present | Present
 		</title>
 		<content>
 			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
 				Technique
 			</h1>
 			<text_entry subtype="small">Anteroposterior and lateral projections obtained. 
@@ -4078,6 +4198,11 @@ Not present | Present
 		<title>Cervical Spine Radiograph
 		</title>
 		<content>
+			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
 			<h1>
 				Technique
 			</h1>
@@ -4116,6 +4241,11 @@ Not present | Present
 		<title>Spine Radiograph
 		</title>
 		<content>
+			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
 			<h1>
 				Technique
 			</h1>
@@ -4167,6 +4297,11 @@ Not present | Present
 		<title>Ventriculoperitoneal Shunt Series
 		</title>
 		<content>
+			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
 			<h1>
 				Technique
 			</h1>
@@ -4222,6 +4357,11 @@ Not present | Present
 		</title>
 		<content>
 			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
 				Technique
 			</h1>
 			<text_entry subtype="small">
@@ -4251,6 +4391,11 @@ Not present | Present
 		</title>
 		<content>
 			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
 				Technique
 			</h1>
 			<text_entry subtype="small">
@@ -4279,6 +4424,11 @@ Not present | Present
 		<title>
 		</title>
 		<content>
+			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
 			<h1>
 				Technique
 			</h1>
