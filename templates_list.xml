@@ -189,6 +189,11 @@ Not present | Present
 		</title>
 		<content>
 			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
 				Technique
 			</h1>
 			<insert>
@@ -251,6 +256,11 @@ Not present | Present
 			Cerebral Angiogram
 		</title>
 		<content>
+			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
 			<h1>
 				Technique
 			</h1>
@@ -323,6 +333,11 @@ Not present | Present
 			Cerebral Angiogram
 		</title>
 		<content>
+			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
 			<h1>
 				Technique
 			</h1>
@@ -419,6 +434,11 @@ Not present | Present
 			Cerebral Angiogram
 		</title>
 		<content>
+			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
 			<h1>
 				Technique
 			</h1>
@@ -1400,6 +1420,63 @@ Not present | Present
 					involved (-1) | not involved (0)
 				</dropdown>
 			</multi_select>
+
+			<insert>
+				CT Head Checklist
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+
+	<template>
+		<name>
+			CT Non-Contrast Head: Trauma
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			CT Head
+		</title>
+		<content>
+			<insert>
+				Plain CT Start
+			</insert>
+			<h2 flags="dont_print">
+				Traumatic pathology
+			</h2>
+			<multi_radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Grey-white differentiation" normaltext="Grey-white matter differentiation is maintained.">
+					Normal | Abnormal
+				</radio>
+			</multi_radio>
+
+			<h2 flags="dont_print">
+				Other acute pathology
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Hyperdense vessel" normaltext="No hyperdense vessel is apparent.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<text_entry subtype="medium">
+			</text_entry>
 
 			<insert>
 				CT Head Checklist

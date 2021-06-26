@@ -84,7 +84,7 @@
 						{{template.title}}
 					</h1>
 
-					<b-form-group v-if="template != ''">
+					<!--<b-form-group v-if="template != ''">
 						<div class="padding:1000px;">
 							<h2>CLINICAL INDICATION:</h2>
 
@@ -92,7 +92,7 @@
 							</b-form-textarea>
 						</div>
 
-					</b-form-group>
+					</b-form-group>-->
 
 					<template v-for=" n in templateForm">
 
@@ -903,7 +903,7 @@
 				copyReport: function () {
 					var copyText = "";
 					copyText += this.template.title.trim() + "\n\n";
-					copyText += "CLINICAL INDICATION:\n" + document.getElementById("indication_text").value;
+					//copyText += "CLINICAL INDICATION:\n" + document.getElementById("indication_text").value;
 
 
 					for (var n = 0; n < this.templateForm.length; n++) {
