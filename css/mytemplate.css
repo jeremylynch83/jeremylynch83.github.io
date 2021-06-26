@@ -34,27 +34,35 @@ caption {
     background-color: rgb(250, 250, 250);
 }
 
-
+/*
 .element:hover {
     background-color: rgb(230, 230, 230);
 }
 
 .row:hover {
     background-color: rgb(230, 230, 230);
-}
+}*/
 
 
 
 .control {
-    width: 30em;
-
     visibility: hidden;
-    background-color: none;
     position: absolute;
+    left: -10px;
+    width: 30px;
+    z-index: 999;
+}
 
+.row:hover .control {
+    visibility: visible;
+}
+
+.control:hover .control {
+    visibility: visible;
 }
 
 .element {
+
     flex: 100%;
 
 }

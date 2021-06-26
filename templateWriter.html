@@ -76,6 +76,17 @@
 
 			</b-form-group>
 
+			<b-modal id="control_modal" title="Options" ok-only>
+				<p>Select from the following options:</p>
+
+				<template #modal-footer="{ Submit, close }">
+
+					<b-button @click="deleteElement(); close()">Delete</b-button>
+					<b-button @click="close()" variant="danger">Cancel</b-button>
+				</template>
+
+			</b-modal>
+
 			<b-form-group v-if="template != ''">
 				<b-card bg-variant="light">
 					<b-button variant="success" @click="copyReport()">Generate report</b-button>
@@ -83,16 +94,6 @@
 					<h1>
 						{{template.title}}
 					</h1>
-
-					<!--<b-form-group v-if="template != ''">
-						<div class="padding:1000px;">
-							<h2>CLINICAL INDICATION:</h2>
-
-							<b-form-textarea id="indication_text" placeholder="Enter text">
-							</b-form-textarea>
-						</div>
-
-					</b-form-group>-->
 
 					<template v-for=" n in templateForm">
 
@@ -103,24 +104,11 @@
 
 								<div class="control">
 									<div class="op_icon">
-
-										<button>&#8801;</button>
-										<nav class="op_menu">
-											<ul>
-												<li>
-													<button onclick="alert('Hello there!')">
-														Display Greeting
-													</button>
-												</li>
-												<li>
-													<button onclick="print()">
-														Print This Page
-													</button>
-												</li>
-											</ul>
-										</nav>
+										<button v-b-modal.control_modal @click="selectElement(n)">&#8801;</button>
 									</div>
 								</div>
+
+
 
 								<!--
 									<b-form-group >
@@ -838,6 +826,7 @@
 				template: "",
 				index: "",
 				templateForm: [],
+				selected: null,
 				copyModal: {
 					id: 'copy-modal',
 					text: "",
@@ -879,7 +868,9 @@
 					for (var n = 0; n < elements.length; n++) {
 						var el = _.cloneDeep(this.template.elements[n]);
 
-						/*el.array_id = n;
+						el.array_id = n;
+
+						/*
 						el.id = this.generateID();
 
 						if (el.multi) {
@@ -892,11 +883,15 @@
 					}
 
 				},
-				deleteElement(element) {
-					var index = this.templateForm.findIndex(function (i) {
+				deleteElement() {
+					this.templateForm.splice(this.selected, 1);
+				},
+
+				selectElement(element) {
+					this.selected = this.templateForm.findIndex(function (i) {
 						return i.array_id == element.array_id;
 					})
-					this.templateForm.splice(index, 1);
+					console.log(element.array_id);
 				},
 
 
