@@ -1282,7 +1282,7 @@ Not present | Present
 				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="of">
 					CT | MRI
 				</dropdown>
-				<free_text label="Date">
+				<free_text label="Date" print_text_before="date">
 				</free_text>
 			</multi_select>
 			<text_entry subtype="small">
