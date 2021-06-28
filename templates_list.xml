@@ -1278,9 +1278,6 @@ Not present | Present
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="Comparison is made with the CT of " subtype="small">
-			</text_entry>
-
 			<multi_select >
 				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="of">
 					CT | MRI
@@ -1288,6 +1285,8 @@ Not present | Present
 				<free_text label="Date">
 				</free_text>
 			</multi_select>
+			<text_entry subtype="small">
+			</text_entry>
 			<h1>
 				Findings
 			</h1>
