@@ -819,10 +819,6 @@
 										"<p><b>Recommended parent device inner dimensions: </b>" +
 										deviceInfo[prop] + "\"</p>";
 									break;
-								case "tablecaption":
-									break;
-								case "tablecaption":
-									break;
 								case "image":
 									info_extra +=
 										"<p><b>Image:</b><p></p><img class = \"device_img\" src=\"device_images\\" +
@@ -834,6 +830,9 @@
 									info_extra +=
 										"<iframe width=\"100%\" height=\"315\" src=\"" + deviceInfo[prop] +
 										"\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
+									break;
+								case "tablecaption":
+									info_extra += "<p><b>" + deviceInfo[prop] + "</b></p>";
 									break;
 								case "sizetable":
 									var sizes = JSON.parse(deviceInfo[prop]);

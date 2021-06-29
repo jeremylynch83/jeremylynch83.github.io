@@ -1156,6 +1156,20 @@ deviceList=
         "features": "\"Glubran 2 polymerises quickly in contact with live tissue and wet environment creating a thin and elastic film having high tensile properties which guarantee strong adhesion to the tissues. This film naturally conforms with the tissues on which it was applied; it is not permeable to liquids and is not altered by blood or organic liquids.\""
     },
     {
+        "type": "Liquid Embolic",
+        "name": "TRUFILL® n-BCA",
+        "manufacturer": "Cerenovus",
+        "url1": "https://www.jnjmedicaldevices.com/en-US/product/trufill-n-bca-liquid-embolic-system",
+        "minid": 0,
+        "maxod": 0.026,
+        "length": "?",
+        "description": "\"The TRUFILL® n-BCA Liquid Embolic System is used under fluoroscopic guidance to obstruct or reduce blood flow to cerebral arteriovenous malformations (AVMs) via super-selective catheter delivery when pre-surgical devascularization is desired. The TRUFILL n-BCA System offers: Low Procedure Time, Low Fluoroscopy Time, Fewer Adverse ClinicalComplications, Effective Penetration of AVM.\"",
+        "sizetable": "[{\"Condition\":\"Intranidal injections without AV fistulae or high flow rates in order to more deeply penetrate the nidus\",\"TRUFILL® Ethiodized Oil: n-BCA Ratio\":\"3:1 - 75% Eth. Oil / 25% n-BCA\",\"TRUFILL® Ethiodized Oil: n-Volume (cc)\":0.75,\"TRUFILL® n-BCA Ratio (cc)\":0.25},{\"Condition\":\"Intranidal injections without AV fistulae or high flow rates in order to more deeply penetrate the nidus\",\"TRUFILL® Ethiodized Oil: n-BCA Ratio\":\"2:1 - 67% Eth. Oil / 33% n-BCA\",\"TRUFILL® Ethiodized Oil: n-Volume (cc)\":0.67,\"TRUFILL® n-BCA Ratio (cc)\":0.33},{\"Condition\":\"Feeding pedicle injections close to the nidus at high flow rates where venous opacification occurs on contrast injections within ½ second\",\"TRUFILL® Ethiodized Oil: n-BCA Ratio\":\"1:1 - 50% Eth. Oil / 50% n-BCA\",\"TRUFILL® Ethiodized Oil: n-Volume (cc)\":0.5,\"TRUFILL® n-BCA Ratio (cc)\":\"0.50 (tantalum advised)\"},{\"Condition\":\"Feeding pedicle injections close to the nidus at high flow rates where venous opacification occurs on contrast injections within ½ second\",\"TRUFILL® Ethiodized Oil: n-BCA Ratio\":\"1:2 - 33% Eth. Oil / 67% n-BCA\",\"TRUFILL® Ethiodized Oil: n-Volume (cc)\":0.33,\"TRUFILL® n-BCA Ratio (cc)\":\"0.67 (tantalum advised)\"}]",
+        "tablecaption": "Recommended Mixtures (Listed volumes based on a total volume of 1.0 cc - actual total volumes may vary)",
+        "comments": "\"Tantalum Powder may also be added to ethiodized oil to augment radiopacity. Tantalum powder should not be used alone with n-BCA. At higher n-BCA concentrations (>50%), addition of up to 0.5g tantalum powder is advised.\"",
+        "cautions": "\"WARNING: A 0:1 TRUFILL Ethiodized Oil to TRUFILL n-BCA ratio should never be used. Recommended mixtures based  on the N-Butyl Cyanoacrylate Embolization of Cerebral Arteriovenous Malformations Study (N-Butyl Cyanoacrylate Embolization of Cerebral Arteriovenous Malformations: Results of a Prospective, Randomized, Multi-center Trial, AJNR 23: 748-755, May 2002)\""
+    },
+    {
         "type": "Balloon",
         "name": "HyperForm 3 mm ",
         "manufacturer": "Medtronic",
