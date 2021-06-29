@@ -452,11 +452,12 @@
 							el.present = "";
 							el.askfurtherdetails = xml[i].getAttribute("askfurtherdetails");
 
-
 							for (var n = 0; n < nodes.length; n++) {
 								if (nodes[n].nodeName != "#text") {
 
 									var type = nodes[n].nodeName.trim();
+									var flags = nodes[n].getAttribute("flags");
+									if (flags == null) flags = " ";
 									var label = nodes[n].getAttribute("label");
 									if (label) label.trim();
 									var inner_text = nodes[n].innerHTML;
@@ -476,10 +477,11 @@
 											var print_text = "";
 											if (this.text != "") {
 												if (this.print_text_before != "") {
-													print_text += this.print_text_before + " " + this.text;
-												} else {
-													print_text += this.label + ": " + this.text;
+													print_text += this.print_text_before + " ";
+												} else if (!this.flags.includes("dont_print_label")) {
+													print_text += this.label + ": ";
 												}
+												print_text += this.text;
 												if (this.print_text_after != "") {
 													print_text += " " + this.print_text_after;
 												}
@@ -491,6 +493,7 @@
 											text: inner_text,
 											label: label,
 											type: type,
+											flags: flags,
 											print_text_before: print_text_before,
 											print_text_after: print_text_after,
 											showdetailson: showdetailson,

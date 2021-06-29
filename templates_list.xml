@@ -1282,7 +1282,7 @@ Not present | Present
 				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
 					CT | series of CT studies | MRI | series of MRI studies | cross-sectional imaging | ultrasound
 				</dropdown>
-				<free_text label="Date">
+				<free_text label="Date" flags = "dont_print_label">
 				</free_text>
 			</multi_select>
 
