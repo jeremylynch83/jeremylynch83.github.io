@@ -4037,16 +4037,16 @@ Not present | Present
 			</insert>
 			<multi_checkbox label="Multiple foci of abnormal signal are identified in the">
 				<checkbox>
-					juxtacortical
+					juxtacortical white matter
 				</checkbox>
 				<checkbox>
-					cortical
+					cortex
 				</checkbox>
 				<checkbox>
-					corpus callosum
+					corpus callosum white matter
 				</checkbox>
 				<checkbox>
-					periventricular
+					periventricular region
 				</checkbox>
 				<checkbox>
 					posterior fossa
