@@ -157,7 +157,8 @@
 				</div>
 				<b-table small :items="sizes_table" style="font-size: 0.9em; " responsive caption-top
 					head-variant="light" v-show="sizes_table.length != 0">
-					<template #table-caption><b>Catalogue:<b></template>
+					<template #table-caption><b>{{tablecaption}}<b></template>
+
 				</b-table>
 				<p><b>Similar devices:</b></p>
 				<div>
@@ -333,7 +334,8 @@
 			</div>
 			<b-table small :items="sizes_table" style="font-size: 0.9em; " responsive caption-top head-variant="light"
 				v-show="sizes_table.length != 0">
-				<template #table-caption><b>Catalogue:<b></template>
+				<template #table-caption><b>Table:<b></template>
+				<template #table-caption><b>{{tablecaption}}<b></template>
 			</b-table>
 
 			<b-button size="sm" variant="danger" @click="" v-b-modal.feedback_modal>
@@ -675,7 +677,8 @@
 				},
 
 				info_table: [],
-				sizes_table: []
+				sizes_table: [],
+				tablecaption: ""
 			},
 
 			methods: {
@@ -759,6 +762,7 @@
 
 					this.info_table = [];
 					this.sizes_table = [];
+					this.tablecaption = "";
 
 
 					if (deviceInfo.type != "liquid embolic") {
@@ -832,12 +836,12 @@
 										"\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
 									break;
 								case "tablecaption":
-									info_extra += "<p><b>" + deviceInfo[prop] + "</b></p>";
 									break;
 								case "sizetable":
 									var sizes = JSON.parse(deviceInfo[prop]);
 									this.sizes_table = sizes;
-									//if (deviceInfo.tablecaption != null) 
+									if (deviceInfo.tablecaption != null) this.tablecaption = deviceInfo
+										.tablecaption;
 
 									break;
 

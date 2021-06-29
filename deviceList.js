@@ -1,5 +1,6 @@
 deviceList=
 
+
 [
     {
         "type": "Balloon",
@@ -838,7 +839,8 @@ deviceList=
         "url1": "https://www.jnjmedicaldevices.com/en-US/product/galaxy-g3-microcoil",
         "minid": 0,
         "maxod": 0.0155,
-        "length": "?"
+        "length": "?",
+        "image": "galaxyg3.jpg"
     },
     {
         "type": "Coil",
@@ -867,6 +869,7 @@ deviceList=
         "minid": 0.09,
         "maxod": 0.105,
         "length": "70 / 80 / 90 / 95",
+        "image": "cerebase.png",
         "description": "\"Designed for atraumatic vessel interaction with soft, compliant, and rounded distal edges and a highly flexible Dexterous (DEX) tip that can minimize direct vessel wall contact.\"",
         "sizetable": "[{\"Catalog No.\":\"GS9070SD\",\"ID\":\"0090\\\"\",\"OD (compatible short sheath)\":\"8F\",\"Usable Length\":\"70cm\"},{\"Catalog No.\":\"GS9080SD\",\"ID\":\"0090\\\"\",\"OD (compatible short sheath)\":\"8F\",\"Usable Length\":\"80cm\"},{\"Catalog No.\":\"GS9090SD\",\"ID\":\"0090\\\"\",\"OD (compatible short sheath)\":\"8F\",\"Usable Length\":\"90cm\"},{\"Catalog No.\":\"GS9095SD\",\"ID\":\"0090\\\"\",\"OD (compatible short sheath)\":\"8F\",\"Usable Length\":\"95cm\"}]",
         "features": "\"Engineered to secure Distal Access: CEREBASE DA is engineered to secure Distal Access for geometric anchoring, resulting in more procedural support. Engineered to take tight turns: The Dexterous (DEX) Tip facilitates tight turns (i.e. a radius bend of 2 cm) for enhanced tracking through challenging anatomy, tracking closer to the target treatment site. More proximal shaft stiffness: More proximal shaft stiffness designed for arch support.\""
@@ -1034,6 +1037,7 @@ deviceList=
         "minid": 0,
         "maxod": 0.02,
         "length": "194 / 195",
+        "image": "embotrap2.png",
         "sizetable": "[{\"Name\":\"5x21\",\"Catalog #\":\"ET009521\",\"Recommended Vessel Diameter\":\"1.5-5.0 mm\",\"Micro Catheter Compatibility\":\"0.021” ID – 0.027” ID\",\"Diameter\":\"5.0 mm\",\"Working Length\":\"21 mm\",\"Device Length\":\"194 cm\",\"Tip Length\":\"4 mm\"},{\"Name\":\"5x33\",\"Catalog #\":\"ET009533\",\"Recommended Vessel Diameter\":\"1.5-5.0 mm\",\"Micro Catheter Compatibility\":\"0.021” ID – 0.027” ID\",\"Diameter\":\"5.0 mm\",\"Working Length\":\"33 mm\",\"Device Length\":\"195 cm\",\"Tip Length\":\"4 mm\"}]",
         "youtube": "https://www.youtube.com/embed/1MgvfCzAXwA"
     },
@@ -1045,6 +1049,7 @@ deviceList=
         "minid": 0,
         "maxod": 0.02,
         "length": "194 / 195",
+        "image": "embotrap3.png",
         "description": "\"The EMBOTRAP® III Revascularization Device is designed for use in the anterior and posterior neurovasculature in vessels such as the internal carotid artery, the M1 or M2 segments of the middle cerebral artery, and basilar arteries. The EMBOTRAP Platform is indicated for vessels from 5.0mm down to 1.5mm and is the only dual layer design, designed to engage and grip the clot differently.  EMBOTRAP® III Device has been shown to retrieve various thrombus types, whether fibrin-rich thrombus (hard) or RBC-rich thrombus types (soft).\"",
         "vesselDiameters": "1.5 - 5.0 mm  ",
         "sizetable": "[{\"Product Code\":\"ET309522\",\"Name\":\"5X22\",\"Vessel Size Range\":\"1.5-5.0 mm\",\"Microcatheter Compatibility\":\"0.021\\\"\",\"Working Length\":\"22mm\",\"Device Length\":\"194cm\"},{\"Product Code\":\"ET309537\",\"Name\":\"5X37\",\"Vessel Size Range\":\"1.5-5.0 mm\",\"Microcatheter Compatibility\":\"0.021\\\"\",\"Working Length\":\"37mm\",\"Device Length\":\"195cm\"}]",
@@ -1163,6 +1168,7 @@ deviceList=
         "minid": 0,
         "maxod": 0.026,
         "length": "?",
+        "image": "trufill.jpg",
         "description": "\"The TRUFILL® n-BCA Liquid Embolic System is used under fluoroscopic guidance to obstruct or reduce blood flow to cerebral arteriovenous malformations (AVMs) via super-selective catheter delivery when pre-surgical devascularization is desired. The TRUFILL n-BCA System offers: Low Procedure Time, Low Fluoroscopy Time, Fewer Adverse ClinicalComplications, Effective Penetration of AVM.\"",
         "sizetable": "[{\"Condition\":\"Intranidal injections without AV fistulae or high flow rates in order to more deeply penetrate the nidus\",\"TRUFILL® Ethiodized Oil: n-BCA Ratio\":\"3:1 - 75% Eth. Oil / 25% n-BCA\",\"TRUFILL® Ethiodized Oil: n-Volume (cc)\":0.75,\"TRUFILL® n-BCA Ratio (cc)\":0.25},{\"Condition\":\"Intranidal injections without AV fistulae or high flow rates in order to more deeply penetrate the nidus\",\"TRUFILL® Ethiodized Oil: n-BCA Ratio\":\"2:1 - 67% Eth. Oil / 33% n-BCA\",\"TRUFILL® Ethiodized Oil: n-Volume (cc)\":0.67,\"TRUFILL® n-BCA Ratio (cc)\":0.33},{\"Condition\":\"Feeding pedicle injections close to the nidus at high flow rates where venous opacification occurs on contrast injections within ½ second\",\"TRUFILL® Ethiodized Oil: n-BCA Ratio\":\"1:1 - 50% Eth. Oil / 50% n-BCA\",\"TRUFILL® Ethiodized Oil: n-Volume (cc)\":0.5,\"TRUFILL® n-BCA Ratio (cc)\":\"0.50 (tantalum advised)\"},{\"Condition\":\"Feeding pedicle injections close to the nidus at high flow rates where venous opacification occurs on contrast injections within ½ second\",\"TRUFILL® Ethiodized Oil: n-BCA Ratio\":\"1:2 - 33% Eth. Oil / 67% n-BCA\",\"TRUFILL® Ethiodized Oil: n-Volume (cc)\":0.33,\"TRUFILL® n-BCA Ratio (cc)\":\"0.67 (tantalum advised)\"}]",
         "tablecaption": "Recommended Mixtures (Listed volumes based on a total volume of 1.0 cc - actual total volumes may vary)",
