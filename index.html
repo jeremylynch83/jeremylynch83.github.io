@@ -67,7 +67,7 @@
 			<template v-for="n in deviceInputs">
 				<p></p>
 				<b-form-group :label-cols="n.hierarchy" :key="n.id" :label="n.hierarchy_text" label-size="sm">
-					<vue-bootstrap-typeahead :key="n.id" :data="devices" :placeholder="n.text"
+					<vue-bootstrap-typeahead :key="n.id" :data="devices" :placeholder="n.text" v-model="n.input_text"
 						:serializer="item => item.name_man" @hit="updateDevice(n.id, $event); updateSizer()">
 					</vue-bootstrap-typeahead>
 					<div class="text-right"
@@ -683,24 +683,18 @@
 
 			methods: {
 				convertFunction: function (unit) {
-					console.log(unit);
-
 					if (unit == "inches") {
 						this.convert_unit.french = (this.convert_unit.inches * 76.2).toFixed(1);
 						this.convert_unit.mm = (this.convert_unit.inches * 25.4).toFixed(3);
 					}
-
 					if (unit == "french") {
 						this.convert_unit.inches = (this.convert_unit.french / 76.2).toFixed(3);
 						this.convert_unit.mm = (this.convert_unit.french / 3).toFixed(3);
 					}
-
 					if (unit == "mm") {
 						this.convert_unit.inches = (this.convert_unit.mm / 25.4).toFixed(3);
 						this.convert_unit.french = (this.convert_unit.mm * 3).toFixed(1);
 					}
-
-
 					return unit;
 				},
 				feedbackSubmit: function () {
@@ -740,6 +734,18 @@
 					//var result = this.checkSizes();
 
 				},
+
+				changeDevice(device_name, new_device) {
+					var index = deviceInputs.findIndex(
+						function (i) {
+							return i.id == device_name;
+						}
+					);
+					deviceInputs[index].input_text = new_device;
+
+
+				},
+
 				drawDiagram: function () {
 					//var paper = Raphael("paper", 500, 500);
 					//var rect1 = paper.rect(20, 30, 100, 12).attr({ fill: "orange" });
@@ -865,8 +871,6 @@
 					this.similarModal.table = [];
 
 					this.similarUpdateTable(first_device);
-
-
 				},
 
 				info: function (index) {
@@ -910,7 +914,7 @@
 
 					deviceList.forEach(d => {
 						var required_id = null;
-						console.log(d.type + ": " + first_device.type);
+						//console.log(d.type + ": " + first_device.type);
 
 
 						switch (d.type) {
@@ -1043,8 +1047,10 @@
 					var summary = "";
 					var x = tree.querySelectorAll("device");
 					x.forEach(parent => {
+
 						if (parent.hasChildNodes() && (parent.getAttribute("data") != "")) {
 							var parent_data = JSON.parse(parent.getAttribute("data"));
+
 							children = parent.childNodes;
 							var child_total_od = 0;
 							var child_list = [];
@@ -1160,6 +1166,7 @@
 						'hierarchy': 0,
 						'hierarchy_text': '',
 						'display_info': "",
+						'input_text': "",
 						active: null
 					};
 
@@ -1210,7 +1217,6 @@
 								tree.getElementById(parent).parentNode.appendChild(struct);
 
 							}
-
 						}
 					}
 
@@ -1235,6 +1241,10 @@
 			},
 
 			created: function () {
+				const urlSearchParams = new URLSearchParams(window.location.search);
+				const params = Object.fromEntries(urlSearchParams.entries());
+				console.log("Search parameter: " + params.search);
+
 				var newInput1 = this.addInput("inside",
 					"Enter device e.g. catheter, balloon, stent, flow-diverter, Onyx, wire ...",
 					"guide catheters", null);
