@@ -2473,8 +2473,13 @@ Not present | Present
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="small">
-			</text_entry>
+			<multi_select >
+				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
+					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
+				</dropdown>
+				<free_text label="Date" flags = "dont_print_label">
+				</free_text>
+			</multi_select>
 			<h1>
 				Findings
 			</h1>
@@ -4010,13 +4015,105 @@ Not present | Present
 			<h1>
 				Conclusion
 			</h1>
-			<selection label="Stable">
-				Stable imaging appearances
+			<selection label="Normal">
+				No evidence of demyelinating lesions. 
 			</selection>
 			<text_entry label="" subtype="medium">
 			</text_entry>
 		</content>
 	</template>
+
+	<template>
+		<name>MRI Head: Multiple Sclerosis Follow-Up
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>MRI Head
+		</title>
+		<content>
+			<insert>
+				MRI Head Start
+			</insert>
+			<multi_checkbox label="Multiple foci of abnormal signal are identified in the">
+				<checkbox>
+					juxtacortical
+				</checkbox>
+				<checkbox>
+					cortical
+				</checkbox>
+				<checkbox>
+					corpus callosum
+				</checkbox>
+				<checkbox>
+					periventricular
+				</checkbox>
+				<checkbox>
+					posterior fossa
+				</checkbox>
+				<checkbox>
+					imaged cord
+				</checkbox>
+			</multi_checkbox>
+
+			<multi_select label="Lesion Characteristics">
+				<free_text print_text_before="Approximately" print_text_after="lesions in total are identifed" label="Approximate number">
+				</free_text>
+				<dropdown label="New lesions">There no new lesions are identified.</dropdown>
+
+				<free_text print_text_before="Enhancing lesions are demonstrated in the" label="Enhancing lesion location">
+				</free_text>
+				<free_text print_text_before="Lesions exhibiting restricted diffusion are demonstrated at" label="Restricted diffusion location">
+				</free_text>
+				<dropdown label="Recent">There are no features of recent or interval demyelination.</dropdown>
+			</multi_select>
+			<selection label="T1 hypointense">
+				No T1 hypointense lesions are identified
+			</selection>
+			<selection label="Cerebral atrophy">
+				The cerebral white matter volume is normal. | Mild cerebral white matter volume loss is noted. | Moderate cerebral white matter volume loss is noted. | Severe cerebral white matter volume loss is noted.  
+			</selection>
+			<selection label="Optic nerves">
+				The optic nerves exhibit normal appearances with no abnormal signal, atrophy, or contrast enhancement. 	
+			</selection>
+			<selection label="Progressive multifocal leukoencephalopathy">
+				No evidence of progressive multifocal leukoencephalopathy. 
+			</selection>
+
+			<h2 flags="dont_print">
+				Acute pathology
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
+					Normal | Abnormal
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<insert>
+				MRI Head Checklist
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<selection label="Stable">
+				Stable imaging appearances.
+			</selection>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+
 
 	<!--*********************** X-RAY ***********************-->
 
