@@ -37,7 +37,7 @@ deviceList=
         "description": "\"The NeuroSpeed® PTA Balloon Catheter is indicated for dilatation of a stenosis in the cerebral arteries in order to improve perfusion.\""
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "NeuroBridge 39",
         "manufacturer": "Acandis",
         "url1": "https://www.acandis.com/neurobridge-intermediate-catheter-35-en",
@@ -48,7 +48,7 @@ deviceList=
         "description": "\"The NeuroBridge® is a multi-functional intermediate catheter, which offers support and stability for microcatheters and is also suitable for aspiration. \""
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "NeuroBridge 52",
         "manufacturer": "Acandis",
         "url1": "https://www.acandis.com/neurobridge-intermediate-catheter-35-en",
@@ -59,7 +59,7 @@ deviceList=
         "description": "\"The NeuroBridge® is a multi-functional intermediate catheter, which offers support and stability for microcatheters and is also suitable for aspiration. \""
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "NeuroBridge 65",
         "manufacturer": "Acandis",
         "url1": "https://www.acandis.com/neurobridge-intermediate-catheter-35-en",
@@ -193,7 +193,7 @@ deviceList=
         "features": "\" The proven hybrid cell design leads to reliable and fast flow restoration. Small closed cells ensure a perfect vessel wall apposition and expansion into the clot. Large open cells with integrated anchoring elements assure efficient clot retention for reliable and atraumatic retrieval even in tortuous vessel anatomies. In combination, these two cell designs build up a functional segment.\""
     },
     {
-        "type": "Guide Catheter",
+        "type": "Catheter",
         "name": "Fubuki 7 Fr ",
         "manufacturer": "Asahi",
         "url1": "https://asahi-inteccusa-medical.com/product/asahi-fubuki/",
@@ -202,7 +202,7 @@ deviceList=
         "length": "80 / 90 / 100 / 110"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Catheter",
         "name": "Fubuki 8 Fr ",
         "manufacturer": "Asahi",
         "url1": "https://asahi-inteccusa-medical.com/product/asahi-fubuki/",
@@ -211,7 +211,7 @@ deviceList=
         "length": "80 / 90 / 100 / 110"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Catheter",
         "name": "Fubuki, 6 Fr ",
         "manufacturer": "Asahi",
         "url1": "https://asahi-inteccusa-medical.com/product/asahi-fubuki/",
@@ -281,7 +281,7 @@ deviceList=
         "youtube": "https://www.youtube.com/embed/x8niYfRweec"
     },
     {
-        "type": "Long Sheath",
+        "type": "Catheter",
         "name": "Ballast",
         "manufacturer": "Balt",
         "url1": "https://balt-usa.com/products/ballast-088-long-sheath/",
@@ -293,7 +293,7 @@ deviceList=
         "description": "\"The Ballast™ 088 Long Sheath is a single lumen, braid-reinforced, variable stiffness catheter with a radiopaque zone on the distal end and a luer hub on the proximal end. The Ballast 088 Long Sheath is compatible with introducer sheaths appropriately sized for the outer diameter of the Ballast088 Long Sheath. The Ballast 088 Long Sheath includes the Ballast 088 Long Sheath, Dilator, Introducer Sheath, 9F Rotating Hemostasis Valve (RHV) and 8F Hemostasis Valve Adapter (HVA). \""
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "Fargo Max ",
         "manufacturer": "Balt",
         "url1": "www.plusmedica.at",
@@ -302,7 +302,7 @@ deviceList=
         "length": "95 / 105 / 115 / 125"
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "Fargo ",
         "manufacturer": "Balt",
         "url1": "www.plusmedica.at",
@@ -311,7 +311,7 @@ deviceList=
         "length": "105 / 115 / 125 / 135"
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "Fargo Mini ",
         "manufacturer": "Balt",
         "url1": "www.plusmedica.at",
@@ -320,7 +320,7 @@ deviceList=
         "length": "120 / 135"
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "Titan 036 ",
         "manufacturer": "Balt",
         "url1": "https://www.1amedical.org/wordpress/wp-content/uploads/2020/03/201907_TITAN-FLYER-A4-1.pdf",
@@ -329,7 +329,7 @@ deviceList=
         "length": 160
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "Titan 070 ",
         "manufacturer": "Balt",
         "url1": "https://www.1amedical.org/wordpress/wp-content/uploads/2020/03/201907_TITAN-FLYER-A4-1.pdf",
@@ -737,7 +737,7 @@ deviceList=
         "length": "40 / 75 / 135"
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "Syphontrak ",
         "manufacturer": "Boston Scientific",
         "minid": 0.06,
@@ -860,7 +860,7 @@ deviceList=
         "length": "?"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Catheter",
         "name": "Cerebase DA ",
         "manufacturer": "Cerenovus",
         "url1": "https://www.jnjmedicaldevices.com/en-US/product/cerebase-da-guide-sheath",
@@ -873,7 +873,7 @@ deviceList=
         "features": "\"Engineered to secure Distal Access: CEREBASE DA is engineered to secure Distal Access for geometric anchoring, resulting in more procedural support. Engineered to take tight turns: The Dexterous (DEX) Tip facilitates tight turns (i.e. a radius bend of 2 cm) for enhanced tracking through challenging anatomy, tracking closer to the target treatment site. More proximal shaft stiffness: More proximal shaft stiffness designed for arch support.\""
     },
     {
-        "type": "Guide Catheter",
+        "type": "Catheter",
         "name": "5F Envoy ",
         "manufacturer": "Cerenovus",
         "url1": "http://synthes.vo.llnwd.net/o16/LLNWMB8/US%20Mobile/Synthes%20North%20America/Product%20Support%20Materials/Brochures/ENVOY%20FAMILY%20BROCHURE%20pages%20DSUSCOD12140219.pdf",
@@ -882,7 +882,7 @@ deviceList=
         "length": "90 / 100"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Catheter",
         "name": "6F Envoy ",
         "manufacturer": "Cerenovus",
         "url1": "http://synthes.vo.llnwd.net/o16/LLNWMB8/US%20Mobile/Synthes%20North%20America/Product%20Support%20Materials/Brochures/ENVOY%20FAMILY%20BROCHURE%20pages%20DSUSCOD12140219.pdf",
@@ -891,7 +891,7 @@ deviceList=
         "length": "90 / 100"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Catheter",
         "name": "6F Envoy DA / XB ",
         "manufacturer": "Cerenovus",
         "url1": "http://synthes.vo.llnwd.net/o16/LLNWMB8/US%20Mobile/Synthes%20North%20America/Product%20Support%20Materials/Brochures/ENVOY%20FAMILY%20BROCHURE%20pages%20DSUSCOD12140219.pdf",
@@ -902,7 +902,7 @@ deviceList=
         "comments": "DA = Distal Access. XB = eXtra Backup. "
     },
     {
-        "type": "Guide Catheter",
+        "type": "Catheter",
         "name": "7F Envoy ",
         "manufacturer": "Cerenovus",
         "url1": "http://synthes.vo.llnwd.net/o16/LLNWMB8/US%20Mobile/Synthes%20North%20America/Product%20Support%20Materials/Brochures/ENVOY%20FAMILY%20BROCHURE%20pages%20DSUSCOD12140219.pdf",
@@ -911,7 +911,7 @@ deviceList=
         "length": "90 / 100"
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "Large Bore Catheter / Embovac",
         "manufacturer": "Cerenovus",
         "url1": "https://www.jnjmedicaldevices.com/en-US/product/cerenovus-large-bore-catheter",
@@ -1083,7 +1083,7 @@ deviceList=
         "description": "\"The CerusEndo MC 021 is a state of the art microcatheter designed to meet the needs of accessing tortuous neurovasculature and delivering therapeutic devices to intended targets. It is comprised of a Teflon lined ID for optimum interaction with intraluminal devices, a metal reinforced wall transitioning from a supportive and pushable proximal shaft to a compliant yet stable distal shaft, and a variable stiffness polymer jacket with a hydrophilic OD coating for smooth and predictable advancement. In addition, it has a standard luer lock hub at the proximal end, and a radiopaque marker at the steam-shapeable distal tip.  Paramount to the design of the CerusEndo MC 021 was the drive to create a microcatheter providing optimum target vessel access, and best in class stability during delivery of intraluminal therapeutic devices such as stents, flow diverters, and intrasaccular embolization devices.\""
     },
     {
-        "type": "Long Sheath",
+        "type": "Catheter",
         "name": "6F Flexor Shuttle ",
         "manufacturer": "Cook Medical",
         "url1": "https://www.cookmedical.com/products/di_ksawsh_webds/",
@@ -1231,7 +1231,7 @@ deviceList=
         "detachment": "Mechanical"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Catheter",
         "name": "Cello 6F+ ",
         "manufacturer": "Medtronic",
         "url1": "https://www.medtronic.com/uk-en/healthcare-professionals/products/neurological/revascularization-stroke/cello.html",
@@ -1240,7 +1240,7 @@ deviceList=
         "length": 95
     },
     {
-        "type": "Guide Catheter",
+        "type": "Catheter",
         "name": "Cello 7F+ ",
         "manufacturer": "Medtronic",
         "url1": "https://www.medtronic.com/uk-en/healthcare-professionals/products/neurological/revascularization-stroke/cello.html",
@@ -1249,7 +1249,7 @@ deviceList=
         "length": 95
     },
     {
-        "type": "Guide Catheter",
+        "type": "Catheter",
         "name": "Cello 8F ",
         "manufacturer": "Medtronic",
         "url1": "https://www.medtronic.com/uk-en/healthcare-professionals/products/neurological/revascularization-stroke/cello.html",
@@ -1258,7 +1258,7 @@ deviceList=
         "length": "95"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Catheter",
         "name": "Cello 9F ",
         "manufacturer": "Medtronic",
         "url1": "https://www.medtronic.com/uk-en/healthcare-professionals/products/neurological/revascularization-stroke/cello.html",
@@ -1267,7 +1267,7 @@ deviceList=
         "length": "92"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Catheter",
         "name": "Mo.Ma ",
         "manufacturer": "Medtronic",
         "url1": "https://web.archive.org/web/20210116144904/https://www.medtronic.com/us-en/healthcare-professionals/products/cardiovascular/embolic-protection-devices/mo-ma.html",
@@ -1277,7 +1277,7 @@ deviceList=
         "length": 95
     },
     {
-        "type": "Guide Catheter",
+        "type": "Catheter",
         "name": "RIST 079",
         "manufacturer": "Medtronic",
         "url1": "https://www.medtronic.com/us-en/c/neurological/rist-radial-access-system.html",
@@ -1287,7 +1287,7 @@ deviceList=
         "description": "\"Rist™ Radial Access system is the first portfolio designed for the \nunique demands of accessing the neurovasculature through the radial \npathway.\""
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "Phenom Plus ",
         "manufacturer": "Medtronic",
         "url1": "https://europe.medtronic.com/xd-en/healthcare-professionals/products/neurological/access-delivery-nv/phenom.html",
@@ -1296,7 +1296,7 @@ deviceList=
         "length": "105 / 120"
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "Navien 058 ",
         "manufacturer": "Medtronic",
         "url1": "https://europe.medtronic.com/xd-en/healthcare-professionals/products/neurological/access-delivery-nv/navien.html",
@@ -1306,7 +1306,7 @@ deviceList=
         "length": "105 / 115 / 125 / 130"
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "Navien 072 ",
         "manufacturer": "Medtronic",
         "url1": "https://europe.medtronic.com/xd-en/healthcare-professionals/products/neurological/access-delivery-nv/navien.html",
@@ -1316,7 +1316,7 @@ deviceList=
         "length": "95 / 105 / 115 / 125 / 130"
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "REACT 68 ",
         "manufacturer": "Medtronic",
         "url1": "https://www.medtronic.com/us-en/healthcare-professionals/products/neurological/revascularization-stroke/react-catheters.html",
@@ -1327,7 +1327,7 @@ deviceList=
         "description": "\"The React™ 68 catheter and the React™ 71 catheter feature a coil and braid design along with end-to-end nitinol construction — easing navigation to the M1 and M2 segments. Combined with the Riptide™ aspiration system, these catheters are designed to revascularize patients experiencing acute ischemic stroke.\""
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "REACT 71 ",
         "manufacturer": "Medtronic",
         "url1": "https://www.medtronic.com/us-en/healthcare-professionals/products/neurological/revascularization-stroke/react-catheters.html",
@@ -1693,7 +1693,7 @@ deviceList=
         "length": "?"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Catheter",
         "name": "Chaperon 5F ",
         "manufacturer": "MicroVention",
         "url1": "https://www.microvention.com/product/chaperon",
@@ -1702,7 +1702,7 @@ deviceList=
         "length": "95"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Catheter",
         "name": "Chaperon 6F ",
         "manufacturer": "MicroVention",
         "url1": "https://www.microvention.com/product/chaperon",
@@ -1711,7 +1711,7 @@ deviceList=
         "length": "95"
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "Sofia 5F ",
         "manufacturer": "MicroVention",
         "url1": "https://www.microvention.com/product/sofia",
@@ -1723,7 +1723,7 @@ deviceList=
         "recommendedparentid": 0.07
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "Sofia Ex",
         "manufacturer": "MicroVention",
         "url1": "https://www.microvention.com/product/sofia-ex",
@@ -1735,7 +1735,7 @@ deviceList=
         "recommendedparentid": 0.074
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "Sofia 6F ",
         "manufacturer": "MicroVention",
         "url1": "https://www.microvention.com/product/sofia",
@@ -1746,7 +1746,7 @@ deviceList=
         "recommendedparentid": 0.085
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "Sofia Plus 6F ",
         "manufacturer": "MicroVention",
         "url1": "https://www.microvention.com/product/sofia-plus",
@@ -2147,7 +2147,7 @@ deviceList=
         "features": "\"Offering includes multiple shape and softness levels: Plus Standard, Standard, Soft, Extra Soft, WAVE Extra Soft. Ultra HD Fiber for stretch resistance. 3x stronger and 3x more flexible than polypropylene.\""
     },
     {
-        "type": "Long Sheath",
+        "type": "Catheter",
         "name": "Neuron Max 088 ",
         "manufacturer": "Penumbra",
         "url1": "https://www.penumbrainc.com/it/neuro-device/neuron-system/",
@@ -2158,7 +2158,7 @@ deviceList=
         "features": "\"6 F (2.03 mm) long sheath. 0.088\" (2.24 mm) lumen allows for a wide range of device compatibility. Proximal shaft engineered for support throughout aortic arch. Soft, atraumatic tip for distal placement. Full distal shaft radiopacity for visualisation throughout procedure. Compatible with Penumbra 6 F (2.03 mm) Select Catheters.\""
     },
     {
-        "type": "Guide Catheter",
+        "type": "Catheter",
         "name": "Neuron 053 ",
         "manufacturer": "Penumbra",
         "url1": "https://www.penumbrainc.com/neuro-device/neuron-system/",
@@ -2167,7 +2167,7 @@ deviceList=
         "length": "125 / 136"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Catheter",
         "name": "Neuron 070 ",
         "manufacturer": "Penumbra",
         "url1": "https://www.penumbrainc.com/neuro-device/neuron-system/",
@@ -2176,7 +2176,7 @@ deviceList=
         "length": "95 / 105"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Catheter",
         "name": "Benchmark 071 ",
         "manufacturer": "Penumbra",
         "url1": "https://www.penumbrainc.com/neuro-device/benchmark/",
@@ -2186,7 +2186,7 @@ deviceList=
         "description": "\"The BENCHMARK™ 071 Intracranial Access System combines Penumbra’s innovative tracking technology with its original Neuron® intracranial access concept. The result is a next-generation 6 F (2.03 mm) guide catheter built for delivery of today’s most complex therapies. Enables Rapid Primary Access when utilized with the 5 F (1.65 mm) Select Catheter.\""
     },
     {
-        "type": "Guide Catheter",
+        "type": "Catheter",
         "name": "ACE 64 ",
         "manufacturer": "Penumbra",
         "url1": "https://www.penumbrainc.com/wp-content/uploads/2016/12/10667A_ACE68_Science-of-Aspiration_Brochure_USA.pdf",
@@ -2195,7 +2195,7 @@ deviceList=
         "length": "132"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Catheter",
         "name": "BMX 96 ",
         "manufacturer": "Penumbra",
         "url1": "https://www.penumbrainc.com/neuro-device/benchmark-bmx96-access-system/",
@@ -2206,7 +2206,7 @@ deviceList=
         "features": "\"8 F OD (2.77 mm) delivery catheter. 096\" (2.4 mm) ID expands procedural versatility and intraprocedural visualizationSoft, atraumatic tip for distal placement. Mechanically optimized proximal shaft designed to maximize procedural stability. Prepackaged options with Penumbra 6 F Select Catheters for Rapid Primary Access. Packaged with a dilator designed to provide seamless dilator-to-catheter transition (.038″ guidewire compatible). Tip Shapes: Straight, MP.\""
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "3MAX DDC ",
         "manufacturer": "Penumbra",
         "url1": "https://www.penumbrainc.com/neuro-device/max-reperfusion-catheters/",
@@ -2215,7 +2215,7 @@ deviceList=
         "length": 153
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "4MAX DDC ",
         "manufacturer": "Penumbra",
         "url1": "https://www.penumbrainc.com/neuro-device/max-reperfusion-catheters/",
@@ -2224,7 +2224,7 @@ deviceList=
         "length": 130
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "5MAX DDC ",
         "manufacturer": "Penumbra",
         "url1": "https://www.penumbrainc.com/neuro-device/max-reperfusion-catheters/",
@@ -2233,7 +2233,7 @@ deviceList=
         "length": "115 / 125"
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "Jet 7 Reperfusion Catheter ",
         "manufacturer": "Penumbra",
         "url1": "https://www.penumbrainc.com/neuro-device/penumbra-jet-7/",
@@ -2243,7 +2243,7 @@ deviceList=
         "description": "\"The Penumbra JET® 7 Reperfusion Catheter is intended for use in the revascularization of patients with acute ischemic stroke secondary to large vessel occlusion. The larger lumen of Penumbra JET 7, powered by Penumbra ENGINE®, is designed to increase thrombus removal force. The Penumbra JET 7 allows for the combined use with the 3D Revascularization Device™, which offers four intraluminal chambers designed to lock clot, along with outer petals to trap clot for maximum thrombus extraction.\""
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "Jet D Reperfusion Catheter ",
         "manufacturer": "Penumbra",
         "url1": "https://www.penumbrainc.com/neuro-device/penumbra-jet-d/",
@@ -2253,7 +2253,7 @@ deviceList=
         "description": "\"The Penumbra JET™ D Reperfusion Catheter is intended for use in the revascularization of patients with acute ischemic stroke secondary to large vessel occlusion. The Penumbra JET D is designed to navigate smaller, distal vessels and extract clot efficiently with the power of the Penumbra ENGINE™ aspiration source.\""
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "ACE 68 ",
         "manufacturer": "Penumbra",
         "url1": "https://www.penumbrainc.com/neuro-device/ace-reperfusion-catheters/",
@@ -2263,7 +2263,7 @@ deviceList=
         "description": "\"Penumbra’s ACE Reperfusion Catheters (ACE68 and ACE60) are intended for use in the revascularization of patients with acute ischemic stroke secondary to large vessel occlusion. The ACE catheter design further increases the distal and proximal lumen sizes, providing optimal trackability and even greater aspiration power. ACE68 is designed to easily navigate tortuous vessels to facilitate extraction of clot quickly and reliably through its large .068″ (1.73 mm) inner lumen with the deep vacuum power of the Penumbra ENGINE™ aspiration source.\""
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "ACE 60 ",
         "manufacturer": "Penumbra",
         "url1": "https://www.penumbrainc.com/neuro-device/ace-reperfusion-catheters/",
@@ -2521,7 +2521,7 @@ deviceList=
         "detachment": "Electrolytic"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Catheter",
         "name": "8F Merci ",
         "manufacturer": "Stryker",
         "url1": "https://www.stryker.com/us/en/neurovascular/products/merci-balloon-guide-catheter.html",
@@ -2531,7 +2531,7 @@ deviceList=
         "length": "80 / 95"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Catheter",
         "name": "9F Merci ",
         "manufacturer": "Stryker",
         "url1": "https://www.stryker.com/us/en/neurovascular/products/merci-balloon-guide-catheter.html",
@@ -2541,7 +2541,7 @@ deviceList=
         "length": "80 / 95"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Catheter",
         "name": "DAC 070 ",
         "manufacturer": "Stryker",
         "minid": 0.07,
@@ -2549,7 +2549,7 @@ deviceList=
         "length": "105 / 120"
     },
     {
-        "type": "Guide Catheter",
+        "type": "Catheter",
         "name": "Flowgate 2 ",
         "manufacturer": "Stryker",
         "url1": "https://www.strykerneurovascular.com/us/products/ais/flowgate-balloon-guide-catheter",
@@ -2560,7 +2560,7 @@ deviceList=
         "youtube": "https://www.youtube.com/embed/i-v4fCYQUUc"
     },
     {
-        "type": "Long Sheath",
+        "type": "Catheter",
         "name": "AXS Infinity LS ",
         "manufacturer": "Stryker",
         "url1": "https://www.strykerneurovascular.com/us/products/access/axs-infinity-ls-long-sheath",
@@ -2572,7 +2572,7 @@ deviceList=
         "features": "\"Stable platform: A stable platform from the start with a longer proximal segment and more midshaft support. Rapid access: Navigates various arch types with ease with its 9.5cm distal flex zone and supportive proximal shaft. Large 0.088in lumen: The large 0.088in ID is designed to deliver a wide range of devices including most dual-catheter therapies and tri-axial approaches.\""
     },
     {
-        "type": "Long Sheath",
+        "type": "Catheter",
         "name": "AXS Infinity LS Plus ",
         "manufacturer": "Stryker",
         "url1": "https://www.stryker.com/us/en/neurovascular/products/axs-infinity-plus.html",
@@ -2583,7 +2583,7 @@ deviceList=
         "description": "\"The AXS infinity LS Plus Long Sheath is designed for greater distal support and enhanced access.\""
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "DAC 038 ",
         "manufacturer": "Stryker",
         "url1": "https://www.esutures.com/product/2-indate-expired/99-stryker-neurovascular/1222-distal-access-catheter/46230233-concentric-medical-dac-038-distal-access-catheter-0.038-x-125cm-90120/",
@@ -2592,7 +2592,7 @@ deviceList=
         "length": "125 / 136"
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "DAC 044 ",
         "manufacturer": "Stryker",
         "minid": 0.044,
@@ -2600,7 +2600,7 @@ deviceList=
         "length": "115 / 130 / 136"
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "DAC 057 ",
         "manufacturer": "Stryker",
         "minid": 0.057,
@@ -2608,7 +2608,7 @@ deviceList=
         "length": "115 / 125"
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "Catalyst 7 Fr",
         "manufacturer": "Stryker",
         "url1": "https://info.stryker.com/AXS-Catalyst-7",
@@ -2619,7 +2619,7 @@ deviceList=
         "description": "\"Improve your confidence in first pass efficacy by engaging the clot with full control using the AXS Catalyst 7 Distal Access Catheter, the only 0.068in catheter designed to TRAP more with the fully compatible FlowGate2 Balloon Guide Catheter and Trevo XP ProVue Retriever.\""
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "Catalyst 6 Fr",
         "manufacturer": "Stryker",
         "url1": "https://www.strykerneurovascular.com/us/products/access/axs-catalyst-6",
@@ -2629,7 +2629,7 @@ deviceList=
         "description": "\" The CAT™ 6 Distal Access Catheter is designed for fast access and rapid revascularization with Trevo XP Retriever \""
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "Catalyst 5 Fr",
         "manufacturer": "Stryker",
         "url1": "https://www.strykerneurovascular.com/us/products/access/axs-catalyst-5",
@@ -2639,7 +2639,7 @@ deviceList=
         "description": " The CAT™ 5 Distal Access Catheter provides easy navigation and reliable support for distal access cases.\""
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "AXS Vecta 71 ",
         "manufacturer": "Stryker",
         "url1": "https://www.strykerneurovascular.com/us/products/ais/axs-vecta-aspiration-catheter",
@@ -2651,7 +2651,7 @@ deviceList=
         "recommendedparentid": 0.088
     },
     {
-        "type": "Intermediate Catheter",
+        "type": "Catheter",
         "name": "AXS Vecta 74 ",
         "manufacturer": "Stryker",
         "url1": "https://www.stryker.com/us/en/neurovascular/products/axs-vecta-intermediate-catheter.html",
