@@ -912,7 +912,7 @@ deviceList=
     },
     {
         "type": "Catheter",
-        "name": "Large Bore Catheter / Embovac",
+        "name": "Large Bore Catheter (US) Embovac (Europe)",
         "manufacturer": "Cerenovus",
         "url1": "https://www.jnjmedicaldevices.com/en-US/product/cerenovus-large-bore-catheter",
         "minid": 0.071,
@@ -2556,7 +2556,7 @@ deviceList=
         "minid": 0.084,
         "maxod": 0.10499,
         "length": "85 / 95",
-        "incompatibility": "ACE68 / Sofia 6F",
+        "incompatibility": "ACE68 / Sofia 6F / Large Bore Catheter (US) Embovac (Europe)",
         "youtube": "https://www.youtube.com/embed/i-v4fCYQUUc"
     },
     {
