@@ -1393,7 +1393,7 @@ Not present | Present
 					Not present | Present
 				</radio>
 			</multi_radio>
-			<text_entry label = "Other pathology" subtype="medium">
+			<text_entry label = "Other pathology" subtype="medium" flags="dont_print_label">
 			</text_entry>
 			<insert>
 				CT Head Checklist
