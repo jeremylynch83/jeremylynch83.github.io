@@ -1,6 +1,5 @@
 deviceList=
 
-
 [
     {
         "type": "Balloon",
@@ -918,8 +917,10 @@ deviceList=
         "minid": 0.071,
         "maxod": 0.0825,
         "length": "125 / 132",
-        "description": "\"The CERENOVUS Large Bore Catheter, Aspiration Tubing Set and NOUVAG Vacuson\n 60 aspiration pump (or equivalent aspiration pump) are indicated to \nrestore blood flow by removing thrombus in patients experiencing \nischemic stroke. The CERENOVUS Large Bore Catheter is indicated for use \nas a conduit for retrieval devices.\"",
+        "image": "large bore catheter.png",
+        "description": "\"The CERENOVUS Large Bore Catheter, Aspiration Tubing Set and NOUVAG Vacuson 60 aspiration pump (or equivalent aspiration pump) are indicated to \nrestore blood flow by removing thrombus in patients experiencing \nischemic stroke. The CERENOVUS Large Bore Catheter is indicated for use \nas a conduit for retrieval devices.\"",
         "sizetable": "[{\"Product Code\":\"IC71125UG\",\"Distal ID\":\"0.071\\\"\",\"Distal OD\":\"0.081\\\"\",\"Proximal OD\":\"0.0825\\\"\",\"Guide Compatibility(CM)\":\"6F\",\"Usable Length(CM)\":\"125cm\"},{\"Product Code\":\"IC71132UG\",\"Distal ID\":\"0.071\\\"\",\"Distal OD\":\"0.081\\\"\",\"Proximal OD\":\"0.0825\\\"\",\"Guide Compatibility(CM)\":\"6F\",\"Usable Length(CM)\":\"132cm\"}]",
+        "recommendedparentid": 0.085,
         "features": "\"Rapid navigation to MCA: CERENOVUS Large Bore Catheter has rapid navigation to the middle cerebral artery (MCA) based on optimized design: variable braid density for optimized trackability and seamless transition zones for efficient control. Smooth stent retrieval: Smooth stent interaction and retrieval due to enhanced tip durability: end to end polytetrafluoroethylene (PTFE) liner, durable tip design and optimized distal column strength. Tip durability, Excellent kink resistance in a thin wall design, robust clot ingestion due to catheter tip durability. Low profile design: Lowest profile in a large bore catheter* for base catheter compatibility options (compatible with 0.085” interior diameter (ID) base catheter or greater).\""
     },
     {
