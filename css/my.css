@@ -9,3 +9,8 @@ caption {
 	color: #000000;
 	font-size: 1rem;
 }
+
+.device_img {
+	width: 30%;
+	/*background-color: white;*/
+}
