@@ -3163,7 +3163,7 @@ Not present | Present
 	</template>
 	<template>
 		<name>
-			MRI Head: Tumour diagnosis
+			MRI Head: Tumour/Mass Diagnosis
 		</name>
 		<type>
 			Diagnostic
@@ -3185,10 +3185,19 @@ Not present | Present
 				<dropdown label="Intra/extra-axial" print_text_after="mass">
 					intra-axial | extra-axial
 				</dropdown>
-				<free_text label="Location" print_text_before="centered on" print_text_after="region">
+				<free_text label="Location" print_text_before="centered on">
 				</free_text>
 				<free_text label="Size" print_text_before="It measures">
 				</free_text>
+				<dropdown label="Homogeneity" print_text_before="It is">
+					predominantly homogeneous | heterogeneous
+				</dropdown>
+				<dropdown label="Signal" print_text_before="and">
+					T2 hyperintense. | T1 hyperintense.
+				</dropdown>
+				<dropdown label="Cysts" print_text_before="There are">
+					multiple cysts associated with the mass. 
+				</dropdown>
 				<dropdown label="Restricted diffusion" print_text_before="The lesion">
 					exhibits restricted diffusion. | does not exhibit restricted diffusion.
 				</dropdown>
@@ -3951,16 +3960,16 @@ Not present | Present
 			</insert>
 			<multi_checkbox label="Multiple foci of abnormal signal are identified in the">
 				<checkbox>
-					juxtacortical
+					juxtacortical white matter
 				</checkbox>
 				<checkbox>
-					cortical
+					cortex
 				</checkbox>
 				<checkbox>
-					corpus callosum
+					corpus callosum 
 				</checkbox>
 				<checkbox>
-					periventricular
+					periventricular region
 				</checkbox>
 				<checkbox>
 					posterior fossa
@@ -3977,8 +3986,10 @@ Not present | Present
 				</free_text>
 				<free_text print_text_before="Lesions exhibiting restricted diffusion are demonstrated at" label="Restricted diffusion location">
 				</free_text>
-				<dropdown label="Recent">There are no features of recent or interval demyelination.</dropdown>
 			</multi_select>
+			<selection label="New or recent">
+				There are no features of recent demyelination.  
+			</selection>
 			<selection label="T1 hypointense">
 				No T1 hypointense lesions are identified
 			</selection>
@@ -3988,12 +3999,15 @@ Not present | Present
 			<selection label="Optic nerves">
 				The optic nerves exhibit normal appearances with no abnormal signal, atrophy, or contrast enhancement. 	
 			</selection>
+			<text_entry label="Other" subtype="medium">
+			</text_entry>
+
 
 			<h2 flags="dont_print">
 				Acute pathology
 			</h2>
 			<multi_radio>
-				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+				<radio label="Acute infact" normaltext="No acute infarct is demonstrated.">
 					Not present | Present
 				</radio>
 				<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
@@ -4043,7 +4057,7 @@ Not present | Present
 					cortex
 				</checkbox>
 				<checkbox>
-					corpus callosum white matter
+					corpus callosum 
 				</checkbox>
 				<checkbox>
 					periventricular region
@@ -4059,14 +4073,16 @@ Not present | Present
 			<multi_select label="Lesion Characteristics">
 				<free_text print_text_before="Approximately" print_text_after="lesions in total are identifed" label="Approximate number">
 				</free_text>
-				<dropdown label="New lesions">There no new lesions are identified.</dropdown>
-
 				<free_text print_text_before="Enhancing lesions are demonstrated in the" label="Enhancing lesion location">
 				</free_text>
 				<free_text print_text_before="Lesions exhibiting restricted diffusion are demonstrated at" label="Restricted diffusion location">
 				</free_text>
-				<dropdown label="Recent">There are no features of recent or interval demyelination.</dropdown>
 			</multi_select>
+
+			<selection label="New or recent">
+				No new lesions are identified. There are no features of recent or interval demyelination.  
+			</selection>
+
 			<selection label="T1 hypointense">
 				No T1 hypointense lesions are identified
 			</selection>
@@ -4079,12 +4095,14 @@ Not present | Present
 			<selection label="Progressive multifocal leukoencephalopathy">
 				No evidence of progressive multifocal leukoencephalopathy. 
 			</selection>
+			<text_entry label="Other" subtype="medium">
+			</text_entry>
 
 			<h2 flags="dont_print">
 				Acute pathology
 			</h2>
 			<multi_radio>
-				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+				<radio label="Acute infact" normaltext="No acute infarct is demonstrated.">
 					Not present | Present
 				</radio>
 				<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
