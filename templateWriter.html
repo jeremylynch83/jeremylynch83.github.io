@@ -25,6 +25,7 @@
 	<script src="js/vue.js"></script>
 	<script src="js/bootstrap-vue.js"></script>
 	<script src="js/lodash.js"></script>
+	<script src="js/papaparse.js"></script>
 	<!-- Type Ahead Library -->
 	<script src="js/VueBootstrapTypeahead.umd.min.js"></script>
 </head>
@@ -89,7 +90,8 @@
 
 			<b-form-group v-if="template != ''">
 				<b-card bg-variant="light">
-					<b-button variant="success" @click="copyReport()">Generate report</b-button>
+					<b-button variant="success" @click="copyReport()">Generate & Copy</b-button>
+					<b-button variant="success" @click="exportReport()">Export</b-button>
 
 					<h1>
 						{{template.title}}
@@ -300,13 +302,42 @@
 		/* GENERIC FUNCTIONS */
 
 
-		function Clone(obj) {
-			if (null == obj || "object" != typeof obj) return obj;
-			var copy = obj.constructor();
-			for (var attr in obj) {
-				if (obj.hasOwnProperty(attr)) copy[attr] = obj[attr];
+		function flatten(data) {
+			var result = {};
+
+			function recurse(cur, prop) {
+				if (Object(cur) !== cur) {
+					result[prop] = cur;
+				} else if (Array.isArray(cur)) {
+					for (var i = 0, l = cur.length; i < l; i++)
+						recurse(cur[i], prop + "[" + i + "]");
+					if (l == 0)
+						result[prop] = [];
+				} else {
+					var isEmpty = true;
+					for (var p in cur) {
+						isEmpty = false;
+						recurse(cur[p], prop ? prop + "." + p : p);
+					}
+					if (isEmpty && prop)
+						result[prop] = {};
+				}
 			}
-			return copy;
+			recurse(data, "");
+			return result;
+		}
+
+		function download(filename, text) {
+			var element = document.createElement('a');
+			element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+			element.setAttribute('download', filename);
+
+			element.style.display = 'none';
+			document.body.appendChild(element);
+
+			element.click();
+
+			document.body.removeChild(element);
 		}
 
 		function parse_options(str) {
@@ -921,7 +952,19 @@
 					this.copyModal.text = copyText;
 					this.$root.$emit('bv::show::modal', this.copyModal.id);
 
+				},
+				exportReport: function () {
+
+					var csv = this.templateForm;
+					csv = Object.entries(flatten(csv));
+					csv = Papa.unparse(csv);
+					var filename = "export.csv";
+					download(filename, csv);
+
+					console.log(csv);
+
 				}
+
 			}
 		});
 	</script>
