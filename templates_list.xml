@@ -2490,7 +2490,7 @@ Not present | Present
 			MRI Head Checklist
 		</name>
 		<content>
-			<h2 flags="dont_print|print_space">
+			<h2 flags="dont_print">
 				Chronic pathology
 			</h2>
 			<multi_select label="White matter changes" askfurtherdetails="true">
@@ -4168,8 +4168,14 @@ Not present | Present
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="small">
-			</text_entry>
+			<multi_select >
+				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
+					Chest radiograph | Series of chest radiographs | CT | series of CT studies 
+				</dropdown>
+				<free_text label="Date" flags = "dont_print_label">
+				</free_text>
+			</multi_select>
+
 			<h1>
 				Findings
 			</h1>
@@ -4233,8 +4239,13 @@ Not present | Present
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="small">
-			</text_entry>
+			<multi_select >
+				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
+					Chest radiograph | Series of chest radiographs | CT | series of CT studies 
+				</dropdown>
+				<free_text label="Date" flags = "dont_print_label">
+				</free_text>
+			</multi_select>
 			<h1>
 				Findings
 			</h1>
@@ -4295,8 +4306,13 @@ Not present | Present
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="small">
-			</text_entry>
+			<multi_select >
+				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
+					Radiograph | Series of radiographs | CT | series of CT studies 
+				</dropdown>
+				<free_text label="Date" flags = "dont_print_label">
+				</free_text>
+			</multi_select>
 			<h1>
 				Findings
 			</h1>
@@ -4335,8 +4351,13 @@ Not present | Present
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="small">
-			</text_entry>
+			<multi_select >
+				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
+					Radiograph | Series of radiographs | CT | series of CT studies 
+				</dropdown>
+				<free_text label="Date" flags = "dont_print_label">
+				</free_text>
+			</multi_select>
 			<h1>
 				Findings
 			</h1>
@@ -4386,8 +4407,13 @@ Not present | Present
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="small">
-			</text_entry>
+			<multi_select >
+				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
+					Radiograph | Series of radiographs | CT | series of CT studies 
+				</dropdown>
+				<free_text label="Date" flags = "dont_print_label">
+				</free_text>
+			</multi_select>
 			<h1>
 				Findings
 			</h1>
@@ -4433,8 +4459,13 @@ Not present | Present
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="small">
-			</text_entry>
+			<multi_select >
+				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
+					Radiograph | Series of radiographs | CT | series of CT studies 
+				</dropdown>
+				<free_text label="Date" flags = "dont_print_label">
+				</free_text>
+			</multi_select>
 			<h1>
 				Findings
 			</h1>
@@ -4492,8 +4523,13 @@ Not present | Present
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="small">
-			</text_entry>
+			<multi_select >
+				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
+					Radiograph | Series of radiographs | CT | series of CT studies 
+				</dropdown>
+				<free_text label="Date" flags = "dont_print_label">
+				</free_text>
+			</multi_select>
 			<h1>
 				Findings
 			</h1>
