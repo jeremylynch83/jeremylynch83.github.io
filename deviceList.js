@@ -1,5 +1,6 @@
 deviceList=
 
+
 [
     {
         "type": "Balloon",
@@ -2548,7 +2549,9 @@ deviceList=
         "ifu": "https://www.stryker.com/content/dam/stryker/neurovascular/products/merci-balloon-guide-catheter/resources/Merci-BGC_DFU_US_Jun19.pdf",
         "minid": 0.078,
         "maxod": 0.105,
-        "length": "80 / 95"
+        "length": "80 / 95",
+        "image": "merci.png",
+        "description": "\"The Merci Balloon Guide Catheter is designed to provide reliable support and proximal flow control.\""
     },
     {
         "type": "Catheter",
@@ -2558,7 +2561,9 @@ deviceList=
         "ifu": "https://www.stryker.com/content/dam/stryker/neurovascular/products/merci-balloon-guide-catheter/resources/Merci-BGC_DFU_US_Jun19.pdf",
         "minid": 0.085,
         "maxod": 0.118,
-        "length": "80 / 95"
+        "length": "80 / 95",
+        "image": "merci.png",
+        "description": "\"The Merci Balloon Guide Catheter is designed to provide reliable support and proximal flow control.\""
     },
     {
         "type": "Catheter",
