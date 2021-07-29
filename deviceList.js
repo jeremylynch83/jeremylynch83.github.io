@@ -1,6 +1,5 @@
 deviceList=
 
-
 [
     {
         "type": "Balloon",
@@ -3068,7 +3067,7 @@ deviceList=
         "maxod": 0.11,
         "length": "90 / 95",
         "image": "walrus.png",
-        "description": "Balloon guide catheter designed for thrombectomy. Relatively large internal diameter compared to other 8-French balloon guides. Designed to be easily trackable whilst providing good proximal support. The balloon inflates to 11.1 mm. The tup has dual radiopaque distal markers. "
+        "description": "Balloon guide catheter designed for thrombectomy. Relatively large internal diameter compared to other 8-French balloon guides. Designed to be easily trackable whilst providing good proximal support. The balloon inflates to 11.1 mm. The tip has dual radiopaque distal markers. "
     },
     {
         "type": "Catheter",
