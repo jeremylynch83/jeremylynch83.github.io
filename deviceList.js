@@ -1,5 +1,6 @@
 deviceList=
 
+
 [
     {
         "type": "Balloon",
@@ -835,11 +836,11 @@ deviceList=
         "type": "Coil",
         "name": "Galaxy G3 Complex ",
         "manufacturer": "Cerenovus",
+        "image": "galaxyg3.jpg",
         "url1": "https://www.jnjmedicaldevices.com/en-US/product/galaxy-g3-microcoil",
         "minid": 0,
         "maxod": 0.0155,
-        "length": "?",
-        "image": "galaxyg3.jpg"
+        "length": "?"
     },
     {
         "type": "Coil",
@@ -863,13 +864,13 @@ deviceList=
         "type": "Catheter",
         "name": "Cerebase DA ",
         "manufacturer": "Cerenovus",
+        "image": "cerebase.png",
         "description": "\"Designed for atraumatic vessel interaction with soft, compliant, and rounded distal edges and a highly flexible Dexterous (DEX) tip that can minimize direct vessel wall contact.\"",
         "url1": "https://www.jnjmedicaldevices.com/en-US/product/cerebase-da-guide-sheath",
         "url2": "https://www.accessdata.fda.gov/cdrh_docs/pdf19/K192804.pdf",
         "minid": 0.09,
         "maxod": 0.105,
         "length": "70 / 80 / 90 / 95",
-        "image": "cerebase.png",
         "sizetable": "[{\"Catalog No.\":\"GS9070SD\",\"ID\":\"0090\\\"\",\"OD (compatible short sheath)\":\"8F\",\"Usable Length\":\"70cm\"},{\"Catalog No.\":\"GS9080SD\",\"ID\":\"0090\\\"\",\"OD (compatible short sheath)\":\"8F\",\"Usable Length\":\"80cm\"},{\"Catalog No.\":\"GS9090SD\",\"ID\":\"0090\\\"\",\"OD (compatible short sheath)\":\"8F\",\"Usable Length\":\"90cm\"},{\"Catalog No.\":\"GS9095SD\",\"ID\":\"0090\\\"\",\"OD (compatible short sheath)\":\"8F\",\"Usable Length\":\"95cm\"}]",
         "features": "\"Engineered to secure Distal Access: CEREBASE DA is engineered to secure Distal Access for geometric anchoring, resulting in more procedural support. Engineered to take tight turns: The Dexterous (DEX) Tip facilitates tight turns (i.e. a radius bend of 2 cm) for enhanced tracking through challenging anatomy, tracking closer to the target treatment site. More proximal shaft stiffness: More proximal shaft stiffness designed for arch support.\""
     },
@@ -915,12 +916,12 @@ deviceList=
         "type": "Catheter",
         "name": "Large Bore Catheter (US) Embovac (Europe)",
         "manufacturer": "Cerenovus",
+        "image": "large bore catheter.png",
         "description": "\"The CERENOVUS Large Bore Catheter, Aspiration Tubing Set and NOUVAG Vacuson 60 aspiration pump (or equivalent aspiration pump) are indicated to \nrestore blood flow by removing thrombus in patients experiencing \nischemic stroke. The CERENOVUS Large Bore Catheter is indicated for use \nas a conduit for retrieval devices.\"",
         "url1": "https://www.jnjmedicaldevices.com/en-US/product/cerenovus-large-bore-catheter",
         "minid": 0.071,
         "maxod": 0.0825,
         "length": "125 / 132",
-        "image": "large bore catheter.png",
         "sizetable": "[{\"Product Code\":\"IC71125UG\",\"Distal ID\":\"0.071\\\"\",\"Distal OD\":\"0.081\\\"\",\"Proximal OD\":\"0.0825\\\"\",\"Guide Compatibility(CM)\":\"6F\",\"Usable Length(CM)\":\"125cm\"},{\"Product Code\":\"IC71132UG\",\"Distal ID\":\"0.071\\\"\",\"Distal OD\":\"0.081\\\"\",\"Proximal OD\":\"0.0825\\\"\",\"Guide Compatibility(CM)\":\"6F\",\"Usable Length(CM)\":\"132cm\"}]",
         "recommendedparentid": 0.085,
         "features": "\"Rapid navigation to MCA: CERENOVUS Large Bore Catheter has rapid navigation to the middle cerebral artery (MCA) based on optimized design: variable braid density for optimized trackability and seamless transition zones for efficient control. Smooth stent retrieval: Smooth stent interaction and retrieval due to enhanced tip durability: end to end polytetrafluoroethylene (PTFE) liner, durable tip design and optimized distal column strength. Tip durability, Excellent kink resistance in a thin wall design, robust clot ingestion due to catheter tip durability. Low profile design: Lowest profile in a large bore catheter* for base catheter compatibility options (compatible with 0.085” interior diameter (ID) base catheter or greater).\""
@@ -1032,11 +1033,11 @@ deviceList=
         "type": "Stent Retriever ",
         "name": "Embotrap II 5x21 & 5x33",
         "manufacturer": "Cerenovus",
+        "image": "embotrap2.png",
         "url1": "https://www.jnjmedicaldevices.com/en-US/product/embotrap-ii-revascularization-device",
         "minid": 0,
         "maxod": 0.02,
         "length": "194 / 195",
-        "image": "embotrap2.png",
         "sizetable": "[{\"Name\":\"5x21\",\"Catalog #\":\"ET009521\",\"Recommended Vessel Diameter\":\"1.5-5.0 mm\",\"Micro Catheter Compatibility\":\"0.021” ID – 0.027” ID\",\"Diameter\":\"5.0 mm\",\"Working Length\":\"21 mm\",\"Device Length\":\"194 cm\",\"Tip Length\":\"4 mm\"},{\"Name\":\"5x33\",\"Catalog #\":\"ET009533\",\"Recommended Vessel Diameter\":\"1.5-5.0 mm\",\"Micro Catheter Compatibility\":\"0.021” ID – 0.027” ID\",\"Diameter\":\"5.0 mm\",\"Working Length\":\"33 mm\",\"Device Length\":\"195 cm\",\"Tip Length\":\"4 mm\"}]",
         "youtube": "https://www.youtube.com/embed/1MgvfCzAXwA"
     },
@@ -1044,12 +1045,12 @@ deviceList=
         "type": "Stent Retriever ",
         "name": "Embotrap III 5x22 & 5x37",
         "manufacturer": "Cerenovus",
+        "image": "embotrap3.png",
         "description": "\"The EMBOTRAP® III Revascularization Device is designed for use in the anterior and posterior neurovasculature in vessels such as the internal carotid artery, the M1 or M2 segments of the middle cerebral artery, and basilar arteries. The EMBOTRAP Platform is indicated for vessels from 5.0mm down to 1.5mm and is the only dual layer design, designed to engage and grip the clot differently.  EMBOTRAP® III Device has been shown to retrieve various thrombus types, whether fibrin-rich thrombus (hard) or RBC-rich thrombus types (soft).\"",
         "url1": "https://www.jnjmedicaldevices.com/en-US/product/embotrap-iii-revascularization-device",
         "minid": 0,
         "maxod": 0.02,
         "length": "194 / 195",
-        "image": "embotrap3.png",
         "vesselDiameters": "1.5 - 5.0 mm  ",
         "sizetable": "[{\"Product Code\":\"ET309522\",\"Name\":\"5X22\",\"Vessel Size Range\":\"1.5-5.0 mm\",\"Microcatheter Compatibility\":\"0.021\\\"\",\"Working Length\":\"22mm\",\"Device Length\":\"194cm\"},{\"Product Code\":\"ET309537\",\"Name\":\"5X37\",\"Vessel Size Range\":\"1.5-5.0 mm\",\"Microcatheter Compatibility\":\"0.021\\\"\",\"Working Length\":\"37mm\",\"Device Length\":\"195cm\"}]",
         "features": "\"Open and articulated outer cage: Open, articulated outer cage serves to engage and grip the clot. Multiple, large, inlet windows on the outer cage allow thrombus to move into the outer cage. An articulating outer cage maintains wall apposition during retrieval. Closed cell inner channel: Secures and stabilizes the thrombus to maintain engagement. Distal closed end mesh: Maintains control of thrombus during retrieval.\""
@@ -1163,12 +1164,12 @@ deviceList=
         "type": "Liquid Embolic",
         "name": "TRUFILL® n-BCA",
         "manufacturer": "Cerenovus",
+        "image": "trufill.jpg",
         "description": "\"The TRUFILL® n-BCA Liquid Embolic System is used under fluoroscopic guidance to obstruct or reduce blood flow to cerebral arteriovenous malformations (AVMs) via super-selective catheter delivery when pre-surgical devascularization is desired. The TRUFILL n-BCA System offers: Low Procedure Time, Low Fluoroscopy Time, Fewer Adverse ClinicalComplications, Effective Penetration of AVM.\"",
         "url1": "https://www.jnjmedicaldevices.com/en-US/product/trufill-n-bca-liquid-embolic-system",
         "minid": 0,
         "maxod": 0.026,
         "length": "?",
-        "image": "trufill.jpg",
         "sizetable": "[{\"Condition\":\"Intranidal injections without AV fistulae or high flow rates in order to more deeply penetrate the nidus\",\"TRUFILL® Ethiodized Oil: n-BCA Ratio\":\"3:1 - 75% Eth. Oil / 25% n-BCA\",\"TRUFILL® Ethiodized Oil: n-Volume (cc)\":0.75,\"TRUFILL® n-BCA Ratio (cc)\":0.25},{\"Condition\":\"Intranidal injections without AV fistulae or high flow rates in order to more deeply penetrate the nidus\",\"TRUFILL® Ethiodized Oil: n-BCA Ratio\":\"2:1 - 67% Eth. Oil / 33% n-BCA\",\"TRUFILL® Ethiodized Oil: n-Volume (cc)\":0.67,\"TRUFILL® n-BCA Ratio (cc)\":0.33},{\"Condition\":\"Feeding pedicle injections close to the nidus at high flow rates where venous opacification occurs on contrast injections within ½ second\",\"TRUFILL® Ethiodized Oil: n-BCA Ratio\":\"1:1 - 50% Eth. Oil / 50% n-BCA\",\"TRUFILL® Ethiodized Oil: n-Volume (cc)\":0.5,\"TRUFILL® n-BCA Ratio (cc)\":\"0.50 (tantalum advised)\"},{\"Condition\":\"Feeding pedicle injections close to the nidus at high flow rates where venous opacification occurs on contrast injections within ½ second\",\"TRUFILL® Ethiodized Oil: n-BCA Ratio\":\"1:2 - 33% Eth. Oil / 67% n-BCA\",\"TRUFILL® Ethiodized Oil: n-Volume (cc)\":0.33,\"TRUFILL® n-BCA Ratio (cc)\":\"0.67 (tantalum advised)\"}]",
         "tablecaption": "Recommended Mixtures (Listed volumes based on a total volume of 1.0 cc - actual total volumes may vary)",
         "comments": "\"Tantalum Powder may also be added to ethiodized oil to augment radiopacity. Tantalum powder should not be used alone with n-BCA. At higher n-BCA concentrations (>50%), addition of up to 0.5g tantalum powder is advised.\"",
@@ -2544,25 +2545,25 @@ deviceList=
         "type": "Catheter",
         "name": "8F Merci ",
         "manufacturer": "Stryker",
+        "image": "merci.png",
         "description": "\"The Merci Balloon Guide Catheter is designed to provide reliable support and proximal flow control.\"",
         "url1": "https://www.stryker.com/us/en/neurovascular/products/merci-balloon-guide-catheter.html",
         "ifu": "https://www.stryker.com/content/dam/stryker/neurovascular/products/merci-balloon-guide-catheter/resources/Merci-BGC_DFU_US_Jun19.pdf",
         "minid": 0.078,
         "maxod": 0.105,
-        "length": "80 / 95",
-        "image": "merci.png"
+        "length": "80 / 95"
     },
     {
         "type": "Catheter",
         "name": "9F Merci ",
         "manufacturer": "Stryker",
+        "image": "merci.png",
         "description": "\"The Merci Balloon Guide Catheter is designed to provide reliable support and proximal flow control.\"",
         "url1": "https://www.stryker.com/us/en/neurovascular/products/merci-balloon-guide-catheter.html",
         "ifu": "https://www.stryker.com/content/dam/stryker/neurovascular/products/merci-balloon-guide-catheter/resources/Merci-BGC_DFU_US_Jun19.pdf",
         "minid": 0.085,
         "maxod": 0.118,
-        "length": "80 / 95",
-        "image": "merci.png"
+        "length": "80 / 95"
     },
     {
         "type": "Catheter",
@@ -3065,25 +3066,25 @@ deviceList=
         "type": "Catheter",
         "name": "Walrus",
         "manufacturer": "Q’Apel",
+        "image": "walrus.png",
         "description": "Balloon guide catheter designed for thrombectomy. Relatively large internal diameter compared to other 8-French balloon guides. Designed to be easily trackable whilst providing good proximal support. The balloon inflates to 11.1 mm. The tip has dual radiopaque distal markers. ",
         "url1": "https://qapelmedical.com/walrus/",
         "url2": "https://qapelmedical.com/walrus-clinicians/",
         "minid": 0.087,
         "maxod": 0.11,
-        "length": "90 / 95",
-        "image": "walrus.png"
+        "length": "90 / 95"
     },
     {
         "type": "Catheter",
         "name": "Wahoo",
         "manufacturer": "Q’Apel",
+        "image": "wahoo.png",
         "description": "\"Dual mode\" philosophy described as easily trackable and but providing good proximal support without requiring a triaxial system. \"SelectFlex\" variable stiffness technology means the proximal catheter is stiff and the distal is flexible. Has a distal tip radiopaque marker.  ",
         "url1": "https://qapelmedical.com/wahoo/",
         "url2": "https://qapelmedical.com/wahoo-clinicians/",
         "minid": 0.072,
         "maxod": 0.095,
         "length": 105,
-        "image": "wahoo.png",
         "material": "Nitinold scaffold and stainless steel reinforced shaft. "
     }
 ]
