@@ -67,8 +67,9 @@
 			<template v-for="n in deviceInputs">
 				<p></p>
 				<b-form-group :label-cols="n.hierarchy" :key="n.id" :label="n.hierarchy_text" label-size="sm">
-					<vue-bootstrap-typeahead :key="n.id" :data="devices" :placeholder="n.text" v-model="n.input_text"
-						:serializer="item => item.name_man" @hit="updateDevice(n.id, $event); updateSizer()">
+					<vue-bootstrap-typeahead :key="n.id" :ref="n.id" :data="devices" :placeholder="n.text"
+						v-model="n.input_text" :serializer="item => item.name_man"
+						@hit="updateDevice(n.id, $event); updateSizer()">
 					</vue-bootstrap-typeahead>
 					<div class="text-right"
 						style="color:rgb(124, 124, 124); letter-spacing: 0px;  font-family:Arial Narrow, sans-serif-condensed">
@@ -177,7 +178,8 @@
 
 		<b-container id="result_container" v-show="deviceInputs.length >1 && deviceInputs[0].active != null ">
 			<b-jumbotron bg-variant="light">
-				<p id="result" class="lead"></p>
+				<div id="result" class="lead"></div>
+
 
 				<div id="details" style="color:rgb(179, 179, 179)"></div>
 				<b-button size="sm" variant="danger" @click="" v-b-modal.feedback_modal>
@@ -309,7 +311,6 @@
 							required="" style="width:100%"></textarea>
 
 						<textarea style="display:none;" name="message2" id="message2" required=""></textarea>
-						<textarea style="display:none;" name="message3" id="message3" required=""></textarea>
 						<input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
 					</fieldset>
 					<button style="display:none;" type="submit" id="submit_button">Send</button>
@@ -705,6 +706,7 @@
 				},
 
 				updateDevice: function (passed, e) {
+
 					tree.getElementById(passed).setAttribute("data", JSON.stringify(e));
 
 					this.updateInfo(e);
@@ -731,18 +733,28 @@
 
 					document.getElementById("message2").value = xmlText;
 
-					//var result = this.checkSizes();
+					//history.pushState(null, "title", "test")
 
 				},
 
-				changeDevice(device_name, new_device) {
+				changeDevice(input_name, new_device) {
 					var index = deviceInputs.findIndex(
 						function (i) {
-							return i.id == device_name;
+							return i.id == input_name;
 						}
 					);
-					deviceInputs[index].input_text = new_device;
+					//deviceInputs[index].input_text = new_device;
+					// Assuming only first input to change to start with
 
+					//this.$refs.device0[0].inputValue = "jeremy";
+					console.log(Object.keys(this.$refs));
+
+
+					for (var p in this.$refs) {
+						console.log(p + ': ' + this.$refs[p]);
+					}
+
+					//console.log(this.$refs.device0)
 
 				},
 
@@ -1145,12 +1157,14 @@
 					}
 
 					document.getElementById("result").innerHTML = result;
-					document.getElementById("message3").value = result;
+					//document.getElementById("message3").value = result;
 
-					this.drawDiagram();
+					//this.drawDiagram();
 					this.updateInfo(JSON.parse(tree.getElementById("device0").getAttribute("data")));
 				},
-				addInput: function (where, text, type, parent) {
+
+				addInput: function (where, text, type, parent, device) {
+
 					id = "device" + this.id_count;
 					this.id_count++;
 
@@ -1223,6 +1237,29 @@
 					for (var i = 0; i < n.hierarchy; i++) {
 						n.hierarchy_text = n.hierarchy_text + '◼   ';
 					}
+
+					if (device) {
+						device = device.trim();
+
+						var index = deviceList.findIndex(
+							function (i) {
+								return i.name == device;
+							}
+						);
+
+						if (index != -1) {
+
+							this.updateDevice(id, deviceList[index]);
+							this.updateSizer();
+							//this.$refs.device0[0].inputValue = deviceList[index].name;
+							window.addEventListener('load', (event) => {
+								this.$refs.device0[0].inputValue = deviceList[index].name_man
+							});
+
+						}
+
+					}
+
 					return id;
 				},
 				removeInput: function (id) {
@@ -1241,15 +1278,22 @@
 			},
 
 			created: function () {
+				// Format is: ?search=neuron max
 				const urlSearchParams = new URLSearchParams(window.location.search);
 				const params = Object.fromEntries(urlSearchParams.entries());
-				console.log("Search parameter: " + params.search);
 
 				var newInput1 = this.addInput("inside",
 					"Enter device e.g. catheter, balloon, stent, flow-diverter, Onyx, wire ...",
-					"guide catheters", null);
+					"guide catheters", null, params.search);
+
 			}
+
+
 		})
+
+		/*window.addEventListener("load", function () {
+			console.log("hi");
+		});*/
 	</script>
 </body>
 

@@ -1,6 +1,5 @@
 deviceList=
 
-
 [
     {
         "type": "Balloon",
@@ -3057,5 +3056,29 @@ deviceList=
         "sizetable": "[{\"Code\":90312,\"Stent diameter\":3,\"Labeled length\":\"32 mm\",\"Stent length\":\"36 mm\",\"Device length\":\"200 cm\",\"Wire diameter\":\"0.015 in\",\"Compatible microcatheter\":\"Trevo Pro 14 and Trevo Trak 21 Microcatheters\"},{\"Code\":90313,\"Stent diameter\":4,\"Labeled length\":\"28 mm\",\"Stent length\":\"32 mm\",\"Device length\":\"200 cm\",\"Wire diameter\":\"0.019 in\",\"Compatible microcatheter\":\"Trevo Trak 21 Microcatheter\"},{\"Code\":90314,\"Stent diameter\":4,\"Labeled length\":\"41 mm\",\"Stent length\":\"44 mm\",\"Device length\":\"200 cm\",\"Wire diameter\":\"0.019 in\",\"Compatible microcatheter\":\"Trevo Trak 21 Microcatheter\"},{\"Code\":90315,\"Stent diameter\":6,\"Labeled length\":\"37 mm\",\"Stent length\":\"40 mm\",\"Device length\":\"200 cm\",\"Wire diameter\":\"0.019 in\",\"Compatible microcatheter\":\"Trevo Trak 21 Microcatheter\"}]",
         "recommended": "Trak 21",
         "recommendedparentid": 0.021
+    },
+    {
+        "type": "Catheter",
+        "name": "Walrus",
+        "manufacturer": "Q’Apel",
+        "url1": "https://qapelmedical.com/walrus/",
+        "url2": "https://qapelmedical.com/walrus-clinicians/",
+        "minid": 0.087,
+        "maxod": 0.11,
+        "length": "90 / 95",
+        "description": "Balloon guide catheter designed for thrombectomy. Relatively large internal diameter compared to other 8-French balloon guides. Designed to be easily trackable whilst providing good proximal support. The balloon inflates to 11.1 mm. The tup has dual radiopaque distal markers. "
+    },
+    {
+        "type": "Catheter",
+        "name": "Wahoo",
+        "manufacturer": "Q’Apel",
+        "url1": "https://qapelmedical.com/wahoo/",
+        "url2": "https://qapelmedical.com/wahoo-clinicians/",
+        "minid": 0.072,
+        "maxod": 0.095,
+        "length": 105,
+        "image": "wahoo.png",
+        "description": "\"Dual mode\" philosophy described as easily trackable and but providing good proximal support without requiring a triaxial system. \"SelectFlex\" variable stiffness technology means the proximal catheter is stiff and the distal is flexible. Has a distal tip radiopaque marker.  ",
+        "material": "Nitinold scaffold and stainless steel reinforced shaft. "
     }
 ]

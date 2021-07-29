@@ -46,10 +46,21 @@ caption {
 
 
 .control {
+    border: 0;
+    margin: 0;
+    padding: 0;
+
     visibility: hidden;
-    position: absolute;
-    left: -10px;
-    width: 30px;
+    width: 100%;
+
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+
+.control_button {
+    border: 0;
+    font-size: 10px;
     z-index: 999;
 }
 
@@ -62,9 +73,7 @@ caption {
 }
 
 .element {
-
     flex: 100%;
-
 }
 
 .indent_bug {

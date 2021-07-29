@@ -78,10 +78,15 @@
 			</b-form-group>
 
 			<b-modal id="control_modal" title="Options" ok-only>
-				<p>Select from the following options:</p>
+				<vue-bootstrap-typeahead :data="templates.modules" :serializer="item => item.name"
+					placeholder="Enter module" @hit="selectModule($event)">
+				</vue-bootstrap-typeahead>
 
-				<template #modal-footer="{ Submit, close }">
-					<b-button @click="deleteElement(); close()">Delete</b-button>
+				<b-button @click="insertModule(); $bvModal.hide('control_modal')">Insert module</b-button>
+
+				<b-button @click="deleteElement(); $bvModal.hide('control_modal')">Delete this element</b-button>
+
+				<template #modal-footer="{ close }">
 
 					<b-button @click="close()" variant="danger">Cancel</b-button>
 				</template>
@@ -103,13 +108,6 @@
 
 						<div class="body">
 							<div class="row">
-
-								<div class="control">
-									<div class="op_icon">
-										<button v-b-modal.control_modal @click="selectElement(n)">&#8801;</button>
-									</div>
-								</div>
-
 
 
 								<!--
@@ -270,6 +268,13 @@
 									</b-form-group>
 
 								</div>
+								<div class="control">
+									<div class="op_icon">
+										<button class="control_button" v-b-modal.control_modal
+											@click="selectElement(n)">Options</button>
+									</div>
+								</div>
+
 							</div>
 						</div>
 
@@ -809,7 +814,6 @@
 						name: m_name,
 						elements: elements
 					});
-
 				}
 
 				var templates = xmlDoc.getElementsByTagName("template");
@@ -837,13 +841,13 @@
 						elements: elements
 					});
 				}
+				temp.modules = modules;
 
 
 
 			}
 
 			return temp;
-
 		}
 
 		/* GLOBAL VARIABLES */
@@ -857,6 +861,7 @@
 				id_count: 0,
 				templates: loadXML(),
 				reportText: "",
+				module: "",
 				template: "",
 				index: "",
 				templateForm: [],
@@ -877,6 +882,7 @@
 				update: function (event) {
 
 				},
+
 				findList: function (text, symbol_start, symbol_end) {
 
 					var n = 0 - symbol_start.length;
@@ -893,6 +899,10 @@
 				selectTemplate: function (event) {
 					this.template = event;
 					this.writeTemplate();
+				},
+
+				selectModule: function (event) {
+					this.module = event;
 				},
 
 				writeTemplate: function () {
@@ -917,8 +927,37 @@
 					}
 
 				},
+
 				deleteElement() {
 					this.templateForm.splice(this.selected, 1);
+				},
+
+				insertModule() {
+					//modules = this.templates.modules; // Generic module list
+					//var module_name = "Lumbar spine level"; // Will be passed
+					//module_name = module_name.trim();
+
+					console.log(this.module);
+
+					var module_data = _.cloneDeep(this.module)
+
+					/*for (var n = 0; n < modules.length; n++) {
+						if (modules[n].name == module_name) {
+							module_data = _.cloneDeep(modules[n]);
+						}
+					}*/
+
+					for (var n = 0; n < module_data.elements.length; n++) {
+
+						this.templateForm.splice(this.selected + n + 1, 0, module_data.elements[n]);
+
+						//console.log(module_data.elements[n]);
+					}
+
+
+					//this.templateForm.splice(this.selected, 1);
+
+
 				},
 
 				selectElement(element) {
@@ -928,13 +967,9 @@
 					console.log(element.array_id);
 				},
 
-
 				copyReport: function () {
 					var copyText = "";
 					copyText += this.template.title.trim();
-					//copyText += "CLINICAL INDICATION:\n" + document.getElementById("indication_text").value;
-
-
 					for (var n = 0; n < this.templateForm.length; n++) {
 						copyText += this.templateForm[n].printContents();
 					}
