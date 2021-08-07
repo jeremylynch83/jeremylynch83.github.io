@@ -1349,7 +1349,7 @@ Not present | Present
 				<radio label="Old infarcts" flags="dont_print_normal"> 
 					Not present | Present
 				</radio>
-				<radio label="Paranasal sinuses and mastoid air cells" flags="dont_print_normal">
+				<radio label="Paranasal sinuses" flags="dont_print_normal">
 					Normal | Abnormal
 				</radio>
 				<radio label="Clivus" flags="dont_print_normal">
@@ -2549,7 +2549,7 @@ Not present | Present
 				Regions
 			</h2>
 			<multi_radio>
-				<radio label="Paranasal sinuses and mastoid air cells" flags="dont_print_normal">
+				<radio label="Paranasal sinuses" flags="dont_print_normal">
 					Normal | Abnormal
 				</radio>
 				<radio label="Orbits" flags="dont_print_normal">
@@ -3624,7 +3624,7 @@ Not present | Present
 
 	<template>
 		<name>
-			MRI Head: Tumour Follow-Up
+			MRI Head: Tumour Follow-Up (Not Operated)
 		</name>
 		<type>
 			Diagnostic
@@ -3637,7 +3637,7 @@ Not present | Present
 				MRI Head Start
 			</insert>
 			<multi_select label="Description">
-				<free_text label="Location" print_text_before="Note is again made of the lesion located in the">
+				<free_text label="Location" print_text_before="Note is made of the lesion located in the">
 				</free_text>
 				<free_text label="Size" print_text_before="The lesion now measures approximately">
 				</free_text>
@@ -3694,6 +3694,90 @@ Not present | Present
 			</text_entry>
 		</content>
 	</template>
+
+	<template>
+		<name>
+			MRI Head: Tumour Follow-Up (Operated)
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			MRI Head
+		</title>
+		<content>
+			<insert>
+				MRI Head Start
+			</insert>
+			<text_entry subtype="medium">
+			</text_entry>
+
+			<multi_select label="Craniotomy">
+				<dropdown label="Side" print_text_before="A">
+					right | left
+				</dropdown>
+				<dropdown label="Site" print_text_after="craniotomy is noted.">
+					 parietal |  frontal | frontoparietal | occipital
+				</dropdown>
+			</multi_select>
+			<selection label="Postoperative">
+				A small postoperative collection is noted underlying the craniotomy site
+			</selection>
+			<selection label="Enhancement">
+				No enhancing foci are present | No new enhancing foci are present
+			</selection>
+
+			<selection label="Signal">
+				There is no change in the internal signal characteristics
+			</selection>
+			<selection label="Perilesional signal">
+				There is no change in the perilesional signal change
+			</selection>
+			<selection label="Mass effect">
+				There is no change in the mass effect caused by the lesion
+			</selection>
+			<selection label="Other lesions">
+				No new lesions are identified
+			</selection>
+
+			<text_entry subtype="medium">
+			</text_entry>
+
+			<h2 flags="dont_print">
+				Acute pathology
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
+					Normal | Abnormal
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<insert>
+				MRI Head Checklist
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<selection label="Signal">
+				Stable imaging appearances
+			</selection>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+
+
 	<template>
 		<name>
 			MRI Head: Neurodegenerative/Dementia
@@ -3711,6 +3795,8 @@ Not present | Present
 			<h2 flags="dont_print">
 				General
 			</h2>
+			<text_entry subtype="medium">
+			</text_entry>
 			<multi_select label="White matter changes" askfurtherdetails="true">
 				<dropdown label="Location" print_text_before="There are multiple foci of" print_text_after="white matter abnormal signal">
 					periventricular | deep white matter | pontine | periventricular and deep white matter | generalised
@@ -3827,7 +3913,7 @@ Not present | Present
 	</template>
 
 	<template>
-		<name>MRI Head: Aneurysm Follow-Up
+		<name>MRI Head: Aneurysm Follow-Up (Treated)
 		</name>
 		<type>
 			Diagnostic
@@ -3838,6 +3924,8 @@ Not present | Present
 			<insert>
 				MRI Head Start
 			</insert>
+			<text_entry subtype="medium">
+			</text_entry>
 
 			<multi_select label="Description">
 				<free_text label="Location" print_text_before="The treated" print_text_after="is noted."></free_text>
@@ -3888,6 +3976,70 @@ Not present | Present
 			</text_entry>
 		</content>
 	</template>
+
+
+	<template>
+		<name>MRI Head: Aneurysm Follow-Up (Not Treated)
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>MRI Head
+		</title>
+		<content>
+			<insert>
+				MRI Head Start
+			</insert>
+			<text_entry subtype="medium">
+			</text_entry>
+
+			<multi_select label="Description">
+				<free_text label="Location" print_text_before="A" print_text_after="is noted."></free_text>
+				<dropdown label="Change">
+				There has been no change since the previous study. | There has been a decrease in size since the previous study. | There has been an increase in size since the previous study.
+				</dropdown>
+				<free_text label="Size" print_text_before="The aneurysm now measures approximately">
+				</free_text>
+				<dropdown label="Other">
+				No other aneurysms are identified.
+				</dropdown>
+				<text_entry label="" subtype="medium">
+				</text_entry>
+			</multi_select>
+			<h2 flags="dont_print">
+				Acute pathology
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
+					Normal | Abnormal
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<insert>
+				MRI Head Checklist
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<selection label="Signal">
+				Stable imaging appearances
+			</selection>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+
 
 	<template>
 		<name>MRI Head: Internal Auditory Meatus (IAM)
