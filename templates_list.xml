@@ -1384,6 +1384,8 @@ Not present | Present
 			<h2 flags="dont_print">
 				Acute pathology
 			</h2>
+			<text_entry subtype="medium" flags="dont_print_label">
+			</text_entry>
 			<multi_radio>
 				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
 					Not present | Present
@@ -1398,8 +1400,7 @@ Not present | Present
 					Not present | Present
 				</radio>
 			</multi_radio>
-			<text_entry label = "Other pathology" subtype="medium" flags="dont_print_label">
-			</text_entry>
+
 			<insert>
 				CT Head Checklist
 			</insert>
@@ -1430,6 +1431,8 @@ Not present | Present
 			<h2 flags="dont_print">
 				Acute pathology
 			</h2>
+			<text_entry subtype="medium">
+			</text_entry>
 			<multi_radio>
 				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
 					Not present | Present
@@ -1447,8 +1450,7 @@ Not present | Present
 					Not present | Present
 				</radio>
 			</multi_radio>
-			<text_entry subtype="medium">
-			</text_entry>
+
 
 			<h2>ASPECT Score</h2>
 			<multi_select label="Components">
@@ -1512,6 +1514,8 @@ Not present | Present
 			<h2 flags="dont_print">
 				Traumatic pathology
 			</h2>
+			<text_entry subtype="medium">
+			</text_entry>
 			<multi_radio>
 				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
 					Not present | Present
@@ -1538,8 +1542,7 @@ Not present | Present
 					Not present | Present
 				</radio>
 			</multi_radio>
-			<text_entry subtype="medium">
-			</text_entry>
+
 
 			<insert>
 				CT Head Checklist
@@ -1614,21 +1617,14 @@ Not present | Present
 				Neurodegerative
 			</h2>
 			<multi_select label="White matter changes" askfurtherdetails="true">
-				<dropdown label="Location" print_text_before="There are multiple foci of" print_text_after="white matter abnormal signal">
+				<dropdown label="Location" print_text_before="There are multiple foci of" print_text_after="white matter hypodensity">
 					periventricular | deep white matter | pontine | periventricular and deep white matter | generalised
 				</dropdown>
 				<dropdown label="Severity" print_text_before="which is non-specific but may represent a" print_text_after="burden of small vessel disease">
 					mild | moderate | severe
 				</dropdown>
 			</multi_select>
-			<multi_select label="Microhaemorrhages" askfurtherdetails="true">
-				<dropdown label="Location" print_text_before="There are multiple foci of" print_text_after="susceptibility drop">
-					periventricular | deep white matter | pontine | periventricular and deep white matter | generalised
-				</dropdown>
-				<dropdown label="Severity" print_text_before="in keeping with a" print_text_after="burden of microhaemorrhages">
-					mild | moderate | severe
-				</dropdown>
-			</multi_select>
+
 			<multi_select label="Atrophy" askfurtherdetails="true">
 				<dropdown label="Cerebral severity" print_text_before="There is">
 					mild | moderate | severe
@@ -2589,7 +2585,7 @@ Not present | Present
 
 	<template>
 		<name>
-			MRI Head/Brain: Routine
+			MRI Head: Routine
 		</name>
 		<type>
 			Diagnostic
@@ -2605,6 +2601,8 @@ Not present | Present
 				Acute pathology
 			</h2>
 			<multi_radio>
+				<text_entry subtype="large">
+				</text_entry>
 				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
 					Not present | Present
 				</radio>
@@ -2621,8 +2619,7 @@ Not present | Present
 					Not present | Present
 				</radio>
 			</multi_radio>
-			<text_entry subtype="large">
-			</text_entry>
+
 			<insert>
 				MRI Head Checklist
 			</insert>
@@ -2669,6 +2666,8 @@ Not present | Present
 			<h2 flags="dont_print">
 				Acute pathology
 			</h2>
+			<text_entry subtype="medium">
+			</text_entry>
 			<multi_radio>
 				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
 					Not present | Present
@@ -2686,8 +2685,7 @@ Not present | Present
 					Not present | Present
 				</radio>
 			</multi_radio>
-			<text_entry subtype="medium">
-			</text_entry>
+
 			<h2 flags="dont_print">
 				Intracranial MRA
 			</h2>

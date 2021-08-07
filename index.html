@@ -926,8 +926,6 @@
 
 					deviceList.forEach(d => {
 						var required_id = null;
-						//console.log(d.type + ": " + first_device.type);
-
 
 						switch (d.type) {
 							case "Microcatheter":
@@ -944,7 +942,7 @@
 								) {
 
 									this.similarModal.table.push({
-										Name: d.name + " (" + d.manufacturer + ")",
+										Name: d.name_man,
 										Type: d.type,
 										minid: d.minid.toFixed(3),
 										maxod: d.maxod.toFixed(3),
@@ -965,7 +963,7 @@
 									d.type.toLowerCase() == first_device.type.toLowerCase()
 								) {
 									this.similarModal.table.push({
-										Name: d.name + " (" + d.manufacturer + ")",
+										Name: d.name_man,
 										Type: d.type,
 										minid: d.minid.toFixed(3),
 										maxod: d.maxod.toFixed(3),
@@ -979,7 +977,7 @@
 									d.type.toLowerCase() == first_device.type.toLowerCase()) {
 
 									this.similarModal.table.push({
-										Name: d.name + " (" + d.manufacturer + ")",
+										Name: d.name_man,
 										Type: d.type
 									});
 									this.similarModal.n++;
@@ -990,7 +988,7 @@
 									d.type.toLowerCase() == first_device.type.toLowerCase()) {
 
 									this.similarModal.table.push({
-										Name: d.name + " (" + d.manufacturer + ")",
+										Name: d.name_man,
 										Type: d.type,
 										minid: d.minid.toFixed(3),
 										maxod: d.maxod.toFixed(3),

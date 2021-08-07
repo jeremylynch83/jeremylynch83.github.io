@@ -79,10 +79,11 @@
 
 			<b-modal id="control_modal" title="Options" ok-only>
 				<vue-bootstrap-typeahead :data="templates.modules" :serializer="item => item.name"
-					placeholder="Enter module" @hit="selectModule($event)">
+					placeholder="Search for module" @hit="selectModule($event)">
 				</vue-bootstrap-typeahead>
 
-				<b-button @click="insertModule(); $bvModal.hide('control_modal')">Insert module</b-button>
+				<b-button @click="insertModule(); $bvModal.hide('control_modal')">Insert selected module</b-button>
+				<p></p>
 
 				<b-button @click="deleteElement(); $bvModal.hide('control_modal')">Delete this element</b-button>
 
@@ -933,30 +934,12 @@
 				},
 
 				insertModule() {
-					//modules = this.templates.modules; // Generic module list
-					//var module_name = "Lumbar spine level"; // Will be passed
-					//module_name = module_name.trim();
-
-					console.log(this.module);
 
 					var module_data = _.cloneDeep(this.module)
 
-					/*for (var n = 0; n < modules.length; n++) {
-						if (modules[n].name == module_name) {
-							module_data = _.cloneDeep(modules[n]);
-						}
-					}*/
-
 					for (var n = 0; n < module_data.elements.length; n++) {
-
 						this.templateForm.splice(this.selected + n + 1, 0, module_data.elements[n]);
-
-						//console.log(module_data.elements[n]);
 					}
-
-
-					//this.templateForm.splice(this.selected, 1);
-
 
 				},
 
