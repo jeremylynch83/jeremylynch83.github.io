@@ -914,7 +914,6 @@
 				},
 
 				reset: function () {
-					//console.log("Reset");
 
 					this.id_count = 0;
 					this.reportText = "";
@@ -926,6 +925,8 @@
 				},
 
 				selectTemplate: function (event) {
+					this.reset();
+
 					this.template = event;
 					this.writeTemplate();
 				},
