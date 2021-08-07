@@ -718,7 +718,7 @@ Not present | Present
 			<selection label="Ligamentum flavum">
 				There is no flaval thickening | There is flaval thickening
 			</selection>
-			<multi_select label="Disc herniation" askfurtherdetails="true">
+			<multi_select label="Disc herniation" askfurtherdetails="true" normaltext="There is no disc herniation.">
 				<dropdown label="Type" print_text_before="There is a disc">
 					bulge | prolapse | extrusion | migration | sequestration | intravertebral herniation
 				</dropdown>
@@ -1571,8 +1571,8 @@ Not present | Present
 				Plain CT Start
 			</insert>
 			<multi_select label="Description">
-				<dropdown label="Side" print_text_before="There is fat stranding and enhancement surrounding the" print_text_after="orbit.">
-					right | left | both
+				<dropdown label="Side" print_text_before="There is fat stranding surrounding the">
+					right orbit. | left orbit. | both orbits. 
 				</dropdown>
 			</multi_select>
 			<selection label="Proptosis"> Proptosis is not evident. 
@@ -2523,7 +2523,7 @@ Not present | Present
 				Diseases
 			</h2>
 			<multi_radio>
-				<radio label="Hydrocephalus" normaltext="The ventricles are not hydrocephalic" flags="dont_print_normal">
+				<radio label="Hydrocephalus" normaltext="The ventricles are not hydrocephalic">
 					Not present | Present
 				</radio>
 				<radio label="Dural thickening or leptomeningeal enhancement" flags="dont_print_normal">
@@ -2536,7 +2536,7 @@ Not present | Present
 					Not present | Present
 				</radio>
 				<radio label="Basilar flow void" flags="dont_print_normal">
-					Not present | Present
+					Normal | Abnormal
 				</radio>
 				<radio label="Trauma/contusions" flags="dont_print_normal">
 					Not present | Present
