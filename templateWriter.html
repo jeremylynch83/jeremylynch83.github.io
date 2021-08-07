@@ -963,13 +963,26 @@
 				},
 
 				insertModule() {
-
 					var module_data = _.cloneDeep(this.module)
 
-					for (var n = 0; n < module_data.elements.length; n++) {
-						this.templateForm.splice(this.selected + n + 1, 0, module_data.elements[n]);
+					// Create title if not present
+					if (module_data.elements[0].type != "h2") {
+						var el = {};
+						el.type = "h2";
+						el.flags = "dont_print";
+						el.printContents = function () {
+							return "";
+						}
+						el.label = module_data.name.trim();
+						if (el.label[el.label.length - 1] != ":") el.label += ": ";
+						else el.label += " ";
+						this.templateForm.splice(this.selected + 1, 0, el);
 					}
 
+					// Insert module elements
+					for (var n = 0; n < module_data.elements.length; n++) {
+						this.templateForm.splice(this.selected + n + 2, 0, module_data.elements[n]);
+					}
 				},
 
 				selectElement(element) {
