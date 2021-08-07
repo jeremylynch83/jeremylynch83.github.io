@@ -712,6 +712,8 @@ Not present | Present
 			Lumbar spine level
 		</name>
 		<content>
+			<text_entry subtype="small">
+			</text_entry>
 			<selection label="Discs">
 				The disc is normal | There is disc degeneration. | There is disc degeneration and height loss.
 			</selection>
