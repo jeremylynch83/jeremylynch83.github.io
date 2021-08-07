@@ -68,7 +68,16 @@
 
 		</b-modal>
 
+
+
 		<b-container fluid="sm">
+			<p></p>
+			<b-container v-if="template == ''"
+				style="background-color:rgb(255, 255, 239); padding: 10px; border-radius: 5px">
+				<p>This website is under development. Any suggestions are appreciated. Please email me at <a
+						href="mailto: jeremy.lynch@gmail.com">jeremy.lynch@gmail.com</a> for any comments or
+					suggestions. </p>
+			</b-container>
 			<p></p>
 			<b-form-group label=" Search for template:">
 				<vue-bootstrap-typeahead :data="templates" :serializer="item => item.name" placeholder="E.g. CT Head"
