@@ -488,6 +488,7 @@
 							el.present_options = ["yes", "no"];
 							el.present = "";
 							el.askfurtherdetails = xml[i].getAttribute("askfurtherdetails");
+							el.normaltext = xml[i].getAttribute("normaltext");
 
 							for (var n = 0; n < nodes.length; n++) {
 								if (nodes[n].nodeName != "#text") {
@@ -585,6 +586,7 @@
 
 										printContents = function () {
 											var print_text = "";
+											console.log(this.selected);
 
 											if (Number.isInteger(this.selected) && this.selected >
 												0) {
@@ -630,6 +632,9 @@
 									print_text = format_sentence(print_text) + format_sentence(this.details_text);
 								} else {
 									print_text = format_sentence(print_text);
+								}
+								if (this.present == "no") {
+									print_text += format_sentence(this.normaltext);
 								}
 								return print_text;
 							}

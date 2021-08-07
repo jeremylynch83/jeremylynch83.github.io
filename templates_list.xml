@@ -680,28 +680,28 @@ Not present | Present
 		</name>
 		<content>
 			<multi_radio>
-				<radio label="Masses/collections">
+				<radio label="Masses/collections" flags="dont_print_normal">
 					Not present | Present
 				</radio>
-				<radio label="Fractures">
+				<radio label="Fractures" flags="dont_print_normal">
 					Not present | Present
 				</radio>
-				<radio label="Cord signal">
+				<radio label="Cord signal" normaltext="The imaged spinal cord signal is normal">
 					Normal | Abnormal
 				</radio>
-				<radio label="Bone marrow signal">
+				<radio label="Bone marrow signal" flags="dont_print_normal">
 					Normal | Abnormal
 				</radio>
-				<radio label="Annular fissure">
+				<radio label="Annular fissure" flags="dont_print_normal">
 					Not present | Present
 				</radio>
-				<radio label="Paraspinal muscles">
+				<radio label="Paraspinal muscles" flags="dont_print_normal">
 					Normal | Abnormal
 				</radio>
-				<radio label="Evidence of DAVF">
+				<radio label="Evidence of DAVF" flags="dont_print_normal">
 					Not present | Present
 				</radio>
-				<radio label="Planning sequences">
+				<radio label="Planning sequences" flags="dont_print_normal">
 					Normal | Abnormal
 				</radio>
 			</multi_radio>
@@ -715,9 +715,6 @@ Not present | Present
 			<selection label="Discs">
 				The disc is normal | There is disc degeneration. | There is disc degeneration and height loss.
 			</selection>
-			<selection label="Ligamentum flavum">
-				There is no flaval thickening | There is flaval thickening
-			</selection>
 			<multi_select label="Disc herniation" askfurtherdetails="true" normaltext="There is no disc herniation.">
 				<dropdown label="Type" print_text_before="There is a disc">
 					bulge | prolapse | extrusion | migration | sequestration | intravertebral herniation
@@ -729,7 +726,10 @@ Not present | Present
 					central canal | subarticular zone | foraminal zone | extraforaminal zone
 				</dropdown>
 			</multi_select>
-			<multi_select label="Neural compression" askfurtherdetails="true">
+			<selection label="Ligamentum flavum">
+				There is no flaval thickening 
+			</selection>
+			<multi_select label="Neural compression" askfurtherdetails="true" normaltext="There is no neural compression.">
 				<dropdown label="Type" print_text_before="There is">
 					contact | impingement
 				</dropdown>
@@ -740,8 +740,8 @@ Not present | Present
 					descending | exiting
 				</dropdown>
 			</multi_select>
-			<selection label="Facet joints">
-				There is no facetal degeneration | There is mild facetal degeneration | There is moderate facetal degeneration | There is severe facetal degeneration
+			<selection label="Facet joint degeneration">
+				There is mild facetal degeneration | There is moderate facetal degeneration | There is severe facetal degeneration
 			</selection>
 		</content>
 	</module>
