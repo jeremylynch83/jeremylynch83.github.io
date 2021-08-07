@@ -1722,7 +1722,7 @@ Not present | Present
 			<text_entry label="CT Perfusion" subtype="medium">
 			</text_entry>
 			<multi_radio>
-				<radio label="Venous sinuses">
+				<radio label="Venous sinuses" flags="dont_print_normal">
 					Normal | Abnormal
 				</radio>
 			</multi_radio>
