@@ -106,7 +106,9 @@
 			<b-form-group v-if="template != ''">
 				<b-card bg-variant="light">
 					<b-button variant="success" @click="copyReport()">Generate & Copy</b-button>
-					<b-button variant="success" @click="exportReport()">Export</b-button>
+					<!--<b-button variant="success" @click="exportReport()">Export</b-button>-->
+					<b-button variant="danger" @click="reset()">Reset</b-button>
+
 
 					<h1>
 						{{template.title}}
@@ -909,6 +911,18 @@
 
 					} while (n != -1);
 					return text;
+				},
+
+				reset: function () {
+					//console.log("Reset");
+
+					this.id_count = 0;
+					this.reportText = "";
+					this.module = "";
+					this.template = "";
+					this.index = "";
+					this.templateForm = [];
+					this.selected = null;
 				},
 
 				selectTemplate: function (event) {
