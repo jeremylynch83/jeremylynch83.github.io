@@ -278,8 +278,13 @@ Not present | Present
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="medium">
-			</text_entry>
+			<multi_select >
+				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
+					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
+				</dropdown>
+				<free_text label="Date" flags = "dont_print_label">
+				</free_text>
+			</multi_select>
 			<h1>
 				Findings
 			</h1>
@@ -355,8 +360,13 @@ Not present | Present
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="medium">
-			</text_entry>
+			<multi_select >
+				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
+					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
+				</dropdown>
+				<free_text label="Date" flags = "dont_print_label">
+				</free_text>
+			</multi_select>
 			<h1>
 				Findings
 			</h1>
@@ -456,8 +466,13 @@ Not present | Present
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="medium">
-			</text_entry>
+			<multi_select >
+				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
+					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
+				</dropdown>
+				<free_text label="Date" flags = "dont_print_label">
+				</free_text>
+			</multi_select>
 			<h1>
 				Findings
 			</h1>
@@ -773,8 +788,13 @@ Not present | Present
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="small">
-			</text_entry>
+			<multi_select >
+				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
+					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
+				</dropdown>
+				<free_text label="Date" flags = "dont_print_label">
+				</free_text>
+			</multi_select>
 			<h1>
 				Findings
 			</h1>
@@ -834,8 +854,13 @@ Not present | Present
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="small">
-			</text_entry>
+			<multi_select >
+				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
+					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
+				</dropdown>
+				<free_text label="Date" flags = "dont_print_label">
+				</free_text>
+			</multi_select>
 			<h1>
 				Findings
 			</h1>
@@ -901,8 +926,13 @@ Not present | Present
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="small">
-			</text_entry>
+			<multi_select >
+				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
+					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
+				</dropdown>
+				<free_text label="Date" flags = "dont_print_label">
+				</free_text>
+			</multi_select>
 			<h1>
 				Findings
 			</h1>
@@ -1007,8 +1037,13 @@ Not present | Present
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="small">
-			</text_entry>
+			<multi_select >
+				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
+					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
+				</dropdown>
+				<free_text label="Date" flags = "dont_print_label">
+				</free_text>
+			</multi_select>
 			<h1>
 				Findings
 			</h1>
@@ -1098,8 +1133,13 @@ Not present | Present
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="small">
-			</text_entry>
+			<multi_select >
+				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
+					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
+				</dropdown>
+				<free_text label="Date" flags = "dont_print_label">
+				</free_text>
+			</multi_select>
 			<h1>
 				Findings
 			</h1>
@@ -1159,8 +1199,13 @@ Not present | Present
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="small">
-			</text_entry>
+			<multi_select >
+				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
+					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
+				</dropdown>
+				<free_text label="Date" flags = "dont_print_label">
+				</free_text>
+			</multi_select>
 			<h1>
 				Findings
 			</h1>
@@ -1226,8 +1271,13 @@ Not present | Present
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="small">
-			</text_entry>
+			<multi_select >
+				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
+					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
+				</dropdown>
+				<free_text label="Date" flags = "dont_print_label">
+				</free_text>
+			</multi_select>
 			<h1>
 				Findings
 			</h1>
@@ -1803,8 +1853,13 @@ Not present | Present
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="small">
-			</text_entry>
+			<multi_select >
+				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
+					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
+				</dropdown>
+				<free_text label="Date" flags = "dont_print_label">
+				</free_text>
+			</multi_select>
 			<h1>
 				Findings
 			</h1>
@@ -1859,8 +1914,13 @@ Not present | Present
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="small">
-			</text_entry>
+			<multi_select >
+				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
+					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
+				</dropdown>
+				<free_text label="Date" flags = "dont_print_label">
+				</free_text>
+			</multi_select>
 			<h1>
 				Findings
 			</h1>
@@ -1928,8 +1988,13 @@ Not present | Present
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="small">
-			</text_entry>
+			<multi_select >
+				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
+					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
+				</dropdown>
+				<free_text label="Date" flags = "dont_print_label">
+				</free_text>
+			</multi_select>
 			<h1>
 				Findings
 			</h1>
@@ -2037,8 +2102,13 @@ Not present | Present
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="small">
-			</text_entry>
+			<multi_select >
+				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
+					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
+				</dropdown>
+				<free_text label="Date" flags = "dont_print_label">
+				</free_text>
+			</multi_select>
 			<h1>
 				Findings
 			</h1>
@@ -2148,8 +2218,13 @@ Not present | Present
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="small">
-			</text_entry>
+			<multi_select >
+				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
+					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
+				</dropdown>
+				<free_text label="Date" flags = "dont_print_label">
+				</free_text>
+			</multi_select>
 			<h1>
 				Findings
 			</h1>
@@ -2239,8 +2314,13 @@ Not present | Present
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="small">
-			</text_entry>
+			<multi_select >
+				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
+					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
+				</dropdown>
+				<free_text label="Date" flags = "dont_print_label">
+				</free_text>
+			</multi_select>
 			<h1>
 				Findings
 			</h1>
@@ -2355,8 +2435,13 @@ Not present | Present
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="small">
-			</text_entry>
+			<multi_select >
+				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
+					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
+				</dropdown>
+				<free_text label="Date" flags = "dont_print_label">
+				</free_text>
+			</multi_select>
 			<h1>
 				Findings
 			</h1>
@@ -2404,8 +2489,13 @@ Not present | Present
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="small">
-			</text_entry>
+			<multi_select >
+				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
+					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
+				</dropdown>
+				<free_text label="Date" flags = "dont_print_label">
+				</free_text>
+			</multi_select>
 			<h1>
 				Findings
 			</h1>
@@ -2449,8 +2539,13 @@ Not present | Present
 			<h1>
 				Comparison
 			</h1>
-			<text_entry label="" subtype="small">
-			</text_entry>
+			<multi_select >
+				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
+					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
+				</dropdown>
+				<free_text label="Date" flags = "dont_print_label">
+				</free_text>
+			</multi_select>
 			<h1>
 				Findings
 			</h1>
