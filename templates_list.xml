@@ -2615,6 +2615,26 @@ Not present | Present
 			</multi_select>
 
 
+			<h2>
+				MRI Head brain permeability:		
+			</h2>
+			<multi_select label="Technique">
+				<free_text>DCE analysis performed on OLEA with multiple AIFs and an Extended Tofts model.
+				</free_text>
+				<dropdown label="ROI > 12 pixels in" print_text_after="and compared to ROI in the contralateral white matter.">
+				region of enhancement | T2 hyperintense region
+				</dropdown>
+			</multi_select>
+
+			<multi_select label="Results">
+				<free_text label="Maximum ktrans">
+				</free_text>
+				<dropdown label="ROI" print_text_before="in" print_text_after="(this is an absolute value, i.e. not normalised to contralateral side).">
+				single ROI | multiple ROI
+				</dropdown>
+			</multi_select>
+
+
 		</content>
 	</module>
 
