@@ -1371,7 +1371,7 @@ Not present | Present
 	</module>
 	<template>
 		<name>
-			CT Head: Routine
+			CT Head Non-Contrast: Routine
 		</name>
 		<type>
 			Diagnostic
@@ -1418,7 +1418,7 @@ Not present | Present
 
 	<template>
 		<name>
-			CT Non-Contrast Head: Stroke
+			CT Head Non-Contrast: Stroke
 		</name>
 		<type>
 			Diagnostic
@@ -2584,6 +2584,41 @@ Not present | Present
 			</multi_radio>
 		</content>
 	</module>
+
+
+	<module>
+		<name>
+			MRI Perfusion and Permeability
+		</name>
+		<content>
+			<h2>
+				MRI Head brain perfusion study:
+			</h2>
+
+			<multi_select label="Technique">
+				<free_text>DSC performed using a double bolus technique. Processing performed on OLEA using multiple AIFs, deconvolution and leakage correction.
+				</free_text>
+				<dropdown label="ROI > 12 pixels in" print_text_after="and compared to ROI in the contralateral white matter.">
+				region of enhancement | T2 hyperintense region
+				</dropdown>
+			</multi_select>
+
+			<multi_select label="Results">
+				<dropdown label="Normalised regional CBV" print_text_before="Normalised regional CBV">
+				under 1.75 | over 1.75
+				</dropdown>
+				<dropdown label="ROI" print_text_before="in">
+				single ROI | multiple ROI
+				</dropdown>
+				<free_text label="absolute regional CBV value  (i.e. not normalised to contralateral side) is up to (ml/100 g)">
+				</free_text>
+			</multi_select>
+
+
+		</content>
+	</module>
+
+
 
 	<template>
 		<name>
