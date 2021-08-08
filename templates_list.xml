@@ -1498,10 +1498,6 @@ Not present | Present
 			</query_insert>
 
 			<insert>
-				ASPECT Score
-			</insert>
-
-			<insert>
 				CT Head Checklist
 			</insert>
 			<h1>

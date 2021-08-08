@@ -150,6 +150,9 @@
 									<h2 v-if="n.type == 'h1'">{{n.label}}</h2>
 									<h3 v-if="n.type == 'h2'">{{n.label}}</h3>
 
+									<!-- QUERY INSERT TYPE -->
+									<button v-if=" n.type=='query_insert'" @click="queryInsert(n)">{{n.text}}</button>
+
 									<!--  TEXT TYPE -->
 									<label v-if=" n.type=='text'">{{n.text}}</label>
 
@@ -159,7 +162,6 @@
 										</b-form-textarea>
 									</b-form-group>
 
-									<!-- TEXT ENTRY TYPE MEDIUM -->
 
 									<!-- TEXT ENTRY TYPE SMALL/MEDIUM -->
 									<b-form-group :disabled="n.disabled" v-if="n.type == 'text_entry'">
@@ -435,6 +437,19 @@
 								return print_text;
 							}
 							break;
+
+
+						case "query_insert":
+							el.module = xml[i].innerHTML.trim()
+							el.text = "Insert " + xml[i].innerHTML.trim();
+							el.printContents = function () {
+								var print_text = "";
+								return print_text;
+							}
+
+							elements.push(el);
+							break;
+
 						case "text":
 							el.text = xml[i].innerHTML.trim();
 							el.printContents = function () {
@@ -945,21 +960,9 @@
 
 					for (var n = 0; n < elements.length; n++) {
 						var el = _.cloneDeep(this.template.elements[n]);
-
 						el.array_id = n;
-
-						/*
-						el.id = this.generateID();
-
-						if (el.multi) {
-							for (var x = 0; x < el.multi.length; x++) {
-								el.multi[x].id = this.generateID();
-							}
-						}*/
-
 						this.templateForm.push(el);
 					}
-
 				},
 
 				deleteElement() {
@@ -993,7 +996,17 @@
 					this.selected = this.templateForm.findIndex(function (i) {
 						return i.array_id == element.array_id;
 					})
-					console.log(element.array_id);
+				},
+
+				queryInsert: function (element) {
+					this.selectElement(element);
+
+					this.module = this.templates.modules.find(function (i) {
+						return i.name == element.module;
+					});
+
+					this.insertModule();
+
 				},
 
 				copyReport: function () {
