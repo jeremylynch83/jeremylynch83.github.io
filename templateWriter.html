@@ -1000,6 +1000,9 @@
 
 				queryInsert: function (element) {
 					this.selectElement(element);
+					this.deleteElement();
+
+					this.selected = this.selected - 2;
 
 					this.module = this.templates.modules.find(function (i) {
 						return i.name == element.module;
