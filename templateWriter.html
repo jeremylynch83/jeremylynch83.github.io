@@ -138,6 +138,14 @@
 
 								-->
 
+								<div class="control">
+									<div class="op_icon">
+										<button class="control_button" v-b-modal.control_modal
+											@click="selectElement(n)">Options</button>
+									</div>
+								</div>
+
+
 								<div class="element">
 									<h2 v-if="n.type == 'h1'">{{n.label}}</h2>
 									<h3 v-if="n.type == 'h2'">{{n.label}}</h3>
@@ -280,12 +288,6 @@
 									</b-form-group>
 
 								</div>
-								<div class="control">
-									<div class="op_icon">
-										<button class="control_button" v-b-modal.control_modal
-											@click="selectElement(n)">Options</button>
-									</div>
-								</div>
 
 							</div>
 						</div>
@@ -375,7 +377,8 @@
 				str = str.trim();
 				str = str.replace(/ +(?= )/g, '');
 				var last_char = str[str.length - 1];
-				if (last_char != "." && last_char != "!") str = str + ". ";
+				if (last_char != "." && last_char != "!" && last_char != ":" && last_char != ";" && last_char != "-") str =
+					str + ". ";
 				else str = str + " ";
 				if (str.substr(str.length - 3, 2) == " .") {
 					str = str.substr(0, str.length - 3) + ". ";
