@@ -1416,6 +1416,47 @@ Not present | Present
 		</content>
 	</template>
 
+
+	<module>
+		<name>ASPECT Score
+		</name>
+		<content>
+			<h2>ASPECT Score</h2>
+			<multi_select label="Components">
+				<dropdown label="Caudate nucleus" print_text_before="Caudate nucleus" print_text_after=".">
+					involved (-1) | not involved (0)
+				</dropdown>
+				<dropdown label="Putamen" print_text_before="Putamen" print_text_after=".">
+					involved (-1) | not involved (0)
+				</dropdown>
+				<dropdown label="Internal capsule" print_text_before="Internal capsule" print_text_after=".">
+					involved (-1) | not involved (0)
+				</dropdown>
+				<dropdown label="Insular cortex" print_text_before="Insular cortex" print_text_after=".">
+					involved (-1) | not involved (0)
+				</dropdown>
+				<dropdown label="M1 (frontal operculum)" print_text_before="M1 (frontal operculum)" print_text_after=".">
+					involved (-1) | not involved (0)
+				</dropdown>
+				<dropdown label="M2 (anterior temporal lobe)" print_text_before="M2 (anterior temporal lobe)" print_text_after=".">
+					involved (-1) | not involved (0)
+				</dropdown>
+				<dropdown label="M3 (posterior temporal lobe)" print_text_before="M3 (posterior temporal lobe)" print_text_after=".">
+					involved (-1) | not involved (0)
+				</dropdown>
+				<dropdown label="M4 (immediately superior to M1)" print_text_before="M4 (immediately superior to M1" print_text_after=".">
+					involved (-1) | not involved (0)
+				</dropdown>
+				<dropdown label="M5 (immediately superior to M2)" print_text_before="M5 (immediately superior to M2)" print_text_after=".">
+					involved (-1) | not involved (0)
+				</dropdown>
+				<dropdown label="M6 (immediately superior to M3)" print_text_before="M6 (immediately superior to M3)" print_text_after=".">
+					involved (-1) | not involved (0)
+				</dropdown>
+			</multi_select>
+		</content>
+	</module>
+
 	<template>
 		<name>
 			CT Head Non-Contrast: Stroke
@@ -1453,40 +1494,12 @@ Not present | Present
 				</radio>
 			</multi_radio>
 
+			<query_insert>ASPECT Score
+			</query_insert>
 
-			<h2>ASPECT Score</h2>
-			<multi_select label="Components">
-				<dropdown label="Caudate nucleus" print_text_before="Caudate nucleus" print_text_after=".">
-					involved (-1) | not involved (0)
-				</dropdown>
-				<dropdown label="Putamen" print_text_before="Putamen" print_text_after=".">
-					involved (-1) | not involved (0)
-				</dropdown>
-				<dropdown label="Internal capsule" print_text_before="Internal capsule" print_text_after=".">
-					involved (-1) | not involved (0)
-				</dropdown>
-				<dropdown label="Insular cortex" print_text_before="Insular cortex" print_text_after=".">
-					involved (-1) | not involved (0)
-				</dropdown>
-				<dropdown label="M1 (frontal operculum)" print_text_before="M1 (frontal operculum)" print_text_after=".">
-					involved (-1) | not involved (0)
-				</dropdown>
-				<dropdown label="M2 (anterior temporal lobe)" print_text_before="M2 (anterior temporal lobe)" print_text_after=".">
-					involved (-1) | not involved (0)
-				</dropdown>
-				<dropdown label="M3 (posterior temporal lobe)" print_text_before="M3 (posterior temporal lobe)" print_text_after=".">
-					involved (-1) | not involved (0)
-				</dropdown>
-				<dropdown label="M4 (immediately superior to M1)" print_text_before="M4 (immediately superior to M1" print_text_after=".">
-					involved (-1) | not involved (0)
-				</dropdown>
-				<dropdown label="M5 (immediately superior to M2)" print_text_before="M5 (immediately superior to M2)" print_text_after=".">
-					involved (-1) | not involved (0)
-				</dropdown>
-				<dropdown label="M6 (immediately superior to M3)" print_text_before="M6 (immediately superior to M3)" print_text_after=".">
-					involved (-1) | not involved (0)
-				</dropdown>
-			</multi_select>
+			<insert>
+				ASPECT Score
+			</insert>
 
 			<insert>
 				CT Head Checklist
@@ -2633,7 +2646,6 @@ Not present | Present
 				single ROI | multiple ROI
 				</dropdown>
 			</multi_select>
-
 
 		</content>
 	</module>

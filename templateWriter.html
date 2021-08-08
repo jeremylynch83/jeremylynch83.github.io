@@ -530,7 +530,8 @@
 											if (this.text != "") {
 												if (this.print_text_before != "") {
 													print_text += this.print_text_before + " ";
-												} else if (!this.flags.includes("dont_print_label")) {
+												} else if (!this.flags.includes("dont_print_label") && this.label !=
+													null) {
 													print_text += this.label + ": ";
 												}
 												print_text += this.text;
