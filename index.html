@@ -368,6 +368,7 @@
 
 	<script>
 		/* GENERIC FUNCTIONS */
+		const pi = 3.1415926535;
 
 		function toTitleCase(str) {
 			str = str.replaceAll("_", " ");
@@ -1054,12 +1055,27 @@
 				},
 
 				checkSizes: function () {
-					var summary = "";
+					var summary = {
+						fit_verdict: true,
+						sizes: "",
+						contrast_runs: [],
+						contrast_text: ""
+					}
+
 					var x = tree.querySelectorAll("device");
 					x.forEach(parent => {
+						var parent_data = "";
+						if (parent.getAttribute("data") != "") parent_data = JSON.parse(parent
+							.getAttribute("data"));
+						var parent_area = pi * (parent_data.minid / 2) * (parent_data.minid / 2);
 
-						if (parent.hasChildNodes() && (parent.getAttribute("data") != "")) {
-							var parent_data = JSON.parse(parent.getAttribute("data"));
+						if (!parent.hasChildNodes() && parent_area > 0.0007) {
+							summary.contrast_runs.push([
+								parent_data.name, parent_area
+							])
+						}
+
+						if (parent.hasChildNodes() && parent_data != "") {
 
 							children = parent.childNodes;
 							var child_total_od = 0;
@@ -1092,10 +1108,14 @@
 									compat_str = compat_str + check_compatibility(
 										parent_data,
 										child_data);
+
+
 								}
 							})
 
 							if (child_total_od >= parent_data.minid) {
+								summary.fit_verdict = false;
+
 								switch (child_list.length) {
 									case 1:
 										child_str = child_list[0];
@@ -1121,12 +1141,47 @@
 										}
 										break;
 								}
-								summary = "<p style=\"color:red\">" + summary + child_str +
+								summary.sizes = "<p style=\"color:red\">" + summary.sizes + child_str +
 									" does not fit in to " +
 									parent_data.name + ". " + "</p>";
-							} else summary = summary + length_txt + compat_str;
+							} else summary.sizes = summary.sizes + length_txt + compat_str;
+
+							// Calculate space left
+							var children_area = pi * (child_total_od / 2) * (child_total_od / 2);
+							var dif_area = parent_area - children_area;
+							if (dif_area > 0.0007) summary.contrast_runs.push(
+								[parent_data.name, dif_area])
 						}
+
 					});
+
+					if (summary.contrast_runs.length != 0) {
+
+						summary.contrast_runs.sort(function (a, b) {
+							if (a[1] < b[1]) return 1;
+							if (a[1] > b[1]) return -1;
+						});
+
+						if (summary.contrast_runs.length == 1) {
+							summary.contrast_text += "You can do cerebral angiography through the " + summary
+								.contrast_runs[0][0] + ".";
+						} else {
+							summary.contrast_text += "The best device for cerebral angiography is the " + summary
+								.contrast_runs[0][0] + ". ";
+							summary.contrast_text += "You can also do runs through the following devices: ";
+							for (var n = 1; n < summary.contrast_runs.length; n++) {
+								summary.contrast_text += summary.contrast_runs[n][0];
+								if (n < (summary.contrast_runs.length - 1)) summary.contrast_text += ", ";
+								else summary.contrast_text += "."
+							}
+						}
+
+
+
+					} else {
+						summary.contrast_text +=
+							"Cerebral angiography is not possible due to lack of space in any of the devices.";
+					}
 
 					// Check radial artery compatibility
 
@@ -1144,20 +1199,22 @@
 					}*/
 
 
-
 					return summary;
 				},
 
 				updateSizer: function () {
 					var result = this.checkSizes();
-					if (result == "") {
-						var result = "<p style=\"color:green\">Everything fits ok.</p>";
+					var result_text = "";
+
+					if (result.fit_verdict == true) {
+						result_text = "<p style=\"color:green\">Everything fits ok.</p>";
 					}
 
-					document.getElementById("result").innerHTML = result;
-					//document.getElementById("message3").value = result;
+					result_text += "<p>" + result.sizes + "<p>";
 
-					//this.drawDiagram();
+
+					result_text += "<p>" + result.contrast_text + "</p>";
+					document.getElementById("result").innerHTML = result_text + "</p>";
 					this.updateInfo(JSON.parse(tree.getElementById("device0").getAttribute("data")));
 				},
 
@@ -1249,9 +1306,8 @@
 
 							this.updateDevice(id, deviceList[index]);
 							this.updateSizer();
-							//this.$refs.device0[0].inputValue = deviceList[index].name;
 							window.addEventListener('load', (event) => {
-								this.$refs.device0[0].inputValue = deviceList[index].name_man
+								this.$refs.device0[0].inputValue = deviceList[index].name_man;
 							});
 
 						}
