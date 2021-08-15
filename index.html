@@ -1055,6 +1055,8 @@
 				},
 
 				checkSizes: function () {
+					const minimum_run_area = 0.0007;
+
 					var summary = {
 						fit_verdict: true,
 						sizes: "",
@@ -1069,7 +1071,7 @@
 							.getAttribute("data"));
 						var parent_area = pi * (parent_data.minid / 2) * (parent_data.minid / 2);
 
-						if (!parent.hasChildNodes() && parent_area > 0.0007) {
+						if (!parent.hasChildNodes() && parent_area > minimum_run_area) {
 							summary.contrast_runs.push([
 								parent_data.name, parent_area
 							])
@@ -1108,8 +1110,6 @@
 									compat_str = compat_str + check_compatibility(
 										parent_data,
 										child_data);
-
-
 								}
 							})
 
@@ -1149,7 +1149,8 @@
 							// Calculate space left
 							var children_area = pi * (child_total_od / 2) * (child_total_od / 2);
 							var dif_area = parent_area - children_area;
-							if (dif_area > 0.0007) summary.contrast_runs.push(
+							console.log(dif_area);
+							if (dif_area > minimum_run_area) summary.contrast_runs.push(
 								[parent_data.name, dif_area])
 						}
 
@@ -1175,8 +1176,6 @@
 								else summary.contrast_text += "."
 							}
 						}
-
-
 
 					} else {
 						summary.contrast_text +=
@@ -1213,7 +1212,7 @@
 					result_text += "<p>" + result.sizes + "<p>";
 
 
-					result_text += "<p>" + result.contrast_text + "</p>";
+					//result_text += "<p>" + result.contrast_text + "</p>";
 					document.getElementById("result").innerHTML = result_text + "</p>";
 					this.updateInfo(JSON.parse(tree.getElementById("device0").getAttribute("data")));
 				},
