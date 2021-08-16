@@ -1055,7 +1055,8 @@
 				},
 
 				checkSizes: function () {
-					const minimum_run_area = 0.0007;
+					const minimum_run_area = 0;
+					const five_fr = 0.0012566370614;
 
 					var summary = {
 						fit_verdict: true,
@@ -1156,22 +1157,39 @@
 
 					});
 
-					if (summary.contrast_runs.length != 0) {
+					function strength_calc(area) {
+						var strength = "";
+						ratio = parseInt((area / five_fr) * 100);
+						if (ratio < 25) {
+							strength = " (" + ratio + "% " + "compared to 5F diagnostic catheter)"
+						} else if (ratio >= 25 && ratio < 75) {
+							strength = " (" + ratio + "% " + "compared to 5F diagnostic catheter)";
+						} else if (ratio >= 75) {
+							strength = " (" + ratio + "% " + "compared to 5F diagnostic catheter)";
+						}
+						return strength
+					}
 
+					if (summary.contrast_runs.length != 0) {
 						summary.contrast_runs.sort(function (a, b) {
 							if (a[1] < b[1]) return 1;
 							if (a[1] > b[1]) return -1;
 						});
 
+
 						if (summary.contrast_runs.length == 1) {
 							summary.contrast_text += "You can do cerebral angiography through the " + summary
-								.contrast_runs[0][0] + ".";
+								.contrast_runs[0][0] + strength_calc(summary
+									.contrast_runs[0][1]) +
+								".";
 						} else {
 							summary.contrast_text += "The best device for cerebral angiography is the " + summary
-								.contrast_runs[0][0] + ". ";
+								.contrast_runs[0][0] + strength_calc(summary
+									.contrast_runs[0][1]) + ". ";
 							summary.contrast_text += "You can also do runs through the following devices: ";
 							for (var n = 1; n < summary.contrast_runs.length; n++) {
-								summary.contrast_text += summary.contrast_runs[n][0];
+								summary.contrast_text += summary.contrast_runs[n][0] + strength_calc(summary
+									.contrast_runs[n][1]);
 								if (n < (summary.contrast_runs.length - 1)) summary.contrast_text += ", ";
 								else summary.contrast_text += "."
 							}
@@ -1209,10 +1227,9 @@
 						result_text = "<p style=\"color:green\">Everything fits ok.</p>";
 					}
 
-					result_text += "<p>" + result.sizes + "<p>";
+					result_text += "<p style=\"font-size: medium\">" + result.sizes + "<p>";
 
-
-					//result_text += "<p>" + result.contrast_text + "</p>";
+					result_text += "<p style=\"font-size: medium\">" + result.contrast_text + "</p>";
 					document.getElementById("result").innerHTML = result_text + "</p>";
 					this.updateInfo(JSON.parse(tree.getElementById("device0").getAttribute("data")));
 				},
