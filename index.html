@@ -267,6 +267,9 @@
 
 		<b-modal id="updates_modal" title="Updates" ok-only>
 			<p>
+				<p><b>16 August 2021: </b>
+					New feature to predict contrast injection strengths. </p>
+
 				<p><b>18 May 2021: </b>
 					Corrected Trak 21 and Phenom dimensions (thanks for the feedback). </p>
 
@@ -748,11 +751,11 @@
 					// Assuming only first input to change to start with
 
 					//this.$refs.device0[0].inputValue = "jeremy";
-					console.log(Object.keys(this.$refs));
+					//console.log(Object.keys(this.$refs));
 
 
 					for (var p in this.$refs) {
-						console.log(p + ': ' + this.$refs[p]);
+						//console.log(p + ': ' + this.$refs[p]);
 					}
 
 					//console.log(this.$refs.device0)
@@ -1150,7 +1153,7 @@
 							// Calculate space left
 							var children_area = pi * (child_total_od / 2) * (child_total_od / 2);
 							var dif_area = parent_area - children_area;
-							console.log(dif_area);
+							//console.log(dif_area);
 							if (dif_area > minimum_run_area) summary.contrast_runs.push(
 								[parent_data.name, dif_area])
 						}
@@ -1204,7 +1207,6 @@
 					// Check radial artery compatibility
 
 					/*if (this.access == "Radial artery") {
-						console.log("hi");
 						var first_device = tree.getElementById("device0");
 						if (first_device.getAttribute("data") != "") {
 							first_data = JSON.parse(first_device.getAttribute("data"));
@@ -1361,10 +1363,6 @@
 
 
 		})
-
-		/*window.addEventListener("load", function () {
-			console.log("hi");
-		});*/
 	</script>
 </body>
 
