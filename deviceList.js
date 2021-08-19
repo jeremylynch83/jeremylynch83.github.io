@@ -1179,45 +1179,61 @@ deviceList=
         "type": "Balloon",
         "name": "HyperForm 3 mm ",
         "manufacturer": "Medtronic",
+        "description": "\"HyperForm™ Occlusion Balloons are designed  with extra softness to  conform to asymmetrical, irregular,  and,  complex  vasculature  geometries like none other.\"",
         "url1": "https://web.archive.org/web/20210405011659/http://www.forecastscience.com/download/forecastscience_com/HyperForm%20brochure.pdf",
         "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
         "dmso": "yes",
         "minid": 0.011,
         "maxod": 0.036,
-        "length": "150"
+        "length": "150",
+        "sizes": "7 mm and 15 mm balloon lengths",
+        "comments": "Single lumen balloon. Packaged with an X-Pedion™ 0.010\" hydrophilic guidewire. ",
+        "tipLengths": "2 mm"
     },
     {
         "type": "Balloon",
         "name": "HyperForm 4 mm ",
         "manufacturer": "Medtronic",
+        "description": "\"HyperForm™ Occlusion Balloons are designed  with extra softness to  conform to asymmetrical, irregular,  and,  complex  vasculature  geometries like none other.\"",
         "url1": "https://web.archive.org/web/20210405011659/http://www.forecastscience.com/download/forecastscience_com/HyperForm%20brochure.pdf",
         "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
         "dmso": "yes",
         "minid": 0.011,
         "maxod": 0.036,
-        "length": "150"
+        "length": "150",
+        "sizes": "7 mm, 15 mm, and 20 mm balloon lengths",
+        "comments": "Single lumen balloon. Packaged with an X-Pedion™ 0.010\" hydrophilic guidewire. ",
+        "tipLengths": "2 mm"
     },
     {
         "type": "Balloon",
         "name": "HyperForm 7 mm ",
         "manufacturer": "Medtronic",
+        "description": "\"HyperForm™ Occlusion Balloons are designed  with extra softness to  conform to asymmetrical, irregular,  and,  complex  vasculature  geometries like none other.\"",
         "url1": "https://web.archive.org/web/20210405011659/http://www.forecastscience.com/download/forecastscience_com/HyperForm%20brochure.pdf",
         "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
         "dmso": "yes",
         "minid": 0.011,
         "maxod": 0.0394,
-        "length": "150"
+        "length": "150",
+        "sizes": "7 mm and 15 mm balloon lengths",
+        "comments": "Single lumen balloon. Packaged with an X-Pedion™ 0.010\" hydrophilic guidewire. ",
+        "tipLengths": "2 mm"
     },
     {
         "type": "Balloon",
         "name": "HyperGlide 3mm ",
         "manufacturer": "Medtronic",
+        "description": "\"HyperGlide™ Occlusion Balloons are oblong compliant balloons designed for\nsidewall aneurysms and reliable occlusions.\"",
         "url1": "https://web.archive.org/web/20210405011659/http://www.forecastscience.com/download/forecastscience_com/HyperForm%20brochure.pdf",
         "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
         "dmso": "yes",
         "minid": 0.011,
         "maxod": 0.0367,
-        "length": "150"
+        "length": "150",
+        "sizes": "10 mm and 15 mm balloon lengths",
+        "comments": "Single lumen balloon. Packaged with an X-Pedion™ 0.010\" hydrophilic guidewire. ",
+        "tipLengths": "4 mm"
     },
     {
         "type": "Balloon",
@@ -1228,7 +1244,10 @@ deviceList=
         "dmso": "yes",
         "minid": 0.011,
         "maxod": 0.0367,
-        "length": "150"
+        "length": "150",
+        "sizes": "10 mm, 15 mm, 20 mm, 30 mm balloon lengths",
+        "comments": "Single lumen balloon. Packaged with an X-Pedion™ 0.010\" hydrophilic guidewire. ",
+        "tipLengths": "4 mm"
     },
     {
         "type": "Balloon",
@@ -1239,7 +1258,19 @@ deviceList=
         "dmso": "yes",
         "minid": 0.011,
         "maxod": 0.0367,
-        "length": "150"
+        "length": "150",
+        "sizes": "15 mm, 20 mm, 30 mm balloon lenths",
+        "comments": "Single lumen balloon. Packaged with an X-Pedion™ 0.010\" hydrophilic guidewire. ",
+        "tipLengths": "4 mm"
+    },
+    {
+        "type": "Wire",
+        "name": "X-Pedion",
+        "manufacturer": "Medtronic",
+        "url1": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
+        "minid": 0,
+        "maxod": 0.1,
+        "length": 200
     },
     {
         "type": "Coil",
@@ -2567,6 +2598,7 @@ deviceList=
         "minid": 0.015,
         "maxod": 0.037,
         "length": "150",
+        "comments": "Single lumen balloon. Can take 0.014\" microwires. ",
         "youtube": "https://www.youtube.com/embed/wm2HTuVqOhA"
     },
     {
