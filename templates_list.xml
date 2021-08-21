@@ -285,16 +285,9 @@ Not present | Present
 			<insert>
 				Angio technique
 			</insert>
-			<h1>
+			<insert>
 				Comparison
-			</h1>
-			<multi_select >
-				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
-				</dropdown>
-				<free_text label="Date" flags = "dont_print_label">
-				</free_text>
-			</multi_select>
+			</insert>
 			<h1>
 				Findings
 			</h1>
@@ -405,7 +398,6 @@ Not present | Present
 		</name>
 		<type>
 			Angiography
-			
 		</type>
 		<title>
 			Endovascular Repair of a Ruptured Aneurysm
@@ -692,16 +684,9 @@ Not present | Present
 			<text_entry label="" subtype="small">
 				MR images were acquired of the spine without intravenous contrast.
 			</text_entry>
-			<h1>
+			<insert>
 				Comparison
-			</h1>
-			<multi_select >
-				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
-				</dropdown>
-				<free_text label="Date" flags = "dont_print_label">
-				</free_text>
-			</multi_select>
+			</insert>
 			<h1>
 				Findings
 			</h1>
@@ -758,16 +743,9 @@ Not present | Present
 			<text_entry label="" subtype="small">
 				MR images were acquired of the spine with and without intravenous contrast.
 			</text_entry>
-			<h1>
+			<insert>
 				Comparison
-			</h1>
-			<multi_select >
-				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
-				</dropdown>
-				<free_text label="Date" flags = "dont_print_label">
-				</free_text>
-			</multi_select>
+			</insert>
 			<h1>
 				Findings
 			</h1>
@@ -830,16 +808,9 @@ Not present | Present
 			<text_entry label="" subtype="small">
 				MR images were acquired of the spine without intravenous contrast.
 			</text_entry>
-			<h1>
+			<insert>
 				Comparison
-			</h1>
-			<multi_select >
-				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
-				</dropdown>
-				<free_text label="Date" flags = "dont_print_label">
-				</free_text>
-			</multi_select>
+			</insert>
 			<h1>
 				Findings
 			</h1>
@@ -941,19 +912,9 @@ Not present | Present
 			</h1>
 			<text_entry label="" subtype="small">
 			</text_entry>
-			<h1>
+			<insert>
 				Comparison
-			</h1>
-			<multi_select >
-				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					MRI | MRA | MRI/MRA | series of MRI studies | CT | CTA | CT/CTA |  series of CT studies | cross-sectional imaging | ultrasound
-				</dropdown>
-				<free_text label="Date" flags = "dont_print_label">
-				</free_text>
-				<dropdown label="No studies">
-					No comparative studies are available on PACS. 
-				</dropdown>
-			</multi_select>
+			</insert>
 			<h1>
 				Findings
 			</h1>
@@ -1040,19 +1001,9 @@ Not present | Present
 			<text_entry label="" subtype="small">
 				MR images were acquired of the spine with and without intravenous contrast.
 			</text_entry>
-			<h1>
+			<insert>
 				Comparison
-			</h1>
-			<multi_select >
-				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					MRI | MRA | MRI/MRA | series of MRI studies | CT | CTA | CT/CTA |  series of CT studies | cross-sectional imaging | ultrasound
-				</dropdown>
-				<free_text label="Date" flags = "dont_print_label">
-				</free_text>
-				<dropdown label="No studies">
-					No comparative studies are available on PACS. 
-				</dropdown>
-			</multi_select>
+			</insert>
 			<h1>
 				Findings
 			</h1>
@@ -1109,19 +1060,9 @@ Not present | Present
 			<text_entry label="" subtype="small">
 				MR images were acquired of the spine with and without intravenous contrast.
 			</text_entry>
-			<h1>
+			<insert>
 				Comparison
-			</h1>
-			<multi_select >
-				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					MRI | MRA | MRI/MRA | series of MRI studies | CT | CTA | CT/CTA |  series of CT studies | cross-sectional imaging | ultrasound
-				</dropdown>
-				<free_text label="Date" flags = "dont_print_label">
-				</free_text>
-				<dropdown label="No studies">
-					No comparative studies are available on PACS. 
-				</dropdown>
-			</multi_select>
+			</insert>
 			<h1>
 				Findings
 			</h1>
@@ -1184,16 +1125,9 @@ Not present | Present
 			<text_entry label="" subtype="small">
 				MR images of the brachial plexus were acquired without intravenous contrast. 
 			</text_entry>
-			<h1>
+			<insert>
 				Comparison
-			</h1>
-			<multi_select >
-				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
-				</dropdown>
-				<free_text label="Date" flags = "dont_print_label">
-				</free_text>
-			</multi_select>
+			</insert>
 			<h1>
 				Findings
 			</h1>
@@ -1248,16 +1182,6 @@ Not present | Present
 			</h1>
 			<text_entry subtype="small">CT images of the head were acquired without intravenous contrast. 
 			</text_entry>
-			<h1>
-				Comparison
-			</h1>
-			<multi_select >
-				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					CT | series of CT studies | MRI | series of MRI studies | cross-sectional imaging | ultrasound
-				</dropdown>
-				<free_text label="Date" flags = "dont_print_label">
-				</free_text>
-			</multi_select>
 
 			<h1>
 				Findings
@@ -1349,6 +1273,9 @@ Not present | Present
 			<insert>
 				Plain CT Start
 			</insert>
+			<insert>
+				Comparison
+			</insert>
 			<h2 flags="dont_print">
 				Acute pathology
 			</h2>
@@ -1437,6 +1364,9 @@ Not present | Present
 			<insert>
 				Plain CT Start
 			</insert>
+			<insert>
+				Comparison
+			</insert>
 			<h2 flags="dont_print">
 				Acute pathology
 			</h2>
@@ -1487,6 +1417,9 @@ Not present | Present
 		<content>
 			<insert>
 				Plain CT Start
+			</insert>
+			<insert>
+				Comparison
 			</insert>
 			<h2 flags="dont_print">
 				Traumatic pathology
@@ -1546,6 +1479,9 @@ Not present | Present
 		<content>
 			<insert>
 				Plain CT Start
+			</insert>
+			<insert>
+				Comparison
 			</insert>
 			<multi_select label="Description">
 				<dropdown label="Side" print_text_before="There is fat stranding surrounding the">
