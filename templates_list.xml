@@ -2669,6 +2669,8 @@ Not present | Present
 			<insert>
 				Comparison
 			</insert>
+			<h1>Findings</h1>
+
 			<h2 flags="dont_print">
 				Skull base
 			</h2>
@@ -2789,6 +2791,8 @@ Not present | Present
 			<insert>
 				Comparison
 			</insert>
+			<h1>Findings</h1>
+
 			<multi_radio>
 				<radio label="Globes" normaltext="Normal appearances of the ocular globes. ">
 					Normal | Abnormal
@@ -2862,6 +2866,8 @@ Not present | Present
 			<insert>
 				Comparison
 			</insert>
+			<h1>Findings</h1>
+
 			<multi_radio>
 				<radio label="Internal auditory canals" normaltext="Normal appearances of the internal auditory canals. ">
 					Normal | Abnormal
@@ -2929,6 +2935,8 @@ Not present | Present
 			<insert>
 				Comparison
 			</insert>
+			<h1>Findings</h1>
+
 			<multi_radio>
 				<radio label="Facial nerve perineural enhancement" normaltext="No abnormal enhancement of the seventh cranial nerves in the internal auditory canal or temporal bone. ">
 					Not present | Present
@@ -2999,6 +3007,8 @@ Not present | Present
 			<insert>
 				Comparison
 			</insert>
+			<h1>Findings</h1>
+
 			<selection label="Generic">There are no structural abnormalities, mass lesions, or vascular pathology.
 			</selection>
 			<selection label="Gyri">The gyral appearances are normal. | Polymicrogyria is noted. </selection>
@@ -3060,6 +3070,8 @@ Not present | Present
 			<insert>
 				Comparison
 			</insert>
+			<h1>Findings</h1>
+
 			<h2 flags="dont_print">
 				Acute pathology: head
 			</h2>
@@ -3118,6 +3130,8 @@ Not present | Present
 			<insert>
 				Comparison
 			</insert>
+			<h1>Findings</h1>
+
 			<selection label="Note is made">
 				Note is made of placement of a ventricular catheter.
 			</selection>
@@ -3230,9 +3244,12 @@ Not present | Present
 			<insert>
 				MRI Head Start
 			</insert>
+
 			<insert>
 				Comparison
 			</insert>
+			<h1>Findings</h1>
+
 			<multi_select label="Sella mass specific">
 				<dropdown label="Enhancement" print_text_before="There is an" print_text_after="sella mass">
 					enhancing | non-enhancing
@@ -3378,6 +3395,8 @@ Not present | Present
 			<insert>
 				Comparison
 			</insert>
+			<h1>Findings</h1>
+
 			<h2 flags="dont_print">
 				Headache causes
 			</h2>
@@ -3451,6 +3470,8 @@ Not present | Present
 			<insert>
 				Comparison
 			</insert>
+			<h1>Findings</h1>
+
 			<h2 flags="dont_print">
 				Malformations of cortical development
 			</h2>
@@ -3588,6 +3609,8 @@ Not present | Present
 			<insert>
 				Comparison
 			</insert>
+			<h1>Findings</h1>
+
 			<multi_select label="Description">
 				<free_text label="Location" print_text_before="Note is made of the lesion located in the">
 				</free_text>
@@ -3664,6 +3687,8 @@ Not present | Present
 			<insert>
 				Comparison
 			</insert>
+			<h1>Findings</h1>
+
 			<text_entry subtype="medium">
 			</text_entry>
 
@@ -3750,6 +3775,8 @@ Not present | Present
 			<insert>
 				Comparison
 			</insert>
+			<h1>Findings</h1>
+
 			<h2 flags="dont_print">
 				General
 			</h2>
@@ -3885,6 +3912,8 @@ Not present | Present
 			<insert>
 				Comparison
 			</insert>
+			<h1>Findings</h1>
+
 			<text_entry subtype="medium">
 			</text_entry>
 
