@@ -1526,6 +1526,9 @@ Not present | Present
 			<insert>
 				Plain CT Start
 			</insert>
+			<insert>
+				Comparison
+			</insert>
 			<h2 flags="dont_print">
 				Neurodegerative
 			</h2>
@@ -1702,16 +1705,9 @@ Not present | Present
 			</h1>
 			<text_entry label="" subtype="small">
 			</text_entry>
-			<h1>
+			<insert>
 				Comparison
-			</h1>
-			<multi_select >
-				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
-				</dropdown>
-				<free_text label="Date" flags = "dont_print_label">
-				</free_text>
-			</multi_select>
+			</insert>
 			<h1>
 				Findings
 			</h1>
@@ -1763,16 +1759,9 @@ Not present | Present
 			</h1>
 			<text_entry label="" subtype="small">
 			</text_entry>
-			<h1>
+			<insert>
 				Comparison
-			</h1>
-			<multi_select >
-				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
-				</dropdown>
-				<free_text label="Date" flags = "dont_print_label">
-				</free_text>
-			</multi_select>
+			</insert>
 			<h1>
 				Findings
 			</h1>
@@ -1837,16 +1826,9 @@ Not present | Present
 			<text_entry label="" subtype="small">
 			Non-contrast CT of the head. CT arteriogram from aortic arch to vertex of the head. 
 			</text_entry>
-			<h1>
+			<insert>
 				Comparison
-			</h1>
-			<multi_select >
-				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
-				</dropdown>
-				<free_text label="Date" flags = "dont_print_label">
-				</free_text>
-			</multi_select>
+			</insert>
 			<h1>
 				Findings
 			</h1>
@@ -1951,16 +1933,9 @@ Not present | Present
 			</h1>
 			<text_entry label="" subtype="small">
 			</text_entry>
-			<h1>
+			<insert>
 				Comparison
-			</h1>
-			<multi_select >
-				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
-				</dropdown>
-				<free_text label="Date" flags = "dont_print_label">
-				</free_text>
-			</multi_select>
+			</insert>
 			<h1>
 				Findings
 			</h1>
@@ -2067,16 +2042,9 @@ Not present | Present
 			</h1>
 			<text_entry label="" subtype="small">
 			</text_entry>
-			<h1>
+			<insert>
 				Comparison
-			</h1>
-			<multi_select >
-				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
-				</dropdown>
-				<free_text label="Date" flags = "dont_print_label">
-				</free_text>
-			</multi_select>
+			</insert>
 			<h1>
 				Findings
 			</h1>
@@ -2163,16 +2131,9 @@ Not present | Present
 			</h1>
 			<text_entry label="" subtype="small">Non-contrast study. 
 			</text_entry>
-			<h1>
+			<insert>
 				Comparison
-			</h1>
-			<multi_select >
-				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
-				</dropdown>
-				<free_text label="Date" flags = "dont_print_label">
-				</free_text>
-			</multi_select>
+			</insert>
 			<h1>
 				Findings
 			</h1>
@@ -2284,16 +2245,9 @@ Not present | Present
 			</h1>
 			<text_entry label="" subtype="small">
 			</text_entry>
-			<h1>
+			<insert>
 				Comparison
-			</h1>
-			<multi_select >
-				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
-				</dropdown>
-				<free_text label="Date" flags = "dont_print_label">
-				</free_text>
-			</multi_select>
+			</insert>
 			<h1>
 				Findings
 			</h1>
@@ -2338,16 +2292,9 @@ Not present | Present
 			</h1>
 			<text_entry label="" subtype="small">
 			</text_entry>
-			<h1>
+			<insert>
 				Comparison
-			</h1>
-			<multi_select >
-				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
-				</dropdown>
-				<free_text label="Date" flags = "dont_print_label">
-				</free_text>
-			</multi_select>
+			</insert>
 			<h1>
 				Findings
 			</h1>
@@ -2388,16 +2335,9 @@ Not present | Present
 			</h1>
 			<text_entry label="" subtype="small">
 			</text_entry>
-			<h1>
+			<insert>
 				Comparison
-			</h1>
-			<multi_select >
-				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
-				</dropdown>
-				<free_text label="Date" flags = "dont_print_label">
-				</free_text>
-			</multi_select>
+			</insert>
 			<h1>
 				Findings
 			</h1>
@@ -2429,16 +2369,6 @@ Not present | Present
 			</h1>
 			<text_entry subtype="small">
 			</text_entry>
-			<h1>
-				Comparison
-			</h1>
-			<multi_select >
-				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
-				</dropdown>
-				<free_text label="Date" flags = "dont_print_label">
-				</free_text>
-			</multi_select>
 			<h1>
 				Findings
 			</h1>
@@ -2609,6 +2539,9 @@ Not present | Present
 			<insert>
 				MRI Head Start
 			</insert>
+			<insert>
+				Comparison
+			</insert>
 			<h2 flags="dont_print">
 				Acute pathology
 			</h2>
@@ -2656,27 +2589,25 @@ Not present | Present
 			MRI Head and MRA
 		</title>
 		<content>
-			<content>
-				<h1>
+
+			<h1>
 				Clinical Indication
-				</h1>
-				<text_entry label="" subtype="medium">
-				</text_entry>
-				<h1>
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
 				Technique
-				</h1>
-				<text_entry subtype="small">
+			</h1>
+			<text_entry subtype="small">
 				Non-contrast MR images of the brain and MR angiogram. 
-				</text_entry>
-				<h1>
+			</text_entry>
+			<insert>
 				Comparison
-				</h1>
-				<text_entry label="" subtype="small">
-				</text_entry>
-				<h1>
+			</insert>
+			<h1>
 				Findings
-				</h1>
-			</content>
+			</h1>
+
 			<h2 flags="dont_print">
 				Acute pathology
 			</h2>
@@ -2741,6 +2672,9 @@ Not present | Present
 		<content>
 			<insert>
 				MRI Head Start
+			</insert>
+			<insert>
+				Comparison
 			</insert>
 			<h2 flags="dont_print">
 				Skull base
@@ -2880,6 +2814,9 @@ Not present | Present
 			<insert>
 				MRI Head Start
 			</insert>
+			<insert>
+				Comparison
+			</insert>
 			<multi_radio>
 				<radio label="Globes" normaltext="Normal appearances of the ocular globes. ">
 					Normal | Abnormal
@@ -2950,6 +2887,9 @@ Not present | Present
 			<insert>
 				MRI Head Start
 			</insert>
+			<insert>
+				Comparison
+			</insert>
 			<multi_radio>
 				<radio label="Internal auditory canals" normaltext="Normal appearances of the internal auditory canals. ">
 					Normal | Abnormal
@@ -3013,6 +2953,9 @@ Not present | Present
 		<content>
 			<insert>
 				MRI Head Start
+			</insert>
+			<insert>
+				Comparison
 			</insert>
 			<multi_radio>
 				<radio label="Facial nerve perineural enhancement" normaltext="No abnormal enhancement of the seventh cranial nerves in the internal auditory canal or temporal bone. ">
@@ -3081,6 +3024,9 @@ Not present | Present
 			<insert>
 				MRI Head Start
 			</insert>
+			<insert>
+				Comparison
+			</insert>
 			<selection label="Generic">There are no structural abnormalities, mass lesions, or vascular pathology.
 			</selection>
 			<selection label="Gyri">The gyral appearances are normal. | Polymicrogyria is noted. </selection>
@@ -3139,6 +3085,9 @@ Not present | Present
 			<insert>
 				MRI Head Start
 			</insert>
+			<insert>
+				Comparison
+			</insert>
 			<h2 flags="dont_print">
 				Acute pathology: head
 			</h2>
@@ -3193,6 +3142,9 @@ Not present | Present
 		<content>
 			<insert>
 				MRI Head Start
+			</insert>
+			<insert>
+				Comparison
 			</insert>
 			<selection label="Note is made">
 				Note is made of placement of a ventricular catheter.
@@ -3305,6 +3257,9 @@ Not present | Present
 		<content>
 			<insert>
 				MRI Head Start
+			</insert>
+			<insert>
+				Comparison
 			</insert>
 			<multi_select label="Sella mass specific">
 				<dropdown label="Enhancement" print_text_before="There is an" print_text_after="sella mass">
@@ -3448,6 +3403,9 @@ Not present | Present
 			<insert>
 				MRI Head Start
 			</insert>
+			<insert>
+				Comparison
+			</insert>
 			<h2 flags="dont_print">
 				Headache causes
 			</h2>
@@ -3517,6 +3475,9 @@ Not present | Present
 		<content>
 			<insert>
 				MRI Head Start
+			</insert>
+			<insert>
+				Comparison
 			</insert>
 			<h2 flags="dont_print">
 				Malformations of cortical development
@@ -3652,6 +3613,9 @@ Not present | Present
 			<insert>
 				MRI Head Start
 			</insert>
+			<insert>
+				Comparison
+			</insert>
 			<multi_select label="Description">
 				<free_text label="Location" print_text_before="Note is made of the lesion located in the">
 				</free_text>
@@ -3724,6 +3688,9 @@ Not present | Present
 		<content>
 			<insert>
 				MRI Head Start
+			</insert>
+			<insert>
+				Comparison
 			</insert>
 			<text_entry subtype="medium">
 			</text_entry>
@@ -3807,6 +3774,9 @@ Not present | Present
 		<content>
 			<insert>
 				MRI Head Start
+			</insert>
+			<insert>
+				Comparison
 			</insert>
 			<h2 flags="dont_print">
 				General
@@ -3940,6 +3910,9 @@ Not present | Present
 			<insert>
 				MRI Head Start
 			</insert>
+			<insert>
+				Comparison
+			</insert>
 			<text_entry subtype="medium">
 			</text_entry>
 
@@ -4006,6 +3979,9 @@ Not present | Present
 			<insert>
 				MRI Head Start
 			</insert>
+			<insert>
+				Comparison
+			</insert>
 			<text_entry subtype="medium">
 			</text_entry>
 
@@ -4069,6 +4045,9 @@ Not present | Present
 			<insert>
 				MRI Head Start
 			</insert>
+			<insert>
+				Comparison
+			</insert>
 			<selection label="CN 7 and 8">
 				Unremarkable appearances of the seventh and eighth nerve complexes bilaterally.
 			</selection>
@@ -4128,6 +4107,9 @@ Not present | Present
 		<content>
 			<insert>
 				MRI Head Start
+			</insert>
+			<insert>
+				Comparison
 			</insert>
 			<multi_checkbox label="Multiple foci of abnormal signal are identified in the">
 				<checkbox>
@@ -4219,6 +4201,9 @@ Not present | Present
 		<content>
 			<insert>
 				MRI Head Start
+			</insert>
+			<insert>
+				Comparison
 			</insert>
 			<multi_checkbox label="Multiple foci of abnormal signal are identified in the">
 				<checkbox>
