@@ -1039,10 +1039,13 @@ Not present | Present
 			</h1>
 			<multi_select >
 				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
+					MRI | MRA | MRI/MRA | series of MRI studies | CT | CTA | CT/CTA |  series of CT studies | cross-sectional imaging | ultrasound
 				</dropdown>
 				<free_text label="Date" flags = "dont_print_label">
 				</free_text>
+				<dropdown label="No studies">
+					No comparative studies are available on PACS. 
+				</dropdown>
 			</multi_select>
 			<h1>
 				Findings
@@ -2745,7 +2748,7 @@ Not present | Present
 
 	<template>
 		<name>
-			MRI Head: Routine
+			MRI Head: Acute
 		</name>
 		<type>
 			Diagnostic
@@ -2760,6 +2763,8 @@ Not present | Present
 			<h2 flags="dont_print">
 				Acute pathology
 			</h2>
+			<text_entry subtype="medium" flags="dont_print_label">
+			</text_entry>
 			<multi_radio>
 				<text_entry subtype="large">
 				</text_entry>
@@ -3288,6 +3293,8 @@ Not present | Present
 			<h2 flags="dont_print">
 				Acute pathology: head
 			</h2>
+			<text_entry subtype="medium" flags="dont_print_label">
+			</text_entry>
 			<multi_radio>
 				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
 					Not present | Present

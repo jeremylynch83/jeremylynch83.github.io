@@ -1164,11 +1164,11 @@
 						var strength = "";
 						ratio = parseInt((area / five_fr) * 100);
 						if (ratio < 30) {
-							strength = " (weak at " + ratio + "% " + "of a 5F diagnostic catheter)"
+							strength = " (weak at " + ratio + "%)"
 						} else if (ratio >= 30 && ratio < 75) {
-							strength = " (moderate at " + ratio + "% " + "of a 5F diagnostic catheter)";
+							strength = " (moderate at " + ratio + "%)";
 						} else if (ratio >= 75) {
-							strength = " (strong at " + ratio + "% " + "of a 5F diagnostic catheter)";
+							strength = " (strong at " + ratio + "%)";
 						}
 						return strength
 					}
