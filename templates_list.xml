@@ -65,6 +65,23 @@ Not present | Present
 <all>
 
 	<!--*********************** ANGIO ***********************-->
+	<module>
+		<name>
+			Comparison
+		</name>
+		<content>
+			<h1>
+				Comparison
+			</h1>
+			<multi_select >
+				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
+					CTA | CT | catheter angiography 
+				</dropdown>
+				<free_text label="Date" flags = "dont_print_label">
+				</free_text>
+			</multi_select>
+		</content>
+	</module>
 
 	<module>
 		<name>
@@ -202,16 +219,9 @@ Not present | Present
 			<insert>
 				Angio technique
 			</insert>
-			<h1>
+			<insert>
 				Comparison
-			</h1>
-			<multi_select >
-				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					CTA | CT | catheter angiography 
-				</dropdown>
-				<free_text label="Date" flags = "dont_print_label">
-				</free_text>
-			</multi_select>
+			</insert>
 			<h1>
 				Findings
 			</h1>
@@ -288,9 +298,13 @@ Not present | Present
 			<h1>
 				Findings
 			</h1>
-			<insert>
-				Aneurysm description
-			</insert>
+			<query_insert>Aneurysm description
+			</query_insert>
+			<query_insert>DAVF description
+			</query_insert>
+			<query_insert>AVM description
+			</query_insert>
+
 			<text_entry label="" subtype="large">
 			</text_entry>
 			<h1>
@@ -331,60 +345,6 @@ Not present | Present
 		</content>
 	</module>
 
-
-	<template>
-		<name>
-			Cerebral Angiogram: Dural Arteriovenous Fistula (DAVF)
-		</name>
-		<type>
-			Angiography
-		</type>
-		<title>
-			Cerebral Angiogram
-		</title>
-		<content>
-			<h1>
-				Clinical Indication
-			</h1>
-			<text_entry label="" subtype="medium">
-			</text_entry>
-			<h1>
-				Technique
-			</h1>
-			<insert>
-				Angio header
-			</insert>
-			<insert>
-				Angio technique
-			</insert>
-			<h1>
-				Comparison
-			</h1>
-			<multi_select >
-				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
-				</dropdown>
-				<free_text label="Date" flags = "dont_print_label">
-				</free_text>
-			</multi_select>
-			<h1>
-				Findings
-			</h1>
-			<insert>
-				DAVF description
-			</insert>
-			<text_entry label="" subtype="large">
-			</text_entry>
-			<h1>
-				Conclusion
-			</h1>
-			<text_entry label="" subtype="medium">
-			</text_entry>
-			<selection label="Referral">
-				Neurovascular team referral is recommended.  
-			</selection>
-		</content>
-	</template>
 
 
 	<module>
@@ -438,59 +398,6 @@ Not present | Present
 		</content>
 	</module>
 
-	<template>
-		<name>
-			Cerebral Angiogram: Arteriovenous Malformation (AVM)
-		</name>
-		<type>
-			Angiography
-		</type>
-		<title>
-			Cerebral Angiogram
-		</title>
-		<content>
-			<h1>
-				Clinical Indication
-			</h1>
-			<text_entry label="" subtype="medium">
-			</text_entry>
-			<h1>
-				Technique
-			</h1>
-			<insert>
-				Angio header
-			</insert>
-			<insert>
-				Angio technique
-			</insert>
-			<h1>
-				Comparison
-			</h1>
-			<multi_select >
-				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
-				</dropdown>
-				<free_text label="Date" flags = "dont_print_label">
-				</free_text>
-			</multi_select>
-			<h1>
-				Findings
-			</h1>
-			<insert>
-				AVM description
-			</insert>
-			<text_entry label="" subtype="large">
-			</text_entry>
-			<h1>
-				Conclusion
-			</h1>
-			<text_entry label="" subtype="medium">
-			</text_entry>
-			<selection label="Referral">
-				Neurovascular team referral is recommended.  
-			</selection>
-		</content>
-	</template>
 
 	<template>
 		<name>
@@ -1138,10 +1045,13 @@ Not present | Present
 			</h1>
 			<multi_select >
 				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
+					MRI | MRA | MRI/MRA | series of MRI studies | CT | CTA | CT/CTA |  series of CT studies | cross-sectional imaging | ultrasound
 				</dropdown>
 				<free_text label="Date" flags = "dont_print_label">
 				</free_text>
+				<dropdown label="No studies">
+					No comparative studies are available on PACS. 
+				</dropdown>
 			</multi_select>
 			<h1>
 				Findings
@@ -1204,10 +1114,13 @@ Not present | Present
 			</h1>
 			<multi_select >
 				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					MRI | series of MRI studies | CT | series of CT studies | cross-sectional imaging | ultrasound
+					MRI | MRA | MRI/MRA | series of MRI studies | CT | CTA | CT/CTA |  series of CT studies | cross-sectional imaging | ultrasound
 				</dropdown>
 				<free_text label="Date" flags = "dont_print_label">
 				</free_text>
+				<dropdown label="No studies">
+					No comparative studies are available on PACS. 
+				</dropdown>
 			</multi_select>
 			<h1>
 				Findings
