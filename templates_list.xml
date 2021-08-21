@@ -79,6 +79,10 @@ Not present | Present
 				</dropdown>
 				<free_text label="Date" flags = "dont_print_label">
 				</free_text>
+				<dropdown label="No comparisons">
+					No comparative studies are available on PACS 
+				</dropdown>
+
 			</multi_select>
 		</content>
 	</module>
@@ -2615,6 +2619,39 @@ Not present | Present
 		</content>
 	</template>
 
+	<module>
+		<name>
+			Intracranial hypertension
+		</name>
+		<content>
+			<h2 flags="dont_print">
+				Intracranial hypertension
+			</h2>
+
+			<selection label="Normal">No evidence of  intracranial hypertension. 
+			</selection>
+
+			<multi_radio>
+				<radio label="Optic nerve sheath dilatation or tortuosity" flags="dont_print_normal">
+					Not present | Present
+				</radio>
+				<radio label="Papilloedema" flags="dont_print_normal">
+					Not present | Present
+				</radio>
+				<radio label="Sella arachnoid herniation" flags="dont_print_normal">
+					Not present | Present
+				</radio>
+				<radio label="Small venous sinuses" flags="dont_print_normal">
+					Not present | Present
+				</radio>
+				<radio label="Tonsillar ectopia" flags="dont_print_normal">
+					Not present | Present
+				</radio>
+			</multi_radio>
+		</content>
+	</module>
+
+
 	<template>
 		<name>
 			MRI Head: Pulsatile Tinnitus
@@ -2645,30 +2682,9 @@ Not present | Present
 			</multi_radio>
 
 
-			<h2 flags="dont_print">
+			<insert>
 				Intracranial hypertension
-			</h2>
-
-			<selection label="Normal">No evidence of  intracranial hypertension. 
-			</selection>
-
-			<multi_radio>
-				<radio label="Optic nerve sheath dilatation or tortuosity" flags="dont_print_normal">
-					Not present | Present
-				</radio>
-				<radio label="Papilloedema" flags="dont_print_normal">
-					Not present | Present
-				</radio>
-				<radio label="Sella arachnoid herniation" flags="dont_print_normal">
-					Not present | Present
-				</radio>
-				<radio label="Small venous sinuses" flags="dont_print_normal">
-					Not present | Present
-				</radio>
-				<radio label="Tonsillar ectopia" flags="dont_print_normal">
-					Not present | Present
-				</radio>
-			</multi_radio>
+			</insert>
 
 			<h2 flags="dont_print">
 				Arterial
