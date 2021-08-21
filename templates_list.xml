@@ -228,6 +228,12 @@ Not present | Present
 			<selection label="Normal">
 				Normal cerebral vasculature is demonstrated. No aneurysms or other vascular abnormalities are identified.
 			</selection>
+			<query_insert>Aneurysm description
+			</query_insert>
+			<query_insert>DAVF description
+			</query_insert>
+			<query_insert>AVM description
+			</query_insert>
 			<text_entry label="" subtype="large">
 			</text_entry>
 			<h1>
@@ -260,56 +266,6 @@ Not present | Present
 		</content>
 	</module>
 
-	<template>
-		<name>
-			Cerebral Angiogram: Aneurysm
-		</name>
-		<type>
-			Angiography
-		</type>
-		<title>
-			Cerebral Angiogram
-		</title>
-		<content>
-			<h1>
-				Clinical Indication
-			</h1>
-			<text_entry label="" subtype="medium">
-			</text_entry>
-			<h1>
-				Technique
-			</h1>
-			<insert>
-				Angio header
-			</insert>
-			<insert>
-				Angio technique
-			</insert>
-			<insert>
-				Comparison
-			</insert>
-			<h1>
-				Findings
-			</h1>
-			<query_insert>Aneurysm description
-			</query_insert>
-			<query_insert>DAVF description
-			</query_insert>
-			<query_insert>AVM description
-			</query_insert>
-
-			<text_entry label="" subtype="large">
-			</text_entry>
-			<h1>
-				Conclusion
-			</h1>
-			<text_entry label="" subtype="medium">
-			</text_entry>
-			<selection label="Referral">
-				Neurovascular team referral is recommended.  
-			</selection>
-		</content>
-	</template>
 
 	<module>
 		<name>DAVF description
