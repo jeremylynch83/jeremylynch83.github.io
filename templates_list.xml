@@ -596,10 +596,10 @@ Not present | Present
 					bulge | prolapse | extrusion | migration | sequestration | intravertebral herniation
 				</dropdown>
 				<dropdown label="Side" print_text_before="protruding in to the">
-					right | left
+					right | left | central
 				</dropdown>
 				<dropdown label="Location">
-					central canal | subarticular zone | foraminal zone | extraforaminal zone
+					canal | subarticular zone | foraminal zone | extraforaminal zone
 				</dropdown>
 			</multi_select>
 			<selection label="Ligamentum flavum">
@@ -778,7 +778,7 @@ Not present | Present
 				There is normal formation and segmentation of the lumbosacral spine. | There is a transitional lumbosacral junction.
 			</selection>
 			<selection label="Vertebral alignment">
-				Vertebral alignment is normal | Vertebral alignment is abnormal
+				Vertebral alignment is normal.
 			</selection>
 			<h2>
 				T12-L1:
@@ -1585,6 +1585,8 @@ Not present | Present
 			<h2>
 				CT Angiogram Intracranial
 			</h2>
+						<text_entry label="" subtype="medium">
+			</text_entry>
 			<selection label="Occlusion">
 				There is no proximal intracranial occlusion
 			</selection>
