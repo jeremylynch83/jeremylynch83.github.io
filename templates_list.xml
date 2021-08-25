@@ -1900,7 +1900,7 @@ Not present | Present
 			<h1>
 				Findings
 			</h1>
-			<text_entry label="Note is made of" subtype="small">
+			<text_entry subtype="medium">
 			</text_entry>
 
 			<selection label="Bones">
@@ -1908,7 +1908,7 @@ Not present | Present
 			</selection>
 
 			<selection label="Curvature">
-				There is reversal of Cervical Lordosis 
+				There is reversal of Cervical Lordosis | There is straightening of the normal cervical curvature
 			</selection>
 
 			<multi_select label="Scoliosis" askfurtherdetails="true">
@@ -1951,7 +1951,7 @@ Not present | Present
 
 			<multi_radio>
 				<radio label="Atlantoaxial joint">
-					Normal | Abnormal
+					The atlatoaxial joint is normal. 
 				</radio>
 			</multi_radio>
 
@@ -1960,16 +1960,16 @@ Not present | Present
 				Normal appearances of the visualised lung apices | Mild dependent atelectasis is present at the imaged lung apices
 			</selection>
 			<multi_radio>
-				<radio label="Posterior fossa">
+				<radio label="Posterior fossa" flags="dont_print_normal">
 					Normal | Abnormal
 				</radio>
-				<radio label="Imaged pulmonary vasculature">
+				<radio label="Imaged pulmonary vasculature" flags="dont_print_normal">
 					Normal | Abnormal
 				</radio>
-				<radio label="Lymph nodes">
+				<radio label="Lymph nodes" flags="dont_print_normal">
 					Normal | Abnormal
 				</radio>
-				<radio label="Thyroid gland">
+				<radio label="Thyroid gland" flags="dont_print_normal">
 					Normal | Abnormal
 				</radio>
 			</multi_radio>
