@@ -1142,10 +1142,6 @@ Not present | Present
 			</h1>
 			<text_entry subtype="small">CT images of the head were acquired without intravenous contrast. 
 			</text_entry>
-
-			<h1>
-				Findings
-			</h1>
 		</content>
 	</module>
 	<module>
@@ -1236,6 +1232,7 @@ Not present | Present
 			<insert>
 				Comparison
 			</insert>
+			<h1>Findings</h1>
 			<h2 flags="dont_print">
 				Acute pathology
 			</h2>
@@ -1327,6 +1324,7 @@ Not present | Present
 			<insert>
 				Comparison
 			</insert>
+			<h1>Findings</h1>
 			<h2 flags="dont_print">
 				Acute pathology
 			</h2>
@@ -1381,6 +1379,7 @@ Not present | Present
 			<insert>
 				Comparison
 			</insert>
+			<h1>Findings</h1>
 			<h2 flags="dont_print">
 				Traumatic pathology
 			</h2>
@@ -1443,6 +1442,7 @@ Not present | Present
 			<insert>
 				Comparison
 			</insert>
+			<h1>Findings</h1>
 			<multi_select label="Description">
 				<dropdown label="Side" print_text_before="There is fat stranding surrounding the">
 					right orbit. | left orbit. | both orbits. 
@@ -1489,6 +1489,7 @@ Not present | Present
 			<insert>
 				Comparison
 			</insert>
+			<h1>Findings</h1>
 			<h2 flags="dont_print">
 				Neurodegerative
 			</h2>
