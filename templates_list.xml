@@ -2330,9 +2330,6 @@ Not present | Present
 			</h1>
 			<text_entry subtype="small">
 			</text_entry>
-			<h1>
-				Findings
-			</h1>
 		</content>
 	</module>
 	<module>
@@ -2503,6 +2500,7 @@ Not present | Present
 			<insert>
 				Comparison
 			</insert>
+			<h1>Findings</h1>
 			<h2 flags="dont_print">
 				Acute pathology
 			</h2>
