@@ -75,7 +75,7 @@ Not present | Present
 			</h1>
 			<multi_select >
 				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					CTA | CT | catheter angiography 
+					CTA | CT | CT/CTA | catheter angiography | MRI | MRI/MRA | Ultrasound | Series of cross-sectional studies
 				</dropdown>
 				<free_text label="Date" flags = "dont_print_label">
 				</free_text>
