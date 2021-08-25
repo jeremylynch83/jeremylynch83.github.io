@@ -2532,6 +2532,8 @@ Not present | Present
 			<h1>
 				Conclusion
 			</h1>
+						<selection label="No acute">No acute pathology is detected. </selection>
+
 			<text_entry label="" subtype="medium">
 			</text_entry>
 		</content>
