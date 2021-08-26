@@ -75,7 +75,7 @@ Not present | Present
 			</h1>
 			<multi_select >
 				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					CTA | CT | catheter angiography 
+					CTA | CT | CT/CTA | catheter angiography | MRI | MRI/MRA | Ultrasound | Series of cross-sectional studies
 				</dropdown>
 				<free_text label="Date" flags = "dont_print_label">
 				</free_text>
@@ -596,10 +596,10 @@ Not present | Present
 					bulge | prolapse | extrusion | migration | sequestration | intravertebral herniation
 				</dropdown>
 				<dropdown label="Side" print_text_before="protruding in to the">
-					right | left
+					right | left | central
 				</dropdown>
 				<dropdown label="Location">
-					central canal | subarticular zone | foraminal zone | extraforaminal zone
+					canal | subarticular zone | foraminal zone | extraforaminal zone
 				</dropdown>
 			</multi_select>
 			<selection label="Ligamentum flavum">
@@ -778,7 +778,7 @@ Not present | Present
 				There is normal formation and segmentation of the lumbosacral spine. | There is a transitional lumbosacral junction.
 			</selection>
 			<selection label="Vertebral alignment">
-				Vertebral alignment is normal | Vertebral alignment is abnormal
+				Vertebral alignment is normal.
 			</selection>
 			<h2>
 				T12-L1:
@@ -1142,10 +1142,6 @@ Not present | Present
 			</h1>
 			<text_entry subtype="small">CT images of the head were acquired without intravenous contrast. 
 			</text_entry>
-
-			<h1>
-				Findings
-			</h1>
 		</content>
 	</module>
 	<module>
@@ -1236,6 +1232,7 @@ Not present | Present
 			<insert>
 				Comparison
 			</insert>
+			<h1>Findings</h1>
 			<h2 flags="dont_print">
 				Acute pathology
 			</h2>
@@ -1327,6 +1324,7 @@ Not present | Present
 			<insert>
 				Comparison
 			</insert>
+			<h1>Findings</h1>
 			<h2 flags="dont_print">
 				Acute pathology
 			</h2>
@@ -1381,6 +1379,7 @@ Not present | Present
 			<insert>
 				Comparison
 			</insert>
+			<h1>Findings</h1>
 			<h2 flags="dont_print">
 				Traumatic pathology
 			</h2>
@@ -1443,6 +1442,7 @@ Not present | Present
 			<insert>
 				Comparison
 			</insert>
+			<h1>Findings</h1>
 			<multi_select label="Description">
 				<dropdown label="Side" print_text_before="There is fat stranding surrounding the">
 					right orbit. | left orbit. | both orbits. 
@@ -1489,6 +1489,7 @@ Not present | Present
 			<insert>
 				Comparison
 			</insert>
+			<h1>Findings</h1>
 			<h2 flags="dont_print">
 				Neurodegerative
 			</h2>
@@ -1584,6 +1585,8 @@ Not present | Present
 			<h2>
 				CT Angiogram Intracranial
 			</h2>
+						<text_entry label="" subtype="medium">
+			</text_entry>
 			<selection label="Occlusion">
 				There is no proximal intracranial occlusion
 			</selection>
@@ -1899,7 +1902,7 @@ Not present | Present
 			<h1>
 				Findings
 			</h1>
-			<text_entry label="Note is made of" subtype="small">
+			<text_entry subtype="medium">
 			</text_entry>
 
 			<selection label="Bones">
@@ -1907,7 +1910,7 @@ Not present | Present
 			</selection>
 
 			<selection label="Curvature">
-				There is reversal of Cervical Lordosis 
+				There is reversal of Cervical Lordosis | There is straightening of the normal cervical curvature
 			</selection>
 
 			<multi_select label="Scoliosis" askfurtherdetails="true">
@@ -1950,7 +1953,7 @@ Not present | Present
 
 			<multi_radio>
 				<radio label="Atlantoaxial joint">
-					Normal | Abnormal
+					The atlatoaxial joint is normal. 
 				</radio>
 			</multi_radio>
 
@@ -1959,16 +1962,16 @@ Not present | Present
 				Normal appearances of the visualised lung apices | Mild dependent atelectasis is present at the imaged lung apices
 			</selection>
 			<multi_radio>
-				<radio label="Posterior fossa">
+				<radio label="Posterior fossa" flags="dont_print_normal">
 					Normal | Abnormal
 				</radio>
-				<radio label="Imaged pulmonary vasculature">
+				<radio label="Imaged pulmonary vasculature" flags="dont_print_normal">
 					Normal | Abnormal
 				</radio>
-				<radio label="Lymph nodes">
+				<radio label="Lymph nodes" flags="dont_print_normal">
 					Normal | Abnormal
 				</radio>
-				<radio label="Thyroid gland">
+				<radio label="Thyroid gland" flags="dont_print_normal">
 					Normal | Abnormal
 				</radio>
 			</multi_radio>
@@ -2329,9 +2332,6 @@ Not present | Present
 			</h1>
 			<text_entry subtype="small">
 			</text_entry>
-			<h1>
-				Findings
-			</h1>
 		</content>
 	</module>
 	<module>
@@ -2362,6 +2362,9 @@ Not present | Present
 				</dropdown>
 				<dropdown label="Hippocampal location" print_text_after="hippocampal atrophy.">
 					bilateral | right | left
+				</dropdown>
+					<dropdown label="Microhaemorrhage" >
+					There are no cerebral microhaemorrhages. 
 				</dropdown>
 			</multi_select>
 			<selection label="Bones">
@@ -2502,6 +2505,7 @@ Not present | Present
 			<insert>
 				Comparison
 			</insert>
+			<h1>Findings</h1>
 			<h2 flags="dont_print">
 				Acute pathology
 			</h2>
@@ -2533,6 +2537,8 @@ Not present | Present
 			<h1>
 				Conclusion
 			</h1>
+						<selection label="No acute">No acute pathology is detected. </selection>
+
 			<text_entry label="" subtype="medium">
 			</text_entry>
 		</content>
