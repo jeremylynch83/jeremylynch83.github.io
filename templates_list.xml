@@ -3983,6 +3983,8 @@ Not present | Present
 			<insert>
 				Comparison
 			</insert>
+			<h1>Findings</h1>
+
 			<text_entry subtype="medium">
 			</text_entry>
 
@@ -4049,6 +4051,8 @@ Not present | Present
 			<insert>
 				Comparison
 			</insert>
+			<h1>Findings</h1>
+
 			<selection label="CN 7 and 8">
 				Unremarkable appearances of the seventh and eighth nerve complexes bilaterally.
 			</selection>

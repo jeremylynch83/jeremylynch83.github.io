@@ -1,6 +1,5 @@
 deviceList=
 
-
 [
     {
         "type": "Balloon",
@@ -1179,6 +1178,7 @@ deviceList=
         "type": "Balloon",
         "name": "HyperForm 3 mm ",
         "manufacturer": "Medtronic",
+        "image": "hyper.png",
         "description": "\"HyperForm™ Occlusion Balloons are designed  with extra softness to  conform to asymmetrical, irregular,  and,  complex  vasculature  geometries like none other.\"",
         "url1": "https://web.archive.org/web/20210405011659/http://www.forecastscience.com/download/forecastscience_com/HyperForm%20brochure.pdf",
         "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
@@ -1194,6 +1194,7 @@ deviceList=
         "type": "Balloon",
         "name": "HyperForm 4 mm ",
         "manufacturer": "Medtronic",
+        "image": "hyper.png",
         "description": "\"HyperForm™ Occlusion Balloons are designed  with extra softness to  conform to asymmetrical, irregular,  and,  complex  vasculature  geometries like none other.\"",
         "url1": "https://web.archive.org/web/20210405011659/http://www.forecastscience.com/download/forecastscience_com/HyperForm%20brochure.pdf",
         "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
@@ -1209,6 +1210,7 @@ deviceList=
         "type": "Balloon",
         "name": "HyperForm 7 mm ",
         "manufacturer": "Medtronic",
+        "image": "hyper.png",
         "description": "\"HyperForm™ Occlusion Balloons are designed  with extra softness to  conform to asymmetrical, irregular,  and,  complex  vasculature  geometries like none other.\"",
         "url1": "https://web.archive.org/web/20210405011659/http://www.forecastscience.com/download/forecastscience_com/HyperForm%20brochure.pdf",
         "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
@@ -1274,8 +1276,9 @@ deviceList=
     },
     {
         "type": "Coil",
-        "name": "Axium Prime/3D/Helical/MicroFx",
+        "name": "Axium ",
         "manufacturer": "Medtronic",
+        "description": "<p>PRIME FRAME: \nThe first and last coil loops are smaller than the rest and designed to reduce implant herniation. The remaining coil loops are 3D and have no shape. Comes in diameters 3-25 mm and lengths 6-50 mm. The coil outer diameter varies between 0.0115\" to 0.0145\". The volume filled varies between 4.02 to 53.27 mm cubed. </p>\n\n<p>PRIME SOFT and EXTRA SOFT:\nSoft and extra soft have random coil break designed to deflect when it encounters resistance and seek out open spaces. \n\nSoft coil comes in 3D and Helix configurations. The diameters for both of these vary from 4-6 mm and lengths 6-20 cm. The outer diameter is 0.0115. The volume filled ranges from 4.02 mm cubed to 13.4 mm cubed. Whilst helical coils are good at finding space if prolapse is an issue (for example during the first few coils) 3D might be a better option. \n\nExtra Soft also comes in 3D and Helix configurations. The diameters for 3D varies from 1-3.5 mm and lengths 2-10 cm. The outer diameter is 0.0108\" and volume varies between 1.18 to 5.9 mm cubed. The diameters for Helix varies between 1-3 mm and lengths 1-10 cm. The outer diameter is 0.0108\" and volume varies between 0.59 to 5.9 mm cubed. \n</p><p>\nMICROFX:\nContains PGLA/nylon microfilaments designed to accelerate thrombosis. Has \"LatticeFX technology\" which provides a scaffold designed to enhance cell adhesion and extracellular deposition. Comes in 3D and Helix configurations. \n\nThe 3D configuration comes in diameters of 2-18 mm and lengths of 2-40 cm. The outer diameter varies between 0.0115 - 0.0145 inches. The volume varies between 1.34 - 42.62 mm cubed. \n\nThe Helix configuration comes in diameters of 2-10 mm and lengths of 1-30 cm. The outer diameter varies between 0.0115 - 0.0135 inches. The volume varies between 0.67 - 27.7 mm cubed. </p>",
         "url1": "https://www.medtronic.com/us-en/healthcare-professionals/products/neurological/aneurysm-treatment/axium.html",
         "minid": 0,
         "maxod": 0.0155,
@@ -1377,7 +1380,8 @@ deviceList=
         "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
         "minid": 0.068,
         "maxod": 0.083,
-        "length": "132"
+        "length": "132",
+        "comments": "The React 68 aspiration catheter is distally lined with PTFE. It has consistent braid construction with 8 wires in each braid. There is some experimental ex-vivo evidence that the high distensibility of the React's tip improves the aspiration ability of the device when retrieving stiffs clot larger than the device inner diameter. (Li J, Castaño O, Tomasello A, de Dios Lascuevas M, Canals P, Engel E, Ribo M. Catheter tip distensibility substantially influences the aspiration force of thrombectomy devices. J Neurointerv Surg. 2021 Apr 15:neurintsurg-2021-017487. doi: 10.1136/neurintsurg-2021-017487)."
     },
     {
         "type": "Catheter",
@@ -1387,7 +1391,8 @@ deviceList=
         "url1": "https://www.medtronic.com/us-en/healthcare-professionals/products/neurological/revascularization-stroke/react-catheters.html",
         "minid": 0.071,
         "maxod": 0.0855,
-        "length": "132"
+        "length": "132",
+        "comments": "The React 71 aspiration catheter is distally lined with TPE. It has variable braid construction with 16 wires in each braid. There is some experimental ex-vivo evidence that the high distensibility of the React's tip improves the aspiration ability of the device when retrieving stiffs clot larger than the device inner diameter. (Li J, Castaño O, Tomasello A, de Dios Lascuevas M, Canals P, Engel E, Ribo M. Catheter tip distensibility substantially influences the aspiration force of thrombectomy devices. J Neurointerv Surg. 2021 Apr 15:neurintsurg-2021-017487. doi: 10.1136/neurintsurg-2021-017487)."
     },
     {
         "type": "Liquid Embolic",
@@ -2418,11 +2423,13 @@ deviceList=
         "type": "Balloon",
         "name": "pITA RX Neuro PTA Balloon Catheter",
         "manufacturer": "Phenox",
+        "image": "pita.png",
         "url1": "https://phenox.net/international/uploads/KIF/KIF-0031C.pdf",
         "url2": "https://phenox.net/international/pita-rx-neuro-pta-balloon-catheter/",
         "minid": 0,
         "maxod": 0.032808,
-        "length": 160
+        "length": 160,
+        "comments": "Can be used for intracranial or extra cranial stenoses. Is rapid exchange. Has a hydrophilic coating. Diameter sizes from 1.25 to 4.0 mm and lengths from 10 to 40 mm. Compliance: \"Non-/semi\"."
     },
     {
         "type": "Coil",
@@ -2439,6 +2446,7 @@ deviceList=
         "type": "Intrasaccular Device",
         "name": "pCONUS 1 / 2 / mini",
         "manufacturer": "Phenox",
+        "image": "pconus.png",
         "description": "\"The pCONUS  Bifurcation  Aneurysm  Implant  is  a  new category of intraluminal device intended to treat complex,     wide     neck     intracranial     bifurcation     aneurysms. It  is  designed  to  support  the  coil  mass  at  the  levelof   the   neck   of   those   aneurysms   that   cannot   be easily coiled or surgically treated.\"",
         "url1": "https://phenox.net/international/pconus-bifurcation-aneurysm-implant/",
         "url2": "https://phenox.net/international/uploads/KIF/pCONUS_KIF-0020J_LR.pdf",
@@ -2511,7 +2519,7 @@ deviceList=
         "minid": 0,
         "maxod": 0.014,
         "length": 205,
-        "comments": "There is a \"EXT\" extension wire"
+        "comments": "There is an \"EXT\" extension wire"
     },
     {
         "type": "Stent",
@@ -3234,5 +3242,95 @@ deviceList=
         "length": "95 / 105",
         "code": "ICAC088095 / ICAC088105",
         "comments": "Guide catheter/long sheath"
+    },
+    {
+        "type": "Wire",
+        "name": "Platinum Plus 014",
+        "manufacturer": "Boston Scientific",
+        "description": "\"A vessel-straightening guidewire for challenging cases where torque response, very high rail support and significant pushability are required.\"",
+        "url1": "https://www.bostonscientific.com/en-US/products/guidewires/platinum-plus-guide-wire.html",
+        "url2": "https://www.bostonscientific.com/en-US/products/guidewires/platinum-plus-guide-wire/platinum-plus-prescriptive-information.html",
+        "minid": 0,
+        "maxod": 0.014,
+        "length": "180 / 300",
+        "code": "H749 1751 1 / H749 1752 1 (Qty 3)",
+        "tipLengths": "5 or 8 cm radiopacity tip ",
+        "material": "Unibody stainless steel core with silicone coating"
+    },
+    {
+        "type": "Wire",
+        "name": "Platinum Plus 018",
+        "manufacturer": "Boston Scientific",
+        "description": "\"A vessel-straightening guidewire for challenging cases where torque response, very high rail support and significant pushability are required.\"",
+        "url1": "https://www.bostonscientific.com/en-US/products/guidewires/platinum-plus-guide-wire.html",
+        "url2": "https://www.bostonscientific.com/en-US/products/guidewires/platinum-plus-guide-wire/platinum-plus-prescriptive-information.html",
+        "minid": 0,
+        "maxod": 0.018,
+        "length": 180,
+        "code": "H749 1753 1",
+        "tipLengths": "5 or 8 cm radiopacity tip ",
+        "material": "Unibody stainless steel core with silicone coating"
+    },
+    {
+        "type": "Balloon",
+        "name": "goldballoon 1 / 2",
+        "manufacturer": "Balt",
+        "description": "\"The only detachable balloon on the market.\"",
+        "url1": "https://selamedical.co.uk/wp-content/uploads/2020/10/202006-GOLD-BALLOON-BROCHURE.pdf",
+        "url2": "https://www.1amedical.org/wordpress/wp-content/uploads/2020/06/goldballoons.pdf",
+        "minid": 0,
+        "maxod": 0.06,
+        "length": 170,
+        "comments": "Requires the following catheters: MABDTE, BALTACCIBDPE, BALTACCIBDPE100"
+    },
+    {
+        "type": "Balloon",
+        "name": "goldballoon 3 / 4",
+        "manufacturer": "Balt",
+        "description": "\"The only detachable balloon on the market.\"",
+        "url1": "https://selamedical.co.uk/wp-content/uploads/2020/10/202006-GOLD-BALLOON-BROCHURE.pdf",
+        "url2": "https://www.1amedical.org/wordpress/wp-content/uploads/2020/06/goldballoons.pdf",
+        "minid": 0,
+        "maxod": 0.08,
+        "length": 170,
+        "comments": "Requires the following catheters: MABDTE, BALTACCIBDPE, BALTACCIBDPE100"
+    },
+    {
+        "type": "Balloon",
+        "name": "goldballoon 5",
+        "manufacturer": "Balt",
+        "description": "\"The only detachable balloon on the market.\"",
+        "url1": "https://selamedical.co.uk/wp-content/uploads/2020/10/202006-GOLD-BALLOON-BROCHURE.pdf",
+        "url2": "https://www.1amedical.org/wordpress/wp-content/uploads/2020/06/goldballoons.pdf",
+        "minid": 0,
+        "maxod": 0.01,
+        "length": 170,
+        "comments": "Requires the following catheters: MABDTE, BALTACCIBDPE, BALTACCIBDPE100"
+    },
+    {
+        "type": "Balloon",
+        "name": "goldballoon 6",
+        "manufacturer": "Balt",
+        "description": "\"The only detachable balloon on the market.\"",
+        "url1": "https://selamedical.co.uk/wp-content/uploads/2020/10/202006-GOLD-BALLOON-BROCHURE.pdf",
+        "url2": "https://www.1amedical.org/wordpress/wp-content/uploads/2020/06/goldballoons.pdf",
+        "minid": 0,
+        "maxod": 0.011,
+        "length": 170,
+        "comments": "Requires the following catheters: MABDTE, BALTACCIBDPE, BALTACCIBDPE100"
+    },
+    {
+        "type": "Stent",
+        "name": "LVIS Evo",
+        "manufacturer": "Microvention",
+        "description": "\"Braided with Nitinol – Platinum DFT (Drawn Filled Tube) wire, the LVIS EVO stent provides full visibility of every single wire under fluoroscopy, reliable support to the coil mass, and flexible braids that allow for optimized opening and advanced techniques.\n\nDFT wire makes every wire visible under fluoroscopy. 17 - 28% metal coverage provides reliable support to the coil mass. The flexible braided design ensures the stent opening and wall apposition, and allows for the advanced techniques, for example “shelf” or “shouldering” technique.\"",
+        "url1": "https://www.microvention.com/emea/product/lvis-evo",
+        "ifu": "https://www.microvention.com/emea/product/lvis-evo/instructions-for-use/lvis-evo",
+        "minid": 0,
+        "maxod": 0.0155,
+        "length": "?",
+        "sizetable": "[{\"Labeled diameter (mm)\":\"LVIS EVO 2.5\",\"Length option 1\":12,\"Length option 2\":17,\"Length option 3\":22,\"Length option 4\":27,\"Length option 5\":null},{\"Labeled diameter (mm)\":\"LVIS EVO 3.0\",\"Length option 1\":18,\"Length option 2\":24,\"Length option 3\":28,\"Length option 4\":32,\"Length option 5\":null},{\"Labeled diameter (mm)\":\"LVIS EVO 3.5\",\"Length option 1\":17,\"Length option 2\":22,\"Length option 3\":28,\"Length option 4\":34,\"Length option 5\":null},{\"Labeled diameter (mm)\":\"LVIS EVO 4.0\",\"Length option 1\":13,\"Length option 2\":18,\"Length option 3\":21,\"Length option 4\":27,\"Length option 5\":31}]",
+        "tablecaption": "Total length at labeled diameter (mm)",
+        "material": "Nitinol-Platiinum drawn filled tube"
     }
 ]

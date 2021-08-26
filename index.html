@@ -1163,12 +1163,14 @@
 					function strength_calc(area) {
 						var strength = "";
 						ratio = parseInt((area / five_fr) * 100);
-						if (ratio < 30) {
-							strength = " (weak at " + ratio + "%)"
+						if (ratio < 20) {
+							strength = " (very little space)"
+						} else if (ratio >= 20 && ratio < 30) {
+							strength = " (not much space)"
 						} else if (ratio >= 30 && ratio < 75) {
-							strength = " (moderate at " + ratio + "%)";
+							strength = " (some space)";
 						} else if (ratio >= 75) {
-							strength = " (strong at " + ratio + "%)";
+							strength = " (lots of space)";
 						}
 						return strength
 					}
