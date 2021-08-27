@@ -1475,6 +1475,12 @@ Not present | Present
 				</radio>
 			</multi_radio>
 
+
+
+			<insert>
+				CT Head Checklist
+			</insert>
+
 			<h2>C-Spine</h2>
 						<text_entry subtype="medium">
 			</text_entry>
@@ -1551,10 +1557,6 @@ Not present | Present
 			</multi_radio>
 
 
-
-			<insert>
-				CT Head Checklist
-			</insert>
 			<h1>
 				Conclusion
 			</h1>
