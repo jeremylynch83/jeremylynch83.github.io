@@ -1,6 +1,5 @@
 deviceList=
 
-
 [
     {
         "type": "Balloon",
@@ -1179,6 +1178,7 @@ deviceList=
         "type": "Balloon",
         "name": "HyperForm 3 mm ",
         "manufacturer": "Medtronic",
+        "image": "hyper.png",
         "description": "\"HyperForm™ Occlusion Balloons are designed  with extra softness to  conform to asymmetrical, irregular,  and,  complex  vasculature  geometries like none other.\"",
         "url1": "https://web.archive.org/web/20210405011659/http://www.forecastscience.com/download/forecastscience_com/HyperForm%20brochure.pdf",
         "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
@@ -1194,6 +1194,7 @@ deviceList=
         "type": "Balloon",
         "name": "HyperForm 4 mm ",
         "manufacturer": "Medtronic",
+        "image": "hyper.png",
         "description": "\"HyperForm™ Occlusion Balloons are designed  with extra softness to  conform to asymmetrical, irregular,  and,  complex  vasculature  geometries like none other.\"",
         "url1": "https://web.archive.org/web/20210405011659/http://www.forecastscience.com/download/forecastscience_com/HyperForm%20brochure.pdf",
         "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
@@ -1209,6 +1210,7 @@ deviceList=
         "type": "Balloon",
         "name": "HyperForm 7 mm ",
         "manufacturer": "Medtronic",
+        "image": "hyper.png",
         "description": "\"HyperForm™ Occlusion Balloons are designed  with extra softness to  conform to asymmetrical, irregular,  and,  complex  vasculature  geometries like none other.\"",
         "url1": "https://web.archive.org/web/20210405011659/http://www.forecastscience.com/download/forecastscience_com/HyperForm%20brochure.pdf",
         "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
@@ -1378,7 +1380,8 @@ deviceList=
         "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/neurovascular-product-catalog.pdf",
         "minid": 0.068,
         "maxod": 0.083,
-        "length": "132"
+        "length": "132",
+        "comments": "The React 68 aspiration catheter is distally lined with PTFE. It has consistent braid construction with 8 wires in each braid. There is some experimental ex-vivo evidence that the high distensibility of the React's tip improves the aspiration ability of the device when retrieving stiffs clot larger than the device inner diameter. (Li J, Castaño O, Tomasello A, de Dios Lascuevas M, Canals P, Engel E, Ribo M. Catheter tip distensibility substantially influences the aspiration force of thrombectomy devices. J Neurointerv Surg. 2021 Apr 15:neurintsurg-2021-017487. doi: 10.1136/neurintsurg-2021-017487)."
     },
     {
         "type": "Catheter",
@@ -1388,7 +1391,8 @@ deviceList=
         "url1": "https://www.medtronic.com/us-en/healthcare-professionals/products/neurological/revascularization-stroke/react-catheters.html",
         "minid": 0.071,
         "maxod": 0.0855,
-        "length": "132"
+        "length": "132",
+        "comments": "The React 71 aspiration catheter is distally lined with TPE. It has variable braid construction with 16 wires in each braid. There is some experimental ex-vivo evidence that the high distensibility of the React's tip improves the aspiration ability of the device when retrieving stiffs clot larger than the device inner diameter. (Li J, Castaño O, Tomasello A, de Dios Lascuevas M, Canals P, Engel E, Ribo M. Catheter tip distensibility substantially influences the aspiration force of thrombectomy devices. J Neurointerv Surg. 2021 Apr 15:neurintsurg-2021-017487. doi: 10.1136/neurintsurg-2021-017487)."
     },
     {
         "type": "Liquid Embolic",
@@ -2419,11 +2423,13 @@ deviceList=
         "type": "Balloon",
         "name": "pITA RX Neuro PTA Balloon Catheter",
         "manufacturer": "Phenox",
+        "image": "pita.png",
         "url1": "https://phenox.net/international/uploads/KIF/KIF-0031C.pdf",
         "url2": "https://phenox.net/international/pita-rx-neuro-pta-balloon-catheter/",
         "minid": 0,
         "maxod": 0.032808,
-        "length": 160
+        "length": 160,
+        "comments": "Can be used for intracranial or extra cranial stenoses. Is rapid exchange. Has a hydrophilic coating. Diameter sizes from 1.25 to 4.0 mm and lengths from 10 to 40 mm. Compliance: \"Non-/semi\"."
     },
     {
         "type": "Coil",
@@ -2440,6 +2446,7 @@ deviceList=
         "type": "Intrasaccular Device",
         "name": "pCONUS 1 / 2 / mini",
         "manufacturer": "Phenox",
+        "image": "pconus.png",
         "description": "\"The pCONUS  Bifurcation  Aneurysm  Implant  is  a  new category of intraluminal device intended to treat complex,     wide     neck     intracranial     bifurcation     aneurysms. It  is  designed  to  support  the  coil  mass  at  the  levelof   the   neck   of   those   aneurysms   that   cannot   be easily coiled or surgically treated.\"",
         "url1": "https://phenox.net/international/pconus-bifurcation-aneurysm-implant/",
         "url2": "https://phenox.net/international/uploads/KIF/pCONUS_KIF-0020J_LR.pdf",
@@ -2512,7 +2519,7 @@ deviceList=
         "minid": 0,
         "maxod": 0.014,
         "length": 205,
-        "comments": "There is a \"EXT\" extension wire"
+        "comments": "There is an \"EXT\" extension wire"
     },
     {
         "type": "Stent",
