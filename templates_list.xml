@@ -1488,6 +1488,147 @@ Not present | Present
 	</template>
 
 
+		<template>
+		<name>
+			CT Non-Contrast Head and Cervical Spine
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>
+			CT Head
+		</title>
+		<content>
+			<insert>
+				Plain CT Start
+			</insert>
+			<insert>
+				Comparison
+			</insert>
+			<h1>Findings</h1>
+			<h2 flags="dont_print">
+				Traumatic pathology
+			</h2>
+			<text_entry subtype="medium">
+			</text_entry>
+			<multi_radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Grey-white differentiation" normaltext="Grey-white matter differentiation is maintained.">
+					Normal | Abnormal
+				</radio>
+			</multi_radio>
+
+			<h2 flags="dont_print">
+				Other acute pathology
+			</h2>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Hyperdense vessel" normaltext="No hyperdense vessel is apparent.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+
+
+
+			<insert>
+				CT Head Checklist
+			</insert>
+
+			<h2>C-Spine</h2>
+						<text_entry subtype="medium">
+			</text_entry>
+
+			<selection label="Bones">
+				There is no acute fracture or destructive bony lesion.
+			</selection>
+
+			<selection label="Curvature">
+				There is reversal of Cervical Lordosis | There is straightening of the normal cervical curvature
+			</selection>
+
+			<multi_select label="Scoliosis" askfurtherdetails="true">
+				<dropdown label="Convex to the" print_text_before="There is scoliosis which is convex to the">
+					right | left
+				</dropdown>
+				<free_text label="Centered at level" print_text_before="and centered at"></free_text>
+			</multi_select>
+
+			<text_entry label="There are uncovertebral osteophytes  at" subtype="small">
+			</text_entry>
+			<text_entry label="There are marginal anterior vertebral body osteophytes at" subtype="small">
+			</text_entry>
+			<text_entry label="Vertebral body narrowing is noted at" subtype="small">
+			</text_entry>
+			<text_entry label="There is disc space narrowing at" subtype="small">
+			</text_entry>
+
+			<multi_select label="Subluxation" askfurtherdetails="true">
+				<free_text label="Distance" print_text_before="There is"></free_text>
+				<dropdown label="Direction" print_text_before="of">
+					anterior subluxation | posterior subluxation
+				</dropdown>
+				<dropdown label="Location" print_text_before="of">
+					C1 on C2 | C2 on C3 | C3 on C4 | C4 on C5 | C5 on C6 | C6 on C7 | C7 on T1 | T1 on T2
+				</dropdown>
+			</multi_select>
+
+			<multi_select label="Neural foraminal narrowing" askfurtherdetails="true">
+				<free_text label="Right-sided" print_text_before="There is right-sided neural foraminal narrowing at"></free_text>
+				<free_text label="Left-sided" print_text_before="There is left-sided neural foraminal narrowing at"></free_text>
+			</multi_select>
+
+			<text_entry label="Multilevel facetal degeneration is evident most severe at" subtype="small">
+			</text_entry>
+			<text_entry label="There is fusion of" subtype="small">
+			</text_entry>
+			<text_entry label="There is endplate change at" subtype="small">
+			</text_entry>
+
+			<multi_radio>
+				<radio label="Atlantoaxial joint">
+					The atlatoaxial joint is normal. 
+				</radio>
+			</multi_radio>
+
+			<h2>Other</h2>
+			<selection label="Lung apices">
+				Normal appearances of the visualised lung apices | Mild dependent atelectasis is present at the imaged lung apices
+			</selection>
+			<multi_radio>
+				<radio label="Posterior fossa" flags="dont_print_normal">
+					Normal | Abnormal
+				</radio>
+				<radio label="Imaged pulmonary vasculature" flags="dont_print_normal">
+					Normal | Abnormal
+				</radio>
+				<radio label="Lymph nodes" flags="dont_print_normal">
+					Normal | Abnormal
+				</radio>
+				<radio label="Thyroid gland" flags="dont_print_normal">
+					Normal | Abnormal
+				</radio>
+			</multi_radio>
+
+
+			<h1>
+				Conclusion
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+
+
 	<template>
 		<name>
 			CT Orbits: Cellulitis
