@@ -103,13 +103,13 @@ Not present | Present
 			Angio technique
 		</name>
 		<content>
-			<text_entry label="Consent">
+			<text_entry label="Consent" flags = "dont_print_label">
 				Informed consent was obtained from the patient including the risk of stroke, puncture site haemorrhage and numbness, and peripheral vascular occlusion.
 			</text_entry>
 			<selection label="Anaesthesia" print_label="true" showdetailson="0">
 				General anaesthesia | Conscious sedation | Local anaesthesia
 			</selection>
-			<multi_select label="Puncture">
+			<multi_select label="Puncture" flags = "dont_print_label">
 				<dropdown label="Local">
 					1% lidocaine was infiltrated into the puncture site superficial tissues.
 				</dropdown>
@@ -512,7 +512,7 @@ Not present | Present
 			<h1>
 				Technique
 			</h1>
-			<text_entry label="Consent">
+			<text_entry label="Consent" flags = "dont_print_label">
 				Written consent included the risks of infection, bleeding, CSF leak, damage to nerve roots resulting in bladder/bowel incontinence and weakness.
 			</text_entry>
 			<multi_select>
@@ -532,6 +532,69 @@ Not present | Present
 			<selection label="Complications">
 				There were no periprocedural complications.
 			</selection>
+			<h1>
+				Conclusion
+			</h1>
+			<selection label="Summary">
+				Uncomplicated lumbar puncture.
+			</selection>
+			<selection label="Post-procedure">
+				Requires 1-2 hours bed rest flat on back.
+			</selection>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
+
+	<template>
+		<name>
+			CT Myelogram
+		</name>
+		<type>
+			Angiography
+		</type>
+		<title>
+			CT Myelogram
+		</title>
+		<content>
+			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
+				Technique
+			</h1>
+			<text_entry label="Consent" flags = "dont_print_label">
+				Written consent included the risks of infection, bleeding, CSF leak, damage to nerve roots resulting in bladder/bowel incontinence and weakness.
+			</text_entry>
+			<multi_select>
+				<dropdown label="Local" flags = "dont_print_label">
+					1% lidocaine was infiltrated into the puncture site superficial tissues.
+				</dropdown>
+				<dropdown label="Needle" print_text_before="A" print_text_after="gauge needle was inserted in to the thecal space">
+					19 | 20 | 21 | 22 
+				</dropdown>
+				<free_text label="Level" print_text_before="at the" print_text_after="level.">
+				</free_text>
+				<free_text label="Opening pressure" print_text_after="mmCSF.">
+				</free_text>
+				<free_text label="Closing pressure" print_text_after="mmCSF.">
+				</free_text>
+				<free_text label="Amount of contrast injected in to the thecal space:">
+				</free_text>
+				<dropdown label="CT">
+					After positioning maneuvres the patient underwent a CT of the spine. 
+				</dropdown>
+			</multi_select>
+			<selection label="Complications">
+				There were no periprocedural complications.
+			</selection>
+			<h1>
+				Findings
+			</h1>
+			<text_entry subtype="medium">
+			</text_entry>
 			<h1>
 				Conclusion
 			</h1>
@@ -1585,7 +1648,7 @@ Not present | Present
 			<h2>
 				CT Angiogram Intracranial
 			</h2>
-						<text_entry label="" subtype="medium">
+			<text_entry label="" subtype="medium">
 			</text_entry>
 			<selection label="Occlusion">
 				There is no proximal intracranial occlusion
@@ -2363,7 +2426,7 @@ Not present | Present
 				<dropdown label="Hippocampal location" print_text_after="hippocampal atrophy.">
 					bilateral | right | left
 				</dropdown>
-					<dropdown label="Microhaemorrhage" >
+				<dropdown label="Microhaemorrhage">
 					There are no cerebral microhaemorrhages. 
 				</dropdown>
 			</multi_select>
@@ -2537,7 +2600,7 @@ Not present | Present
 			<h1>
 				Conclusion
 			</h1>
-						<selection label="No acute">No acute pathology is detected. </selection>
+			<selection label="No acute">No acute pathology is detected. </selection>
 
 			<text_entry label="" subtype="medium">
 			</text_entry>
