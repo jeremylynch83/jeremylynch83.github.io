@@ -271,10 +271,10 @@ deviceList=
         "url1": "https://balt-usa.com/products/eclipse-2l-dual-lumen-balloon-catheter/",
         "dmso": "yes",
         "minid": 0.016,
-        "maxod": 0.035,
+        "maxod": 0.037,
         "length": "?",
         "sizetable": "[{\"REFERENCE\":\"ECL2L6x7SN\",\"MAX INFLATION\":\"6\",\"L\":\"7\",\"INFLATION RANGE\":\"~2mm to 6mm\",\"DISTAL TIP O.D. X LENGTH\":\"2.0F (.027”) x 3mm\",\"I.D. (WORKING LUMEN)\":\"0.41mm/.016″\",\"DOUBLE LUMEN OUTER THICKNESS\":\".9mm/.035″\",\"DOUBLE LUMEN OUTER WIDTH\":\"1.10mm/.043″\"},{\"REFERENCE\":\"ECL2L6x9\",\"MAX INFLATION\":\"6\",\"L\":\"9\",\"INFLATION RANGE\":\"~2mm to 6mm\",\"DISTAL TIP O.D. X LENGTH\":\"2.0F (.027”) x 7mm\",\"I.D. (WORKING LUMEN)\":\"0.41mm/.016″\",\"DOUBLE LUMEN OUTER THICKNESS\":\".9mm/.035″\",\"DOUBLE LUMEN OUTER WIDTH\":\"1.10mm/.043″\"},{\"REFERENCE\":\"ECL2L6x12\",\"MAX INFLATION\":\"6\",\"L\":\"12\",\"INFLATION RANGE\":\"~2mm to 6mm\",\"DISTAL TIP O.D. X LENGTH\":\"2.0F (.027”) x 7mm\",\"I.D. (WORKING LUMEN)\":\"0.41mm/.016″\",\"DOUBLE LUMEN OUTER THICKNESS\":\".9mm/.035″\",\"DOUBLE LUMEN OUTER WIDTH\":\"1.10mm/.043″\"},{\"REFERENCE\":\"ECL2L6x15\",\"MAX INFLATION\":\"6\",\"L\":\"15\",\"INFLATION RANGE\":\"~2mm to 6mm\",\"DISTAL TIP O.D. X LENGTH\":\"2.0F (.027”) x 7mm\",\"I.D. (WORKING LUMEN)\":\"0.41mm/.016″\",\"DOUBLE LUMEN OUTER THICKNESS\":\".9mm/.035″\",\"DOUBLE LUMEN OUTER WIDTH\":\"1.10mm/.043″\"},{\"REFERENCE\":\"ECL2L6x20\",\"MAX INFLATION\":\"6\",\"L\":\"20\",\"INFLATION RANGE\":\"~2mm to 6mm\",\"DISTAL TIP O.D. X LENGTH\":\"2.0F (.027”) x 7mm\",\"I.D. (WORKING LUMEN)\":\"0.41mm/.016″\",\"DOUBLE LUMEN OUTER THICKNESS\":\".9mm/.035″\",\"DOUBLE LUMEN OUTER WIDTH\":\"1.10mm/.043″\"}]",
-        "comments": "It is unclear what the effective maximal diameter of the catheter is as it seems smaller than the quoted value of 0.043\" probably as the inner lumen is squashed as it goes through the catheter. We have guessed 0.035\".",
+        "comments": "It is unclear what the effective maximal diameter of the catheter is as it seems smaller than the quoted value of 0.043\" probably as the inner lumen is squashed as it goes through the catheter. We have guessed 0.037\".",
         "design": "Dual Lumen ",
         "features": "\"Unique parallel lumen design delivers 5 times faster deflation* than other dual lumen balloons. Broad treatment options allow for delivery of DMSO** liquid embolics, coils and stents. Flat catheter design and multipurpose tip optimize navigation. Unique Short Nose configuration with 3cm coiling marker are ideal for delivering coils and liquid embolics. Super compliant balloons enhance vessel occlusion and conformity in complex anatomy (e.g. bifurcations, terminus, etc).\"",
         "youtube": "https://www.youtube.com/embed/x8niYfRweec"
@@ -1068,6 +1068,7 @@ deviceList=
         "type": "Intrasaccular Device",
         "name": "Contour",
         "manufacturer": "Cerus",
+        "image": "contour.png",
         "description": "\"Designed to treat a range of aneurysm morphologies including unruptured wide-necked bifurcation and bifurcation aneurysms. Provides a combination of flow diversion at the neck of the aneurysm and flow disruption within the aneurysm sac; Supports neo-intimal growth across mesh at neck and subsequent thrombosis of aneurysm; Deployed with proven existing clinical techniques; A single device occlusion that is re-sheathable & re-deployable; Electrolytic method of detachment; Strong IP portfolio - 3 patents issued and 3 patents pending; No intra-arterial stabilizing component; Reduces/eliminates need for dual anti-platelet therapy; Simplified sizing approach compared to other intra-saccular devices (i.e. neck  and widest diameter only).\"",
         "url1": "https://www.cerusendo.com/contour-neurovascular-system",
         "url2": "https://c92319a4-9513-4c41-823f-a299417a6f3a.filesusr.com/ugd/a71523_06535810e1324c67bf0ecab7a619a921.pdf",
@@ -1094,7 +1095,8 @@ deviceList=
         "url1": "https://www.cookmedical.com/products/di_ksawsh_webds/",
         "minid": 0.087,
         "maxod": 0.10499,
-        "length": "80 / 90"
+        "length": "80 / 90",
+        "comments": "<p>The Shuttle is a relatively stiff long sheath that can be useful in situations where a wide inner diameter and supportive catheter is necessary, for example in tortuous aortic arches during thrombectomy and carotid stenting. </p>\n\n<p>NB The naming of long sheaths is slightly confusing. They are named similarly to other sheaths (e.g. groin or radial) - i.e. after their INNER diameter. Hence a \"6 french\" shuttle is actually 8 french on the outside. Guide catheters, such as the Benchmark, are named after their OUTER diameter. Hence a \"6 french\" Benchmark is 6 french on the outside. The confusion arises as long sheaths can also be used as conventional guide catheters, i.e. placed within groin sheaths.</p>\n"
     },
     {
         "type": "Microcatheter",
@@ -1325,6 +1327,7 @@ deviceList=
         "type": "Catheter",
         "name": "Mo.Ma ",
         "manufacturer": "Medtronic",
+        "description": "<p>\"Use the Mo.Ma™ Ultra proximal cerebral protection device to contain and remove all sizes of debris that can dislodge during interventional procedures in the carotid arteries. The Mo.Ma Ultra device with double-occlusion balloon system allows for proximal embolic protection to be established prior to crossing a carotid lesion.\n</p>\n<p>\n\nU.S. Indications\n\nThe Mo.Ma™ Ultra proximal cerebral protection device is indicated as an embolic protection system to contain and remove embolic material (thrombus/debris) while performing angioplasty and stenting procedures involving lesions of the internal carotid artery and/or the carotid bifurcation.\n\nThe reference diameter of the external carotid artery should be between 3-6 mm and the reference diameter of the common carotid artery should be between 5-13 mm.\n</p>\n<p>\nDouble-Occlusion Balloon System:\n\n    Utilizes highly compliant, elastomeric balloons that provide atraumatic flow suspension and stability.\n\nGuide-catheter technology:\n\n    Provides excellent trackability, support and stability for ease of lesion crossing and accurate stent deployment.\n\nWorking channel exit port distal to CCA balloon:\n\n    Provides lesion access and effective, efficient aspiration of debris.\n\nRadiopaque markers:\n\n    Markers are centrally located in each balloon for precise positioning and orientation.\n\nOptimal device selection:\n\n    Mo.Ma Ultra device allows for selection of preferred wires, stents and balloons during intervention.\n\nHigh-capture efficiency:\n\n    Device facilitates the removal of all sizes of debris through aspiration.\"</p>\n",
         "url1": "https://web.archive.org/web/20210116144904/https://www.medtronic.com/us-en/healthcare-professionals/products/cardiovascular/embolic-protection-devices/mo-ma.html",
         "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/cardiovascular/peripheral-therapies/documents/peripheral-us-product-catalog.pdf",
         "minid": 0.083,
@@ -2250,6 +2253,7 @@ deviceList=
         "minid": 0.088,
         "maxod": 0.112,
         "length": "80 / 90",
+        "comments": "The Neuron Max is a \"workhorse\" general purpose long sheath/catheter. It is useful when a support and a wide inner diameter is required. The tip is relatively stiff compared to more modern catheters, and so usually it is  left in a straight segment of the internal carotid (or below) and not taken inside the skull to avoid vessel dissection. It is not commonly used via a radially approach as the catheter may kink. ",
         "features": "\"6 F (2.03 mm) long sheath. 0.088\" (2.24 mm) lumen allows for a wide range of device compatibility. Proximal shaft engineered for support throughout aortic arch. Soft, atraumatic tip for distal placement. Full distal shaft radiopacity for visualisation throughout procedure. Compatible with Penumbra 6 F (2.03 mm) Select Catheters.\""
     },
     {
@@ -2278,7 +2282,8 @@ deviceList=
         "url1": "https://www.penumbrainc.com/neuro-device/benchmark/",
         "minid": 0.071,
         "maxod": 0.079,
-        "length": "95 / 105 / 115"
+        "length": "95 / 105 / 115",
+        "comments": "The Benchmark is a \"workhorse\" general purpose catheter. It can be used with a 6-French groin sheath. It can be used without a sheath via a radial approach. It has a very flexible distal segment that may be taken intracranially, obviating the need for intermediate catheters. It does not provide as much proximal support as catheters such as the Neuron Max or Shuttle, however, and it is of a narrower internal diameter."
     },
     {
         "type": "Catheter",
@@ -2901,7 +2906,7 @@ deviceList=
         "minid": 0,
         "maxod": 0.016,
         "length": "?",
-        "vesselDiameters": "2.0 - 4.5 mm",
+        "sizes": "3 - 4.5 mm",
         "sizetable": "[{\"Product number\":\"M003EZAS30150\",\"Stent diameter\":\"3.0mm\",\"Stent length\":\"15mm\",\"Unconstrained stent diameter\":\"3.5mm\",\"Recommended parent vessel diameter\":\"≥2.0 and <3.0mm\"},{\"Product number\":\"M003EZAS30210\",\"Stent diameter\":\"3.0mm\",\"Stent length\":\"21mm\",\"Unconstrained stent diameter\":\"3.5mm\",\"Recommended parent vessel diameter\":\"≥2.0 and <3.0mm\"},{\"Product number\":\"M003EZAS30240\",\"Stent diameter\":\"3.0mm\",\"Stent length\":\"24mm\",\"Unconstrained stent diameter\":\"3.5mm\",\"Recommended parent vessel diameter\":\"≥2.0 and <3.0mm\"},{\"Product number\":\"M003EZAS40150\",\"Stent diameter\":\"4.0mm\",\"Stent length\":\"15mm\",\"Unconstrained stent diameter\":\"4.5mm\",\"Recommended parent vessel diameter\":\"≥3.0 and <4.0mm\"},{\"Product number\":\"M003EZAS40240\",\"Stent diameter\":\"4.0mm\",\"Stent length\":\"24mm\",\"Unconstrained stent diameter\":\"4.5mm\",\"Recommended parent vessel diameter\":\"≥3.0 and <4.0mm\"},{\"Product number\":\"M003EZAS45210\",\"Stent diameter\":\"4.5mm\",\"Stent length\":\"21mm\",\"Unconstrained stent diameter\":\"5.0mm\",\"Recommended parent vessel diameter\":\"≥4.0 and ≤4.5mm\"},{\"Product number\":\"M003EZAS45300\",\"Stent diameter\":\"4.5mm\",\"Stent length\":\"30mm\",\"Unconstrained stent diameter\":\"5.0mm\",\"Recommended parent vessel diameter\":\"≥4.0 and ≤4.5mm\"}]",
         "research": 33252708,
         "material": "Nitinol",
@@ -3281,7 +3286,7 @@ deviceList=
         "minid": 0,
         "maxod": 0.06,
         "length": 170,
-        "comments": "Requires the following catheters: MABDTE, BALTACCIBDPE, BALTACCIBDPE100"
+        "comments": "It is indeed the only detachable balloon on the market. Requires the following catheters: MABDTE, BALTACCIBDPE, BALTAC. CIBDPE100"
     },
     {
         "type": "Balloon",
@@ -3293,7 +3298,7 @@ deviceList=
         "minid": 0,
         "maxod": 0.08,
         "length": 170,
-        "comments": "Requires the following catheters: MABDTE, BALTACCIBDPE, BALTACCIBDPE100"
+        "comments": "It is indeed the only detachable balloon on the market. Requires the following catheters: MABDTE, BALTACCIBDPE, BALTAC. CIBDPE101"
     },
     {
         "type": "Balloon",
@@ -3305,7 +3310,7 @@ deviceList=
         "minid": 0,
         "maxod": 0.01,
         "length": 170,
-        "comments": "Requires the following catheters: MABDTE, BALTACCIBDPE, BALTACCIBDPE100"
+        "comments": "It is indeed the only detachable balloon on the market. Requires the following catheters: MABDTE, BALTACCIBDPE, BALTAC. CIBDPE102"
     },
     {
         "type": "Balloon",
@@ -3317,7 +3322,7 @@ deviceList=
         "minid": 0,
         "maxod": 0.011,
         "length": 170,
-        "comments": "Requires the following catheters: MABDTE, BALTACCIBDPE, BALTACCIBDPE100"
+        "comments": "It is indeed the only detachable balloon on the market. Requires the following catheters: MABDTE, BALTACCIBDPE, BALTAC. CIBDPE103"
     },
     {
         "type": "Stent",
