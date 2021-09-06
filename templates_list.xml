@@ -1488,7 +1488,7 @@ Not present | Present
 	</template>
 
 
-		<template>
+	<template>
 		<name>
 			CT Non-Contrast Head and Cervical Spine
 		</name>
@@ -1545,7 +1545,7 @@ Not present | Present
 			</insert>
 
 			<h2>C-Spine</h2>
-						<text_entry subtype="medium">
+			<text_entry subtype="medium">
 			</text_entry>
 
 			<selection label="Bones">
@@ -1791,6 +1791,22 @@ Not present | Present
 			</h2>
 			<text_entry label="" subtype="medium">
 			</text_entry>
+			<selection label="Right carotid artery">
+				The right common and internal carotid arteries are normal
+			</selection>
+			<selection label="Left carotid artery">
+				The left common and internal carotid arteries are normal
+			</selection>
+			<selection label="Right vertebral artery">
+				The right vertebral artery is normal
+			</selection>
+			<selection label="Left vertebral artery">
+				The left vertebral artery is normal
+			</selection>
+			<selection label="Basilar artery">
+				The basilar artery is normal
+			</selection>
+
 			<selection label="Occlusion">
 				There is no proximal intracranial occlusion
 			</selection>
