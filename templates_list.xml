@@ -293,7 +293,7 @@ Not present | Present
 				</dropdown>
 			</multi_select>
 			<selection label="Cognard grade">
-				Cognard 1 (confined to sinus, antegrade flow, no cortical venous flux). | Cognard 2a (confined to sinus, retrograde flow, no cortical venous flux). | Cognard 2b (drains to sinus with cortical venous flux). | Cognard 3 (drains directly into non-ectatic cortical veins). | Cognard 4 (drains directly into ectatic cortical veins). | Cognard 5 (spinal perimedullary venous drainage). 
+				Classification: Cognard 1 (confined to sinus, antegrade flow, no cortical venous flux). | Classification: Cognard 2a (confined to sinus, retrograde flow, no cortical venous flux). | Classification: Cognard 2b (drains to sinus with cortical venous flux). | Classification: Cognard 3 (drains directly into non-ectatic cortical veins). | Classification: Cognard 4 (drains directly into ectatic cortical veins). | Classification: Cognard 5 (spinal perimedullary venous drainage). 
 			</selection>
 		</content>
 	</module>
