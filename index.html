@@ -1119,7 +1119,7 @@
 								}
 							})
 
-							if (child_total_od >= parent_data.minid) {
+							if (child_total_od >= parent_data.minid || compat_str != "") {
 								summary.fit_verdict = false;
 
 								switch (child_list.length) {
@@ -1149,7 +1149,7 @@
 								}
 								summary.sizes = "<p style=\"color:red\">" + summary.sizes + child_str +
 									" does not fit in to " +
-									parent_data.name + ". " + "</p>";
+									parent_data.name + ". " + compat_str + "</p>";
 							} else summary.sizes = summary.sizes + length_txt + compat_str;
 
 							// Calculate space left
