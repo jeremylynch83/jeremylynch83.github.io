@@ -1,6 +1,5 @@
 deviceList=
 
-
 [
     {
         "type": "Balloon",
@@ -345,7 +344,7 @@ deviceList=
         "description": "\"Squid is indicated in the embolization of lesions in the peripheral and neurovasculature, including arteriovenous malformations and hypervascular tumours. Each Squid kit contains: One 1,5 mL vial of Squid, One 1,5 mL vial of DMSO, One 1 cc Blue syringe for DMSO, Two 1 cc White syringes for Squid, Two syringe adapters.\"",
         "url1": "https://baltspainmedical.es/wp-content/uploads/2019/05/SQUID.pdf",
         "minid": 0,
-        "maxod": 0.009055118,
+        "maxod": 0.00903,
         "length": "?",
         "strengths": "12 (low viscosity), 12LD (low viscosity, low radiopacity), 18 (regular viscosity), 18LD (standard viscosity, low radiopacity)",
         "preparation": "Shaking is required (approximately 15-20 minutes)",
@@ -694,6 +693,54 @@ deviceList=
     },
     {
         "type": "Balloon",
+        "name": "goldballoon 1 / 2",
+        "manufacturer": "Balt",
+        "description": "\"The only detachable balloon on the market.\"",
+        "url1": "https://selamedical.co.uk/wp-content/uploads/2020/10/202006-GOLD-BALLOON-BROCHURE.pdf",
+        "url2": "https://www.1amedical.org/wordpress/wp-content/uploads/2020/06/goldballoons.pdf",
+        "minid": 0,
+        "maxod": 0.06,
+        "length": 170,
+        "comments": "It is indeed the only detachable balloon on the market. Requires the following catheters: MABDTE, BALTACCIBDPE, BALTAC. CIBDPE100"
+    },
+    {
+        "type": "Balloon",
+        "name": "goldballoon 3 / 4",
+        "manufacturer": "Balt",
+        "description": "\"The only detachable balloon on the market.\"",
+        "url1": "https://selamedical.co.uk/wp-content/uploads/2020/10/202006-GOLD-BALLOON-BROCHURE.pdf",
+        "url2": "https://www.1amedical.org/wordpress/wp-content/uploads/2020/06/goldballoons.pdf",
+        "minid": 0,
+        "maxod": 0.08,
+        "length": 170,
+        "comments": "It is indeed the only detachable balloon on the market. Requires the following catheters: MABDTE, BALTACCIBDPE, BALTAC. CIBDPE101"
+    },
+    {
+        "type": "Balloon",
+        "name": "goldballoon 5",
+        "manufacturer": "Balt",
+        "description": "\"The only detachable balloon on the market.\"",
+        "url1": "https://selamedical.co.uk/wp-content/uploads/2020/10/202006-GOLD-BALLOON-BROCHURE.pdf",
+        "url2": "https://www.1amedical.org/wordpress/wp-content/uploads/2020/06/goldballoons.pdf",
+        "minid": 0,
+        "maxod": 0.01,
+        "length": 170,
+        "comments": "It is indeed the only detachable balloon on the market. Requires the following catheters: MABDTE, BALTACCIBDPE, BALTAC. CIBDPE102"
+    },
+    {
+        "type": "Balloon",
+        "name": "goldballoon 6",
+        "manufacturer": "Balt",
+        "description": "\"The only detachable balloon on the market.\"",
+        "url1": "https://selamedical.co.uk/wp-content/uploads/2020/10/202006-GOLD-BALLOON-BROCHURE.pdf",
+        "url2": "https://www.1amedical.org/wordpress/wp-content/uploads/2020/06/goldballoons.pdf",
+        "minid": 0,
+        "maxod": 0.011,
+        "length": 170,
+        "comments": "It is indeed the only detachable balloon on the market. Requires the following catheters: MABDTE, BALTACCIBDPE, BALTAC. CIBDPE103"
+    },
+    {
+        "type": "Balloon",
         "name": "Pantera Lux PTCA Balloon Catheter ",
         "manufacturer": "Biotronik",
         "url1": "https://www.biotronik.com/en-de/products/coronary/pantera-lux",
@@ -798,6 +845,34 @@ deviceList=
         "minid": 0,
         "maxod": 0.018,
         "length": 300
+    },
+    {
+        "type": "Wire",
+        "name": "Platinum Plus 014",
+        "manufacturer": "Boston Scientific",
+        "description": "\"A vessel-straightening guidewire for challenging cases where torque response, very high rail support and significant pushability are required.\"",
+        "url1": "https://www.bostonscientific.com/en-US/products/guidewires/platinum-plus-guide-wire.html",
+        "url2": "https://www.bostonscientific.com/en-US/products/guidewires/platinum-plus-guide-wire/platinum-plus-prescriptive-information.html",
+        "minid": 0,
+        "maxod": 0.014,
+        "length": "180 / 300",
+        "code": "H749 1751 1 / H749 1752 1 (Qty 3)",
+        "tipLengths": "5 or 8 cm radiopacity tip ",
+        "material": "Unibody stainless steel core with silicone coating"
+    },
+    {
+        "type": "Wire",
+        "name": "Platinum Plus 018",
+        "manufacturer": "Boston Scientific",
+        "description": "\"A vessel-straightening guidewire for challenging cases where torque response, very high rail support and significant pushability are required.\"",
+        "url1": "https://www.bostonscientific.com/en-US/products/guidewires/platinum-plus-guide-wire.html",
+        "url2": "https://www.bostonscientific.com/en-US/products/guidewires/platinum-plus-guide-wire/platinum-plus-prescriptive-information.html",
+        "minid": 0,
+        "maxod": 0.018,
+        "length": 180,
+        "code": "H749 1753 1",
+        "tipLengths": "5 or 8 cm radiopacity tip ",
+        "material": "Unibody stainless steel core with silicone coating"
     },
     {
         "type": "Balloon",
@@ -1057,6 +1132,21 @@ deviceList=
         "features": "\"Open and articulated outer cage: Open, articulated outer cage serves to engage and grip the clot. Multiple, large, inlet windows on the outer cage allow thrombus to move into the outer cage. An articulating outer cage maintains wall apposition during retrieval. Closed cell inner channel: Secures and stabilizes the thrombus to maintain engagement. Distal closed end mesh: Maintains control of thrombus during retrieval.\""
     },
     {
+        "type": "Liquid Embolic",
+        "name": "TRUFILL® n-BCA",
+        "manufacturer": "Cerenovus",
+        "image": "trufill.jpg",
+        "description": "\"The TRUFILL® n-BCA Liquid Embolic System is used under fluoroscopic guidance to obstruct or reduce blood flow to cerebral arteriovenous malformations (AVMs) via super-selective catheter delivery when pre-surgical devascularization is desired. The TRUFILL n-BCA System offers: Low Procedure Time, Low Fluoroscopy Time, Fewer Adverse ClinicalComplications, Effective Penetration of AVM.\"",
+        "url1": "https://www.jnjmedicaldevices.com/en-US/product/trufill-n-bca-liquid-embolic-system",
+        "minid": 0,
+        "maxod": 0.026,
+        "length": "?",
+        "sizetable": "[{\"Condition\":\"Intranidal injections without AV fistulae or high flow rates in order to more deeply penetrate the nidus\",\"TRUFILL® Ethiodized Oil: n-BCA Ratio\":\"3:1 - 75% Eth. Oil / 25% n-BCA\",\"TRUFILL® Ethiodized Oil: n-Volume (cc)\":0.75,\"TRUFILL® n-BCA Ratio (cc)\":0.25},{\"Condition\":\"Intranidal injections without AV fistulae or high flow rates in order to more deeply penetrate the nidus\",\"TRUFILL® Ethiodized Oil: n-BCA Ratio\":\"2:1 - 67% Eth. Oil / 33% n-BCA\",\"TRUFILL® Ethiodized Oil: n-Volume (cc)\":0.67,\"TRUFILL® n-BCA Ratio (cc)\":0.33},{\"Condition\":\"Feeding pedicle injections close to the nidus at high flow rates where venous opacification occurs on contrast injections within ½ second\",\"TRUFILL® Ethiodized Oil: n-BCA Ratio\":\"1:1 - 50% Eth. Oil / 50% n-BCA\",\"TRUFILL® Ethiodized Oil: n-Volume (cc)\":0.5,\"TRUFILL® n-BCA Ratio (cc)\":\"0.50 (tantalum advised)\"},{\"Condition\":\"Feeding pedicle injections close to the nidus at high flow rates where venous opacification occurs on contrast injections within ½ second\",\"TRUFILL® Ethiodized Oil: n-BCA Ratio\":\"1:2 - 33% Eth. Oil / 67% n-BCA\",\"TRUFILL® Ethiodized Oil: n-Volume (cc)\":0.33,\"TRUFILL® n-BCA Ratio (cc)\":\"0.67 (tantalum advised)\"}]",
+        "tablecaption": "Recommended Mixtures (Listed volumes based on a total volume of 1.0 cc - actual total volumes may vary)",
+        "comments": "\"Tantalum Powder may also be added to ethiodized oil to augment radiopacity. Tantalum powder should not be used alone with n-BCA. At higher n-BCA concentrations (>50%), addition of up to 0.5g tantalum powder is advised.\"",
+        "cautions": "\"WARNING: A 0:1 TRUFILL Ethiodized Oil to TRUFILL n-BCA ratio should never be used. Recommended mixtures based  on the N-Butyl Cyanoacrylate Embolization of Cerebral Arteriovenous Malformations Study (N-Butyl Cyanoacrylate Embolization of Cerebral Arteriovenous Malformations: Results of a Prospective, Randomized, Multi-center Trial, AJNR 23: 748-755, May 2002)\""
+    },
+    {
         "type": "Intrasaccular Device",
         "name": "Neqstent",
         "manufacturer": "Cerus",
@@ -1164,19 +1254,82 @@ deviceList=
         "features": "\"Glubran 2 polymerises quickly in contact with live tissue and wet environment creating a thin and elastic film having high tensile properties which guarantee strong adhesion to the tissues. This film naturally conforms with the tissues on which it was applied; it is not permeable to liquids and is not altered by blood or organic liquids.\""
     },
     {
-        "type": "Liquid Embolic",
-        "name": "TRUFILL® n-BCA",
-        "manufacturer": "Cerenovus",
-        "image": "trufill.jpg",
-        "description": "\"The TRUFILL® n-BCA Liquid Embolic System is used under fluoroscopic guidance to obstruct or reduce blood flow to cerebral arteriovenous malformations (AVMs) via super-selective catheter delivery when pre-surgical devascularization is desired. The TRUFILL n-BCA System offers: Low Procedure Time, Low Fluoroscopy Time, Fewer Adverse ClinicalComplications, Effective Penetration of AVM.\"",
-        "url1": "https://www.jnjmedicaldevices.com/en-US/product/trufill-n-bca-liquid-embolic-system",
-        "minid": 0,
-        "maxod": 0.026,
-        "length": "?",
-        "sizetable": "[{\"Condition\":\"Intranidal injections without AV fistulae or high flow rates in order to more deeply penetrate the nidus\",\"TRUFILL® Ethiodized Oil: n-BCA Ratio\":\"3:1 - 75% Eth. Oil / 25% n-BCA\",\"TRUFILL® Ethiodized Oil: n-Volume (cc)\":0.75,\"TRUFILL® n-BCA Ratio (cc)\":0.25},{\"Condition\":\"Intranidal injections without AV fistulae or high flow rates in order to more deeply penetrate the nidus\",\"TRUFILL® Ethiodized Oil: n-BCA Ratio\":\"2:1 - 67% Eth. Oil / 33% n-BCA\",\"TRUFILL® Ethiodized Oil: n-Volume (cc)\":0.67,\"TRUFILL® n-BCA Ratio (cc)\":0.33},{\"Condition\":\"Feeding pedicle injections close to the nidus at high flow rates where venous opacification occurs on contrast injections within ½ second\",\"TRUFILL® Ethiodized Oil: n-BCA Ratio\":\"1:1 - 50% Eth. Oil / 50% n-BCA\",\"TRUFILL® Ethiodized Oil: n-Volume (cc)\":0.5,\"TRUFILL® n-BCA Ratio (cc)\":\"0.50 (tantalum advised)\"},{\"Condition\":\"Feeding pedicle injections close to the nidus at high flow rates where venous opacification occurs on contrast injections within ½ second\",\"TRUFILL® Ethiodized Oil: n-BCA Ratio\":\"1:2 - 33% Eth. Oil / 67% n-BCA\",\"TRUFILL® Ethiodized Oil: n-Volume (cc)\":0.33,\"TRUFILL® n-BCA Ratio (cc)\":\"0.67 (tantalum advised)\"}]",
-        "tablecaption": "Recommended Mixtures (Listed volumes based on a total volume of 1.0 cc - actual total volumes may vary)",
-        "comments": "\"Tantalum Powder may also be added to ethiodized oil to augment radiopacity. Tantalum powder should not be used alone with n-BCA. At higher n-BCA concentrations (>50%), addition of up to 0.5g tantalum powder is advised.\"",
-        "cautions": "\"WARNING: A 0:1 TRUFILL Ethiodized Oil to TRUFILL n-BCA ratio should never be used. Recommended mixtures based  on the N-Butyl Cyanoacrylate Embolization of Cerebral Arteriovenous Malformations Study (N-Butyl Cyanoacrylate Embolization of Cerebral Arteriovenous Malformations: Results of a Prospective, Randomized, Multi-center Trial, AJNR 23: 748-755, May 2002)\""
+        "type": "Catheter",
+        "name": "Zoom 88",
+        "manufacturer": "Imperative Care",
+        "description": "\"The Zoom 88 Large Distal Platform is the first stroke-specific .088” access catheter designed to get closer to clot.\"",
+        "url1": "https://imperativecare.com/zoom-stroke-solution/",
+        "ifu": "https://imperativecare.com/wp-content/uploads/2021/01/MKT00727-C-Combined-Safety-Summary.pdf",
+        "minid": 0.088,
+        "maxod": 0.108,
+        "length": 110,
+        "code": "ICTC088110",
+        "comments": "Guide catheter"
+    },
+    {
+        "type": "Catheter",
+        "name": "Zoom 71",
+        "manufacturer": "Imperative Care",
+        "description": "\" With the goal of TICI 3 in 10 minutes, Zoom Aspiration Catheters are designed for optimized clot engagement, effortless navigation and uncompromised structural integrity.\"",
+        "url1": "https://imperativecare.com/zoom-stroke-solution/",
+        "ifu": "https://imperativecare.com/wp-content/uploads/2021/01/MKT00727-C-Combined-Safety-Summary.pdf",
+        "minid": 0.071,
+        "maxod": 0.083,
+        "length": 137,
+        "code": "ICRC071137",
+        "comments": "Aspiration catheter"
+    },
+    {
+        "type": "Catheter",
+        "name": "Zoom 55",
+        "manufacturer": "Imperative Care",
+        "description": "\" With the goal of TICI 3 in 10 minutes, Zoom Aspiration Catheters are designed for optimized clot engagement, effortless navigation and uncompromised structural integrity.\"",
+        "url1": "https://imperativecare.com/zoom-stroke-solution/",
+        "ifu": "https://imperativecare.com/wp-content/uploads/2021/01/MKT00727-C-Combined-Safety-Summary.pdf",
+        "minid": 0.055,
+        "maxod": 0.068,
+        "length": 137,
+        "code": "ICRC055137",
+        "comments": "Aspiration catheter. Note Imperative Medical do not publish the outer diameter so WE HAVE ESTIMATED THIS VALUE. "
+    },
+    {
+        "type": "Catheter",
+        "name": "Zoom 45",
+        "manufacturer": "Imperative Care",
+        "description": "\" With the goal of TICI 3 in 10 minutes, Zoom Aspiration Catheters are designed for optimized clot engagement, effortless navigation and uncompromised structural integrity.\"",
+        "url1": "https://imperativecare.com/zoom-stroke-solution/",
+        "ifu": "https://imperativecare.com/wp-content/uploads/2021/01/MKT00727-C-Combined-Safety-Summary.pdf",
+        "minid": 0.045,
+        "maxod": 0.058,
+        "length": 144,
+        "code": "ICRC045144",
+        "comments": "Aspiration catheter. Note Imperative Medical do not publish the outer diameter so WE HAVE ESTIMATED THIS VALUE. "
+    },
+    {
+        "type": "Catheter",
+        "name": "Zoom 35",
+        "manufacturer": "Imperative Care",
+        "description": "\" With the goal of TICI 3 in 10 minutes, Zoom Aspiration Catheters are designed for optimized clot engagement, effortless navigation and uncompromised structural integrity.\"",
+        "url1": "https://imperativecare.com/zoom-stroke-solution/",
+        "ifu": "https://imperativecare.com/wp-content/uploads/2021/01/MKT00727-C-Combined-Safety-Summary.pdf",
+        "minid": 0.035,
+        "maxod": 0.055,
+        "length": 160,
+        "code": "ICRC035158",
+        "comments": "Aspiration catheter. Note Imperative Medical do not publish the outer diameter so WE HAVE ESTIMATED THIS VALUE. "
+    },
+    {
+        "type": "Catheter",
+        "name": "TracStar LDP",
+        "manufacturer": "Imperative Care",
+        "description": "\"TracStar LDP redefines access by combining the flexibility of a distal access catheter with the support of a long sheath in a single large .088” intracranial access catheter.\"",
+        "url1": "https://imperativecare.com/tracstar-ldp/",
+        "ifu": "https://imperativecare.com/wp-content/uploads/2021/01/MKT00727-C-Combined-Safety-Summary.pdf",
+        "minid": 0.088,
+        "maxod": 0.108,
+        "length": "95 / 105",
+        "code": "ICAC088095 / ICAC088105",
+        "comments": "Guide catheter/long sheath"
     },
     {
         "type": "Balloon",
@@ -1410,7 +1563,7 @@ deviceList=
         "url2": "https://www.medtronic.com/us-en/healthcare-professionals/products/neurological/avm-embolization/onyx-liquid-embolic/indications-safety-warnings.html",
         "ifu": "https://www.accessdata.fda.gov/cdrh_docs/pdf6/H060003c.pdf",
         "minid": 0,
-        "maxod": 0.009055118,
+        "maxod": 0.00903,
         "length": "?",
         "material": "Ethylene vinyl alcohol (EVOH) copolymer dissolved in DMSO (dimethyl sulfoxide) and suspended micronised tantalum powder",
         "strengths": "18 (6% EVOH, low viscosity) and 34 (8% EVOH, high viscosity)",
@@ -1654,6 +1807,7 @@ deviceList=
         "type": "Stent",
         "name": "Protege",
         "manufacturer": "Medtronic",
+        "description": "\"The Protégé RX Carotid Stent System, when used in conjunction with the ev3 embolic protection system, is indicated for the treatment of patients at high risk for adverse events from carotid endarterectomy who require percutaneous carotid revascularization and meet the following criteria: 1. Patients with carotid artery stenosis (≥ 50% for symptomatic patients by ultrasound or angiography or ≥ 80% for asymptomatic patients by ultrasound or angiography) of the Common or Internal Carotid Artery, AND 2. Patients must have a reference vessel diameter within the range of 4.5 mm and 9.5 mm at the target lesion.\"",
         "url1": "https://www.medtronic.com/us-en/healthcare-professionals/products/cardiovascular/peripheral-biliary-stents/protege-rx.html",
         "url2": "https://www.medtronic.com/content/dam/medtronic-com/products/cardiovascular/peripheral-therapies/documents/peripheral-us-product-catalog.pdf",
         "minid": 0.015,
@@ -1940,7 +2094,7 @@ deviceList=
         "description": "\"The PHIL™ Device is intended for use in the embolization of lesions in the peripheral and neurovasculature, including arteriovenous malformations and hypervascular tumors.\"",
         "url1": "https://web.archive.org/web/20210405012855/https://microvention.s3.amazonaws.com/static/product_specification_sheet_EMEA/PHIL_Spec_Sheet_International_MM387I_Rev.A_1015_9595b7.pdf",
         "minid": 0,
-        "maxod": 0.009055118,
+        "maxod": 0.00903,
         "length": "?",
         "material": "Non-adhesive co-polymer comprised of triiodophenol-lactide-co-glycolide acrylate (contains iodine)",
         "strengths": "25% (low viscosity), 30% (medium viscosity), 35% (high viscosity)",
@@ -2034,90 +2188,12 @@ deviceList=
     },
     {
         "type": "Microcatheter",
-        "name": "Terumo Progreat 2 Fr ",
-        "manufacturer": "Terumo",
-        "url1": "https://www.terumois.com/content/dam/terumo-www/global-shared/terumo-tis/en-us/product-assets/progreat/Progreat-Family-Brochure.pdf",
-        "minid": 0.019,
-        "maxod": 0.035433,
-        "length": "110 / 130 / 150"
-    },
-    {
-        "type": "Microcatheter",
-        "name": "Terumo Progreat 2.4 Fr ",
-        "manufacturer": "Terumo",
-        "url1": "https://www.terumois.com/content/dam/terumo-www/global-shared/terumo-tis/en-us/product-assets/progreat/Progreat-Family-Brochure.pdf",
-        "minid": 0.022,
-        "maxod": 0.038058,
-        "length": "110 / 130 / 150"
-    },
-    {
-        "type": "Microcatheter",
-        "name": "Terumo Progreat 2.7 Fr ",
-        "manufacturer": "Terumo",
-        "url1": "https://www.terumois.com/content/dam/terumo-www/global-shared/terumo-tis/en-us/product-assets/progreat/Progreat-Family-Brochure.pdf",
-        "minid": 0.025,
-        "maxod": 0.038058,
-        "length": "110 / 130"
-    },
-    {
-        "type": "Microcatheter",
-        "name": "Terumo Progreat 2.8 Fr ",
-        "manufacturer": "Terumo",
-        "url1": "https://www.terumois.com/content/dam/terumo-www/global-shared/terumo-tis/en-us/product-assets/progreat/Progreat-Family-Brochure.pdf",
-        "minid": 0.027,
-        "maxod": 0.03937,
-        "length": "110 / 130 / 150"
-    },
-    {
-        "type": "Microcatheter",
         "name": "Wedge",
         "manufacturer": "Microvention",
         "url1": "https://www.microvention.com/product/wedge",
         "minid": 0.021,
         "maxod": 0.068,
         "length": 160
-    },
-    {
-        "type": "Select Catheter",
-        "name": "Terumo Glidecath 4 Fr",
-        "manufacturer": "Terumo",
-        "url1": "https://www.terumois.com/products/catheters/glidecath.html",
-        "minid": 0.0405,
-        "maxod": 0.052493,
-        "length": "?"
-    },
-    {
-        "type": "Select Catheter",
-        "name": "Terumo Glidecath 5 Fr",
-        "manufacturer": "Terumo",
-        "url1": "https://www.terumois.com/products/catheters/glidecath.html",
-        "minid": 0.0433,
-        "maxod": 0.065617,
-        "length": "?"
-    },
-    {
-        "type": "Sheath",
-        "name": "Terumo Pinnacle 5F Introducer Sheath",
-        "manufacturer": "Terumo",
-        "minid": 0.066617,
-        "maxod": 0.091864,
-        "length": 10
-    },
-    {
-        "type": "Sheath",
-        "name": "Terumo Pinnacle 6F Introducer Sheath",
-        "manufacturer": "Terumo",
-        "minid": 0.07974,
-        "maxod": 0.104987,
-        "length": 10
-    },
-    {
-        "type": "Sheath",
-        "name": "Terumo Pinnacle 8F Introducer Sheath",
-        "manufacturer": "Terumo",
-        "minid": 0.114987,
-        "maxod": 0.131234,
-        "length": 10
     },
     {
         "type": "Stent",
@@ -2157,6 +2233,7 @@ deviceList=
         "length": "?",
         "sizetable": "[{\"Fully Open Implant Diameter (mm)\":\"FRED 21 2.5\",\"Length option 1\":\"8/13\",\"Length option 2\":\"13/18\",\"Length option 3\":\"20/25\",\"Length option 4\":\"26/30\",\"Length option 5\":\"\"},{\"Fully Open Implant Diameter (mm)\":\"FRED 21 3.0\",\"Length option 1\":\"9/13\",\"Length option 2\":\"14/19\",\"Length option 3\":\"21/27\",\"Length option 4\":\"27/32\",\"Length option 5\":\"\"},{\"Fully Open Implant Diameter (mm)\":\"FRED 27 3.5\",\"Length option 1\":\"7/13\",\"Length option 2\":\"11/17\",\"Length option 3\":\"16/22\",\"Length option 4\":\"24/31\",\"Length option 5\":\"36/40\"},{\"Fully Open Implant Diameter (mm)\":\"FRED 27 4.0\",\"Length option 1\":\"7/13\",\"Length option 2\":\"12/18\",\"Length option 3\":\"17/23\",\"Length option 4\":\"26/32\",\"Length option 5\":\"38/44\"},{\"Fully Open Implant Diameter (mm)\":\"FRED 27 4.5\",\"Length option 1\":\"8/15\",\"Length option 2\":\"13/20\",\"Length option 3\":\"18/25\",\"Length option 4\":\"28/34\",\"Length option 5\":\"39/45\"},{\"Fully Open Implant Diameter (mm)\":\"FRED 27 5.0\",\"Length option 1\":\"9/15\",\"Length option 2\":\"14/21\",\"Length option 3\":\"19/26\",\"Length option 4\":\"29/36\",\"Length option 5\":\"\"},{\"Fully Open Implant Diameter (mm)\":\"FRED 27 5.5\",\"Length option 1\":\"14/22\",\"Length option 2\":\"26/32\",\"Length option 3\":\"\",\"Length option 4\":\"\",\"Length option 5\":\"\"}]",
         "tablecaption": "Working length / Total length at labeled diameter (mm/mm)",
+        "comments": "<p>Sizing:</p>\n<p>\nChoose the stent diameter to cover the vessel diameter at both the proximal and distal landing zones. The stent should be sized to the largest vessel diameter. Try to stay within 1 mm difference between the distal and proximal parent vessel. Avoid oversizing. The device comes with a labelling chart (working length/total length). </p>\n<p>Technique</p>\n<p>Use the \"push and pull\" technique for deployment. The FRED X device may be recaptured up to approximately 75% of its deployed length. You can recapture the implant up to 3 times. Always check the distal lead wire position when deploying stent (unless using the FRED X 21). </p>",
         "recommended": "Headway 21",
         "research": 28798217,
         "material": "Nitinol; Tantalum",
@@ -2172,6 +2249,7 @@ deviceList=
         "length": "?",
         "sizetable": "[{\"Fully Open Implant Diameter (mm)\":\"FRED 21 2.5\",\"Length option 1\":\"8/13\",\"Length option 2\":\"13/18\",\"Length option 3\":\"20/25\",\"Length option 4\":\"26/30\",\"Length option 5\":\"\"},{\"Fully Open Implant Diameter (mm)\":\"FRED 21 3.0\",\"Length option 1\":\"9/13\",\"Length option 2\":\"14/19\",\"Length option 3\":\"21/27\",\"Length option 4\":\"27/32\",\"Length option 5\":\"\"},{\"Fully Open Implant Diameter (mm)\":\"FRED 27 3.5\",\"Length option 1\":\"7/13\",\"Length option 2\":\"11/17\",\"Length option 3\":\"16/22\",\"Length option 4\":\"24/31\",\"Length option 5\":\"36/40\"},{\"Fully Open Implant Diameter (mm)\":\"FRED 27 4.0\",\"Length option 1\":\"7/13\",\"Length option 2\":\"12/18\",\"Length option 3\":\"17/23\",\"Length option 4\":\"26/32\",\"Length option 5\":\"38/44\"},{\"Fully Open Implant Diameter (mm)\":\"FRED 27 4.5\",\"Length option 1\":\"8/15\",\"Length option 2\":\"13/20\",\"Length option 3\":\"18/25\",\"Length option 4\":\"28/34\",\"Length option 5\":\"39/45\"},{\"Fully Open Implant Diameter (mm)\":\"FRED 27 5.0\",\"Length option 1\":\"9/15\",\"Length option 2\":\"14/21\",\"Length option 3\":\"19/26\",\"Length option 4\":\"29/36\",\"Length option 5\":\"\"},{\"Fully Open Implant Diameter (mm)\":\"FRED 27 5.5\",\"Length option 1\":\"14/22\",\"Length option 2\":\"26/32\",\"Length option 3\":\"\",\"Length option 4\":\"\",\"Length option 5\":\"\"}]",
         "tablecaption": "Working length / Total length at labeled diameter (mm/mm)",
+        "comments": "<p>Sizing:</p>\n<p>\nChoose the stent diameter to cover the vessel diameter at both the proximal and distal landing zones. The stent should be sized to the largest vessel diameter. Try to stay within 1 mm difference between the distal and proximal parent vessel. Avoid oversizing. The device comes with a labelling chart (working length/total length). </p>\n<p>Technique</p>\n<p>Use the \"push and pull\" technique for deployment. The FRED X device may be recaptured up to approximately 75% of its deployed length. You can recapture the implant up to 3 times. Always check the distal lead wire position when deploying stent (unless using the FRED X 21). </p>",
         "recommended": "Headway 27",
         "research": 29545252,
         "material": "Nitinol; Tantalum",
@@ -2181,55 +2259,27 @@ deviceList=
         "type": "Stent",
         "name": "CASPER RX Carotid  ",
         "manufacturer": "Microvention",
+        "description": "\"Carotid Artery Stent Designed for Sustained Embolic Protection\"",
+        "url1": "https://www.microvention.com/emea/product/casper",
+        "url2": "https://microvention.s3.amazonaws.com/static/product_specification_sheet_EMEA/CASPER_Spec_Sheet__EMEA_CHAPLA_0d1e2c.pdf",
         "minid": 0.015,
         "maxod": 0.0656168,
         "length": "?",
-        "comments": "?Discontinued"
+        "design": "Closed cell"
     },
     {
-        "type": "Wire",
-        "name": "Terumo Headliner 012 ",
-        "manufacturer": "Terumo",
-        "url1": "https://www.microvention.com/product/headliner",
+        "type": "Stent",
+        "name": "LVIS Evo",
+        "manufacturer": "Microvention",
+        "description": "\"Braided with Nitinol – Platinum DFT (Drawn Filled Tube) wire, the LVIS EVO stent provides full visibility of every single wire under fluoroscopy, reliable support to the coil mass, and flexible braids that allow for optimized opening and advanced techniques.\n\nDFT wire makes every wire visible under fluoroscopy. 17 - 28% metal coverage provides reliable support to the coil mass. The flexible braided design ensures the stent opening and wall apposition, and allows for the advanced techniques, for example “shelf” or “shouldering” technique.\"",
+        "url1": "https://www.microvention.com/emea/product/lvis-evo",
+        "ifu": "https://www.microvention.com/emea/product/lvis-evo/instructions-for-use/lvis-evo",
         "minid": 0,
-        "maxod": 0.012,
-        "length": 200
-    },
-    {
-        "type": "Wire",
-        "name": "Terumo Headliner 014 ",
-        "manufacturer": "Terumo",
-        "url1": "https://www.microvention.com/product/headliner",
-        "minid": 0,
-        "maxod": 0.014,
-        "length": 200
-    },
-    {
-        "type": "Wire",
-        "name": "Terumo Headliner 016 ",
-        "manufacturer": "Terumo",
-        "url1": "https://www.microvention.com/product/headliner",
-        "minid": 0,
-        "maxod": 0.016,
-        "length": 200
-    },
-    {
-        "type": "Wire",
-        "name": "Terumo Glidewire 035 ",
-        "manufacturer": "Terumo",
-        "url1": "https://www.terumois.com/products/guidewires/glidewire.html",
-        "minid": 0,
-        "maxod": 0.035,
-        "length": "150 / 180 / 300"
-    },
-    {
-        "type": "Wire",
-        "name": "Terumo Glidewire Advantage 035 ",
-        "manufacturer": "Terumo",
-        "url1": "https://www.terumois.com/products/guidewires/glidewire-advantage.html",
-        "minid": 0,
-        "maxod": 0.035,
-        "length": "180 / 260"
+        "maxod": 0.0155,
+        "length": "?",
+        "sizetable": "[{\"Labeled diameter (mm)\":\"LVIS EVO 2.5\",\"Length option 1\":12,\"Length option 2\":17,\"Length option 3\":22,\"Length option 4\":27,\"Length option 5\":null},{\"Labeled diameter (mm)\":\"LVIS EVO 3.0\",\"Length option 1\":18,\"Length option 2\":24,\"Length option 3\":28,\"Length option 4\":32,\"Length option 5\":null},{\"Labeled diameter (mm)\":\"LVIS EVO 3.5\",\"Length option 1\":17,\"Length option 2\":22,\"Length option 3\":28,\"Length option 4\":34,\"Length option 5\":null},{\"Labeled diameter (mm)\":\"LVIS EVO 4.0\",\"Length option 1\":13,\"Length option 2\":18,\"Length option 3\":21,\"Length option 4\":27,\"Length option 5\":31}]",
+        "tablecaption": "Total length at labeled diameter (mm)",
+        "material": "Nitinol-Platiinum drawn filled tube"
     },
     {
         "type": "Coil",
@@ -2539,6 +2589,31 @@ deviceList=
         "maxod": 0.014,
         "length": 205,
         "comments": "There is an \"EXT\" extension wire"
+    },
+    {
+        "type": "Catheter",
+        "name": "Walrus",
+        "manufacturer": "Q’Apel",
+        "image": "walrus.png",
+        "description": "Balloon guide catheter designed for thrombectomy. Relatively large internal diameter compared to other 8-French balloon guides. Designed to be easily trackable whilst providing good proximal support. The balloon inflates to 11.1 mm. The tip has dual radiopaque distal markers. ",
+        "url1": "https://qapelmedical.com/walrus/",
+        "url2": "https://qapelmedical.com/walrus-clinicians/",
+        "minid": 0.087,
+        "maxod": 0.11,
+        "length": "90 / 95"
+    },
+    {
+        "type": "Catheter",
+        "name": "Wahoo",
+        "manufacturer": "Q’Apel",
+        "image": "wahoo.png",
+        "description": "\"Dual mode\" philosophy described as easily trackable and but providing good proximal support without requiring a triaxial system. \"SelectFlex\" variable stiffness technology means the proximal catheter is stiff and the distal is flexible. Has a distal tip radiopaque marker.  ",
+        "url1": "https://qapelmedical.com/wahoo/",
+        "url2": "https://qapelmedical.com/wahoo-clinicians/",
+        "minid": 0.072,
+        "maxod": 0.095,
+        "length": 105,
+        "material": "Nitinold scaffold and stainless steel reinforced shaft. "
     },
     {
         "type": "Stent",
@@ -2937,8 +3012,8 @@ deviceList=
         "maxod": 0.0265,
         "length": "?",
         "sizetable": "[{\"Info\":\"Unconstrained diameter\",\"2.5 mm diameter\":2.7,\"3.25 mm diameter\":3.7,\"4.0 mm diameter\":4.2,\"4.5 mm diameter\":4.7,\"5.0 mm diameter\":5.2},{\"Info\":\"Recommended parent vessel diameter\",\"2.5 mm diameter\":\"2.0-2.5mm\",\"3.25 mm diameter\":\"> 2.5-3.25mm\",\"4.0 mm diameter\":\"> 3.25-4.0mm\",\"4.5 mm diameter\":\"> 4.0-4.5mm\",\"5.0 mm diameter\":\"> 4.5-5.0mm\"},{\"Info\":\"# of wires\",\"2.5 mm diameter\":48,\"3.25 mm diameter\":64,\"4.0 mm diameter\":null,\"4.5 mm diameter\":null,\"5.0 mm diameter\":null},{\"Info\":\"12 mm length\",\"2.5 mm diameter\":\"FD25012\",\"3.25 mm diameter\":\"FD32512\",\"4.0 mm diameter\":\"FD40012\",\"4.5 mm diameter\":\"FD45012\",\"5.0 mm diameter\":null},{\"Info\":\"15 mm length\",\"2.5 mm diameter\":\"FD25015\",\"3.25 mm diameter\":\"FD32515\",\"4.0 mm diameter\":\"FD40015\",\"4.5 mm diameter\":\"FD45015\",\"5.0 mm diameter\":\"FD50012\"},{\"Info\":\"17 mm length\",\"2.5 mm diameter\":null,\"3.25 mm diameter\":\"FD32517\",\"4.0 mm diameter\":\"FD40017\",\"4.5 mm diameter\":\"FD45017\",\"5.0 mm diameter\":null},{\"Info\":\"20 mm length\",\"2.5 mm diameter\":\"FD25020\",\"3.25 mm diameter\":\"FD32520\",\"4.0 mm diameter\":\"FD40020\",\"4.5 mm diameter\":\"FD45020\",\"5.0 mm diameter\":\"FD50020\"},{\"Info\":\"25 mm length\",\"2.5 mm diameter\":null,\"3.25 mm diameter\":\"FD32525\",\"4.0 mm diameter\":\"FD40025\",\"4.5 mm diameter\":\"FD45025\",\"5.0 mm diameter\":\"FD50025\"},{\"Info\":\"30 mm length\",\"2.5 mm diameter\":null,\"3.25 mm diameter\":null,\"4.0 mm diameter\":\"FD40030\",\"4.5 mm diameter\":\"FD45030\",\"5.0 mm diameter\":\"FD50030\"},{\"Info\":\"40 mm length\",\"2.5 mm diameter\":null,\"3.25 mm diameter\":null,\"4.0 mm diameter\":null,\"4.5 mm diameter\":\"FD45040\",\"5.0 mm diameter\":\"FD50040\"}]",
+        "comments": "<p>Surface metal coverage is approximately 30%. It is recommended that legnth should be over 5 mm on either side of the neck of the aneurysm. To flush the device you can insert in to a new RHV and flush with a 3 or 5 ml syringe (with your finger on the other end of the RHV). The device has fluoro-save markers on the wire. There are resheath markers on the stent. You can resheath up to 3 times. The proximal end should simply unsheathed (rather than pushed out) to avoid \"fish-mouthing\". </p>",
         "recommended": "XT-27",
-        "research": "[Orru E, Rice H, De Villiers L, et al. First clinical experience with the new Surpass Evolve flow diverter: technical and clinical considerations. J Neurointerv Surg 2020. doi:10.1136/neurintsurg-2019-015734. [Epub ahead of print: 12 Feb 2020].]",
         "material": "Cobalt-chromium alloy; Platinum-tungsten markers",
         "design": "48 wires for 2.5 mm device and 64 wires for 3.25-5 mm devices"
     },
@@ -3053,6 +3128,129 @@ deviceList=
         "length": "80 / 100"
     },
     {
+        "type": "Microcatheter",
+        "name": "Terumo Progreat 2 Fr ",
+        "manufacturer": "Terumo",
+        "url1": "https://www.terumois.com/content/dam/terumo-www/global-shared/terumo-tis/en-us/product-assets/progreat/Progreat-Family-Brochure.pdf",
+        "minid": 0.019,
+        "maxod": 0.035433,
+        "length": "110 / 130 / 150"
+    },
+    {
+        "type": "Microcatheter",
+        "name": "Terumo Progreat 2.4 Fr ",
+        "manufacturer": "Terumo",
+        "url1": "https://www.terumois.com/content/dam/terumo-www/global-shared/terumo-tis/en-us/product-assets/progreat/Progreat-Family-Brochure.pdf",
+        "minid": 0.022,
+        "maxod": 0.038058,
+        "length": "110 / 130 / 150"
+    },
+    {
+        "type": "Microcatheter",
+        "name": "Terumo Progreat 2.7 Fr ",
+        "manufacturer": "Terumo",
+        "url1": "https://www.terumois.com/content/dam/terumo-www/global-shared/terumo-tis/en-us/product-assets/progreat/Progreat-Family-Brochure.pdf",
+        "minid": 0.025,
+        "maxod": 0.038058,
+        "length": "110 / 130"
+    },
+    {
+        "type": "Microcatheter",
+        "name": "Terumo Progreat 2.8 Fr ",
+        "manufacturer": "Terumo",
+        "url1": "https://www.terumois.com/content/dam/terumo-www/global-shared/terumo-tis/en-us/product-assets/progreat/Progreat-Family-Brochure.pdf",
+        "minid": 0.027,
+        "maxod": 0.03937,
+        "length": "110 / 130 / 150"
+    },
+    {
+        "type": "Select Catheter",
+        "name": "Terumo Glidecath 4 Fr",
+        "manufacturer": "Terumo",
+        "url1": "https://www.terumois.com/products/catheters/glidecath.html",
+        "minid": 0.0405,
+        "maxod": 0.052493,
+        "length": "?"
+    },
+    {
+        "type": "Select Catheter",
+        "name": "Terumo Glidecath 5 Fr",
+        "manufacturer": "Terumo",
+        "url1": "https://www.terumois.com/products/catheters/glidecath.html",
+        "minid": 0.0433,
+        "maxod": 0.065617,
+        "length": "?"
+    },
+    {
+        "type": "Sheath",
+        "name": "Terumo Pinnacle 5F Introducer Sheath",
+        "manufacturer": "Terumo",
+        "minid": 0.066617,
+        "maxod": 0.091864,
+        "length": 10
+    },
+    {
+        "type": "Sheath",
+        "name": "Terumo Pinnacle 6F Introducer Sheath",
+        "manufacturer": "Terumo",
+        "minid": 0.07974,
+        "maxod": 0.104987,
+        "length": 10
+    },
+    {
+        "type": "Sheath",
+        "name": "Terumo Pinnacle 8F Introducer Sheath",
+        "manufacturer": "Terumo",
+        "minid": 0.114987,
+        "maxod": 0.131234,
+        "length": 10
+    },
+    {
+        "type": "Wire",
+        "name": "Terumo Headliner 012 ",
+        "manufacturer": "Terumo",
+        "url1": "https://www.microvention.com/product/headliner",
+        "minid": 0,
+        "maxod": 0.012,
+        "length": 200
+    },
+    {
+        "type": "Wire",
+        "name": "Terumo Headliner 014 ",
+        "manufacturer": "Terumo",
+        "url1": "https://www.microvention.com/product/headliner",
+        "minid": 0,
+        "maxod": 0.014,
+        "length": 200
+    },
+    {
+        "type": "Wire",
+        "name": "Terumo Headliner 016 ",
+        "manufacturer": "Terumo",
+        "url1": "https://www.microvention.com/product/headliner",
+        "minid": 0,
+        "maxod": 0.016,
+        "length": 200
+    },
+    {
+        "type": "Wire",
+        "name": "Terumo Glidewire 035 ",
+        "manufacturer": "Terumo",
+        "url1": "https://www.terumois.com/products/guidewires/glidewire.html",
+        "minid": 0,
+        "maxod": 0.035,
+        "length": "150 / 180 / 300"
+    },
+    {
+        "type": "Wire",
+        "name": "Terumo Glidewire Advantage 035 ",
+        "manufacturer": "Terumo",
+        "url1": "https://www.terumois.com/products/guidewires/glidewire-advantage.html",
+        "minid": 0,
+        "maxod": 0.035,
+        "length": "180 / 260"
+    },
+    {
         "type": "Sheath",
         "name": "5F Pinnacle Destination ",
         "manufacturer": "Terumo",
@@ -3160,196 +3358,22 @@ deviceList=
         "recommendedparentid": 0.021
     },
     {
-        "type": "Catheter",
-        "name": "Walrus",
-        "manufacturer": "Q’Apel",
-        "image": "walrus.png",
-        "description": "Balloon guide catheter designed for thrombectomy. Relatively large internal diameter compared to other 8-French balloon guides. Designed to be easily trackable whilst providing good proximal support. The balloon inflates to 11.1 mm. The tip has dual radiopaque distal markers. ",
-        "url1": "https://qapelmedical.com/walrus/",
-        "url2": "https://qapelmedical.com/walrus-clinicians/",
-        "minid": 0.087,
-        "maxod": 0.11,
-        "length": "90 / 95"
-    },
-    {
-        "type": "Catheter",
-        "name": "Wahoo",
-        "manufacturer": "Q’Apel",
-        "image": "wahoo.png",
-        "description": "\"Dual mode\" philosophy described as easily trackable and but providing good proximal support without requiring a triaxial system. \"SelectFlex\" variable stiffness technology means the proximal catheter is stiff and the distal is flexible. Has a distal tip radiopaque marker.  ",
-        "url1": "https://qapelmedical.com/wahoo/",
-        "url2": "https://qapelmedical.com/wahoo-clinicians/",
-        "minid": 0.072,
-        "maxod": 0.095,
-        "length": 105,
-        "material": "Nitinold scaffold and stainless steel reinforced shaft. "
-    },
-    {
-        "type": "Catheter",
-        "name": "Zoom 88",
-        "manufacturer": "Imperative Care",
-        "description": "\"The Zoom 88 Large Distal Platform is the first stroke-specific .088” access catheter designed to get closer to clot.\"",
-        "url1": "https://imperativecare.com/zoom-stroke-solution/",
-        "ifu": "https://imperativecare.com/wp-content/uploads/2021/01/MKT00727-C-Combined-Safety-Summary.pdf",
-        "minid": 0.088,
-        "maxod": 0.108,
-        "length": 110,
-        "code": "ICTC088110",
-        "comments": "Guide catheter"
-    },
-    {
-        "type": "Catheter",
-        "name": "Zoom 71",
-        "manufacturer": "Imperative Care",
-        "description": "\" With the goal of TICI 3 in 10 minutes, Zoom Aspiration Catheters are designed for optimized clot engagement, effortless navigation and uncompromised structural integrity.\"",
-        "url1": "https://imperativecare.com/zoom-stroke-solution/",
-        "ifu": "https://imperativecare.com/wp-content/uploads/2021/01/MKT00727-C-Combined-Safety-Summary.pdf",
-        "minid": 0.071,
-        "maxod": 0.083,
-        "length": 137,
-        "code": "ICRC071137",
-        "comments": "Aspiration catheter"
-    },
-    {
-        "type": "Catheter",
-        "name": "Zoom 55",
-        "manufacturer": "Imperative Care",
-        "description": "\" With the goal of TICI 3 in 10 minutes, Zoom Aspiration Catheters are designed for optimized clot engagement, effortless navigation and uncompromised structural integrity.\"",
-        "url1": "https://imperativecare.com/zoom-stroke-solution/",
-        "ifu": "https://imperativecare.com/wp-content/uploads/2021/01/MKT00727-C-Combined-Safety-Summary.pdf",
-        "minid": 0.055,
-        "maxod": 0.068,
-        "length": 137,
-        "code": "ICRC055137",
-        "comments": "Aspiration catheter. Note Imperative Medical do not publish the outer diameter so WE HAVE ESTIMATED THIS VALUE. "
-    },
-    {
-        "type": "Catheter",
-        "name": "Zoom 45",
-        "manufacturer": "Imperative Care",
-        "description": "\" With the goal of TICI 3 in 10 minutes, Zoom Aspiration Catheters are designed for optimized clot engagement, effortless navigation and uncompromised structural integrity.\"",
-        "url1": "https://imperativecare.com/zoom-stroke-solution/",
-        "ifu": "https://imperativecare.com/wp-content/uploads/2021/01/MKT00727-C-Combined-Safety-Summary.pdf",
-        "minid": 0.045,
-        "maxod": 0.058,
-        "length": 144,
-        "code": "ICRC045144",
-        "comments": "Aspiration catheter. Note Imperative Medical do not publish the outer diameter so WE HAVE ESTIMATED THIS VALUE. "
-    },
-    {
-        "type": "Catheter",
-        "name": "Zoom 35",
-        "manufacturer": "Imperative Care",
-        "description": "\" With the goal of TICI 3 in 10 minutes, Zoom Aspiration Catheters are designed for optimized clot engagement, effortless navigation and uncompromised structural integrity.\"",
-        "url1": "https://imperativecare.com/zoom-stroke-solution/",
-        "ifu": "https://imperativecare.com/wp-content/uploads/2021/01/MKT00727-C-Combined-Safety-Summary.pdf",
-        "minid": 0.035,
-        "maxod": 0.055,
-        "length": 160,
-        "code": "ICRC035158",
-        "comments": "Aspiration catheter. Note Imperative Medical do not publish the outer diameter so WE HAVE ESTIMATED THIS VALUE. "
-    },
-    {
-        "type": "Catheter",
-        "name": "TracStar LDP",
-        "manufacturer": "Imperative Care",
-        "description": "\"TracStar LDP redefines access by combining the flexibility of a distal access catheter with the support of a long sheath in a single large .088” intracranial access catheter.\"",
-        "url1": "https://imperativecare.com/tracstar-ldp/",
-        "ifu": "https://imperativecare.com/wp-content/uploads/2021/01/MKT00727-C-Combined-Safety-Summary.pdf",
-        "minid": 0.088,
-        "maxod": 0.108,
-        "length": "95 / 105",
-        "code": "ICAC088095 / ICAC088105",
-        "comments": "Guide catheter/long sheath"
-    },
-    {
-        "type": "Wire",
-        "name": "Platinum Plus 014",
-        "manufacturer": "Boston Scientific",
-        "description": "\"A vessel-straightening guidewire for challenging cases where torque response, very high rail support and significant pushability are required.\"",
-        "url1": "https://www.bostonscientific.com/en-US/products/guidewires/platinum-plus-guide-wire.html",
-        "url2": "https://www.bostonscientific.com/en-US/products/guidewires/platinum-plus-guide-wire/platinum-plus-prescriptive-information.html",
+        "type": "Stent Retriever ",
+        "name": "Nimbus",
+        "manufacturer": "Cerenovus",
+        "image": "nimbus.png",
+        "description": "\"CERENOVUS NIMBUS™ is designed to remove tough clots* to restore blood flow. CERENOVUS NIMBUS™ has 5 radiopaque markers to facilitate device positioning. 0.021” microcatheter compatible. The Device is designed for use in the anterior and posterior neurovasculature in vessels of diameter 1.5 mm to 5.0 mm, such as the internal carotid artery, the M1 and M2 segments of the middle cerebral artery, the A1 and A2 segments of the anterior cerebral artery, the basilar, the posterior cerebral and the vertebral arteries.\"",
+        "url1": "https://www.jnjmedicaldevices.com/en-EMEA/product/cerenovus-nimbus-geometric-clot-extractor",
+        "url2": "https://neurorad.kukm-aussteller.de/files/firmen_content/CERENOVUS/NIMBUS.pdf",
+        "ifu": "http://synthes.vo.llnwd.net/o16/LLNWMB8/INT%20Mobile/Synthes%20International/MSY-EOS/CS071-01-Rev-07-Attachment-03.pdf",
         "minid": 0,
-        "maxod": 0.014,
-        "length": "180 / 300",
-        "code": "H749 1751 1 / H749 1752 1 (Qty 3)",
-        "tipLengths": "5 or 8 cm radiopacity tip ",
-        "material": "Unibody stainless steel core with silicone coating"
-    },
-    {
-        "type": "Wire",
-        "name": "Platinum Plus 018",
-        "manufacturer": "Boston Scientific",
-        "description": "\"A vessel-straightening guidewire for challenging cases where torque response, very high rail support and significant pushability are required.\"",
-        "url1": "https://www.bostonscientific.com/en-US/products/guidewires/platinum-plus-guide-wire.html",
-        "url2": "https://www.bostonscientific.com/en-US/products/guidewires/platinum-plus-guide-wire/platinum-plus-prescriptive-information.html",
-        "minid": 0,
-        "maxod": 0.018,
-        "length": 180,
-        "code": "H749 1753 1",
-        "tipLengths": "5 or 8 cm radiopacity tip ",
-        "material": "Unibody stainless steel core with silicone coating"
-    },
-    {
-        "type": "Balloon",
-        "name": "goldballoon 1 / 2",
-        "manufacturer": "Balt",
-        "description": "\"The only detachable balloon on the market.\"",
-        "url1": "https://selamedical.co.uk/wp-content/uploads/2020/10/202006-GOLD-BALLOON-BROCHURE.pdf",
-        "url2": "https://www.1amedical.org/wordpress/wp-content/uploads/2020/06/goldballoons.pdf",
-        "minid": 0,
-        "maxod": 0.06,
-        "length": 170,
-        "comments": "It is indeed the only detachable balloon on the market. Requires the following catheters: MABDTE, BALTACCIBDPE, BALTAC. CIBDPE100"
-    },
-    {
-        "type": "Balloon",
-        "name": "goldballoon 3 / 4",
-        "manufacturer": "Balt",
-        "description": "\"The only detachable balloon on the market.\"",
-        "url1": "https://selamedical.co.uk/wp-content/uploads/2020/10/202006-GOLD-BALLOON-BROCHURE.pdf",
-        "url2": "https://www.1amedical.org/wordpress/wp-content/uploads/2020/06/goldballoons.pdf",
-        "minid": 0,
-        "maxod": 0.08,
-        "length": 170,
-        "comments": "It is indeed the only detachable balloon on the market. Requires the following catheters: MABDTE, BALTACCIBDPE, BALTAC. CIBDPE101"
-    },
-    {
-        "type": "Balloon",
-        "name": "goldballoon 5",
-        "manufacturer": "Balt",
-        "description": "\"The only detachable balloon on the market.\"",
-        "url1": "https://selamedical.co.uk/wp-content/uploads/2020/10/202006-GOLD-BALLOON-BROCHURE.pdf",
-        "url2": "https://www.1amedical.org/wordpress/wp-content/uploads/2020/06/goldballoons.pdf",
-        "minid": 0,
-        "maxod": 0.01,
-        "length": 170,
-        "comments": "It is indeed the only detachable balloon on the market. Requires the following catheters: MABDTE, BALTACCIBDPE, BALTAC. CIBDPE102"
-    },
-    {
-        "type": "Balloon",
-        "name": "goldballoon 6",
-        "manufacturer": "Balt",
-        "description": "\"The only detachable balloon on the market.\"",
-        "url1": "https://selamedical.co.uk/wp-content/uploads/2020/10/202006-GOLD-BALLOON-BROCHURE.pdf",
-        "url2": "https://www.1amedical.org/wordpress/wp-content/uploads/2020/06/goldballoons.pdf",
-        "minid": 0,
-        "maxod": 0.011,
-        "length": 170,
-        "comments": "It is indeed the only detachable balloon on the market. Requires the following catheters: MABDTE, BALTACCIBDPE, BALTAC. CIBDPE103"
-    },
-    {
-        "type": "Stent",
-        "name": "LVIS Evo",
-        "manufacturer": "Microvention",
-        "description": "\"Braided with Nitinol – Platinum DFT (Drawn Filled Tube) wire, the LVIS EVO stent provides full visibility of every single wire under fluoroscopy, reliable support to the coil mass, and flexible braids that allow for optimized opening and advanced techniques.\n\nDFT wire makes every wire visible under fluoroscopy. 17 - 28% metal coverage provides reliable support to the coil mass. The flexible braided design ensures the stent opening and wall apposition, and allows for the advanced techniques, for example “shelf” or “shouldering” technique.\"",
-        "url1": "https://www.microvention.com/emea/product/lvis-evo",
-        "ifu": "https://www.microvention.com/emea/product/lvis-evo/instructions-for-use/lvis-evo",
-        "minid": 0,
-        "maxod": 0.0155,
-        "length": "?",
-        "sizetable": "[{\"Labeled diameter (mm)\":\"LVIS EVO 2.5\",\"Length option 1\":12,\"Length option 2\":17,\"Length option 3\":22,\"Length option 4\":27,\"Length option 5\":null},{\"Labeled diameter (mm)\":\"LVIS EVO 3.0\",\"Length option 1\":18,\"Length option 2\":24,\"Length option 3\":28,\"Length option 4\":32,\"Length option 5\":null},{\"Labeled diameter (mm)\":\"LVIS EVO 3.5\",\"Length option 1\":17,\"Length option 2\":22,\"Length option 3\":28,\"Length option 4\":34,\"Length option 5\":null},{\"Labeled diameter (mm)\":\"LVIS EVO 4.0\",\"Length option 1\":13,\"Length option 2\":18,\"Length option 3\":21,\"Length option 4\":27,\"Length option 5\":31}]",
-        "tablecaption": "Total length at labeled diameter (mm)",
-        "material": "Nitinol-Platiinum drawn filled tube"
+        "maxod": 0.02,
+        "length": 192.7,
+        "code": "GCE4528",
+        "vesselDiameters": "1.5 mm to 5.0 mm",
+        "sizes": "4.5 x 28 mm",
+        "comments": "<p>Intended to be used as a \"rescue\" stent retriever for tough clots. Some tips may be obtained from reading the IFU document: </p>\n\n<p>The device should be positioned in the clot ideally such that the end of the proximal radiopaque coil (Figure 2) is aligned with the proximal face of the clot. While stabilizing the Device shaft, retract the microcatheter to deploy the Device within the clot. The Device will be fully deployed once the distal tip of the Microcatheter has been retracted to a position over the proximal radiopaque coil of the Device. After deployment, the device may be left to embed in the clot for up to 5 minutes prior to withdrawal. </p>\n\n<p>Prior to clot retrieval re-advance the microcatheter to the clot while holding the CERENOVUS NIMBUS™ push wire static. Do not continue to advance against significant resistance. </p>\n\n<p>Withdraw the Device and microcatheter slowly and carefully as a single unit to the Guide or Intermediate Catheter while aspirating through the guide or Intermediate Catheter maintaining microcatheter and \nCERENOVUS NIMBUS™ position relative to each other during the withdrawal step. Applying vigorous aspiration (by syringe), withdraw the Device and microcatheter into the Guide or Intermediate Catheter and continue to aspirate until the Device reaches the proximal RHV. Note: If withdrawal in to the guide or intermediate catheter is difficult (as may be the case with a large clot burden) then deflate the balloon (if applicable) and withdraw the guide or intermediate catheter, \nmicrocatheter and Device together through the introducer sheath.</p>\n\n<p> Disconnect the RHV from the Guide Catheter and remove the Device, microcatheter and RHV together from the Guide Catheter. Use a syringe to further aspirate the Guide and/or Intermediate Catheter to ensure it is clear of any thrombus material. </p>\n\n<p>The Device may be used for up to three retrieval attempts. If an additional pass is to be made with the Device then carefully remove any captured thrombus from the Device and clean the Device in heparinized saline, rubbing gently from proximal to distal to remove any \nresidual thrombus material. Inspect the Device carefully and if any damage or deformity is observed do not use the Device – instead use a new Device for any subsequent passes. If using the same Device, replace \nthe Insertion Tool onto the proximal shaft and retract the Device into the Insertion Tool until it is fully resheathed. Do not retract the device into the Insertion Tool against significant resistance – ascertain the cause of the resistance and if required use a new device for any subsequent passes. Do not attempt more than three retrieval attempts in one vessel.</p>\n",
+        "material": "Nitinol",
+        "design": "Three-dimensional nitinol cage assembly at the distal end of a tapered nitinol shaft. There is a proximal coil which is radiopaque for positioning guidance. The NIMBUS has spiral cells with multiple pinch points amd wide opening angles to pull out tough clots. There are mid markers for positioning and to delineate the end of the spiral section. There is a \"barrel section\" to maintain control of the clot during retrieval and to funnel the clot/device into the receiving catheter. There are also distal markers. \n"
     }
 ]
