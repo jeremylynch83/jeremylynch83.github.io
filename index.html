@@ -1032,12 +1032,19 @@
 					this.fitModal.n = 0;
 					this.fitModal.table = [];
 
+					var required_id = null;
+					if (first_device.recommendedParentId != null) required_id = first_device
+						.recommendedParentId;
+					else required_id = first_device.maxod;
+
+					var dmso_compat_needed = false;
+					var dmso_string = first_device.name.toLowerCase();
+					if (dmso_string.search("onyx") != -1 || dmso_string.search("phil") != -1 ||
+						dmso_string.search("squid") != -1) dmso_compat_needed = true;
+
 					deviceList.forEach(d => {
-						var required_id = null;
-						if (first_device.recommendedParentId != null) required_id = first_device
-							.recommendedParentId;
-						else required_id = first_device.maxod;
-						if (required_id < d.minid) {
+						if (required_id < d.minid && dmso_compat_needed == false) {
+
 							this.fitModal.table.push({
 								Name: d.name + " (" + d.manufacturer + ")",
 								Type: d.type,
@@ -1046,6 +1053,20 @@
 								Lengths: d.length + " cm"
 							});
 							this.fitModal.n++;
+						} else if (required_id < d.minid && dmso_compat_needed == true) {
+
+							if (d.dmso != null && (d.dmso == "yes" || d.dmso == "Yes" || d.dmso == "y" ||
+									d.dmso == "Y")) {
+
+								this.fitModal.table.push({
+									Name: d.name + " (" + d.manufacturer + ")",
+									Type: d.type,
+									minid: d.minid.toFixed(3),
+									maxod: d.maxod.toFixed(3),
+									Lengths: d.length + " cm"
+								});
+
+							}
 						}
 					});
 
@@ -1075,8 +1096,10 @@
 							.getAttribute("data"));
 						var parent_area = pi * (parent_data.minid / 2) * (parent_data.minid / 2);
 
-						if (!parent.hasChildNodes() && parent_area > minimum_run_area && parent_data
-							.type.toLowerCase() != "microcatheter" && parent_data.type.toLowerCase() !=
+						if (!parent.hasChildNodes() && parent_area > minimum_run_area &&
+							parent_data
+							.type.toLowerCase() != "microcatheter" && parent_data.type
+							.toLowerCase() !=
 							"balloon") {
 							summary.contrast_runs.push([
 								parent_data.name, parent_area
@@ -1147,7 +1170,8 @@
 										}
 										break;
 								}
-								summary.sizes = "<p style=\"color:red\">" + summary.sizes + child_str +
+								summary.sizes = "<p style=\"color:red\">" + summary.sizes +
+									child_str +
 									" does not fit in to " +
 									parent_data.name + ". " + compat_str + "</p>";
 							} else summary.sizes = summary.sizes + length_txt + compat_str;
@@ -1188,18 +1212,21 @@
 
 
 						if (summary.contrast_runs.length == 1) {
-							summary.contrast_text += "You can do cerebral angiography through the " + summary
+							summary.contrast_text += "You can do cerebral angiography through the " +
+								summary
 								.contrast_runs[0][0] + strength_calc(summary
 									.contrast_runs[0][1]) +
 								".";
 						} else {
-							summary.contrast_text += "The best device for cerebral angiography is the " + summary
+							summary.contrast_text += "The best device for cerebral angiography is the " +
+								summary
 								.contrast_runs[0][0] + strength_calc(summary
 									.contrast_runs[0][1]) + ". ";
 							summary.contrast_text +=
 								"Angiography strength through the remaining catheters is as follows: ";
 							for (var n = 1; n < summary.contrast_runs.length; n++) {
-								summary.contrast_text += summary.contrast_runs[n][0] + strength_calc(summary
+								summary.contrast_text += summary.contrast_runs[n][0] + strength_calc(
+									summary
 									.contrast_runs[n][1]);
 								if (n < (summary.contrast_runs.length - 1)) summary.contrast_text += ", ";
 								else summary.contrast_text += "."
