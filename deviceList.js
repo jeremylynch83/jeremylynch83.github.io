@@ -1,5 +1,6 @@
 deviceList=
 
+
 [
     {
         "type": "Balloon",
@@ -1147,6 +1148,25 @@ deviceList=
         "cautions": "\"WARNING: A 0:1 TRUFILL Ethiodized Oil to TRUFILL n-BCA ratio should never be used. Recommended mixtures based  on the N-Butyl Cyanoacrylate Embolization of Cerebral Arteriovenous Malformations Study (N-Butyl Cyanoacrylate Embolization of Cerebral Arteriovenous Malformations: Results of a Prospective, Randomized, Multi-center Trial, AJNR 23: 748-755, May 2002)\""
     },
     {
+        "type": "Stent Retriever ",
+        "name": "Nimbus",
+        "manufacturer": "Cerenovus",
+        "image": "nimbus.png",
+        "description": "\"CERENOVUS NIMBUS™ is designed to remove tough clots* to restore blood flow. CERENOVUS NIMBUS™ has 5 radiopaque markers to facilitate device positioning. 0.021” microcatheter compatible. The device is designed for use in the anterior and posterior neurovasculature in vessels of diameter 1.5 mm to 5.0 mm, such as the internal carotid artery, the M1 and M2 segments of the middle cerebral artery, the A1 and A2 segments of the anterior cerebral artery, the basilar, the posterior cerebral and the vertebral arteries.\"",
+        "url1": "https://www.jnjmedicaldevices.com/en-EMEA/product/cerenovus-nimbus-geometric-clot-extractor",
+        "url2": "https://neurorad.kukm-aussteller.de/files/firmen_content/CERENOVUS/NIMBUS.pdf",
+        "ifu": "http://synthes.vo.llnwd.net/o16/LLNWMB8/INT%20Mobile/Synthes%20International/MSY-EOS/CS071-01-Rev-07-Attachment-03.pdf",
+        "minid": 0,
+        "maxod": 0.02,
+        "length": 192.7,
+        "code": "GCE4528",
+        "vesselDiameters": "1.5 mm to 5.0 mm",
+        "sizes": "4.5 x 28 mm",
+        "comments": "<p>Intended to be used as a \"rescue\" stent retriever for tough clots. Some tips may be obtained from reading the IFU document: </p>\n\n<p>The device should be positioned in the clot ideally such that the end of the proximal radiopaque coil (Figure 2) is aligned with the proximal face of the clot. While stabilizing the Device shaft, retract the microcatheter to deploy the Device within the clot. The Device will be fully deployed once the distal tip of the Microcatheter has been retracted to a position over the proximal radiopaque coil of the Device. After deployment, the device may be left to embed in the clot for up to 5 minutes prior to withdrawal. </p>\n\n<p>Prior to clot retrieval re-advance the microcatheter to the clot while holding the CERENOVUS NIMBUS™ push wire static. Do not continue to advance against significant resistance. </p>\n\n<p>Withdraw the Device and microcatheter slowly and carefully as a single unit to the Guide or Intermediate Catheter while aspirating through the guide or Intermediate Catheter maintaining microcatheter and \nCERENOVUS NIMBUS™ position relative to each other during the withdrawal step. Applying vigorous aspiration (by syringe), withdraw the Device and microcatheter into the Guide or Intermediate Catheter and continue to aspirate until the Device reaches the proximal RHV. Note: If withdrawal in to the guide or intermediate catheter is difficult (as may be the case with a large clot burden) then deflate the balloon (if applicable) and withdraw the guide or intermediate catheter, \nmicrocatheter and Device together through the introducer sheath.</p>\n\n<p> Disconnect the RHV from the Guide Catheter and remove the Device, microcatheter and RHV together from the Guide Catheter. Use a syringe to further aspirate the Guide and/or Intermediate Catheter to ensure it is clear of any thrombus material. </p>\n\n<p>The Device may be used for up to three retrieval attempts. If an additional pass is to be made with the Device then carefully remove any captured thrombus from the Device and clean the Device in heparinized saline, rubbing gently from proximal to distal to remove any \nresidual thrombus material. Inspect the Device carefully and if any damage or deformity is observed do not use the Device – instead use a new Device for any subsequent passes. If using the same Device, replace \nthe Insertion Tool onto the proximal shaft and retract the Device into the Insertion Tool until it is fully resheathed. Do not retract the device into the Insertion Tool against significant resistance – ascertain the cause of the resistance and if required use a new device for any subsequent passes. Do not attempt more than three retrieval attempts in one vessel.</p>\n",
+        "material": "Nitinol",
+        "design": "Three-dimensional nitinol cage assembly at the distal end of a tapered nitinol shaft. There is a proximal coil which is radiopaque for positioning guidance. The NIMBUS has spiral cells with multiple pinch points amd wide opening angles to pull out tough clots. There are mid markers for positioning and to delineate the end of the spiral section. There is a \"barrel section\" to maintain control of the clot during retrieval and to funnel the clot/device into the receiving catheter. There are also distal markers. \n"
+    },
+    {
         "type": "Intrasaccular Device",
         "name": "Neqstent",
         "manufacturer": "Cerus",
@@ -1167,6 +1187,8 @@ deviceList=
         "minid": 0,
         "maxod": 0.026,
         "length": "?",
+        "sizetable": "[{\"Product code\":\"CNS21005-15\",\"Microcatheter\":\"0.021\\\"\",\"Diameter (mm)\":\"5\",\"Aneurysm neck (mm)\":\"2-3\",\"Aneurysm width (mm)\":\"2-3.5\"},{\"Product code\":\"CNS21007-15\",\"Microcatheter\":\"0.021\\\"\",\"Diameter (mm)\":\"7\",\"Aneurysm neck (mm)\":\"3-5\",\"Aneurysm width (mm)\":\"3-5.5\"},{\"Product code\":\"CNS21009-15\",\"Microcatheter\":\"0.021\\\"\",\"Diameter (mm)\":\"9\",\"Aneurysm neck (mm)\":\"4-6\",\"Aneurysm width (mm)\":\"5-7.5\"},{\"Product code\":\"CNS011-15\",\"Microcatheter\":\"0.027\\\"\",\"Diameter (mm)\":\"11\",\"Aneurysm neck (mm)\":\"5-8\",\"Aneurysm width (mm)\":\"7-8.5\"},{\"Product code\":\"CNS-014-15\",\"Microcatheter\":\"0.027\\\"\",\"Diameter (mm)\":\"14\",\"Aneurysm neck (mm)\":\"7-10\",\"Aneurysm width (mm)\":\"8-10.5\"}]",
+        "tablecaption": "Sizes",
         "detachment": "Electrolytic",
         "resheathable": "Completely resheathable."
     },
@@ -1497,6 +1519,7 @@ deviceList=
         "manufacturer": "Medtronic",
         "description": "\"Rist™ Radial Access system is the first portfolio designed for the \nunique demands of accessing the neurovasculature through the radial \npathway.\"",
         "url1": "https://www.medtronic.com/us-en/c/neurological/rist-radial-access-system.html",
+        "ifu": "https://www.medtronic.com/us-en/healthcare-professionals/products/neurological/access-delivery-nv/rist-radial-access-system/indications-safety-warnings.html",
         "minid": 0.079,
         "maxod": 0.093,
         "length": "95 / 100 / 105"
@@ -2997,6 +3020,7 @@ deviceList=
         "length": "?",
         "sizes": "3 - 4.5 mm",
         "sizetable": "[{\"Product number\":\"M003EZAS30150\",\"Stent diameter\":\"3.0mm\",\"Stent length\":\"15mm\",\"Unconstrained stent diameter\":\"3.5mm\",\"Recommended parent vessel diameter\":\"≥2.0 and <3.0mm\"},{\"Product number\":\"M003EZAS30210\",\"Stent diameter\":\"3.0mm\",\"Stent length\":\"21mm\",\"Unconstrained stent diameter\":\"3.5mm\",\"Recommended parent vessel diameter\":\"≥2.0 and <3.0mm\"},{\"Product number\":\"M003EZAS30240\",\"Stent diameter\":\"3.0mm\",\"Stent length\":\"24mm\",\"Unconstrained stent diameter\":\"3.5mm\",\"Recommended parent vessel diameter\":\"≥2.0 and <3.0mm\"},{\"Product number\":\"M003EZAS40150\",\"Stent diameter\":\"4.0mm\",\"Stent length\":\"15mm\",\"Unconstrained stent diameter\":\"4.5mm\",\"Recommended parent vessel diameter\":\"≥3.0 and <4.0mm\"},{\"Product number\":\"M003EZAS40240\",\"Stent diameter\":\"4.0mm\",\"Stent length\":\"24mm\",\"Unconstrained stent diameter\":\"4.5mm\",\"Recommended parent vessel diameter\":\"≥3.0 and <4.0mm\"},{\"Product number\":\"M003EZAS45210\",\"Stent diameter\":\"4.5mm\",\"Stent length\":\"21mm\",\"Unconstrained stent diameter\":\"5.0mm\",\"Recommended parent vessel diameter\":\"≥4.0 and ≤4.5mm\"},{\"Product number\":\"M003EZAS45300\",\"Stent diameter\":\"4.5mm\",\"Stent length\":\"30mm\",\"Unconstrained stent diameter\":\"5.0mm\",\"Recommended parent vessel diameter\":\"≥4.0 and ≤4.5mm\"}]",
+        "comments": "The Atlas can be deployed simply by unsheathing. It tends to stay accurately where it is placed.",
         "research": 33252708,
         "material": "Nitinol",
         "design": "Laser cut hybrid cell structure with alternating 16- and 24- strut rows",
@@ -3349,6 +3373,7 @@ deviceList=
     {
         "type": "Stent Retriever ",
         "name": "Trevo NXT ProVue Retriever 4 to 6 mm ",
+        "manufacturer": "Stryker",
         "url1": "https://www.stryker.com/us/en/neurovascular/products/trevo-nxt.html",
         "minid": 0,
         "maxod": 0.019,
@@ -3356,24 +3381,5 @@ deviceList=
         "sizetable": "[{\"Code\":90312,\"Stent diameter\":3,\"Labeled length\":\"32 mm\",\"Stent length\":\"36 mm\",\"Device length\":\"200 cm\",\"Wire diameter\":\"0.015 in\",\"Compatible microcatheter\":\"Trevo Pro 14 and Trevo Trak 21 Microcatheters\"},{\"Code\":90313,\"Stent diameter\":4,\"Labeled length\":\"28 mm\",\"Stent length\":\"32 mm\",\"Device length\":\"200 cm\",\"Wire diameter\":\"0.019 in\",\"Compatible microcatheter\":\"Trevo Trak 21 Microcatheter\"},{\"Code\":90314,\"Stent diameter\":4,\"Labeled length\":\"41 mm\",\"Stent length\":\"44 mm\",\"Device length\":\"200 cm\",\"Wire diameter\":\"0.019 in\",\"Compatible microcatheter\":\"Trevo Trak 21 Microcatheter\"},{\"Code\":90315,\"Stent diameter\":6,\"Labeled length\":\"37 mm\",\"Stent length\":\"40 mm\",\"Device length\":\"200 cm\",\"Wire diameter\":\"0.019 in\",\"Compatible microcatheter\":\"Trevo Trak 21 Microcatheter\"}]",
         "recommended": "Trak 21",
         "recommendedparentid": 0.021
-    },
-    {
-        "type": "Stent Retriever ",
-        "name": "Nimbus",
-        "manufacturer": "Cerenovus",
-        "image": "nimbus.png",
-        "description": "\"CERENOVUS NIMBUS™ is designed to remove tough clots* to restore blood flow. CERENOVUS NIMBUS™ has 5 radiopaque markers to facilitate device positioning. 0.021” microcatheter compatible. The Device is designed for use in the anterior and posterior neurovasculature in vessels of diameter 1.5 mm to 5.0 mm, such as the internal carotid artery, the M1 and M2 segments of the middle cerebral artery, the A1 and A2 segments of the anterior cerebral artery, the basilar, the posterior cerebral and the vertebral arteries.\"",
-        "url1": "https://www.jnjmedicaldevices.com/en-EMEA/product/cerenovus-nimbus-geometric-clot-extractor",
-        "url2": "https://neurorad.kukm-aussteller.de/files/firmen_content/CERENOVUS/NIMBUS.pdf",
-        "ifu": "http://synthes.vo.llnwd.net/o16/LLNWMB8/INT%20Mobile/Synthes%20International/MSY-EOS/CS071-01-Rev-07-Attachment-03.pdf",
-        "minid": 0,
-        "maxod": 0.02,
-        "length": 192.7,
-        "code": "GCE4528",
-        "vesselDiameters": "1.5 mm to 5.0 mm",
-        "sizes": "4.5 x 28 mm",
-        "comments": "<p>Intended to be used as a \"rescue\" stent retriever for tough clots. Some tips may be obtained from reading the IFU document: </p>\n\n<p>The device should be positioned in the clot ideally such that the end of the proximal radiopaque coil (Figure 2) is aligned with the proximal face of the clot. While stabilizing the Device shaft, retract the microcatheter to deploy the Device within the clot. The Device will be fully deployed once the distal tip of the Microcatheter has been retracted to a position over the proximal radiopaque coil of the Device. After deployment, the device may be left to embed in the clot for up to 5 minutes prior to withdrawal. </p>\n\n<p>Prior to clot retrieval re-advance the microcatheter to the clot while holding the CERENOVUS NIMBUS™ push wire static. Do not continue to advance against significant resistance. </p>\n\n<p>Withdraw the Device and microcatheter slowly and carefully as a single unit to the Guide or Intermediate Catheter while aspirating through the guide or Intermediate Catheter maintaining microcatheter and \nCERENOVUS NIMBUS™ position relative to each other during the withdrawal step. Applying vigorous aspiration (by syringe), withdraw the Device and microcatheter into the Guide or Intermediate Catheter and continue to aspirate until the Device reaches the proximal RHV. Note: If withdrawal in to the guide or intermediate catheter is difficult (as may be the case with a large clot burden) then deflate the balloon (if applicable) and withdraw the guide or intermediate catheter, \nmicrocatheter and Device together through the introducer sheath.</p>\n\n<p> Disconnect the RHV from the Guide Catheter and remove the Device, microcatheter and RHV together from the Guide Catheter. Use a syringe to further aspirate the Guide and/or Intermediate Catheter to ensure it is clear of any thrombus material. </p>\n\n<p>The Device may be used for up to three retrieval attempts. If an additional pass is to be made with the Device then carefully remove any captured thrombus from the Device and clean the Device in heparinized saline, rubbing gently from proximal to distal to remove any \nresidual thrombus material. Inspect the Device carefully and if any damage or deformity is observed do not use the Device – instead use a new Device for any subsequent passes. If using the same Device, replace \nthe Insertion Tool onto the proximal shaft and retract the Device into the Insertion Tool until it is fully resheathed. Do not retract the device into the Insertion Tool against significant resistance – ascertain the cause of the resistance and if required use a new device for any subsequent passes. Do not attempt more than three retrieval attempts in one vessel.</p>\n",
-        "material": "Nitinol",
-        "design": "Three-dimensional nitinol cage assembly at the distal end of a tapered nitinol shaft. There is a proximal coil which is radiopaque for positioning guidance. The NIMBUS has spiral cells with multiple pinch points amd wide opening angles to pull out tough clots. There are mid markers for positioning and to delineate the end of the spiral section. There is a \"barrel section\" to maintain control of the clot during retrieval and to funnel the clot/device into the receiving catheter. There are also distal markers. \n"
     }
 ]
