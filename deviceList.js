@@ -2662,6 +2662,7 @@ deviceList=
         "minid": 0,
         "maxod": 0.02,
         "length": 165,
+        "comments": "<p>There are 3 Comaneci devices which are sized according to the vessel diameter: </p>\n\n<p>1.5 to 4.5 mm : Comaneci</p>\n<p>1.5 to 3.5 mm : Comaneci petit</p>\n<p>0.5 to 3 mm : Comaneci 17</p>\n\n<p>The device is prepared as follows. Rinse the mesh (expandable tip) in saline. Check the opening and closing underwater. Next insert the sheath in to the RHV up to the microcatheter tip. Push the Comaneci in to the microcatheter. Peel away the sheath when fully inserted. </p>\n<p>Unsheath the device - similar to unsheathing a stent - with the microcatheter across the neck of the aneurysm. The Comaneci can be used partly unsheathed if the entire length is not required. There is a distal wire tip extending beyond the expandable mesh - this enables the Comaneci to be positioned more distally, or pulled back, after unsheathing. If, however, the device is to be moved across a tight curve or a significant distance it is recommended to resheath fully inside the microcatheter first. </p>\n<p> Draw the yellow handle on the Comaneci's handle back to open the device slowly click by click. Do not over expand the device. You may apply forward pressure on the microcatheter to bulge the Comaneci in to the aneurysm. It is possible to use 2 Comaneci together for wide neck bifurcation aneurysms (\"Comaneci Kissing Technique\"). Push the yellow handle forward to constrain the device. This is important to intermittently check for coil herniation. </p>\n<p>It is recommended that the coiling microcatheter is retrieved whilst the Comaneci is open. When this achieved then close the Comaneci completely and resheath it before removing the Comaneci microcatheter. </p>\n",
         "stentDiameterMm": 4.5,
         "stentLengthMm": 32
     },
@@ -2673,6 +2674,7 @@ deviceList=
         "minid": 0,
         "maxod": 0.02,
         "length": 165,
+        "comments": "<p>There are 3 Comaneci devices which are sized according to the vessel diameter: </p>\n\n<p>1.5 to 4.5 mm : Comaneci</p>\n<p>1.5 to 3.5 mm : Comaneci petit</p>\n<p>0.5 to 3 mm : Comaneci 17</p>\n\n<p>The device is prepared as follows. Rinse the mesh (expandable tip) in saline. Check the opening and closing underwater. Next insert the sheath in to the RHV up to the microcatheter tip. Push the Comaneci in to the microcatheter. Peel away the sheath when fully inserted. </p>\n<p>Unsheath the device - similar to unsheathing a stent - with the microcatheter across the neck of the aneurysm. The Comaneci can be used partly unsheathed if the entire length is not required. There is a distal wire tip extending beyond the expandable mesh - this enables the Comaneci to be positioned more distally, or pulled back, after unsheathing. If, however, the device is to be moved across a tight curve or a significant distance it is recommended to resheath fully inside the microcatheter first. </p>\n<p> Draw the yellow handle on the Comaneci's handle back to open the device slowly click by click. Do not over expand the device. You may apply forward pressure on the microcatheter to bulge the Comaneci in to the aneurysm. It is possible to use 2 Comaneci together for wide neck bifurcation aneurysms (\"Comaneci Kissing Technique\"). Push the yellow handle forward to constrain the device. This is important to intermittently check for coil herniation. </p>\n<p>It is recommended that the coiling microcatheter is retrieved whilst the Comaneci is open. When this achieved then close the Comaneci completely and resheath it before removing the Comaneci microcatheter. </p>\n",
         "stentDiameterMm": 3.5,
         "stentLengthMm": 24
     },
@@ -2684,6 +2686,7 @@ deviceList=
         "minid": 0,
         "maxod": 0.016,
         "length": 173,
+        "comments": "<p>There are 3 Comaneci devices which are sized according to the vessel diameter: </p>\n\n<p>1.5 to 4.5 mm : Comaneci</p>\n<p>1.5 to 3.5 mm : Comaneci petit</p>\n<p>0.5 to 3 mm : Comaneci 17</p>\n\n<p>The device is prepared as follows. Rinse the mesh (expandable tip) in saline. Check the opening and closing underwater. Next insert the sheath in to the RHV up to the microcatheter tip. Push the Comaneci in to the microcatheter. Peel away the sheath when fully inserted. </p>\n<p>Unsheath the device - similar to unsheathing a stent - with the microcatheter across the neck of the aneurysm. The Comaneci can be used partly unsheathed if the entire length is not required. There is a distal wire tip extending beyond the expandable mesh - this enables the Comaneci to be positioned more distally, or pulled back, after unsheathing. If, however, the device is to be moved across a tight curve or a significant distance it is recommended to resheath fully inside the microcatheter first. </p>\n<p> Draw the yellow handle on the Comaneci's handle back to open the device slowly click by click. Do not over expand the device. You may apply forward pressure on the microcatheter to bulge the Comaneci in to the aneurysm. It is possible to use 2 Comaneci together for wide neck bifurcation aneurysms (\"Comaneci Kissing Technique\"). Push the yellow handle forward to constrain the device. This is important to intermittently check for coil herniation. </p>\n<p>It is recommended that the coiling microcatheter is retrieved whilst the Comaneci is open. When this achieved then close the Comaneci completely and resheath it before removing the Comaneci microcatheter. </p>\n",
         "stentDiameterMm": 2.5,
         "stentLengthMm": 22
     },
@@ -2730,6 +2733,15 @@ deviceList=
         "length": "?",
         "design": "braided",
         "stentLengthMm": 53
+    },
+    {
+        "type": "Wire",
+        "name": "Columbus",
+        "manufacturer": "Rapid Medical",
+        "url1": "https://www.rapid-medical.com/columbus",
+        "minid": 0,
+        "maxod": 0.014,
+        "length": "?"
     },
     {
         "type": "Balloon",
