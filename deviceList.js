@@ -1,6 +1,5 @@
 deviceList=
 
-
 [
     {
         "type": "Balloon",
@@ -2304,7 +2303,10 @@ deviceList=
         "minid": 0.015,
         "maxod": 0.0656168,
         "length": "?",
-        "design": "Closed cell"
+        "sizetable": "[{\"Product Code\":\"CPR-0520-143RX\",\"Diameter\":\"5\",\"Dual Layer Length\":\"20/20/22\",\"Overall Length\":\"25/33/35\"},{\"Product Code\":\"CPR-0530-143RX\",\"Diameter\":\"5\",\"Dual Layer Length\":\"30/35/38\",\"Overall Length\":\"37/47/52\"},{\"Product Code\":\"CPR-0540-143RX\",\"Diameter\":\"5\",\"Dual Layer Length\":\"40/45/52\",\"Overall Length\":\"47/59/64\"},{\"Product Code\":\"CPR-0616-143RX\",\"Diameter\":\"6\",\"Dual Layer Length\":\"16/20/23\",\"Overall Length\":\"22/32/35\"},{\"Product Code\":\"CPR-0625-143RX\",\"Diameter\":\"6\",\"Dual Layer Length\":\"25/30/33\",\"Overall Length\":\"33/44/48\"},{\"Product Code\":\"CPR-0630-143RX\",\"Diameter\":\"6\",\"Dual Layer Length\":\"30/40/43\",\"Overall Length\":\"40/53/58\"},{\"Product Code\":\"CPR-0718-143RX\",\"Diameter\":\"7\",\"Dual Layer Length\":\"18/23/26\",\"Overall Length\":\"25/35/38\"},{\"Product Code\":\"CPR-0725-143RX\",\"Diameter\":\"7\",\"Dual Layer Length\":\"25/30/36\",\"Overall Length\":\"35/47/52\"},{\"Product Code\":\"CPR-0730-143RX\",\"Diameter\":\"7\",\"Dual Layer Length\":\"30/40/44\",\"Overall Length\":\"40/53/60\"},{\"Product Code\":\"CPR-0820-143RX\",\"Diameter\":\"8\",\"Dual Layer Length\":\"20/25/27\",\"Overall Length\":\"25/36/40\"},{\"Product Code\":\"CPR-0825-143RX\",\"Diameter\":\"8\",\"Dual Layer Length\":\"25/30/38\",\"Overall Length\":\"35/49/54\"},{\"Product Code\":\"CPR-0830-143RX\",\"Diameter\":\"8\",\"Dual Layer Length\":\"30/40/45\",\"Overall Length\":\"40/55/61\"},{\"Product Code\":\"CPR-0840-143RX\",\"Diameter\":\"8\",\"Dual Layer Length\":\"40/50/60\",\"Overall Length\":\"47/67/75\"},{\"Product Code\":\"CPR-0920-143RX\",\"Diameter\":\"9\",\"Dual Layer Length\":\"20/30/33\",\"Overall Length\":\"33/45/48\"},{\"Product Code\":\"CPR-0930-143RX\",\"Diameter\":\"9\",\"Dual Layer Length\":\"30/40/45\",\"Overall Length\":\"40/55/60\"},{\"Product Code\":\"CPR-1020-143RX\",\"Diameter\":\"10\",\"Dual Layer Length\":\"20/30/35\",\"Overall Length\":\"35/45/50\"},{\"Product Code\":\"CPR-1030-143RX\",\"Diameter\":\"10\",\"Dual Layer Length\":\"30/40/45\",\"Overall Length\":\"43/55/60\"}]",
+        "tablecaption": "Unconstrained Dimensions / Implanted Dimensions (1mm<) / Implanted Dimesions (2mm<) (mm/mm/mm)",
+        "design": "Closed cell. Braided.",
+        "features": "\"Micro-mesh with small cell size (375-700 µm) limits plaque prolapse and embolic release.\n\t\nConformability: Braided design allows for stent in-vivo tapering and conformability to the ICA-CCA segments.\n    \nFlexibility: Closed cell stent with similar flexibility to an open cell stent, resulting in good vessel wall apposition in tortuous anatomy.\n\nFully repositionable with up to 50% deployment, improving stent placement accuracy.\n\nDelivery catheter with flexible distal design to enhance trackability in highly challenging anatomy.\n\nLow profile 5 Fr sheath compatible system enhances the crossability for stenting.\""
     },
     {
         "type": "Stent",
@@ -3411,5 +3413,31 @@ deviceList=
         "sizetable": "[{\"Code\":90312,\"Stent diameter\":3,\"Labeled length\":\"32 mm\",\"Stent length\":\"36 mm\",\"Device length\":\"200 cm\",\"Wire diameter\":\"0.015 in\",\"Compatible microcatheter\":\"Trevo Pro 14 and Trevo Trak 21 Microcatheters\"},{\"Code\":90313,\"Stent diameter\":4,\"Labeled length\":\"28 mm\",\"Stent length\":\"32 mm\",\"Device length\":\"200 cm\",\"Wire diameter\":\"0.019 in\",\"Compatible microcatheter\":\"Trevo Trak 21 Microcatheter\"},{\"Code\":90314,\"Stent diameter\":4,\"Labeled length\":\"41 mm\",\"Stent length\":\"44 mm\",\"Device length\":\"200 cm\",\"Wire diameter\":\"0.019 in\",\"Compatible microcatheter\":\"Trevo Trak 21 Microcatheter\"},{\"Code\":90315,\"Stent diameter\":6,\"Labeled length\":\"37 mm\",\"Stent length\":\"40 mm\",\"Device length\":\"200 cm\",\"Wire diameter\":\"0.019 in\",\"Compatible microcatheter\":\"Trevo Trak 21 Microcatheter\"}]",
         "recommended": "Trak 21",
         "recommendedparentid": 0.021
+    },
+    {
+        "type": "Catheter",
+        "name": "BOBBY Balloon Guide Catheter",
+        "manufacturer": "Microvention",
+        "description": "\"For use in facilitating the insertion and guidance of an intravascular catheter into a selected blood vessel in the peripheral and neuro vascular systems. The balloon provides temporary vascular occlusion during these and other angiographic procedures. The Balloon Guide Catheter is also indicated for use as a conduit for retrieval devices.\n\nThe BOBBY Balloon Guide Catheter is a co-axial, braid-reinforced, variable stiffness catheter with an external hydrophilic coating. The BOBBY Balloon Guide Catheter incorporates a compliant balloon, radiopaque markers, and a bifurcated luer hub on the proximal end. The BOBBY Balloon Guide Catheter has an inner lumen through which a guidewire and catheter can be inserted, and a co-axial outer lumen that is used to inflate and deflate the balloon with a syringe filled with contrast media. A bifurcated luer hub is attached to the proximal end of the balloon guide catheter to provide access to both the inner and outer lumens. In addition, a hydrophilic coating is applied to the distal end of the balloon guide catheter to provide a lubricious outer surface for catheter advancement in the vasculature. A compliant balloon is mounted on the distal end to provide temporary vascular occlusion during angiographic procedures. The balloon incorporates a distal air-purging system to purge air from the inflation lumen prior to use. The balloon catheter also incorporates radiopaque markers to facilitate fluoroscopic visualization and indication of the balloon position.\"",
+        "url1": "https://www.accessdata.fda.gov/cdrh_docs/pdf19/K193607.pdf",
+        "minid": 0.086,
+        "maxod": 0.11,
+        "length": 95,
+        "material": "Medical grade plastic and stainless steel braid and coil reinforced shaft. The balloon is made of polyurethane. The distal tip has a hydrophilic Coating.",
+        "features": "There are 2 distal Pt-IR radiopaque marker bands. The device is supplied with a peel away sheath. "
+    },
+    {
+        "type": "Stent Retriever ",
+        "name": "ERIC",
+        "manufacturer": "Microvention",
+        "description": "\"The ERIC device is a clot retrieval device designed to work in conjunction with the SOFIA and SOFIA Plus Catheters. The ERIC device requires no wait time to integrate with the clot and may be retrieved immediately after deployment, potentially resulting in faster procedures.\"",
+        "url1": "https://www.microvention.com/emea/product/eric",
+        "minid": 0,
+        "maxod": 0.0165,
+        "length": 205,
+        "sizetable": "[{\"Product\":\"ERIC 3x20\",\"Product Code\":\"ER173020\",\"Diameter\":\"3mm\",\"Working Length\":\"20mm\",\"Number of Spheres\":\"4\",\"Distal Tip Length\":\"5.0mm\",\"Minimum Catheter ID\":\"0.017\\\"\",\"Pusher Length\":\"203cm\",\"Recommended Vessel Location\":\"Distal M2/M3\"},{\"Product\":\"ERIC 4x24\",\"Product Code\":\"ER174024\",\"Diameter\":\"4mm\",\"Working Length\":\"24mm\",\"Number of Spheres\":\"4\",\"Distal Tip Length\":\"5.0mm\",\"Minimum Catheter ID\":\"0.017\\\"\",\"Pusher Length\":\"203cm\",\"Recommended Vessel Location\":\"M1/M2\"},{\"Product\":\"ERIC 4x30\",\"Product Code\":\"ER174030\",\"Diameter\":\"4mm\",\"Working Length\":\"30mm\",\"Number of Spheres\":\"5\",\"Distal Tip Length\":\"5.0mm\",\"Minimum Catheter ID\":\"0.017\\\"\",\"Pusher Length\":\"203cm\",\"Recommended Vessel Location\":\"M1/M2\"},{\"Product\":\"ERIC 6x35\",\"Product Code\":\"ER176035\",\"Diameter\":\"6mm\",\"Working Length\":\"35mm\",\"Number of Spheres\":\"4\",\"Distal Tip Length\":\"5.0mm\",\"Minimum Catheter ID\":\"0.017\\\"\",\"Pusher Length\":\"203cm\",\"Recommended Vessel Location\":\"Proximal M1/ICA\"},{\"Product\":\"ERIC 6x44\",\"Product Code\":\"ER176044\",\"Diameter\":\"6mm\",\"Working Length\":\"44mm\",\"Number of Spheres\":\"5\",\"Distal Tip Length\":\"5.0mm\",\"Minimum Catheter ID\":\"0.017\\\"\",\"Pusher Length\":\"203cm\",\"Recommended Vessel Location\":\"Proximal M1/ICA\"}]",
+        "tablecaption": "Catalogue",
+        "recommended": "Headway 17, 21, and 27",
+        "features": "\"Immediate clot integration: The ERIC device’s high amount of ‘intralumenal clot capture surface’ eliminates the need to wait before retrieving the clot, potentially resulting in faster procedure times. \n\nAdjustable working length: The ERIC device has an adjustable working length, allowing for the ability to select the number of working spheres deployed, enabling precise deployment in distal vessels.\n\nDesigned to work with the Sofia and Sofia Plus catheters: The ERIC device is specifically designed to work with the SOFIA and SOFIA Plus catheters, acting as a conveyor belt to help retrieve clot into the powerful aspiration force at the distal tip of the SOFIA or SOFIA Plus catheter.\""
     }
 ]
