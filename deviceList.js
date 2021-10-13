@@ -1189,6 +1189,7 @@ deviceList=
         "sizetable": "[{\"Product code\":\"CNS21005-15\",\"Microcatheter\":\"0.021\\\"\",\"Diameter (mm)\":\"5\",\"Aneurysm neck (mm)\":\"2-3\",\"Aneurysm width (mm)\":\"2-3.5\"},{\"Product code\":\"CNS21007-15\",\"Microcatheter\":\"0.021\\\"\",\"Diameter (mm)\":\"7\",\"Aneurysm neck (mm)\":\"3-5\",\"Aneurysm width (mm)\":\"3-5.5\"},{\"Product code\":\"CNS21009-15\",\"Microcatheter\":\"0.021\\\"\",\"Diameter (mm)\":\"9\",\"Aneurysm neck (mm)\":\"4-6\",\"Aneurysm width (mm)\":\"5-7.5\"},{\"Product code\":\"CNS011-15\",\"Microcatheter\":\"0.027\\\"\",\"Diameter (mm)\":\"11\",\"Aneurysm neck (mm)\":\"5-8\",\"Aneurysm width (mm)\":\"7-8.5\"},{\"Product code\":\"CNS-014-15\",\"Microcatheter\":\"0.027\\\"\",\"Diameter (mm)\":\"14\",\"Aneurysm neck (mm)\":\"7-10\",\"Aneurysm width (mm)\":\"8-10.5\"}]",
         "tablecaption": "Sizes",
         "detachment": "Electrolytic",
+        "deadSpace": "<p>\nPlace the microcatheter in the aneurysm sac in the usual fashion. 0.021\" or 0.027\" microcatheters are used depending on the size of the Contour device chosen (see associated table). Recommended catheters include the Headway (Microvention), XT (Stryker) and Phenom (Medtronic). The Via (Microvention) or Rebar (Medtronic) are probably a bit too stiff for the device. A second microcatheter can be jailed above the contour for coil deployment. \n</p>\n<p>\nThe Contour is prepared first by dipping the tip of the sheath/device in saline and unsheathing by pushing the device out. Resheath under the saline (to stop air bubbles attaching to the device). \n</p>\n<p>\nLoad the device in to the microcatheter by 'hubbing' the Contour and waiting for saline to drip out the end of the sheath. Next, push the pusher wire until the end is fully within the sheath.\nRemove the sheath and keep pushing the pusher wire until the device appears on the screen. It is recommended at this point to give a gentle pull on the wire whilst the device is still within the microcatheter to ensure that it has not prematurely detached. If this is the case then remove the microcatheter and pusher wire together and replace the device/microcatheter. \n</p>\n<p>\nThe device is next unsheathed in the aneurysm. Unlike the WEB, the tip is not sharp as it initially unsheaths. The Contour can be fully resheathed and redeployed if necessary. It is said to resemble a red wine glass if it has been suitably sized and a saucer if it is undersized. Probably the most dangerous situation is oversizing, where it resembles a champagne flute. The danger is of focusing a central channel of blood which can result in aneurysm rupture, or of blocking vessels arising from the neck causing ischaemia.  \n</p>\n<p>\nThe detachment is electrolytic. The red cable is attached to the device pusher wire. Dampening the wire with a saline soaked gauze is sometimes helpful to improve electrical contact. A black cable is attached to a needle inserted in to the muscles of the thigh. \n</p>",
         "resheathable": "Completely resheathable."
     },
     {
@@ -1205,6 +1206,7 @@ deviceList=
         "sizetable": "[{\"Product code\":\"CNS21005-15\",\"Microcatheter\":\"0.021\\\"\",\"Diameter (mm)\":\"5\",\"Aneurysm neck (mm)\":\"2-3\",\"Aneurysm width (mm)\":\"2-3.5\"},{\"Product code\":\"CNS21007-15\",\"Microcatheter\":\"0.021\\\"\",\"Diameter (mm)\":\"7\",\"Aneurysm neck (mm)\":\"3-5\",\"Aneurysm width (mm)\":\"3-5.5\"},{\"Product code\":\"CNS21009-15\",\"Microcatheter\":\"0.021\\\"\",\"Diameter (mm)\":\"9\",\"Aneurysm neck (mm)\":\"4-6\",\"Aneurysm width (mm)\":\"5-7.5\"},{\"Product code\":\"CNS011-15\",\"Microcatheter\":\"0.027\\\"\",\"Diameter (mm)\":\"11\",\"Aneurysm neck (mm)\":\"5-8\",\"Aneurysm width (mm)\":\"7-8.5\"},{\"Product code\":\"CNS-014-15\",\"Microcatheter\":\"0.027\\\"\",\"Diameter (mm)\":\"14\",\"Aneurysm neck (mm)\":\"7-10\",\"Aneurysm width (mm)\":\"8-10.5\"}]",
         "tablecaption": "Sizes",
         "detachment": "Electrolytic",
+        "deadSpace": "<p>\nPlace the microcatheter in the aneurysm sac in the usual fashion. 0.021\" or 0.027\" microcatheters are used depending on the size of the Contour device chosen (see associated table). Recommended catheters include the Headway (Microvention), XT (Stryker) and Phenom (Medtronic). The Via (Microvention) or Rebar (Medtronic) are probably a bit too stiff for the device. A second microcatheter can be jailed above the contour for coil deployment. \n</p>\n<p>\nThe Contour is prepared first by dipping the tip of the sheath/device in saline and unsheathing by pushing the device out. Resheath under the saline (to stop air bubbles attaching to the device). \n</p>\n<p>\nLoad the device in to the microcatheter by 'hubbing' the Contour and waiting for saline to drip out the end of the sheath. Next, push the pusher wire until the end is fully within the sheath.\nRemove the sheath and keep pushing the pusher wire until the device appears on the screen. It is recommended at this point to give a gentle pull on the wire whilst the device is still within the microcatheter to ensure that it has not prematurely detached. If this is the case then remove the microcatheter and pusher wire together and replace the device/microcatheter. \n</p>\n<p>\nThe device is next unsheathed in the aneurysm. Unlike the WEB, the tip is not sharp as it initially unsheaths. The Contour can be fully resheathed and redeployed if necessary. It is said to resemble a red wine glass if it has been suitably sized and a saucer if it is undersized. Probably the most dangerous situation is oversizing, where it resembles a champagne flute. The danger is of focusing a central channel of blood which can result in aneurysm rupture, or of blocking vessels arising from the neck causing ischaemia.  \n</p>\n<p>\nThe detachment is electrolytic. The red cable is attached to the device pusher wire. Dampening the wire with a saline soaked gauze is sometimes helpful to improve electrical contact. A black cable is attached to a needle inserted in to the muscles of the thigh. \n</p>",
         "resheathable": "Completely resheathable."
     },
     {
@@ -1557,7 +1559,8 @@ deviceList=
         "ifu": "https://europe.medtronic.com/content/dam/medtronic-com/xd-en/c/od08014-nv-access-delivery/pdfs/Navien_IFU.pdf",
         "minid": 0.058,
         "maxod": 0.07,
-        "length": "105 / 115 / 125 / 130"
+        "length": "105 / 115 / 125 / 130",
+        "comments": "Commonly used intermediate catheter. "
     },
     {
         "type": "Catheter",
@@ -1567,7 +1570,8 @@ deviceList=
         "ifu": "https://europe.medtronic.com/content/dam/medtronic-com/xd-en/c/od08014-nv-access-delivery/pdfs/Navien_IFU.pdf",
         "minid": 0.072,
         "maxod": 0.084,
-        "length": "95 / 105 / 115 / 125 / 130"
+        "length": "95 / 105 / 115 / 125 / 130",
+        "comments": "Commonly used large bore intermediate catheter for coiling etc."
     },
     {
         "type": "Catheter",
@@ -1657,6 +1661,7 @@ deviceList=
         "minid": 0.013,
         "maxod": 0.036,
         "length": "165",
+        "comments": "Commonly used for liquid embolics with a detachable tip. ",
         "tipLengths": "1.5 / 3 / 5"
     },
     {
@@ -1668,7 +1673,8 @@ deviceList=
         "dmso": "yes",
         "minid": 0.017,
         "maxod": 0.028,
-        "length": "150"
+        "length": "150",
+        "comments": "Commonly used coiling catheter. Is DMSO compatible so can also be used for liquid embolics. Note: this catheter is NOT compatible with Stryker Target Nano coils (or at least inconsistently reliable)"
     },
     {
         "type": "Microcatheter",
@@ -1679,7 +1685,8 @@ deviceList=
         "dmso": "yes",
         "minid": 0.017,
         "maxod": 0.031496,
-        "length": "150"
+        "length": "150",
+        "comments": "Commonly used coiling catheter. Is DMSO compatible so can also be used for liquid embolics. Note: this catheter is NOT compatible with Stryker Target Nano coils (or at least inconsistently reliable)"
     },
     {
         "type": "Microcatheter",
@@ -1690,7 +1697,8 @@ deviceList=
         "dmso": "yes",
         "minid": 0.013,
         "maxod": 0.036,
-        "length": "165"
+        "length": "165",
+        "comments": "Commonly used for liquid embolics with  a non-detachable tip. "
     },
     {
         "type": "Microcatheter",
@@ -3430,6 +3438,7 @@ deviceList=
         "type": "Stent Retriever ",
         "name": "ERIC",
         "manufacturer": "Microvention",
+        "image": "eric.png",
         "description": "\"The ERIC device is a clot retrieval device designed to work in conjunction with the SOFIA and SOFIA Plus Catheters. The ERIC device requires no wait time to integrate with the clot and may be retrieved immediately after deployment, potentially resulting in faster procedures.\"",
         "url1": "https://www.microvention.com/emea/product/eric",
         "minid": 0,
