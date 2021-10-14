@@ -1278,6 +1278,106 @@ Not present | Present
 			</multi_radio>
 		</content>
 	</module>
+
+
+	<module>
+		<name>
+			CT Head 
+		</name>
+		<content>
+			<h2 flags="dont_print">
+				Acute pathology
+			</h2>
+			<text_entry subtype="medium" flags="dont_print_label">
+			</text_entry>
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Hyperdense vessel" normaltext="No hyperdense vessel is apparent.">
+					Not present | Present
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+
+			</multi_radio>
+
+
+			<h2 flags="dont_print">
+				Chronic pathology
+			</h2>
+			<multi_select label="White matter changes" askfurtherdetails="true">
+				<dropdown label="Location" print_text_before="There is" print_text_after="white matter hypodensity">
+					periventricular | deep white matter | pontine | periventricular and deep white matter | generalised
+				</dropdown>
+				<dropdown label="Severity" print_text_before="which is non-specific but may represent a" print_text_after="burden of small vessel disease">
+					mild | moderate | severe
+				</dropdown>
+			</multi_select>
+			<multi_select label="Atrophy" askfurtherdetails="true">
+				<dropdown label="Cerebral severity" print_text_before="There is">
+					mild | moderate | severe
+				</dropdown>
+				<dropdown label="Cerebral location" print_text_after="cerebral atrophy.">
+					supratentorial | infratentorial | generalised
+				</dropdown>
+				<dropdown label="Hippocampal severity" print_text_before="There is">
+					mild | moderate | severe
+				</dropdown>
+				<dropdown label="Hippocampal location" print_text_after="hippocampal atrophy.">
+					bilateral | right | left
+				</dropdown>
+			</multi_select>
+
+			<selection label="Bones">
+				There are no skull fractures or destructive bony lesions
+			</selection>
+			<h2 flags="dont_print">
+				Checklist
+			</h2>
+			<multi_radio>
+				<radio label="Venous sinus hyperdensity" flags="dont_print_normal">
+					Normal | Abnormal
+				</radio>
+				<radio label="Basilar hyperdensity" flags="dont_print_normal">
+					Not present | Present
+				</radio>
+				<radio label="Trauma/contusions" flags="dont_print_normal">
+					Not present | Present
+				</radio>
+				<radio label="Orbits" flags="dont_print_normal">
+					Normal | Abnormal
+				</radio>
+				<radio label="Old infarcts" flags="dont_print_normal"> 
+					Not present | Present
+				</radio>
+				<radio label="Paranasal sinuses" flags="dont_print_normal">
+					Normal | Abnormal
+				</radio>
+				<radio label="Clivus" flags="dont_print_normal">
+					Normal | Abnormal
+				</radio>
+				<radio label="Pituitary" flags="dont_print_normal">
+					Normal | Abnormal
+				</radio>
+				<radio label="Cerebellar tonsils" flags="dont_print_normal">
+					Normal | Abnormal
+				</radio>
+				<radio label="Extracranial soft tissue" flags="dont_print_normal">
+					Normal | Abnormal
+				</radio>
+			</multi_radio>
+
+		</content>
+	</module>
+
 	<template>
 		<name>
 			CT Head Non-Contrast: Routine
@@ -1792,6 +1892,18 @@ Not present | Present
 			<text_entry label="" subtype="medium">
 			</text_entry>
 			<selection label="Right carotid artery">
+<<<<<<< HEAD
+				The right common and internal carotid arteries are normal
+			</selection>
+			<selection label="Left carotid artery">
+				The left common and internal carotid arteries are normal
+			</selection>
+			<selection label="Right vertebral artery">
+				The right vertebral artery is normal
+			</selection>
+			<selection label="Left vertebral artery">
+				The left vertebral artery is normal
+=======
 				The intracranial segment of the right internal carotid artery is normal
 			</selection>
 			<selection label="Left carotid artery">
@@ -1802,6 +1914,7 @@ Not present | Present
 			</selection>
 			<selection label="Left vertebral artery">
 				The intracranial segment of the left internal carotid artery is normal
+>>>>>>> 0d0f87459dd9a3d7b6c9f0954d09c76a224c633f
 			</selection>
 			<selection label="Basilar artery">
 				The basilar artery is normal
@@ -1827,7 +1940,7 @@ Not present | Present
 	</module>
 	<module>
 		<name>
-			CT Angiogram Neck
+			CT Angiogram Neck Extra
 		</name>
 		<content>
 			<h2>
@@ -1835,21 +1948,6 @@ Not present | Present
 			</h2>
 			<selection label="Subclavian/Arch">
 				Normal appearances of the aortic arch and subclavian arteries
-			</selection>
-			<selection label="Right carotid artery">
-				The right common and internal carotid arteries are normal
-			</selection>
-			<selection label="Left carotid artery">
-				The left common and internal carotid arteries are normal
-			</selection>
-			<selection label="Right vertebral artery">
-				The right vertebral artery is normal
-			</selection>
-			<selection label="Left vertebral artery">
-				The left vertebral artery is normal
-			</selection>
-			<selection label="Basilar artery">
-				The basilar artery is normal
 			</selection>
 			<selection label="Bones">
 				There is no acute fracture or destructive bony lesion
@@ -1869,7 +1967,7 @@ Not present | Present
 	</module>
 	<template>
 		<name>
-			CT Angiogram Intracranial
+			CT Angiogram
 		</name>
 		<type>
 			Diagnostic
@@ -1894,26 +1992,17 @@ Not present | Present
 			<h1>
 				Findings
 			</h1>
-			<multi_radio>
-				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
-					Not present | Present
-				</radio>
-				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
-					Not present | Present
-				</radio>
-				<radio label="Collection" normaltext="No intracranial collection is present.">
-					Not present | Present
-				</radio>
-				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
-					Not present | Present
-				</radio>
-			</multi_radio>
 			<insert>
-				CT Head Checklist
+			CT Angiogram Intracranial
 			</insert>
-			<insert>
-				CT Angiogram Intracranial
-			</insert>
+			<query_insert>
+				CT Angiogram Neck Extra
+			</query_insert>
+			<query_insert>ASPECT Score
+			</query_insert>
+			<query_insert>
+				CT Head
+			</query_insert>
 			<h1>
 				Conclusion
 			</h1>
@@ -1985,113 +2074,6 @@ Not present | Present
 			<selection label="">
 				Surgical review is warranted
 			</selection>
-		</content>
-	</template>
-	<template>
-		<name>
-			CT Non-Contrast Head, Intracranial Angiogram, and Angiogram Head and Neck Vessels: Stroke
-		</name>
-		<type>
-			Diagnostic
-		</type>
-		<title>
-			CT Head and Angiogram of the Head and Neck
-		</title>
-		<content>
-			<h1>
-				Clinical Indication
-			</h1>
-			<text_entry label="" subtype="medium">
-			</text_entry>
-			<h1>
-				Technique
-			</h1>
-			<text_entry label="" subtype="small">
-			Non-contrast CT of the head. CT arteriogram from aortic arch to vertex of the head. 
-			</text_entry>
-			<insert>
-				Comparison
-			</insert>
-			<h1>
-				Findings
-			</h1>
-
-			<h2 flags="dont_print">
-				CT Non-Contrast Head
-			</h2>
-			<multi_radio>
-				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
-					Not present | Present
-				</radio>
-				<radio label="Hyperdense vessel" normaltext="No hyperdense vessel is apparent.">
-					Not present | Present
-				</radio>
-				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
-					Not present | Present
-				</radio>
-				<radio label="Collection" normaltext="No intracranial collection is present.">
-					Not present | Present
-				</radio>
-				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
-					Not present | Present
-				</radio>
-			</multi_radio>
-			<text_entry subtype="medium">
-			</text_entry>
-
-			<h2>ASPECT Score</h2>
-			<multi_select label="Components">
-				<dropdown label="Caudate nucleus" print_text_before="Caudate nucleus" print_text_after=".">
-					involved (-1) | not involved (0)
-				</dropdown>
-				<dropdown label="Putamen" print_text_before="Putamen" print_text_after=".">
-					involved (-1) | not involved (0)
-				</dropdown>
-				<dropdown label="Internal capsule" print_text_before="Internal capsule" print_text_after=".">
-					involved (-1) | not involved (0)
-				</dropdown>
-				<dropdown label="Insular cortex" print_text_before="Insular cortex" print_text_after=".">
-					involved (-1) | not involved (0)
-				</dropdown>
-				<dropdown label="M1 (frontal operculum)" print_text_before="M1 (frontal operculum)" print_text_after=".">
-					involved (-1) | not involved (0)
-				</dropdown>
-				<dropdown label="M2 (anterior temporal lobe)" print_text_before="M2 (anterior temporal lobe)" print_text_after=".">
-					involved (-1) | not involved (0)
-				</dropdown>
-				<dropdown label="M3 (posterior temporal lobe)" print_text_before="M3 (posterior temporal lobe)" print_text_after=".">
-					involved (-1) | not involved (0)
-				</dropdown>
-				<dropdown label="M4 (immediately superior to M1)" print_text_before="M4 (immediately superior to M1" print_text_after=".">
-					involved (-1) | not involved (0)
-				</dropdown>
-				<dropdown label="M5 (immediately superior to M2)" print_text_before="M5 (immediately superior to M2)" print_text_after=".">
-					involved (-1) | not involved (0)
-				</dropdown>
-				<dropdown label="M6 (immediately superior to M3)" print_text_before="M6 (immediately superior to M3)" print_text_after=".">
-					involved (-1) | not involved (0)
-				</dropdown>
-			</multi_select>
-
-			<insert>
-				CT Head Checklist
-			</insert>
-
-			<insert>
-				CT Angiogram Intracranial
-			</insert>
-
-			<insert>
-				CT Angiogram Neck
-			</insert>
-			<h1>
-				Conclusion
-			</h1>
-			<selection label="Normal">
-				No acute intracranial pathology. Normal CTA appearance of the head and neck arteries. 
-			</selection>
-			<text_entry label="" subtype="medium">
-			</text_entry>
 		</content>
 	</template>
 
@@ -2525,13 +2507,19 @@ Not present | Present
 				Findings
 			</h1>
 			<multi_select label="Description" askfurtherdetails="false">
-				<dropdown label="Location" print_text_before="There has been interval partial evacuation of the subdural haematoma overlying the">
+				<dropdown label="Location" print_text_before="Note is made of the subdural haematoma overlying the">
 					right cerebral hemisphere | left cerebral hemisphere
+				</dropdown>
+				<dropdown label="Evacuation">
+					There has been interval evacuation via burr hole drainage. 
 				</dropdown>
 			</multi_select>
 			<text_entry label="" subtype="large">
-				There has been marked reduction of the size of subdural haematoma associated with significant reduction of local mass effect and partial re-expansion of the cerebral sulci and ipsilateral lateral ventricle. A small collection of blood products and fluid remains. There remains mild contralateral shift of midline structures.
+				There has been marked reduction of the size of subdural haematoma associated with significant reduction of local mass effect and partial re-expansion of the cerebral sulci and ipsilateral lateral ventricle. A small collection of blood products and fluid remains. 
 			</text_entry>
+			<selection label="Shift">
+				There remains mild contralateral shift of midline structures. | There remains moderategit contralateral shift of midline structures. | There remains severe contralateral shift of midline structures.
+			</selection>
 			<insert>
 				CT Head Checklist
 			</insert>
