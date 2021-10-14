@@ -1892,7 +1892,6 @@ Not present | Present
 			<text_entry label="" subtype="medium">
 			</text_entry>
 			<selection label="Right carotid artery">
-<<<<<<< HEAD
 				The right common and internal carotid arteries are normal
 			</selection>
 			<selection label="Left carotid artery">
@@ -1903,18 +1902,6 @@ Not present | Present
 			</selection>
 			<selection label="Left vertebral artery">
 				The left vertebral artery is normal
-=======
-				The intracranial segment of the right internal carotid artery is normal
-			</selection>
-			<selection label="Left carotid artery">
-				The intracranial segment of the left internal carotid artery is normal
-			</selection>
-			<selection label="Right vertebral artery">
-				The intracranial segment of the right vertebral artery is normal
-			</selection>
-			<selection label="Left vertebral artery">
-				The intracranial segment of the left internal carotid artery is normal
->>>>>>> 0d0f87459dd9a3d7b6c9f0954d09c76a224c633f
 			</selection>
 			<selection label="Basilar artery">
 				The basilar artery is normal
