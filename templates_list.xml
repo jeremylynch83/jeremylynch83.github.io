@@ -1886,7 +1886,7 @@ Not present | Present
 			CT Angiogram Intracranial
 		</name>
 		<content>
-			<h2>
+			<h2 flags="dont_print">
 				CT Angiogram Intracranial
 			</h2>
 			<text_entry label="" subtype="medium">
@@ -1930,7 +1930,7 @@ Not present | Present
 			CT Angiogram Neck Extra
 		</name>
 		<content>
-			<h2>
+			<h2 flags="dont_print">
 				CT Angiogram Neck vessels
 			</h2>
 			<selection label="Subclavian/Arch">
@@ -2147,7 +2147,7 @@ Not present | Present
 				</radio>
 			</multi_radio>
 
-			<h2>Other</h2>
+			<h2 flags="dont_print">Other</h2>
 			<selection label="Lung apices">
 				Normal appearances of the visualised lung apices | Mild dependent atelectasis is present at the imaged lung apices
 			</selection>
@@ -2243,7 +2243,7 @@ Not present | Present
 				</radio>
 			</multi_radio>
 
-			<h2>Other</h2>
+			<h2 flags="dont_print">Other</h2>
 			<selection label="Lung apices">
 				Normal appearances of the visualised lung apices | Mild dependent atelectasis is present at the imaged lung apices
 			</selection>
@@ -2359,7 +2359,7 @@ Not present | Present
 				</radio>
 			</multi_radio>
 
-			<h2>Other</h2>
+			<h2 flags="dont_print">Other</h2>
 			<selection label="Lung bases">
 				Normal appearances of the visualised lung bases | Mild dependent atelectasis is present at the imaged lung bases
 			</selection>
@@ -3735,7 +3735,7 @@ Not present | Present
 				Hippocampi
 			</h2>
 			<multi_radio>
-				<radio label="Hippocampal sclerosis, mamillary bodies, fornix." normaltext="The hippocampi are normal bilaterally in terms of signal and morpohology. ">
+				<radio label="Hippocampal sclerosis, mamillary bodies, fornix." normaltext="The hippocampi are normal bilaterally in terms of signal and morphology. ">
 					Not present | Present
 				</radio>
 			</multi_radio>
