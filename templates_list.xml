@@ -3673,6 +3673,8 @@ Not present | Present
 				Comparison
 			</insert>
 			<h1>Findings</h1>
+						<text_entry label="" subtype="medium">
+			</text_entry>
 
 			<h2 flags="dont_print">
 				Malformations of cortical development
