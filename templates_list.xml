@@ -75,7 +75,7 @@ Not present | Present
 			</h1>
 			<multi_select >
 				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					CTA | CT | CT/CTA | catheter angiography | MRI | MRI/MRA | Ultrasound | Series of cross-sectional studies
+					CTA | CT | CT/CTA | catheter angiography | MRI | MRI/MRA | Ultrasound | series of cross-sectional studies
 				</dropdown>
 				<free_text label="Date" flags = "dont_print_label">
 				</free_text>
@@ -3759,7 +3759,7 @@ Not present | Present
 				</radio>
 
 				<radio label="White matter" normaltext="No focal white matter lesions are present.">
-					Not present | Present
+					Normal | Abnormal
 				</radio>
 			</multi_radio>
 
@@ -4535,7 +4535,7 @@ Not present | Present
 			</h1>
 			<multi_select >
 				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					Chest radiograph | Series of chest radiographs | CT | series of CT studies 
+					Chest radiograph | series of chest radiographs | CT | series of CT studies 
 				</dropdown>
 				<free_text label="Date" flags = "dont_print_label">
 				</free_text>
@@ -4606,7 +4606,7 @@ Not present | Present
 			</h1>
 			<multi_select >
 				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					Chest radiograph | Series of chest radiographs | CT | series of CT studies 
+					Chest radiograph | series of chest radiographs | CT | series of CT studies 
 				</dropdown>
 				<free_text label="Date" flags = "dont_print_label">
 				</free_text>
@@ -4673,7 +4673,7 @@ Not present | Present
 			</h1>
 			<multi_select >
 				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					Radiograph | Series of radiographs | CT | series of CT studies 
+					Radiograph | series of radiographs | CT | series of CT studies 
 				</dropdown>
 				<free_text label="Date" flags = "dont_print_label">
 				</free_text>
@@ -4718,7 +4718,7 @@ Not present | Present
 			</h1>
 			<multi_select >
 				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					Radiograph | Series of radiographs | CT | series of CT studies 
+					Radiograph | series of radiographs | CT | series of CT studies 
 				</dropdown>
 				<free_text label="Date" flags = "dont_print_label">
 				</free_text>
@@ -4774,7 +4774,7 @@ Not present | Present
 			</h1>
 			<multi_select >
 				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					Radiograph | Series of radiographs | CT | series of CT studies 
+					Radiograph | series of radiographs | CT | series of CT studies 
 				</dropdown>
 				<free_text label="Date" flags = "dont_print_label">
 				</free_text>
@@ -4826,7 +4826,7 @@ Not present | Present
 			</h1>
 			<multi_select >
 				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					Radiograph | Series of radiographs | CT | series of CT studies 
+					Radiograph | series of radiographs | CT | series of CT studies 
 				</dropdown>
 				<free_text label="Date" flags = "dont_print_label">
 				</free_text>
@@ -4890,7 +4890,7 @@ Not present | Present
 			</h1>
 			<multi_select >
 				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					Radiograph | Series of radiographs | CT | series of CT studies 
+					Radiograph | series of radiographs | CT | series of CT studies 
 				</dropdown>
 				<free_text label="Date" flags = "dont_print_label">
 				</free_text>
