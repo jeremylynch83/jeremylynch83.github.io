@@ -1985,7 +1985,8 @@ Not present | Present
 			<query_insert>
 				CT Angiogram Neck Extra
 			</query_insert>
-			<query_insert>ASPECT Score
+			<query_insert>
+			ASPECT Score
 			</query_insert>
 			<query_insert>
 				CT Head
