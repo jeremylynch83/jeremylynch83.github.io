@@ -1892,10 +1892,10 @@ Not present | Present
 			<text_entry label="" subtype="medium">
 			</text_entry>
 			<selection label="Right carotid artery">
-				The right carotid artery is normal | The imaged intracranial portion of the right internal carotid artery is normal | Non-stenotic calcified plaque affects the carotid bifurcation. | Non-stenotic mixed plaque affects the carotid bifurcation. 
+				The right carotid artery is normal | The imaged intracranial portion of the right internal carotid artery is normal | Non-stenotic calcified plaque affects the right carotid bifurcation. | Non-stenotic mixed plaque affects the right carotid bifurcation. 
 			</selection>
 			<selection label="Left carotid artery">
-				The left carotid artery is normal | The imaged intracranial portion of the left internal carotid artery is normal
+				The left carotid artery is normal | The imaged intracranial portion of the left internal carotid artery is normal | Non-stenotic calcified plaque affects the left carotid bifurcation. | Non-stenotic mixed plaque affects the left carotid bifurcation. 
 			</selection>
 			<selection label="Right vertebral artery">
 				The right vertebral artery is normal | The imaged intracranial portion of the right vertebral artery is normal
@@ -3833,7 +3833,7 @@ Not present | Present
 				There is no change in the internal signal characteristics
 			</selection>
 			<selection label="Perilesional signal">
-				There is no change in the perilesional signal change
+				There is no abnormal perilesional signal ! There is no change in the perilesional signal change
 			</selection>
 			<selection label="Mass effect">
 				There is no change in the mass effect caused by the lesion
@@ -4323,7 +4323,19 @@ Not present | Present
 			<insert>
 				Comparison
 			</insert>
+
+			<h1>Findings</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+
+
 			<multi_checkbox label="Multiple foci of abnormal signal are identified in the">
+				<checkbox>
+					cerebral deep white matter
+				</checkbox>
+				<checkbox>
+					periventricular deep white matter
+				</checkbox>
 				<checkbox>
 					juxtacortical white matter
 				</checkbox>
@@ -4344,6 +4356,9 @@ Not present | Present
 				</checkbox>
 			</multi_checkbox>
 
+						<text_entry label="" subtype="small">
+			</text_entry>
+
 			<multi_select label="Lesion Characteristics">
 				<free_text print_text_before="Approximately" print_text_after="lesions in total are identifed" label="Approximate number">
 				</free_text>
@@ -4353,7 +4368,7 @@ Not present | Present
 				</free_text>
 			</multi_select>
 			<selection label="New or recent">
-				There are no features of recent demyelination.  
+				There are no features of recent demyelination.  | There is no restricted diffusion. | There is no restricted diffusion or contrast enhancement. 
 			</selection>
 			<selection label="T1 hypointense">
 				No T1 hypointense lesions are identified
