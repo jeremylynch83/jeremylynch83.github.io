@@ -1934,7 +1934,7 @@ Not present | Present
 				CT Angiogram Neck vessels
 			</h2>
 			<selection label="Subclavian/Arch">
-				Normal appearances of the aortic arch and subclavian arteries
+				Normal appearances of the aortic arch and subclavian arteries | Non-stenotic wall calcification affects the aortic arch and origins of the great vessels. 
 			</selection>
 			<selection label="Bones">
 				There is no acute fracture or destructive bony lesion
@@ -1946,8 +1946,11 @@ Not present | Present
 				Normal appearances of the visualised lung apices | Mild dependent atelectasis is present at the imaged lung apices
 			</selection>
 			<multi_radio>
-				<radio label="Thyroid gland">
+				<radio label="Thyroid gland" flags="dont_print_normal">
 					Normal | Abnormal
+				</radio>
+				<radio label="Abnormal lymph nodes" flags="dont_print_normal">
+					Not present | Present
 				</radio>
 			</multi_radio>
 		</content>
