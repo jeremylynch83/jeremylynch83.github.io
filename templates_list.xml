@@ -1892,7 +1892,7 @@ Not present | Present
 			<text_entry label="" subtype="medium">
 			</text_entry>
 			<selection label="Right carotid artery">
-				The right carotid artery is normal | The imaged intracranial portion of the right internal carotid artery is normal
+				The right carotid artery is normal | The imaged intracranial portion of the right internal carotid artery is normal | Non-stenotic calcified plaque affects the carotid bifurcation. | Non-stenotic mixed plaque affects the carotid bifurcation. 
 			</selection>
 			<selection label="Left carotid artery">
 				The left carotid artery is normal | The imaged intracranial portion of the left internal carotid artery is normal
