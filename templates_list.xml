@@ -1246,7 +1246,7 @@ Not present | Present
 			</h2>
 			<multi_radio>
 				<radio label="Venous sinus hyperdensity" flags="dont_print_normal">
-					Normal | Abnormal
+					Not present | Present
 				</radio>
 				<radio label="Basilar hyperdensity" flags="dont_print_normal">
 					Not present | Present
@@ -1344,7 +1344,7 @@ Not present | Present
 			</h2>
 			<multi_radio>
 				<radio label="Venous sinus hyperdensity" flags="dont_print_normal">
-					Normal | Abnormal
+					Not present | Present
 				</radio>
 				<radio label="Basilar hyperdensity" flags="dont_print_normal">
 					Not present | Present
@@ -1892,16 +1892,16 @@ Not present | Present
 			<text_entry label="" subtype="medium">
 			</text_entry>
 			<selection label="Right carotid artery">
-				The right common and internal carotid arteries are normal
+				The right carotid artery is normal | The imaged intracranial portion of the right internal carotid artery is normal
 			</selection>
 			<selection label="Left carotid artery">
-				The left common and internal carotid arteries are normal
+				The left carotid artery is normal | The imaged intracranial portion of the left internal carotid artery is normal
 			</selection>
 			<selection label="Right vertebral artery">
-				The right vertebral artery is normal
+				The right vertebral artery is normal | The imaged intracranial portion of the right vertebral artery is normal
 			</selection>
 			<selection label="Left vertebral artery">
-				The left vertebral artery is normal
+				The left vertebral artery is normal | The imaged intracranial portion of the left vertebral artery is normal
 			</selection>
 			<selection label="Basilar artery">
 				The basilar artery is normal
@@ -3754,7 +3754,7 @@ Not present | Present
 				Extra-axial
 			</h2>
 			<multi_radio>
-				<radio label="Encephaloceles" normaltext="">
+				<radio label="Encephaloceles" flags="dont_print_normal">
 					Not present | Present
 				</radio>
 
