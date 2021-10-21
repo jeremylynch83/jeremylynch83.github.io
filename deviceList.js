@@ -1,5 +1,4 @@
-deviceList=
-
+deviceList
 
 [
     {
@@ -2557,9 +2556,10 @@ deviceList=
         "url1": "https://phenox.net//international/uploads/KIF/Avenir-KIF-0075A-WEB.pdf",
         "url2": "https://phenox.net/international/avenir-wallaby-coil-system/",
         "minid": 0,
-        "maxod": 0.055,
+        "maxod": 0.0155,
         "length": "?",
-        "detachment": "Mechanical"
+        "detachment": "Mechanical",
+        "youtube": "https://youtu.be/UhkhEXbIoRc"
     },
     {
         "type": "Intrasaccular Device",
