@@ -75,7 +75,7 @@ Not present | Present
 			</h1>
 			<multi_select >
 				<dropdown label="Modality" print_text_before="Comparison is made with the" print_text_after="dated">
-					CTA | CT | CT/CTA | catheter angiography | MRI | MRI/MRA | Ultrasound | series of cross-sectional studies
+					CTA | CT | CT/CTA | catheter angiography | MRI | MRI/MRA | ultrasound | Doppler ultrasound | series of cross-sectional studies
 				</dropdown>
 				<free_text label="Date" flags = "dont_print_label">
 				</free_text>
@@ -900,6 +900,8 @@ Not present | Present
 			Cervical spine level
 		</name>
 		<content>
+					<text_entry label="" subtype="medium">
+			</text_entry>
 			<selection label="Discs">
 				The disc is normal | There is disc degeneration. | There is disc degeneration and height loss.
 			</selection>
@@ -907,7 +909,7 @@ Not present | Present
 				There is no flaval thickening | There is flaval thickening
 			</selection>
 			<selection label="Disc bar">
-				There is a disc bar causing no neural compression | There is a disc bar compressing
+				There is a disc bar causing no neural compression | There is a disc bar that does not contact the ventral cord | There is a disc bar contacting the ventral cord
 			</selection>
 			<selection label="Facet joints">
 				There is no facetal degeneration. | There is facetal degeneration.
@@ -1947,6 +1949,9 @@ Not present | Present
 			</selection>
 			<multi_radio>
 				<radio label="Thyroid gland" flags="dont_print_normal">
+					Normal | Abnormal
+				</radio>
+								<radio label="Orbits" flags="dont_print_normal">
 					Normal | Abnormal
 				</radio>
 				<radio label="Abnormal lymph nodes" flags="dont_print_normal">
