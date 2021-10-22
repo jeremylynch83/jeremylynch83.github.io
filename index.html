@@ -1100,7 +1100,9 @@
 							parent_data
 							.type.toLowerCase() != "microcatheter" && parent_data.type
 							.toLowerCase() !=
-							"balloon") {
+							"balloon" && parent_data.type
+							.toLowerCase() !=
+							"stent") {
 							summary.contrast_runs.push([
 								parent_data.name, parent_area
 							])
@@ -1183,7 +1185,9 @@
 							if (dif_area > minimum_run_area && parent_data
 								.type.toLowerCase() != "microcatheter" && parent_data.type
 								.toLowerCase() !=
-								"balloon") summary.contrast_runs.push(
+								"balloon" && parent_data.type
+								.toLowerCase() !=
+								"stent") summary.contrast_runs.push(
 								[parent_data.name, dif_area])
 						}
 
