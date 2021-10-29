@@ -258,13 +258,15 @@ Not present | Present
 			<multi_select label="Description">
 				<dropdown label="Morphology" print_text_before="There is a" print_text_after="aneurysm">saccular | fusiform
 				</dropdown>
-				<free_text label="Location" print_text_before="located at" print_text_after="."></free_text>
+				<free_text label="Location" print_text_before="located at" ></free_text>
 				<free_text label="Size" print_text_before="and measuring approximately" print_text_after="."></free_text>
 				<dropdown label="Neck" print_text_before="It is" print_text_after="."> narrow necked | wide necked
 				</dropdown>
 				<dropdown label="Walls" print_text_before="The aneurysm has" print_text_after="."> smooth walls | irregular walls | multiple loculations | a prominent bleb
 				</dropdown>
 				<dropdown label="Branches">No branches arise from the aneurysm sac itself. | A branch arises from the neck of the aneurysm. | A branch arises from the dome of the aneurysm. 
+				</dropdown>
+				<dropdown label="Other">No other aneurysms are identified.  
 				</dropdown>
 			</multi_select>
 		</content>
