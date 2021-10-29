@@ -909,7 +909,7 @@ Not present | Present
 				There is no flaval thickening | There is flaval thickening
 			</selection>
 			<selection label="Disc bar">
-				There is a disc bar causing no neural compression | There is a disc bar that does not contact the ventral cord | There is a disc bar contacting the ventral cord
+				There is a disc osteophyte bar causing no neural compression | There is a disc osteophyte bar that does not contact the ventral cord | There is a disc osteophyte bar contacting the ventral cord
 			</selection>
 			<selection label="Facet joints">
 				There is no facetal degeneration. | There is facetal degeneration.
@@ -949,6 +949,8 @@ Not present | Present
 			<selection label="Posterior fossa">
 				Normal | Abnormal
 			</selection>
+			<text_entry subtype="medium">
+			</text_entry>
 			<h2>
 				C1-C2
 			</h2>
@@ -990,7 +992,7 @@ Not present | Present
 			<insert>
 				Cervical spine level
 			</insert>
-			<h2>
+			<h2 flags="dont_print|print_space">
 				Other details:
 			</h2>
 			<insert>
