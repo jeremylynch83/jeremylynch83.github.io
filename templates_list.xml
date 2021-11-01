@@ -1030,6 +1030,7 @@ Not present | Present
 			<text_entry label="" subtype="small">
 				MR images were acquired of the spine with and without intravenous contrast.
 			</text_entry>
+
 			<insert>
 				Comparison
 			</insert>
@@ -4441,7 +4442,13 @@ Not present | Present
 			<insert>
 				Comparison
 			</insert>
+						<h1>Findings</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
 			<multi_checkbox label="Multiple foci of abnormal signal are identified in the">
+				<checkbox>
+					cerebral white matter
+				</checkbox>
 				<checkbox>
 					juxtacortical white matter
 				</checkbox>
@@ -4456,6 +4463,12 @@ Not present | Present
 				</checkbox>
 				<checkbox>
 					posterior fossa
+				</checkbox>
+				<checkbox>
+					brainstem
+				</checkbox>
+				<checkbox>
+					cerebral hemispheres
 				</checkbox>
 				<checkbox>
 					imaged cord
