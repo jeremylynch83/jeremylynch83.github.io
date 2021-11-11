@@ -3843,7 +3843,7 @@ Not present | Present
 				There is no change in the internal signal characteristics
 			</selection>
 			<selection label="Perilesional signal">
-				There is no abnormal perilesional signal ! There is no change in the perilesional signal change
+				There is no abnormal perilesional signal | There is no change in the perilesional signal change
 			</selection>
 			<selection label="Mass effect">
 				There is no change in the mass effect caused by the lesion
