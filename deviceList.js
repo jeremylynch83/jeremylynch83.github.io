@@ -585,13 +585,12 @@ deviceList =
         "type": "Stent",
         "name": "Silk+ 2,0 to 4,5 ",
         "manufacturer": "Balt",
-        "url1": "https:
         "minid": 0,
         "maxod": 0.02,
         "research": "[Lubicz B, Van der Elst O, Collignon L, et al. Silk flow-diverter stent for the treatment\nof intracranial aneurysms: a series of 58 patients with emphasis on long-term results. AJNR Am J Neuroradiol 2015;36:542–6.]",
         "material": "Nitinol; Platinum",
         "design": "48 braided wires with eight platinum wires and four platinum coils to promote its visibility and flared ends to increase wall apposition.",
-        "youtube": "https://www.youtube.com/embed/UoZZtMRfVFc"
+        "youtube": "https:
     },
     {
         "type": "Stent",
