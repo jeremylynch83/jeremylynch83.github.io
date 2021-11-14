@@ -589,14 +589,13 @@ deviceList =
         "maxod": 0.02,
         "research": "[Lubicz B, Van der Elst O, Collignon L, et al. Silk flow-diverter stent for the treatment\nof intracranial aneurysms: a series of 58 patients with emphasis on long-term results. AJNR Am J Neuroradiol 2015;36:542–6.]",
         "material": "Nitinol; Platinum",
-        "design": "48 braided wires with eight platinum wires and four platinum coils to promote its visibility and flared ends to increase wall apposition.",
-        "youtube": "https:
+        "design": "48 braided wires with eight platinum wires and four platinum coils to promote its visibility and flared ends to increase wall apposition."
     },
     {
         "type": "Stent",
         "name": "Silk+ 5,0 to 5,5 ",
         "manufacturer": "Balt",
-        "url1": "https://baltspainmedical.es/wp-content/uploads/2020/11/Balt-catalogo-completo-2020.pdf",
+        "url1": "https:
         "minid": 0,
         "maxod": 0.024,
         "research": "[Lubicz B, Van der Elst O, Collignon L, et al. Silk flow-diverter stent for the treatment\nof intracranial aneurysms: a series of 58 patients with emphasis on long-term results. AJNR Am J Neuroradiol 2015;36:542–6.]",
