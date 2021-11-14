@@ -1,6 +1,5 @@
 deviceList = 
 
-
 [
     {
         "type": "Balloon",
@@ -578,14 +577,15 @@ deviceList =
         "maxod": 0.0166,
         "length": "?",
         "sizetable": "[{\"Reference\":\"SILK_V_2,25x10\",\"Nominal stent diameter (mm)\":2.25,\"Nominal stent length (mm)\":10.5,\"Unconstrained stent diameter (mm)\":2.5,\"Unconstrained stent length (mm)\":8,\"Delivery catheter I.D.\":\".017’’\"},{\"Reference\":\"SILK_V_2,25x15\",\"Nominal stent diameter (mm)\":2.25,\"Nominal stent length (mm)\":16,\"Unconstrained stent diameter (mm)\":2.5,\"Unconstrained stent length (mm)\":12,\"Delivery catheter I.D.\":\".017’’\"},{\"Reference\":\"SILK_V_2,25x20\",\"Nominal stent diameter (mm)\":2.25,\"Nominal stent length (mm)\":22,\"Unconstrained stent diameter (mm)\":2.5,\"Unconstrained stent length (mm)\":15.5,\"Delivery catheter I.D.\":\".017’’\"},{\"Reference\":\"SILK_V_2,75x10\",\"Nominal stent diameter (mm)\":2.75,\"Nominal stent length (mm)\":12.5,\"Unconstrained stent diameter (mm)\":3,\"Unconstrained stent length (mm)\":9,\"Delivery catheter I.D.\":\".017’’\"},{\"Reference\":\"SILK_V_2,75x15\",\"Nominal stent diameter (mm)\":2.75,\"Nominal stent length (mm)\":17,\"Unconstrained stent diameter (mm)\":3,\"Unconstrained stent length (mm)\":12,\"Delivery catheter I.D.\":\".017’’\"},{\"Reference\":\"SILK_V_2,75x20\",\"Nominal stent diameter (mm)\":2.75,\"Nominal stent length (mm)\":22,\"Unconstrained stent diameter (mm)\":3,\"Unconstrained stent length (mm)\":15,\"Delivery catheter I.D.\":\".017’’\"},{\"Reference\":\"SILK_V_2,75x25\",\"Nominal stent diameter (mm)\":2.75,\"Nominal stent length (mm)\":26.5,\"Unconstrained stent diameter (mm)\":3,\"Unconstrained stent length (mm)\":18.5,\"Delivery catheter I.D.\":\".017’’\"},{\"Reference\":\"SILK_V_3,25x10\",\"Nominal stent diameter (mm)\":3.25,\"Nominal stent length (mm)\":11,\"Unconstrained stent diameter (mm)\":3.5,\"Unconstrained stent length (mm)\":8.5,\"Delivery catheter I.D.\":\".017’’\"},{\"Reference\":\"SILK_V_3,25x15\",\"Nominal stent diameter (mm)\":3.25,\"Nominal stent length (mm)\":16.5,\"Unconstrained stent diameter (mm)\":3.5,\"Unconstrained stent length (mm)\":12.5,\"Delivery catheter I.D.\":\".017’’\"},{\"Reference\":\"SILK_V_3,25x20\",\"Nominal stent diameter (mm)\":3.25,\"Nominal stent length (mm)\":21,\"Unconstrained stent diameter (mm)\":3.5,\"Unconstrained stent length (mm)\":15,\"Delivery catheter I.D.\":\".017’’\"},{\"Reference\":\"SILK_V_3,25x25\",\"Nominal stent diameter (mm)\":3.25,\"Nominal stent length (mm)\":26,\"Unconstrained stent diameter (mm)\":3.5,\"Unconstrained stent length (mm)\":18,\"Delivery catheter I.D.\":\".017’’\"}]",
+        "comments": "The stent may be recaptured up to 90% of it's length. The entire stent is radio-opaque. It comes with a nitinol delivery wire with an angulated lead wire. The aneurysm neck must be overlapped on each side by at least 4 mm. Landing zones should be in straight segments. The device can be recaptured once. ",
         "research": "[Schob S, Hoffmann K-T, Richter C, et al. Flow diversion beyond the circle of Willis: endovascular aneurysm treatment in peripheral cerebral arteries employing a novel low-profile flow diverting stent. J Neurointerv Surg 2019;11:1227.]",
-        "design": "48 braided nitinol wires with platinum"
+        "design": "48 braided nitinol wires with platinum. Drawn Filled Tubes (DFT) technology. "
     },
     {
         "type": "Stent",
         "name": "Silk+ 2,0 to 4,5 ",
         "manufacturer": "Balt",
-        "url1": "https://baltspainmedical.es/wp-content/uploads/2020/11/Balt-catalogo-completo-2020.pdf",
+        "url1": "https:
         "minid": 0,
         "maxod": 0.02,
         "research": "[Lubicz B, Van der Elst O, Collignon L, et al. Silk flow-diverter stent for the treatment\nof intracranial aneurysms: a series of 58 patients with emphasis on long-term results. AJNR Am J Neuroradiol 2015;36:542–6.]",
@@ -998,7 +998,7 @@ deviceList =
         "url1": "https://www.jnjmedicaldevices.com/en-US/product/cerenovus-large-bore-catheter",
         "minid": 0.071,
         "maxod": 0.0825,
-        "length": "125 / 132",
+        "length": "125 / 132 / 135",
         "sizetable": "[{\"Product Code\":\"IC71125UG\",\"Distal ID\":\"0.071\\\"\",\"Distal OD\":\"0.081\\\"\",\"Proximal OD\":\"0.0825\\\"\",\"Guide Compatibility(CM)\":\"6F\",\"Usable Length(CM)\":\"125cm\"},{\"Product Code\":\"IC71132UG\",\"Distal ID\":\"0.071\\\"\",\"Distal OD\":\"0.081\\\"\",\"Proximal OD\":\"0.0825\\\"\",\"Guide Compatibility(CM)\":\"6F\",\"Usable Length(CM)\":\"132cm\"}]",
         "recommendedparentid": 0.085,
         "features": "\"Rapid navigation to MCA: CERENOVUS Large Bore Catheter has rapid navigation to the middle cerebral artery (MCA) based on optimized design: variable braid density for optimized trackability and seamless transition zones for efficient control. Smooth stent retrieval: Smooth stent interaction and retrieval due to enhanced tip durability: end to end polytetrafluoroethylene (PTFE) liner, durable tip design and optimized distal column strength. Tip durability, Excellent kink resistance in a thin wall design, robust clot ingestion due to catheter tip durability. Low profile design: Lowest profile in a large bore catheter* for base catheter compatibility options (compatible with 0.085” interior diameter (ID) base catheter or greater).\""
@@ -3062,7 +3062,7 @@ deviceList =
         "length": "?",
         "sizes": "3 - 4.5 mm",
         "sizetable": "[{\"Product number\":\"M003EZAS30150\",\"Stent diameter\":\"3.0mm\",\"Stent length\":\"15mm\",\"Unconstrained stent diameter\":\"3.5mm\",\"Recommended parent vessel diameter\":\"≥2.0 and <3.0mm\"},{\"Product number\":\"M003EZAS30210\",\"Stent diameter\":\"3.0mm\",\"Stent length\":\"21mm\",\"Unconstrained stent diameter\":\"3.5mm\",\"Recommended parent vessel diameter\":\"≥2.0 and <3.0mm\"},{\"Product number\":\"M003EZAS30240\",\"Stent diameter\":\"3.0mm\",\"Stent length\":\"24mm\",\"Unconstrained stent diameter\":\"3.5mm\",\"Recommended parent vessel diameter\":\"≥2.0 and <3.0mm\"},{\"Product number\":\"M003EZAS40150\",\"Stent diameter\":\"4.0mm\",\"Stent length\":\"15mm\",\"Unconstrained stent diameter\":\"4.5mm\",\"Recommended parent vessel diameter\":\"≥3.0 and <4.0mm\"},{\"Product number\":\"M003EZAS40240\",\"Stent diameter\":\"4.0mm\",\"Stent length\":\"24mm\",\"Unconstrained stent diameter\":\"4.5mm\",\"Recommended parent vessel diameter\":\"≥3.0 and <4.0mm\"},{\"Product number\":\"M003EZAS45210\",\"Stent diameter\":\"4.5mm\",\"Stent length\":\"21mm\",\"Unconstrained stent diameter\":\"5.0mm\",\"Recommended parent vessel diameter\":\"≥4.0 and ≤4.5mm\"},{\"Product number\":\"M003EZAS45300\",\"Stent diameter\":\"4.5mm\",\"Stent length\":\"30mm\",\"Unconstrained stent diameter\":\"5.0mm\",\"Recommended parent vessel diameter\":\"≥4.0 and ≤4.5mm\"}]",
-        "comments": "<p>\nIt has proximal and distal stent markers. The diameter of the stent is determined according to the proximal part of the parent artery: choose one size up from this measurment. For example if the proximal artery measures 3.5 mm then you should choose a 4 mm Atlas stent. The length should be determined by provision of over 4 mm coverage on both sides of the neck of the aneurysm (if used for stent coiling). \n</p>\n\n<p>\nThe stent must be flushed prior to use by inserting the tip of the stent sheath in to the middle of the RHV valve and waiting for saline to drip back. Do not tighten the valve too much during this maneuvre as you may damage the stent. Next apply the stent sheath to the microcatheter hub and load the Atlas in to the microcatheter by pushing forward on the pusher wire. \n</p>\n\n<p>\nDeploy the device by positioning it exactly where you want it and unsheathing. It tends to stay accurately where it is placed during the unsheathing. Note: oversizing the sheath may improve coverage. After deployment you may use the pusher wire to recross inside the stent if desired. \n\n</p>",
+        "comments": "<p>\nThe Neuroform Atlas has proximal and distal stent markers. The diameter of the stent is determined according to the proximal part of the parent artery: choose one size up from this measurment. For example if the proximal artery measures 3.5 mm then you should choose a 4 mm Atlas stent. The length should be determined by provision of over 4 mm coverage on both sides of the neck of the aneurysm (if used for stent coiling). \n</p>\n\n<p>\nThe stent must be flushed prior to use by inserting the tip of the stent sheath in to the middle of the RHV valve and waiting for saline to drip back. Do not tighten the valve too much during this maneuvre as you may damage the stent. Next apply the stent sheath to the microcatheter hub and load the Atlas in to the microcatheter by pushing forward on the pusher wire. \n</p>\n\n<p>\nDeploy the device by positioning it exactly where you want it and unsheathing. It tends to stay accurately where it is placed during the unsheathing. The stent will generally not foreshorten during deployment. Note: oversizing the sheath may improve coverage. After deployment you may use the pusher wire to recross inside the stent if desired. \n\n</p>",
         "research": 33252708,
         "material": "Nitinol",
         "design": "Laser cut hybrid cell structure with alternating 16- and 24- strut rows",
@@ -3089,7 +3089,7 @@ deviceList =
         "manufacturer": "Stryker",
         "url1": "https://www.stryker.com/us/en/neurovascular/products/trevo-nxt.html",
         "minid": 0,
-        "maxod": 0.016,
+        "maxod": 0.0169,
         "length": 200,
         "sizetable": "[{\"Code\":90312,\"Stent diameter\":3,\"Labeled length\":\"32 mm\",\"Stent length\":\"36 mm\",\"Device length\":\"200 cm\",\"Wire diameter\":\"0.015 in\",\"Compatible microcatheter\":\"Trevo Pro 14 and Trevo Trak 21 Microcatheters\"},{\"Code\":90313,\"Stent diameter\":4,\"Labeled length\":\"28 mm\",\"Stent length\":\"32 mm\",\"Device length\":\"200 cm\",\"Wire diameter\":\"0.019 in\",\"Compatible microcatheter\":\"Trevo Trak 21 Microcatheter\"},{\"Code\":90314,\"Stent diameter\":4,\"Labeled length\":\"41 mm\",\"Stent length\":\"44 mm\",\"Device length\":\"200 cm\",\"Wire diameter\":\"0.019 in\",\"Compatible microcatheter\":\"Trevo Trak 21 Microcatheter\"},{\"Code\":90315,\"Stent diameter\":6,\"Labeled length\":\"37 mm\",\"Stent length\":\"40 mm\",\"Device length\":\"200 cm\",\"Wire diameter\":\"0.019 in\",\"Compatible microcatheter\":\"Trevo Trak 21 Microcatheter\"}]",
         "recommended": "Trak 21"
@@ -3450,5 +3450,25 @@ deviceList =
         "tablecaption": "Catalogue",
         "recommended": "Headway 17, 21, and 27",
         "features": "\"Immediate clot integration: The ERIC device’s high amount of ‘intralumenal clot capture surface’ eliminates the need to wait before retrieving the clot, potentially resulting in faster procedure times. \n\nAdjustable working length: The ERIC device has an adjustable working length, allowing for the ability to select the number of working spheres deployed, enabling precise deployment in distal vessels.\n\nDesigned to work with the Sofia and Sofia Plus catheters: The ERIC device is specifically designed to work with the SOFIA and SOFIA Plus catheters, acting as a conveyor belt to help retrieve clot into the powerful aspiration force at the distal tip of the SOFIA or SOFIA Plus catheter.\""
+    },
+    {
+        "type": "Coil",
+        "name": "Barricade",
+        "manufacturer": "Blockade Medical",
+        "url1": "https://selamedical.co.uk/2020/11/12/barricade-coils/",
+        "url2": "https://selamedical.co.uk/wp-content/uploads/2020/10/Barricade-Coil-Brochure-March-2016-MKTG-001-INTL-Rev-I.pdf",
+        "minid": 0,
+        "maxod": 0.012,
+        "length": "?",
+        "comments": "These coils have the advantage that they can be delivered through a Marathon catheter. They unfortunately cause some artefact on MRA scans (which can obscure recurrences)"
+    },
+    {
+        "type": "Coil",
+        "name": "i-ED 10",
+        "manufacturer": "Kaneka",
+        "url1": "https://www.kaneka-med.jp/english/products/intervention/ed_coil10_extrasoft_type_r_b/index.php",
+        "minid": 0,
+        "maxod": 0.012,
+        "comments": "These coils have the advantage that they can be delivered through a Marathon catheter. They are manufactured in Japan but are available via distributors. "
     }
 ]
