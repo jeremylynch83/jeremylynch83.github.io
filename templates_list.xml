@@ -145,9 +145,6 @@ Not present | Present
 			Angio technique
 		</name>
 		<content>
-			<text_entry label="Consent" flags = "dont_print_label">
-				Informed consent was obtained from the patient including the risk of stroke, puncture site haemorrhage and numbness, and peripheral vascular occlusion.
-			</text_entry>
 
 			<multi_checkbox label="Catheters used included the following">
 				<checkbox>
