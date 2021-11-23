@@ -146,7 +146,7 @@ Not present | Present
 		</name>
 		<content>
 
-			<multi_checkbox label="Catheters used included the following">
+			<multi_checkbox label="Catheters used included the following: ">
 				<checkbox>
 					Berenstein
 				</checkbox>
