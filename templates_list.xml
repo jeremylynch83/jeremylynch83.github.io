@@ -249,6 +249,8 @@ Not present | Present
 			<insert>
 				Access technique
 			</insert>
+			<query_insert>Access technique
+			</query_insert>
 			<insert>
 				Angio technique
 			</insert>
