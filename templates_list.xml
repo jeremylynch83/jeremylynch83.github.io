@@ -92,9 +92,9 @@ Not present | Present
 			Angio header
 		</name>
 		<content>
-			<text_entry label="Main operators:" subtype="small">
+			<text_entry label="Main operator:" subtype="small">
 			</text_entry>
-			<text_entry label="Assistants:" subtype="small">
+			<text_entry label="Assistant/s:" subtype="small">
 			</text_entry>
 			<text_entry label="Consent" flags = "dont_print_label">
 				Informed consent was obtained from the patient including the risk of stroke, puncture site haemorrhage and numbness, and peripheral vascular occlusion.
@@ -120,7 +120,7 @@ Not present | Present
 				<dropdown label="Puncture site" print_text_before="">
 					common femoral artery | radial artery
 				</dropdown>
-				<dropdown label="Sheath size" print_text_before="puncture was performed and a">
+				<dropdown label="Sheath size" print_text_before="puncture was performed and a" print_text_after="sheath was inserted">
 					4-French | 5-French | 6-French | 7-French | 8-French
 				</dropdown>
 			</multi_select>
@@ -148,9 +148,7 @@ Not present | Present
 			<text_entry label="Consent" flags = "dont_print_label">
 				Informed consent was obtained from the patient including the risk of stroke, puncture site haemorrhage and numbness, and peripheral vascular occlusion.
 			</text_entry>
-			<selection label="Anaesthesia" print_label="true" showdetailson="0">
-				General anaesthesia | Conscious sedation | Local anaesthesia
-			</selection>
+
 			<multi_checkbox label="Catheters used included the following">
 				<checkbox>
 					Berenstein
