@@ -3914,9 +3914,22 @@ Not present | Present
 					right | left
 				</dropdown>
 				<dropdown label="Site" print_text_after="craniotomy is noted.">
-					 parietal |  frontal | frontoparietal | occipital
+					 parietal |  frontal | frontoparietal | occipital | retrosigmoid
 				</dropdown>
 			</multi_select>
+
+			<multi_select label="Residual">
+				<free_text label="Location" print_text_before="Note is made of the residual tissue located in the">
+				</free_text>
+				<free_text label="Size" print_text_before="It now measures approximately">
+				</free_text>
+				<dropdown label="Comparison">
+					It is stable in size | It has  increased in size from the previous study | It has decreased in size from the previous study
+				</dropdown>
+				<free_text label="Previous study" print_text_before="where it measured">
+				</free_text>
+			</multi_select>
+
 			<selection label="Postoperative">
 				A small postoperative collection is noted underlying the craniotomy site
 			</selection>
@@ -4018,6 +4031,8 @@ Not present | Present
 					Not present | Present
 				</radio>
 			</multi_radio>
+
+			
 
 			<h2 flags="dont_print">
 				Atrophy
