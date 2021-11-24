@@ -107,6 +107,7 @@ Not present | Present
 			Access technique
 		</name>
 		<content>
+		<h2 flags="dont_print|print_space">Puncture</h2>
 			<multi_select label="Puncture" flags = "dont_print_label">
 				<dropdown label="Local">
 					1% lidocaine was infiltrated into the puncture site superficial tissues.
@@ -321,31 +322,57 @@ Not present | Present
 
 	<module>
 		<name>
-			Stroke technique
+			Stroke pass
 		</name>
 		<content>
-
-			<multi_select label="Access" askfurtherdetails="false">
-				<dropdown label="Guide gatheter" print_text_before="A" print_text_after=" guide catheter was inserted">
-					Neuron max | Infinity | Cerebase 
-				</dropdown>
-				<dropdown label="Vessel" print_text_before="in to the" print_text_after="artery.">
-					right carotid | left carotid | right vertebral | left vertebral 
-				</dropdown>
-				<dropdown label="Select catheter" print_text_before="with the usage of a" print_text_after="select catheter.">
-					Berenstein | Simmons
-				</dropdown>
-				<dropdown label="Aspiration catheter" print_text_before="A " print_text_after="aspiration catheter was used.">
-					Berenstein | Simmons
-				</dropdown>
+		
+			<multi_select label="Access" >
+					<dropdown label="Guide gatheter" print_text_before="A" print_text_after=" guide catheter was kept">
+						Neuron max | Infinity | Cerebase | Flowgate 2
+					</dropdown>
+					<dropdown label="Vessel" print_text_before="in the" print_text_after="artery.">
+						right carotid | left carotid | right vertebral | left vertebral 
+					</dropdown>
+					<dropdown label="Occlusion" print_text_before="Angiography confirmed occlusion of the" print_text_after="artery.">
+						Proximal ICA | ICA termination | M1 middle cerebral | M2 middle cerebral | M3 middle cerebral | ACA
+					</dropdown>
+				
 			</multi_select>
 
-			<selection label="Haemostasis" showdetailson="1000">
-				Manual compression was used to achieve haemostasis. | An angioseal device was used to achieve groin haemostasis. | A pneumatic compression band was used to achieve wrist haemostasis.
-			</selection>
-			<selection label="Complications">
-				There were no periprocedural complications.
-			</selection>
+
+				<multi_select label="Technique" >
+
+					<dropdown label="Aspiration catheter" print_text_before="A" print_text_after=" aspiration catheter was inserted ">
+						Jet 7 | Jet D | Catalyst 5 | Catalyst 6 | Catalyst 7 | Large Bore / Embovac  
+					</dropdown>
+					<dropdown label="Aspiration position" print_text_before="and placed" >
+						at the clot face. | in the target vessel. | proximal to the target vessel. 
+					</dropdown>
+					<dropdown label="Microcatheter" print_text_before="A" print_text_after=" microcatheter was inserted ">
+						Trak-21 | Rebar-18  
+					</dropdown>
+					<dropdown label="Microcatheter position" print_text_before=" and placed" >
+						distal to the clot. | at the clot face. 
+					</dropdown>
+					<dropdown label="Stent" print_text_before="A" print_text_after=" stent was deployed across the clot.">
+						4 mm Trevo | 6 mm Trevo
+					</dropdown>
+
+					<dropdown label="Stent/aspiration" print_text_before="Next, " print_text_after=" was performed.">
+						the stent/microcatheter was removed together with aspiration from the guide. | the stent/microcatheter/aspiration catheter was removed as a unit with aspiration from aspiration catheter. | aspiration of the clot was attempted.
+					</dropdown>
+
+
+					<dropdown label="Balloon guide" print_text_before="" print_text_after="">
+						The balloon guide catheter was inflated during the pass and aspiration applied to the catheter lumen.
+					</dropdown>
+					<dropdown label="Outcome" print_text_before="" print_text_after="">
+						This pass was successful in retrieving the clot. | This pass was unsuccessful in retrieving the clot.
+					</dropdown>
+	
+				</multi_select>
+
+
 		</content>
 	</module>
 
@@ -370,23 +397,36 @@ Not present | Present
 			</h1>
 			<insert>
 				Angio header
-			</insert>
+			</insert>			
+			<selection label="Consent from">
+				Consent was obtained from the patient | Consent on basis of best interest of patient
+			</selection>
+
 			<text_entry label="Consent" flags = "dont_print_label">
-				Informed consent was obtained from the patient including the risk of stroke, puncture site haemorrhage and numbness, and peripheral vascular occlusion.
-			</text_entry>
+The rationale and risks of the procedure were discussed. The risks of the procedure included failure to recanalize vasculature, worsening of occlusion, intracranial hemorrhage, vascular dissection or tear, access site bleeding/complications, and the possibility of catastrophic brain injury from the procedure.			</text_entry>
 			<insert>
 				Access technique
 			</insert>
 			<query_insert>Access technique
 			</query_insert>
 			<insert>
-				Stroke technique
+				Stroke pass
 			</insert>
+			<query_insert>
+				Stroke pass
+			</query_insert>
+
+			<selection label="Haemostasis" showdetailson="1000">
+				Manual compression was used to achieve haemostasis. | An angioseal device was used to achieve groin haemostasis. | A pneumatic compression band was used to achieve wrist haemostasis.
+			</selection>
+			<selection label="Complications">
+				There were no periprocedural complications.
+			</selection>
 			<h1>
 				Conclusion
 			</h1>
 			<selection label="Outcome">
-				Successful thrombectomy: TICI 3
+				Successful thrombectomy: TICI 3 | Successful thrombectomy: TICI 2C | Successful thrombectomy: TICI 2B | Successful thrombectomy: TICI 2A | Unsuccesful thrombectomy
 			</selection>
 			<text_entry label="" subtype="medium">
 			</text_entry>
@@ -3954,9 +3994,22 @@ Not present | Present
 					right | left
 				</dropdown>
 				<dropdown label="Site" print_text_after="craniotomy is noted.">
-					 parietal |  frontal | frontoparietal | occipital
+					 parietal |  frontal | frontoparietal | occipital | retrosigmoid
 				</dropdown>
 			</multi_select>
+
+			<multi_select label="Residual">
+				<free_text label="Location" print_text_before="Note is made of the residual tissue located in the">
+				</free_text>
+				<free_text label="Size" print_text_before="It now measures approximately">
+				</free_text>
+				<dropdown label="Comparison">
+					It is stable in size | It has  increased in size from the previous study | It has decreased in size from the previous study
+				</dropdown>
+				<free_text label="Previous study" print_text_before="where it measured">
+				</free_text>
+			</multi_select>
+
 			<selection label="Postoperative">
 				A small postoperative collection is noted underlying the craniotomy site
 			</selection>
@@ -4058,6 +4111,8 @@ Not present | Present
 					Not present | Present
 				</radio>
 			</multi_radio>
+
+			
 
 			<h2 flags="dont_print">
 				Atrophy
