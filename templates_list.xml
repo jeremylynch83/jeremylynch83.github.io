@@ -326,14 +326,7 @@ Not present | Present
 		</name>
 		<content>
 
-			<multi_select label="Vessel" >
 
-				<free_text label="Occlusion" print_text_before="Angiography occlusion of the">
-				</free_text>
-				<dropdown label="Tandem">
-					There were no extracranial carotid tandem lesions
-				</dropdown>
-			</multi_select>
 
 		</content>
 	</module>
@@ -381,7 +374,16 @@ The rationale and risks of the procedure were discussed. The risks of the proced
 					<dropdown label="Select catheter" print_text_before="with the usage of a" print_text_after="select catheter.">
 						Berenstein | Simmons
 					</dropdown>
+					
 				</multi_select>
+				<multi_select label="Vessel" >
+
+				<free_text label="Occlusion" print_text_before="Angiography occlusion of the">
+				</free_text>
+				<dropdown label="Tandem">
+					There were no extracranial carotid tandem lesions
+				</dropdown>
+			</multi_select>
 			<query_insert>
 				Stroke pass
 			</query_insert>
