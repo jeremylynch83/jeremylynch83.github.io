@@ -361,11 +361,12 @@ Not present | Present
 						The stent/microcatheter was removed together with aspiration from the guide. | The stent/microcatheter/aspiration catheter was removed as a unit with aspiration from aspiration catheter. | Aspiration of the clot was attempted.
 					</dropdown>
 
-					<dropdown label="Aspiration" print_text_before="" print_text_after=" was performed.">
-						The stent/microcatheter was removed together. | The stent/microcatheter/aspiration catheter was removed as a unit. | Aspiration was performed.
-					</dropdown>
+
 					<dropdown label="Balloon guide" print_text_before="" print_text_after="">
 						The balloon guide catheter was inflated during the pass and aspiration applied to the catheter lumen.
+					</dropdown>
+					<dropdown label="Outcome" print_text_before="" print_text_after="">
+						This pass was successful in retrieving the clot. | This pass was unsuccessful in retrieving the clot.
 					</dropdown>
 	
 				</multi_select>
