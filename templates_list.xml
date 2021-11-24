@@ -352,7 +352,7 @@ Not present | Present
 						Trak-21 | Rebar-18  
 					</dropdown>
 					<dropdown label="Microcatheter position" print_text_before=" and placed" >
-						distal to the clot | at the clot face 
+						distal to the clot. | at the clot face. 
 					</dropdown>
 					<dropdown label="Stent" print_text_before="A" print_text_after=" stent was placed across the clot.">
 						4 mm Trevo | 6 mm Trevo
