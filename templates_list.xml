@@ -335,7 +335,7 @@ Not present | Present
 					<dropdown label="Occlusion" print_text_before="Angiography confirmed occlusion of the" print_text_after="artery.">
 						Proximal ICA | ICA termination | M1 middle cerebral | M2 middle cerebral | M3 middle cerebral | ACA
 					</dropdown>
-				</multi_select>
+				
 			</multi_select>
 
 
