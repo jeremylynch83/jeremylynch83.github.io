@@ -335,11 +335,8 @@ Not present | Present
 				</multi_select>
 
 			<multi_select label="Vessel" >
-				<free_text label="Occlusion" print_text_before="Angiography occlusion of the">
+				<free_text label="Occlusion" print_text_before="Angiography confirmed occlusion of the">
 				</free_text>
-				<dropdown label="Tandem">
-					There were no extracranial carotid tandem lesions
-				</dropdown>
 			</multi_select>
 
 
@@ -349,7 +346,7 @@ Not present | Present
 						Jet 7 | Jet D | Catalyst 5 | Catalyst 6 | Catalyst 7 | Large Bore / Embovac  
 					</dropdown>
 					<dropdown label="Aspiration position" print_text_before="and placed" >
-						at the clot face | in the target vessel | proximal to the target vessel 
+						at the clot face. | in the target vessel. | proximal to the target vessel. 
 					</dropdown>
 					<dropdown label="Microcatheter" print_text_before="A" print_text_after=" microcatheter was inserted ">
 						Trak-21 | Rebar-18  
