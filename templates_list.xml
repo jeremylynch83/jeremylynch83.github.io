@@ -107,6 +107,7 @@ Not present | Present
 			Access technique
 		</name>
 		<content>
+		<h2 flags="dont_print|print_space">>Puncture</h2>
 			<multi_select label="Puncture" flags = "dont_print_label">
 				<dropdown label="Local">
 					1% lidocaine was infiltrated into the puncture site superficial tissues.
@@ -384,7 +385,7 @@ The rationale and risks of the procedure were discussed. The risks of the proced
 			</insert>
 			<query_insert>Access technique
 			</query_insert>
-				<multi_select label="Access" askfurtherdetails="true">
+				<multi_select label="Access" >
 					<dropdown label="Guide gatheter" print_text_before="A" print_text_after=" guide catheter was inserted">
 						Neuron max | Infinity | Cerebase 
 					</dropdown>
