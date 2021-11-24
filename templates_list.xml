@@ -326,17 +326,6 @@ Not present | Present
 		</name>
 		<content>
 
-			<multi_select label="Vessel" >
-				<dropdown label="Guide gatheter" print_text_before="A" print_text_after=" guide catheter was inserted">
-					Neuron max | Infinity | Cerebase 
-				</dropdown>
-				<dropdown label="Vessel" print_text_before="in to the" print_text_after="artery.">
-					right carotid | left carotid | right vertebral | left vertebral 
-				</dropdown>
-				<dropdown label="Select catheter" print_text_before="with the usage of a" print_text_after="select catheter.">
-					Berenstein | Simmons
-				</dropdown>
-
 				<free_text label="Occlusion" print_text_before="Angiography occlusion of the">
 				</free_text>
 				<dropdown label="Tandem">
