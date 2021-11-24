@@ -334,12 +334,7 @@ Not present | Present
 					There were no extracranial carotid tandem lesions
 				</dropdown>
 			</multi_select>
-			<selection label="Haemostasis" showdetailson="1000">
-				Manual compression was used to achieve haemostasis. | An angioseal device was used to achieve groin haemostasis. | A pneumatic compression band was used to achieve wrist haemostasis.
-			</selection>
-			<selection label="Complications">
-				There were no periprocedural complications.
-			</selection>
+
 		</content>
 	</module>
 
@@ -390,6 +385,13 @@ The rationale and risks of the procedure were discussed. The risks of the proced
 			<query_insert>
 				Stroke pass
 			</query_insert>
+
+			<selection label="Haemostasis" showdetailson="1000">
+				Manual compression was used to achieve haemostasis. | An angioseal device was used to achieve groin haemostasis. | A pneumatic compression band was used to achieve wrist haemostasis.
+			</selection>
+			<selection label="Complications">
+				There were no periprocedural complications.
+			</selection>
 			<h1>
 				Conclusion
 			</h1>
