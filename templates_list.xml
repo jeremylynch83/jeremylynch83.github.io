@@ -325,6 +325,7 @@ Not present | Present
 			Stroke pass
 		</name>
 		<content>
+		
 			<multi_select label="Access" >
 					<dropdown label="Guide gatheter" print_text_before="A" print_text_after=" guide catheter was kept">
 						Neuron max | Infinity | Cerebase | Flowgate 2
@@ -353,12 +354,12 @@ Not present | Present
 					<dropdown label="Microcatheter position" print_text_before=" and placed" >
 						distal to the clot. | at the clot face. 
 					</dropdown>
-					<dropdown label="Stent" print_text_before="A" print_text_after=" stent was placed across the clot.">
+					<dropdown label="Stent" print_text_before="A" print_text_after=" stent was deployed across the clot.">
 						4 mm Trevo | 6 mm Trevo
 					</dropdown>
 
-					<dropdown label="Stent/aspiration" print_text_before="" print_text_after=" was performed.">
-						The stent/microcatheter was removed together with aspiration from the guide. | The stent/microcatheter/aspiration catheter was removed as a unit with aspiration from aspiration catheter. | Aspiration of the clot was attempted.
+					<dropdown label="Stent/aspiration" print_text_before="Next, " print_text_after=" was performed.">
+						the stent/microcatheter was removed together with aspiration from the guide. | the stent/microcatheter/aspiration catheter was removed as a unit with aspiration from aspiration catheter. | aspiration of the clot was attempted.
 					</dropdown>
 
 
@@ -425,7 +426,7 @@ The rationale and risks of the procedure were discussed. The risks of the proced
 				Conclusion
 			</h1>
 			<selection label="Outcome">
-				Successful thrombectomy: TICI 3
+				Successful thrombectomy: TICI 3 | Successful thrombectomy: TICI 2C | Successful thrombectomy: TICI 2B | Successful thrombectomy: TICI 2A | Unsuccesful thrombectomy
 			</selection>
 			<text_entry label="" subtype="medium">
 			</text_entry>
