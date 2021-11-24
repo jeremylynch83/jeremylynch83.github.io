@@ -326,6 +326,8 @@ Not present | Present
 		</name>
 		<content>
 
+			<multi_select label="Vessel" >
+
 				<free_text label="Occlusion" print_text_before="Angiography occlusion of the">
 				</free_text>
 				<dropdown label="Tandem">
