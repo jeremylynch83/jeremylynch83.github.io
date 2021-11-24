@@ -325,7 +325,43 @@ Not present | Present
 			Stroke pass
 		</name>
 		<content>
+			<multi_select label="Access" >
+					<dropdown label="Guide gatheter" print_text_before="A" print_text_after=" guide catheter was kept">
+						Neuron max | Infinity | Cerebase 
+					</dropdown>
+					<dropdown label="Vessel" print_text_before="in the" print_text_after="artery.">
+						right carotid | left carotid | right vertebral | left vertebral 
+					</dropdown>
+				</multi_select>
 
+			<multi_select label="Vessel" >
+				<free_text label="Occlusion" print_text_before="Angiography occlusion of the">
+				</free_text>
+				<dropdown label="Tandem">
+					There were no extracranial carotid tandem lesions
+				</dropdown>
+			</multi_select>
+
+
+				<multi_select label="Technique" >
+
+					<dropdown label="Aspiration catheter" print_text_before="A" print_text_after=" aspiration catheter was inserted ">
+						Jet 7 | Jet D | Catalyst 5 | Catalyst 6 | Catalyst 7 | Large Bore / Embovac  
+					</dropdown>
+					<dropdown label="Aspiration position" print_text_before="and placed" >
+						at the clot face | in the target vessel | proximal to the target vessel 
+					</dropdown>
+					<dropdown label="Microcatheter" print_text_before="A" print_text_after=" microcatheter was inserted ">
+						Trak-21 | Rebar-18  
+					</dropdown>
+					<dropdown label="Microcatheter position" print_text_before=" and placed" >
+						distal to the clot | at the clot face 
+					</dropdown>
+					<dropdown label="Stent" print_text_before="A" print_text_after=" stent was placed across the clot.">
+						4 mm Trevo | 6 mm Trevo
+					</dropdown>
+	
+				</multi_select>
 
 
 		</content>
@@ -364,26 +400,9 @@ The rationale and risks of the procedure were discussed. The risks of the proced
 			</insert>
 			<query_insert>Access technique
 			</query_insert>
-				<multi_select label="Access" >
-					<dropdown label="Guide gatheter" print_text_before="A" print_text_after=" guide catheter was inserted">
-						Neuron max | Infinity | Cerebase 
-					</dropdown>
-					<dropdown label="Vessel" print_text_before="in to the" print_text_after="artery.">
-						right carotid | left carotid | right vertebral | left vertebral 
-					</dropdown>
-					<dropdown label="Select catheter" print_text_before="with the usage of a" print_text_after="select catheter.">
-						Berenstein | Simmons
-					</dropdown>
-					
-				</multi_select>
-				<multi_select label="Vessel" >
-
-				<free_text label="Occlusion" print_text_before="Angiography occlusion of the">
-				</free_text>
-				<dropdown label="Tandem">
-					There were no extracranial carotid tandem lesions
-				</dropdown>
-			</multi_select>
+			<insert>
+				Stroke pass
+			</insert>
 			<query_insert>
 				Stroke pass
 			</query_insert>
