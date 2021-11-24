@@ -321,11 +321,11 @@ Not present | Present
 
 	<module>
 		<name>
-			Stroke technique
+			Stroke pass
 		</name>
 		<content>
 
-			<multi_select label="Access" askfurtherdetails="true">
+			<multi_select label="Vessel" askfurtherdetails="true">
 				<dropdown label="Guide gatheter" print_text_before="A" print_text_after=" guide catheter was inserted">
 					Neuron max | Infinity | Cerebase 
 				</dropdown>
@@ -335,11 +335,13 @@ Not present | Present
 				<dropdown label="Select catheter" print_text_before="with the usage of a" print_text_after="select catheter.">
 					Berenstein | Simmons
 				</dropdown>
-				<dropdown label="Select catheter" print_text_before="with the usage of a" print_text_after="select catheter.">
-					Berenstein | Simmons
+
+				<free_text label="Occlusion" print_text_before="Angiography occlusion of the">
+				</free_text>
+				<dropdown label="Tandem">
+					There were no extracranial carotid tandem lesions
 				</dropdown>
 			</multi_select>
-
 			<selection label="Haemostasis" showdetailson="1000">
 				Manual compression was used to achieve haemostasis. | An angioseal device was used to achieve groin haemostasis. | A pneumatic compression band was used to achieve wrist haemostasis.
 			</selection>
@@ -370,18 +372,32 @@ Not present | Present
 			</h1>
 			<insert>
 				Angio header
-			</insert>
+			</insert>			
+			<selection label="Consent from">
+				Consent was obtained from the patient | Consent on basis of best interest of patient
+			</selection>
+
 			<text_entry label="Consent" flags = "dont_print_label">
-				Informed consent was obtained from the patient including the risk of stroke, puncture site haemorrhage and numbness, and peripheral vascular occlusion.
-			</text_entry>
+The rationale and risks of the procedure were discussed. The risks of the procedure included failure to recanalize vasculature, worsening of occlusion, intracranial hemorrhage, vascular dissection or tear, access site bleeding/complications, and the possibility of catastrophic brain injury from the procedure.			</text_entry>
 			<insert>
 				Access technique
 			</insert>
 			<query_insert>Access technique
 			</query_insert>
-			<insert>
-				Stroke technique
-			</insert>
+				<multi_select label="Access" askfurtherdetails="true">
+					<dropdown label="Guide gatheter" print_text_before="A" print_text_after=" guide catheter was inserted">
+						Neuron max | Infinity | Cerebase 
+					</dropdown>
+					<dropdown label="Vessel" print_text_before="in to the" print_text_after="artery.">
+						right carotid | left carotid | right vertebral | left vertebral 
+					</dropdown>
+					<dropdown label="Select catheter" print_text_before="with the usage of a" print_text_after="select catheter.">
+						Berenstein | Simmons
+					</dropdown>
+				</multi_select>
+			<query_insert>
+				Stroke pass
+			</query_insert>
 			<h1>
 				Conclusion
 			</h1>
