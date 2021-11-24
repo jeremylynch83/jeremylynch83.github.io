@@ -326,7 +326,7 @@ Not present | Present
 		</name>
 		<content>
 
-			<multi_select label="Vessel" askfurtherdetails="true">
+			<multi_select label="Vessel" >
 				<dropdown label="Guide gatheter" print_text_before="A" print_text_after=" guide catheter was inserted">
 					Neuron max | Infinity | Cerebase 
 				</dropdown>
