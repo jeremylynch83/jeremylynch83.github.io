@@ -325,7 +325,7 @@ Not present | Present
 		</name>
 		<content>
 
-			<multi_select label="Access" askfurtherdetails="true">
+			<multi_select label="Access" askfurtherdetails="false">
 				<dropdown label="Guide gatheter" print_text_before="A" print_text_after=" guide catheter was inserted">
 					Neuron max | Infinity | Cerebase 
 				</dropdown>
@@ -335,7 +335,7 @@ Not present | Present
 				<dropdown label="Select catheter" print_text_before="with the usage of a" print_text_after="select catheter.">
 					Berenstein | Simmons
 				</dropdown>
-				<dropdown label="Select catheter" print_text_before="with the usage of a" print_text_after="select catheter.">
+				<dropdown label="Aspiration catheter" print_text_before="A " print_text_after="aspiration catheter was used.">
 					Berenstein | Simmons
 				</dropdown>
 			</multi_select>
