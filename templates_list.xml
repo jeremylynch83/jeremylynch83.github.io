@@ -327,7 +327,7 @@ Not present | Present
 		<content>
 			<multi_select label="Access" >
 					<dropdown label="Guide gatheter" print_text_before="A" print_text_after=" guide catheter was kept">
-						Neuron max | Infinity | Cerebase 
+						Neuron max | Infinity | Cerebase | Flowgate 2
 					</dropdown>
 					<dropdown label="Vessel" print_text_before="in the" print_text_after="artery.">
 						right carotid | left carotid | right vertebral | left vertebral 
@@ -336,12 +336,6 @@ Not present | Present
 						Proximal ICA | ICA termination | M1 middle cerebral | M2 middle cerebral | M3 middle cerebral | ACA
 					</dropdown>
 				</multi_select>
-
-			<multi_select label="Vessel" >
-				<free_text label="Occlusion" print_text_before="Angiography confirmed occlusion of the">
-				</free_text>
-
-
 			</multi_select>
 
 
@@ -361,6 +355,17 @@ Not present | Present
 					</dropdown>
 					<dropdown label="Stent" print_text_before="A" print_text_after=" stent was placed across the clot.">
 						4 mm Trevo | 6 mm Trevo
+					</dropdown>
+
+					<dropdown label="Stent/aspiration" print_text_before="" print_text_after=" was performed.">
+						The stent/microcatheter was removed together with aspiration from the guide. | The stent/microcatheter/aspiration catheter was removed as a unit with aspiration from aspiration catheter. | Aspiration of the clot was attempted.
+					</dropdown>
+
+					<dropdown label="Aspiration" print_text_before="" print_text_after=" was performed.">
+						The stent/microcatheter was removed together. | The stent/microcatheter/aspiration catheter was removed as a unit. | Aspiration was performed.
+					</dropdown>
+					<dropdown label="Balloon guide" print_text_before="" print_text_after="">
+						The balloon guide catheter was inflated during the pass and aspiration applied to the catheter lumen.
 					</dropdown>
 	
 				</multi_select>
