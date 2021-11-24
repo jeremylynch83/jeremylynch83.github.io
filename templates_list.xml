@@ -107,7 +107,7 @@ Not present | Present
 			Access technique
 		</name>
 		<content>
-		<h2 flags="dont_print|print_space">>Puncture</h2>
+		<h2 flags="dont_print|print_space">Puncture</h2>
 			<multi_select label="Puncture" flags = "dont_print_label">
 				<dropdown label="Local">
 					1% lidocaine was infiltrated into the puncture site superficial tissues.
