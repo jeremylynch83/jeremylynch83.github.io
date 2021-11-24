@@ -92,23 +92,21 @@ Not present | Present
 			Angio header
 		</name>
 		<content>
-			<text_entry label="Main operators:" subtype="small">
+			<text_entry label="Main operator:" subtype="small">
 			</text_entry>
-			<text_entry label="Assistants:" subtype="small">
+			<text_entry label="Assistant/s:" subtype="small">
 			</text_entry>
+			<selection label="Anaesthesia" print_label="false" showdetailson="0">
+				The procedure was performed under general anaesthesia | The procedure was performed under conscious sedation | The procedure was performed under local anaesthesia. 
+			</selection>
 		</content>
 	</module>
+
 	<module>
 		<name>
-			Angio technique
+			Access technique
 		</name>
 		<content>
-			<text_entry label="Consent" flags = "dont_print_label">
-				Informed consent was obtained from the patient including the risk of stroke, puncture site haemorrhage and numbness, and peripheral vascular occlusion.
-			</text_entry>
-			<selection label="Anaesthesia" print_label="true" showdetailson="0">
-				General anaesthesia | Conscious sedation | Local anaesthesia
-			</selection>
 			<multi_select label="Puncture" flags = "dont_print_label">
 				<dropdown label="Local">
 					1% lidocaine was infiltrated into the puncture site superficial tissues.
@@ -119,11 +117,8 @@ Not present | Present
 				<dropdown label="Puncture site" print_text_before="">
 					common femoral artery | radial artery
 				</dropdown>
-				<dropdown label="Sheath size" print_text_before="puncture was performed and a">
-					4-French | 5-French | 6-French
-				</dropdown>
-				<dropdown label="Catheter used" print_text_before="sheath was inserted. A" print_text_after="was used.">
-					Berenstein catheter | Simmons-2 catheter 
+				<dropdown label="Sheath size" print_text_before="puncture was performed and a" print_text_after="sheath was inserted">
+					4-French | 5-French | 6-French | 7-French | 8-French
 				</dropdown>
 			</multi_select>
 			<multi_checkbox label="An intra-arterial cocktail was infused via the sheath consisting of">
@@ -137,6 +132,29 @@ Not present | Present
 					Nitroglycerin
 				</checkbox>
 			</multi_checkbox>
+
+		</content>
+	</module>
+
+
+	<module>
+		<name>
+			Angio technique
+		</name>
+		<content>
+
+			<multi_checkbox label="Catheters used included the following: ">
+				<checkbox>
+					Berenstein
+				</checkbox>
+				<checkbox>
+					Vertebral
+				</checkbox>
+				<checkbox>
+					Simmons
+				</checkbox>
+			</multi_checkbox>
+
 			<multi_checkbox label="Digital subtraction angiography was performed via the">
 				<checkbox>
 					Right common carotid artery
@@ -198,59 +216,6 @@ Not present | Present
 		</content>
 	</module>
 
-	<template>
-		<name>
-			Cerebral Angiogram
-		</name>
-		<type>
-			Angiography
-		</type>
-		<title>
-			Cerebral Angiogram
-		</title>
-		<content>
-			<h1>
-				Clinical Indication
-			</h1>
-			<text_entry label="" subtype="medium">
-			</text_entry>
-			<h1>
-				Technique
-			</h1>
-			<insert>
-				Angio header
-			</insert>
-			<insert>
-				Angio technique
-			</insert>
-			<insert>
-				Comparison
-			</insert>
-			<h1>
-				Findings
-			</h1>
-			<selection label="Normal">
-				Normal cerebral vasculature is demonstrated. No aneurysms or other vascular abnormalities are identified.
-			</selection>
-			<query_insert>Aneurysm description
-			</query_insert>
-			<query_insert>DAVF description
-			</query_insert>
-			<query_insert>AVM description
-			</query_insert>
-			<text_entry label="" subtype="large">
-			</text_entry>
-			<h1>
-				Conclusion
-			</h1>
-			<selection label="Normal">
-				Normal cerebral angiogram
-			</selection>
-			<text_entry label="" subtype="medium">
-			</text_entry>
-		</content>
-	</template>
-
 	<module>
 		<name>Aneurysm description
 		</name>
@@ -258,7 +223,7 @@ Not present | Present
 			<multi_select label="Description">
 				<dropdown label="Morphology" print_text_before="There is a" print_text_after="aneurysm">saccular | fusiform
 				</dropdown>
-				<free_text label="Location" print_text_before="located at" ></free_text>
+				<free_text label="Location" print_text_before="located at"></free_text>
 				<free_text label="Size" print_text_before="and measuring approximately" print_text_after="."></free_text>
 				<dropdown label="Neck" print_text_before="It is" print_text_after="."> narrow necked | wide necked
 				</dropdown>
@@ -352,6 +317,81 @@ Not present | Present
 			</multi_select>
 		</content>
 	</module>
+
+
+	<module>
+		<name>
+			Stroke technique
+		</name>
+		<content>
+
+			<multi_select label="Access" askfurtherdetails="true">
+				<dropdown label="Guide gatheter" print_text_before="A" print_text_after=" guide catheter was inserted">
+					Neuron max | Infinity | Cerebase 
+				</dropdown>
+				<dropdown label="Vessel" print_text_before="in to the" print_text_after="artery.">
+					right carotid | left carotid | right vertebral | left vertebral 
+				</dropdown>
+				<dropdown label="Select catheter" print_text_before="with the usage of a" print_text_after="select catheter.">
+					Berenstein | Simmons
+				</dropdown>
+				<dropdown label="Select catheter" print_text_before="with the usage of a" print_text_after="select catheter.">
+					Berenstein | Simmons
+				</dropdown>
+			</multi_select>
+
+			<selection label="Haemostasis" showdetailson="1000">
+				Manual compression was used to achieve haemostasis. | An angioseal device was used to achieve groin haemostasis. | A pneumatic compression band was used to achieve wrist haemostasis.
+			</selection>
+			<selection label="Complications">
+				There were no periprocedural complications.
+			</selection>
+		</content>
+	</module>
+
+	<template>
+		<name>
+			Endovascular Stroke Thrombectomy
+		</name>
+		<type>
+			Angiography
+		</type>
+		<title>
+			Endovascular Stroke Thrombectomy
+		</title>
+		<content>
+			<h1>
+				Clinical Indication
+			</h1>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+			<h1>
+				Technique
+			</h1>
+			<insert>
+				Angio header
+			</insert>
+			<text_entry label="Consent" flags = "dont_print_label">
+				Informed consent was obtained from the patient including the risk of stroke, puncture site haemorrhage and numbness, and peripheral vascular occlusion.
+			</text_entry>
+			<insert>
+				Access technique
+			</insert>
+			<query_insert>Access technique
+			</query_insert>
+			<insert>
+				Stroke technique
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<selection label="Outcome">
+				Successful thrombectomy: TICI 3
+			</selection>
+			<text_entry label="" subtype="medium">
+			</text_entry>
+		</content>
+	</template>
 
 
 	<template>
@@ -902,7 +942,7 @@ Not present | Present
 			Cervical spine level
 		</name>
 		<content>
-					<text_entry label="" subtype="medium">
+			<text_entry label="" subtype="medium">
 			</text_entry>
 			<selection label="Discs">
 				The disc is normal | There is disc degeneration. | There is disc degeneration and height loss.
@@ -1956,7 +1996,7 @@ Not present | Present
 				<radio label="Thyroid gland" flags="dont_print_normal">
 					Normal | Abnormal
 				</radio>
-								<radio label="Orbits" flags="dont_print_normal">
+				<radio label="Orbits" flags="dont_print_normal">
 					Normal | Abnormal
 				</radio>
 				<radio label="Abnormal lymph nodes" flags="dont_print_normal">
@@ -3686,7 +3726,7 @@ Not present | Present
 				Comparison
 			</insert>
 			<h1>Findings</h1>
-						<text_entry label="" subtype="medium">
+			<text_entry label="" subtype="medium">
 			</text_entry>
 
 			<h2 flags="dont_print">
@@ -4381,7 +4421,7 @@ Not present | Present
 				</checkbox>
 			</multi_checkbox>
 
-						<text_entry label="" subtype="small">
+			<text_entry label="" subtype="small">
 			</text_entry>
 
 			<multi_select label="Lesion Characteristics">
@@ -4457,7 +4497,7 @@ Not present | Present
 			<insert>
 				Comparison
 			</insert>
-						<h1>Findings</h1>
+			<h1>Findings</h1>
 			<text_entry label="" subtype="medium">
 			</text_entry>
 			<multi_checkbox label="Multiple foci of abnormal signal are identified in the">

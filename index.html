@@ -176,6 +176,10 @@
 			</b-jumbotron>
 		</b-container>
 
+
+
+
+
 		<b-container id="result_container" v-show="deviceInputs.length >1 && deviceInputs[0].active != null ">
 			<b-jumbotron bg-variant="light">
 				<div id="result" class="lead"></div>
@@ -194,6 +198,9 @@
 				<div id="paper"></div>
 				<p></p>
 			</b-jumbotron>
+
+
+
 		</b-container>
 
 		<!---------------- MODALS -------------->
@@ -1123,12 +1130,16 @@
 									child_data = JSON.parse(child.getAttribute("data"));
 
 									if (child_data.recommendedParentId != null) {
+
 										child_total_od = child_total_od + child_data
-											.recommendedParentId;
+											.recommendedParentId - 0.0001;
 									} else {
 										child_total_od = child_total_od + child_data
 											.maxod;
 									}
+
+									console.log(child_data.name + ": " + child_total_od);
+
 									child_list.push(child_data.name);
 
 									// Compare lengths
