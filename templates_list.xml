@@ -359,7 +359,7 @@ Not present | Present
 						4 mm Trevo | 6 mm Trevo
 				</dropdown>
 
-				<dropdown label="Stent/aspiration" print_text_before="Next, " print_text_after=" was performed.">
+				<dropdown label="Stent/aspiration" print_text_before="Next, ">
 						the stent/microcatheter was removed together with aspiration from the guide. | the stent/microcatheter/aspiration catheter was removed as a unit with aspiration from aspiration catheter. | aspiration of the thrombus was attempted.
 				</dropdown>
 
@@ -368,7 +368,7 @@ Not present | Present
 						The balloon guide catheter was inflated during the pass and aspiration applied to the catheter lumen.
 				</dropdown>
 				<dropdown label="Outcome" print_text_before="" print_text_after="">
-						This pass was successful in retrieving the thrombus. | This pass was unsuccessful in retrieving the thrombus.
+						This pass was unsuccessful in recanalising the vessel. | This pass was unsuccessful in recanalising the vessel.
 				</dropdown>
 
 			</multi_select>
