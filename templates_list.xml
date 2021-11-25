@@ -325,7 +325,7 @@ Not present | Present
 			Stroke pass
 		</name>
 		<content>
-			<h2 flags="dont_print|print_space">Pass</h2>
+			<h2 flags="dont_print">Pass</h2>
 
 			<multi_select label="Access">
 				<dropdown label="Guide gatheter" print_text_before="A" print_text_after=" guide catheter was kept">
