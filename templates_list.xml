@@ -107,7 +107,7 @@ Not present | Present
 			Access technique
 		</name>
 		<content>
-		<h2 flags="dont_print|print_space">Puncture</h2>
+			<h2 flags="dont_print|print_space">Puncture</h2>
 			<multi_select label="Puncture" flags = "dont_print_label">
 				<dropdown label="Local">
 					1% lidocaine was infiltrated into the puncture site superficial tissues.
@@ -325,52 +325,52 @@ Not present | Present
 			Stroke pass
 		</name>
 		<content>
-		
-			<multi_select label="Access" >
-					<dropdown label="Guide gatheter" print_text_before="A" print_text_after=" guide catheter was kept">
+
+			<multi_select label="Access">
+				<dropdown label="Guide gatheter" print_text_before="A" print_text_after=" guide catheter was kept">
 						Neuron max | Infinity | Cerebase | Flowgate 2
-					</dropdown>
-					<dropdown label="Vessel" print_text_before="in the" print_text_after="artery.">
+				</dropdown>
+				<dropdown label="Vessel" print_text_before="in the" print_text_after="artery.">
 						right carotid | left carotid | right vertebral | left vertebral 
-					</dropdown>
-					<dropdown label="Occlusion" print_text_before="Angiography confirmed occlusion of the" print_text_after="artery.">
-						Proximal ICA | ICA termination | M1 middle cerebral | M2 middle cerebral | M3 middle cerebral | ACA
-					</dropdown>
-				
+				</dropdown>
+				<dropdown label="Occlusion" print_text_before="Angiography confirmed occlusion of the" print_text_after="artery.">
+						Proximal internal carotid | distal internal carotid | M1 middle cerebral | M2 middle cerebral | M3 middle cerebral | A1 anterior cerebral | A2 anterior cerebral
+				</dropdown>
+
 			</multi_select>
 
 
-				<multi_select label="Technique" >
+			<multi_select label="Technique">
 
-					<dropdown label="Aspiration catheter" print_text_before="A" print_text_after=" aspiration catheter was inserted ">
+				<dropdown label="Aspiration catheter" print_text_before="A" print_text_after=" aspiration catheter was inserted ">
 						Jet 7 | Jet D | Catalyst 5 | Catalyst 6 | Catalyst 7 | Large Bore / Embovac  
-					</dropdown>
-					<dropdown label="Aspiration position" print_text_before="and placed" >
+				</dropdown>
+				<dropdown label="Aspiration position" print_text_before="and placed">
 						at the clot face. | in the target vessel. | proximal to the target vessel. 
-					</dropdown>
-					<dropdown label="Microcatheter" print_text_before="A" print_text_after=" microcatheter was inserted ">
+				</dropdown>
+				<dropdown label="Microcatheter" print_text_before="A" print_text_after=" microcatheter was inserted ">
 						Trak-21 | Rebar-18  
-					</dropdown>
-					<dropdown label="Microcatheter position" print_text_before=" and placed" >
+				</dropdown>
+				<dropdown label="Microcatheter position" print_text_before=" and placed">
 						distal to the clot. | at the clot face. 
-					</dropdown>
-					<dropdown label="Stent" print_text_before="A" print_text_after=" stent was deployed across the clot.">
+				</dropdown>
+				<dropdown label="Stent" print_text_before="A" print_text_after=" stent was deployed across the clot.">
 						4 mm Trevo | 6 mm Trevo
-					</dropdown>
+				</dropdown>
 
-					<dropdown label="Stent/aspiration" print_text_before="Next, " print_text_after=" was performed.">
+				<dropdown label="Stent/aspiration" print_text_before="Next, " print_text_after=" was performed.">
 						the stent/microcatheter was removed together with aspiration from the guide. | the stent/microcatheter/aspiration catheter was removed as a unit with aspiration from aspiration catheter. | aspiration of the clot was attempted.
-					</dropdown>
+				</dropdown>
 
 
-					<dropdown label="Balloon guide" print_text_before="" print_text_after="">
+				<dropdown label="Balloon guide" print_text_before="" print_text_after="">
 						The balloon guide catheter was inflated during the pass and aspiration applied to the catheter lumen.
-					</dropdown>
-					<dropdown label="Outcome" print_text_before="" print_text_after="">
+				</dropdown>
+				<dropdown label="Outcome" print_text_before="" print_text_after="">
 						This pass was successful in retrieving the clot. | This pass was unsuccessful in retrieving the clot.
-					</dropdown>
-	
-				</multi_select>
+				</dropdown>
+
+			</multi_select>
 
 
 		</content>
@@ -397,7 +397,7 @@ Not present | Present
 			</h1>
 			<insert>
 				Angio header
-			</insert>			
+			</insert>
 			<selection label="Consent from">
 				Consent was obtained from the patient | Consent on basis of best interest of patient
 			</selection>
@@ -4112,7 +4112,7 @@ The rationale and risks of the procedure were discussed. The risks of the proced
 				</radio>
 			</multi_radio>
 
-			
+
 
 			<h2 flags="dont_print">
 				Atrophy
