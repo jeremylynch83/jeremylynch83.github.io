@@ -325,6 +325,7 @@ Not present | Present
 			Stroke pass
 		</name>
 		<content>
+			<h2 flags="dont_print|print_space">Pass</h2>
 
 			<multi_select label="Access">
 				<dropdown label="Guide gatheter" print_text_before="A" print_text_after=" guide catheter was kept">
@@ -352,14 +353,14 @@ Not present | Present
 						Trak-21 | Rebar-18  
 				</dropdown>
 				<dropdown label="Microcatheter position" print_text_before=" and placed">
-						distal to the clot. | at the clot face. 
+						distal to the thrombus. | at the clot face. 
 				</dropdown>
-				<dropdown label="Stent" print_text_before="A" print_text_after=" stent was deployed across the clot.">
+				<dropdown label="Stent" print_text_before="A" print_text_after=" stent was deployed across the thrombus.">
 						4 mm Trevo | 6 mm Trevo
 				</dropdown>
 
 				<dropdown label="Stent/aspiration" print_text_before="Next, " print_text_after=" was performed.">
-						the stent/microcatheter was removed together with aspiration from the guide. | the stent/microcatheter/aspiration catheter was removed as a unit with aspiration from aspiration catheter. | aspiration of the clot was attempted.
+						the stent/microcatheter was removed together with aspiration from the guide. | the stent/microcatheter/aspiration catheter was removed as a unit with aspiration from aspiration catheter. | aspiration of the thrombus was attempted.
 				</dropdown>
 
 
@@ -367,7 +368,7 @@ Not present | Present
 						The balloon guide catheter was inflated during the pass and aspiration applied to the catheter lumen.
 				</dropdown>
 				<dropdown label="Outcome" print_text_before="" print_text_after="">
-						This pass was successful in retrieving the clot. | This pass was unsuccessful in retrieving the clot.
+						This pass was successful in retrieving the thrombus. | This pass was unsuccessful in retrieving the thrombus.
 				</dropdown>
 
 			</multi_select>
