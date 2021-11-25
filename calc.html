@@ -57,30 +57,59 @@
 
         <b-container fluid="sm">
             <p></p>
-            <b-container v-if="template == ''"
-                style="background-color:rgb(255, 255, 239); padding: 10px; border-radius: 5px">
+            <b-container style="background-color:rgb(255, 255, 239); padding: 10px; border-radius: 5px">
                 <p>This website is under development. Please email me at <a
                         href="mailto: jeremy.lynch@gmail.com">jeremy.lynch@gmail.com</a> for any comments or
                     suggestions. </p>
             </b-container>
             <p></p>
-            <b-form-group>
-                <label for="range-1">Aneurysm size (mm):</label>
-                <b-form-input id="aneurysm-size" v-model="text" placeholder="Aneurysm size (mm)"></b-form-input>
+            <template>
+                <b-container fluid>
 
-            </b-form-group>
+                    <b-row class="my-1" v-for="n in score.variables" :key="n.name">
+                        <b-col sm="3">
+                            <label>{{ n.text }}:</label>
+                        </b-col>
+                        <b-col sm="9">
+                            <b-form-input v-if="n.type == 'text'|| n.type =='number'" :id="`n.name-${n.name}`"
+                                :type="n.type" v-model="n.selected">
+                            </b-form-input>
 
+                            <b-form-select v-if="n.type == 'select'" :id="`n.name-${n.name}`" :options="n.options"
+                                v-model="n.selected">
+                            </b-form-select>
+
+                            <b-form-radio-group v-if="n.type == 'radio'" :id="`n.name-${n.name}`" :options="n.options"
+                                v-model="n.selected">
+                            </b-form-radio-group>
+                        </b-col>
+                    </b-row>
+
+                </b-container>
+            </template>
             <p></p>
             <p></p>
+
+            <b-button @click="calculate()">Calculate</b-button>
+            <p></p>
+
+            <b-container>
+                <b-jumbotron bg-variant="light">
+                    <div id="result_text" class="lead"></div>
+                    <p></p>
+                </b-jumbotron>
+
+            </b-container>
 
 
             <!---------------- MODALS -------------->
 
-            <b-modal id="help_modal" title="NeuroTool: Help" ok-only>
+            <b-modal id=" help_modal" title="NeuroTool: Help" ok-only>
             </b-modal>
 
             <b-container class="footer">
-                This tool is for educational purposes only. <b-link href="mailto: jeremy.lynch@gmail.com"> Contact us.
+                This tool is for educational purposes only. <b-link href="mailto: jeremy.lynch@gmail.com"> Contact
+                    us.
                 </b-link>
             </b-container>
 
@@ -117,6 +146,190 @@
         }
 
 
+        /* PREDICTION TOOLS */
+
+        aneurysm_risk = {}
+        aneurysm_risk.variables = [{
+                name: "size",
+                score: "phases",
+                type: "number",
+                text: "Enter size in mm",
+                selected: null,
+                phases_score: function () {
+                    var total = 0;
+                    if (this.selected) {
+                        if (this.selected < 7) total = 0;
+                        if (this.selected >= 7 && this.selected < 10) total = 3;
+                        if (this.selected >= 10 && this.selected < 20) total = 6;
+                        if (this.selected >= 20) total = 10;
+
+                    }
+                    return total;
+
+                }
+            },
+            {
+                name: "site",
+                score: "phases",
+                type: "select",
+                options: [{
+                        value: 'ica',
+                        text: 'ICA'
+                    },
+                    {
+                        value: 'mca',
+                        text: 'MCA'
+                    },
+                    {
+                        value: 'aca',
+                        text: 'ACA'
+                    },
+                    {
+                        value: 'pca',
+                        text: 'PCA/PCOM'
+                    },
+                    {
+                        value: 'va',
+                        text: 'Vertebral artery'
+                    },
+                    {
+                        value: 'ba',
+                        text: 'Basilar artery'
+                    }
+                ],
+                text: "Enter site",
+                selected: null,
+                phases_score: function () {
+                    var total = 0;
+                    if (this.selected) {
+                        if (this.selected == "ica") total = 0;
+                        if (this.selected == "mca") total = 2;
+                        if (this.selected != "ica" && this.selected != "mca") total = 4;
+                    }
+                    return total;
+
+                }
+            },
+            {
+                name: "ethnicity",
+                score: "phases",
+                type: "select",
+                options: [{
+                        value: 'american',
+                        text: 'North American/European (except Finnish)'
+                    },
+                    {
+                        value: 'japanese',
+                        text: 'Japanese'
+                    },
+                    {
+                        value: 'finnish',
+                        text: 'Finnish'
+                    },
+                    {
+                        value: 'other',
+                        text: 'Other'
+                    }
+                ],
+                text: "Enter ethnicity",
+                selected: null,
+                phases_score: function () {
+                    var total = 0;
+                    if (this.selected) {
+                        if (this.selected == "american" || this.selected == "other") total = 0;
+                        if (this.selected == "japanese") total = 3;
+                        if (this.selected == "finnish") total = 5;
+                    }
+                    return total;
+
+                }
+            },
+            {
+                name: "hypertension",
+                score: "phases",
+                options: [{
+                    value: 1,
+                    text: 'yes'
+                }, {
+                    value: 0,
+                    text: 'no'
+                }],
+                type: "radio",
+                text: "Does the patient have hypertension?",
+                selected: null,
+                phases_score: function () {
+                    return this.selected;
+
+                }
+            },
+            {
+                name: "Age",
+                score: "phases",
+                type: "number",
+                text: "Enter age in years",
+                selected: null,
+                phases_score: function () {
+                    var total = 0;
+                    if (this.selected && this.selected > 70) {
+                        total = 1;
+                    }
+                    return total;
+
+                }
+            },
+            {
+                name: "other_sah",
+                score: "phases",
+                options: [{
+                    value: 1,
+                    text: 'yes'
+                }, {
+                    value: 0,
+                    text: 'no'
+                }],
+                type: "radio",
+                text: "Has the patient ever had subarachnoid haemorrhage from another aneurysm?",
+                selected: null,
+                phases_score: function () {
+                    return this.selected;
+
+                }
+            }
+        ]
+        aneurysm_risk.calculate = function () {
+            var text = "";
+
+            // PHASES
+            const phases_table = {
+                0: "0.4\% (0.1-1.5\%)",
+                1: "0.4\% (0.1-1.5\%)",
+                2: "0.4\% (0.1-1.5\%)",
+                3: "0.7\% (0.1-1.5\%)",
+                4: "0.9\% (0.1-1.5\%)",
+                5: "1.3\% (0.1-1.5\%)",
+                6: "1.7\% (0.1-1.5\%)",
+                7: "2.4\% (0.1-1.5\%)",
+                8: "3.2\% (0.1-1.5\%)",
+                9: "4.3\% (0.1-1.5\%)",
+                10: "5.3\% (0.1-1.5\%)",
+                11: "7.2\% (0.1-1.5\%)",
+            }
+            var total = 0;
+            for (var n = 0; n < this.variables.length; n++) {
+                total = total + this.variables[n].phases_score();
+            }
+            var risk = null;
+            if (total >= 12) risk = "17·8\% (15·2–20·7\%)";
+            else risk = phases_table[total]
+
+            text = "Score = " + total + " giving a 5-year risk of " + risk + ".";
+
+
+            return text;
+
+        }
+
+
         /* GLOBAL VARIABLES */
 
         window.app = new Vue({
@@ -126,20 +339,9 @@
             el: '#app',
             data: {
                 id_count: 0,
-                aneurysm: [{
-                    size: {
-                        name: "aneurysm_size",
-                        type: "number",
-                        text: "Enter size"
-                    },
-                    site: null,
-                    ethnicity: null,
-                    hypertension: null,
-                    age: null,
-                    previous_sah: null
-                }],
-                copyModal: {
+                score: aneurysm_risk,
 
+                copyModal: {
                     id: 'copy-modal',
                     text: "",
                     title: "Copy"
@@ -148,7 +350,10 @@
 
             methods: {
                 // General functions
+                calculate: function () {
+                    document.getElementById("result_text").innerHTML = this.score.calculate();
 
+                }
 
 
             }

@@ -118,7 +118,7 @@ Not present | Present
 				<dropdown label="Puncture site" print_text_before="">
 					common femoral artery | radial artery
 				</dropdown>
-				<dropdown label="Sheath size" print_text_before="puncture was performed and a" print_text_after="sheath was inserted">
+				<dropdown label="Sheath size" print_text_before="puncture was made and a" print_text_after="sheath was inserted">
 					4-French | 5-French | 6-French | 7-French | 8-French
 				</dropdown>
 			</multi_select>
@@ -360,7 +360,7 @@ Not present | Present
 				</dropdown>
 
 				<dropdown label="Stent/aspiration" print_text_before="Next, ">
-						the stent/microcatheter was removed together with aspiration from the guide. | the stent/microcatheter/aspiration catheter was removed as a unit with aspiration from aspiration catheter. | aspiration of the thrombus was attempted.
+						the stent/microcatheter/aspiration catheter was removed as a unit with aspiration from aspiration catheter. |the stent/microcatheter was removed together with aspiration from the guide. | aspiration of the thrombus was attempted.
 				</dropdown>
 
 
@@ -399,12 +399,14 @@ Not present | Present
 			<insert>
 				Angio header
 			</insert>
+			<text_entry label="Consent" flags = "dont_print_label">
+The risks of the procedure included failure to recanalize vasculature, worsening of occlusion, intracranial hemorrhage, vascular dissection or tear, access site bleeding/complications, and the possibility of catastrophic brain injury from the procedure.			</text_entry>
+
 			<selection label="Consent from">
 				Consent was obtained from the patient | Consent on basis of best interest of patient
 			</selection>
 
-			<text_entry label="Consent" flags = "dont_print_label">
-The rationale and risks of the procedure were discussed. The risks of the procedure included failure to recanalize vasculature, worsening of occlusion, intracranial hemorrhage, vascular dissection or tear, access site bleeding/complications, and the possibility of catastrophic brain injury from the procedure.			</text_entry>
+
 			<insert>
 				Access technique
 			</insert>
