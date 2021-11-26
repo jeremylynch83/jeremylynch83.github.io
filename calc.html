@@ -228,6 +228,7 @@
                 phases_score: function () {
                     var total = 0;
                     if (this.selected) {
+                        if (this.selected == "cavernous") total = -1;
                         if (this.selected == "ica") total = 0;
                         if (this.selected == "mca") total = 2;
                         if (this.selected == "pca" || this.selected == "pcom" || this.selected == "va" || this
@@ -358,9 +359,14 @@
                 total = total + this.variables[n].phases_score();
             }
             var risk = null;
-            if (total >= 12) risk = "17·8\% (15·2–20·7\%)";
-            else risk = phases_table[total]
-            text = "<p>PHASES: " + risk + " 5-year risk. </p>";
+            if (get_var("site", this.variables).isuia_score() != -1) {
+                if (total >= 12) risk = "17·8\% (15·2–20·7\%)";
+                else risk = phases_table[total];
+                text = "<p>PHASES: " + risk + " 5-year risk. </p>";
+            } else {
+                text = "";
+            }
+
 
             // ISUIA
             total = 0;
