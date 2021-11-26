@@ -145,6 +145,16 @@
             return result;
         }
 
+        function get_var(name, array) {
+
+            var match = null;
+            for (var n = 0; n < array.length; n++) {
+                if (array[n].name == name) match = n;
+            }
+
+            return array[match];
+        }
+
 
         /* PREDICTION TOOLS */
 
@@ -165,7 +175,16 @@
 
                     }
                     return total;
-
+                },
+                isuia_score: function () {
+                    var total = 0;
+                    if (this.selected) {
+                        if (this.selected < 7) total = 0;
+                        if (this.selected >= 7 && this.selected < 13) total = 1;
+                        if (this.selected >= 13 && this.selected < 25) total = 2;
+                        if (this.selected >= 25) total = 3;
+                    }
+                    return total;
                 }
             },
             {
@@ -173,8 +192,11 @@
                 score: "phases",
                 type: "select",
                 options: [{
+                        value: 'cavernous',
+                        text: 'Cavernous ICA'
+                    }, {
                         value: 'ica',
-                        text: 'ICA'
+                        text: 'Intradural ICA'
                     },
                     {
                         value: 'mca',
@@ -183,6 +205,10 @@
                     {
                         value: 'aca',
                         text: 'ACA'
+                    },
+                    {
+                        value: 'acom',
+                        text: 'ACom'
                     },
                     {
                         value: 'pca',
@@ -204,11 +230,25 @@
                     if (this.selected) {
                         if (this.selected == "ica") total = 0;
                         if (this.selected == "mca") total = 2;
-                        if (this.selected != "ica" && this.selected != "mca") total = 4;
+                        if (this.selected == "pca" || this.selected == "pcom" || this.selected == "va" || this
+                            .selected == "ba" || this.selected == "aca" || this
+                            .selected == "acom") total = 4;
                     }
                     return total;
+                },
+                isuia_score: function () {
+                    var total = 0;
+                    if (this.selected) {
+                        if (this.selected == "cavernous") total = 0;
+                        if (this.selected == "mca" || this.selected == "aca" || this
+                            .selected == "acom" || this
+                            .selected == "ica") total = 1;
+                        if (this.selected == "pca" || this.selected == "pcom" || this.selected == "va" || this
+                            .selected == "ba") total = 2;
+                    }
+                    return total;
+                },
 
-                }
             },
             {
                 name: "ethnicity",
@@ -292,7 +332,6 @@
                 selected: null,
                 phases_score: function () {
                     return this.selected;
-
                 }
             }
         ]
@@ -321,9 +360,44 @@
             var risk = null;
             if (total >= 12) risk = "17·8\% (15·2–20·7\%)";
             else risk = phases_table[total]
+            text = "<p>PHASES: " + risk + " 5-year risk. </p>";
 
-            text = "PHASES Score = " + total + " giving a 5-year risk of " + risk + ".";
+            // ISUIA
+            total = 0;
+            risk = null;
+            // Size 7mm
+            if (get_var("other_sah", this.variables).selected && get_var("size", this.variables).isuia_score() ==
+                0) {
+                // Previously ruptured and < 7 mm
+                if (get_var("site", this.variables).isuia_score() == 0) {
+                    risk = "0\% "
+                } else if (get_var("site", this.variables).isuia_score() == 1) {
+                    risk = "1.5\% "
+                } else if (get_var("site", this.variables).isuia_score() == 2) {
+                    risk = "3.4\% "
+                }
+            } else if (get_var("size", this.variables).isuia_score() > 0) {
+                // Not previously ruptured and < 7 mm
+                if (get_var("site", this.variables).isuia_score() == 2) {
+                    risk = "2.5\% "
+                } else {
+                    risk = "0\% ";
+                }
+            }
+            const isuia_table = [
+                [0, "0\%", "3\%", "6.4\%"],
+                [0, "2.6\%", "14.6\%", "40\%"],
+                [0, "18.4\%", "18.4\%", "50\%"]
+            ];
+            // [row][column]
+            console.log("site: " + get_var("site", this.variables).isuia_score());
+            console.log("size: " + get_var("size", this.variables)
+                .isuia_score());
+            var risk = isuia_table[get_var("site", this.variables).isuia_score()][get_var("size", this.variables)
+                .isuia_score()
+            ];
 
+            text = text + "<p>ISUIA: " + risk + " 5-year risk.</p>";
 
             return text;
 
