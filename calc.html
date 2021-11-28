@@ -58,13 +58,13 @@
         <b-container fluid="sm">
             <p></p>
             <h1>Clinical Prediction Calculators/Classifications</h1>
-            <p><i>“The good thing about standards is that there are so many to choose from.” ― Andrew S. Tanenbaum </i>
-            </p>
+            <!--<p><i>“The good thing about standards is that there are so many to choose from.” ― Andrew S. Tanenbaum </i>
+            </p>-->
 
             <p></p>
             <template>
                 <h2>{{score.title}}</h2>
-                <b-form-group>
+                <b-form-group label="Select 1 or more classifications:">
                     <b-form-checkbox-group id="checkbox-group-1" v-model="score.selected" :options="score.types">
                     </b-form-checkbox-group>
                 </b-form-group>
@@ -106,8 +106,8 @@
             <p></p>
 
             <b-card bg-variant="light">
-                <div id="result_text" class="lead"></div>
-                <p></p>
+
+                <div id="result_text" class="calc_result"></div>
 
             </b-card>
 
