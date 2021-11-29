@@ -3,7 +3,7 @@
 //////////////
 
 aneurysm_risk = {
-    title: "Incidental aneurysm rupture risk",
+    title: "Incidental aneurysm",
     selected: ["PHASES", "ISUIA"],
     types: [{
             value: "PHASES",
@@ -813,9 +813,16 @@ aneurysm_risk = {
             .uiats_score() + get_var("size", this.variables)
             .uiats_score_rx() + 5;
         if (this.selected.includes("UIATS")) {
-            text = text + "<p>UIATS: In favour of repair: " + repair +
-                " vs in favour of conservative: " +
-                conserv + "</p>";
+            if ((repair - conserv) > 0) {
+                text = text + "<p>UIATS: In favour of intervention ";  
+            }
+            else if ((repair - conserv) == 0) {
+                text = text + "<p>UIATS: Equipoise ";  
+            }
+            else if ((repair - conserv) < 0) {
+                text = text + "<p>UIATS: In favour of non-intervention ";  
+            }
+            text=text+ "(intervention "+ repair + " vs non-intervention " + conserv +").";
         }
 
 
