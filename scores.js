@@ -1,3 +1,5 @@
+var scores=[];
+
 //////////////
 // ANEURYSM //
 //////////////
@@ -22,7 +24,7 @@ aneurysm_risk = {
             name: "size",
             score: "PHASES/ISUIA/UIATS",
             type: "number",
-            text: "Enter size in mm",
+            text: "Enter size (mm)",
             selected: null,
             phases_score: function () {
                 var total = 0;
@@ -992,9 +994,6 @@ avf_risk = {
         text=text+"</p>";
 
     }
-
-             
-
     
         return text;
     }
@@ -1079,7 +1078,7 @@ carotid_stenosis = {
             name: "normal", // Internal name
             score: "NASCET", // separated by "/"
             type: "number",
-            text: "Diameter of the normal distal ICA", // Presented to user
+            text: "Diameter of the normal distal ICA (mm)", // Presented to user
             selected: null,
             nascet_score: function () { 
                 return this.selected;
@@ -1098,6 +1097,148 @@ carotid_stenosis = {
         text = "<p> ICA stenosis = " + ratio.toFixed(0) + "%";
 
 
+        return text;
+    }
+}
+
+
+//////////////
+// DAWN/DEFUSE      //
+//////////////
+i_hypotension = {
+    title: "Intracranial hypotension",
+    selected: ["Dobrocky Bern"], // Default selected scores
+    types: [{
+            value: "Dobrocky Bern", // Types of scores
+            text: "Dobrocky Bern" // Same as above
+        }
+    ],
+    variables: [{
+            name: "sinuses", // Internal name
+            score: "Dobrocky Bern", // separated by "/"
+            options: [{
+                value: 1,
+                text: 'yes'
+            }, {
+                value: 0,
+                text: 'no'
+            }],
+            type: "radio",
+            text: "Engorgement of venous sinuses", // Presented to user
+            selected: null,
+            bern_score: function () { // Function returns to calculate score
+                return this.selected*2;
+            }
+        },{
+            name: "pachymen", // Internal name
+            score: "Dobrocky Bern", // separated by "/"
+            options: [{
+                value: 1,
+                text: 'yes'
+            }, {
+                value: 0,
+                text: 'no'
+            }],
+            type: "radio",
+            text: "Pachymeningeal enhancement ", // Presented to user
+            selected: null,
+            bern_score: function () { // Function returns to calculate score
+                return this.selected*2;
+            }
+        },{
+            name: "suprasellar", // Internal name
+            score: "Dobrocky Bern", // separated by "/"
+            options: [{
+                value: 1,
+                text: 'yes'
+            }, {
+                value: 0,
+                text: 'no'
+            }],
+            type: "radio",
+            text: "Suprasellar cistern ≤ 4 mm ", // Presented to user
+            selected: null,
+            bern_score: function () { // Function returns to calculate score
+                return this.selected*2;
+            }
+        },{
+            name: "subdural", // Internal name
+            score: "Dobrocky Bern", // separated by "/"
+            options: [{
+                value: 1,
+                text: 'yes'
+            }, {
+                value: 0,
+                text: 'no'
+            }],
+            type: "radio",
+            text: "Subdural fluid collection ", // Presented to user
+            selected: null,
+            bern_score: function () { // Function returns to calculate score
+                return this.selected;
+            }
+        },{
+            name: "prepontine", // Internal name
+            score: "Dobrocky Bern", // separated by "/"
+            options: [{
+                value: 1,
+                text: 'yes'
+            }, {
+                value: 0,
+                text: 'no'
+            }],
+            type: "radio",
+            text: "Prepontine cistern ≤ 5 mm", // Presented to user
+            selected: null,
+            bern_score: function () { // Function returns to calculate score
+                return this.selected;
+            }
+        },{
+            name: "mamillopontine", // Internal name
+            score: "Dobrocky Bern", // separated by "/"
+            options: [{
+                value: 1,
+                text: 'yes'
+            }, {
+                value: 0,
+                text: 'no'
+            }],
+            type: "radio",
+            text: "Mamillopontine distance ≤ 6.5 mm", // Presented to user
+            selected: null,
+            bern_score: function () { // Function returns to calculate score
+                return this.selected;
+            }
+        }
+    ],
+
+    calculate: function () {
+        var text = "";
+
+        /////////
+        // Bern
+        /////////
+
+        var total = 0;
+        for (var n = 0; n < this.variables.length; n++) { 
+            if (this.variables[n].score.includes("Dobrocky Bern")) {
+                total = total + this.variables[n].bern_score();
+            }
+        }
+
+        text=text+"<p>Dobrocky Bern: ";
+        
+        if (total <3)
+        {        
+            text=text+"Low risk (" +total +")";
+        }     
+        else if (total >2 && total < 5) {
+        text=text+"Intermediate risk (" +total +")";
+        }
+        else if (total > 4) {
+        text=text+"High risk (" +total +")";
+        }
+     
         return text;
     }
 }

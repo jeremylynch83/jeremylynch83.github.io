@@ -61,6 +61,7 @@
                 <b-dropdown-item @click="set_score_type(this.aneurysm_risk)">Unruptured aneurysm</b-dropdown-item>
                 <b-dropdown-item @click="set_score_type(this.avf_risk)">Dural AVF</b-dropdown-item>
                 <b-dropdown-item @click="set_score_type(this.carotid_stenosis)">Carotid stenosis</b-dropdown-item>
+                <b-dropdown-item @click="set_score_type(this.i_hypotension)">Intracranial hypotension</b-dropdown-item>
             </b-dropdown>
 
             <p></p>
@@ -178,9 +179,7 @@
         /* GLOBAL VARIABLES */
 
         window.app = new Vue({
-            components: {
-                VueBootstrapTypeahead
-            },
+
             el: '#app',
             data: {
                 id_count: 0,
@@ -211,6 +210,7 @@
                     return contains;
                 },
                 set_score_type: function (str) {
+
                     this.score = str;
                     this.show_results = false;
 
@@ -220,11 +220,21 @@
                         this.score.variables[n].selected = null;
                     }
                     this.show_results = false;
+                },
+
+                created: function () {
+                    // Format is: ?search=[score]
+                    const urlSearchParams = new URLSearchParams(window.location.search);
+                    const params = Object.fromEntries(urlSearchParams.entries()).search;
+                    if (params == "Unruptured aneurysm") this.set_score_type(aneurysm_risk);
+                    if (params == "Dural Arteriovenous Fistula") this.set_score_type(avf_risk);
+                    if (params == "Carotid stenosis") this.set_score_type(carotid_stenosis);
+                    if (params == "Intracranial hypotension") this.set_score_type(i_hypotension);
 
                 }
-
             }
         });
+        app.created();
     </script>
 
 
