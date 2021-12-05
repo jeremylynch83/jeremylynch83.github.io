@@ -20,7 +20,18 @@ aneurysm_risk = {
             text: "UIATS"
         }
     ],
-    variables: [{
+    variables: [
+        {
+            name: "lifespan",
+            score: "PHASES/ISUIA/UIATS",
+            type: "number",
+            text: "Expected lifespan (years)",
+            selected: null,
+            phases_score: function () {
+                return 0;
+            }
+        },
+        {
             name: "size",
             score: "PHASES/ISUIA/UIATS",
             type: "number",
@@ -699,6 +710,10 @@ aneurysm_risk = {
 
     calculate: function () {
         var text = "";
+        var years_left = null;
+        if (get_var("lifespan", this.variables).selected && get_var("Age", this.variables).selected) {
+            years_left = get_var("lifespan", this.variables).selected - get_var("Age", this.variables).selected;
+        }
 
         /////////
         // PHASES
@@ -728,9 +743,17 @@ aneurysm_risk = {
         if (get_var("site", this.variables).phases_score() != -1 && this.selected.includes("PHASES")) {
             if (total >= 12) risk = "17·8\% (15·2–20·7\%)";
             else risk = phases_table[total];
-            text = "<p>PHASES: " + risk + " 5-year risk of rupture. </p>";
-        } else {
+            text = "<p>PHASES: " + risk + " 5-year risk of rupture. ";
+            if (years_left) 
+                {             
+                    risk_num = parseFloat(risk.split("%")[0]);
+                    risk_text = (risk_num*(years_left/5)).toFixed(1);
+                    if (risk_text < 50) text=text+ risk_text + "% lifetime risk. ";
+                    else text=text+ "Very high lifetime risk. "
+                }        
+            } else {
             text = "";
+            text = text+"</p>";
 
         }
 
@@ -765,7 +788,7 @@ aneurysm_risk = {
             const isuia_table = [
                 [0, "0\%", "3\%", "6.4\%"],
                 [0, "2.6\%", "14.6\%", "40\%"],
-                [0, "18.4\%", "18.4\%", "50\%"]
+                [0, "14.5\%", "18.4\%", "50\%"]
             ];
             // [row][column]
             var risk = isuia_table[get_var("site", this.variables).isuia_score()][get_var("size",
@@ -775,8 +798,17 @@ aneurysm_risk = {
             ];
         }
         if (this.selected.includes("ISUIA")) {
-            text = text + "<p>ISUIA: " + risk + " 5-year risk of rupture.</p>";
+            text = text + "<p>ISUIA: " + risk + " 5-year risk of rupture. ";
+            if (years_left) 
+                {             
+                    risk_num = parseFloat(risk.split("%")[0]);
+                    risk_text = (risk_num*(years_left/5)).toFixed(1);
+                    if (risk_text < 50) text=text+ risk_text + "% lifetime risk. ";
+                    else text=text+ "Very high lifetime risk. ";
+                }
+                text = text+"</p>";
         }
+
 
         /////////
         // UIATS
