@@ -58,9 +58,17 @@
 				style="background-color:rgb(241, 247, 255); padding: 20px; border-radius: 5px">
 				<h4>Independent neurointerventional device information.</h4>
 				</p>
-				<b-button variant="primary" v-b-modal.help_modal>Help</b-button>
-				<b-button variant="secondary" v-b-modal.conversion_modal>Unit Converter</b-button>
-				<b-button variant="info" v-b-modal.updates_modal>Updates</b-button>
+				<p>
+					<b-button variant="primary" v-b-modal.help_modal>Help</b-button>
+				</p>
+				<p>
+					<b-button variant="secondary" v-b-modal.conversion_modal>Unit Converter</b-button>
+				</p>
+				<p>
+					<b-button variant="warning" href="calc.html?search=Unruptured aneurysm">New! Clinical Calculators
+					</b-button>
+				</p>
+
 
 			</div>
 
@@ -571,7 +579,7 @@
 		/* Specific functions */
 
 
-		var address = "https://evtoday.com/device-guide/us";
+		//var address = "https://evtoday.com/device-guide/us";
 
 
 		window.app = new Vue({
@@ -1397,8 +1405,6 @@
 					"guide catheters", null, params.search);
 
 			}
-
-
 		})
 	</script>
 </body>

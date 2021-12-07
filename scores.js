@@ -1,9 +1,11 @@
+var scores=[];
+
 //////////////
 // ANEURYSM //
 //////////////
 
 aneurysm_risk = {
-    title: "Incidental aneurysm",
+    title: "Unruptured aneurysm",
     selected: ["PHASES", "ISUIA"],
     types: [{
             value: "PHASES",
@@ -18,11 +20,22 @@ aneurysm_risk = {
             text: "UIATS"
         }
     ],
-    variables: [{
+    variables: [
+        {
+            name: "lifespan",
+            score: "PHASES/ISUIA/UIATS",
+            type: "number",
+            text: "Expected lifespan (years)",
+            selected: null,
+            phases_score: function () {
+                return 0;
+            }
+        },
+        {
             name: "size",
             score: "PHASES/ISUIA/UIATS",
             type: "number",
-            text: "Enter size in mm",
+            text: "Enter size (mm)",
             selected: null,
             phases_score: function () {
                 var total = 0;
@@ -544,7 +557,7 @@ aneurysm_risk = {
                     text: 'over 10 years'
                 },
                 {
-                    value: 'no_limit',
+                    value: 'Not limited',
                     text: 'Not limited'
                 }
             ],
@@ -697,6 +710,10 @@ aneurysm_risk = {
 
     calculate: function () {
         var text = "";
+        var years_left = null;
+        if (get_var("lifespan", this.variables).selected && get_var("Age", this.variables).selected) {
+            years_left = get_var("lifespan", this.variables).selected - get_var("Age", this.variables).selected;
+        }
 
         /////////
         // PHASES
@@ -726,9 +743,17 @@ aneurysm_risk = {
         if (get_var("site", this.variables).phases_score() != -1 && this.selected.includes("PHASES")) {
             if (total >= 12) risk = "17·8\% (15·2–20·7\%)";
             else risk = phases_table[total];
-            text = "<p>PHASES: " + risk + " 5-year risk of rupture. </p>";
-        } else {
+            text = "<p>PHASES: " + risk + " 5-year risk of rupture. ";
+            if (years_left) 
+                {             
+                    risk_num = parseFloat(risk.split("%")[0]);
+                    risk_text = (risk_num*(years_left/5)).toFixed(1);
+                    if (risk_text < 50) text=text+ risk_text + "% lifetime risk. ";
+                    else text=text+ "Very high lifetime risk. "
+                }        
+            } else {
             text = "";
+            text = text+"</p>";
 
         }
 
@@ -763,7 +788,7 @@ aneurysm_risk = {
             const isuia_table = [
                 [0, "0\%", "3\%", "6.4\%"],
                 [0, "2.6\%", "14.6\%", "40\%"],
-                [0, "18.4\%", "18.4\%", "50\%"]
+                [0, "14.5\%", "18.4\%", "50\%"]
             ];
             // [row][column]
             var risk = isuia_table[get_var("site", this.variables).isuia_score()][get_var("size",
@@ -773,8 +798,17 @@ aneurysm_risk = {
             ];
         }
         if (this.selected.includes("ISUIA")) {
-            text = text + "<p>ISUIA: " + risk + " 5-year risk of rupture.</p>";
+            text = text + "<p>ISUIA: " + risk + " 5-year risk of rupture. ";
+            if (years_left) 
+                {             
+                    risk_num = parseFloat(risk.split("%")[0]);
+                    risk_text = (risk_num*(years_left/5)).toFixed(1);
+                    if (risk_text < 50) text=text+ risk_text + "% lifetime risk. ";
+                    else text=text+ "Very high lifetime risk. ";
+                }
+                text = text+"</p>";
         }
+
 
         /////////
         // UIATS
@@ -826,6 +860,468 @@ aneurysm_risk = {
         }
 
 
+        return text;
+    }
+}
+
+//////////////
+// AVF      //
+//////////////
+avf_risk = {
+    title: "Dural Arteriovenous Fistula",
+    selected: ["Cognard", "Borden", "Zipfel"], // Default selected scores
+    types: [{
+            value: "Cognard", // Types of score
+            text: "Cognard" // Same as above
+        },{
+            value: "Borden", // Types of score
+            text: "Borden" // Same as above
+        },{
+            value: "Zipfel", // Types of score
+            text: "Zipfel" // Same as above
+        }
+    ],
+    variables: [{
+            name: "drainage", // Internal name
+            score: "Cognard/Borden/Zipfel", // separated by "/"
+            type: "select",
+            options: [{
+                value: 'ant_sinus',
+                text: 'Sinus with antegrade flow'
+            },
+            {
+                value: 'ret_sinus',
+                text: 'Sinus with retrograde flow'
+            },
+            {
+                value: 'ant_sinus_cv',
+                text: 'sinus with antegrade flow and cortical venous reflux'
+            },
+
+            {
+                value: 'ret_sinus_cv',
+                text: 'sinus with retrograde flow and cortical venous reflux'
+            },
+            {
+                value: 'cv',
+                text: 'Non-ectatic cortical vein'
+            },
+            {
+                value: 'ect_cv',
+                text: 'Ectatic cortical vein'
+            },
+            {
+                value: 'spv',
+                text: 'Spinal perimedullary vein'
+            }
+        ],
+            text: "Drainage pattern", // Presented to user
+            selected: null,
+            cognard_score: function () { // Function returns to calculate score
+                var text;                
+                switch (this.selected) {
+                    case 'ant_sinus': {text = "type 1";break;}
+                    case 'ret_sinus': {text = "type 2a";break;}
+                    case 'ant_sinus_cv': {text = "type 2b";break;}
+                    case 'ret_sinus_cv': {text = "type 2a+b";break;}
+                    case 'cv': {text = "type 3";break;}
+                    case 'ect_cv': {text = "type 4";break;}
+                    case 'spv': {text = "type 5";break;}
+                }
+                return text;
+            },
+            borden_score: function () { // Function returns to calculate score
+                var text;
+                switch (this.selected) {
+                    case 'ant_sinus': 
+                    case 'ret_sinus': {text = "type 1";break;}
+                    case 'ant_sinus_cv': 
+                    case 'ret_sinus_cv': {text = "type 2";break;}
+                    case 'cv': 
+                    case 'ect_cv': 
+                    case 'spv': {text = "type 3";break;}
+                }
+
+
+                return text;
+            },
+            zipfel_score: function () { // Function returns to calculate score
+                var total = 0;
+                return total;
+            }
+        },
+        {
+            name: "symptomatic", // Internal name
+            score: "Zipfel", // separated by "/"
+            type: "radio",
+            options: [{
+                value: 1,
+                text: 'yes'
+            }, {
+                value: 0,
+                text: 'no'
+            }],
+            type: "radio",
+            text: "Intracerebral hemorrhage or neurological deficit?",
+            selected: null,
+            zipfel_score: function () {
+                return this.selected;
+            }
+        }
+    ],
+
+    calculate: function () {
+        var text = "";
+
+        // Cognard
+        if (this.selected.includes("Cognard")) {
+            text = "<p>Cognard " + get_var("drainage", this.variables)
+            .cognard_score() + "</p>";
+        }
+        // Borden
+        if (this.selected.includes("Borden")) {
+            text = text+ "<p>Borden " + get_var("drainage", this.variables)
+            .borden_score() + "</p>";
+        }
+        // Zipfel
+
+        if (this.selected.includes("Zipfel")) {
+            text=text+"<p>Zipfel ";
+        switch (get_var("drainage", this.variables)
+        .borden_score()) {
+            case 'type 1': {
+                if (get_var("symptomatic", this.variables)
+                .selected) {
+                    text=text+ "type 1 symptomatic";
+                }
+                else {
+                    text=text+ "type 1 asymptomatic";
+
+                }
+                break;
+            }
+            case 'type 2': {
+                if (get_var("symptomatic", this.variables)
+                .selected) {
+                    text=text+ "type 2 symptomatic";
+                }
+                else {
+                    text=text+ "type 2 asymptomatic";
+
+                }
+                break;
+            }
+            case 'type 3': {
+                if (get_var("symptomatic", this.variables)
+                .selected) {
+                    text=text+ "type 3 symptomatic";
+                }
+                else {
+                    text=text+ "type 3 asymptomatic";
+
+                }
+                break;
+            }
+        }
+        text=text+"</p>";
+
+    }
+    
+        return text;
+    }
+}
+
+
+
+//////////////
+// AVM      //
+//////////////
+avm_risk = {
+    title: "",
+    selected: [""], // Default selected scores
+    types: [{
+            value: "", // Types of scores
+            text: "" // Same as above
+        }
+    ],
+    variables: [{
+            name: "", // Internal name
+            score: "", // separated by "/"
+            type: "number",
+            text: "", // Presented to user
+            selected: null,
+            phases_score: function () { // Function returns to calculate score
+                var total = 0;
+                return total;
+            }
+        }
+    ],
+
+    calculate: function () {
+        var text = "";
+
+        /////////
+        // 
+        /////////
+
+        var total = 0;
+        for (var n = 0; n < this.variables.length; n++) { 
+            if (this.variables[n].score.includes("PHASES")) {
+                total = total + this.variables[n].phases_score();
+            }
+        }
+        var risk = null;
+
+        if (get_var("site", this.variables).phases_score() != -1 && this.selected.includes("PHASES")) {
+            if (total >= 12) risk = "17·8\% (15·2–20·7\%)";
+            else risk = phases_table[total];
+            text = "<p>PHASES: " + risk + " 5-year risk of rupture. </p>";
+        } else {
+            text = "";
+
+        }
+        return text;
+    }
+}
+
+
+//////////////
+// Carotid stenosis      //
+//////////////
+carotid_stenosis = {
+    title: "Carotid stenosis",
+    selected: ["NASCET"], // Default selected scores
+    types: [{
+            value: "NASCET", // Types of scores
+            text: "NASCET" // Same as above
+        }
+    ],
+    variables: [{
+            name: "stenosis", // Internal name
+            score: "NASCET", // separated by "/"
+            type: "number",
+            text: "Narrowest ICA diameter in the stenotic segment (mm)", // Presented to user
+            selected: null,
+            nascet_score: function () { 
+                return this.selected;
+            }
+        },
+        {
+            name: "normal", // Internal name
+            score: "NASCET", // separated by "/"
+            type: "number",
+            text: "Diameter of the normal distal ICA (mm)", // Presented to user
+            selected: null,
+            nascet_score: function () { 
+                return this.selected;
+            }
+        }
+    ],
+
+    calculate: function () {
+        var text = "";
+
+        var stenosis = get_var("stenosis", this.variables).nascet_score();
+        var normal = get_var("normal", this.variables).nascet_score();
+        var ratio = (1-(stenosis/normal))*100;
+
+
+        text = "<p> ICA stenosis = " + ratio.toFixed(0) + "%";
+
+
+        return text;
+    }
+}
+
+
+//////////////
+// DAWN/DEFUSE      //
+//////////////
+i_hypotension = {
+    title: "Intracranial hypotension",
+    selected: ["Dobrocky Bern"], // Default selected scores
+    types: [{
+            value: "Dobrocky Bern", // Types of scores
+            text: "Dobrocky Bern" // Same as above
+        }
+    ],
+    variables: [{
+            name: "sinuses", // Internal name
+            score: "Dobrocky Bern", // separated by "/"
+            options: [{
+                value: 1,
+                text: 'yes'
+            }, {
+                value: 0,
+                text: 'no'
+            }],
+            type: "radio",
+            text: "Engorgement of venous sinuses", // Presented to user
+            selected: null,
+            bern_score: function () { // Function returns to calculate score
+                return this.selected*2;
+            }
+        },{
+            name: "pachymen", // Internal name
+            score: "Dobrocky Bern", // separated by "/"
+            options: [{
+                value: 1,
+                text: 'yes'
+            }, {
+                value: 0,
+                text: 'no'
+            }],
+            type: "radio",
+            text: "Pachymeningeal enhancement ", // Presented to user
+            selected: null,
+            bern_score: function () { // Function returns to calculate score
+                return this.selected*2;
+            }
+        },{
+            name: "suprasellar", // Internal name
+            score: "Dobrocky Bern", // separated by "/"
+            options: [{
+                value: 1,
+                text: 'yes'
+            }, {
+                value: 0,
+                text: 'no'
+            }],
+            type: "radio",
+            text: "Suprasellar cistern ≤ 4 mm ", // Presented to user
+            selected: null,
+            bern_score: function () { // Function returns to calculate score
+                return this.selected*2;
+            }
+        },{
+            name: "subdural", // Internal name
+            score: "Dobrocky Bern", // separated by "/"
+            options: [{
+                value: 1,
+                text: 'yes'
+            }, {
+                value: 0,
+                text: 'no'
+            }],
+            type: "radio",
+            text: "Subdural fluid collection ", // Presented to user
+            selected: null,
+            bern_score: function () { // Function returns to calculate score
+                return this.selected;
+            }
+        },{
+            name: "prepontine", // Internal name
+            score: "Dobrocky Bern", // separated by "/"
+            options: [{
+                value: 1,
+                text: 'yes'
+            }, {
+                value: 0,
+                text: 'no'
+            }],
+            type: "radio",
+            text: "Prepontine cistern ≤ 5 mm", // Presented to user
+            selected: null,
+            bern_score: function () { // Function returns to calculate score
+                return this.selected;
+            }
+        },{
+            name: "mamillopontine", // Internal name
+            score: "Dobrocky Bern", // separated by "/"
+            options: [{
+                value: 1,
+                text: 'yes'
+            }, {
+                value: 0,
+                text: 'no'
+            }],
+            type: "radio",
+            text: "Mamillopontine distance ≤ 6.5 mm", // Presented to user
+            selected: null,
+            bern_score: function () { // Function returns to calculate score
+                return this.selected;
+            }
+        }
+    ],
+
+    calculate: function () {
+        var text = "";
+
+        /////////
+        // Bern
+        /////////
+
+        var total = 0;
+        for (var n = 0; n < this.variables.length; n++) { 
+            if (this.variables[n].score.includes("Dobrocky Bern")) {
+                total = total + this.variables[n].bern_score();
+            }
+        }
+
+        text=text+"<p>Dobrocky Bern: ";
+        
+        if (total <3)
+        {        
+            text=text+"Low risk (" +total +")";
+        }     
+        else if (total >2 && total < 5) {
+        text=text+"Intermediate risk (" +total +")";
+        }
+        else if (total > 4) {
+        text=text+"High risk (" +total +")";
+        }
+     
+        return text;
+    }
+}
+
+//////////////
+// DAWN/DEFUSE      //
+//////////////
+avm_risk = {
+    title: "",
+    selected: [""], // Default selected scores
+    types: [{
+            value: "", // Types of scores
+            text: "" // Same as above
+        }
+    ],
+    variables: [{
+            name: "", // Internal name
+            score: "", // separated by "/"
+            type: "number",
+            text: "", // Presented to user
+            selected: null,
+            phases_score: function () { // Function returns to calculate score
+                var total = 0;
+                return total;
+            }
+        }
+    ],
+
+    calculate: function () {
+        var text = "";
+
+        /////////
+        // 
+        /////////
+
+        var total = 0;
+        for (var n = 0; n < this.variables.length; n++) { 
+            if (this.variables[n].score.includes("PHASES")) {
+                total = total + this.variables[n].phases_score();
+            }
+        }
+        var risk = null;
+
+        if (get_var("site", this.variables).phases_score() != -1 && this.selected.includes("PHASES")) {
+            if (total >= 12) risk = "17·8\% (15·2–20·7\%)";
+            else risk = phases_table[total];
+            text = "<p>PHASES: " + risk + " 5-year risk of rupture. </p>";
+        } else {
+            text = "";
+
+        }
         return text;
     }
 }

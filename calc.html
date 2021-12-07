@@ -1,9 +1,5 @@
 <!-- TODO
 
-	* More templates
-	* Text substitutions to shorten text
-	* Associated info display
-	* Copy templates from radReport?
 
 -->
 
@@ -35,7 +31,7 @@
     <div id="app">
 
         <b-navbar toggleable="lg" type="dark" variant="info">
-            <b-navbar-brand href="#">NeuroTool</b-navbar-brand>
+            <b-navbar-brand href="#">NeuroTool: Clinical Prediction</b-navbar-brand>
 
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -58,59 +54,68 @@
 
         <b-container fluid="sm">
             <p></p>
-            <h1>Clinical Prediction Tools</h1>
             <!--<p><i>“The good thing about standards is that there are so many to choose from.” ― Andrew S. Tanenbaum </i>
             </p>-->
 
+            <b-dropdown right text="Select calculator">
+                <b-dropdown-item @click="set_score_type(this.aneurysm_risk)">Unruptured aneurysm</b-dropdown-item>
+                <b-dropdown-item @click="set_score_type(this.avf_risk)">Dural AVF</b-dropdown-item>
+                <b-dropdown-item @click="set_score_type(this.carotid_stenosis)">Carotid stenosis</b-dropdown-item>
+                <b-dropdown-item @click="set_score_type(this.i_hypotension)">Intracranial hypotension</b-dropdown-item>
+            </b-dropdown>
+
             <p></p>
-            <template>
-                <h2>{{score.title}}</h2>
-                <b-form-group label="Select 1 or more classifications:">
-                    <b-form-checkbox-group id="checkbox-group-1" v-model="score.selected" :options="score.types">
-                    </b-form-checkbox-group>
-                </b-form-group>
-                </b-form-group>
+            <div v-if="score!=null">
+                <template>
+                    <h2>{{score.title}}</h2>
+                    <b-form-group label=" Select 1 or more classifications:">
+                        <b-form-checkbox-group id="checkbox-group-1" v-model="score.selected" :options="score.types">
+                        </b-form-checkbox-group>
+                    </b-form-group>
+                    </b-form-group>
 
-                <b-card bg-variant="light">
-                    <template v-for="n in score.variables">
-                        <b-row class="my-1" :key="n.name" v-if="check_score_type(n.score)">
+                    <b-card bg-variant="light">
+                        <template v-for="n in score.variables">
+                            <b-row class="my-1" :key="n.name" v-if="check_score_type(n.score)">
 
-                            <b-col sm="3">
-                                <label>{{ n.text }}:</label>
-                            </b-col>
-                            <b-col sm="9">
-                                <b-form-input v-if="n.type == 'text'|| n.type =='number'" :id="`n.name-${n.name}`"
-                                    :type="n.type" v-model="n.selected">
-                                </b-form-input>
+                                <b-col sm="3">
+                                    <label>{{ n.text }}:</label>
+                                </b-col>
+                                <b-col sm="9">
+                                    <b-form-input v-if="n.type == 'text'|| n.type =='number'" :id="`n.name-${n.name}`"
+                                        :type="n.type" v-model="n.selected">
+                                    </b-form-input>
 
-                                <b-form-select v-if="n.type == 'select'" :id="`n.name-${n.name}`" :options="n.options"
-                                    v-model="n.selected">
-                                </b-form-select>
+                                    <b-form-select v-if="n.type == 'select'" :id="`n.name-${n.name}`"
+                                        :options="n.options" v-model="n.selected">
+                                    </b-form-select>
 
-                                <b-form-radio-group v-if="n.type == 'radio'" :id="`n.name-${n.name}`"
-                                    :options="n.options" v-model="n.selected">
-                                </b-form-radio-group>
-                            </b-col>
-                            <!--<b-col sm="2" >
+                                    <b-form-radio-group v-if="n.type == 'radio'" :id="`n.name-${n.name}`"
+                                        :options="n.options" v-model="n.selected">
+                                    </b-form-radio-group>
+                                </b-col>
+                                <!--<b-col sm="2" >
                             <label>{{ n.score }}</label>
                         </b-col>-->
-                        </b-row>
-                    </template>
+                            </b-row>
+                        </template>
+
+                    </b-card>
+
+                </template>
+                <p></p>
+                <p></p>
+
+                <b-button @click="calculate()" variant="success">Calculate</b-button>
+                <b-button @click="reset()" variant="danger">Reset</b-button>
+                <p></p>
+
+                <b-card bg-variant="light" v-show="show_results">
+
+                    <div id="result_text" class="calc_result"></div>
 
                 </b-card>
-
-            </template>
-            <p></p>
-            <p></p>
-
-            <b-button @click="calculate()" variant="success">Calculate</b-button>
-            <p></p>
-
-            <b-card bg-variant="light">
-
-                <div id="result_text" class="calc_result"></div>
-
-            </b-card>
+            </div>
 
 
             <!---------------- MODALS -------------->
@@ -174,13 +179,12 @@
         /* GLOBAL VARIABLES */
 
         window.app = new Vue({
-            components: {
-                VueBootstrapTypeahead
-            },
+
             el: '#app',
             data: {
                 id_count: 0,
-                score: aneurysm_risk,
+                score: null,
+                show_results: null,
 
                 copyModal: {
                     id: 'copy-modal',
@@ -193,6 +197,7 @@
                 // General functions
                 calculate: function () {
                     document.getElementById("result_text").innerHTML = this.score.calculate();
+                    this.show_results = true;
                 },
                 check_score_type: function (str) {
                     var list = str.split("/");
@@ -202,13 +207,33 @@
                             contains = true;
                         }
                     }
-
                     return contains;
+                },
+                set_score_type: function (str) {
+                    this.score = str;
+                    this.show_results = false;
+
+                },
+                reset: function () {
+                    for (var n = 0; n < this.score.variables.length; n++) {
+                        this.score.variables[n].selected = null;
+                    }
+                    this.show_results = false;
+                },
+
+                created: function () {
+                    // Format is: ?search=[score]
+                    const urlSearchParams = new URLSearchParams(window.location.search);
+                    const params = Object.fromEntries(urlSearchParams.entries()).search;
+                    if (params == "Unruptured aneurysm") this.set_score_type(aneurysm_risk);
+                    if (params == "Dural Arteriovenous Fistula") this.set_score_type(avf_risk);
+                    if (params == "Carotid stenosis") this.set_score_type(carotid_stenosis);
+                    if (params == "Intracranial hypotension") this.set_score_type(i_hypotension);
+
                 }
-
-
             }
         });
+        app.created();
     </script>
 
 
