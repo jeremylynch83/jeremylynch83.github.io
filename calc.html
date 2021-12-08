@@ -71,7 +71,8 @@
                 <template>
                     <h2>{{score.title}}</h2>
                     <b-form-group label=" Select 1 or more classifications:">
-                        <b-form-checkbox-group id="checkbox-group-1" v-model="score.selected" :options="score.types">
+                        <b-form-checkbox-group id="checkbox-group-1" v-model="score.selected" :options="score.types"
+                            @change="change()">
                         </b-form-checkbox-group>
                     </b-form-group>
                     </b-form-group>
