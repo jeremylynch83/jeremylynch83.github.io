@@ -1230,10 +1230,10 @@ avm_risk = {
             type: "select",
             options: [{
                     value: 0,
-                    text: 'No'
+                    text: 'Diffuse nidus'
                 },{
                     value: 1,
-                    text: 'Yes'
+                    text: 'Compact nidus'
                 }],
             text: "Compactness", // Presented to user
             selected: null,
@@ -1354,7 +1354,7 @@ avm_risk = {
             name: "Nidal volume", // Internal name
             score: "Pollock Flickinger", // separated by "/"
             type: "number",
-            text: "Nidal volume", // Presented to user
+            text: "Nidal volume (cm3)", // Presented to user
             selected: null,
             pollock_score: function () { 
                 return this.selected;
