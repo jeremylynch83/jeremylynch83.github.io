@@ -1024,9 +1024,7 @@ avf_risk = {
             }
         }
         text=text+"</p>";
-
     }
-    
         return text;
     }
 }
@@ -1037,22 +1035,349 @@ avf_risk = {
 // AVM      //
 //////////////
 avm_risk = {
-    title: "",
-    selected: [""], // Default selected scores
+    title: "Arteriovenous Malformation",
+    selected: ["Spetzler-Martin", "Pollock Flickinger"], // Default selected scores
     types: [{
-            value: "", // Types of scores
-            text: "" // Same as above
+            value: "Spetzler-Martin", // Types of scores
+            text: "Spetzler-Martin" // Same as above
+        },
+        {
+            value: "Pollock Flickinger", // Types of scores
+            text: "Pollock Flickinger" // Same as above
+        },
+        {
+            value: "Buffalo", // Types of scores
+            text: "Buffalo" // Same as above
+        },
+        {
+            value: "Willinsky", // Types of scores
+            text: "Willinsky" // Same as above
+        },
+        {
+            value: "Feliziano", // Types of scores
+            text: "Feliziano" // Same as above
         }
     ],
     variables: [{
-            name: "", // Internal name
-            score: "", // separated by "/"
-            type: "number",
-            text: "", // Presented to user
+            name: "Nidal size", // Internal name
+            score: "Spetzler-Martin/Willinsky", // separated by "/"
+            type: "select",
+            options: [{
+                    value: 0,
+                    text: 'Fistulous only'
+                },
+                {
+                    value: 1,
+                    text: '< 1 cm'
+                },
+                {
+                    value: 2,
+                    text: '1-3 cm'
+                },{
+                    value: 3,
+                    text: '3-6 cm'
+                },{
+                    value: 4,
+                    text: '> 6 cm'
+                }],
+            text: "Nidal size", // Presented to user
             selected: null,
-            phases_score: function () { // Function returns to calculate score
+            spetzler_score: function () { // Function returns to calculate score
+                var total = this.selected-1;
+                if (total <1) total = 1;
+                return total;
+            },
+            willinsky_score: function () { // Function returns to calculate score
+                var total = this.selected;
+                if (total >2) total = 2;
+                return total;
+            },
+            feliziano_score: function () { // Function returns to calculate score
+                var total =0;
+            
+                return total;
+            }
+        },
+        {
+            name: "Fistulae", // Internal name
+            score: "Feliziano", // separated by "/"
+            type: "radio",
+            options: [{
+                    value: 0,
+                    text: 'No'
+                },
+                {
+                    value: 1,
+                    text: 'Yes'
+                }],
+            text: "Presence of arteriovenous fistula(e)", // Presented to user
+            selected: null,
+            feliziano_score: function () { 
+                return this.selected;
+            }
+        },
+        {
+            name: "Venous drainage", // Internal name
+            score: "Spetzler-Martin", // separated by "/"
+            type: "select",
+            options: [{
+                    value: 0,
+                    text: 'Superficial'
+                },
+                {
+                    value: 1,
+                    text: 'Deep'
+                }],
+            text: "Venous drainage", // Presented to user
+            selected: null,
+            spetzler_score: function () { // Function returns to calculate score
+                return this.selected;
+            },
+            buffalo_score: function () { // Function returns to calculate score
                 var total = 0;
                 return total;
+            },
+            willinsky_score: function () { // Function returns to calculate score
+                var total = 0;
+                return total;
+            },
+            feliziano_score: function () { // Function returns to calculate score
+                var total = 0;
+                return total;
+            },
+            pollock_score: function () { // Function returns to calculate score
+                var total = 0;
+                return total;
+            }
+        },
+        {
+            name: "Eloquence", // Internal name
+            score: "Spetzler-Martin/Buffalo/Feliziano", // separated by "/"
+            type: "radio",
+            options: [{
+                    value: 0,
+                    text: 'No'
+                },{
+                    value: 1,
+                    text: 'Yes'
+                }],
+            text: "Eloquence", // Presented to user
+            selected: null,
+            spetzler_score: function () { 
+                return this.selected;
+            },
+            buffalo_score: function () { 
+                return this.selected;
+            },
+            feliziano_score: function () { 
+                return this.selected;
+            }
+        },
+        {
+            name: "Age", // Internal name
+            score: "Spetzler-Martin/Pollock Flickinger", // separated by "/"
+            type: "number",
+            text: "Age (years)", // Presented to user
+            selected: null,
+            spetzler_score: function () { 
+                var total = 0;
+                if (this.selected < 20) total = 1;
+                else if (this.selected >= 20 && this.selected < 40) total = 2;
+                else if (this.selected >= 40 ) total = 3;
+                return total;
+            },
+            
+            pollock_score: function () { 
+                return this.selected;
+            }
+        },
+        {
+            name: "Bleeding", // Internal name
+            score: "Spetzler-Martin", // separated by "/"
+            type: "radio",
+            options: [{
+                    value: 0,
+                    text: 'No'
+                },{
+                    value: 1,
+                    text: 'Yes'
+                }],
+            text: "Bleeding", // Presented to user
+            selected: null,
+            spetzler_score: function () { // Function returns to calculate score
+                return this.selected;
+            },
+            buffalo_score: function () { // Function returns to calculate score
+                var total = 0;
+                return total;
+            },
+            willinsky_score: function () { // Function returns to calculate score
+                var total = 0;
+                return total;
+            },
+            feliziano_score: function () { // Function returns to calculate score
+                var total = 0;
+                return total;
+            },
+            pollock_score: function () { // Function returns to calculate score
+                var total = 0;
+                return total;
+            }
+        },
+        {
+            name: "Compactness", // Internal name
+            score: "Spetzler-Martin", // separated by "/"
+            type: "select",
+            options: [{
+                    value: 0,
+                    text: 'No'
+                },{
+                    value: 1,
+                    text: 'Yes'
+                }],
+            text: "Compactness", // Presented to user
+            selected: null,
+            spetzler_score: function () { // Function returns to calculate score
+                return this.selected;
+            },
+            buffalo_score: function () { // Function returns to calculate score
+                var total = 0;
+                return total;
+            },
+            willinsky_score: function () { // Function returns to calculate score
+                var total = 0;
+                return total;
+            },
+            feliziano_score: function () { // Function returns to calculate score
+                var total = 0;
+                return total;
+            },
+            pollock_score: function () { // Function returns to calculate score
+                var total = 0;
+                return total;
+            }
+        },
+        {
+            name: "Number of feeding arteries", // Internal name
+            score: "Buffalo/Willinsky/Feliziano", // separated by "/"
+            type: "number",
+            text: "Number of feeding arteries", // Presented to user
+            selected: null,
+            buffalo_score: function () { 
+                var total=0
+                if (this.selected == 1 || this.selected == 2) {total = 1;}
+                else if (this.selected == 3 || this.selected == 4) {total = 2;}
+                else if (this.selected >= 5) {total = 3;}
+                return total;            
+            },
+            willinsky_score: function () { // Function returns to calculate score
+                var total = 0;
+                if (this.selected !=0) total =1;
+                return total;
+            },
+            feliziano_score: function () { 
+                var total=0
+                if (this.selected == 1 || this.selected == 2) {total = 1;}
+                else if (this.selected >= 3 && this.selected < 6) {total = 2;}
+                else if (this.selected >= 6) {total = 3;}
+                return total;  
+            }
+        },
+        {
+            name: "Diameter of arterial pedicles", // Internal name
+            score: "Buffalo", // separated by "/"
+            type: "select",
+            options: [{
+                    value: 0,
+                    text: 'Most less than 1 mm'
+                },{
+                    value: 1,
+                    text: 'Most over 1 mm'
+                }],
+            text: "Diameter of arterial pedicles", // Presented to user
+            selected: null,
+            spetzler_score: function () { // Function returns to calculate score
+                var total = 0;
+                return total;
+            },
+            buffalo_score: function () { 
+                return this.selected;
+            },
+            willinsky_score: function () { // Function returns to calculate score
+                var total = 0;
+                return total;
+            },
+            feliziano_score: function () { // Function returns to calculate score
+                var total = 0;
+                return total;
+            },
+            pollock_score: function () { // Function returns to calculate score
+                var total = 0;
+                return total;
+            }
+        },
+        {
+            name: "Type of feeding arteries", // Internal name
+            score: "Willinsky", // separated by "/"
+            type: "select",
+            options: [{
+                    value: 0,
+                    text: 'Cortical'
+                },{
+                    value: 1,
+                    text: 'Perforator'
+                }],
+            text: "Type of feeding arteries", // Presented to user
+            selected: null,
+            willinsky_score: function () { 
+                return this.selected;
+            }
+        },
+        {
+            name: "Number of draining veins", // Internal name
+            score: "Willinsky", // separated by "/"
+            type: "select",
+            options: [{
+                    value: 0,
+                    text: 'Single'
+                },{
+                    value: 1,
+                    text: 'Multiple'
+                }],
+            text: "Number of draining veins", // Presented to user
+            selected: null,
+            willinsky_score: function () { 
+                return this.selected;
+            }
+        },
+        {
+            name: "Nidal volume", // Internal name
+            score: "Pollock Flickinger", // separated by "/"
+            type: "number",
+            text: "Nidal volume", // Presented to user
+            selected: null,
+            pollock_score: function () { 
+                return this.selected;
+            }
+        },
+        {
+            name: "Location", // Internal name
+            score: "Pollock Flickinger", // separated by "/"
+            type: "select",
+            options: [{
+                    value: 0,
+                    text: 'Frontal or temporal'
+                },{
+                    value: 1,
+                    text: 'Parietal/occipital/intraventricular/corpus c/cerebellar'
+                },{
+                    value: 2,
+                    text: 'Basal ganglia/thalamic/brainstem'
+                }],
+            text: "Location", // Presented to user
+            selected: null,
+            pollock_score: function () { 
+                return this.selected;
             }
         }
     ],
@@ -1061,26 +1386,75 @@ avm_risk = {
         var text = "";
 
         /////////
-        // 
+        // Spetzler Martin + Supplementary
         /////////
 
-        var total = 0;
-        for (var n = 0; n < this.variables.length; n++) { 
-            if (this.variables[n].score.includes("PHASES")) {
-                total = total + this.variables[n].phases_score();
+        
+        if (this.selected.includes("Spetzler-Martin"))       
+        {        
+        var size = get_var("Nidal size", this.variables).spetzler_score();
+            var venous = get_var("Venous drainage", this.variables).spetzler_score();
+            var eloquence = get_var("Eloquence", this.variables).spetzler_score();var size = get_var("Nidal size", this.variables).spetzler_score();
+            var age = get_var("Age", this.variables).spetzler_score();
+            var bleeding = get_var("Bleeding", this.variables).spetzler_score();
+            var compactness = get_var("Compactness", this.variables).spetzler_score();
+
+            text = text+"<p>Spetzler Martin: " + (size+venous+eloquence) + ". Supplementary: " + (age+bleeding+compactness) + ". ";
+    }
+
+        /////////
+        // Buffalo
+        /////////
+        if (this.selected.includes("Buffalo")) {
+            var total = 0;
+            for (var n = 0; n < this.variables.length; n++) { 
+                if (this.variables[n].score.includes("Buffalo")) {
+                    total = total + this.variables[n].buffalo_score();
+                }
             }
-        }
-        var risk = null;
+            text = text+"<p>Buffalo: " + total + ". ";
+    }
 
-        if (get_var("site", this.variables).phases_score() != -1 && this.selected.includes("PHASES")) {
-            if (total >= 12) risk = "17·8\% (15·2–20·7\%)";
-            else risk = phases_table[total];
-            text = "<p>PHASES: " + risk + " 5-year risk of rupture. </p>";
-        } else {
-            text = "";
+        /////////
+        // Willinsky
+        /////////
+        if (this.selected.includes("Willinsky")) {  
+            var total = 0;
+            for (var n = 0; n < this.variables.length; n++) { 
+                if (this.variables[n].score.includes("Willinsky")) {
+                    total = total + this.variables[n].willinsky_score();
+                }
+            }
+            text = text+"<p>Willinsky: " + total + ". ";
+    }
 
+        /////////
+        // Feliziano
+        /////////
+        if (this.selected.includes("Feliziano")) {  
+            var total = 0;
+            for (var n = 0; n < this.variables.length; n++) { 
+                if (this.variables[n].score.includes("Feliziano")) {
+                    total = total + this.variables[n].feliziano_score();
+                }
+            }
+            text = text+"<p>Feliziano: " + total + ". ";
+    }
+
+        /////////
+        // Pollock
+        /////////
+
+        if (this.selected.includes("Pollock Flickinger")) {
+            var age = get_var("Age", this.variables).pollock_score();
+            var nidal_volume = get_var("Nidal volume", this.variables).pollock_score();
+            var location = get_var("Location", this.variables).pollock_score();
+            var total = 0.1*nidal_volume + 0.02*age + 0.3*location;
+            text = text+"<p>Pollock: " + total.toFixed(2) + ". ";
         }
+        
         return text;
+
     }
 }
 
@@ -1278,7 +1652,7 @@ i_hypotension = {
 //////////////
 // DAWN/DEFUSE      //
 //////////////
-avm_risk = {
+late_stroke = {
     title: "",
     selected: [""], // Default selected scores
     types: [{

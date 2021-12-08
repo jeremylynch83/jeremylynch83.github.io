@@ -59,7 +59,9 @@
 
             <b-dropdown right text="Select calculator">
                 <b-dropdown-item @click="set_score_type(this.aneurysm_risk)">Unruptured aneurysm</b-dropdown-item>
-                <b-dropdown-item @click="set_score_type(this.avf_risk)">Dural AVF</b-dropdown-item>
+                <b-dropdown-item @click="set_score_type(this.avf_risk)">Dural arteriovenous fistula</b-dropdown-item>
+                <b-dropdown-item @click="set_score_type(this.avm_risk)">Arteriovenous Malformation
+                </b-dropdown-item>
                 <b-dropdown-item @click="set_score_type(this.carotid_stenosis)">Carotid stenosis</b-dropdown-item>
                 <b-dropdown-item @click="set_score_type(this.i_hypotension)">Intracranial hypotension</b-dropdown-item>
             </b-dropdown>
@@ -83,15 +85,15 @@
                                 </b-col>
                                 <b-col sm="9">
                                     <b-form-input v-if="n.type == 'text'|| n.type =='number'" :id="`n.name-${n.name}`"
-                                        :type="n.type" v-model="n.selected">
+                                        :type="n.type" v-model="n.selected" @input="change()">
                                     </b-form-input>
 
                                     <b-form-select v-if="n.type == 'select'" :id="`n.name-${n.name}`"
-                                        :options="n.options" v-model="n.selected">
+                                        :options="n.options" v-model="n.selected" @change="change()">
                                     </b-form-select>
 
                                     <b-form-radio-group v-if="n.type == 'radio'" :id="`n.name-${n.name}`"
-                                        :options="n.options" v-model="n.selected">
+                                        :options="n.options" v-model="n.selected" @change="change()">
                                     </b-form-radio-group>
                                 </b-col>
                                 <!--<b-col sm="2" >
@@ -196,8 +198,11 @@
             methods: {
                 // General functions
                 calculate: function () {
-                    document.getElementById("result_text").innerHTML = this.score.calculate();
+                    this.change();
                     this.show_results = true;
+                },
+                change: function () {
+                    document.getElementById("result_text").innerHTML = this.score.calculate();
                 },
                 check_score_type: function (str) {
                     var list = str.split("/");
@@ -227,6 +232,7 @@
                     const params = Object.fromEntries(urlSearchParams.entries()).search;
                     if (params == "Unruptured aneurysm") this.set_score_type(aneurysm_risk);
                     if (params == "Dural Arteriovenous Fistula") this.set_score_type(avf_risk);
+                    if (params == "Arteriovenous Malformation") this.set_score_type(avm_risk);
                     if (params == "Carotid stenosis") this.set_score_type(carotid_stenosis);
                     if (params == "Intracranial hypotension") this.set_score_type(i_hypotension);
 
