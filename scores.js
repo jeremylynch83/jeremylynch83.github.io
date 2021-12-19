@@ -6,6 +6,7 @@ var scores=[];
 
 aneurysm_risk = {
     title: "Unruptured aneurysm",
+    results: [],
     selected: ["PHASES", "ISUIA"],
     types: [{
             value: "PHASES",
@@ -231,7 +232,7 @@ aneurysm_risk = {
         },
         {
             name: "Age",
-            score: "PHASES/UIATS",
+            score: "PHASES/UIATS/ISUIA",
             type: "number",
             text: "Enter age in years",
             selected: null,
@@ -709,6 +710,7 @@ aneurysm_risk = {
 
 
     calculate: function () {
+        this.results = [];
         var text = "";
         var years_left = null;
         if (get_var("lifespan", this.variables).selected && get_var("Age", this.variables).selected) {
@@ -741,25 +743,36 @@ aneurysm_risk = {
         var risk = null;
 
         if (get_var("site", this.variables).phases_score() != -1 && this.selected.includes("PHASES")) {
+            
             if (total >= 12) risk = "17·8\% (15·2–20·7\%)";
             else risk = phases_table[total];
-            text = "<p>PHASES: " + risk + " 5-year risk of rupture. ";
+            text = risk + " 5-year risk of rupture. ";
             if (years_left) 
                 {             
                     risk_num = parseFloat(risk.split("%")[0]);
                     risk_text = (risk_num*(years_left/5)).toFixed(1);
                     if (risk_text < 50) text=text+ risk_text + "% lifetime risk. ";
                     else text=text+ "Very high lifetime risk. "
-                }        
+                }  
+      
             } else {
             text = "";
-            text = text+"</p>";
-
         }
+
+        this.results.push( {
+            name: "PHASES",
+            visible: false,
+            ref: "Greving JP, Wermer MJ, Brown RD Jr, et al. Development of the PHASES score for prediction of risk of rupture of intracranial aneurysms: a pooled analysis of six prospective cohort studies. Lancet Neurol. 2014 Jan;13(1):59-66. doi: 10.1016/S1474-4422(13)70263-1.",
+            summary: text,
+            body: "",
+            image: 'phases.svg' 
+        });
+
 
         /////////
         // ISUIA
         /////////
+        var text = ""
         total = 0;
         risk = null;
         // Size 7mm
@@ -798,7 +811,7 @@ aneurysm_risk = {
             ];
         }
         if (this.selected.includes("ISUIA")) {
-            text = text + "<p>ISUIA: " + risk + " 5-year risk of rupture. ";
+            text = text + risk + " 5-year risk of rupture. ";
             if (years_left) 
                 {             
                     risk_num = parseFloat(risk.split("%")[0]);
@@ -806,13 +819,20 @@ aneurysm_risk = {
                     if (risk_text < 50) text=text+ risk_text + "% lifetime risk. ";
                     else text=text+ "Very high lifetime risk. ";
                 }
-                text = text+"</p>";
         }
+
+        this.results.push( {
+            name: "ISUIA",
+            visible: false,
+            ref: "Wiebers DO, Whisnant JP, Huston J 3rd, et al. International Study of Unruptured Intracranial Aneurysms Investigators. Unruptured intracranial aneurysms: natural history, clinical outcome, and risks of surgical and endovascular treatment. Lancet. 2003 Jul 12;362(9378):103-10. doi: 10.1016/s0140-6736(03)13860-3. PMID: 12867109.",
+            summary: text,
+        image: 'isuia.jpg' });
 
 
         /////////
         // UIATS
         /////////
+        var text = "";
         var repair = 0;
         var conserv = 0;
         repair = get_var("Age", this.variables)
@@ -848,19 +868,27 @@ aneurysm_risk = {
             .uiats_score_rx() + 5;
         if (this.selected.includes("UIATS")) {
             if ((repair - conserv) > 0) {
-                text = text + "<p>UIATS: In favour of intervention ";  
+                text = text + "In favour of intervention ";  
             }
             else if ((repair - conserv) == 0) {
-                text = text + "<p>UIATS: Equipoise ";  
+                text = text + "Equipoise ";  
             }
             else if ((repair - conserv) < 0) {
-                text = text + "<p>UIATS: In favour of non-intervention ";  
+                text = text + "In favour of non-intervention ";  
             }
             text=text+ "(intervention "+ repair + " vs non-intervention " + conserv +").";
+
         }
 
+        this.results.push( {
+            name: "UIATS",
+            visible: false,
+            ref: "Etminan N, Brown RD Jr, Beseoglu K, et al. The unruptured intracranial aneurysm treatment score: a multidisciplinary consensus. Neurology. 2015 Sep 8;85(10):881-9. doi: 10.1212/WNL.0000000000001891. Epub 2015 Aug 14. PMID: 26276380; ",
+            summary: text,
+        image: 'isuia.png' });
 
-        return text;
+
+        //return text;
     }
 }
 
@@ -869,6 +897,7 @@ aneurysm_risk = {
 //////////////
 avf_risk = {
     title: "Dural Arteriovenous Fistula",
+    results: [],
     selected: ["Cognard", "Borden", "Zipfel"], // Default selected scores
     types: [{
             value: "Cognard", // Types of score
@@ -895,12 +924,12 @@ avf_risk = {
             },
             {
                 value: 'ant_sinus_cv',
-                text: 'sinus with antegrade flow and cortical venous reflux'
+                text: 'Sinus with antegrade flow and cortical venous reflux'
             },
 
             {
                 value: 'ret_sinus_cv',
-                text: 'sinus with retrograde flow and cortical venous reflux'
+                text: 'Sinus with retrograde flow and cortical venous reflux'
             },
             {
                 value: 'cv',
@@ -920,34 +949,43 @@ avf_risk = {
             cognard_score: function () { // Function returns to calculate score
                 var text;                
                 switch (this.selected) {
-                    case 'ant_sinus': {text = "type 1";break;}
-                    case 'ret_sinus': {text = "type 2a";break;}
-                    case 'ant_sinus_cv': {text = "type 2b";break;}
-                    case 'ret_sinus_cv': {text = "type 2a+b";break;}
-                    case 'cv': {text = "type 3";break;}
-                    case 'ect_cv': {text = "type 4";break;}
-                    case 'spv': {text = "type 5";break;}
+                    case 'ant_sinus': {text = "Type 1. ";break;}
+                    case 'ret_sinus': {text = "Type 2a. ";break;}
+                    case 'ant_sinus_cv': {text = "Type 2b. ";break;}
+                    case 'ret_sinus_cv': {text = "Type 2a+b. ";break;}
+                    case 'cv': {text = "Type 3. ";break;}
+                    case 'ect_cv': {text = "Type 4. ";break;}
+                    case 'spv': {text = "Type 5. ";break;}
                 }
                 return text;
             },
+
+            
             borden_score: function () { // Function returns to calculate score
                 var text;
                 switch (this.selected) {
                     case 'ant_sinus': 
-                    case 'ret_sinus': {text = "type 1";break;}
+                    case 'ret_sinus': {text = "Type 1. ";break;}
                     case 'ant_sinus_cv': 
-                    case 'ret_sinus_cv': {text = "type 2";break;}
+                    case 'ret_sinus_cv': {text = "Type 2. ";break;}
                     case 'cv': 
                     case 'ect_cv': 
-                    case 'spv': {text = "type 3";break;}
+                    case 'spv': {text = "Type 3. ";break;}
                 }
-
-
                 return text;
             },
-            zipfel_score: function () { // Function returns to calculate score
-                var total = 0;
-                return total;
+            zipfel_score: function () { 
+                var text;
+                switch (this.selected) {
+                    case 'ant_sinus': 
+                    case 'ret_sinus': {text = "Type 1. ";break;}
+                    case 'ant_sinus_cv': 
+                    case 'ret_sinus_cv': {text = "Type 2. ";break;}
+                    case 'cv': 
+                    case 'ect_cv': 
+                    case 'spv': {text = "Type 3. ";break;}
+                }
+                return text;
             }
         },
         {
@@ -971,71 +1009,83 @@ avf_risk = {
     ],
 
     calculate: function () {
+        this.results = [];
         var text = "";
 
         // Cognard
         if (this.selected.includes("Cognard")) {
-            text = "<p>Cognard " + get_var("drainage", this.variables)
-            .cognard_score() + "</p>";
+            text = get_var("drainage", this.variables)
+            .cognard_score();
+            this.results.push( {
+                name: "Cognard",
+                visible: false,
+                ref: "Cognard C, Gobin YP, Pierot L, et al. Cerebral dural arteriovenous fistulas: clinical and angiographic correlation with a revised classification of venous drainage. Radiology. 1995 Mar;194(3):671-80. doi: 10.1148/radiology.194.3.7862961. ",
+                summary: text });
         }
+
         // Borden
         if (this.selected.includes("Borden")) {
-            text = text+ "<p>Borden " + get_var("drainage", this.variables)
-            .borden_score() + "</p>";
+            text = get_var("drainage", this.variables)
+            .borden_score();
+            this.results.push( {
+                name: "Borden",
+                visible: false,
+                ref: "Borden JA, Wu JK, Shucart WA. A proposed classification for spinal and cranial dural arteriovenous fistulous malformations and implications for treatment. J Neurosurg. 1995 Feb;82(2):166-79. doi: 10.3171/jns.1995.82.2.0166. Erratum in: J Neurosurg. 1995 Apr;82(4):705-6.",
+                summary: text });
         }
+
+
         // Zipfel
 
         if (this.selected.includes("Zipfel")) {
-            text=text+"<p>Zipfel ";
         switch (get_var("drainage", this.variables)
-        .borden_score()) {
-            case 'type 1': {
+        .zipfel_score()) {
+            case 'Type 1. ': {
                 if (get_var("symptomatic", this.variables)
                 .selected) {
-                    text=text+ "type 1 symptomatic";
+                    text="Type 1 symptomatic: < 1% annual risk of intracranial haemorrhage and 0% annual risk of death. Treatment recommendation: elective treatment if intracratable symptoms are present. ";
                 }
                 else {
-                    text=text+ "type 1 asymptomatic";
-
+                    text="Type 1 asymptomatic: < 1% annual risk of intracranial haemorrhage, 0% annual risk of death. Treatment recommendation: Not to treat.  ";
                 }
                 break;
             }
-            case 'type 2': {
+            case 'Type 2. ': {
                 if (get_var("symptomatic", this.variables)
                 .selected) {
-                    text=text+ "type 2 symptomatic";
+                    text="Type 2 symptomatic: 7.4-7.6% annual risk of intracranial haemorrhage and 3.8% annual risk of death. Recommendation: immediate treatment. ";
                 }
                 else {
-                    text=text+ "type 2 asymptomatic";
-
+                    text="Type 2 asymptomatic: 1.4-1.5% annual risk of intracranial haemorrhage and 0% annual risk of death. Recommendation: elective treatment to prevent haemorrhage or neurological deficit. ";
                 }
                 break;
             }
-            case 'type 3': {
+            case 'Type 3. ': {
                 if (get_var("symptomatic", this.variables)
                 .selected) {
-                    text=text+ "type 3 symptomatic";
+                    text="Type 3 symptomatic: 7.4-7.6% annual risk of intracranial haemorrhage and 3.8% annual risk of death. Recommendation: immediate treatment.";
                 }
                 else {
-                    text=text+ "type 3 asymptomatic";
-
+                    text="Type 3 asymptomatic: 1.4-1.5% annual risk of intracranial haemorrhage and 0% annual risk of death. Recommendation: elective treatment to prevent haemorrhage or neurological deficit. ";
                 }
                 break;
             }
         }
-        text=text+"</p>";
+        this.results.push( {
+            name: "Zipfel",
+            visible: false,
+            ref: "Zipfel GJ, Shah MN, Refai D, et al. Cranial dural arteriovenous fistulas: modification of angiographic classification scales based on new natural history data. Neurosurg Focus. 2009 May;26(5):E14. doi: 10.3171/2009.2.FOCUS0928.",
+            summary: text });
     }
-        return text;
     }
 }
-
-
 
 //////////////
 // AVM      //
 //////////////
 avm_risk = {
     title: "Arteriovenous Malformation",
+    results: [],
     selected: ["Spetzler-Martin", "Pollock Flickinger"], // Default selected scores
     types: [{
             value: "Spetzler-Martin", // Types of scores
@@ -1196,10 +1246,10 @@ avm_risk = {
             score: "Spetzler-Martin", // separated by "/"
             type: "radio",
             options: [{
-                    value: 0,
+                    value: 1,
                     text: 'No'
                 },{
-                    value: 1,
+                    value: 0,
                     text: 'Yes'
                 }],
             text: "Bleeding", // Presented to user
@@ -1229,10 +1279,10 @@ avm_risk = {
             score: "Spetzler-Martin", // separated by "/"
             type: "select",
             options: [{
-                    value: 0,
+                    value: 1,
                     text: 'Diffuse nidus'
                 },{
-                    value: 1,
+                    value: 0,
                     text: 'Compact nidus'
                 }],
             text: "Compactness", // Presented to user
@@ -1384,6 +1434,7 @@ avm_risk = {
 
     calculate: function () {
         var text = "";
+        this.results = [];
 
         /////////
         // Spetzler Martin + Supplementary
@@ -1392,14 +1443,22 @@ avm_risk = {
         
         if (this.selected.includes("Spetzler-Martin"))       
         {        
-        var size = get_var("Nidal size", this.variables).spetzler_score();
+            var size = get_var("Nidal size", this.variables).spetzler_score();
             var venous = get_var("Venous drainage", this.variables).spetzler_score();
             var eloquence = get_var("Eloquence", this.variables).spetzler_score();var size = get_var("Nidal size", this.variables).spetzler_score();
             var age = get_var("Age", this.variables).spetzler_score();
             var bleeding = get_var("Bleeding", this.variables).spetzler_score();
             var compactness = get_var("Compactness", this.variables).spetzler_score();
 
-            text = text+"<p>Spetzler Martin: " + (size+venous+eloquence) + ". Supplementary: " + (age+bleeding+compactness) + ". ";
+            var body = "Size (" + size + "), Venous drainage (" + venous + "), Eloquence (" + eloquence + "), Age (" + age + "), Bleeding (" + bleeding +"), Compactness (" + compactness + "). ";
+
+            text = "Spetzler Martin: " + (size+venous+eloquence) + ". Supplementary: " + (age+bleeding+compactness) + ". ";
+            this.results.push( {
+                name: "Spetzler-Martin",
+                visible: false,
+                body: body,
+                ref: "Spetzler RF, Martin NA. A proposed grading system for arteriovenous malformations. J. Neurosurg. 1986;65 (4): 476-83. doi:10.3171/jns.1986.65.4.0476 and Lawton MT, Kim H, McCulloch CE, Mikhak B, Young WL. A supplementary grading scale for selecting patients with brain arteriovenous malformations for surgery. (2010) Neurosurgery. 66 (4): 702-13; discussion 713. doi:10.1227/01.NEU.0000367555.16733.E1 ",
+                summary: text});
     }
 
         /////////
@@ -1412,7 +1471,12 @@ avm_risk = {
                     total = total + this.variables[n].buffalo_score();
                 }
             }
-            text = text+"<p>Buffalo: " + total + ". ";
+            text = "Buffalo: " + total + ". ";
+            this.results.push( {
+                name: "Buffalo",
+                visible: false,
+                ref: "Dumont TM, Kan P, Snyder KV, Hopkins LN, Siddiqui AH, Levy EI. A proposed grading system for endovascular treatment of cerebral arteriovenous malformations: Buffalo score. Surg Neurol Int. 2015 Jan 7;6:3. doi: 10.4103/2152-7806.148847. ",
+                summary: text});
     }
 
         /////////
@@ -1425,7 +1489,12 @@ avm_risk = {
                     total = total + this.variables[n].willinsky_score();
                 }
             }
-            text = text+"<p>Willinsky: " + total + ". ";
+            text = "Willinsky: " + total + ". ";
+            this.results.push( {
+                name: "Willinsky",
+                visible: false,
+                ref: "Willinsky, R.; Goyal, M.; Terbrugge, K.; Montanera, W.; Wallace, M.C.; Tymianski, M. (2001). Embolisation of Small (< 3 cm) Brain Arteriovenous Malformations. Interventional Neuroradiology, 7(1), 19–27. doi:10.1177/159101990100700102 ",
+                summary: text});
     }
 
         /////////
@@ -1438,7 +1507,12 @@ avm_risk = {
                     total = total + this.variables[n].feliziano_score();
                 }
             }
-            text = text+"<p>Feliziano: " + total + ". ";
+            text = "Feliziano: " + total + ". ";
+            this.results.push( {
+                name: "Feliziano",
+                visible: false,
+                ref: "Feliciano CE, de León-Berra R, Hernández-Gaitán MS, Rodríguez-Mercado R. A proposal for a new arteriovenous malformation grading scale for neuroendovascular procedures and literature review. P R Health Sci J. 2010 Jun;29(2):117-20. ",
+                summary: text});
     }
 
         /////////
@@ -1450,11 +1524,13 @@ avm_risk = {
             var nidal_volume = get_var("Nidal volume", this.variables).pollock_score();
             var location = get_var("Location", this.variables).pollock_score();
             var total = 0.1*nidal_volume + 0.02*age + 0.3*location;
-            text = text+"<p>Pollock: " + total.toFixed(2) + ". ";
+            text = "Pollock: " + total.toFixed(2) + ". ";
+            this.results.push( {
+                name: "Pollock Flickinger",
+                ref: "Pollock, Bruce E.; Flickinger, John C. (2002). A proposed radiosurgery-based grading system for arteriovenous malformations. Journal of Neurosurgery, 96(1), 79–85. doi:10.3171/jns.2002.96.1.0079  ",
+                visible: false,
+                summary: text});
         }
-        
-        return text;
-
     }
 }
 
@@ -1464,6 +1540,7 @@ avm_risk = {
 //////////////
 carotid_stenosis = {
     title: "Carotid stenosis",
+    results: [],
     selected: ["NASCET"], // Default selected scores
     types: [{
             value: "NASCET", // Types of scores
@@ -1494,16 +1571,18 @@ carotid_stenosis = {
 
     calculate: function () {
         var text = "";
+        this.results = [];
 
         var stenosis = get_var("stenosis", this.variables).nascet_score();
         var normal = get_var("normal", this.variables).nascet_score();
         var ratio = (1-(stenosis/normal))*100;
 
-
-        text = "<p> ICA stenosis = " + ratio.toFixed(0) + "%";
-
-
-        return text;
+        text = "ICA stenosis = " + ratio.toFixed(0) + "%";
+        this.results.push( {
+            name: "NASCET",
+            visible: false,
+            ref: "North American Symptomatic Carotid Endarterectomy Trial Collaborators, Barnett HJM, Taylor DW, Haynes RB, Sackett DL, Peerless SJ, Ferguson GG, Fox AJ, Rankin RN, Hachinski VC, Wiebers DO, Eliasziw M. Beneficial effect of carotid endarterectomy in symptomatic patients with high-grade carotid stenosis. N Engl J Med. 1991 Aug 15;325(7):445-53. doi: 10.1056/NEJM199108153250701. PMID: 1852179.",
+            summary: text});
     }
 }
 
@@ -1513,6 +1592,8 @@ carotid_stenosis = {
 //////////////
 i_hypotension = {
     title: "Intracranial hypotension",
+    results: [],
+
     selected: ["Dobrocky Bern"], // Default selected scores
     types: [{
             value: "Dobrocky Bern", // Types of scores
@@ -1620,33 +1701,39 @@ i_hypotension = {
 
     calculate: function () {
         var text = "";
+        this.results = [];
 
         /////////
         // Bern
         /////////
 
         var total = 0;
+        this.results = [];
+
+        if (this.selected.includes("Dobrocky Bern")) {
         for (var n = 0; n < this.variables.length; n++) { 
-            if (this.variables[n].score.includes("Dobrocky Bern")) {
                 total = total + this.variables[n].bern_score();
+        
+                if (total <3)
+                {        
+                    text="Low risk (" +total +")";
+                }     
+                else if (total >2 && total < 5) {
+                text="Intermediate risk (" +total +")";
+                }
+                else if (total > 4) {
+                text="High risk (" +total +")";
+                }
+               }
+               this.results.push( {
+                name: "Dobrocky Bern",
+                visible: false,
+                ref: "Dobrocky T, Grunder L, Breiding PS, et al. Assessing Spinal Cerebrospinal Fluid Leaks in Spontaneous Intracranial Hypotension With a Scoring System Based on Brain Magnetic Resonance Imaging Findings. JAMA Neurol. 2019 May 1;76(5):580-587. doi: 10.1001/jamaneurol.2018.4921. PMID: 30776059; PMCID: PMC6515981.",
+                summary: text}); 
             }
         }
 
-        text=text+"<p>Dobrocky Bern: ";
-        
-        if (total <3)
-        {        
-            text=text+"Low risk (" +total +")";
-        }     
-        else if (total >2 && total < 5) {
-        text=text+"Intermediate risk (" +total +")";
-        }
-        else if (total > 4) {
-        text=text+"High risk (" +total +")";
-        }
-     
-        return text;
-    }
+
 }
 
 //////////////
@@ -1654,6 +1741,8 @@ i_hypotension = {
 //////////////
 late_stroke = {
     title: "",
+    results: [],
+
     selected: [""], // Default selected scores
     types: [{
             value: "", // Types of scores
@@ -1691,11 +1780,9 @@ late_stroke = {
         if (get_var("site", this.variables).phases_score() != -1 && this.selected.includes("PHASES")) {
             if (total >= 12) risk = "17·8\% (15·2–20·7\%)";
             else risk = phases_table[total];
-            text = "<p>PHASES: " + risk + " 5-year risk of rupture. </p>";
+            text = risk + " 5-year risk of rupture. ";
         } else {
             text = "";
-
         }
-        return text;
     }
 }

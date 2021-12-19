@@ -104,5 +104,18 @@ h3 {
 
 .calc_result {
     font-size: large;
+}
+
+.risk {
     font-weight: bold;
+
+}
+
+th {
+    font-weight: normal;
+}
+
+table {
+    border: 2px solid rgb(221, 221, 221);
+    border-collapse: collapse;
 }

@@ -97,9 +97,6 @@
                                         :options="n.options" v-model="n.selected" @change="change()">
                                     </b-form-radio-group>
                                 </b-col>
-                                <!--<b-col sm="2" >
-                            <label>{{ n.score }}</label>
-                        </b-col>-->
                             </b-row>
                         </template>
 
@@ -114,6 +111,23 @@
                 <p></p>
 
                 <b-card bg-variant="light" v-show="show_results">
+                    <template v-for="n in score.results" class="calc_result">
+                        <div v-if="check_score_type(n.name)">
+                            <h4>{{n.name}}</h4>
+                            <p>{{n.summary}}
+                                <b-button variant="link" @click="n.visible = !n.visible">More
+                                    information
+                                </b-button>
+                            </p>
+                            <div v-show="n.visible">
+                                <p v-if="n.body">{{n.body}}</p>
+                                <p v-if="n.ref"><b>Reference: </b>{{n.ref}}</p>
+                                <b-table v-if="n.table"></b-table>
+                                <b-img fluid thumbnail v-if=" n.image" :src="n.image">
+                            </div>
+                        </div>
+                        <p></p>
+                    </template>
 
                     <div id="result_text" class="calc_result"></div>
 
@@ -203,7 +217,7 @@
                     this.show_results = true;
                 },
                 change: function () {
-                    document.getElementById("result_text").innerHTML = this.score.calculate();
+                    this.score.calculate();
                 },
                 check_score_type: function (str) {
                     var list = str.split("/");
