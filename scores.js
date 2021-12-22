@@ -1450,13 +1450,31 @@ avm_risk = {
             var bleeding = get_var("Bleeding", this.variables).spetzler_score();
             var compactness = get_var("Compactness", this.variables).spetzler_score();
 
-            var body = "Size (" + size + "), Venous drainage (" + venous + "), Eloquence (" + eloquence + "), Age (" + age + "), Bleeding (" + bleeding +"), Compactness (" + compactness + "). ";
+            var sm = size+venous+eloquence;
+            var sup = age+bleeding+compactness;
 
-            text = "Spetzler Martin: " + (size+venous+eloquence) + ". Supplementary: " + (age+bleeding+compactness) + ". ";
+            text = "Spetzler Martin score " + sm + " and Supplementary score " + sup;
+            text = text + " (size " + size + ", venous drainage " + venous + ", eloquence " + eloquence + ", age " + age + ", bleeding " + bleeding +", compactness " + compactness + "). ";
+
+            if (sm < 4 && sup < 4) {
+                text = text + "Interpretation: Low grade Spetzler-Martin and supplementary scores. 85% risk of improvement or no change in neurology and 15% worse or dead after microsurgery. "; 
+            }
+            else if (sm >= 4 && sup >= 4) {
+                text = text + "Interpretation: High grade Spetzler-Martin and supplementary scores. 50% risk of improvement or no change in neurology and 50% worse or dead after microsurgery. "; 
+
+            }
+            else if (sm < 4 && sup >= 4) {
+                text = text + "Interpretation: Low Spetzler-Martin and high supplementary scores. 59% risk of improvement or no change in neurology and 41% worse or dead after microsurgery. "; 
+            }
+            else if (sm >= 4 && sup < 4) {
+                text = text + "Interpretation: High Spetzler-Martin and low supplementary scores. 71% risk of improvement or no change in neurology and 29% worse or dead after microsurgery. "; 
+            }
+
+
+
             this.results.push( {
                 name: "Spetzler-Martin",
                 visible: false,
-                body: body,
                 ref: "Spetzler RF, Martin NA. A proposed grading system for arteriovenous malformations. J. Neurosurg. 1986;65 (4): 476-83. doi:10.3171/jns.1986.65.4.0476 and Lawton MT, Kim H, McCulloch CE, Mikhak B, Young WL. A supplementary grading scale for selecting patients with brain arteriovenous malformations for surgery. (2010) Neurosurgery. 66 (4): 702-13; discussion 713. doi:10.1227/01.NEU.0000367555.16733.E1 ",
                 summary: text});
     }
@@ -1524,9 +1542,18 @@ avm_risk = {
             var nidal_volume = get_var("Nidal volume", this.variables).pollock_score();
             var location = get_var("Location", this.variables).pollock_score();
             var total = 0.1*nidal_volume + 0.02*age + 0.3*location;
-            text = "Pollock: " + total.toFixed(2) + ". ";
+            var risk = -49.6*total + 137.2;
+            if (total < 0.75) risk = 100;
+            if (total > 2) risk = 38;
+            risk = risk.toFixed(0);
+
+            text = "AVM score: " + total.toFixed(2) + ". ";
+            text=text + "Interpretation: " + risk + "% excellent outcome after radiosurgery. ";
+
             this.results.push( {
                 name: "Pollock Flickinger",
+                image: "pollock.png",
+                body: "AVM score = (0.1)(AVM volume) + (0.02)(patient age) + (0.3)(AVM location).",
                 ref: "Pollock, Bruce E.; Flickinger, John C. (2002). A proposed radiosurgery-based grading system for arteriovenous malformations. Journal of Neurosurgery, 96(1), 79–85. doi:10.3171/jns.2002.96.1.0079  ",
                 visible: false,
                 summary: text});

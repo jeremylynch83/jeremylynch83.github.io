@@ -121,9 +121,10 @@
                             </p>
                             <div v-show="n.visible">
                                 <p v-if="n.body">{{n.body}}</p>
-                                <p v-if="n.ref"><b>Reference: </b>{{n.ref}}</p>
                                 <b-table v-if="n.table"></b-table>
-                                <b-img fluid thumbnail v-if=" n.image" :src="n.image">
+                                <b-img fluid thumbnail v-if=" n.image" :src="n.image"></b-img>
+                                <p v-if="n.ref"><b>Reference: </b>{{n.ref}}</p>
+
                             </div>
                         </div>
                         <p></p>
