@@ -14,7 +14,7 @@
     <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
     <link type="text/css" rel="stylesheet" href="css/bootstrap-vue.css" />
     <link href="css/VueBootstrapTypeahead.css" rel="stylesheet" />
-    <link type="text/css" rel="stylesheet" href="css/mytemplate.css" />
+    <link type="text/css" rel="stylesheet" href="css/my.css" />
     <!-- Load polyfills to support older browsers -->
     <script src="js/polyfill.min.js"></script>
     <!-- Required scripts -->
@@ -30,25 +30,26 @@
 <body>
     <div id="app">
 
-        <b-navbar toggleable="lg" type="dark" variant="info">
-            <b-navbar-brand href="#">NeuroTool: Clinical Prediction</b-navbar-brand>
+        <b-navbar type="dark" variant="info">
+            <b-navbar-brand href="index.html">NeuroTool</b-navbar-brand>
+            <b-navbar-nav>
 
-            <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+                <b-nav-item-dropdown id="dropdown-offset" text="Devices" right>
+                    <b-dropdown-item href="index.html">Device Sizer</b-dropdown-item>
+                    <b-dropdown-item href="index.html?search=conversion">Unit converter</b-dropdown-item>
+                    <b-dropdown-item v-b-modal.help_modal>About</b-dropdown-item>
+                </b-nav-item-dropdown>
 
-            <b-collapse id="nav-collapse" is-nav>
-                <b-navbar-nav>
-                </b-navbar-nav>
+                <b-nav-item-dropdown id="dropdown-offset" text="Prediction" right>
+                    <b-dropdown-item href="calc.html?search=Unruptured aneurysm">Unruptured aneurysm</b-dropdown-item>
+                    <b-dropdown-item href="calc.html?search=Dural Arteriovenous Fistula">DAVF</b-dropdown-item>
+                    <b-dropdown-item href="calc.html?search=Arteriovenous Malformation">AVM</b-dropdown-item>
+                    <b-dropdown-item href="calc.html?search=Carotid stenosis">Carotid Stenosis</b-dropdown-item>
+                    <b-dropdown-item href="calc.html?search=Intracranial hypotension">Intracranial Hypotension
+                    </b-dropdown-item>
+                </b-nav-item-dropdown>
+            </b-navbar-nav>
 
-                <b-navbar-nav class="ml-auto">
-                    <b-nav-item-dropdown right>
-
-                        <template #button-content>
-                            Help
-                        </template>
-                        <b-dropdown-item v-b-modal.help_modal>About</b-dropdown-item>
-                    </b-nav-item-dropdown>
-                </b-navbar-nav>
-            </b-collapse>
         </b-navbar>
 
 
@@ -57,14 +58,14 @@
             <!--<p><i>“The good thing about standards is that there are so many to choose from.” ― Andrew S. Tanenbaum </i>
             </p>-->
 
-            <b-dropdown right text="Select calculator">
+            <!-- <b-dropdown right text="Select calculator">
                 <b-dropdown-item @click="set_score_type(this.aneurysm_risk)">Unruptured aneurysm</b-dropdown-item>
                 <b-dropdown-item @click="set_score_type(this.avf_risk)">Dural arteriovenous fistula</b-dropdown-item>
                 <b-dropdown-item @click="set_score_type(this.avm_risk)">Arteriovenous Malformation
                 </b-dropdown-item>
                 <b-dropdown-item @click="set_score_type(this.carotid_stenosis)">Carotid stenosis</b-dropdown-item>
                 <b-dropdown-item @click="set_score_type(this.i_hypotension)">Intracranial hypotension</b-dropdown-item>
-            </b-dropdown>
+            </b-dropdown>-->
 
             <p></p>
             <div v-if="score!=null">

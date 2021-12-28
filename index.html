@@ -36,18 +36,26 @@
 <body>
 	<div id="app">
 
-		<b-navbar toggleable="lg" type="dark" variant="info">
-			<b-navbar-brand href="#">NeuroTool</b-navbar-brand>
-			<b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+		<b-navbar type="dark" variant="info">
+			<b-navbar-brand href="index.html">NeuroTool</b-navbar-brand>
+			<b-navbar-nav>
 
-			<b-collapse id="nav-collapse" is-nav>
-
-				<b-navbar-nav class="ml-auto">
-					<b-dropdown-item v-b-modal.help_modal>About</b-dropdown-item>
+				<b-nav-item-dropdown id="dropdown-offset" text="Devices" right>
+					<b-dropdown-item href="index.html">Device Sizer</b-dropdown-item>
 					<b-dropdown-item v-b-modal.conversion_modal>Unit converter</b-dropdown-item>
+					<b-dropdown-item v-b-modal.help_modal>About</b-dropdown-item>
+				</b-nav-item-dropdown>
 
-				</b-navbar-nav>
-			</b-collapse>
+				<b-nav-item-dropdown id="dropdown-offset" text="Prediction" right>
+					<b-dropdown-item href="calc.html?search=Unruptured aneurysm">Unruptured aneurysm</b-dropdown-item>
+					<b-dropdown-item href="calc.html?search=Dural Arteriovenous Fistula">DAVF</b-dropdown-item>
+					<b-dropdown-item href="calc.html?search=Arteriovenous Malformation">AVM</b-dropdown-item>
+					<b-dropdown-item href="calc.html?search=Carotid stenosis">Carotid Stenosis</b-dropdown-item>
+					<b-dropdown-item href="calc.html?search=Intracranial hypotension">Intracranial Hypotension
+					</b-dropdown-item>
+				</b-nav-item-dropdown>
+			</b-navbar-nav>
+
 		</b-navbar>
 
 		<b-container>
@@ -423,11 +431,19 @@
 		}
 
 		function setupDevices(data) {
+
+			var n = 0;
+			for (; data[n].type != "date"; n++) {}
+			var version = data[n].name;
+			data.splice(n, 1);
+
 			data.forEach(device => {
 				device.name = device.name.trim();
 				device.type = toTitleCase(device.type.trim());
 				device.name_man = device.name + " (" + device.type + ", " + device.manufacturer + ")";
 			})
+
+			return version;
 		}
 
 		function check_compatibility(parent, child) {
@@ -574,7 +590,7 @@
 		var tree = (new DOMParser).parseFromString(tXML, "text/xml"); // Stores device info
 		var deviceInputs = []; // Stores info about input boxes
 
-		setupDevices(deviceList);
+		var version = setupDevices(deviceList);
 
 		/* Specific functions */
 
@@ -861,9 +877,9 @@
 									this.sizes_table = sizes;
 									if (deviceInfo.tablecaption != null) this.tablecaption = deviceInfo
 										.tablecaption;
-
 									break;
-
+								case "balt":
+									break;
 
 								default:
 									info_extra += "<p><b>" + toTitleCase(prop) + ": " + "</b>" + deviceInfo[
@@ -1399,6 +1415,12 @@
 				// Format is: ?search=neuron max
 				const urlSearchParams = new URLSearchParams(window.location.search);
 				const params = Object.fromEntries(urlSearchParams.entries());
+				if (params.search == "conversion") {
+					window.addEventListener('load', (event) => {
+						this.$root.$emit('bv::show::modal', "conversion_modal");
+					});
+
+				}
 
 				var newInput1 = this.addInput("inside",
 					"Enter device e.g. catheter, balloon, stent, flow-diverter, Onyx, wire ...",
