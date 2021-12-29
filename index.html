@@ -179,7 +179,7 @@
 				</b-table>
 				<p><b>Similar devices:</b></p>
 				<div>
-					<b-table small :items="similarModal.table" :fields="similarModal.fields"
+					<b-table small :items="similarModal.table" :fields="similarModal.fields" class="align-left"
 						style="font-size: 0.8em; font-family:Arial Narrow, sans-serif-condensed" head-variant="light"
 						:sort-by.sync="similarModal.sortBy" :sort-desc.sync="similarModal.sortDesc">
 
@@ -192,7 +192,7 @@
 					</b-table>
 
 				</div>
-				<b-button size="sm" variant="danger" @click="" v-b-modal.feedback_modal>
+				<b-button size=" sm" variant="danger" @click="" v-b-modal.feedback_modal>
 					Disagree with this?
 				</b-button>
 
