@@ -162,7 +162,8 @@
 
 		<b-container v-show="deviceInputs.length == 1 && deviceInputs[0].active != null">
 			<b-jumbotron bg-variant="light">
-				<b>{{infoModal.device.name}}</b> is a {{infoModal.device.type}} manufactured by
+				<b itemscope itemtype="https://schema.org/MedicalDevice">{{infoModal.device.name}}</b> is a
+				{{infoModal.device.type}} manufactured by
 				{{infoModal.device.manufacturer}}.
 				<p></p>
 				<div>
