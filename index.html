@@ -312,7 +312,7 @@
 			<div>
 				<b-table sticky-header small :items="similarModal.table" :fields="similarModal.fields"
 					style="font-size: 0.8em; font-family:Arial Narrow, sans-serif-condensed" head-variant="light"
-					:sort-by.sync="similarModal.sortBy" :sort-desc.sync="similarModal.sortDesc">
+					:sort-by.sync="similarModal.sortBy" :sort-desc.sync="similarModal.sortDesc" class="align-left">
 
 					<template #cell(Name)="row">
 						<b-button :href="row.item.url" variant="link">
