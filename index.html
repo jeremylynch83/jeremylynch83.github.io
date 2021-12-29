@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- TODO
+
+	W3C validation: https://validator.w3.org/nu/?doc=http%3A%2F%2Fneurotool.org%2F
+	https
+-->
+
 <head>
 
 	<meta name="description"
-		content="The number of devices used in neurointerventional procedures has exploded in recent years. This tool provides information on sizes of catheters, balloons, stents, coils, and other devices, whether devices fit inside each other, what similar devices are available. Information about the devices, such as the design and materials a stent is made of. Whether a catheter is DMSO compatible. Direct links to further manufacturer information. ">
+		content="This tool provides information on catheters, balloons, stents, coils, and other devices, whether devices fit inside each other, what similar devices are available and more. It also includes clinical prediction/classification calculators to aid clinical decision making. ">
 
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, user-scalable=no">
@@ -59,6 +65,10 @@
 			<div id="intro_text" v-show="deviceInputs.length ==1 && deviceInputs[0].active == null"
 				style="background-color:rgb(241, 247, 255); padding: 20px; border-radius: 5px">
 				<h1>Independent neurointerventional device information.</h1>
+
+				<p>This tool provides information on catheters, balloons, stents, coils, and other devices, whether
+					devices fit inside each other, what similar devices are available and more. It also includes
+					clinical prediction/classification calculators to aid clinical decision making. </p>
 				</p>
 				<p>
 					<b-button variant="primary" v-b-modal.help_modal>Help</b-button>
