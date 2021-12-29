@@ -1,3 +1,8 @@
+* {
+	font-size: small
+}
+
+
 .footer {
 
 	text-align: center;
@@ -16,20 +21,12 @@ caption {
 	/*background-color: white;*/
 }
 
-* {
-	font-size: small
-}
 
-.footer {
 
-	text-align: center;
-	margin-top: 50px;
-	font-size: small;
-}
 
-caption {
-	color: #000000;
-	font-size: 1rem;
+
+.navbar-dark .navbar-nav .nav-link {
+	color: black !important
 }
 
 #app {
