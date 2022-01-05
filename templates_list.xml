@@ -3979,11 +3979,14 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 					right | left
 				</dropdown>
 				<dropdown label="Site" print_text_after="craniotomy is noted.">
-					 parietal |  frontal | frontoparietal | occipital | retrosigmoid
+					 parietal |  frontal | frontoparietal | occipital | retrosigmoid | transphenoidal
 				</dropdown>
 			</multi_select>
 
 			<multi_select label="Residual">
+				<dropdown label="Non">
+					No residual tissue is evident
+				</dropdown>
 				<free_text label="Location" print_text_before="Note is made of the residual tissue located in the">
 				</free_text>
 				<free_text label="Size" print_text_before="It now measures approximately">
@@ -4267,7 +4270,7 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 			<h1>
 				Conclusion
 			</h1>
-			<selection label="Signal">
+			<selection label="Summary">
 				Stable imaging appearances
 			</selection>
 			<text_entry label="" subtype="medium">
@@ -4328,7 +4331,7 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 			<h1>
 				Conclusion
 			</h1>
-			<selection label="Signal">
+			<selection label="Summary">
 				Stable imaging appearances
 			</selection>
 			<text_entry label="" subtype="medium">
