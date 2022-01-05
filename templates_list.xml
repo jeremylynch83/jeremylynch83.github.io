@@ -4238,7 +4238,6 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 				</text_entry>
 			</multi_select>
 
-			<h2 flags="dont_print">Angiogram</h2>
 			<insert>CT Angiogram Intracranial</insert>
 
 
@@ -4301,7 +4300,6 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 			<query_insert>Aneurysm description</query_insert>
 
 
-			<h2 flags="dont_print">Angiogram</h2>
 			<insert>CT Angiogram Intracranial</insert>
 
 			<h2 flags="dont_print">
