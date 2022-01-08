@@ -233,6 +233,9 @@ Not present | Present
 				</dropdown>
 				<dropdown label="Branches">No branches arise from the aneurysm sac itself. | A branch arises from the neck of the aneurysm. | A branch arises from the dome of the aneurysm. 
 				</dropdown>
+				<dropdown label="Change">
+				There has been no change since the previous study. | There has been a decrease in size since the previous study. | There has been an increase in size since the previous study.
+				</dropdown>
 				<dropdown label="Other">No other aneurysms are identified.  
 				</dropdown>
 			</multi_select>
@@ -4016,11 +4019,14 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 					right | left
 				</dropdown>
 				<dropdown label="Site" print_text_after="craniotomy is noted.">
-					 parietal |  frontal | frontoparietal | occipital | retrosigmoid
+					 parietal |  frontal | frontoparietal | occipital | retrosigmoid | transphenoidal
 				</dropdown>
 			</multi_select>
 
 			<multi_select label="Residual">
+				<dropdown label="Non">
+					No residual tissue is evident
+				</dropdown>
 				<free_text label="Location" print_text_before="Note is made of the residual tissue located in the">
 				</free_text>
 				<free_text label="Size" print_text_before="It now measures approximately">
@@ -4231,6 +4237,29 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 		</content>
 	</template>
 
+	<module>
+	<name>Aneurysm follow-up
+	</name>
+<content>
+			<multi_select label="Description">
+				<free_text label="Location" print_text_before="The treated" print_text_after="is noted."></free_text>
+				<dropdown label="Residual">
+				The aneurysm is excluded from the circulation | There is a small neck remnant | There is filling of the aneurysm sac.
+				</dropdown>
+				<dropdown label="Change">
+				There has been no change since the previous study. | There has been a decrease in size since the previous study. | There has been an increase in size since the previous study.
+				</dropdown>
+				<free_text label="Size" print_text_before="The aneurysm now measures approximately">
+				</free_text>
+				<dropdown label="Other">
+				No other aneurysms are identified.
+				</dropdown>
+				<text_entry label="" subtype="medium">
+				</text_entry>
+			</multi_select>
+</content>
+</module>
+
 	<template>
 		<name>MRI Head: Aneurysm Follow-Up (Treated)
 		</name>
@@ -4251,22 +4280,14 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 			<text_entry subtype="medium">
 			</text_entry>
 
-			<multi_select label="Description">
-				<free_text label="Location" print_text_before="The treated" print_text_after="is noted."></free_text>
-				<dropdown label="Residual">
-				The aneurysm is excluded from the circulation | There is a small neck remnant | There is filling of the aneurysm sac.
-				</dropdown>
-				<dropdown label="Change">
-				There has been no change since the previous study. | There has been a decrease in size since the previous study. | There has been an increase in size since the previous study.
-				</dropdown>
-				<free_text label="Size" print_text_before="The aneurysm now measures approximately">
-				</free_text>
-				<dropdown label="Other">
-				No other aneurysms are identified.
-				</dropdown>
-				<text_entry label="" subtype="medium">
-				</text_entry>
-			</multi_select>
+
+			<insert>Aneurysm follow-up</insert>
+			<query_insert>Aneurysm follow-up</query_insert>
+
+
+			<insert>CT Angiogram Intracranial</insert>
+
+
 			<h2 flags="dont_print">
 				Acute pathology
 			</h2>
@@ -4293,7 +4314,7 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 			<h1>
 				Conclusion
 			</h1>
-			<selection label="Signal">
+			<selection label="Summary">
 				Stable imaging appearances
 			</selection>
 			<text_entry label="" subtype="medium">
@@ -4322,19 +4343,12 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 			<text_entry subtype="medium">
 			</text_entry>
 
-			<multi_select label="Description">
-				<free_text label="Location" print_text_before="A" print_text_after="is noted."></free_text>
-				<dropdown label="Change">
-				There has been no change since the previous study. | There has been a decrease in size since the previous study. | There has been an increase in size since the previous study.
-				</dropdown>
-				<free_text label="Size" print_text_before="The aneurysm now measures approximately">
-				</free_text>
-				<dropdown label="Other">
-				No other aneurysms are identified.
-				</dropdown>
-				<text_entry label="" subtype="medium">
-				</text_entry>
-			</multi_select>
+			<insert>Aneurysm description</insert>
+			<query_insert>Aneurysm description</query_insert>
+
+
+			<insert>CT Angiogram Intracranial</insert>
+
 			<h2 flags="dont_print">
 				Acute pathology
 			</h2>
@@ -4361,7 +4375,7 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 			<h1>
 				Conclusion
 			</h1>
-			<selection label="Signal">
+			<selection label="Summary">
 				Stable imaging appearances
 			</selection>
 			<text_entry label="" subtype="medium">
