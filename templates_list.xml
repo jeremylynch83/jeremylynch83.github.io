@@ -457,12 +457,14 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 			</query_insert>
 
 			<query_insert>
-				Stroke pass
-			</query_insert>
-			<query_insert>
 				Carotid angioplasty
 			</query_insert>
 
+			<query_insert>
+				Stroke pass
+			</query_insert>
+
+			<h2 flags="dont_print">Closure</h2>
 			<selection label="Haemostasis" showdetailson="1000">
 				Manual compression was used to achieve haemostasis. | An angioseal device was used to achieve groin haemostasis. | A pneumatic compression band was used to achieve wrist haemostasis.
 			</selection>
@@ -4238,9 +4240,9 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 	</template>
 
 	<module>
-	<name>Aneurysm follow-up
-	</name>
-<content>
+		<name>Aneurysm follow-up
+		</name>
+		<content>
 			<multi_select label="Description">
 				<free_text label="Location" print_text_before="The treated" print_text_after="is noted."></free_text>
 				<dropdown label="Residual">
@@ -4257,8 +4259,8 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 				<text_entry label="" subtype="medium">
 				</text_entry>
 			</multi_select>
-</content>
-</module>
+		</content>
+	</module>
 
 	<template>
 		<name>MRI Head: Aneurysm Follow-Up (Treated)
