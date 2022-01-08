@@ -1614,9 +1614,9 @@ carotid_stenosis = {
 }
 
 
-//////////////
-// DAWN/DEFUSE      //
-//////////////
+//////////////////////////////////////////
+// Intracranial hypotension             //
+//////////////////////////////////////////
 i_hypotension = {
     title: "Intracranial hypotension",
     results: [],
@@ -1764,25 +1764,29 @@ i_hypotension = {
 }
 
 //////////////
-// DAWN/DEFUSE      //
+// Late presentation Stroke      //
 //////////////
 late_stroke = {
-    title: "",
+    title: "Late presentation stroke",
     results: [],
 
-    selected: [""], // Default selected scores
+    selected: ["DAWN", "DEFUSE 3"], // Default selected scores
     types: [{
-            value: "", // Types of scores
-            text: "" // Same as above
+            value: "DAWN", // Types of scores
+            text: "DAWN" // Same as above
+        },
+        {
+            value: "DEFUSE 3", // Types of scores
+            text: "DEFUSE 3" // Same as above
         }
     ],
     variables: [{
-            name: "", // Internal name
-            score: "", // separated by "/"
+            name: "Age", // Internal name
+            score: "DAWN / DEFUSE 3", // separated by "/"
             type: "number",
-            text: "", // Presented to user
+            text: "Age", // Presented to user
             selected: null,
-            phases_score: function () { // Function returns to calculate score
+            return_value: function () { 
                 var total = 0;
                 return total;
             }

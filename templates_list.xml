@@ -320,6 +320,45 @@ Not present | Present
 		</content>
 	</module>
 
+	<module>
+		<name>
+			Carotid angioplasty
+		</name>
+		<content>
+			<h2 flags="dont_print">Carotid angioplasty</h2>
+
+			<multi_select label="Access">
+				<dropdown label="Guide gatheter" print_text_before="A" print_text_after=" guide catheter was kept">
+						Neuron max | Infinity | Cerebase | Flowgate 2
+				</dropdown>
+				<dropdown label="Vessel" print_text_before="in the" print_text_after="artery.">
+						right carotid | left carotid | right vertebral | left vertebral 
+				</dropdown>
+				<dropdown label="Stenosis vs occlusion" print_text_before="Angiography confirmed" print_text_after="of this vessel.">
+						stenosis | occlusion
+				</dropdown>
+			</multi_select>
+
+
+			<multi_select label="Technique">
+
+				<dropdown label="Microcatheter" print_text_before="The stenosis was crossed with a" print_text_after="microcatheter.">
+						Trak-21 | Rebar-18 | SL-10 | Echelon-10 
+				</dropdown>
+				<dropdown label="Wire" print_text_before="and" print_text_after="microwire.">
+						Synchro-14
+				</dropdown>
+				<dropdown label="Balloon" print_text_before="Angioplasty was performed with">
+						MC-Trek 
+				</dropdown>
+				<dropdown label="Stent" print_text_before="A" print_text_after=" stent was deployed across the stenosis.">
+						4 mm | 5 mm
+				</dropdown>
+
+			</multi_select>
+		</content>
+	</module>
+
 
 	<module>
 		<name>
@@ -373,14 +412,14 @@ Not present | Present
 				</dropdown>
 
 			</multi_select>
-
-
+			<text_entry subtype="medium">
+			</text_entry>
 		</content>
 	</module>
 
 	<template>
 		<name>
-			Endovascular Stroke Thrombectomy
+			Stroke Thrombectomy
 		</name>
 		<type>
 			Angiography
@@ -413,11 +452,12 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 			</insert>
 			<query_insert>Access technique
 			</query_insert>
-			<insert>
-				Stroke pass
-			</insert>
+
 			<query_insert>
 				Stroke pass
+			</query_insert>
+			<query_insert>
+				Carotid angioplasty
 			</query_insert>
 
 			<selection label="Haemostasis" showdetailson="1000">
