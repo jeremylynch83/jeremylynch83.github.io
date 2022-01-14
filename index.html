@@ -678,10 +678,8 @@
 							key: 'Name',
 							sortable: false
 						},
-						{
-							key: 'Type',
-							sortable: false
-						},
+
+
 						{
 							key: 'minid',
 							label: "Minimum inner diameter (inches)",
@@ -974,7 +972,6 @@
 
 									this.similarModal.table.push({
 										Name: d.name_man,
-										Type: d.type,
 										minid: d.minid.toFixed(3),
 										maxod: d.maxod.toFixed(3),
 										Lengths: d.length + " cm",
@@ -996,7 +993,6 @@
 								) {
 									this.similarModal.table.push({
 										Name: d.name_man,
-										Type: d.type,
 										minid: d.minid.toFixed(3),
 										maxod: d.maxod.toFixed(3),
 										Lengths: d.length + " cm",
@@ -1011,7 +1007,6 @@
 
 									this.similarModal.table.push({
 										Name: d.name_man,
-										Type: d.type,
 										url: "http://neurotool.org/index.html?search=" + d.name
 									});
 									this.similarModal.n++;
@@ -1023,7 +1018,6 @@
 
 									this.similarModal.table.push({
 										Name: d.name_man,
-										Type: d.type,
 										minid: d.minid.toFixed(3),
 										maxod: d.maxod.toFixed(3),
 										Lengths: d.length + " cm",
