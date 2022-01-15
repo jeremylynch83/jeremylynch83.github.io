@@ -146,13 +146,55 @@
             <b-modal id=" help_modal" title="NeuroTool: Help" ok-only>
             </b-modal>
 
-            <b-container class="footer">
-                This tool is for educational purposes only. <b-link href="mailto: jeremy.lynch@gmail.com"> Contact
-                    us.
-                </b-link>
-            </b-container>
 
     </div>
+
+    <footer class="text-lg-start " style="background-color: #f5faff; color:rgb(158, 158, 172); margin-top: 100px">
+        <div class="container p-4 pb-0">
+            <section>
+                <div class="row">
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">
+                            NeuroTool
+                        </h6>
+                        <b-link v-b-modal.help_modal>
+                            Information on neurointerventinal devices including help with sizing and
+                            clinical prediction/classification calculators.
+                        </b-link>
+                    </div>
+                    <hr class="w-100 clearfix d-md-none" />
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Links</h6>
+                        <p>
+                            <a href="index.html">Device Information</a>
+                        </p>
+                        <p>
+                            <a v-b-modal.conversion_modal style="color: rgb(35, 57, 119)">Unit Converter</a>
+                        </p>
+                        <p>
+                            <a href="calc.html?search=Unruptured aneurysm">Clinical Prediction</a>
+                        </p>
+                    </div>
+                    <hr class="w-100 clearfix d-md-none" />
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                        <p>
+                            <b-link href="https://www.drjeremylynch.com/">Dr Jeremy Lynch</b-link>
+                        </p>
+                        <p>
+                            <b-link href="mailto: jeremy.lynch@gmail.com">Jeremy.Lynch@gmail.com</b-link>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="p-3 pt-0 text-center">
+                <div class="p-3">
+                    © 2022 Copyright Kinech Ltd
+                </div>
+            </section>
+        </div>
+    </footer>
+
 
 
     <script>
