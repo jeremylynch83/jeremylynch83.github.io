@@ -2370,6 +2370,9 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 			<text_entry label="Note is made of" subtype="small">
 			</text_entry>
 
+			<text_entry subtype="medium">
+			</text_entry>
+
 			<selection label="Bones">
 				There is no acute fracture or destructive bony lesion.
 			</selection>
