@@ -4355,7 +4355,7 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 
 
 	<template>
-		<name>MRI Head: Aneurysm Follow-Up (Not Treated)
+		<name>MRI Head: Aneurysm Follow-Up (Untreated)
 		</name>
 		<type>
 			Diagnostic
@@ -4374,8 +4374,10 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 			<text_entry subtype="medium">
 			</text_entry>
 
-			<insert>Aneurysm description</insert>
-			<query_insert>Aneurysm description</query_insert>
+			<insert>Aneurysm follow-up untreated</insert>
+			<query_insert>Aneurysm follow-up untreated</query_insert>
+			<query_insert>Aneurysm follow-up treated</query_insert>
+			
 
 
 			<insert>Intracranial Angiogram</insert>
