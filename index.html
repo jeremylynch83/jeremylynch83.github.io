@@ -54,6 +54,7 @@
 					<b-dropdown-item href="calc.html?search=Intracranial hypotension">Intracranial Hypotension
 					</b-dropdown-item>
 				</b-nav-item-dropdown>
+				<b-nav-item v-b-modal.help_modal>Help</b-nav-item>
 			</b-navbar-nav>
 
 		</b-navbar>
@@ -65,16 +66,13 @@
 			<div id="intro_text" v-show="deviceInputs.length ==1 && deviceInputs[0].active == null"
 				style="background-color:rgb(241, 247, 255); padding: 20px; border-radius: 5px">
 				<h1>Independent neurointerventional device information.</h1>
-
-				<p>This tool provides information on neurointerventinal devices including help with sizing. It also
-					presents
-					clinical prediction/classification calculators to aid decision making. </p>
-				</p>
+				<p></p>
 				<p>
-					<b-button variant="primary" v-b-modal.help_modal>Help</b-button>
-					<b-button variant="warning" href="calc.html?search=Unruptured aneurysm">New! Clinical Calculators
-					</b-button>
-				</p>
+					<a href="https://donate.redcrossredcrescent.org/ua/donate/~my-donation?_cv=1" style="text-decoration: underline;   
+					text-decoration-color: blue;">Donate to the Ukrainian
+						Red
+						Cross</a></p>
+
 
 
 			</div>
@@ -394,7 +392,7 @@
 								NeuroTool
 							</h6>
 							<b-link v-b-modal.help_modal>
-								Information on neurointerventinal devices including help with sizing and
+								Information on neurointerventional devices including help with sizing and
 								clinical prediction/classification calculators.
 							</b-link>
 						</div>
