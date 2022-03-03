@@ -2670,12 +2670,12 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 				</dropdown>
 
 			</multi_select>
-			<multi_select label="Microhaemorrhage" >
+			<multi_radio label="Microhaemorrhage" >
 
 				<radio label="Microhaemorrhage" flags="dont_print_normal">
 					Not present | Present
 				</radio>
-			</multi_select>
+			</multi_radio>
 
 			<multi_select label="Atrophy" askfurtherdetails="true">
 				<dropdown label="Cerebral severity" print_text_before="There is">
