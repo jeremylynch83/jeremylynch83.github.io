@@ -4257,7 +4257,7 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 			<multi_select label="Description">
 				<free_text label="Location" print_text_before="The treated" print_text_after="is noted."></free_text>
 				<dropdown label="Residual">
-				The aneurysm is excluded from the circulation | There is a basal neck remnant | There is filling of the aneurysm sac.
+				The aneurysm is excluded from the circulation. | There is a basal neck remnant. | There is filling of the aneurysm sac.
 				</dropdown>
 				<dropdown label="Change">
 				There has been no change since the previous study. | There has been a decrease in size since the previous study. | There has been an increase in size since the previous study.
