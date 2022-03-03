@@ -2668,10 +2668,15 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 				<dropdown label="Severity" print_text_before="which is non-specific but may represent a" print_text_after="burden of small vessel disease">
 					mild | moderate | severe
 				</dropdown>
-				<dropdown label="Microhaemorrhage">
-					There are no cerebral microhaemorrhages.
-				</dropdown>
+
 			</multi_select>
+			<multi_select label="Microhaemorrhage" >
+
+				<radio label="Microhaemorrhage" flags="dont_print_normal">
+					Not present | Present
+				</radio>
+			</multi_select>
+
 			<multi_select label="Atrophy" askfurtherdetails="true">
 				<dropdown label="Cerebral severity" print_text_before="There is">
 					mild | moderate | severe
