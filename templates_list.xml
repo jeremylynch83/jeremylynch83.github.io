@@ -3438,6 +3438,8 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 			</text_entry>
 		</content>
 	</template>
+
+
 	<template>
 		<name>
 			MRI Head: Tumour/Mass Diagnosis
@@ -4290,6 +4292,81 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 		</content>
 	</module>
 	
+
+		<template>
+		<name>MRI Head and Spine: SAH follow up
+		</name>
+		<type>
+			Diagnostic
+		</type>
+		<title>MRI Head
+		</title>
+		<content>
+			<insert>
+				MRI Head Start
+			</insert>
+			<insert>
+				Comparison
+			</insert>
+			<h1>Findings</h1>
+
+			<h2 flags="dont_print">
+				Acute pathology: head
+			</h2>
+			<text_entry subtype="medium" flags="dont_print_label">
+			</text_entry>
+
+			<query_insert>Aneurysm description
+			</query_insert>
+			<query_insert>DAVF description
+			</query_insert>
+			<query_insert>AVM description
+			</query_insert>
+
+			<multi_radio>
+				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
+					Not present | Present
+				</radio>
+				<radio label="Flow voids" normaltext="The major intracranial arteries and dural venous sinuses return normal signal flow void.">
+					Normal | Abnormal
+				</radio>
+				<radio label="Acute haemorrhage" normaltext="There is no acute intracranial haemorrhage.">
+					Not present | Present
+				</radio>
+				<radio label="Collection" normaltext="No intracranial collection is present.">
+					Not present | Present
+				</radio>
+				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
+					Not present | Present
+				</radio>
+			</multi_radio>
+			<text_entry subtype="large">
+			</text_entry>
+			<insert>
+				MRI Head Checklist
+			</insert>
+			<h2>Spine</h2>
+			<text_entry subtype="medium" flags="dont_print_label">
+			</text_entry>
+
+			<selection label="Alignment and height">Normal spinal alignment with preservation of vertebral body height and signal.</selection>
+			<selection label="Spondylosis">No significant spondylotic disc or facet joint changes.</selection>
+			<selection label="Stenosis">No central canal narrowing</selection>
+			<insert>
+				Generic spine
+			</insert>
+			<h1>
+				Conclusion
+			</h1>
+			<selection label="Stenosis">No cranial or spinal cause for subarachnoid haemorrhage identified. </selection>
+
+			<text_entry label="" subtype="medium">
+			</text_entry>
+
+
+		</content>
+	</template>
+
 
 	<template>
 		<name>MRI Head: Aneurysm Follow-Up (Treated)
