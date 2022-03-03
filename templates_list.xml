@@ -145,7 +145,7 @@ Not present | Present
 		<content>
 			<h2 flags="dont_print|print_space">Angiography</h2>
 
-			<multi_checkbox label="Catheters used included the following: ">
+			<multi_checkbox label="Catheters " print_text_after="catheter used.">
 				<checkbox>
 					Berenstein
 				</checkbox>
@@ -4323,6 +4323,8 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 			<query_insert>AVM description
 			</query_insert>
 
+			<insert>Intracranial Angiogram</insert>
+
 			<multi_radio>
 				<radio label="Acute infact" normaltext="There is no acute cortical infarct.">
 					Not present | Present
@@ -4358,7 +4360,7 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 			<h1>
 				Conclusion
 			</h1>
-			<selection label="Stenosis">No cranial or spinal cause for subarachnoid haemorrhage identified. </selection>
+			<selection label="Negative study">No cranial or spinal cause for subarachnoid haemorrhage identified. </selection>
 
 			<text_entry label="" subtype="medium">
 			</text_entry>
