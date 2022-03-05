@@ -2051,6 +2051,10 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 			</h2>
 			<text_entry label="" subtype="medium">
 			</text_entry>
+			<selection label="Occlusion">
+				There is no proximal intracranial occlusion
+			</selection>
+			
 			<selection label="Right carotid artery">
 				The right carotid artery is normal | The imaged intracranial portion of the right internal carotid artery is normal | Non-stenotic calcified plaque affects the right carotid bifurcation. | Non-stenotic mixed plaque affects the right carotid bifurcation. 
 			</selection>
@@ -2067,9 +2071,6 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 				The basilar artery is normal
 			</selection>
 
-			<selection label="Occlusion">
-				There is no proximal intracranial occlusion
-			</selection>
 			<selection label="Collaterals">
 				There are good collateral vessels | There are poor collateral vessels
 			</selection>
@@ -2145,18 +2146,20 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 			<h1>
 				Findings
 			</h1>
+			<query_insert>
+				CT Head
+			</query_insert>
+			<query_insert>
+			ASPECT Score
+			</query_insert>
+
 			<insert>
 			Intracranial Angiogram
 			</insert>
 			<query_insert>
 				CT Angiogram Neck Extra
 			</query_insert>
-			<query_insert>
-			ASPECT Score
-			</query_insert>
-			<query_insert>
-				CT Head
-			</query_insert>
+
 			<h1>
 				Conclusion
 			</h1>
