@@ -1466,8 +1466,9 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 				<radio label="Space occupying lesion" normaltext="There are no space occupying lesions.">
 					Not present | Present
 				</radio>
-
-			</multi_radio>
+				<radio label="Ventricles" normaltext="The ventricles are not hydrocephalic.">
+					Normal | Enlarged
+				</radio>			</multi_radio>
 
 
 			<h2 flags="dont_print">
@@ -2075,7 +2076,7 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 				There are good collateral vessels | There are poor collateral vessels
 			</selection>
 			<selection label="Aneurysm/Vascular malformation">
-				No aneurysms or other intracranial vascular abnormalities are identified
+				No intracranial aneurysms or other vascular abnormalities are identified
 			</selection>
 			<text_entry label="Perfusion" subtype="medium">
 			</text_entry>
