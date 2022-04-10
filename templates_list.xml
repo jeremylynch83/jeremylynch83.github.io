@@ -145,7 +145,7 @@ Not present | Present
 		<content>
 			<h2 flags="dont_print|print_space">Angiography</h2>
 
-			<multi_checkbox label="Catheters " print_text_after="catheter used.">
+			<multi_checkbox label="Catheters " print_text_before="A" print_text_after="catheter was used.">
 				<checkbox>
 					Berenstein
 				</checkbox>
