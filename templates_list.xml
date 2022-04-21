@@ -2058,33 +2058,33 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 				There is no proximal intracranial occlusion
 			</dropdown>
 			
-			<dropdown label="Right carotid artery">
+			<dropdown label="Right carotid artery" print_text_after=". ">
 				The right carotid artery is normal | The imaged intracranial portion of the right internal carotid artery is normal | Non-stenotic calcified plaque affects the right carotid bifurcation. | Non-stenotic mixed plaque affects the right carotid bifurcation. 
 			</dropdown>
-			<dropdown label="Left carotid artery">
+			<dropdown label="Left carotid artery" print_text_after=". ">
 				The left carotid artery is normal | The imaged intracranial portion of the left internal carotid artery is normal | Non-stenotic calcified plaque affects the left carotid bifurcation. | Non-stenotic mixed plaque affects the left carotid bifurcation. 
 			</dropdown>
-			<dropdown label="Right vertebral artery">
+			<dropdown label="Right vertebral artery" print_text_after=". ">
 				The right vertebral artery is normal | The imaged intracranial portion of the right vertebral artery is normal
 			</dropdown>
-			<dropdown label="Left vertebral artery">
+			<dropdown label="Left vertebral artery" print_text_after=". ">
 				The left vertebral artery is normal | The imaged intracranial portion of the left vertebral artery is normal
 			</dropdown>
-			<dropdown label="Basilar artery">
+			<dropdown label="Basilar artery" print_text_after=". ">
 				The basilar artery is normal
 			</dropdown>
 
-			<dropdown label="Collaterals">
+			<dropdown label="Collaterals" print_text_after=". ">
 				There are good collateral vessels | There are poor collateral vessels
 			</dropdown>
-			<dropdown label="Aneurysm/Vascular malformation">
+			<dropdown label="Aneurysm/Vascular malformation" print_text_after=". ">
 				No intracranial aneurysms or other vascular abnormalities are identified
 			</dropdown>
 			
 			<free_text label="Perfusion" subtype="medium">
 			</free_text>
 			
-						<dropdown label="Venous sinuses">
+						<dropdown label="Venous sinuses"  print_text_after=". ">
 				The venous sinuses appear normal
 			</dropdown>
 		
