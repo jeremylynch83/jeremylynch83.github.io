@@ -2052,39 +2052,44 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 			</h2>
 			<text_entry label="" subtype="medium">
 			</text_entry>
-			<selection label="Occlusion">
-				There is no proximal intracranial occlusion
-			</selection>
 			
-			<selection label="Right carotid artery">
+			<multi_select label="Vessels" askfurtherdetails="true">
+			<dropdown label="Occlusion">
+				There is no proximal intracranial occlusion
+			</dropdown>
+			
+			<dropdown label="Right carotid artery">
 				The right carotid artery is normal | The imaged intracranial portion of the right internal carotid artery is normal | Non-stenotic calcified plaque affects the right carotid bifurcation. | Non-stenotic mixed plaque affects the right carotid bifurcation. 
-			</selection>
-			<selection label="Left carotid artery">
+			</dropdown>
+			<dropdown label="Left carotid artery">
 				The left carotid artery is normal | The imaged intracranial portion of the left internal carotid artery is normal | Non-stenotic calcified plaque affects the left carotid bifurcation. | Non-stenotic mixed plaque affects the left carotid bifurcation. 
-			</selection>
-			<selection label="Right vertebral artery">
+			</dropdown>
+			<dropdown label="Right vertebral artery">
 				The right vertebral artery is normal | The imaged intracranial portion of the right vertebral artery is normal
-			</selection>
-			<selection label="Left vertebral artery">
+			</dropdown>
+			<dropdown label="Left vertebral artery">
 				The left vertebral artery is normal | The imaged intracranial portion of the left vertebral artery is normal
-			</selection>
-			<selection label="Basilar artery">
+			</dropdown>
+			<dropdown label="Basilar artery">
 				The basilar artery is normal
-			</selection>
+			</dropdown>
 
-			<selection label="Collaterals">
+			<dropdown label="Collaterals">
 				There are good collateral vessels | There are poor collateral vessels
-			</selection>
-			<selection label="Aneurysm/Vascular malformation">
+			</dropdown>
+			<dropdown label="Aneurysm/Vascular malformation">
 				No intracranial aneurysms or other vascular abnormalities are identified
-			</selection>
-			<text_entry label="Perfusion" subtype="medium">
-			</text_entry>
-			<multi_radio>
-				<radio label="Venous sinuses" flags="dont_print_normal">
-					Normal | Abnormal
-				</radio>
-			</multi_radio>
+			</dropdown>
+			
+			<free_text label="Perfusion" subtype="medium">
+			</free_text>
+			
+						<dropdown label="Venous sinuses">
+				The venous sinuses appear normal
+			</dropdown>
+		
+		</multi_select >
+
 		</content>
 	</module>
 	<module>
