@@ -2053,7 +2053,7 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 			<text_entry label="" subtype="medium">
 			</text_entry>
 			
-			<multi_select label="Vessels abnormal?" askfurtherdetails="true">
+			<multi_select label="Report vessels individually?" askfurtherdetails="true">
 			<dropdown label="Occlusion">
 				There is no proximal intracranial occlusion
 			</dropdown>
