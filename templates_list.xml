@@ -4259,7 +4259,7 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 		</name>
 		<content>
 			<multi_select label="Description">
-				<free_text label="Location" print_text_before="The treated" print_text_after="is noted."></free_text>
+				<free_text label="Location" print_text_before="The treated" print_text_after="aneurysm is noted."></free_text>
 				<dropdown label="Residual">
 				The aneurysm is excluded from the circulation. | There is a basal neck remnant. | There is filling of the aneurysm sac.
 				</dropdown>
