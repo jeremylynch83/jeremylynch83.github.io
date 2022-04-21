@@ -2676,7 +2676,7 @@ The risks of the procedure included failure to recanalize vasculature, worsening
 			</multi_select>
 			<multi_radio label="Microhaemorrhage" >
 
-				<radio label="Microhaemorrhage" flags="dont_print_normal">
+				<radio label="Microhaemorrhage" normaltext="No microhaemorrhages are apparent. ">
 					 Present | Not present 
 				</radio>
 			</multi_radio>
