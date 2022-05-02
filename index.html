@@ -29,6 +29,7 @@
 	<script src="js/VueBootstrapTypeahead.umd.min.js"></script>
 	<!-- Graphical Support -->
 	<!--<script src="raphael.js"></script>-->
+	<script src="https://d3js.org/d3.v7.min.js"></script>
 	<!-- Device Library -->
 	<script src="deviceList.js"></script>
 </head>
@@ -206,6 +207,10 @@
 
 		<b-container id="result_container" v-show="deviceInputs.length >1 && deviceInputs[0].active != null ">
 			<b-jumbotron bg-variant="light">
+				<svg id="diagram" width=0 height=0>
+					<g  transform="translate(50,50)"></g>
+				</svg>
+
 				<div id="result" class="lead"></div>
 
 
@@ -434,8 +439,6 @@
 
 	<script>
 		/* GENERIC FUNCTIONS */
-		
-		// Test4
 		const pi = 3.14159;
 		
 
@@ -474,7 +477,9 @@
 		function format_name(name) {
 			return name.toLowerCase().replace(/\s+/g, '');
 		}
-
+		
+		/* SPECIFIC FUNCTIONS */
+		
 		function parse_lengths(str) {
 			var list = str;
 			if (typeof str === 'string' || str instanceof String) {
@@ -506,6 +511,47 @@
 
 			return version;
 		}
+		
+		function check_multi_device(parent_od, children) {
+			var it_fits = false;
+			if (children.length >0) {
+				var child_array = JSON.parse(JSON.stringify(children));
+				console.log(child_array);
+
+				for (var n=0; n< child_array.length; n++) {
+					child_array[n].r = child_array[n].r;
+				}
+				child_array.sort((a, b) => b.r - a.r);
+				//console.log(child_array);
+
+				d3.packSiblings(child_array);
+
+				var needed_parent = d3.packEnclose(child_array);
+				var actual_parent = {'r': parent_od};
+				child_array.push(actual_parent);
+
+				var svg = document.getElementById('diagram');
+
+				var box = svg.getBoundingClientRect();
+				var ratio = (box.width/parent_od)*0.9;
+				console.log(ratio);
+
+				d3.select("#diagram g").selectAll("*").remove()
+				d3.select("#diagram g")
+					.selectAll('child_array.node')
+					.data(child_array)
+					.enter()
+					.append('circle')
+					.classed('node', true)
+					.attr('cx', d => d.x* ratio/2)
+					.attr('cy', d => d.y* ratio/2)
+					.attr('r', d => d.r* ratio/2);
+				if (needed_parent.r <= parent_od) it_fits = true;
+			}
+
+			return it_fits;
+		}
+		
 
 		function check_compatibility(parent, child) {
 			var comment = "";
@@ -641,7 +687,6 @@
 					}
 				}
 			}
-
 			return solution_text;
 		}
 
@@ -912,7 +957,7 @@
 								case "surfaceCoating":
 									info_extra += "<p><b>Surface Coating: </b>" + deviceInfo[prop] + "</p>";
 									break;
-								case "recommendedparentid":
+								case "Recommendedparentid":
 									info_extra +=
 										"<p><b>Recommended parent device inner dimensions: </b>" +
 										deviceInfo[prop] + "\"</p>";
@@ -1192,20 +1237,20 @@
 							children.forEach(child => {
 								/* Add up all devices inside parent catheter */
 								if (child.getAttribute("data") != "") {
+						
+									var child_od = 0;
 									child_data = JSON.parse(child.getAttribute("data"));
 
 									if (child_data.recommendedParentId != null) {
-
-										child_total_od = child_total_od + child_data
-											.recommendedParentId - 0.0001;
+										child_od = child_data.recommendedParentId - 0.0001;
+										child_total_od = child_total_od + child_od;
 									} else {
-										child_total_od = child_total_od + child_data
-											.maxod;
+										child_od = child_data.maxod;
+										child_total_od = child_total_od + child_od;
 									}
 
-									console.log(child_data.name + ": " + child_total_od);
 
-									child_list.push(child_data.name);
+									child_list.push({name: child_data.name, r: child_od});
 
 									// Compare lengths
 									length_txt = length_txt + compare_list_lengths(
@@ -1220,31 +1265,31 @@
 								}
 							})
 
-							if (child_total_od >= parent_data.minid || compat_str != "") {
+							if (!check_multi_device(parent_data.minid, child_list) || compat_str != "") {
 								summary.fit_verdict = false;
 
 								switch (child_list.length) {
 									case 1:
-										child_str = child_list[0];
+										child_str = child_list[0].name;
 										break;
 									case 2:
 										child_str = "The combination of " + child_str +
-											child_list[0] +
+											child_list[0].name +
 											" and " +
 											child_list[
-												1];
+												1].name;
 										break;
 									default:
 										child_str = child_str + "The combination of ";
 										for (var n = 0; n < child_list.length; n++) {
 											if (n < (child_list.length - 1)) child_str =
 												child_str +
-												child_list[n] + ", ";
+												child_list[n].name + ", ";
 											if (n == (child_list.length - 1)) child_str =
 												child_str +
 												" and " +
 												child_list[
-													n] + ",";
+													n].name + ",";
 										}
 										break;
 								}
@@ -1257,7 +1302,7 @@
 							// Calculate space left
 							var children_area = pi * (child_total_od / 2) * (child_total_od / 2);
 							var dif_area = parent_area - children_area;
-							//console.log(dif_area);
+							//(dif_area);
 							if (dif_area > minimum_run_area && parent_data
 								.type.toLowerCase() != "microcatheter" && parent_data.type
 								.toLowerCase() !=
@@ -1337,6 +1382,8 @@
 				},
 
 				updateSizer: function () {
+					d3.select("#diagram g").selectAll("*").remove()
+
 					var result = this.checkSizes();
 					var result_text = "";
 
@@ -1450,7 +1497,6 @@
 					return id;
 				},
 				removeInput: function (id) {
-					console.log(id);
 
 					if (id != "device0") {
 						tree.getElementById(id).remove();
@@ -1484,6 +1530,7 @@
 				var newInput1 = this.addInput("inside",
 					"Enter device e.g. catheter, balloon, stent, flow-diverter, Onyx, wire ...",
 					"guide catheters", null, params.search);
+					
 
 			}
 		})

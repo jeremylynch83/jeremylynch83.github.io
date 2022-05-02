@@ -138,3 +138,10 @@ a {
 	color: rgb(35, 57, 119);
 
 }
+
+
+circle {
+  fill: cadetblue;
+  opacity: 0.3;
+  stroke: black;
+}
