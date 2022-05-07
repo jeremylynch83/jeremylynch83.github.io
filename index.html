@@ -516,36 +516,15 @@
 			var it_fits = false;
 			if (children.length >0) {
 				var child_array = JSON.parse(JSON.stringify(children));
-				console.log(child_array);
 
 				for (var n=0; n< child_array.length; n++) {
 					child_array[n].r = child_array[n].r;
 				}
 				child_array.sort((a, b) => b.r - a.r);
-				//console.log(child_array);
-
 				d3.packSiblings(child_array);
 
 				var needed_parent = d3.packEnclose(child_array);
-				var actual_parent = {'r': parent_od};
-				child_array.push(actual_parent);
 
-				var svg = document.getElementById('diagram');
-
-				var box = svg.getBoundingClientRect();
-				var ratio = (box.width/parent_od)*0.9;
-				console.log(ratio);
-
-				d3.select("#diagram g").selectAll("*").remove()
-				d3.select("#diagram g")
-					.selectAll('child_array.node')
-					.data(child_array)
-					.enter()
-					.append('circle')
-					.classed('node', true)
-					.attr('cx', d => d.x* ratio/2)
-					.attr('cy', d => d.y* ratio/2)
-					.attr('r', d => d.r* ratio/2);
 				if (needed_parent.r <= parent_od) it_fits = true;
 			}
 
@@ -700,10 +679,6 @@
 
 		/* Specific functions */
 
-
-		//var address = "https://evtoday.com/device-guide/us";
-
-
 		window.app = new Vue({
 			components: {
 				VueBootstrapTypeahead
@@ -853,9 +828,6 @@
 					var xmlText = new XMLSerializer().serializeToString(tree);
 
 					document.getElementById("message2").value = xmlText;
-
-					//history.pushState(null, "title", "test")
-
 				},
 
 				changeDevice(input_name, new_device) {
@@ -1206,6 +1178,81 @@
 						contrast_text: ""
 					}
 
+					// Test data
+					var test = {"children": [
+                {"children": [
+                	{"children": [
+                  {"stat": 1},
+                  {"stat": 1}
+
+                ]},
+                  {"stat": 1}
+                ]},
+                {"children": [
+                  {"stat": 1},
+                  {"stat": 1}
+
+                ]},
+                {"children": [
+                  {"stat": 1},
+                  {"stat": 1}
+
+                ]},
+            ]};
+
+					// Draw diagram
+					function recursive_iterate(level, array_level) {
+						array_level.children = [];
+
+						level.childNodes.forEach(device => {
+							var data;
+							var new_array_level = [];
+							if (device.getAttribute("data") != "") data = JSON.parse(device
+								.getAttribute("data"));
+
+							array_level.children.push({
+							"stat": data.minid,
+							"name": data.name
+							});
+							if (device.hasChildNodes()) {
+								recursive_iterate(device, array_level);
+							}
+						});
+						return diag_tree;
+					}
+
+					var diag_tree = {};
+					var diag = recursive_iterate(tree.firstChild, diag_tree);
+					console.log(diag);
+					//console.log(test);
+
+					var root = d3.hierarchy(diag)
+						.sum(d => d.hasOwnProperty("stat") ? d.stat : 0)
+						.sort((a,b) => b.value - a.value);
+					var partition = d3.pack()
+						.size([100,100])
+					partition(root);
+
+					var svg = document.getElementById('diagram');
+					var box = svg.getBoundingClientRect();
+					var ratio = (box.width/diag.children[0].stat)*0.9;
+					//console.log
+
+					d3.select("#diagram g").selectAll("*").remove()
+
+					d3.select("#diagram g")
+						.selectAll('circle.node')
+						.data(root.descendants())
+						.enter()
+						.append('circle')
+						.classed('node', true)
+						.attr('cx', d => d.x)
+						.attr('cy', d => d.y)
+						.attr('r', d => d.r);
+
+
+
+					// Calculate fitting
 					var x = tree.querySelectorAll("device");
 					x.forEach(parent => {
 						var parent_data = "";
