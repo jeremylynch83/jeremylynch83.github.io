@@ -504,6 +504,7 @@
 			data.splice(n, 1);
 
 			data.forEach(device => {
+				console.log(device.name);
 				device.name = device.name.trim();
 				device.type = toTitleCase(device.type.trim());
 				device.name_man = device.name + " (" + device.type + ", " + device.manufacturer + ")";
@@ -929,7 +930,7 @@
 								case "surfaceCoating":
 									info_extra += "<p><b>Surface Coating: </b>" + deviceInfo[prop] + "</p>";
 									break;
-								case "Recommendedparentid":
+								case "recommendedParentId":
 									info_extra +=
 										"<p><b>Recommended parent device inner dimensions: </b>" +
 										deviceInfo[prop] + "\"</p>";
