@@ -25,10 +25,6 @@
     <script src="scores.js"></script>
     <script src="js/vue.js"></script>
     <script src="js/bootstrap-vue.js"></script>
-    <script src="js/lodash.js"></script>
-    <script src="js/papaparse.js"></script>
-    <!-- Type Ahead Library -->
-    <script src="js/VueBootstrapTypeahead.umd.min.js"></script>
 </head>
 
 <body>
@@ -59,18 +55,6 @@
 
         <b-container fluid="sm">
             <p></p>
-            <!--<p><i>“The good thing about standards is that there are so many to choose from.” ― Andrew S. Tanenbaum </i>
-            </p>-->
-
-            <!-- <b-dropdown right text="Select calculator">
-                <b-dropdown-item @click="set_score_type(this.aneurysm_risk)">Unruptured aneurysm</b-dropdown-item>
-                <b-dropdown-item @click="set_score_type(this.avf_risk)">Dural arteriovenous fistula</b-dropdown-item>
-                <b-dropdown-item @click="set_score_type(this.avm_risk)">Arteriovenous Malformation
-                </b-dropdown-item>
-                <b-dropdown-item @click="set_score_type(this.carotid_stenosis)">Carotid stenosis</b-dropdown-item>
-                <b-dropdown-item @click="set_score_type(this.i_hypotension)">Intracranial hypotension</b-dropdown-item>
-            </b-dropdown>-->
-
             <p></p>
             <div v-if="score!=null">
                 <template>
