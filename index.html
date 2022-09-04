@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <!-- TODO
 
 	W3C validation: https://validator.w3.org/nu/?doc=http%3A%2F%2Fneurotool.org%2F
@@ -8,857 +7,760 @@
 -->
 
 <head>
-
-	<meta name="description"
-		content="Information on catheters, balloons, stents, flow-divertors, thrombectomy devices, coils, and other devices, whether devices fit inside each other, what similar devices are available and more. It also includes clinical prediction/classification calculators to aid clinical decision making. ">
-
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, user-scalable=no">
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-	<title>NeuroTool: Neurointervention Device Information</title>
-	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
-	<link type="text/css" rel="stylesheet" href="css/bootstrap-vue.css" />
-	<link href="css/VueBootstrapTypeahead.css" rel="stylesheet" />
-	<link type="text/css" rel="stylesheet" href="css/my.css" />
-	<!-- Load polyfills to support older browsers -->
-	<script src="js/polyfill.min.js"></script>
-	<!-- Required scripts -->
-	<script src="js/vue.js"></script>
-	<script src="js/bootstrap-vue.js"></script>
-	<!-- Type Ahead Library -->
-	<script src="js/VueBootstrapTypeahead.umd.min.js"></script>
-	<!-- Graphical Support -->
-	<!--<script src="raphael.js"></script>-->
-	<script src="https://d3js.org/d3.v7.min.js"></script>
-	<!-- Device Library -->
-	<script src="deviceList.js"></script>
+    <meta name="description" content="Information on catheters, balloons, stents, flow-divertors, thrombectomy devices, coils, and other devices, whether devices fit inside each other, what similar devices are available and more. It also includes clinical prediction/classification calculators to aid clinical decision making. ">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>NeuroTool: Neurointervention Device Information</title>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/bootstrap-vue.css" />
+    <link href="css/VueBootstrapTypeahead.css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="css/my.css" />
+    <!-- Load polyfills to support older browsers -->
+    <script src="js/polyfill.min.js"></script>
+    <!-- Required scripts -->
+    <script src="js/vue.js"></script>
+    <script src="js/bootstrap-vue.js"></script>
+    <!-- Type Ahead Library -->
+    <script src="js/VueBootstrapTypeahead.umd.min.js"></script>
+    <!-- Graphical Support -->
+    <!--<script src="raphael.js"></script>-->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Device Library -->
+    <script src="deviceList.js"></script>
 </head>
 
 <body>
-	<div id="app">
-
-		<b-navbar type="dark" variant="info">
-			<b-navbar-brand href="index.html">NeuroTool</b-navbar-brand>
-			<b-navbar-nav>
-
-				<b-nav-item-dropdown id="dropdown-offset" text="Devices" right>
-					<b-dropdown-item href="index.html">Device Sizer</b-dropdown-item>
-					<b-dropdown-item v-b-modal.conversion_modal>Unit converter</b-dropdown-item>
-					<b-dropdown-item v-b-modal.help_modal>About</b-dropdown-item>
-				</b-nav-item-dropdown>
-
-				<b-nav-item-dropdown id="dropdown-offset" text="Prediction" right>
-					<b-dropdown-item href="calc.html?search=Unruptured aneurysm">Unruptured aneurysm</b-dropdown-item>
-					<b-dropdown-item href="calc.html?search=Dural Arteriovenous Fistula">DAVF</b-dropdown-item>
-					<b-dropdown-item href="calc.html?search=Arteriovenous Malformation">AVM</b-dropdown-item>
-					<b-dropdown-item href="calc.html?search=Carotid stenosis">Carotid Stenosis</b-dropdown-item>
-					<b-dropdown-item href="calc.html?search=Intracranial hypotension">Intracranial Hypotension
-					</b-dropdown-item>
-				</b-nav-item-dropdown>
-				<b-nav-item v-b-modal.help_modal>Help</b-nav-item>
-			</b-navbar-nav>
-
-		</b-navbar>
-
-		<b-container>
-			<p></p>
-			<p></p>
-
-			<div id="intro_text" v-show="deviceInputs.length ==1 && deviceInputs[0].active == null"
-				style="background-color:rgb(241, 247, 255); padding: 20px; border-radius: 5px">
-				<h1>Independent neurointerventional device information.</h1>
-				<p>Check out our new <a href="http://neurointerventionatlas.com/" style="text-decoration: underline;   
+    <div id="app">
+        <b-navbar type="dark" variant="info">
+            <b-navbar-brand href="index.html">NeuroTool</b-navbar-brand>
+            <b-navbar-nav>
+                <b-nav-item-dropdown id="dropdown-offset" text="Devices">
+                    <b-dropdown-item href="index.html">Device Sizer</b-dropdown-item>
+                    <b-dropdown-item href="http://neurointerventionatlas.com/">Primer on Neurointerventional Devices</b-dropdown-item>
+                    <b-dropdown-item v-b-modal.conversion_modal>Unit converter</b-dropdown-item>
+                    <b-dropdown-item v-b-modal.help_modal>About</b-dropdown-item>
+                </b-nav-item-dropdown>
+                <b-nav-item-dropdown id="dropdown-offset" text="Prediction" right>
+                    <b-dropdown-item href="calc.html?search=Unruptured aneurysm">Unruptured aneurysm</b-dropdown-item>
+                    <b-dropdown-item href="calc.html?search=Dural Arteriovenous Fistula">DAVF</b-dropdown-item>
+                    <b-dropdown-item href="calc.html?search=Arteriovenous Malformation">AVM</b-dropdown-item>
+                    <b-dropdown-item href="calc.html?search=Carotid stenosis">Carotid Stenosis</b-dropdown-item>
+                    <b-dropdown-item href="calc.html?search=Intracranial hypotension">Intracranial Hypotension
+                    </b-dropdown-item>
+                </b-nav-item-dropdown>
+                <b-nav-item v-b-modal.help_modal>Help</b-nav-item>
+            </b-navbar-nav>
+        </b-navbar>
+        <b-container>
+            <p></p>
+            <p></p>
+            <div id="intro_text" v-show="deviceInputs.length ==1 && deviceInputs[0].active == null" style="background-color:rgb(241, 247, 255); padding: 20px; border-radius: 5px">
+                <h1>Independent neurointerventional device information.</h1>
+                <p>Check out our new <a href="http://neurointerventionatlas.com/" style="text-decoration: underline;   
 					text-decoration-color: blue;">Primer on Neurointerventional Devices</a>.</p>
-				<p></p>
-				<p></p>
-				<p>
-					<a href="https://donate.redcrossredcrescent.org/ua/donate/~my-donation?_cv=1" style="text-decoration: underline;   
-					text-decoration-color: blue;">🇺🇦 Donate to the Ukrainian
-						Red
-						Cross</a></p>
-
-
-
-			</div>
-
-			<template v-for="n in deviceInputs">
-				<p></p>
-				<b-form-group :label-cols="n.hierarchy" :key="n.id" :label="n.hierarchy_text" label-size="sm">
-					<vue-bootstrap-typeahead :key="n.id" :ref="n.id" :data="devices" :placeholder="n.text"
-						v-model="n.input_text" :serializer="item => item.name_man"
-						@hit="updateDevice(n.id, $event); updateSizer()">
-					</vue-bootstrap-typeahead>
-					<div class="text-right"
-						style="color:rgb(124, 124, 124); letter-spacing: 0px;  font-family:Arial Narrow, sans-serif-condensed">
-						{{n.display_info}}
-					</div>
-					<div class="text-right">
-						<b-button-group>
-
-							<b-dropdown v-show="n.hierarchy == 0 && n.active != null" variant="transparent"
-								style="font-size: 0.9em;" right>
-								<template #button-content>
-									{{access}}
-								</template>
-								<b-dropdown-item class="btn btn-sm  py-0" variant="outline-secondary"
-									class="btn btn-sm  py-0" @click="access = 'Femoral artery'">Femoral artery
-								</b-dropdown-item>
-								<b-dropdown-item class="btn btn-sm  py-0" variant="outline-secondary"
-									class="btn btn-sm  py-0" @click="access = 'Radial artery'">Radial artery
-								</b-dropdown-item>
-								<b-dropdown-item class="btn btn-sm  py-0" variant="outline-secondary"
-									class="btn btn-sm  py-0" @click="access = 'Brachial artery'">Brachial artery
-								</b-dropdown-item>
-							</b-dropdown>
-							<b-dropdown variant="success" style="font-size: 0.9em;" right>
-								<template #button-content>
-									Fit
-								</template>
-
-								<b-dropdown-item variant="outline-secondary" class="btn btn-sm  py-0" @click="addInput('inside', 'Enter device e.g. catheter, balloon, stent, flow-diverter, Onyx, wire ...', 'guide catheters', n.id); 
+                <p></p>
+            </div>
+            <template v-for="n in deviceInputs">
+                <p></p>
+                <b-form-group :label-cols="n.hierarchy" :key="n.id" :label="n.hierarchy_text" label-size="sm">
+                    <vue-bootstrap-typeahead :key="n.id" :ref="n.id" :data="devices" :placeholder="n.text" v-model="n.input_text" :serializer="item => item.name_man" @hit="updateDevice(n.id, $event); updateSizer()">
+                    </vue-bootstrap-typeahead>
+                    <div class="text-right" style="color:rgb(124, 124, 124); letter-spacing: 0px;  font-family:Arial Narrow, sans-serif-condensed">
+                        {{n.display_info}}
+                    </div>
+                    <div class="text-right">
+                        <b-button-group>
+                            <b-dropdown v-show="n.hierarchy == 0 && n.active != null" variant="transparent" style="font-size: 0.9em;" right>
+                                <template #button-content>
+                                    {{access}}
+                                </template>
+                                <b-dropdown-item class="btn btn-sm  py-0" variant="outline-secondary" class="btn btn-sm  py-0" @click="access = 'Femoral artery'">Femoral artery
+                                </b-dropdown-item>
+                                <b-dropdown-item class="btn btn-sm  py-0" variant="outline-secondary" class="btn btn-sm  py-0" @click="access = 'Radial artery'">Radial artery
+                                </b-dropdown-item>
+                                <b-dropdown-item class="btn btn-sm  py-0" variant="outline-secondary" class="btn btn-sm  py-0" @click="access = 'Brachial artery'">Brachial artery
+                                </b-dropdown-item>
+                            </b-dropdown>
+                            <b-dropdown variant="success" style="font-size: 0.9em;" right>
+                                <template #button-content>
+                                    Fit
+                                </template>
+                                <b-dropdown-item variant="outline-secondary" class="btn btn-sm  py-0" @click="addInput('inside', 'Enter device e.g. catheter, balloon, stent, flow-diverter, Onyx, wire ...', 'guide catheters', n.id); 
 									">Fit device inside</b-dropdown-item>
-								<b-dropdown-item v-show="n.hierarchy != 0" class="btn btn-sm  py-0"
-									variant="outline-secondary" class="btn btn-sm  py-0"
-									@click="addInput('beside', 'Enter device e.g. catheter, balloon, stent, wire ...', 'guide catheters', n.id)">
-									Fit device beside</b-dropdown-item>
-								<b-dropdown-item v-show="n.active != null" class="btn btn-sm  py-0"
-									variant="outline-secondary" class="btn btn-sm  py-0" @click="fitLaunch(n.id)">What
-									devices does this fit inside?</b-dropdown-item>
-
-							</b-dropdown>
-
-							<b-button variant="danger" class="btn btn-sm  py-0" style="font-size: 0.9em;"
-								@click="removeInput(n.id)">
-								Remove</b-button>
-
-							<b-dropdown v-show="n.active != null" variant="info" style="font-size: 0.9em;" right>
-								<template #button-content>
-									Info
-								</template>
-
-								<b-dropdown-item class="btn btn-sm  py-0" variant="outline-secondary"
-									class="btn btn-sm  py-0" @click="info(n.id)">Device info</b-dropdown-item>
-
-								<b-dropdown-item class="btn btn-sm  py-0" variant="outline-secondary"
-									class="btn btn-sm  py-0" @click="compareLaunch(n.id)">Compare with ...
-								</b-dropdown-item>
-
-								<b-dropdown-item class="btn btn-sm  py-0" variant="outline-secondary"
-									class="btn btn-sm  py-0" @click="similarLaunch(n.id)">Similar devices
-								</b-dropdown-item>
-							</b-dropdown>
-						</b-button-group>
-					</div>
-				</b-form-group>
-			</template>
-
-			<div id="inputs"></div>
-			<b-container v-show="deviceInputs.length == 1 && deviceInputs[0].active != null"
-				style="background-color:rgb(255, 255, 239); padding: 20px; border-radius: 5px">
-				<p>Tip: Add another device inside this one by selecting Fit → Fit device inside</p>
-			</b-container>
-
-			<p></p>
-			<p></p>
-		</b-container>
-
-		<b-container v-show="deviceInputs.length == 1 && deviceInputs[0].active != null">
-			<b-jumbotron bg-variant="light">
-				<b itemscope itemtype="https://schema.org/MedicalDevice">{{infoModal.device.name}}</b> is a
-				{{infoModal.device.type}} manufactured by
-				{{infoModal.device.manufacturer}}.
-				<p></p>
-				<div>
-					<b-table small :items="info_table" style="font-size: 0.9em; " head-variant="light">
-					</b-table>
-				</div>
-				<div id="info_extra">
-				</div>
-				<b-table small :items="sizes_table" style="font-size: 0.9em; " responsive caption-top
-					head-variant="light" v-show="sizes_table.length != 0">
-					<template #table-caption><b>{{tablecaption}}<b></template>
-
-				</b-table>
-				<p><b>Similar devices:</b></p>
-				<div>
-					<b-table small :items="similarModal.table" :fields="similarModal.fields" class="align-left"
-						style="font-size: 0.8em; font-family:Arial Narrow, sans-serif-condensed" head-variant="light"
-						:sort-by.sync="similarModal.sortBy" :sort-desc.sync="similarModal.sortDesc">
-
-						<template #cell(Name)="row">
-							<b-button :href="row.item.url" variant="link">
-								{{row.item.Name}}
-							</b-button>
-						</template>
-
-					</b-table>
-
-				</div>
-				<b-button size=" sm" variant="danger" @click="" v-b-modal.feedback_modal>
-					Disagree with this?
-				</b-button>
-
-
-
-			</b-jumbotron>
-		</b-container>
-
-
-
-
-
-		<b-container id="result_container" v-show="deviceInputs.length >1 && deviceInputs[0].active != null ">
-			<b-jumbotron bg-variant="light">
-				<svg id="diagram" width=0 height=0>
-					<g  transform="translate(50,50)"></g>
-				</svg>
-
-				<div id="result" class="lead"></div>
-
-
-				<div id="details" style="color:rgb(179, 179, 179)"></div>
-				<b-button size="sm" variant="danger" @click="" v-b-modal.feedback_modal>
-					Disagree with this?
-				</b-button>
-				<b-button size="sm" href="http://neurotool.org/">
-					Reset
-				</b-button>
-				<p></p>
-
-				<div id="more"></div>
-				<div id="paper"></div>
-				<p></p>
-			</b-jumbotron>
-		</b-container>
-
-
-
-		<!---------------- MODALS -------------->
-		<b-modal id="help_modal" title="Help" ok-only>
-
-			<h4>What is this for?</h4>
-			<p>
-				The number of devices used in neurointerventional procedures has exploded in recent years. This tool
-				provides information on:
-			</p>
-			<ul>
-				<li>Sizes of catheters, balloons, stents, coils, and other devices.</li>
-				<li>Whether devices fit inside each other. </li>
-				<li>What similar devices are available. </li>
-				<li>Information about the devices, such as the design and materials a stent is made of.</li>
-				<li>Whether a catheter is DMSO compatible. </li>
-				<li>Direct links to further manufacturer information. </li>
-				<li>In future we plan to add more information such as how to prepare and use devices, and what is the
-					evidence for their usage. </li>
-
-			</ul>
-			<h4>Who made this?</h4>
-			<p>This website was created by <a href="https://www.drjeremylynch.com/"> Dr Jeremy Lynch</a>. He is an interventional neuroradiologist at <a href="https://www.kch.nhs.uk/service/a-z/interventional-neuroradiology">Kings College Hospital, London, United Kingdon</a>. 
-				Special thanks to Dr Patrick Nicholson for
-				ideas and feedback.</p>
-			<h4>Who funds the site?</h4>
-			<p>The site is independent and we receive no funding. </p>
-
-			<h4>How to use</h4>
-			<p>Start to type the device you are interested in the search box and then select from the list that pops
-				up.
-				You can select catheters, wires, stents, balloons, and other devices. </p>
-			<img src="img/help1.png" class="center" width="75%" alt="Help example 1">
-			<p>You will be presented with information about the device. Insert a device inside this one by selecting
-				"Fit" Then "Fit device inside". You can view information about any of the devices by selecting "Info"
-				then "Device info". </p>
-			<img src="img/help2.png" class="center" width="75%" alt="Help example 2">
-			<p>Further devices can be inserted either inside or beside this device using "Fit device inside" or "New
-				device beside". Under Results you will see whether the devices are compatible in terms of diameter
-				and
-				length. If there are incompatibilities then a message will appear describing the problem. </p>
-			<img src="img/help3.png" class="center" width="75%" alt="Help example 3">
-
-
-		</b-modal>
-
-		<b-modal id="conversion_modal" title="Conversion" ok-only>
-			<b-form-group label="Inches:">
-				<b-form-input v-model="convert_unit.inches" type="number" @input="convertFunction('inches')">
-				</b-form-input>
-			</b-form-group>
-
-			<b-form-group label="French:">
-				<b-form-input v-model="convert_unit.french" type="number" @input="convertFunction('french')">
-				</b-form-input>
-			</b-form-group>
-
-			<b-form-group label="Milimetre:">
-				<b-form-input v-model="convert_unit.mm" type="number" @input="convertFunction('mm')">
-				</b-form-input>
-			</b-form-group>
-
-			<template #modal-footer="{ Submit, close }">
-				<b-button @click=" convert_unit.inches = null; convert_unit.french = null; convert_unit.mm = null; "
-					variant="success">Reset</b-button>
-				<b-button @click="close()" variant="danger">Close</b-button>
-			</template>
-
-
-		</b-modal>
-
-
-		<b-modal :id="fitModal.id" :title="fitModal.title" ok-only>
-			<p>The <b>{{fitModal.first_device.name}}</b> will fit inside ({{fitModal.n}} items): </p>
-			<p></p>
-			<p></p>
-			<div>
-				<b-table sticky-header small :items="fitModal.table" :fields="fitModal.fields"
-					style="font-size: 0.8em; font-family:Arial Narrow, sans-serif-condensed" head-variant="light"
-					:sort-by.sync="fitModal.sortBy" :sort-desc.sync="fitModal.sortDesc"></b-table>
-			</div>
-		</b-modal>
-
-		<b-modal :id="similarModal.id" :title="similarModal.title" ok-only>
-			<p>Similar devices ({{similarModal.n}} items): </p>
-			<p></p>
-			<p></p>
-			<div>
-				<b-table sticky-header small :items="similarModal.table" :fields="similarModal.fields"
-					style="font-size: 0.8em; font-family:Arial Narrow, sans-serif-condensed" head-variant="light"
-					:sort-by.sync="similarModal.sortBy" :sort-desc.sync="similarModal.sortDesc" class="align-left">
-
-					<template #cell(Name)="row">
-						<b-button :href="row.item.url" variant="link">
-							{{row.item.Name}}
-						</b-button>
-					</template>
-				</b-table>
-			</div>
-		</b-modal>
-
-		<b-modal id="feedback_modal" title="Feedback" static>
-			<div id="feedback">
-
-				<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8"
-					action="https://formspree.io/f/xbjqrwnz" method="post">
-					<fieldset id="fs-frm-inputs">
-						<textarea rows="10" name="message" id="message" placeholder="Enter description (optional)"
-							required="" style="width:100%"></textarea>
-
-						<textarea style="display:none;" name="message2" id="message2" required=""></textarea>
-						<input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-					</fieldset>
-					<button style="display:none;" type="submit" id="submit_button">Send</button>
-				</form>
-			</div>
-
-			<template #modal-footer="{ Submit, close }">
-				<b-button @click="feedbackSubmit" variant="success">Submit</b-button>
-				<b-button @click="close()" variant="danger">Cancel</b-button>
-			</template>
-		</b-modal>
-
-		<b-modal :id="infoModal.id" :title="infoModal.device.name" ok-only static>
-			The <b>{{infoModal.device.name}}</b> is a {{infoModal.device.type}} manufactured by
-			{{infoModal.device.manufacturer}}.
-			<p></p>
-			<div>
-				<b-table small :items="info_table" style="font-size: 0.9em; " head-variant="light">
-				</b-table>
-			</div>
-			<div id="info_extra2">
-			</div>
-			<b-table small :items="sizes_table" style="font-size: 0.9em; " responsive caption-top head-variant="light"
-				v-show="sizes_table.length != 0">
-				<template #table-caption><b>Table:<b></template>
-				<template #table-caption><b>{{tablecaption}}<b></template>
-			</b-table>
-
-			<b-button size="sm" variant="danger" @click="" v-b-modal.feedback_modal>
-				Disagree with this?
-			</b-button>
-
-		</b-modal>
-
-		<b-modal :id="compareModal.id" :title="compareModal.title" ok-only>
-			<p>Compare <b> {{ compareModal.first_device.name }} </b> with: </p>
-			<vue-bootstrap-typeahead :data="devices" :serializer="item => item.name_man" @hit="compare_device($event)"
-				placeholder="Enter device to compare...">
-			</vue-bootstrap-typeahead>
-			<p></p>
-			<p></p>
-			<div>
-				<b-table small :items="compareModal.table"
-					style="font-size: 0.9em; font-family:Arial Narrow, sans-serif-condensed" head-variant="light">
-				</b-table>
-			</div>
-		</b-modal>
-
-
-		<footer class="text-lg-start " style="background-color: #f5faff; color:rgb(158, 158, 172); margin-top: 100px">
-			<div class="container p-4 pb-0">
-				<section>
-					<div class="row">
-						<div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-							<h6 class="text-uppercase mb-4 font-weight-bold">
-								NeuroTool
-							</h6>
-							<b-link v-b-modal.help_modal>
-								Information on neurointerventional devices including help with sizing and
-								clinical prediction/classification calculators.
-							</b-link>
-						</div>
-						<hr class="w-100 clearfix d-md-none" />
-						<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-							<h6 class="text-uppercase mb-4 font-weight-bold">Links</h6>
-							<p>
-								<a href="index.html">Device Information</a>
-							</p>
-							<p>
-								<a v-b-modal.conversion_modal style="color: rgb(35, 57, 119)">Unit Converter</a>
-							</p>
-							<p>
-								<a href="calc.html?search=Unruptured aneurysm">Clinical Prediction</a>
-							</p>
-						</div>
-						<hr class="w-100 clearfix d-md-none" />
-						<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-							<h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-							<p>
-								<b-link href="mailto: jeremy.lynch@gmail.com">Dr Jeremy Lynch</b-link>
-							</p>
-							<p>
-								<b-link href="mailto: jeremy.lynch@gmail.com">Jeremy.Lynch@gmail.com</b-link>
-							</p>
-						</div>
-					</div>
-				</section>
-				<section class="p-3 pt-0 text-center">
-					<div class="p-3">
-						© 2022 Copyright Kinech Ltd
-					</div>
-				</section>
-			</div>
-		</footer>
-	</div>
-
-
-	<script>
-		/* GENERIC FUNCTIONS */
-		const pi = 3.14159;
-		
-
-		function toTitleCase(str) {
-			str = str.replaceAll("_", " ");
-			return str.toLowerCase().split(' ').map(function (word) {
-				return (word.charAt(0).toUpperCase() + word.slice(1));
-			}).join(' ');
-		}
-
-		function strip_man(text) {
-			return (text.replace(/\s\(([^)]+)\)/, ""));
-		}
-
-		function in_to_mm(inches) {
-			return inches * 25.4;
-		}
-
-		function in_to_fr(inches) {
-			return inches * 76.2;
-		}
-
-		function in_to_all(inches) {
-			var text = "";
-			if (inches != null || inches == "0") {
-				var in_short = inches.toFixed(4) + "\"";
-				var mm = in_to_mm(inches).toFixed(2) + " mm";
-				var fr = in_to_fr(inches).toFixed(1) + " Fr";
-				text = in_short + " (" + mm + ", " + fr + ")";
-			} else {
-				text = "N/A"
-			}
-			return text;
-		}
-
-		function format_name(name) {
-			return name.toLowerCase().replace(/\s+/g, '');
-		}
-		
-		/* SPECIFIC FUNCTIONS */
-		
-		function parse_lengths(str) {
-			var list = str;
-			if (typeof str === 'string' || str instanceof String) {
-				list = str.split(/\//);
-				for (n = 0; n < list.length; n++) {
-					list[n] = parseInt(list[n]);
-				}
-				list = list.sort();
-			} else list = null;
-
-			if (Array.isArray(list)) {
-				if (isNaN(list[0])) list[0] = null;
-			}
-			return list;
-		}
-
-		function setupDevices(data) {
-
-			var n = 0;
-			for (; data[n].type != "date"; n++) {}
-			var version = data[n].name;
-			data.splice(n, 1);
-
-			data.forEach(device => {
-				console.log(device.name);
-				device.name = device.name.trim();
-				device.type = toTitleCase(device.type.trim());
-				device.name_man = device.name + " (" + device.type + ", " + device.manufacturer + ")";
-			})
-
-			return version;
-		}
-		
-		function check_multi_device(parent_od, children) {
-			var it_fits = false;
-			if (children.length >0) {
-				var child_array = JSON.parse(JSON.stringify(children));
-
-				for (var n=0; n< child_array.length; n++) {
-					child_array[n].r = child_array[n].r;
-				}
-				child_array.sort((a, b) => b.r - a.r);
-				d3.packSiblings(child_array);
-
-				var needed_parent = d3.packEnclose(child_array);
-
-				if (needed_parent.r <= parent_od) it_fits = true;
-			}
-
-			return it_fits;
-		}
-		
-
-		function check_compatibility(parent, child) {
-			var comment = "";
-
-			parent_str = format_name(parent.name);
-			child_str = format_name(child.name);
-
-			// Names incompatibilities
-
-			var parent_incompat = [];
-			var child_incompat = [];
-
-			if (parent.incompatibility != null) {
-				parent_incompat = parent.incompatibility.split(/\//);
-				for (var n = 0; n < parent_incompat.length; n++) {
-					parent_incompat[n] = format_name(parent_incompat[n]);
-				}
-			}
-
-			if (child.incompatibility != null) {
-				child_incompat = child.incompatibility.split(/\//);
-				for (var n = 0; n < parent_incompat.length; n++) {
-					parent_incompat[n] = format_name(parent_incompat[n]);
-				}
-			}
-
-			for (var x = 0; x < parent_incompat.length; x++) {
-				if (child_str.includes(parent_incompat[x])) {
-					comment = comment + "There is a possible incompatibility between the " + parent.name + " and the " +
-						child.name + ". ";
-				}
-			}
-
-			for (var x = 0; x < child_incompat.length; x++) {
-				if (parent_incompat.includes(child_incompat[x])) {
-					comment = comment + "There is a possible incompatibility between the " + parent.name + " and the " +
-						child.name + ". ";
-				}
-			}
-
-			// Parent sizes
-
-			if (parent.minid < child.recommendedparentid) {
-				comment += "The manufacturer recommends that " + child.name +
-					" requires a larger inner diameter than that of " + parent.name + ". ";
-
-			}
-
-
-			//DMSO
-
-			if (child_str.search("onyx") != -1 || child_str.search("phil") != -1 || child_str.search("squid") != -1) {
-				if (parent.dmso != null) {
-					if (parent.dmso != "yes") {
-						comment += parent.name + " is not DMSO compatible. ";
-					}
-				} else {
-					comment += parent.name + " is not DMSO compatible. ";
-				}
-			}
-
-			return comment;
-		}
-
-		function compare_list_lengths(parent_str, child_str, parent_name, child_name) {
-
-			parent_list = parse_lengths(parent_str);
-			child_list = parse_lengths(child_str);
-			var solution_list = [];
-			var solution_text = "";
-			var problem_list = [];
-
-			/* No lengths for 1 catheter or if catheters are the same type */
-			if (parent_list != null && parent_list[0] != null && child_list != null && child_list[0] != null &&
-				parent_name !=
-				child_name) {
-				/* Only one length for each catheter and they both fit */
-				if (parent_list.length == 1 && child_list.length == 1 && parent_list[0] < child_list[0]) solution_text =
-					"";
-				else {
-
-					for (var x = 0; x < child_list.length; x++) {
-						for (var y = 0; y < parent_list.length; y++) {
-							if (child_list[x] > parent_list[y]) {
-								/* Obtain all combinations that will fit */
-								solution_list.push(
-									" " + parent_name + " " + parent_list[y] + " cm and " + child_name + " " +
-									child_list[
-										x] + " cm"
-								);
-							}
-							if (child_list[x] <= parent_list[y]) {
-								/* Obtain all combinations that will NOT fit */
-								problem_list.push(
-									" " + parent_name + " " + parent_list[y] + " cm and " + child_name + " " +
-									child_list[
-										x] + " cm"
-								);
-							}
-						}
-					}
-					solution_list = solution_list.sort();
-					problem_list = problem_list.sort();
-
-					/* Write the text */
-
-					switch (solution_list.length) {
-						case 1:
-							/* Just 1 solution */
-							solution_text = "The following combinations of lengths is necessary: " + solution_list[0] +
-								". ";
-							break;
-						case (child_list.length * parent_list.length):
-							/* All combinations are fine */
-							solution_text = "";
-							break;
-						case 0:
-							/* There are no solutions */
-							solution_text = child_name + " is too short for the " + parent_name + ". ";
-							break
-						default:
-							/* There are a few solutions */
-							if (solution_list.length < problem_list.length) {
-								solution_text = "Avoid the following combinations of lengths: " + solution_list
-									.toString() +
-									". ";
-							} else {
-								solution_text = "Avoid the following combinations of lengths: " + problem_list
-									.toString() +
-									". ";
-							}
-							break
-					}
-				}
-			}
-			return solution_text;
-		}
-
-		/* GLOBAL VARIABLES */
-
-		var tXML = "<root id=\"root\"></root>";
-		var tree = (new DOMParser).parseFromString(tXML, "text/xml"); // Stores device info
-		var deviceInputs = []; // Stores info about input boxes
-
-		var version = setupDevices(deviceList);
-
-		/* Specific functions */
-
-		window.app = new Vue({
-			components: {
-				VueBootstrapTypeahead
-			},
-			el: '#app',
-			data: {
-				convert_unit: {
-					inches: null,
-					french: null,
-					mm: null
-				},
-				access: 'Access (optional)',
-				devices: deviceList,
-				deviceInputs: deviceInputs,
-				id_count: 0,
-				infoModal: {
-					id: 'info-modal',
-					device: {
-						name: null,
-						type: null,
-						manufacturer: null
-					}
-
-				},
-				fitModal: {
-					id: 'fit-modal',
-					title: 'Fit Inside',
-					first_device: "",
-					n: 0,
-					table: [],
-					fields: [{
-							key: 'Name',
-							sortable: false
-						},
-						{
-							key: 'Type',
-							sortable: false
-						},
-						{
-							key: 'minid',
-							label: "Minimum inner diameter (inches)",
-							sortable: true
-						},
-						{
-							key: 'maxod',
-							label: "Maximum outer diameter (inches)",
-							sortable: true
-						},
-						{
-							key: 'Lengths',
-							sortable: false
-						},
-					],
-					sortBy: 'minid',
-					sortDesc: false,
-				},
-				similarModal: {
-					id: 'similar-modal',
-					title: 'Similar Devices',
-					first_device: "",
-					n: 0,
-					table: [],
-					fields: [{
-							key: 'Name',
-							sortable: false
-						},
-
-
-						{
-							key: 'minid',
-							label: "Minimum inner diameter (inches)",
-							sortable: true
-						},
-						{
-							key: 'maxod',
-							label: "Maximum outer diameter (inches)",
-							sortable: true
-						},
-						{
-							key: 'Lengths',
-							sortable: false
-						},
-					],
-					sortBy: 'minid',
-					sortDesc: false,
-				},
-				compareModal: {
-					id: 'compare-modal',
-					title: 'Compare',
-					first_device: "",
-					second_device: "",
-					table: []
-				},
-
-				info_table: [],
-				sizes_table: [],
-				tablecaption: ""
-			},
-
-			methods: {
-				convertFunction: function (unit) {
-					if (unit == "inches") {
-						this.convert_unit.french = (this.convert_unit.inches * 76.2).toFixed(1);
-						this.convert_unit.mm = (this.convert_unit.inches * 25.4).toFixed(3);
-					}
-					if (unit == "french") {
-						this.convert_unit.inches = (this.convert_unit.french / 76.2).toFixed(3);
-						this.convert_unit.mm = (this.convert_unit.french / 3).toFixed(3);
-					}
-					if (unit == "mm") {
-						this.convert_unit.inches = (this.convert_unit.mm / 25.4).toFixed(3);
-						this.convert_unit.french = (this.convert_unit.mm * 3).toFixed(1);
-					}
-					return unit;
-				},
-				feedbackSubmit: function () {
-					if (document.getElementById("message").value == "") {
-						document.getElementById("message").value = "No comment. ";
-					}
-					document.getElementById("submit_button").click();
-				},
-
-				updateDevice: function (passed, e) {
-
-					tree.getElementById(passed).setAttribute("data", JSON.stringify(e));
-
-					this.updateInfo(e);
-
-					var index = deviceInputs.findIndex(
-						function (i) {
-							return i.id == passed;
-						}
-					);
-
-					deviceInputs[index].display_info = "OD: " + e.maxod.toFixed(4) + "\" (" + in_to_fr(e
-							.maxod)
-						.toFixed(1) +
-						" Fr).";
-
-					if (e.minid != null && e.minid != 0) deviceInputs[index].display_info += " ID: " + e.minid
-						.toFixed(4) + "\".";
-					if (e.length != null && e.length != "?") deviceInputs[index].display_info += " " + e
-						.length +
-						" cm";
-					deviceInputs[index].active = "true";
-
-					var xmlText = new XMLSerializer().serializeToString(tree);
-
-					document.getElementById("message2").value = xmlText;
-				},
-
-				changeDevice(input_name, new_device) {
-					var index = deviceInputs.findIndex(
-						function (i) {
-							return i.id == input_name;
-						}
-					);
-					//deviceInputs[index].input_text = new_device;
-					// Assuming only first input to change to start with
-
-					//this.$refs.device0[0].inputValue = "jeremy";
-					//console.log(Object.keys(this.$refs));
-
-
-					for (var p in this.$refs) {
-						//console.log(p + ': ' + this.$refs[p]);
-					}
-
-					//console.log(this.$refs.device0)
-
-				},
-
-				drawDiagram: function () {
-					//var paper = Raphael("paper", 500, 500);
-					//var rect1 = paper.rect(20, 30, 100, 12).attr({ fill: "orange" });
-
-					/*
+                                <b-dropdown-item v-show="n.hierarchy != 0" class="btn btn-sm  py-0" variant="outline-secondary" class="btn btn-sm  py-0" @click="addInput('beside', 'Enter device e.g. catheter, balloon, stent, wire ...', 'guide catheters', n.id)">
+                                    Fit device beside</b-dropdown-item>
+                                <b-dropdown-item v-show="n.active != null" class="btn btn-sm  py-0" variant="outline-secondary" class="btn btn-sm  py-0" @click="fitLaunch(n.id)">What
+                                    devices does this fit inside?</b-dropdown-item>
+                            </b-dropdown>
+                            <b-button variant="danger" class="btn btn-sm  py-0" style="font-size: 0.9em;" @click="removeInput(n.id)">
+                                Remove</b-button>
+                            <b-dropdown v-show="n.active != null" variant="info" style="font-size: 0.9em;" right>
+                                <template #button-content>
+                                    Info
+                                </template>
+                                <b-dropdown-item class="btn btn-sm  py-0" variant="outline-secondary" class="btn btn-sm  py-0" @click="info(n.id)">Device info</b-dropdown-item>
+                                <b-dropdown-item class="btn btn-sm  py-0" variant="outline-secondary" class="btn btn-sm  py-0" @click="compareLaunch(n.id)">Compare with ...
+                                </b-dropdown-item>
+                                <b-dropdown-item class="btn btn-sm  py-0" variant="outline-secondary" class="btn btn-sm  py-0" @click="similarLaunch(n.id)">Similar devices
+                                </b-dropdown-item>
+                            </b-dropdown>
+                        </b-button-group>
+                    </div>
+                </b-form-group>
+            </template>
+            <div id="inputs"></div>
+            <b-container v-show="deviceInputs.length == 1 && deviceInputs[0].active != null" style="background-color:rgb(255, 255, 239); padding: 20px; border-radius: 5px">
+                <p>Tip: Add another device inside this one by selecting Fit → Fit device inside</p>
+            </b-container>
+            <p></p>
+            <p></p>
+        </b-container>
+        <b-container v-show="deviceInputs.length == 1 && deviceInputs[0].active != null">
+            <b-jumbotron bg-variant="light">
+                <b itemscope itemtype="https://schema.org/MedicalDevice">{{infoModal.device.name}}</b> is a
+                {{infoModal.device.type}} manufactured by
+                {{infoModal.device.manufacturer}}.
+                <p></p>
+                <div>
+                    <b-table small :items="info_table" style="font-size: 0.9em; " head-variant="light">
+                    </b-table>
+                </div>
+                <div id="info_extra">
+                </div>
+                <b-table small :items="sizes_table" style="font-size: 0.9em; " responsive caption-top head-variant="light" v-show="sizes_table.length != 0">
+                    <template #table-caption><b>{{tablecaption}}<b></template>
+                </b-table>
+                <p><b>Similar devices:</b></p>
+                <div>
+                    <b-table small :items="similarModal.table" :fields="similarModal.fields" class="align-left" style="font-size: 0.8em; font-family:Arial Narrow, sans-serif-condensed" head-variant="light" :sort-by.sync="similarModal.sortBy" :sort-desc.sync="similarModal.sortDesc">
+                        <template #cell(Name)="row">
+                            <b-button :href="row.item.url" variant="link">
+                                {{row.item.Name}}
+                            </b-button>
+                        </template>
+                    </b-table>
+                </div>
+                <b-button size=" sm" variant="danger" @click="" v-b-modal.feedback_modal>
+                    Disagree with this?
+                </b-button>
+            </b-jumbotron>
+        </b-container>
+        <b-container id="result_container" v-show="deviceInputs.length >1 && deviceInputs[0].active != null ">
+            <b-jumbotron bg-variant="light">
+                <svg id="diagram" width=0 height=0>
+                    <g transform="translate(50,50)"></g>
+                </svg>
+                <div id="result" class="lead"></div>
+                <div id="details" style="color:rgb(179, 179, 179)"></div>
+                <b-button size="sm" variant="danger" @click="" v-b-modal.feedback_modal>
+                    Disagree with this?
+                </b-button>
+                <b-button size="sm" href="http://neurotool.org/">
+                    Reset
+                </b-button>
+                <p></p>
+                <div id="more"></div>
+                <div id="paper"></div>
+                <p></p>
+            </b-jumbotron>
+        </b-container>
+        <!---------------- MODALS -------------->
+        <b-modal id="help_modal" title="Help" ok-only>
+            <h4>What is this for?</h4>
+            <p>
+                The number of devices used in neurointerventional procedures has exploded in recent years. This tool
+                provides information on:
+            </p>
+            <ul>
+                <li>Sizes of catheters, balloons, stents, coils, and other devices.</li>
+                <li>Whether devices fit inside each other. </li>
+                <li>What similar devices are available. </li>
+                <li>Information about the devices, such as the design and materials a stent is made of.</li>
+                <li>Whether a catheter is DMSO compatible. </li>
+                <li>Direct links to further manufacturer information. </li>
+                <li>In future we plan to add more information such as how to prepare and use devices, and what is the
+                    evidence for their usage. </li>
+            </ul>
+            <h4>Who made this?</h4>
+            <p>This website was created by <a href="https://www.drjeremylynch.com/"> Dr Jeremy Lynch</a>. He is an interventional neuroradiologist at <a href="https://www.kch.nhs.uk/service/a-z/interventional-neuroradiology">Kings College Hospital, London, United Kingdon</a>.
+                Special thanks to Dr Patrick Nicholson for
+                ideas and feedback.</p>
+            <h4>Who funds the site?</h4>
+            <p>The site is independent and we receive no funding. </p>
+            <h4>How to use</h4>
+            <p>Start to type the device you are interested in the search box and then select from the list that pops
+                up.
+                You can select catheters, wires, stents, balloons, and other devices. </p>
+            <img src="img/help1.png" class="center" width="75%" alt="Help example 1">
+            <p>You will be presented with information about the device. Insert a device inside this one by selecting
+                "Fit" Then "Fit device inside". You can view information about any of the devices by selecting "Info"
+                then "Device info". </p>
+            <img src="img/help2.png" class="center" width="75%" alt="Help example 2">
+            <p>Further devices can be inserted either inside or beside this device using "Fit device inside" or "New
+                device beside". Under Results you will see whether the devices are compatible in terms of diameter
+                and
+                length. If there are incompatibilities then a message will appear describing the problem. </p>
+            <img src="img/help3.png" class="center" width="75%" alt="Help example 3">
+        </b-modal>
+        <b-modal id="conversion_modal" title="Conversion" ok-only>
+            <b-form-group label="Inches:">
+                <b-form-input v-model="convert_unit.inches" type="number" @input="convertFunction('inches')">
+                </b-form-input>
+            </b-form-group>
+            <b-form-group label="French:">
+                <b-form-input v-model="convert_unit.french" type="number" @input="convertFunction('french')">
+                </b-form-input>
+            </b-form-group>
+            <b-form-group label="Milimetre:">
+                <b-form-input v-model="convert_unit.mm" type="number" @input="convertFunction('mm')">
+                </b-form-input>
+            </b-form-group>
+            <template #modal-footer="{ Submit, close }">
+                <b-button @click=" convert_unit.inches = null; convert_unit.french = null; convert_unit.mm = null; " variant="success">Reset</b-button>
+                <b-button @click="close()" variant="danger">Close</b-button>
+            </template>
+        </b-modal>
+        <b-modal :id="fitModal.id" :title="fitModal.title" ok-only>
+            <p>The <b>{{fitModal.first_device.name}}</b> will fit inside ({{fitModal.n}} items): </p>
+            <p></p>
+            <p></p>
+            <div>
+                <b-table sticky-header small :items="fitModal.table" :fields="fitModal.fields" style="font-size: 0.8em; font-family:Arial Narrow, sans-serif-condensed" head-variant="light" :sort-by.sync="fitModal.sortBy" :sort-desc.sync="fitModal.sortDesc"></b-table>
+            </div>
+        </b-modal>
+        <b-modal :id="similarModal.id" :title="similarModal.title" ok-only>
+            <p>Similar devices ({{similarModal.n}} items): </p>
+            <p></p>
+            <p></p>
+            <div>
+                <b-table sticky-header small :items="similarModal.table" :fields="similarModal.fields" style="font-size: 0.8em; font-family:Arial Narrow, sans-serif-condensed" head-variant="light" :sort-by.sync="similarModal.sortBy" :sort-desc.sync="similarModal.sortDesc" class="align-left">
+                    <template #cell(Name)="row">
+                        <b-button :href="row.item.url" variant="link">
+                            {{row.item.Name}}
+                        </b-button>
+                    </template>
+                </b-table>
+            </div>
+        </b-modal>
+        <b-modal id="feedback_modal" title="Feedback" static>
+            <div id="feedback">
+                <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xbjqrwnz" method="post">
+                    <fieldset id="fs-frm-inputs">
+                        <textarea rows="10" name="message" id="message" placeholder="Enter description (optional)" required="" style="width:100%"></textarea>
+                        <textarea style="display:none;" name="message2" id="message2" required=""></textarea>
+                        <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                    </fieldset>
+                    <button style="display:none;" type="submit" id="submit_button">Send</button>
+                </form>
+            </div>
+            <template #modal-footer="{ Submit, close }">
+                <b-button @click="feedbackSubmit" variant="success">Submit</b-button>
+                <b-button @click="close()" variant="danger">Cancel</b-button>
+            </template>
+        </b-modal>
+        <b-modal :id="infoModal.id" :title="infoModal.device.name" ok-only static>
+            The <b>{{infoModal.device.name}}</b> is a {{infoModal.device.type}} manufactured by
+            {{infoModal.device.manufacturer}}.
+            <p></p>
+            <div>
+                <b-table small :items="info_table" style="font-size: 0.9em; " head-variant="light">
+                </b-table>
+            </div>
+            <div id="info_extra2">
+            </div>
+            <b-table small :items="sizes_table" style="font-size: 0.9em; " responsive caption-top head-variant="light" v-show="sizes_table.length != 0">
+                <template #table-caption><b>Table:<b></template>
+                <template #table-caption><b>{{tablecaption}}<b></template>
+            </b-table>
+            <b-button size="sm" variant="danger" @click="" v-b-modal.feedback_modal>
+                Disagree with this?
+            </b-button>
+        </b-modal>
+        <b-modal :id="compareModal.id" :title="compareModal.title" ok-only>
+            <p>Compare <b> {{ compareModal.first_device.name }} </b> with: </p>
+            <vue-bootstrap-typeahead :data="devices" :serializer="item => item.name_man" @hit="compare_device($event)" placeholder="Enter device to compare...">
+            </vue-bootstrap-typeahead>
+            <p></p>
+            <p></p>
+            <div>
+                <b-table small :items="compareModal.table" style="font-size: 0.9em; font-family:Arial Narrow, sans-serif-condensed" head-variant="light">
+                </b-table>
+            </div>
+        </b-modal>
+        <footer class="text-lg-start " style="background-color: #f5faff; color:rgb(158, 158, 172); margin-top: 100px">
+            <div class="container p-4 pb-0">
+                <section>
+                    <div class="row">
+                        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">
+                                NeuroTool
+                            </h6>
+                            <p>
+                                <b-link v-b-modal.help_modal>
+                                    Information on neurointerventional devices including help with sizing and
+                                    clinical prediction/classification calculators.
+                                </b-link>
+                            </p>
+                        </div>
+                        <hr class="w-100 clearfix d-md-none" />
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Links</h6>
+                            <p>
+                                <a href="index.html">Device Information</a>
+                            </p>
+                            <p>
+                                <a v-b-modal.conversion_modal style="color: rgb(35, 57, 119)">Unit Converter</a>
+                            </p>
+                            <p>
+                                <a href="calc.html?search=Unruptured aneurysm">Clinical Prediction</a>
+                            </p>
+                        </div>
+                        <hr class="w-100 clearfix d-md-none" />
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                            <p>
+                                <b-link href="mailto: jeremy.lynch@gmail.com">Dr Jeremy Lynch</b-link>
+                            </p>
+                            <p>
+                                <b-link href="mailto: jeremy.lynch@gmail.com">Jeremy.Lynch@gmail.com</b-link>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class="p-3 pt-0 text-center">
+                    <p>
+                        <a href="https://donate.redcrossredcrescent.org/ua/donate/~my-donation?_cv=1" style="text-decoration: underline;   
+					text-decoration-color: blue;">🇺🇦 Please consider donating to the Ukrainian
+                            Red
+                            Cross</a></p>
+                    <div class="p-3">
+                        © 2022 Copyright Kinech Ltd
+                    </div>
+                </section>
+            </div>
+        </footer>
+    </div>
+    <script>
+    /* GENERIC FUNCTIONS */
+    const pi = 3.14159;
+
+
+    function toTitleCase(str) {
+        str = str.replaceAll("_", " ");
+        return str.toLowerCase().split(' ').map(function(word) {
+            return (word.charAt(0).toUpperCase() + word.slice(1));
+        }).join(' ');
+    }
+
+    function strip_man(text) {
+        return (text.replace(/\s\(([^)]+)\)/, ""));
+    }
+
+    function in_to_mm(inches) {
+        return inches * 25.4;
+    }
+
+    function in_to_fr(inches) {
+        return inches * 76.2;
+    }
+
+    function in_to_all(inches) {
+        var text = "";
+        if (inches != null || inches == "0") {
+            var in_short = inches.toFixed(4) + "\"";
+            var mm = in_to_mm(inches).toFixed(2) + " mm";
+            var fr = in_to_fr(inches).toFixed(1) + " Fr";
+            text = in_short + " (" + mm + ", " + fr + ")";
+        } else {
+            text = "N/A"
+        }
+        return text;
+    }
+
+    function format_name(name) {
+        return name.toLowerCase().replace(/\s+/g, '');
+    }
+
+    /* SPECIFIC FUNCTIONS */
+
+    function parse_lengths(str) {
+        var list = str;
+        if (typeof str === 'string' || str instanceof String) {
+            list = str.split(/\//);
+            for (n = 0; n < list.length; n++) {
+                list[n] = parseInt(list[n]);
+            }
+            list = list.sort();
+        } else list = null;
+
+        if (Array.isArray(list)) {
+            if (isNaN(list[0])) list[0] = null;
+        }
+        return list;
+    }
+
+    function setupDevices(data) {
+
+        var n = 0;
+        for (; data[n].type != "date"; n++) {}
+        var version = data[n].name;
+        data.splice(n, 1);
+
+        data.forEach(device => {
+            console.log(device.name);
+            device.name = device.name.trim();
+            device.type = toTitleCase(device.type.trim());
+            device.name_man = device.name + " (" + device.type + ", " + device.manufacturer + ")";
+        })
+
+        return version;
+    }
+
+    function check_multi_device(parent_od, children) {
+        var it_fits = false;
+        if (children.length > 0) {
+            var child_array = JSON.parse(JSON.stringify(children));
+
+            for (var n = 0; n < child_array.length; n++) {
+                child_array[n].r = child_array[n].r;
+            }
+            child_array.sort((a, b) => b.r - a.r);
+            d3.packSiblings(child_array);
+
+            var needed_parent = d3.packEnclose(child_array);
+
+            if (needed_parent.r <= parent_od) it_fits = true;
+        }
+
+        return it_fits;
+    }
+
+
+    function check_compatibility(parent, child) {
+        var comment = "";
+
+        parent_str = format_name(parent.name);
+        child_str = format_name(child.name);
+
+        // Names incompatibilities
+
+        var parent_incompat = [];
+        var child_incompat = [];
+
+        if (parent.incompatibility != null) {
+            parent_incompat = parent.incompatibility.split(/\//);
+            for (var n = 0; n < parent_incompat.length; n++) {
+                parent_incompat[n] = format_name(parent_incompat[n]);
+            }
+        }
+
+        if (child.incompatibility != null) {
+            child_incompat = child.incompatibility.split(/\//);
+            for (var n = 0; n < parent_incompat.length; n++) {
+                parent_incompat[n] = format_name(parent_incompat[n]);
+            }
+        }
+
+        for (var x = 0; x < parent_incompat.length; x++) {
+            if (child_str.includes(parent_incompat[x])) {
+                comment = comment + "There is a possible incompatibility between the " + parent.name + " and the " +
+                    child.name + ". ";
+            }
+        }
+
+        for (var x = 0; x < child_incompat.length; x++) {
+            if (parent_incompat.includes(child_incompat[x])) {
+                comment = comment + "There is a possible incompatibility between the " + parent.name + " and the " +
+                    child.name + ". ";
+            }
+        }
+
+        // Parent sizes
+
+        if (parent.minid < child.recommendedparentid) {
+            comment += "The manufacturer recommends that " + child.name +
+                " requires a larger inner diameter than that of " + parent.name + ". ";
+
+        }
+
+
+        //DMSO
+
+        if (child_str.search("onyx") != -1 || child_str.search("phil") != -1 || child_str.search("squid") != -1) {
+            if (parent.dmso != null) {
+                if (parent.dmso != "yes") {
+                    comment += parent.name + " is not DMSO compatible. ";
+                }
+            } else {
+                comment += parent.name + " is not DMSO compatible. ";
+            }
+        }
+
+        return comment;
+    }
+
+    function compare_list_lengths(parent_str, child_str, parent_name, child_name) {
+
+        parent_list = parse_lengths(parent_str);
+        child_list = parse_lengths(child_str);
+        var solution_list = [];
+        var solution_text = "";
+        var problem_list = [];
+
+        /* No lengths for 1 catheter or if catheters are the same type */
+        if (parent_list != null && parent_list[0] != null && child_list != null && child_list[0] != null &&
+            parent_name !=
+            child_name) {
+            /* Only one length for each catheter and they both fit */
+            if (parent_list.length == 1 && child_list.length == 1 && parent_list[0] < child_list[0]) solution_text =
+                "";
+            else {
+
+                for (var x = 0; x < child_list.length; x++) {
+                    for (var y = 0; y < parent_list.length; y++) {
+                        if (child_list[x] > parent_list[y]) {
+                            /* Obtain all combinations that will fit */
+                            solution_list.push(
+                                " " + parent_name + " " + parent_list[y] + " cm and " + child_name + " " +
+                                child_list[
+                                    x] + " cm"
+                            );
+                        }
+                        if (child_list[x] <= parent_list[y]) {
+                            /* Obtain all combinations that will NOT fit */
+                            problem_list.push(
+                                " " + parent_name + " " + parent_list[y] + " cm and " + child_name + " " +
+                                child_list[
+                                    x] + " cm"
+                            );
+                        }
+                    }
+                }
+                solution_list = solution_list.sort();
+                problem_list = problem_list.sort();
+
+                /* Write the text */
+
+                switch (solution_list.length) {
+                    case 1:
+                        /* Just 1 solution */
+                        solution_text = "The following combinations of lengths is necessary: " + solution_list[0] +
+                            ". ";
+                        break;
+                    case (child_list.length * parent_list.length):
+                        /* All combinations are fine */
+                        solution_text = "";
+                        break;
+                    case 0:
+                        /* There are no solutions */
+                        solution_text = child_name + " is too short for the " + parent_name + ". ";
+                        break
+                    default:
+                        /* There are a few solutions */
+                        if (solution_list.length < problem_list.length) {
+                            solution_text = "Avoid the following combinations of lengths: " + solution_list
+                                .toString() +
+                                ". ";
+                        } else {
+                            solution_text = "Avoid the following combinations of lengths: " + problem_list
+                                .toString() +
+                                ". ";
+                        }
+                        break
+                }
+            }
+        }
+        return solution_text;
+    }
+
+    /* GLOBAL VARIABLES */
+
+    var tXML = "<root id=\"root\"></root>";
+    var tree = (new DOMParser).parseFromString(tXML, "text/xml"); // Stores device info
+    var deviceInputs = []; // Stores info about input boxes
+
+    var version = setupDevices(deviceList);
+
+    /* Specific functions */
+
+    window.app = new Vue({
+        components: {
+            VueBootstrapTypeahead
+        },
+        el: '#app',
+        data: {
+            convert_unit: {
+                inches: null,
+                french: null,
+                mm: null
+            },
+            access: 'Access (optional)',
+            devices: deviceList,
+            deviceInputs: deviceInputs,
+            id_count: 0,
+            infoModal: {
+                id: 'info-modal',
+                device: {
+                    name: null,
+                    type: null,
+                    manufacturer: null
+                }
+
+            },
+            fitModal: {
+                id: 'fit-modal',
+                title: 'Fit Inside',
+                first_device: "",
+                n: 0,
+                table: [],
+                fields: [{
+                        key: 'Name',
+                        sortable: false
+                    },
+                    {
+                        key: 'Type',
+                        sortable: false
+                    },
+                    {
+                        key: 'minid',
+                        label: "Minimum inner diameter (inches)",
+                        sortable: true
+                    },
+                    {
+                        key: 'maxod',
+                        label: "Maximum outer diameter (inches)",
+                        sortable: true
+                    },
+                    {
+                        key: 'Lengths',
+                        sortable: false
+                    },
+                ],
+                sortBy: 'minid',
+                sortDesc: false,
+            },
+            similarModal: {
+                id: 'similar-modal',
+                title: 'Similar Devices',
+                first_device: "",
+                n: 0,
+                table: [],
+                fields: [{
+                        key: 'Name',
+                        sortable: false
+                    },
+
+
+                    {
+                        key: 'minid',
+                        label: "Minimum inner diameter (inches)",
+                        sortable: true
+                    },
+                    {
+                        key: 'maxod',
+                        label: "Maximum outer diameter (inches)",
+                        sortable: true
+                    },
+                    {
+                        key: 'Lengths',
+                        sortable: false
+                    },
+                ],
+                sortBy: 'minid',
+                sortDesc: false,
+            },
+            compareModal: {
+                id: 'compare-modal',
+                title: 'Compare',
+                first_device: "",
+                second_device: "",
+                table: []
+            },
+
+            info_table: [],
+            sizes_table: [],
+            tablecaption: ""
+        },
+
+        methods: {
+            convertFunction: function(unit) {
+                if (unit == "inches") {
+                    this.convert_unit.french = (this.convert_unit.inches * 76.2).toFixed(1);
+                    this.convert_unit.mm = (this.convert_unit.inches * 25.4).toFixed(3);
+                }
+                if (unit == "french") {
+                    this.convert_unit.inches = (this.convert_unit.french / 76.2).toFixed(3);
+                    this.convert_unit.mm = (this.convert_unit.french / 3).toFixed(3);
+                }
+                if (unit == "mm") {
+                    this.convert_unit.inches = (this.convert_unit.mm / 25.4).toFixed(3);
+                    this.convert_unit.french = (this.convert_unit.mm * 3).toFixed(1);
+                }
+                return unit;
+            },
+            feedbackSubmit: function() {
+                if (document.getElementById("message").value == "") {
+                    document.getElementById("message").value = "No comment. ";
+                }
+                document.getElementById("submit_button").click();
+            },
+
+            updateDevice: function(passed, e) {
+
+                tree.getElementById(passed).setAttribute("data", JSON.stringify(e));
+
+                this.updateInfo(e);
+
+                var index = deviceInputs.findIndex(
+                    function(i) {
+                        return i.id == passed;
+                    }
+                );
+
+                deviceInputs[index].display_info = "OD: " + e.maxod.toFixed(4) + "\" (" + in_to_fr(e
+                        .maxod)
+                    .toFixed(1) +
+                    " Fr).";
+
+                if (e.minid != null && e.minid != 0) deviceInputs[index].display_info += " ID: " + e.minid
+                    .toFixed(4) + "\".";
+                if (e.length != null && e.length != "?") deviceInputs[index].display_info += " " + e
+                    .length +
+                    " cm";
+                deviceInputs[index].active = "true";
+
+                var xmlText = new XMLSerializer().serializeToString(tree);
+
+                document.getElementById("message2").value = xmlText;
+            },
+
+            changeDevice(input_name, new_device) {
+                var index = deviceInputs.findIndex(
+                    function(i) {
+                        return i.id == input_name;
+                    }
+                );
+                //deviceInputs[index].input_text = new_device;
+                // Assuming only first input to change to start with
+
+                //this.$refs.device0[0].inputValue = "jeremy";
+                //console.log(Object.keys(this.$refs));
+
+
+                for (var p in this.$refs) {
+                    //console.log(p + ': ' + this.$refs[p]);
+                }
+
+                //console.log(this.$refs.device0)
+
+            },
+
+            drawDiagram: function() {
+                //var paper = Raphael("paper", 500, 500);
+                //var rect1 = paper.rect(20, 30, 100, 12).attr({ fill: "orange" });
+
+                /*
 			Draw a  circle much larger than the combine diameters of the smaller circles
 			Put the smaller circles in it
 			Iterate:
@@ -868,723 +770,731 @@
 			*** If so then find all the circles it intersects and move them towards the centre of the circles. Then check whether any of the inside circles intersects. 
 
 			*/
-				},
-
-				updateInfo: function (deviceInfo) {
-					this.infoModal.device = deviceInfo;
-					this.infoModal.device.type = this.infoModal.device.type.toLowerCase();
-
-					this.info_table = [];
-					this.sizes_table = [];
-					this.tablecaption = "";
-
-
-					if (deviceInfo.type != "liquid embolic") {
-						this.info_table = [{
-							'Maximum outer diameter': in_to_all(deviceInfo.maxod),
-							...(deviceInfo.minid != 0 && {
-								'Minimum inner diameter': in_to_all(deviceInfo.minid)
-							}),
-							...(deviceInfo.length != "?" && {
-								'Lengths': deviceInfo.length + " cm"
-							})
-						}];
-					}
-
-					var info_extra = "";
-
-					for (let prop in deviceInfo) {
-						if (prop != "name" && prop != "type" && prop != "minid" && prop != "maxod" && prop !=
-							"length" && prop != "name_man" && prop != "manufacturer") {
-							switch (prop) {
-								case "url1":
-									info_extra += "<p><b>Manufacturer Information: </b>" + "<a href = \"" +
-										deviceInfo[prop] + "\" target=\"_blank\">Link</a></p>";
-									"</p>";
-									break;
-								case "url2":
-									info_extra += "<p><b>Manufacturer Information 2: </b>" + "<a href = \"" +
-										deviceInfo[prop] + "\" target=\"_blank\">Link</a></p>";
-									"</p>";
-									break;
-								case "ifu":
-									info_extra += "<p><b>Instructions For Use: </b>" + "<a href = \"" +
-										deviceInfo[prop] + "\" target=\"_blank\">Link</a></p>";
-									"</p>";
-									break;
-								case "recommended":
-									info_extra += "<p><b>Recommended Catheter: </b>" + deviceInfo[prop] +
-										"</p>";
-
-									break;
-								case "dmso":
-									info_extra += "<p><b>DMSO Compatibility: </b> Yes</p>";
-									break;
-								case "vesselDiameters":
-									info_extra += "<p><b>Vessel diameters: </b>" + deviceInfo[prop] + "</p>";
-									break;
-								case "ctArtefacts":
-									info_extra += "<p><b>CT Artefact: </b>" + deviceInfo[prop] + "</p>";
-									break;
-								case "tipLengths":
-									info_extra += "<p><b>Tip lengths: </b>" + deviceInfo[prop] + "</p>";
-									break;
-								case "surfaceCoating":
-									info_extra += "<p><b>Surface Coating: </b>" + deviceInfo[prop] + "</p>";
-									break;
-								case "recommendedParentId":
-									info_extra +=
-										"<p><b>Recommended parent device inner dimensions: </b>" +
-										deviceInfo[prop] + "\"</p>";
-									break;
-								case "image":
-									info_extra +=
-										"<p><b>Image:</b><p></p><img class = \"device_img\" src=\"device_images\\" +
-										deviceInfo[prop] + "\" ></p>";
-									break;
-
-								case "youtube":
-									info_extra += "<p><b>Preparation: </b></p>";
-									info_extra +=
-										"<iframe width=\"100%\" height=\"315\" src=\"" + deviceInfo[prop] +
-										"\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; cture-in-picture\" allowfullscreen></iframe>";
-									break;
-								case "tablecaption":
-									break;
-								case "sizetable":
-									var sizes = JSON.parse(deviceInfo[prop]);
-									this.sizes_table = sizes;
-									if (deviceInfo.tablecaption != null) this.tablecaption = deviceInfo
-										.tablecaption;
-									break;
-								case "balt":
-									break;
-
-								default:
-									info_extra += "<p><b>" + toTitleCase(prop) + ": " + "</b>" + deviceInfo[
-											prop] +
-										"</p>";
-									break;
-
-							}
-						}
-					}
-
-					document.getElementById("info_extra").innerHTML = info_extra;
-					document.getElementById("info_extra2").innerHTML = info_extra;
-
-					this.similarModal.first_device = deviceInfo;
-					var first_device = this.similarModal.first_device;
-					this.similarModal.n = 0;
-					this.similarModal.table = [];
-
-					this.similarUpdateTable(first_device);
-				},
-
-				info: function (index) {
-					var deviceInfo = JSON.parse(tree.getElementById(index).getAttribute("data"));
-					this.updateInfo(deviceInfo);
-
-					this.$root.$emit('bv::show::modal', this.infoModal.id);
-				},
-				resetInfoModal() {
-					this.infoModal.title = ''
-				},
-
-				compareLaunch: function (index) {
-					this.compareModal.first_device = JSON.parse(tree.getElementById(index).getAttribute(
-						"data"));
-					var second_device = index;
-					this.compareModal.table = [];
-					this.$root.$emit('bv::show::modal', this.compareModal.id);
-				},
-
-				compare_device: function (index) {
-					var second_device = index;
-					this.compareModal.table = [];
-
-					this.compareModal.table.push({
-						Name: this.compareModal.first_device.name + " (" + this.compareModal
-							.first_device
-							.manufacturer + ")",
-						'Maximum outer diameter': in_to_all(this.compareModal.first_device.maxod),
-						'Minimum inner diameter': in_to_all(this.compareModal.first_device.minid),
-						Lengths: this.compareModal.first_device.length + " cm"
-					}, {
-						Name: second_device.name + " (" + second_device.manufacturer + ")",
-						'Maximum outer diameter': in_to_all(second_device.maxod),
-						'Minimum inner diameter': in_to_all(second_device.minid),
-						Lengths: second_device.length + " cm"
-					});
-				},
-
-				similarUpdateTable: function (first_device) {
-
-					deviceList.forEach(d => {
-						var required_id = null;
-
-						switch (d.type) {
-							case "Microcatheter":
-							case "Guide Catheter":
-							case "Long Sheath":
-							case "Catheter":
-							case "Intermediate Catheter":
-							case "Balloon":
-							case "Sheath":
-
-								if (d.minid < (first_device.minid * 1.05) &&
-									d.minid > (first_device.minid * 0.95) &&
-									d.type.toLowerCase() == first_device.type.toLowerCase()
-								) {
-
-									this.similarModal.table.push({
-										Name: d.name_man,
-										minid: d.minid.toFixed(3),
-										maxod: d.maxod.toFixed(3),
-										Lengths: d.length + " cm",
-										url: "http://neurotool.org/index.html?search=" + d.name
-									});
-									this.similarModal.n++;
-
-								}
-								break;
-							case "Stent":
-							case "Coil":
-							case "Select Catheter":
-							case "Wire":
-							case "Stent Retriever":
-							case "Protection Device":
-								if (d.maxod < (first_device.maxod * 1.05) &&
-									d.maxod > (first_device.maxod * 0.95) &&
-									d.type.toLowerCase() == first_device.type.toLowerCase()
-								) {
-									this.similarModal.table.push({
-										Name: d.name_man,
-										minid: d.minid.toFixed(3),
-										maxod: d.maxod.toFixed(3),
-										Lengths: d.length + " cm",
-										url: "http://neurotool.org/index.html?search=" + d.name
-									});
-									this.similarModal.n++;
-								}
-								break;
-							case "Liquid Embolic":
-								if (
-									d.type.toLowerCase() == first_device.type.toLowerCase()) {
-
-									this.similarModal.table.push({
-										Name: d.name_man,
-										url: "http://neurotool.org/index.html?search=" + d.name
-									});
-									this.similarModal.n++;
-								}
-								break;
-							case "Intrasaccular Device":
-								if (
-									d.type.toLowerCase() == first_device.type.toLowerCase()) {
-
-									this.similarModal.table.push({
-										Name: d.name_man,
-										minid: d.minid.toFixed(3),
-										maxod: d.maxod.toFixed(3),
-										Lengths: d.length + " cm",
-										url: "http://neurotool.org/index.html?search=" + d.name
-									});
-									this.similarModal.n++;
-								}
-								break;
-							default:
-								break
-						}
-					});
-
-					this.similarModal.table.sort(function (a, b) {
-						return b[2] - a[2]
-					});
-
-				},
-
-				similarLaunch: function (index) {
-					this.similarModal.first_device = JSON.parse(tree.getElementById(index).getAttribute(
-						"data"));
-					var first_device = this.similarModal.first_device;
-					this.similarModal.n = 0;
-					this.similarModal.table = [];
-
-					this.similarUpdateTable(first_device);
-
-					this.$root.$emit('bv::show::modal', this.similarModal.id);
-
-				},
-
-				fitLaunch: function (index) {
-					this.fitModal.first_device = JSON.parse(tree.getElementById(index).getAttribute(
-						"data"));
-					var first_device = this.fitModal.first_device;
-					this.fitModal.n = 0;
-					this.fitModal.table = [];
-
-					var required_id = null;
-					if (first_device.recommendedParentId != null) required_id = first_device
-						.recommendedParentId;
-					else required_id = first_device.maxod;
-
-					var dmso_compat_needed = false;
-					var dmso_string = first_device.name.toLowerCase();
-					if (dmso_string.search("onyx") != -1 || dmso_string.search("phil") != -1 ||
-						dmso_string.search("squid") != -1) dmso_compat_needed = true;
-
-					deviceList.forEach(d => {
-						if (required_id < d.minid && dmso_compat_needed == false) {
-
-							this.fitModal.table.push({
-								Name: d.name + " (" + d.manufacturer + ")",
-								Type: d.type,
-								minid: d.minid.toFixed(3),
-								maxod: d.maxod.toFixed(3),
-								Lengths: d.length + " cm"
-							});
-							this.fitModal.n++;
-						} else if (required_id < d.minid && dmso_compat_needed == true) {
-
-							if (d.dmso != null && (d.dmso == "yes" || d.dmso == "Yes" || d.dmso == "y" ||
-									d.dmso == "Y")) {
-
-								this.fitModal.table.push({
-									Name: d.name + " (" + d.manufacturer + ")",
-									Type: d.type,
-									minid: d.minid.toFixed(3),
-									maxod: d.maxod.toFixed(3),
-									Lengths: d.length + " cm"
-								});
-
-							}
-						}
-					});
-
-					this.fitModal.table.sort(function (a, b) {
-						return b[2] - a[2]
-					});
-
-
-					this.$root.$emit('bv::show::modal', this.fitModal.id);
-				},
-
-				checkSizes: function () {
-					const minimum_run_area = 0;
-					const five_fr = 0.0012566370614;
-
-					var summary = {
-						fit_verdict: true,
-						sizes: "",
-						contrast_runs: [],
-						contrast_text: ""
-					}
-
-					// Test data
-					var test = {"children": [
-                {"children": [
-                	{"children": [
-                  {"stat": 1},
-                  {"stat": 1}
-
-                ]},
-                  {"stat": 1}
-                ]},
-                {"children": [
-                  {"stat": 1},
-                  {"stat": 1}
-
-                ]},
-                {"children": [
-                  {"stat": 1},
-                  {"stat": 1}
-
-                ]},
-            ]};
-
-					// Draw diagram
-					function recursive_iterate(level, array_level) {
-						array_level.children = [];
-
-						level.childNodes.forEach(device => {
-							var data;
-							var new_array_level = [];
-							if (device.getAttribute("data") != "") data = JSON.parse(device
-								.getAttribute("data"));
-
-							array_level.children.push({
-							"stat": data.minid,
-							"name": data.name
-							});
-							if (device.hasChildNodes()) {
-								recursive_iterate(device, array_level);
-							}
-						});
-						return diag_tree;
-					}
-
-					var diag_tree = {};
-					var diag = recursive_iterate(tree.firstChild, diag_tree);
-					console.log(diag);
-					//console.log(test);
-
-					var root = d3.hierarchy(diag)
-						.sum(d => d.hasOwnProperty("stat") ? d.stat : 0)
-						.sort((a,b) => b.value - a.value);
-					var partition = d3.pack()
-						.size([100,100])
-					partition(root);
-
-					var svg = document.getElementById('diagram');
-					var box = svg.getBoundingClientRect();
-					var ratio = (box.width/diag.children[0].stat)*0.9;
-					//console.log
-
-					d3.select("#diagram g").selectAll("*").remove()
-
-					d3.select("#diagram g")
-						.selectAll('circle.node')
-						.data(root.descendants())
-						.enter()
-						.append('circle')
-						.classed('node', true)
-						.attr('cx', d => d.x)
-						.attr('cy', d => d.y)
-						.attr('r', d => d.r);
-
-
-
-					// Calculate fitting
-					var x = tree.querySelectorAll("device");
-					x.forEach(parent => {
-						var parent_data = "";
-						if (parent.getAttribute("data") != "") parent_data = JSON.parse(parent
-							.getAttribute("data"));
-						var parent_area = pi * (parent_data.minid / 2) * (parent_data.minid / 2);
-
-						if (!parent.hasChildNodes() && parent_area > minimum_run_area &&
-							parent_data
-							.type.toLowerCase() != "microcatheter" && parent_data.type
-							.toLowerCase() !=
-							"balloon" && parent_data.type
-							.toLowerCase() !=
-							"stent") {
-							summary.contrast_runs.push([
-								parent_data.name, parent_area
-							])
-						}
-
-						if (parent.hasChildNodes() && parent_data != "") {
-
-							children = parent.childNodes;
-							var child_total_od = 0;
-							var child_list = [];
-							var length_txt = "";
-							var child_str = "";
-							var compat_str = "";
-
-							children.forEach(child => {
-								/* Add up all devices inside parent catheter */
-								if (child.getAttribute("data") != "") {
-						
-									var child_od = 0;
-									child_data = JSON.parse(child.getAttribute("data"));
-
-									if (child_data.recommendedParentId != null) {
-										child_od = child_data.recommendedParentId - 0.0001;
-										child_total_od = child_total_od + child_od;
-									} else {
-										child_od = child_data.maxod;
-										child_total_od = child_total_od + child_od;
-									}
-
-
-									child_list.push({name: child_data.name, r: child_od});
-
-									// Compare lengths
-									length_txt = length_txt + compare_list_lengths(
-										parent_data
-										.length, child_data
-										.length, parent_data.name, child_data.name);
-
-									// Compare compatibility
-									compat_str = compat_str + check_compatibility(
-										parent_data,
-										child_data);
-								}
-							})
-
-							if (!check_multi_device(parent_data.minid, child_list) || compat_str != "") {
-								summary.fit_verdict = false;
-
-								switch (child_list.length) {
-									case 1:
-										child_str = child_list[0].name;
-										break;
-									case 2:
-										child_str = "The combination of " + child_str +
-											child_list[0].name +
-											" and " +
-											child_list[
-												1].name;
-										break;
-									default:
-										child_str = child_str + "The combination of ";
-										for (var n = 0; n < child_list.length; n++) {
-											if (n < (child_list.length - 1)) child_str =
-												child_str +
-												child_list[n].name + ", ";
-											if (n == (child_list.length - 1)) child_str =
-												child_str +
-												" and " +
-												child_list[
-													n].name + ",";
-										}
-										break;
-								}
-								summary.sizes = "<p style=\"color:red\">" + summary.sizes +
-									child_str +
-									" does not fit in to " +
-									parent_data.name + ". " + compat_str + "</p>";
-							} else summary.sizes = summary.sizes + length_txt + compat_str;
-
-							// Calculate space left
-							var children_area = pi * (child_total_od / 2) * (child_total_od / 2);
-							var dif_area = parent_area - children_area;
-							//(dif_area);
-							if (dif_area > minimum_run_area && parent_data
-								.type.toLowerCase() != "microcatheter" && parent_data.type
-								.toLowerCase() !=
-								"balloon" && parent_data.type
-								.toLowerCase() !=
-								"stent") summary.contrast_runs.push(
-								[parent_data.name, dif_area])
-						}
-
-					});
-
-					function strength_calc(area) {
-						var strength = "";
-						ratio = parseInt((area / five_fr) * 100);
-						if (ratio < 20) {
-							strength = " (very little space)"
-						} else if (ratio >= 20 && ratio < 30) {
-							strength = " (not much space)"
-						} else if (ratio >= 30 && ratio < 75) {
-							strength = " (some space)";
-						} else if (ratio >= 75) {
-							strength = " (lots of space)";
-						}
-						return strength
-					}
-
-					if (summary.contrast_runs.length != 0) {
-						summary.contrast_runs.sort(function (a, b) {
-							if (a[1] < b[1]) return 1;
-							if (a[1] > b[1]) return -1;
-						});
-
-
-						if (summary.contrast_runs.length == 1) {
-							summary.contrast_text += "You can do cerebral angiography through the " +
-								summary
-								.contrast_runs[0][0] + strength_calc(summary
-									.contrast_runs[0][1]) +
-								".";
-						} else {
-							summary.contrast_text += "The best device for cerebral angiography is the " +
-								summary
-								.contrast_runs[0][0] + strength_calc(summary
-									.contrast_runs[0][1]) + ". ";
-							summary.contrast_text +=
-								"Angiography strength through the remaining catheters is as follows: ";
-							for (var n = 1; n < summary.contrast_runs.length; n++) {
-								summary.contrast_text += summary.contrast_runs[n][0] + strength_calc(
-									summary
-									.contrast_runs[n][1]);
-								if (n < (summary.contrast_runs.length - 1)) summary.contrast_text += ", ";
-								else summary.contrast_text += "."
-							}
-						}
-
-					} else {
-						//summary.contrast_text +=
-						//	"Cerebral angiography is not possible due to lack of space in any of the devices.";
-					}
-
-					// Check radial artery compatibility
-
-					/*if (this.access == "Radial artery") {
-						var first_device = tree.getElementById("device0");
-						if (first_device.getAttribute("data") != "") {
-							first_data = JSON.parse(first_device.getAttribute("data"));
-							if (first_data.maxod > 0.01811) {
-								summary += "The device is probably too large for the radial artery";
-							}
-
-						}
-
-					}*/
-
-
-					return summary;
-				},
-
-				updateSizer: function () {
-					d3.select("#diagram g").selectAll("*").remove()
-
-					var result = this.checkSizes();
-					var result_text = "";
-
-					if (result.fit_verdict == true) {
-						result_text = "<p style=\"color:green\">Everything fits ok.</p>";
-					}
-
-					result_text += "<p style=\"font-size: medium\">" + result.sizes + "<p>";
-
-					result_text += "<p style=\"font-size: medium\">" + result.contrast_text + "</p>";
-					document.getElementById("result").innerHTML = result_text + "</p>";
-					this.updateInfo(JSON.parse(tree.getElementById("device0").getAttribute("data")));
-				},
-
-				addInput: function (where, text, type, parent, device) {
-
-					id = "device" + this.id_count;
-					this.id_count++;
-
-					// Set up GUI
-					var node = {};
-					node.child_id = id;
-
-					var n = {
-						'id': id,
-						'text': text,
-						'type': type,
-						'parent': parent,
-						'hierarchy': 0,
-						'hierarchy_text': '',
-						'display_info': "",
-						'input_text': "",
-						active: null
-					};
-
-					// Set up data structure
-					var struct = tree.createElement("device");
-					struct.setAttribute("id", id);
-					struct.setAttribute("type", type);
-					struct.setAttribute("data", "");
-
-					// Get where in parent hierarchy
-					var a = tree.getElementById(parent);
-					var els = [];
-					while (a) {
-						els.unshift(a);
-						a = a.parentNode;
-					}
-
-					// First element
-					if (parent == null) {
-						deviceInputs.splice(0, 0, n);
-						tree.getElementById("root").appendChild(struct);
-					} else {
-
-						if (where == "inside") { // Add below target device
-							n.hierarchy = els.length - 2;
-
-							var index = deviceInputs.findIndex(
-								function (i) {
-									return i.id == parent;
-								}
-							);
-							deviceInputs.splice(index + 1, 0, n);
-
-							tree.getElementById(parent).appendChild(struct);
-
-						} else { // Add beside target device
-							if (parent != "device0") {
-								n.hierarchy = els.length - 3;
-								n.parent = tree.getElementById(parent).parentNode.id;
-
-								var index = deviceInputs.findIndex(
-									function (i) {
-										return i.id == parent;
-									}
-								);
-								deviceInputs.splice(index, 0, n);
-
-								tree.getElementById(parent).parentNode.appendChild(struct);
-
-							}
-						}
-					}
-
-					for (var i = 0; i < n.hierarchy; i++) {
-						n.hierarchy_text = n.hierarchy_text + '◼   ';
-					}
-
-					if (device) {
-						device = device.trim();
-
-						var index = deviceList.findIndex(
-							function (i) {
-								return i.name == device;
-							}
-						);
-
-						if (index != -1) {
-
-							this.updateDevice(id, deviceList[index]);
-							this.updateSizer();
-							window.addEventListener('load', (event) => {
-								this.$refs.device0[0].inputValue = deviceList[index].name_man;
-							});
-
-						}
-
-					}
-
-					return id;
-				},
-				removeInput: function (id) {
-
-					if (id != "device0") {
-						tree.getElementById(id).remove();
-						var index = deviceInputs.findIndex(
-							function (i) {
-								return i.id == id;
-							}
-						);
-						deviceInputs.splice(index, 1);
-						this.updateSizer();
-					} else if (id == "device0") {
-						this.$refs.device0[0].inputValue = "";
-						this.updateSizer();
-
-					}
-
-				}
-			},
-
-			created: function () {
-				// Format is: ?search=neuron max
-				const urlSearchParams = new URLSearchParams(window.location.search);
-				const params = Object.fromEntries(urlSearchParams.entries());
-				if (params.search == "conversion") {
-					window.addEventListener('load', (event) => {
-						this.$root.$emit('bv::show::modal', "conversion_modal");
-					});
-
-				}
-
-				var newInput1 = this.addInput("inside",
-					"Enter device e.g. catheter, balloon, stent, flow-diverter, Onyx, wire ...",
-					"guide catheters", null, params.search);
-					
-
-			}
-		})
-	</script>
+            },
+
+            updateInfo: function(deviceInfo) {
+                this.infoModal.device = deviceInfo;
+                this.infoModal.device.type = this.infoModal.device.type.toLowerCase();
+
+                this.info_table = [];
+                this.sizes_table = [];
+                this.tablecaption = "";
+
+
+                if (deviceInfo.type != "liquid embolic") {
+                    this.info_table = [{
+                        'Maximum outer diameter': in_to_all(deviceInfo.maxod),
+                        ...(deviceInfo.minid != 0 && {
+                            'Minimum inner diameter': in_to_all(deviceInfo.minid)
+                        }),
+                        ...(deviceInfo.length != "?" && {
+                            'Lengths': deviceInfo.length + " cm"
+                        })
+                    }];
+                }
+
+                var info_extra = "";
+
+                for (let prop in deviceInfo) {
+                    if (prop != "name" && prop != "type" && prop != "minid" && prop != "maxod" && prop !=
+                        "length" && prop != "name_man" && prop != "manufacturer") {
+                        switch (prop) {
+                            case "url1":
+                                info_extra += "<p><b>Manufacturer Information: </b>" + "<a href = \"" +
+                                    deviceInfo[prop] + "\" target=\"_blank\">Link</a></p>";
+                                "</p>";
+                                break;
+                            case "url2":
+                                info_extra += "<p><b>Manufacturer Information 2: </b>" + "<a href = \"" +
+                                    deviceInfo[prop] + "\" target=\"_blank\">Link</a></p>";
+                                "</p>";
+                                break;
+                            case "ifu":
+                                info_extra += "<p><b>Instructions For Use: </b>" + "<a href = \"" +
+                                    deviceInfo[prop] + "\" target=\"_blank\">Link</a></p>";
+                                "</p>";
+                                break;
+                            case "recommended":
+                                info_extra += "<p><b>Recommended Catheter: </b>" + deviceInfo[prop] +
+                                    "</p>";
+
+                                break;
+                            case "dmso":
+                                info_extra += "<p><b>DMSO Compatibility: </b> Yes</p>";
+                                break;
+                            case "vesselDiameters":
+                                info_extra += "<p><b>Vessel diameters: </b>" + deviceInfo[prop] + "</p>";
+                                break;
+                            case "ctArtefacts":
+                                info_extra += "<p><b>CT Artefact: </b>" + deviceInfo[prop] + "</p>";
+                                break;
+                            case "tipLengths":
+                                info_extra += "<p><b>Tip lengths: </b>" + deviceInfo[prop] + "</p>";
+                                break;
+                            case "surfaceCoating":
+                                info_extra += "<p><b>Surface Coating: </b>" + deviceInfo[prop] + "</p>";
+                                break;
+                            case "recommendedParentId":
+                                info_extra +=
+                                    "<p><b>Recommended parent device inner dimensions: </b>" +
+                                    deviceInfo[prop] + "\"</p>";
+                                break;
+                            case "image":
+                                info_extra +=
+                                    "<p><b>Image:</b><p></p><img class = \"device_img\" src=\"device_images\\" +
+                                    deviceInfo[prop] + "\" ></p>";
+                                break;
+
+                            case "youtube":
+                                info_extra += "<p><b>Preparation: </b></p>";
+                                info_extra +=
+                                    "<iframe width=\"100%\" height=\"315\" src=\"" + deviceInfo[prop] +
+                                    "\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; cture-in-picture\" allowfullscreen></iframe>";
+                                break;
+                            case "tablecaption":
+                                break;
+                            case "sizetable":
+                                var sizes = JSON.parse(deviceInfo[prop]);
+                                this.sizes_table = sizes;
+                                if (deviceInfo.tablecaption != null) this.tablecaption = deviceInfo
+                                    .tablecaption;
+                                break;
+                            case "balt":
+                                break;
+
+                            default:
+                                info_extra += "<p><b>" + toTitleCase(prop) + ": " + "</b>" + deviceInfo[
+                                        prop] +
+                                    "</p>";
+                                break;
+
+                        }
+                    }
+                }
+
+                document.getElementById("info_extra").innerHTML = info_extra;
+                document.getElementById("info_extra2").innerHTML = info_extra;
+
+                this.similarModal.first_device = deviceInfo;
+                var first_device = this.similarModal.first_device;
+                this.similarModal.n = 0;
+                this.similarModal.table = [];
+
+                this.similarUpdateTable(first_device);
+            },
+
+            info: function(index) {
+                var deviceInfo = JSON.parse(tree.getElementById(index).getAttribute("data"));
+                this.updateInfo(deviceInfo);
+
+                this.$root.$emit('bv::show::modal', this.infoModal.id);
+            },
+            resetInfoModal() {
+                this.infoModal.title = ''
+            },
+
+            compareLaunch: function(index) {
+                this.compareModal.first_device = JSON.parse(tree.getElementById(index).getAttribute(
+                    "data"));
+                var second_device = index;
+                this.compareModal.table = [];
+                this.$root.$emit('bv::show::modal', this.compareModal.id);
+            },
+
+            compare_device: function(index) {
+                var second_device = index;
+                this.compareModal.table = [];
+
+                this.compareModal.table.push({
+                    Name: this.compareModal.first_device.name + " (" + this.compareModal
+                        .first_device
+                        .manufacturer + ")",
+                    'Maximum outer diameter': in_to_all(this.compareModal.first_device.maxod),
+                    'Minimum inner diameter': in_to_all(this.compareModal.first_device.minid),
+                    Lengths: this.compareModal.first_device.length + " cm"
+                }, {
+                    Name: second_device.name + " (" + second_device.manufacturer + ")",
+                    'Maximum outer diameter': in_to_all(second_device.maxod),
+                    'Minimum inner diameter': in_to_all(second_device.minid),
+                    Lengths: second_device.length + " cm"
+                });
+            },
+
+            similarUpdateTable: function(first_device) {
+
+                deviceList.forEach(d => {
+                    var required_id = null;
+
+                    switch (d.type) {
+                        case "Microcatheter":
+                        case "Guide Catheter":
+                        case "Long Sheath":
+                        case "Catheter":
+                        case "Intermediate Catheter":
+                        case "Balloon":
+                        case "Sheath":
+
+                            if (d.minid < (first_device.minid * 1.05) &&
+                                d.minid > (first_device.minid * 0.95) &&
+                                d.type.toLowerCase() == first_device.type.toLowerCase()
+                            ) {
+
+                                this.similarModal.table.push({
+                                    Name: d.name_man,
+                                    minid: d.minid.toFixed(3),
+                                    maxod: d.maxod.toFixed(3),
+                                    Lengths: d.length + " cm",
+                                    url: "http://neurotool.org/index.html?search=" + d.name
+                                });
+                                this.similarModal.n++;
+
+                            }
+                            break;
+                        case "Stent":
+                        case "Coil":
+                        case "Select Catheter":
+                        case "Wire":
+                        case "Stent Retriever":
+                        case "Protection Device":
+                            if (d.maxod < (first_device.maxod * 1.05) &&
+                                d.maxod > (first_device.maxod * 0.95) &&
+                                d.type.toLowerCase() == first_device.type.toLowerCase()
+                            ) {
+                                this.similarModal.table.push({
+                                    Name: d.name_man,
+                                    minid: d.minid.toFixed(3),
+                                    maxod: d.maxod.toFixed(3),
+                                    Lengths: d.length + " cm",
+                                    url: "http://neurotool.org/index.html?search=" + d.name
+                                });
+                                this.similarModal.n++;
+                            }
+                            break;
+                        case "Liquid Embolic":
+                            if (
+                                d.type.toLowerCase() == first_device.type.toLowerCase()) {
+
+                                this.similarModal.table.push({
+                                    Name: d.name_man,
+                                    url: "http://neurotool.org/index.html?search=" + d.name
+                                });
+                                this.similarModal.n++;
+                            }
+                            break;
+                        case "Intrasaccular Device":
+                            if (
+                                d.type.toLowerCase() == first_device.type.toLowerCase()) {
+
+                                this.similarModal.table.push({
+                                    Name: d.name_man,
+                                    minid: d.minid.toFixed(3),
+                                    maxod: d.maxod.toFixed(3),
+                                    Lengths: d.length + " cm",
+                                    url: "http://neurotool.org/index.html?search=" + d.name
+                                });
+                                this.similarModal.n++;
+                            }
+                            break;
+                        default:
+                            break
+                    }
+                });
+
+                this.similarModal.table.sort(function(a, b) {
+                    return b[2] - a[2]
+                });
+
+            },
+
+            similarLaunch: function(index) {
+                this.similarModal.first_device = JSON.parse(tree.getElementById(index).getAttribute(
+                    "data"));
+                var first_device = this.similarModal.first_device;
+                this.similarModal.n = 0;
+                this.similarModal.table = [];
+
+                this.similarUpdateTable(first_device);
+
+                this.$root.$emit('bv::show::modal', this.similarModal.id);
+
+            },
+
+            fitLaunch: function(index) {
+                this.fitModal.first_device = JSON.parse(tree.getElementById(index).getAttribute(
+                    "data"));
+                var first_device = this.fitModal.first_device;
+                this.fitModal.n = 0;
+                this.fitModal.table = [];
+
+                var required_id = null;
+                if (first_device.recommendedParentId != null) required_id = first_device
+                    .recommendedParentId;
+                else required_id = first_device.maxod;
+
+                var dmso_compat_needed = false;
+                var dmso_string = first_device.name.toLowerCase();
+                if (dmso_string.search("onyx") != -1 || dmso_string.search("phil") != -1 ||
+                    dmso_string.search("squid") != -1) dmso_compat_needed = true;
+
+                deviceList.forEach(d => {
+                    if (required_id < d.minid && dmso_compat_needed == false) {
+
+                        this.fitModal.table.push({
+                            Name: d.name + " (" + d.manufacturer + ")",
+                            Type: d.type,
+                            minid: d.minid.toFixed(3),
+                            maxod: d.maxod.toFixed(3),
+                            Lengths: d.length + " cm"
+                        });
+                        this.fitModal.n++;
+                    } else if (required_id < d.minid && dmso_compat_needed == true) {
+
+                        if (d.dmso != null && (d.dmso == "yes" || d.dmso == "Yes" || d.dmso == "y" ||
+                                d.dmso == "Y")) {
+
+                            this.fitModal.table.push({
+                                Name: d.name + " (" + d.manufacturer + ")",
+                                Type: d.type,
+                                minid: d.minid.toFixed(3),
+                                maxod: d.maxod.toFixed(3),
+                                Lengths: d.length + " cm"
+                            });
+
+                        }
+                    }
+                });
+
+                this.fitModal.table.sort(function(a, b) {
+                    return b[2] - a[2]
+                });
+
+
+                this.$root.$emit('bv::show::modal', this.fitModal.id);
+            },
+
+            checkSizes: function() {
+                const minimum_run_area = 0;
+                const five_fr = 0.0012566370614;
+
+                var summary = {
+                    fit_verdict: true,
+                    sizes: "",
+                    contrast_runs: [],
+                    contrast_text: ""
+                }
+
+                // Test data
+                var test = {
+                    "children": [{
+                            "children": [{
+                                    "children": [
+                                        { "stat": 1 },
+                                        { "stat": 1 }
+
+                                    ]
+                                },
+                                { "stat": 1 }
+                            ]
+                        },
+                        {
+                            "children": [
+                                { "stat": 1 },
+                                { "stat": 1 }
+
+                            ]
+                        },
+                        {
+                            "children": [
+                                { "stat": 1 },
+                                { "stat": 1 }
+
+                            ]
+                        },
+                    ]
+                };
+
+                // Draw diagram
+                function recursive_iterate(level, array_level) {
+                    array_level.children = [];
+
+                    level.childNodes.forEach(device => {
+                        var data;
+                        var new_array_level = [];
+                        if (device.getAttribute("data") != "") data = JSON.parse(device
+                            .getAttribute("data"));
+
+                        array_level.children.push({
+                            "stat": data.minid,
+                            "name": data.name
+                        });
+                        if (device.hasChildNodes()) {
+                            recursive_iterate(device, array_level);
+                        }
+                    });
+                    return diag_tree;
+                }
+
+                var diag_tree = {};
+                var diag = recursive_iterate(tree.firstChild, diag_tree);
+                console.log(diag);
+                //console.log(test);
+
+                var root = d3.hierarchy(diag)
+                    .sum(d => d.hasOwnProperty("stat") ? d.stat : 0)
+                    .sort((a, b) => b.value - a.value);
+                var partition = d3.pack()
+                    .size([100, 100])
+                partition(root);
+
+                var svg = document.getElementById('diagram');
+                var box = svg.getBoundingClientRect();
+                var ratio = (box.width / diag.children[0].stat) * 0.9;
+                //console.log
+
+                d3.select("#diagram g").selectAll("*").remove()
+
+                d3.select("#diagram g")
+                    .selectAll('circle.node')
+                    .data(root.descendants())
+                    .enter()
+                    .append('circle')
+                    .classed('node', true)
+                    .attr('cx', d => d.x)
+                    .attr('cy', d => d.y)
+                    .attr('r', d => d.r);
+
+
+
+                // Calculate fitting
+                var x = tree.querySelectorAll("device");
+                x.forEach(parent => {
+                    var parent_data = "";
+                    if (parent.getAttribute("data") != "") parent_data = JSON.parse(parent
+                        .getAttribute("data"));
+                    var parent_area = pi * (parent_data.minid / 2) * (parent_data.minid / 2);
+
+                    if (!parent.hasChildNodes() && parent_area > minimum_run_area &&
+                        parent_data
+                        .type.toLowerCase() != "microcatheter" && parent_data.type
+                        .toLowerCase() !=
+                        "balloon" && parent_data.type
+                        .toLowerCase() !=
+                        "stent") {
+                        summary.contrast_runs.push([
+                            parent_data.name, parent_area
+                        ])
+                    }
+
+                    if (parent.hasChildNodes() && parent_data != "") {
+
+                        children = parent.childNodes;
+                        var child_total_od = 0;
+                        var child_list = [];
+                        var length_txt = "";
+                        var child_str = "";
+                        var compat_str = "";
+
+                        children.forEach(child => {
+                            /* Add up all devices inside parent catheter */
+                            if (child.getAttribute("data") != "") {
+
+                                var child_od = 0;
+                                child_data = JSON.parse(child.getAttribute("data"));
+
+                                if (child_data.recommendedParentId != null) {
+                                    child_od = child_data.recommendedParentId - 0.0001;
+                                    child_total_od = child_total_od + child_od;
+                                } else {
+                                    child_od = child_data.maxod;
+                                    child_total_od = child_total_od + child_od;
+                                }
+
+
+                                child_list.push({ name: child_data.name, r: child_od });
+
+                                // Compare lengths
+                                length_txt = length_txt + compare_list_lengths(
+                                    parent_data
+                                    .length, child_data
+                                    .length, parent_data.name, child_data.name);
+
+                                // Compare compatibility
+                                compat_str = compat_str + check_compatibility(
+                                    parent_data,
+                                    child_data);
+                            }
+                        })
+
+                        if (!check_multi_device(parent_data.minid, child_list) || compat_str != "") {
+                            summary.fit_verdict = false;
+
+                            switch (child_list.length) {
+                                case 1:
+                                    child_str = child_list[0].name;
+                                    break;
+                                case 2:
+                                    child_str = "The combination of " + child_str +
+                                        child_list[0].name +
+                                        " and " +
+                                        child_list[
+                                            1].name;
+                                    break;
+                                default:
+                                    child_str = child_str + "The combination of ";
+                                    for (var n = 0; n < child_list.length; n++) {
+                                        if (n < (child_list.length - 1)) child_str =
+                                            child_str +
+                                            child_list[n].name + ", ";
+                                        if (n == (child_list.length - 1)) child_str =
+                                            child_str +
+                                            " and " +
+                                            child_list[
+                                                n].name + ",";
+                                    }
+                                    break;
+                            }
+                            summary.sizes = "<p style=\"color:red\">" + summary.sizes +
+                                child_str +
+                                " does not fit in to " +
+                                parent_data.name + ". " + compat_str + "</p>";
+                        } else summary.sizes = summary.sizes + length_txt + compat_str;
+
+                        // Calculate space left
+                        var children_area = pi * (child_total_od / 2) * (child_total_od / 2);
+                        var dif_area = parent_area - children_area;
+                        //(dif_area);
+                        if (dif_area > minimum_run_area && parent_data
+                            .type.toLowerCase() != "microcatheter" && parent_data.type
+                            .toLowerCase() !=
+                            "balloon" && parent_data.type
+                            .toLowerCase() !=
+                            "stent") summary.contrast_runs.push(
+                            [parent_data.name, dif_area])
+                    }
+
+                });
+
+                function strength_calc(area) {
+                    var strength = "";
+                    ratio = parseInt((area / five_fr) * 100);
+                    if (ratio < 20) {
+                        strength = " (very little space)"
+                    } else if (ratio >= 20 && ratio < 30) {
+                        strength = " (not much space)"
+                    } else if (ratio >= 30 && ratio < 75) {
+                        strength = " (some space)";
+                    } else if (ratio >= 75) {
+                        strength = " (lots of space)";
+                    }
+                    return strength
+                }
+
+                if (summary.contrast_runs.length != 0) {
+                    summary.contrast_runs.sort(function(a, b) {
+                        if (a[1] < b[1]) return 1;
+                        if (a[1] > b[1]) return -1;
+                    });
+
+
+                    if (summary.contrast_runs.length == 1) {
+                        summary.contrast_text += "You can do cerebral angiography through the " +
+                            summary
+                            .contrast_runs[0][0] + strength_calc(summary
+                                .contrast_runs[0][1]) +
+                            ".";
+                    } else {
+                        summary.contrast_text += "The best device for cerebral angiography is the " +
+                            summary
+                            .contrast_runs[0][0] + strength_calc(summary
+                                .contrast_runs[0][1]) + ". ";
+                        summary.contrast_text +=
+                            "Angiography strength through the remaining catheters is as follows: ";
+                        for (var n = 1; n < summary.contrast_runs.length; n++) {
+                            summary.contrast_text += summary.contrast_runs[n][0] + strength_calc(
+                                summary
+                                .contrast_runs[n][1]);
+                            if (n < (summary.contrast_runs.length - 1)) summary.contrast_text += ", ";
+                            else summary.contrast_text += "."
+                        }
+                    }
+
+                } else {
+                    //summary.contrast_text +=
+                    //	"Cerebral angiography is not possible due to lack of space in any of the devices.";
+                }
+
+                // Check radial artery compatibility
+
+                /*if (this.access == "Radial artery") {
+                	var first_device = tree.getElementById("device0");
+                	if (first_device.getAttribute("data") != "") {
+                		first_data = JSON.parse(first_device.getAttribute("data"));
+                		if (first_data.maxod > 0.01811) {
+                			summary += "The device is probably too large for the radial artery";
+                		}
+
+                	}
+
+                }*/
+
+
+                return summary;
+            },
+
+            updateSizer: function() {
+                d3.select("#diagram g").selectAll("*").remove()
+
+                var result = this.checkSizes();
+                var result_text = "";
+
+                if (result.fit_verdict == true) {
+                    result_text = "<p style=\"color:green\">Everything fits ok.</p>";
+                }
+
+                result_text += "<p style=\"font-size: medium\">" + result.sizes + "<p>";
+
+                result_text += "<p style=\"font-size: medium\">" + result.contrast_text + "</p>";
+                document.getElementById("result").innerHTML = result_text + "</p>";
+                this.updateInfo(JSON.parse(tree.getElementById("device0").getAttribute("data")));
+            },
+
+            addInput: function(where, text, type, parent, device) {
+
+                id = "device" + this.id_count;
+                this.id_count++;
+
+                // Set up GUI
+                var node = {};
+                node.child_id = id;
+
+                var n = {
+                    'id': id,
+                    'text': text,
+                    'type': type,
+                    'parent': parent,
+                    'hierarchy': 0,
+                    'hierarchy_text': '',
+                    'display_info': "",
+                    'input_text': "",
+                    active: null
+                };
+
+                // Set up data structure
+                var struct = tree.createElement("device");
+                struct.setAttribute("id", id);
+                struct.setAttribute("type", type);
+                struct.setAttribute("data", "");
+
+                // Get where in parent hierarchy
+                var a = tree.getElementById(parent);
+                var els = [];
+                while (a) {
+                    els.unshift(a);
+                    a = a.parentNode;
+                }
+
+                // First element
+                if (parent == null) {
+                    deviceInputs.splice(0, 0, n);
+                    tree.getElementById("root").appendChild(struct);
+                } else {
+
+                    if (where == "inside") { // Add below target device
+                        n.hierarchy = els.length - 2;
+
+                        var index = deviceInputs.findIndex(
+                            function(i) {
+                                return i.id == parent;
+                            }
+                        );
+                        deviceInputs.splice(index + 1, 0, n);
+
+                        tree.getElementById(parent).appendChild(struct);
+
+                    } else { // Add beside target device
+                        if (parent != "device0") {
+                            n.hierarchy = els.length - 3;
+                            n.parent = tree.getElementById(parent).parentNode.id;
+
+                            var index = deviceInputs.findIndex(
+                                function(i) {
+                                    return i.id == parent;
+                                }
+                            );
+                            deviceInputs.splice(index, 0, n);
+
+                            tree.getElementById(parent).parentNode.appendChild(struct);
+
+                        }
+                    }
+                }
+
+                for (var i = 0; i < n.hierarchy; i++) {
+                    n.hierarchy_text = n.hierarchy_text + '◼   ';
+                }
+
+                if (device) {
+                    device = device.trim();
+
+                    var index = deviceList.findIndex(
+                        function(i) {
+                            return i.name == device;
+                        }
+                    );
+
+                    if (index != -1) {
+
+                        this.updateDevice(id, deviceList[index]);
+                        this.updateSizer();
+                        window.addEventListener('load', (event) => {
+                            this.$refs.device0[0].inputValue = deviceList[index].name_man;
+                        });
+
+                    }
+
+                }
+
+                return id;
+            },
+            removeInput: function(id) {
+
+                if (id != "device0") {
+                    tree.getElementById(id).remove();
+                    var index = deviceInputs.findIndex(
+                        function(i) {
+                            return i.id == id;
+                        }
+                    );
+                    deviceInputs.splice(index, 1);
+                    this.updateSizer();
+                } else if (id == "device0") {
+                    this.$refs.device0[0].inputValue = "";
+                    this.updateSizer();
+
+                }
+
+            }
+        },
+
+        created: function() {
+            // Format is: ?search=neuron max
+            const urlSearchParams = new URLSearchParams(window.location.search);
+            const params = Object.fromEntries(urlSearchParams.entries());
+            if (params.search == "conversion") {
+                window.addEventListener('load', (event) => {
+                    this.$root.$emit('bv::show::modal', "conversion_modal");
+                });
+
+            }
+
+            var newInput1 = this.addInput("inside",
+                "Enter device e.g. catheter, balloon, stent, flow-diverter, Onyx, wire ...",
+                "guide catheters", null, params.search);
+
+
+        }
+    })
+    </script>
 </body>
 
 </html>

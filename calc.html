@@ -2,15 +2,11 @@
 
 
 -->
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
-    <meta name="description"
-        content="Website with clinical prediction tools/calculators/classifications such as ISUIA/PHASES for aneurysms. Also includes a variety of other classifications such as Cognard and Spetzler-Martin. ">
-
+    <meta name="description" content="Website with clinical prediction tools/calculators/classifications such as ISUIA/PHASES for aneurysms. Also includes a variety of other classifications such as Cognard and Spetzler-Martin. ">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -29,17 +25,15 @@
 
 <body>
     <div id="app">
-
         <b-navbar type="dark" variant="info">
             <b-navbar-brand href="index.html">NeuroTool</b-navbar-brand>
             <b-navbar-nav>
-
-                <b-nav-item-dropdown id="dropdown-offset" text="Devices" right>
+                <b-nav-item-dropdown id="dropdown-offset" text="Devices">
                     <b-dropdown-item href="index.html">Device Sizer</b-dropdown-item>
+                    <b-dropdown-item href="http://neurointerventionatlas.com/">Primer on Neurointerventional Devices</b-dropdown-item>
                     <b-dropdown-item href="index.html?search=conversion">Unit converter</b-dropdown-item>
                     <b-dropdown-item v-b-modal.help_modal>About</b-dropdown-item>
                 </b-nav-item-dropdown>
-
                 <b-nav-item-dropdown id="dropdown-offset" text="Prediction" right>
                     <b-dropdown-item href="calc.html?search=Unruptured aneurysm">Unruptured aneurysm</b-dropdown-item>
                     <b-dropdown-item href="calc.html?search=Dural Arteriovenous Fistula">DAVF</b-dropdown-item>
@@ -49,10 +43,7 @@
                     </b-dropdown-item>
                 </b-nav-item-dropdown>
             </b-navbar-nav>
-
         </b-navbar>
-
-
         <b-container fluid="sm">
             <p></p>
             <p></p>
@@ -60,45 +51,33 @@
                 <template>
                     <h2>{{score.title}}</h2>
                     <b-form-group label=" Select 1 or more classifications:">
-                        <b-form-checkbox-group id="checkbox-group-1" v-model="score.selected" :options="score.types"
-                            @change="change()">
+                        <b-form-checkbox-group id="checkbox-group-1" v-model="score.selected" :options="score.types" @change="change()">
                         </b-form-checkbox-group>
                     </b-form-group>
                     </b-form-group>
-
                     <b-card bg-variant="light">
                         <template v-for="n in score.variables">
                             <b-row class="my-1" :key="n.name" v-if="check_score_type(n.score)">
-
                                 <b-col sm="3">
                                     <label>{{ n.text }}:</label>
                                 </b-col>
                                 <b-col sm="9">
-                                    <b-form-input v-if="n.type == 'text'|| n.type =='number'" :id="`n.name-${n.name}`"
-                                        :type="n.type" v-model="n.selected" @input="change()">
+                                    <b-form-input v-if="n.type == 'text'|| n.type =='number'" :id="`n.name-${n.name}`" :type="n.type" v-model="n.selected" @input="change()">
                                     </b-form-input>
-
-                                    <b-form-select v-if="n.type == 'select'" :id="`n.name-${n.name}`"
-                                        :options="n.options" v-model="n.selected" @change="change()">
+                                    <b-form-select v-if="n.type == 'select'" :id="`n.name-${n.name}`" :options="n.options" v-model="n.selected" @change="change()">
                                     </b-form-select>
-
-                                    <b-form-radio-group v-if="n.type == 'radio'" :id="`n.name-${n.name}`"
-                                        :options="n.options" v-model="n.selected" @change="change()">
+                                    <b-form-radio-group v-if="n.type == 'radio'" :id="`n.name-${n.name}`" :options="n.options" v-model="n.selected" @change="change()">
                                     </b-form-radio-group>
                                 </b-col>
                             </b-row>
                         </template>
-
                     </b-card>
-
                 </template>
                 <p></p>
                 <p></p>
-
                 <b-button @click="calculate()" variant="success">Calculate</b-button>
                 <b-button @click="reset()" variant="danger">Reset</b-button>
                 <p></p>
-
                 <b-card bg-variant="light" v-show="show_results">
                     <template v-for="n in score.results" class="calc_result">
                         <div v-if="check_score_type(n.name)">
@@ -113,26 +92,17 @@
                                 <b-table v-if="n.table"></b-table>
                                 <b-img fluid thumbnail v-if=" n.image" :src="n.image"></b-img>
                                 <p v-if="n.ref"><b>Reference: </b>{{n.ref}}</p>
-
                             </div>
                         </div>
                         <p></p>
                     </template>
-
                     <div id="result_text" class="calc_result"></div>
-
                 </b-card>
             </div>
-
-
             <!---------------- MODALS -------------->
-
             <b-modal id=" help_modal" title="NeuroTool: Help" ok-only>
             </b-modal>
-
-
     </div>
-
     <footer class="text-lg-start " style="background-color: #f5faff; color:rgb(158, 158, 172); margin-top: 100px">
         <div class="container p-4 pb-0">
             <section>
@@ -178,118 +148,113 @@
             </section>
         </div>
     </footer>
-
-
-
     <script>
-        /* GENERIC FUNCTIONS */
+    /* GENERIC FUNCTIONS */
 
 
-        function flatten(data) {
-            var result = {};
+    function flatten(data) {
+        var result = {};
 
-            function recurse(cur, prop) {
-                if (Object(cur) !== cur) {
-                    result[prop] = cur;
-                } else if (Array.isArray(cur)) {
-                    for (var i = 0, l = cur.length; i < l; i++)
-                        recurse(cur[i], prop + "[" + i + "]");
-                    if (l == 0)
-                        result[prop] = [];
-                } else {
-                    var isEmpty = true;
-                    for (var p in cur) {
-                        isEmpty = false;
-                        recurse(cur[p], prop ? prop + "." + p : p);
+        function recurse(cur, prop) {
+            if (Object(cur) !== cur) {
+                result[prop] = cur;
+            } else if (Array.isArray(cur)) {
+                for (var i = 0, l = cur.length; i < l; i++)
+                    recurse(cur[i], prop + "[" + i + "]");
+                if (l == 0)
+                    result[prop] = [];
+            } else {
+                var isEmpty = true;
+                for (var p in cur) {
+                    isEmpty = false;
+                    recurse(cur[p], prop ? prop + "." + p : p);
+                }
+                if (isEmpty && prop)
+                    result[prop] = {};
+            }
+        }
+        recurse(data, "");
+        return result;
+    }
+
+    function get_var(name, array) {
+
+        var match = null;
+        for (var n = 0; n < array.length; n++) {
+            if (array[n].name == name) match = n;
+        }
+
+        return array[match];
+    }
+
+
+    /* PREDICTION TOOLS */
+
+
+
+    /* GLOBAL VARIABLES */
+
+    window.app = new Vue({
+
+        el: '#app',
+        data: {
+            id_count: 0,
+            score: null,
+            show_results: null,
+
+            copyModal: {
+                id: 'copy-modal',
+                text: "",
+                title: "Copy"
+            }
+        },
+
+        methods: {
+            // General functions
+            calculate: function() {
+                this.change();
+                this.show_results = true;
+            },
+            change: function() {
+                this.score.calculate();
+            },
+            check_score_type: function(str) {
+                var list = str.split("/");
+                var contains = null;
+                for (var n = 0; n < list.length; n++) {
+                    if (this.score.selected.includes(list[n])) {
+                        contains = true;
                     }
-                    if (isEmpty && prop)
-                        result[prop] = {};
                 }
-            }
-            recurse(data, "");
-            return result;
-        }
+                return contains;
+            },
+            set_score_type: function(str) {
+                this.score = str;
+                this.show_results = false;
 
-        function get_var(name, array) {
-
-            var match = null;
-            for (var n = 0; n < array.length; n++) {
-                if (array[n].name == name) match = n;
-            }
-
-            return array[match];
-        }
-
-
-        /* PREDICTION TOOLS */
-
-
-
-        /* GLOBAL VARIABLES */
-
-        window.app = new Vue({
-
-            el: '#app',
-            data: {
-                id_count: 0,
-                score: null,
-                show_results: null,
-
-                copyModal: {
-                    id: 'copy-modal',
-                    text: "",
-                    title: "Copy"
+            },
+            reset: function() {
+                for (var n = 0; n < this.score.variables.length; n++) {
+                    this.score.variables[n].selected = null;
                 }
+                this.show_results = false;
             },
 
-            methods: {
-                // General functions
-                calculate: function () {
-                    this.change();
-                    this.show_results = true;
-                },
-                change: function () {
-                    this.score.calculate();
-                },
-                check_score_type: function (str) {
-                    var list = str.split("/");
-                    var contains = null;
-                    for (var n = 0; n < list.length; n++) {
-                        if (this.score.selected.includes(list[n])) {
-                            contains = true;
-                        }
-                    }
-                    return contains;
-                },
-                set_score_type: function (str) {
-                    this.score = str;
-                    this.show_results = false;
+            created: function() {
+                // Format is: ?search=[score]
+                const urlSearchParams = new URLSearchParams(window.location.search);
+                const params = Object.fromEntries(urlSearchParams.entries()).search;
+                if (params == "Unruptured aneurysm") this.set_score_type(aneurysm_risk);
+                if (params == "Dural Arteriovenous Fistula") this.set_score_type(avf_risk);
+                if (params == "Arteriovenous Malformation") this.set_score_type(avm_risk);
+                if (params == "Carotid stenosis") this.set_score_type(carotid_stenosis);
+                if (params == "Intracranial hypotension") this.set_score_type(i_hypotension);
 
-                },
-                reset: function () {
-                    for (var n = 0; n < this.score.variables.length; n++) {
-                        this.score.variables[n].selected = null;
-                    }
-                    this.show_results = false;
-                },
-
-                created: function () {
-                    // Format is: ?search=[score]
-                    const urlSearchParams = new URLSearchParams(window.location.search);
-                    const params = Object.fromEntries(urlSearchParams.entries()).search;
-                    if (params == "Unruptured aneurysm") this.set_score_type(aneurysm_risk);
-                    if (params == "Dural Arteriovenous Fistula") this.set_score_type(avf_risk);
-                    if (params == "Arteriovenous Malformation") this.set_score_type(avm_risk);
-                    if (params == "Carotid stenosis") this.set_score_type(carotid_stenosis);
-                    if (params == "Intracranial hypotension") this.set_score_type(i_hypotension);
-
-                }
             }
-        });
-        app.created();
+        }
+    });
+    app.created();
     </script>
-
-
 </body>
 
 </html>
