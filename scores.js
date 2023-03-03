@@ -162,7 +162,7 @@ aneurysm_risk = {
                 var total = 0;
                 if (this.selected) {
                     if (this.selected == "cavernous") total = 0;
-                    if (this.selected == "bas_tip") total = 5;
+                    if (this.selected == "ba_tip") total = 5;
                     if (this.selected == "va" || this.selected == "ba") total = 4;
                     if (this.selected == "acom" || this.selected == "pcom") total = 2;
                 }
@@ -232,7 +232,9 @@ aneurysm_risk = {
                 return this.selected;
             },
             uiats_score: function() {
-                return this.selected;
+                var total=0;
+                if (this.selected) total =2;
+                return total;
             }
         },
         {
@@ -360,7 +362,7 @@ aneurysm_risk = {
             uiats_score: function() {
                 var total = 0;
                 if (this.selected) total = 3
-                return this.selected;
+                return total;
             }
         },
         {
@@ -416,8 +418,8 @@ aneurysm_risk = {
             selected: null,
             uiats_score: function() {
                 var total = 0;
-                if (this.selected) total = 2
-                return this.selected;
+                if (this.selected) total = 2;
+                return total;
             }
         },
         {
@@ -436,7 +438,7 @@ aneurysm_risk = {
             uiats_score: function() {
                 var total = 0;
                 if (this.selected) total = 2
-                return this.selected;
+                return total;
             }
         },
         {
@@ -472,7 +474,7 @@ aneurysm_risk = {
             uiats_score: function() {
                 var total = 0;
                 if (this.selected) total = 4
-                return this.selected;
+                return total;
             }
         },
         {
@@ -490,8 +492,8 @@ aneurysm_risk = {
             selected: null,
             uiats_score: function() {
                 var total = 0;
-                if (this.selected) total = 4
-                return this.selected;
+                if (this.selected) total = 4;
+                return total;
             }
         },
         {
@@ -510,7 +512,7 @@ aneurysm_risk = {
             uiats_score: function() {
                 var total = 0;
                 if (this.selected) total = 3
-                return this.selected;
+                return total;
             }
         },
         {
@@ -546,7 +548,7 @@ aneurysm_risk = {
             uiats_score: function() {
                 var total = 0;
                 if (this.selected) total = 2;
-                return this.selected;
+                return total;
             }
         },
         {
@@ -582,10 +584,12 @@ aneurysm_risk = {
                     value: 'over 10 years',
                     text: 'over 10 years'
                 },
+                ,
                 {
-                    value: 'Not limited',
-                    text: 'Not limited'
+                    value: 'not applicable',
+                    text: 'not applicable'
                 }
+
             ],
             text: "Life expectancy due to chronic and/or malignant disease",
             selected: null,
@@ -593,10 +597,9 @@ aneurysm_risk = {
                 var total = 0;
                 if (this.selected) {
                     if (this.selected == "less than 5 years" || this.selected == "other")
-                        total = 0;
+                        total = 4;
                     if (this.selected == "5-10 years") total = 3;
-                    if (this.selected == "over 10 years") total = 5;
-                    if (this.selected == "Not limited") total = 5;
+                    if (this.selected == "over 10 years") total = 1;
                 }
                 return total;
             }
@@ -617,7 +620,7 @@ aneurysm_risk = {
             uiats_score: function() {
                 var total = 0;
                 if (this.selected) total = 3
-                return this.selected;
+                return total;
             }
         },
         {
@@ -636,7 +639,7 @@ aneurysm_risk = {
             uiats_score: function() {
                 var total = 0;
                 if (this.selected) total = 2
-                return this.selected;
+                return total;
             }
         },
         {
@@ -655,7 +658,7 @@ aneurysm_risk = {
             uiats_score: function() {
                 var total = 0;
                 if (this.selected) total = 2
-                return this.selected;
+                return total;
             }
         },
         {
@@ -674,7 +677,7 @@ aneurysm_risk = {
             uiats_score: function() {
                 var total = 0;
                 if (this.selected) total = 4
-                return this.selected;
+                return total;
             }
         },
         {
@@ -693,7 +696,7 @@ aneurysm_risk = {
             uiats_score: function() {
                 var total = 0;
                 if (this.selected) total = 3
-                return this.selected;
+                return total;
             }
         },
         {
@@ -717,14 +720,14 @@ aneurysm_risk = {
             name: "treatment_risk",
             score: "UIATS",
             options: [{
-                value: 1,
+                value: 3,
                 text: 'High'
             }, {
                 value: 0,
                 text: 'Low'
             }],
             type: "radio",
-            text: "Aneurysm complexity-relatex risk",
+            text: "Aneurysm complexity-related risk",
             selected: null,
             uiats_score: function() {
                 return this.selected;
@@ -870,8 +873,8 @@ aneurysm_risk = {
         var conserv = 0;
         repair = get_var("Age", this.variables)
             .uiats_score() + get_var("other_sah", this.variables)
+            .uiats_score() + get_var("ethnicity", this.variables)
             .uiats_score() + get_var("familial", this.variables)
-            .uiats_score() + get_var("site", this.variables)
             .uiats_score() + get_var("smoking", this.variables)
             .uiats_score() + get_var("polycystic", this.variables)
             .uiats_score() + get_var("hypertension", this.variables)
