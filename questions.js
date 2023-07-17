@@ -41,7 +41,8 @@ questions = [
       "Catalyst 5 inside Benchmark",
       "Sofia 5F inside Benchmark",
       "Navien 058 inside Benchmark",
-      "Sofia 6F inside benchmark"
+      "Sofia 6F inside benchmark", 
+      "None of the above"
     ],
     "answer": "Sofia 5F inside Benchmark",
     "image": "4.jpg"
@@ -53,7 +54,8 @@ questions = [
       "Sofia 6F inside Flowgate2",
       "Catalyst 7 inside Flowgate",
       "RED72 inside Flowgate2",
-      "ACE68"
+      "ACE68", 
+      "None of the above"
     ],
     "answer": "Catalyst 7 inside Flowgate",
     "image": "5.jpg"
