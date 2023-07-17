@@ -53,7 +53,7 @@ new Vue({
       }
     },
     openImageInNewTab() {
-      let imageUrl = 'quizimg/' + (this.questions[this.currentQuestionIndex].image+1);
+      let imageUrl = 'quizimg/' + (this.questions[this.currentQuestionIndex].image);
       window.open(imageUrl, '_blank');
     }
   },
