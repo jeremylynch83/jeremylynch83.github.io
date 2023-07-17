@@ -53,7 +53,7 @@ new Vue({
       }
     },
     openImageInNewTab() {
-      let imageUrl = 'quizimg/' + this.questions[this.currentQuestionIndex].image;
+      let imageUrl = 'quizimg/' + (this.questions[this.currentQuestionIndex].image+1);
       window.open(imageUrl, '_blank');
     }
   },
@@ -65,7 +65,6 @@ new Vue({
     setInterval(setTime, 1000, this.timer);
       function setTime(timer) {
         timer.value = timer.value+1
-        console.log(timer.value)
     }
   }
 });
