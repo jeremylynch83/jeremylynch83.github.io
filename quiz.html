@@ -32,13 +32,13 @@
         }
 
         .center {
-            margin-top: 20%;
+            margin-top: 5%;
             padding: 10%;
             justify-content: center;
             align-items: center;
             height: 100vh;
             text-align: center;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             line-height: 1.5;
         }
 
@@ -51,7 +51,19 @@
 <body>
     <div id="app" class="quiz-container" >
         <div v-if="!startQuiz"  class="center">
-            <p >Answer the following 5 questions as quickly as possible. <b>DO NOT</b> use the neurotool website.</p>
+            <h2>Instructions</h2>
+            <p>You will be asked two sets of 5 questions relating to device compatibility. The first 5 questions you will do using information on the packaging (provided to you). The last 5 you will use neurotool. </p>
+            <br>
+
+            <p>Here is an example of a question: "Will the following construct fit correctly: Echelon 10 and XT27 inside Neuron Max?" </p>
+            <b-button>Yes</b-button>
+            <br>
+            <b-button>No</b-button>
+
+
+
+            <br><br>
+            <p >Answer the following 5 questions as quickly as possible. <b>DO NOT</b> use the neurotool website. When you are <b>ready</b> please click the button to start.</p>
             <b-button @click="startQuestion" variant="primary">Start Quiz</b-button>
         </div>
         
@@ -66,11 +78,15 @@
         <div v-else-if="quizOver" class="results">
                             <h2>Results</h2>
 
+                            <p>Please take a photo of the below and whatsapp it to me!<p>
+
             <b-table striped hover :items="userAnswers" :fields="fields" class="result-table"></b-table>
         </div>
 
         <div v-else class="question">
             <h2>Question {{currentQuestionIndex+1}}</h2>
+              <div>Time: {{timer.value}} s</div>
+              <br>
 
             <div>{{questions[currentQuestionIndex].question}}</div>
             <div class="options">
