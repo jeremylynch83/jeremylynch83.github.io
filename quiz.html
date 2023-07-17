@@ -52,6 +52,8 @@
     <div id="app" class="quiz-container" >
         <div v-if="!startQuiz"  class="center">
             <h2>Instructions</h2>
+            <p>You need to do this <b>on a desktop computer not phone</b></p>
+
             <p>You will be asked two sets of 5 questions relating to device compatibility. The first 5 questions you will do using information on the packaging (provided to you). The last 5 you will use neurotool. </p>
             <br>
 
@@ -63,7 +65,7 @@
 
 
             <br><br>
-            <p >Answer the following 5 questions as quickly as possible. <b>DO NOT</b> use the neurotool website. When you are <b>ready</b> please click the button to start.</p>
+            <p >Answer the following 5 questions as quickly and accurately as possible. <b>DO NOT</b> use the neurotool website. When you are <b>ready</b> please click the button to start.</p>
             <b-button @click="startQuestion" variant="primary">Start Quiz</b-button>
         </div>
         
@@ -71,7 +73,7 @@
         <div v-else-if="breakTime" class="center">
             <p>Now please open up the <a href="https://www.neurotool.org" target="_blank">neurotool website</a> in another window.</p>
 
-            <p>Answer the following 5 questions as quickly as possible. This time <b>DO</b> use the neurotool website.</p>
+            <p>Answer the following 5 questions as quickly and accurately as possible. This time <b>DO</b> use the neurotool website.</p>
             <b-button @click="breakTime = false; startQuestion()" variant="primary">Continue</b-button>
         </div>
 
