@@ -1,3 +1,26 @@
+/*
+todo:
+EXPLAIN RANDOMIZED
+
+
+time
+
+"Add"
+
+raNDOMIZE THE STEMS
+
+FEEDBACK
+
+FREE TEXT
+
+SURVEY
+
+WOULD YOU FIND IT USEFUL
+
+NEW COMBO?
+
+*/
+
 new Vue({
   el: '#app',
   data: {

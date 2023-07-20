@@ -52,7 +52,7 @@ questions = [
     "options": [
       "Sofia Plus inside Flowgate2",
       "Sofia 6F inside Flowgate2",
-      "Catalyst 7 inside Flowgate",
+      "Catalyst 7 inside Flowgate2",
       "RED72 inside Flowgate2",
       "ACE68 inside Flowgate2", 
       "None of the above"
