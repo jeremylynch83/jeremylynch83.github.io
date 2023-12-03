@@ -739,7 +739,7 @@ aneurysm_risk = {
 
     calculate: function() {
         this.results = [];
-        var text = "";
+        var text = "PHASES score ";
         var years_left = null;
         var life_exp = null;
 
@@ -776,14 +776,12 @@ aneurysm_risk = {
             }
         }
         var risk = null;
-        console.log(total)
-
 
         if (get_var("site", this.variables).phases_score() != -1 && this.selected.includes("PHASES")) {
 
             if (total >= 12) risk = "17·8\% (15·2–20·7\%)";
             else risk = phases_table[total];
-            text = risk + " 5-year risk of rupture. ";
+            text = text + total.toString() + ". " + risk + " 5-year risk of rupture. ";
             if (years_left) {
                 risk_num = parseFloat(risk.split("%")[0]);
                 risk_text = (risk_num * (years_left / 5)).toFixed(1);
@@ -1816,6 +1814,7 @@ i_hypotension = {
 //////////////
 // Late presentation Stroke      //
 //////////////
+/*
 late_stroke = {
     title: "Late presentation stroke",
     results: [],
@@ -1865,4 +1864,4 @@ late_stroke = {
             text = "";
         }
     }
-}
+}*/
