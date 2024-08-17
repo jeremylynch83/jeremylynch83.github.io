@@ -756,18 +756,18 @@ aneurysm_risk = {
         // PHASES
         /////////
         const phases_table = {
-            0: "0.4\% (0.1-1.5\%)",
-            1: "0.4\% (0.1-1.5\%)",
-            2: "0.4\% (0.1-1.5\%)",
-            3: "0.7\% (0.2-1.5\%)",
-            4: "0.9\% (0.3-2.0\%)",
-            5: "1.3\% (0.8-2.4\%)",
-            6: "1.7\% (1.1-2.7\%)",
-            7: "2.4\% (1.6-3.3\%)",
-            8: "3.2\% (2.3-4.4\%)",
-            9: "4.3\% (2.9-6.1\%)",
-            10: "5.3\% (3.5-8.0\%)",
-            11: "7.2\% (5.0-10.2\%)",
+            0: "0.4\% (0.1–1.5\%)",
+            1: "0.4\% (0.1–1.5\%)",
+            2: "0.4\% (0.1–1.5\%)",
+            3: "0.7\% (0.2–1.5\%)",
+            4: "0.9\% (0.3–2.0\%)",
+            5: "1.3\% (0.8–2.4\%)",
+            6: "1.7\% (1.1–2.7\%)",
+            7: "2.4\% (1.6–3.3\%)",
+            8: "3.2\% (2.3–4.4\%)",
+            9: "4.3\% (2.9–6.1\%)",
+            10: "5.3\% (3.5–8.0\%)",
+            11: "7.2\% (5.0–10.2\%)",
         }
         var total = 0;
         for (var n = 0; n < this.variables.length; n++) {
@@ -785,7 +785,13 @@ aneurysm_risk = {
             if (years_left) {
                 risk_num = parseFloat(risk.split("%")[0]);
                 risk_text = (risk_num * (years_left / 5)).toFixed(1);
-                if (risk_text < 50) text = text + risk_text + "% lifetime risk (life expectancy of " + life_exp + " based on UK National life tables, Office of National Statistics).";
+                let risk_values = risk.match(/\((\d+\.\d+)–(\d+\.\d+)%\)/);
+                let risk_low = parseFloat(risk_values[1]);
+                let risk_high = parseFloat(risk_values[2]);
+
+                let lifetime_risk_low = (risk_low * (years_left / 5)).toFixed(1);
+                let lifetime_risk_high = (risk_high * (years_left / 5)).toFixed(1);
+                if (risk_text < 50) text = text + risk_text + "% (" + lifetime_risk_low+ "%–" + lifetime_risk_high + "%)" + " lifetime risk (life expectancy of " + life_exp + ").";
                 else text = text + "Very high lifetime risk. "
             }
 
@@ -796,7 +802,7 @@ aneurysm_risk = {
         this.results.push({
             name: "PHASES",
             visible: false,
-            ref: "Greving JP, Wermer MJ, Brown RD Jr, et al. Development of the PHASES score for prediction of risk of rupture of intracranial aneurysms: a pooled analysis of six prospective cohort studies. Lancet Neurol. 2014 Jan;13(1):59-66. doi: 10.1016/S1474-4422(13)70263-1.",
+            ref: "(1) Greving JP, Wermer MJ, Brown RD Jr, et al. Development of the PHASES score for prediction of risk of rupture of intracranial aneurysms: a pooled analysis of six prospective cohort studies. Lancet Neurol. 2014 Jan;13(1):59-66. doi: 10.1016/S1474-4422(13)70263-1. (2) UK National life tables, Office of National Statistics.",
             summary: text,
             body: "",
             image: 'phases.svg'
@@ -849,7 +855,7 @@ aneurysm_risk = {
             if (years_left) {
                 risk_num = parseFloat(risk.split("%")[0]);
                 risk_text = (risk_num * (years_left / 5)).toFixed(1);
-                if (risk_text < 50) text = text + risk_text + "% lifetime risk (life expectancy of " + life_exp + " based on UK National life tables, Office of National Statistics).";
+                if (risk_text < 50) text = text + risk_text + "% lifetime risk (life expectancy of " + life_exp + ").";
                 else text = text + "Very high lifetime risk. ";
             }
         }
@@ -857,7 +863,7 @@ aneurysm_risk = {
         this.results.push({
             name: "ISUIA",
             visible: false,
-            ref: "Wiebers DO, Whisnant JP, Huston J 3rd, et al. International Study of Unruptured Intracranial Aneurysms Investigators. Unruptured intracranial aneurysms: natural history, clinical outcome, and risks of surgical and endovascular treatment. Lancet. 2003 Jul 12;362(9378):103-10. doi: 10.1016/s0140-6736(03)13860-3. PMID: 12867109.",
+            ref: "(1) Wiebers DO, Whisnant JP, Huston J 3rd, et al. International Study of Unruptured Intracranial Aneurysms Investigators. Unruptured intracranial aneurysms: natural history, clinical outcome, and risks of surgical and endovascular treatment. Lancet. 2003 Jul 12;362(9378):103-10. doi: 10.1016/s0140-6736(03)13860-3. (2) UK National life tables, Office of National Statistics. ",
             summary: text,
             image: 'isuia.jpg'
         });
