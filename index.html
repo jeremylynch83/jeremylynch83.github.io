@@ -171,7 +171,7 @@
                 <p></p>
 
 
-		                <svg id="diagram" width=0 height=0>
+		                <svg id="diagram" width=0 height=0 >
 				    <g transform="translate(50,50)"></g>
 				</svg>
 
@@ -358,7 +358,7 @@
                             Red
                             Cross</a></p>
                     <div class="p-3">
-                        © 2024 Copyright Kinech Ltd
+                        © 2025 Copyright Kinech Ltd
 
                     </div>
                 </section>
@@ -1165,10 +1165,12 @@ drawDiagram: function() {
                 this.fitModal.table = [];
 
                 var required_id = null;
-                if (first_device.recommendedParentId != null) required_id = first_device
-                    .recommendedParentId;
-                else required_id = first_device.maxod;
-
+                if (first_device.recommendedParentId != null) {
+    			required_id = first_device.recommendedParentId;
+			} else {
+    			required_id = (first_device.maxod_cat !== undefined) ? first_device.maxod_cat : first_device.maxod;
+			}
+			
                 var dmso_compat_needed = false;
                 var dmso_string = first_device.name.toLowerCase();
                 if (dmso_string.search("onyx") != -1 || dmso_string.search("phil") != -1 ||
@@ -1264,12 +1266,11 @@ drawDiagram: function() {
                                 child_data = JSON.parse(child.getAttribute("data"));
 
                                 if (child_data.recommendedParentId != null) {
-                                    child_od = child_data.recommendedParentId - 0.0001;
-                                    child_total_od = child_total_od + child_od;
-                                } else {
-                                    child_od = child_data.maxod;
-                                    child_total_od = child_total_od + child_od;
-                                }
+    								child_od = child_data.recommendedParentId - 0.0001;
+								} else {
+    								child_od = (child_data.maxod_cat !== undefined) ? child_data.maxod_cat : child_data.maxod;
+								}
+								child_total_od += child_od;
 
 
                                 child_list.push({ name: child_data.name, r: child_od });
