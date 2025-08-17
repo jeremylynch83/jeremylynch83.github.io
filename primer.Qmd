@@ -299,8 +299,6 @@ The first cerebral aneurysm “wiring” and electrothermic coagulation of an IC
 - Larger stent retrievers are usually delivered through 0.027” or 0.021” microcatheters. The lowest profile device is currently the Tigertriever 13 which fits through 0.013” microcatheters like the Marathon. The Tigertriever devices also, uniquely, are not self-expanding but their expansion is controlled via a hand-adjustable lever. They can thus be adjusted to the vessel size. The device is therefore similar in design to the Comaneci device. 
 - Usefully, the Catchview Mini (Balt) can also be deployed through the 0.013” Headway Duo (despite the apparent labelled size discrepancy). 
 - The Nimbus (Cerenovus) is a specifically designed “rescue” stent retriever for tough clots, intended to be used after failure of standard stent retrievers. After deploying the stent and waiting, the microcatheter is re-advanced into the clot to “pinch” it against the stent retriever before retrieval. 
-- A description of devices available is given in Ch. 9, “Mechanical thrombectomy technique”.  
-**\
 
 
 # Intrasaccular and neck bridging devices
@@ -308,7 +306,7 @@ The first cerebral aneurysm “wiring” and electrothermic coagulation of an IC
 - These sit inside (intrasaccular) or across the neck of (neck-bridging) aneurysms. They are designed to treat aneurysms that are difficult to embolise with simple coiling, especially wide-necked bifurcation aneurysms.
 - A key advantage of intrasaccular devices is their placement within the aneurysm itself rather than in the parent artery, minimising the need for antiplatelet medication. Consequently, they can be used more safely in acutely ruptured aneurysms.
 - In elective aneurysms, patients might still be given a loading dose of antiplatelets before the procedure in case bail-out stenting is required. If stenting is not performed, aspirin alone is often continued for several weeks afterwards to reduce the risk of delayed thromboembolic complications. However, these medications are usually not required in the long term.
-- Descriptions of common devices are given in Ch. 8, “Intrasaccular devices”.
+
 
 # Particles and Sclerosants
 
@@ -363,7 +361,7 @@ The first cerebral aneurysm “wiring” and electrothermic coagulation of an IC
 - The substance is versatile, although its use has been greatly superseded by copolymer liquid embolics such as Onyx. Injecting glue takes experience and may produce unpredictable results. Glue may rapidly penetrate into the vein in high-flow shunts risking venous hypertension and haemorrhage. In comparison to liquid embolics, multiple injections via different pedicles is usually necessary. In comparison however, glue is more thrombogenic and produces less artefact than copolymer liquid embolics.
 - Cyanoacrylates and lipiodol can damage balloons and should not be used with balloon catheters.
 
-**How to inject glue (Figure 4.1)**
+**How to inject glue **
 
 - Equipment: Two 3 ml syringes (it is suggested that the same size syringe is used every time to inject glue to increase familiarity with the feel of the injection), 2 cc of glue (usually 2 vials), 2 cc of lipiodol (usually 2 vials), and 5% dextrose (or similar non-ionic solution). 
 - The glue and lipiodol is mixed in a Gallipot to the desired concentration. Mixing 2 cc of glue and 2 cc of lipiodol would be 50% concentration. Varying ratios of glue:lipiodol affect the rate of polymerisation. Polymerisation times can be increased from about 5 seconds to several minutes by decreasing the amount of glue in the mixture. High-flow shunts require higher polymerisation whereas low-flow shunts or the situation of flow-arrest requires lower concentrations. Tantalum must be added for radiopacity if 50% or more glue is added. Continue to mix the glue until just before injection so that it does not harden.
@@ -382,10 +380,6 @@ The first cerebral aneurysm “wiring” and electrothermic coagulation of an IC
 - Blocked catheter. If the injection is too slow or there has been insufficient dextrose irrigation, the glue can polymerise inside and block the catheter. In addition to this being an annoyance the build-up of pressure can potentially rupture the catheter, causing glue to leak at the rupture site (which may not be seen on the monitor).
 - Catheter glued in. There is the risk of gluing the catheter tip in place. Try slowly pulling on the catheter, wait, and then repeat. Pulling on the catheter too hard risks rupturing the vessel. If the catheter cannot be removed without excessive force (risking haemorrhage), it may be necessary to leave it in place cutting the end off at the access site. The patient is typically left on antiplatelet or anticoagulant for a period of time. 
 - Toxicity. Cyanoacrylates can cause toxic tissue damage due to the exothermic polymerisation reaction and release of compounds such as acryl acetate and formaldehyde. Perioperative corticosteroids are sometimes used to ameliorate these effects. 
-
-  **Figure 4.1: Glue partial embolisation of AVM. (A) A large parietal AVM is identified, with multiple feeders. (B) A Magic 1.5 microcatheter was navigated into one of the feeders. Initial microangiography identifies the AVM, but the Magic is seen to be folded back on itself. (C) The microcatheter is straightened by tugging it gently with the wire in place. (D) Injection of glue under fluoroscopy roadmap. (E) Unsubtracted exposure showing final glue cast after a second injection. (F) Final angiography revealing reduction in the posterior compartment of the AVM. Alt text: N/A.** 
-**\
-
 
 # Copolymer liquid embolics
 
