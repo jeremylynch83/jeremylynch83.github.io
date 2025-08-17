@@ -1,0 +1,9 @@
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Chapter "
+
+
+
+bookdown::word_document2:
+  toc: false
