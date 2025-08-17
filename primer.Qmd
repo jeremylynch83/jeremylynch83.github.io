@@ -3,9 +3,9 @@ title: "Primer on Neurointerventional Devices"
 author: "J Lynch"
 format:
   html:
-    theme: cosmo
     toc: true
     toc-depth: 2
+    toc-location: left
     number-sections: true
     citations:
       bibliography: [book.bib, packages.bib, My Library.bib]
@@ -15,12 +15,11 @@ bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 project:
   type: book
-  output: gitbook
 ---
 
 # Introduction
 
-The number of neurointerventional devices has increased dramatically in recent years due to advances in engineering and a widened scope of neurointerventional practice. Knowledge of the characteristics of specific devices is integral to the practice of neurointervention and this chapter serves as a useful introduction. Choice of one device over another in a particular situation may mean the difference between procedural success or failure. Information on compatibility and sizing these devices, including compatibility, is available on the free non-commercial online resource [www.neurotool.org](http://www.neurotool.org/) (accessed 4/8/2025; developed by one of the authors).  
+The number of neurointerventional devices has increased dramatically in recent years due to advances in engineering and a widened scope of neurointerventional practice. Knowledge of the characteristics of specific devices is integral to the practice of neurointervention and this chapter serves as a useful introduction. Choice of one device over another in a particular situation may mean the difference between procedural success or failure. Information on compatibility and sizing these devices, including compatibility, is available on the free non-commercial online resource [www.neurotool.org](http://www.neurotool.org/). 
 
 **A note on units**
 
