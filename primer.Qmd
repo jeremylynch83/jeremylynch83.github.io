@@ -166,12 +166,12 @@ A *coaxial* configuration refers to a microcatheter being inserted into a guide 
 
 - The first devices had a single lumen, i.e., the same lumen where the wire is passed for navigation is also used to inflate the balloon. The seal on the balloon is created when the wire is in place and hence it is important not to withdraw the wire proximal to the tip of the catheter during procedures as the balloon may become filled with blood. 
 - Preparation:
-- Flush the plastic case containing the balloon catheter (the dispenser coil) with saline to activate the hydrophilic coating.
-- Prepare a contrast:saline mixture in a pot with about 50–70% contrast.
-- Attach a one-way stopcock to a rotating haemostatic valve (RHV). Then, attach a 5 ml syringe filled with the contrast:saline mixture to the RHV inflation port and flush it with the mixture to remove any air. Tighten the RHV and attach it to the microcatheter. Flush the balloon catheter forward to fully purge the system.
-- Insert the microwire into the balloon catheter lumen via the RHV, but keep it proximal to the distal seal so that it does not protrude from the end. Flush the system again. Advance the guidewire until it passes distal to the catheter tip. The wire acts as a seal on the balloon at this point. Form a curve on the wire tip if desired. 
-- Use the same 5 ml syringe to perform a test inflation of the balloon to its nominal pressure underwater. Inspect the balloon for any abnormalities or air bubbles. If satisfied, deflate the balloon by aspirating on the syringe with the catheter tip submerged underwater. Flush the system again with contrast-saline and then reinsert the wire beyond the tip.
-- Once satisfied, fill a 1 ml syringe with the contrast-saline mix to about two-thirds full and attach a one-way tap or flow switch to it. Attach this to the inflation port while taking care not to introduce any air bubbles.
+    - Flush the plastic case containing the balloon catheter (the dispenser coil) with saline to activate the hydrophilic coating.
+    - Prepare a contrast:saline mixture in a pot with about 50–70% contrast.
+    - Attach a one-way stopcock to a rotating haemostatic valve (RHV). Then, attach a 5 ml syringe filled with the contrast:saline mixture to the RHV inflation port and flush it with the mixture to remove any air. Tighten the RHV and attach it to the microcatheter. Flush the balloon catheter forward to fully purge the system.
+    - Insert the microwire into the balloon catheter lumen via the RHV, but keep it proximal to the distal seal so that it does not protrude from the end. Flush the system again. Advance the guidewire until it passes distal to the catheter tip. The wire acts as a seal on the balloon at this point. Form a curve on the wire tip if desired. 
+    - Use the same 5 ml syringe to perform a test inflation of the balloon to its nominal pressure underwater. Inspect the balloon for any abnormalities or air bubbles. If satisfied, deflate the balloon by aspirating on the syringe with the catheter tip submerged underwater. Flush the system again with contrast-saline and then reinsert the wire beyond the tip.
+    - Once satisfied, fill a 1 ml syringe with the contrast-saline mix to about two-thirds full and attach a one-way tap or flow switch to it. Attach this to the inflation port while taking care not to introduce any air bubbles.
 
 ***Commonly used single lumen balloon catheters***
 
@@ -185,12 +185,12 @@ A *coaxial* configuration refers to a microcatheter being inserted into a guide 
 
 - Dual lumen balloons feature one lumen for wire insertion and a separate lumen for balloon inflation. This design allows for continuous irrigation of saline during use, permits the withdrawal of wires proximal to the tip and even (compatible) coil/stent deployment.
 - Preparation:
-- Prepare a contrast-saline mixture in a pot with about 50–70% contrast.
-- Attach the microwire introducer or a blunt needle to a 5 ml syringe filled with the contrast:saline mixture and insert it into the bottom of the inflation port. Fill the port from deep to superficial to purge any air. 
-- Remove the needle and attach the syringe directly to the inflation port. Hold the balloon tip vertically and slowly inject the syringe over about 60 seconds. Initially, you may see the balloon inflate with air, but eventually a fluid level will appear, the air will be expelled, and the balloon will fill with fluid. Sometimes, it fills immediately with fluid. Ensure that the balloon is fully inflated by holding it vertically to expel any remaining air.
-- Hold the balloon tip in the contrast-saline mix and aspirate to empty the balloon, being careful not to introduce any air into it.
-- After deflating the balloon, remove the balloon tip from the liquid. Fill a 1 ml syringe with the contrast-saline mix to about two-thirds full and attach a one-way tap or flow switch to it. Attach this to the inflation port while taking care not to introduce any air bubbles.
-- Flush a RHV with saline and attach it to the catheter hub. Insert the microwire into the balloon catheter until the tip protrudes from the end. 
+    - Prepare a contrast-saline mixture in a pot with about 50–70% contrast.
+    - Attach the microwire introducer or a blunt needle to a 5 ml syringe filled with the contrast:saline mixture and insert it into the bottom of the inflation port. Fill the port from deep to superficial to purge any air. 
+    - Remove the needle and attach the syringe directly to the inflation port. Hold the balloon tip vertically and slowly inject the syringe over about 60 seconds. Initially, you may see the balloon inflate with air, but eventually a fluid level will appear, the air will be expelled, and the balloon will fill with fluid. Sometimes, it fills immediately with fluid. Ensure that the balloon is fully inflated by holding it vertically to expel any remaining air.
+    - Hold the balloon tip in the contrast-saline mix and aspirate to empty the balloon, being careful not to introduce any air into it.
+    - After deflating the balloon, remove the balloon tip from the liquid. Fill a 1 ml syringe with the contrast-saline mix to about two-thirds full and attach a one-way tap or flow switch to it. Attach this to the inflation port while taking care not to introduce any air bubbles.
+    - Flush a RHV with saline and attach it to the catheter hub. Insert the microwire into the balloon catheter until the tip protrudes from the end. 
 
 ***Commonly used dual lumen balloon catheters***
 
@@ -211,15 +211,15 @@ A *coaxial* configuration refers to a microcatheter being inserted into a guide 
 - Balloons are used over a wire (usually a microwire). Angioplasty balloon catheters typically use a ‘rapid exchange’ system whereby the catheter can be exchanged with a carotid stent using conventional length wires.
 - Inflation devices are utilised to inflate balloons during procedures, and are specifically designed to measure pressure during inflation, preventing vessel damage and rupture from over-inflation. Pressure can be accurately adjusted using a rotating handle, and the balloons can be rapidly and completely purged by withdrawing the handle.
 - Preparation:
-- Prepare a contrast-saline mixture with a ratio of 50% contrast and 50% saline in a pot.
-- Fill a 5 ml syringe with the contrast:saline mixture and attach a blunt needle to it. Insert the needle into the inflation port and fill the port from deep to superficial to avoid creating any bubbles.
-- Fill a 20 ml syringe with the 50% solution.
-- Remove the air from the system by withdrawing the plunger of the syringe to replace it with the contrast-saline mix in the syringe whilst tapping on the hub. Repeat this process three times.
-- Prepare the inflation device by holding the tubing tip in the contrast solution and rotating the handle anticlockwise to fill up the device with solution.
-- Once sufficient solution is inside the device, attach it to a three-way stopcock and attach to the angioplasty balloon.
-- Insert the stiff back end of the wire through the tip of the balloon catheter until the wire's tip is just protruding. Then, shape the wire to the desired curve.
-- Examples of these devices include the pITA (Phenox) which ranges in size from 1.25 to 4 mm and is licensed for intracranial use and the Trek and MiniTrek (Abbott) which are available from 1.2 to 5 mm and designed as coronary angioplasty balloons. 
-- The Neurospeed (Acandis) is an intracranial balloon angioplasty device that enables stenting directly through the same catheter, thereby eliminating the need for potentially risky exchange manoeuvres, and speeding up the procedure.
+    - Prepare a contrast-saline mixture with a ratio of 50% contrast and 50% saline in a pot.
+    - Fill a 5 ml syringe with the contrast:saline mixture and attach a blunt needle to it. Insert the needle into the inflation port and fill the port from deep to superficial to avoid creating any bubbles.
+    - Fill a 20 ml syringe with the 50% solution.
+    - Remove the air from the system by withdrawing the plunger of the syringe to replace it with the contrast-saline mix in the syringe whilst tapping on the hub. Repeat this process three times.
+    - Prepare the inflation device by holding the tubing tip in the contrast solution and rotating the handle anticlockwise to fill up the device with solution.
+    - Once sufficient solution is inside the device, attach it to a three-way stopcock and attach to the angioplasty balloon.
+    - Insert the stiff back end of the wire through the tip of the balloon catheter until the wire's tip is just protruding. Then, shape the wire to the desired curve.
+    - Examples of these devices include the pITA (Phenox) which ranges in size from 1.25 to 4 mm and is licensed for intracranial use and the Trek and MiniTrek (Abbott) which are available from 1.2 to 5 mm and designed as coronary angioplasty balloons. 
+    - The Neurospeed (Acandis) is an intracranial balloon angioplasty device that enables stenting directly through the same catheter, thereby eliminating the need for potentially risky exchange manoeuvres, and speeding up the procedure.
 
 **Further reading**
 
