@@ -417,7 +417,10 @@ The first cerebral aneurysm “wiring” and electrothermic coagulation of an IC
 - The liquid is white after precipitating (yellow beforehand) so may be more suitable for subcutaneous vascular malformations. It is more homogenous and has fewer artefacts on CT/MRI than Onyx. 
 - It is less radio-opaque than Onyx and more difficult to see particularly in small calibre vessels. The liquid has the potential for greater embolic capacity per volume due to a higher concentration of the copolymer. Due to the increased homogeneity there is a lower risk of microcatheter blockage in comparison to Onyx. The substance overall tends to be less viscous than Onyx with improved forward flow. This brings with it, however, the increased possibility of non-target embolisation and early venous penetrance.
 - Phil comes with two prefilled 1.0 mL syringes of PHIL and DMSO, respectively.
-- The following formulations are available: (1) 25%: Low viscosity (the standard formulation). (2) 30%: Medium viscosity. (3) 45%: High viscosity.
+- The following formulations are available: 
+    - 25%: Low viscosity (the standard formulation). 
+    - 30%: Medium viscosity. 
+    - 45%: High viscosity.
 
 **Obtura** 
 
