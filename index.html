@@ -98,7 +98,7 @@
                                 <template #button-content>
                                     Fit
                                 </template>
-                                <b-dropdown-item variant="outline-secondary" class="btn btn-sm  py-0" @click="addInput('inside', 'Enter device e.g. catheter, balloon, stent, flow-diverter, Onyx, wire ...', 'guide catheters', n.id); 
+                                <b-dropdown-item variant="outline-secondary" class="btn btn-sm  py-0" @click="addInput('inside', 'Enter device e.g. catheter, balloon, stent, flow-diverter, Onyx, wire ...', 'guide catheters', n.id);
 									">Fit device inside</b-dropdown-item>
                                 <b-dropdown-item v-show="n.hierarchy != 0" class="btn btn-sm  py-0" variant="outline-secondary" class="btn btn-sm  py-0" @click="addInput('beside', 'Enter device e.g. catheter, balloon, stent, wire ...', 'guide catheters', n.id)">
                                     Fit device beside</b-dropdown-item>
@@ -316,10 +316,10 @@
                                 NeuroTool
                             </h6>
                             <p>
-                                
+
                                     Information on neurointerventional devices including help with sizing and
-                                    clinical prediction/classification calculators.  
-                                
+                                    clinical prediction/classification calculators.
+
                             </p>
                         </div>
                         <hr class="w-100 clearfix d-md-none" />
@@ -353,7 +353,7 @@
                 </section>
                 <section class="p-3 pt-0 text-center">
                     <p>
-                        <a href="https://donate.redcrossredcrescent.org/ua/donate/~my-donation?_cv=1" style="text-decoration: underline;   
+                        <a href="https://donate.redcrossredcrescent.org/ua/donate/~my-donation?_cv=1" style="text-decoration: underline;
 					text-decoration-color: blue;">🇺🇦 Please consider donating to the Ukrainian
                             Red
                             Cross</a></p>
@@ -778,7 +778,7 @@ drawDiagram: function() {
   while (g.firstChild) {
     g.removeChild(g.firstChild);
   }
-  
+
   // Ensure SVG has non-zero dimensions
   let svgWidth = parseFloat(svg.getAttribute("width"));
   let svgHeight = parseFloat(svg.getAttribute("height"));
@@ -788,7 +788,7 @@ drawDiagram: function() {
     svg.setAttribute("width", svgWidth);
     svg.setAttribute("height", svgHeight);
   }
-  
+
   // Get top-level device nodes
   const root = tree.getElementById("root");
   if (!root) return;
@@ -798,7 +798,7 @@ drawDiagram: function() {
       topDevices.push(child);
     }
   });
-  
+
   // Find the maximum outer diameter among top devices
   let maxOuter = 0;
   topDevices.forEach(device => {
@@ -812,21 +812,21 @@ drawDiagram: function() {
     }
   });
   if (maxOuter <= 0) maxOuter = 1; // Fallback
-  
+
   // Define your desired stroke width
   const strokeWidth = 1; // Adjust as needed
-  
+
   // Center coordinates for the SVG
-  const cx = svgWidth / 2 - 50; 
+  const cx = svgWidth / 2 - 50;
   const cy = svgHeight / 2 - 50;
-  
+
   // Compute available radius by subtracting half the stroke width
   // so the circle (including its stroke) is not clipped.
   const availableRadius = Math.min(cx, cy) - strokeWidth / 2;
-  
+
   // Scale factor such that the largest circle (outer diameter) fits exactly
   const scale = availableRadius / (maxOuter / 2);
-  
+
   // Recursive function to draw each device node
   function drawDevice(deviceNode, cx, cy) {
     const dataStr = deviceNode.getAttribute("data");
@@ -840,7 +840,7 @@ drawDiagram: function() {
     // Calculate circle radius from the device's outer diameter
     const outerDiameter = parseFloat(deviceData.maxod) || 0;
     const r = (outerDiameter / 2) * scale;
-    
+
     // Create and append the circle
     const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
     circle.setAttribute("cx", cx);
@@ -850,14 +850,14 @@ drawDiagram: function() {
     circle.setAttribute("stroke", "black");
     circle.setAttribute("stroke-width", strokeWidth);
     g.appendChild(circle);
-    
+
     // Compute inner available radius using minid (or fallback to outerDiameter)
     let innerDiameter = parseFloat(deviceData.minid);
     if (!innerDiameter || innerDiameter <= 0) {
       innerDiameter = outerDiameter;
     }
     const innerR = (innerDiameter / 2) * scale;
-    
+
     // Get child device nodes
     const children = [];
     Array.from(deviceNode.childNodes).forEach(child => {
@@ -866,7 +866,7 @@ drawDiagram: function() {
       }
     });
     if (children.length === 0) return;
-    
+
     // If one child, center it; if multiple, arrange them evenly
     if (children.length === 1) {
       drawDevice(children[0], cx, cy);
@@ -893,7 +893,7 @@ drawDiagram: function() {
       });
     }
   }
-  
+
   // Draw the diagram: if a single top-level device, center it;
   // if multiple, arrange them around the center.
   if (topDevices.length === 1) {
@@ -1170,7 +1170,7 @@ drawDiagram: function() {
 			} else {
     			required_id = (first_device.maxod_cat !== undefined) ? first_device.maxod_cat : first_device.maxod;
 			}
-			
+
                 var dmso_compat_needed = false;
                 var dmso_string = first_device.name.toLowerCase();
                 if (dmso_string.search("onyx") != -1 || dmso_string.search("phil") != -1 ||
@@ -1220,33 +1220,59 @@ drawDiagram: function() {
                     fit_verdict: true,
                     sizes: "",
                     contrast_runs: [],
-                    contrast_text: ""
+                    contrast_text: "",
+                    stent_used: false,   // true for stent or intrasaccular
+                    stent_note: ""
+                };
+
+                // Helpers
+                function normaliseName(s) {
+                    if (!s) return "";
+                    return strip_man(String(s))
+                        .replace(/\([^)]*\)/g, "")
+                        .toLowerCase()
+                        .replace(/[^a-z0-9]+/g, "")
+                        .trim();
+                }
+                function parseRecommended(str) {
+                    if (!str || typeof str !== "string") return [];
+                    return str.split("/").map(s => normaliseName(s.trim())).filter(Boolean);
+                }
+                function recMatchesParent(recList, parentNameNorm) {
+                    return recList.some(r =>
+                        r === parentNameNorm || r.startsWith(parentNameNorm) || parentNameNorm.startsWith(r)
+                    );
+                }
+                function isAdvisoryType(t) {
+                    if (!t) return false;
+                    const lt = String(t).toLowerCase();
+                    return lt === "stent" || lt.startsWith("intrasaccular");
                 }
 
                 // Calculate fitting
                 var x = tree.querySelectorAll("device");
                 x.forEach(parent => {
                     var parent_data = "";
-                    if (parent.getAttribute("data") != "") parent_data = JSON.parse(parent
-                        .getAttribute("data"));
-		    
-		    if (parent_data.minid_empirical !== undefined) {
-			parent_data.minid = parent_data.minid_empirical;
-			console.log("I have changed it")
-		    }
-		    
+                    if (parent.getAttribute("data") != "") parent_data = JSON.parse(parent.getAttribute("data"));
+
+                    // Only flag a truly top-level advisory device (no container)
+                    if (parent_data && isAdvisoryType(parent_data.type)
+                        && parent.parentNode && parent.parentNode.id === "root") {
+                        summary.stent_used = true;
+                    }
+
+                    if (parent_data.minid_empirical !== undefined) {
+                        parent_data.minid = parent_data.minid_empirical;
+                        console.log("I have changed it");
+                    }
+
                     var parent_area = pi * (parent_data.minid / 2) * (parent_data.minid / 2);
 
                     if (!parent.hasChildNodes() && parent_area > minimum_run_area &&
-                        parent_data
-                            .type.toLowerCase() != "microcatheter" && parent_data.type
-										 .toLowerCase() !=
-										     "balloon" && parent_data.type
-													     .toLowerCase() !=
-														 "stent") {
-                        summary.contrast_runs.push([
-                            parent_data.name, parent_area
-                        ])
+                        parent_data.type.toLowerCase() != "microcatheter" &&
+                        parent_data.type.toLowerCase() != "balloon" &&
+                        parent_data.type.toLowerCase() != "stent") {
+                        summary.contrast_runs.push([ parent_data.name, parent_area ]);
                     }
 
                     if (parent.hasChildNodes() && parent_data != "") {
@@ -1258,35 +1284,39 @@ drawDiagram: function() {
                         var child_str = "";
                         var compat_str = "";
 
+                        const parentNameNorm = normaliseName(parent_data.name);
+
                         children.forEach(child => {
-                            /* Add up all devices inside parent catheter */
                             if (child.getAttribute("data") != "") {
 
                                 var child_od = 0;
                                 child_data = JSON.parse(child.getAttribute("data"));
 
-                                if (child_data.recommendedParentId != null) {
-    								child_od = child_data.recommendedParentId - 0.0001;
-								} else {
-    								child_od = (child_data.maxod_cat !== undefined) ? child_data.maxod_cat : child_data.maxod;
-								}
-								child_total_od += child_od;
+                                // Advisory logic for stent or intrasaccular devices
+                                if (child_data && isAdvisoryType(child_data.type)) {
+                                    const rawRecommended = child_data.recommended || "";
+                                    const recList = parseRecommended(rawRecommended);
+                                    const parentListed = recMatchesParent(recList, parentNameNorm);
+                                    if (!parentListed) summary.stent_used = true;
+                                }
 
+                                if (child_data.recommendedParentId != null) {
+                                    child_od = child_data.recommendedParentId - 0.0001;
+                                } else {
+                                    child_od = (child_data.maxod_cat !== undefined) ? child_data.maxod_cat : child_data.maxod;
+                                }
+                                child_total_od += child_od;
 
                                 child_list.push({ name: child_data.name, r: child_od });
 
                                 // Compare lengths
                                 length_txt = length_txt + compare_list_lengths(
-                                    parent_data
-                                    .length, child_data
-                                    .length, parent_data.name, child_data.name);
+                                    parent_data.length, child_data.length, parent_data.name, child_data.name);
 
                                 // Compare compatibility
-                                compat_str = compat_str + check_compatibility(
-                                    parent_data,
-                                    child_data);
+                                compat_str = compat_str + check_compatibility(parent_data, child_data);
                             }
-                        })
+                        });
 
                         if (!check_multi_device(parent_data.minid, child_list) || compat_str != "") {
                             summary.fit_verdict = false;
@@ -1296,43 +1326,31 @@ drawDiagram: function() {
                                     child_str = child_list[0].name;
                                     break;
                                 case 2:
-                                    child_str = "The combination of " + child_str +
-                                        child_list[0].name +
-                                        " and " +
-                                        child_list[
-                                            1].name;
+                                    child_str = "The combination of " + child_str + child_list[0].name + " and " + child_list[1].name;
                                     break;
                                 default:
                                     child_str = child_str + "The combination of ";
                                     for (var n = 0; n < child_list.length; n++) {
-                                        if (n < (child_list.length - 1)) child_str =
-                                            child_str +
-                                            child_list[n].name + ", ";
-                                        if (n == (child_list.length - 1)) child_str =
-                                            child_str +
-                                            " and " +
-                                            child_list[
-                                                n].name + ",";
+                                        if (n < (child_list.length - 1)) child_str = child_str + child_list[n].name + ", ";
+                                        if (n == (child_list.length - 1)) child_str = child_str + " and " + child_list[n].name + ",";
                                     }
                                     break;
                             }
-                            summary.sizes = "<p style=\"color:red\">" + summary.sizes +
-                                child_str +
-                                " does not fit in to " +
-                                parent_data.name + ". " + compat_str + "</p>";
-                        } else summary.sizes = summary.sizes + length_txt + compat_str;
+                            summary.sizes = "<p style=\"color:red\">" + summary.sizes + child_str +
+                                " does not fit in to " + parent_data.name + ". " + compat_str + "</p>";
+                        } else {
+                            summary.sizes = summary.sizes + length_txt + compat_str;
+                        }
 
                         // Calculate space left
                         var children_area = pi * (child_total_od / 2) * (child_total_od / 2);
                         var dif_area = parent_area - children_area;
-                        //(dif_area);
-                        if (dif_area > minimum_run_area && parent_data
-                            .type.toLowerCase() != "microcatheter" && parent_data.type
-                            .toLowerCase() !=
-                            "balloon" && parent_data.type
-                            .toLowerCase() !=
-                            "stent") summary.contrast_runs.push(
-                            [parent_data.name, dif_area])
+                        if (dif_area > minimum_run_area &&
+                            parent_data.type.toLowerCase() != "microcatheter" &&
+                            parent_data.type.toLowerCase() != "balloon" &&
+                            parent_data.type.toLowerCase() != "stent") {
+                            summary.contrast_runs.push([ parent_data.name, dif_area ]);
+                        }
                     }
 
                 });
@@ -1341,15 +1359,15 @@ drawDiagram: function() {
                     var strength = "";
                     ratio = parseInt((area / five_fr) * 100);
                     if (ratio < 20) {
-                        strength = " (very little space)"
+                        strength = " (very little space)";
                     } else if (ratio >= 20 && ratio < 30) {
-                        strength = " (not much space)"
+                        strength = " (not much space)";
                     } else if (ratio >= 30 && ratio < 75) {
                         strength = " (some space)";
                     } else if (ratio >= 75) {
                         strength = " (lots of space)";
                     }
-                    return strength
+                    return strength;
                 }
 
                 if (summary.contrast_runs.length != 0) {
@@ -1358,38 +1376,33 @@ drawDiagram: function() {
                         if (a[1] > b[1]) return -1;
                     });
 
-
                     if (summary.contrast_runs.length == 1) {
                         summary.contrast_text += "You can do cerebral angiography through the " +
-                            summary
-                            .contrast_runs[0][0] + strength_calc(summary
-                                .contrast_runs[0][1]) +
-                            ".";
+                            summary.contrast_runs[0][0] + strength_calc(summary.contrast_runs[0][1]) + ".";
                     } else {
                         summary.contrast_text += "The best device for cerebral angiography is the " +
-                            summary
-                            .contrast_runs[0][0] + strength_calc(summary
-                                .contrast_runs[0][1]) + ". ";
-                        summary.contrast_text +=
-                            "Angiography strength through the remaining catheters is as follows: ";
+                            summary.contrast_runs[0][0] + strength_calc(summary.contrast_runs[0][1]) + ". ";
+                        summary.contrast_text += "Angiography strength through the remaining catheters is as follows: ";
                         for (var n = 1; n < summary.contrast_runs.length; n++) {
-                            summary.contrast_text += summary.contrast_runs[n][0] + strength_calc(
-                                summary
-                                .contrast_runs[n][1]);
+                            summary.contrast_text += summary.contrast_runs[n][0] + strength_calc(summary.contrast_runs[n][1]);
                             if (n < (summary.contrast_runs.length - 1)) summary.contrast_text += ", ";
-                            else summary.contrast_text += "."
+                            else summary.contrast_text += ".";
                         }
                     }
-
                 } else {
                 }
 
+                // Add advisory only if needed
+                if (summary.stent_used) {
+                    summary.stent_note = "Note: A stent or intrasaccular device is included. Whilst it may fit in the device, check the manufacturer’s Instructions for Use to confirm it can be reliably deployed.";
+                }
 
                 return summary;
             },
 
+
             updateSizer: function() {
-                d3.select("#diagram g").selectAll("*").remove()
+                d3.select("#diagram g").selectAll("*").remove();
 
                 var result = this.checkSizes();
                 var result_text = "";
@@ -1399,12 +1412,17 @@ drawDiagram: function() {
                 }
 
                 result_text += "<p style=\"font-size: medium\">" + result.sizes + "<p>";
-
                 result_text += "<p style=\"font-size: medium\">" + result.contrast_text + "</p>";
+
+                if (result.stent_note) {
+                    result_text += "<p style=\"font-size: medium; color:#8a6d3b\">" + result.stent_note + "</p>";
+                }
+
                 document.getElementById("result").innerHTML = result_text + "</p>";
                 this.updateInfo(JSON.parse(tree.getElementById("device0").getAttribute("data")));
-		this.drawDiagram();  // Call the diagram function
+                this.drawDiagram();
             },
+
 
             addInput: function(where, text, type, parent, device) {
 
