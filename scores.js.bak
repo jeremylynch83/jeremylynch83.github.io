@@ -229,7 +229,7 @@ aneurysm_risk = {
             text: "Does the patient have hypertension?",
             selected: null,
             phases_score: function() {
-                return Number(this.selected) || 0;
+                return this.selected;
             },
             uiats_score: function() {
                 var total=0;
@@ -265,7 +265,7 @@ aneurysm_risk = {
             selected: null,
             phases_score: function() {
                 var total = 0;
-                if (this.selected !== null && this.selected !== "" && Number(this.selected) >= 70) {
+                if (this.selected && this.selected > 70) {
                     total = 1;
                 }
                 return total;
@@ -321,7 +321,7 @@ aneurysm_risk = {
             text: "Previous subarachnoid haemorrhage from another aneurysm?",
             selected: null,
             phases_score: function() {
-                return Number(this.selected) || 0;
+                return this.selected;
             },
             uiats_score: function() {
                 var total = 0;
@@ -742,21 +742,14 @@ aneurysm_risk = {
         var text = "PHASES score ";
         var years_left = null;
         var life_exp = null;
-        var age = get_var("Age", this.variables).selected;
-        var gender = get_var("gender", this.variables).selected;
 
-        if (age !== null && age !== "") {
-            age = Number(age);
-
-            if (gender == "Male" && age >= 0 && age < life_exp_males.length) {
-                life_exp = life_exp_males[age];
-                years_left = life_exp - age;
-            }
-
-            if (gender == "Female" && age >= 0 && age < life_exp_females.length) {
-                life_exp = life_exp_females[age];
-                years_left = life_exp - age;
-            }
+        if (get_var("gender", this.variables).selected == "Male") {
+            life_exp = life_exp_males[get_var("Age", this.variables).selected];
+            years_left = life_exp - get_var("Age", this.variables).selected;
+        }
+        if (get_var("gender", this.variables).selected == "Female") {
+            life_exp = life_exp_females[get_var("Age", this.variables).selected];
+            years_left = life_exp - get_var("Age", this.variables).selected;
         }
 
         /////////
@@ -779,30 +772,27 @@ aneurysm_risk = {
         var total = 0;
         for (var n = 0; n < this.variables.length; n++) {
             if (this.variables[n].score.includes("PHASES")) {
-                total = total + Number(this.variables[n].phases_score() || 0);
+                total = total + this.variables[n].phases_score();
             }
         }
         var risk = null;
 
         if (get_var("site", this.variables).phases_score() != -1 && this.selected.includes("PHASES")) {
 
-            if (total >= 12) risk = "17.8% (15.2–20.7%)";
+            if (total >= 12) risk = "17·8\% (15·2–20·7\%)";
             else risk = phases_table[total];
             text = text + total.toString() + ". " + risk + " 5-year risk of rupture. ";
             if (years_left) {
-                var risk_num = parseFloat(risk.split("%")[0].replace("·", "."));
-                var risk_text = (risk_num * (years_left / 5)).toFixed(1);
-                var risk_values = risk.replaceAll("·", ".").match(/\((\d+\.\d+)–(\d+\.\d+)%\)/);
+                risk_num = parseFloat(risk.split("%")[0]);
+                risk_text = (risk_num * (years_left / 5)).toFixed(1);
+                let risk_values = risk.match(/\((\d+\.\d+)–(\d+\.\d+)%\)/);
+                let risk_low = parseFloat(risk_values[1]);
+                let risk_high = parseFloat(risk_values[2]);
 
-                if (risk_values) {
-                    var risk_low = parseFloat(risk_values[1]);
-                    var risk_high = parseFloat(risk_values[2]);
-
-                    var lifetime_risk_low = (risk_low * (years_left / 5)).toFixed(1);
-                    var lifetime_risk_high = (risk_high * (years_left / 5)).toFixed(1);
-                    if (risk_text < 50) text = text + risk_text + "% (" + lifetime_risk_low + "%–" + lifetime_risk_high + "%)" + " lifetime risk (life expectancy of " + life_exp + ").";
-                    else text = text + "Very high lifetime risk. ";
-                }
+                let lifetime_risk_low = (risk_low * (years_left / 5)).toFixed(1);
+                let lifetime_risk_high = (risk_high * (years_left / 5)).toFixed(1);
+                if (risk_text < 50) text = text + risk_text + "% (" + lifetime_risk_low+ "%–" + lifetime_risk_high + "%)" + " lifetime risk (life expectancy of " + life_exp + ").";
+                else text = text + "Very high lifetime risk. "
             }
 
         } else {
@@ -1867,13 +1857,13 @@ late_stroke = {
         var total = 0;
         for (var n = 0; n < this.variables.length; n++) {
             if (this.variables[n].score.includes("PHASES")) {
-                total = total + Number(this.variables[n].phases_score() || 0);
+                total = total + this.variables[n].phases_score();
             }
         }
         var risk = null;
 
         if (get_var("site", this.variables).phases_score() != -1 && this.selected.includes("PHASES")) {
-            if (total >= 12) risk = "17.8% (15.2–20.7%)";
+            if (total >= 12) risk = "17·8\% (15·2–20·7\%)";
             else risk = phases_table[total];
             text = risk + " 5-year risk of rupture. ";
         } else {
